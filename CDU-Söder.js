@@ -1049,7 +1049,7 @@ cyoAdventure = function (a) {
     }
 
      //only chart a full campaign
-    if([4101, 4102, 4103, 4104].includes(ans)){
+    if([4105, 4102, 4103, 4104].includes(ans)){
         charts.push("line");
     }
 
