@@ -1034,10 +1034,9 @@ cyoAdventure = function (a) {
         });
     }
 
-    //only chart a full campaign
+   //only chart a full campaign
     if(ans > 4101){
-        const buttonobserver = new MutationObserver(addMyButton);
-        buttonobserver.observe(document.documentElement, { childList: true, subtree: true });
+        charts.push("line");
     }
 
     else
@@ -1090,132 +1089,255 @@ function changechart(){
     }
     resultobserver.observe(document.documentElement, { childList: true, subtree: true });
 }
-//window.setInterval(changechart,200)
+
 var resultobserver = new MutationObserver(changechart);
 resultobserver.observe(document.documentElement, { childList: true, subtree: true });
 
 //chart stuff here, setup in cyoa function required
-function Chartbuilder() {
+function Chartbuilder(type) {
 
- var myChart = Highcharts.chart('myChart', {
+    if(type === "line"){
+         var myChart = Highcharts.chart('myChart', {
 
-    title: {
-        text: 'Polling over time',
-        align: 'center'
-    },
-
-
-    yAxis: {
-        title: {
-            text: 'Percentage'
-        }
-    },
-
-    xAxis: {
-        title: {
-            text: 'Questions'
-        }
-    },
-
-    legend: {
-        layout: 'vertical',
-        align: 'right',
-        verticalAlign: 'middle'
-    },
-
-    plotOptions: {
-        series: {
-            label: {
-                connectorAllowed: false
+            title: {
+                text: 'Polling over time',
+                align: 'center'
             },
-            lineWidth: 3
-        }
-    },
 
-    series: [{
-        name: 'CDU/CSU',
-        data: polling[0],
-        color: e.candidate_json[0].fields.color_hex,
-        label: {
-        enabled: false,
-				},
-        marker: {
-            symbol: 'circle'
-        },
-        type: 'spline'
-    }, {
-        name: 'SPD',
-        data: polling[1],
-        color: e.candidate_json[1].fields.color_hex,
-        label: {
-        enabled: false,
-				},
-        marker: {
-            symbol: 'circle'
-        },
-        type: 'spline'
-    }, {
-        name: 'Greens',
-        data: polling[2],
-        color: e.candidate_json[2].fields.color_hex,
-        label: {
-        enabled: false,
-				},
-        marker: {
-            symbol: 'circle'
-        },
-        type: 'spline'
-    }, {
-        name: 'FDP',
-        data: polling[3],
-        color: e.candidate_json[3].fields.color_hex,
-        label: {
-        enabled: false,
-				},
-        marker: {
-            symbol: 'circle'
-        },
-        type: 'spline'
-    }, {
-        name: 'Left',
-        data: polling[4],
-        color: e.candidate_json[4].fields.color_hex,
-        label: {
-        enabled: false,
-				},
-        marker: {
-            symbol: 'circle'
-        },
-        type: 'spline'
-    }, {
-        name: 'AfD',
-        data: polling[5],
-        color: e.candidate_json[5].fields.color_hex,
-        label: {
-        enabled: false,
-				},
-        marker: {
-            symbol: 'circle'
-        },
-        type: 'spline'
-    }],
 
-    responsive: {
-        rules: [{
-            condition: {
-                maxWidth: 500
-            },
-            chartOptions: {
-                legend: {
-                    layout: 'horizontal',
-                    align: 'center',
-                    verticalAlign: 'bottom'
+            yAxis: {
+                title: {
+                    text: 'Percentage'
                 }
-            }
-        }]
-    }
+            },
 
-});
+            xAxis: {
+                title: {
+                    text: 'Questions'
+                }
+            },
+
+            legend: {
+                layout: 'vertical',
+                align: 'right',
+                verticalAlign: 'middle'
+            },
+
+            plotOptions: {
+                series: {
+                    label: {
+                        connectorAllowed: false
+                    },
+                    lineWidth: 3
+                }
+            },
+
+            series: [{
+                name: 'CDU/CSU',
+                data: polling[0],
+                color: e.candidate_json[0].fields.color_hex,
+                label: {
+                enabled: false,
+                        },
+                marker: {
+                    symbol: 'circle'
+                },
+                type: 'spline'
+            }, {
+                name: 'SPD',
+                data: polling[1],
+                color: e.candidate_json[1].fields.color_hex,
+                label: {
+                enabled: false,
+                        },
+                marker: {
+                    symbol: 'circle'
+                },
+                type: 'spline'
+            }, {
+                name: 'Greens',
+                data: polling[2],
+                color: e.candidate_json[2].fields.color_hex,
+                label: {
+                enabled: false,
+                        },
+                marker: {
+                    symbol: 'circle'
+                },
+                type: 'spline'
+            }, {
+                name: 'FDP',
+                data: polling[3],
+                color: e.candidate_json[3].fields.color_hex,
+                label: {
+                enabled: false,
+                        },
+                marker: {
+                    symbol: 'circle'
+                },
+                type: 'spline'
+            }, {
+                name: 'Left',
+                data: polling[4],
+                color: e.candidate_json[4].fields.color_hex,
+                label: {
+                enabled: false,
+                        },
+                marker: {
+                    symbol: 'circle'
+                },
+                type: 'spline'
+            }, {
+                name: 'AfD',
+                data: polling[5],
+                color: e.candidate_json[5].fields.color_hex,
+                label: {
+                enabled: false,
+                        },
+                marker: {
+                    symbol: 'circle'
+                },
+                type: 'spline'
+            }],
+
+            responsive: {
+                rules: [{
+                    condition: {
+                        maxWidth: 500
+                    },
+                    chartOptions: {
+                        legend: {
+                            layout: 'horizontal',
+                            align: 'center',
+                            verticalAlign: 'bottom'
+                        }
+                    }
+                }]
+            }
+
+        });
+      }
+      else if (type==="seats"){
+
+        var myChart = Highcharts.chart('myChart', {
+        chart: {
+          type: 'item',
+          backgroundColor:'rgba(255, 255, 255, 0.8)',
+        },
+        title: {
+          text: 'German Federal Election 2021',
+          margin: 60
+        },
+
+        legend: {
+          labelFormat: '{name} <span style="opacity: 0.4">{y}</span>'
+        },
+        series: [
+          {
+            name: 'Representatives',
+            keys: ['name', 'y', 'color', 'label'],
+            data: [
+              ['Left Party', (e.final_overall_results.find((r) => r.candidate === 304)).electoral_votes, e.candidate_json[4].fields.color_hex, 'LEFT'],
+              ['Social Democratic Party of Germany', (e.final_overall_results.find((r) => r.candidate === 78)).electoral_votes, e.candidate_json[1].fields.color_hex, 'SPD'],
+              ['Alliance 90/The Greens', (e.final_overall_results.find((r) => r.candidate === 79)).electoral_votes, e.candidate_json[2].fields.color_hex, 'GREEN'],
+              ['South Schleswig Voters\' Assosiaction', 1, '#162491', 'SSW'],
+              ['Free Democratic Party', (e.final_overall_results.find((r) => r.candidate === 303)).electoral_votes, e.candidate_json[3].fields.color_hex, 'FDP'],
+              ['Christian Democratic Union', (e.final_overall_results.find((r) => r.candidate === 77)).electoral_votes, e.candidate_json[0].fields.color_hex, 'CDU'],
+              ['Alternative for Germany', (e.final_overall_results.find((r) => r.candidate === 305)).electoral_votes, e.candidate_json[5].fields.color_hex, 'AfD']
+            ],
+            dataLabels: {
+              enabled: true,
+              format: '{point.label}',
+              style: {
+                textOutline: '3px contrast'
+              }
+            },
+            center: ['50%', '90%'], // Adjusted center position
+            size: '210%', // Adjusted size
+            startAngle: -95,
+            endAngle: 95
+          }
+        ],
+        responsive: {
+          rules: [
+            {
+              condition: {
+                maxWidth: 600
+              },
+              chartOptions: {
+                series: [
+                  {
+                    dataLabels: {
+                      distance: -30
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      });
+      document.querySelector('.highcharts-legend.highcharts-no-tooltip').remove();
+      }
+
+      else if (type==="bar"){
+
+        var totalPopularVote = 0;
+
+        //calculate total popular vote
+
+         e.final_overall_results.forEach((result, i)   => {
+            totalPopularVote += e.final_overall_results[i].popular_votes;
+           });
+
+        var myChart = Highcharts.chart('myChart', {
+            chart: {
+                type: 'column'
+            },
+            title: {
+                text: 'Gains and losses'
+            },
+            yAxis: {
+                title: {
+                    text: 'Change'
+                }
+            },
+
+            xAxis: {
+                categories: ['Party']
+            },
+
+            series: [{
+                name: 'CDU/CSU',
+                data: [Math.round(((e.final_overall_results.find((r) => r.candidate === 77).popular_votes/totalPopularVote)-0.329)*1000)/10],
+                color: e.candidate_json[0].fields.color_hex
+            }, {
+                name: 'SPD',
+                data: [Math.round(((e.final_overall_results.find((r) => r.candidate === 78).popular_votes/totalPopularVote)-0.205)*1000)/10],
+                color: e.candidate_json[1].fields.color_hex
+            },{
+                name: 'Greens',
+                data: [Math.round(((e.final_overall_results.find((r) => r.candidate === 79).popular_votes/totalPopularVote)-0.089)*1000)/10],
+                color: e.candidate_json[2].fields.color_hex
+            },{
+                name: 'FDP',
+                data: [Math.round(((e.final_overall_results.find((r) => r.candidate === 303).popular_votes/totalPopularVote)-0.107)*1000)/10],
+                color: e.candidate_json[3].fields.color_hex
+            },{
+                name: 'Left',
+                data: [Math.round(((e.final_overall_results.find((r) => r.candidate === 304).popular_votes/totalPopularVote)-0.092)*1000)/10],
+                color: e.candidate_json[4].fields.color_hex
+            },{
+                name: 'AfD',
+                data: [Math.round(((e.final_overall_results.find((r) => r.candidate === 305).popular_votes/totalPopularVote)-0.126)*1000)/10],
+                color: e.candidate_json[5].fields.color_hex
+            },{
+                name: 'Others',
+                data: [Math.round(((e.final_overall_results.find((r) => r.candidate === 306).popular_votes/totalPopularVote)-0.05)*1000)/10],
+                color: e.candidate_json[6].fields.color_hex
+            }]
+        });
+        }
 
       var div = document.getElementById('chartcontainer');
       div.style.border = 'medium double';
@@ -1243,7 +1365,9 @@ function addMyButton(){
             chartButton.textContent = "Election Charts";
             chartButton.id = "chart_button";
             chartButton.class = "final_menu_button"
-            chartButton.addEventListener("click", charting);
+            chartButton.addEventListener("click", function() {
+              charting(0);
+            });
             buttonrow.insertBefore(chartButton, buttonrow.children[buttonrow.children.length - 1]);
         }
         else {
@@ -1258,15 +1382,16 @@ function addMyButton(){
     }
 }
 
-function executeWithRetry(fn) {
+function executeWithRetry(fn, ...args) {
   const maxRetries = 20;
   const delayMs = 100;
 
   for (let retry = 0; retry < maxRetries; retry++) {
     try {
-      fn();
+      fn(...args);
       return;
     } catch (err) {
+      console.log(err);
       if (retry < maxRetries - 1) {
         setTimeout(() => {}, delayMs);
       }
@@ -1274,9 +1399,29 @@ function executeWithRetry(fn) {
   }
 }
 
-function charting(){
 
-    $("#game_window").html('<div class="game_header">\t<h2>NEW CAMPAIGN TRAIL</h2>\t</div>\t<div id="main_content_area">\t<div id="results_container"><br><h3>Campaign overview</h3><br><div id="chartcontainer"><figure class="highcharts-figure"><div id="myChart"></div></figure></div></div></div><div id="map_footer">\t\t<button class="final_menu_button" id="overall_results_button">Final Election Results</button>\t\t<button class="final_menu_button" id="final_election_map_button">Election Map</button>\t\t<button class="final_menu_button" id="state_results_button">Results by State</button>\t\t<button class="final_menu_button" id="overall_details_button">Overall Results Details</button>\t\t<button class="final_menu_button" id="recommended_reading_button">Further Reading</button>\t\t<button class="final_menu_button" id="play_again_button">Play Again!</button>\t</div>');
+function charting(chartIndex=0){
+
+    $("#game_window").html('<div class="game_header">\t<h2>NEW CAMPAIGN TRAIL</h2>\t</div>\t<div id="main_content_area">\t<div id="results_container"><br>  <div id="title_container"><button id="backButton">Back</button><h3 class="campaign-title">Election Charts:</h3><button id="nextButton">Next</button></div><br><div id="chartcontainer"><figure class="highcharts-figure"><div id="myChart"></div></figure></div></div></div><div id="map_footer">\t\t<button class="final_menu_button" id="overall_results_button">Final Election Results</button>\t\t<button class="final_menu_button" id="final_election_map_button">Election Map</button>\t\t<button class="final_menu_button" id="state_results_button">Results by State</button>\t\t<button class="final_menu_button" id="overall_details_button">Overall Results Details</button>\t\t<button class="final_menu_button" id="recommended_reading_button">Further Reading</button>\t\t<button class="final_menu_button" id="play_again_button">Play Again!</button>\t</div>');
+
+    var container = document.getElementById("title_container");
+    var backButton = document.getElementById("backButton");
+    var nextButton = document.getElementById("nextButton");
+
+    container.style.display = "flex";
+    container.style.alignItems = "center";
+    container.style.justifyContent = "center";
+
+    backButton.style.marginRight = "10px";
+    nextButton.style.marginLeft = "10px";
+
+    console.log(chartIndex)
+    if (chartIndex === 0){
+        backButton.style.display = 'none';
+    }
+    if (chartIndex === charts.length-1){
+        nextButton.style.display = 'none';
+    }
 
      $("#map_footer").css({
       position: "relative",
@@ -1296,10 +1441,15 @@ function charting(){
         w()
     }), $("#play_again_button").click(function() {
         y()
+    }),$("#backButton").click(function() {
+        charting(chartIndex-1)
+    }),
+    $("#nextButton").click(function() {
+        charting(chartIndex+1)
     })
 
     setTimeout(function() {
-        executeWithRetry(Chartbuilder);
+        executeWithRetry(Chartbuilder, charts[chartIndex]);
   }, 100);
 };
 
@@ -1311,3 +1461,7 @@ function loadScript(url, callback) {
   document.head.appendChild(script);
 }
 
+var charts = ["bar", "seats"]
+
+const buttonobserver = new MutationObserver(addMyButton);
+buttonobserver.observe(document.documentElement, { childList: true, subtree: true });
