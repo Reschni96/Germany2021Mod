@@ -117,6 +117,14 @@ e.multiple_endings = true;
 
   if (!e.initDC) {
     e.initDC = true
+
+    loadScript('https://code.highcharts.com/highcharts.js', function() {
+      loadScript('https://code.highcharts.com/modules/item-series.js', function() {
+        loadScript('https://code.highcharts.com/modules/accessibility.js', function() {
+        });
+      });
+    });
+
     //give states their seats
     for (var i = 0; i < 16; i++) {
         e.states_json[i].fields.electoral_votes = seats[i];
@@ -1099,107 +1107,140 @@ var resultobserver = new MutationObserver(changechart);
 resultobserver.observe(document.documentElement, { childList: true, subtree: true });
 
 //chart stuff here, setup in cyoa function required
-const options = {
-
-    aspectRatio: 3,
-
-    plugins: {
-
-
-        title: {
-            display: false,
-        },
-        legend: {
-            display: true,
-            position: 'right',
-            align: 'center',
-        }
-    },
-    scales: {
-        x: {
-            title: {
-                display: true,
-                text: 'Question'
-            }
-        },
-        y: {
-            title: {
-                display: true,
-                text: 'Percentage'
-            },
-            beginAtZero: true,
-
-        }
-    }
-};
-
 function Chartbuilder() {
 
-        const chartButton = document.getElementById("chart_button");
-        chartButton.disabled = true;
+ var myChart = Highcharts.chart('myChart', {
+
+    title: {
+        text: 'Polling over time',
+        align: 'center'
+    },
 
 
-    if(document.getElementById('chartcontainer')){
+    yAxis: {
+        title: {
+            text: 'Percentage'
+        }
+    },
 
-    const ctx = document.getElementById('myChart').getContext('2d');
+    xAxis: {
+        title: {
+            text: 'Questions'
+        }
+    },
 
-    const myChart = new Chart(ctx, {
-        type: 'line',
-        data: {
-            labels : [...Array(polling[0].length).keys()].map(index => index + 1),
-            datasets: [{
-                label: 'CDU',
-                data: polling[0],
-                lineTension: 0.4,
-                borderColor: e.candidate_json[0].fields.color_hex,
-                tension: 0.1
+    legend: {
+        layout: 'vertical',
+        align: 'right',
+        verticalAlign: 'middle'
+    },
+
+    plotOptions: {
+        series: {
+            label: {
+                connectorAllowed: false
             },
-              {
-                label: 'SPD',
-                data: polling[1],
-                lineTension: 0.4,
-                borderColor: e.candidate_json[1].fields.color_hex,
-                tension: 0.1,
-              },
-                            {
-                label: 'Greens',
-                data: polling[2],
-                lineTension: 0.4,
-                borderColor: e.candidate_json[2].fields.color_hex,
-                tension: 0.1,
-              },
-                            {
-                label: 'FDP',
-                data: polling[3],
-                lineTension: 0.4,
-                borderColor: e.candidate_json[3].fields.color_hex,
-                tension: 0.1,
-              },
-                            {
-                label: 'Left',
-                data: polling[4],
-                lineTension: 0.4,
-                borderColor: e.candidate_json[4].fields.color_hex,
-                tension: 0.1,
-              },
-                            {
-                label: 'AfD',
-                data: polling[5],
-                lineTension: 0.4,
-                borderColor: e.candidate_json[5].fields.color_hex,
-                tension: 0.1,
-              },]
+            lineWidth: 3
+        }
+    },
+
+    series: [{
+        name: 'CDU/CSU',
+        data: polling[0],
+        color: e.candidate_json[0].fields.color_hex,
+        label: {
+        enabled: false,
+				},
+        marker: {
+            symbol: 'circle'
         },
-        options: options
-        });
+        type: 'spline'
+    }, {
+        name: 'SPD',
+        data: polling[1],
+        color: e.candidate_json[1].fields.color_hex,
+        label: {
+        enabled: false,
+				},
+        marker: {
+            symbol: 'circle'
+        },
+        type: 'spline'
+    }, {
+        name: 'Greens',
+        data: polling[2],
+        color: e.candidate_json[2].fields.color_hex,
+        label: {
+        enabled: false,
+				},
+        marker: {
+            symbol: 'circle'
+        },
+        type: 'spline'
+    }, {
+        name: 'FDP',
+        data: polling[3],
+        color: e.candidate_json[3].fields.color_hex,
+        label: {
+        enabled: false,
+				},
+        marker: {
+            symbol: 'circle'
+        },
+        type: 'spline'
+    }, {
+        name: 'Left',
+        data: polling[4],
+        color: e.candidate_json[4].fields.color_hex,
+        label: {
+        enabled: false,
+				},
+        marker: {
+            symbol: 'circle'
+        },
+        type: 'spline'
+    }, {
+        name: 'AfD',
+        data: polling[5],
+        color: e.candidate_json[5].fields.color_hex,
+        label: {
+        enabled: false,
+				},
+        marker: {
+            symbol: 'circle'
+        },
+        type: 'spline'
+    }],
 
-        const container = document.getElementById('chartcontainer');
-        container.style.width = '100%';
-        container.style.height = '75%';
-        container.style.background ='rgba(255, 255, 255, 0.5)';
-
+    responsive: {
+        rules: [{
+            condition: {
+                maxWidth: 500
+            },
+            chartOptions: {
+                legend: {
+                    layout: 'horizontal',
+                    align: 'center',
+                    verticalAlign: 'bottom'
+                }
+            }
+        }]
     }
 
+});
+
+      var div = document.getElementById('chartcontainer');
+      div.style.border = 'medium double';
+      div.style.backgroundColor = 'rgba(255, 255, 255, 0.5)';
+      div.style.borderColor = '#c9c9c9';
+
+      var element = document.querySelector('.highcharts-background');
+      if (element) { // Check if element exists before trying to remove it
+          element.remove();
+      }
+
+      const container = document.getElementById('chartcontainer');
+      container.style.background ='rgba(255, 255, 255, 0.5)';
 };
 
 var buttonAdded = false
@@ -1247,9 +1288,13 @@ function executeWithRetry(fn) {
 
 function charting(){
 
+    $("#game_window").html('<div class="game_header">\t<h2>NEW CAMPAIGN TRAIL</h2>\t</div>\t<div id="main_content_area">\t<div id="results_container"><br><h3>Campaign overview</h3><br><div id="chartcontainer"><figure class="highcharts-figure"><div id="myChart"></div></figure></div></div></div><div id="map_footer">\t\t<button class="final_menu_button" id="overall_results_button">Final Election Results</button>\t\t<button class="final_menu_button" id="final_election_map_button">Election Map</button>\t\t<button class="final_menu_button" id="state_results_button">Results by State</button>\t\t<button class="final_menu_button" id="overall_details_button">Overall Results Details</button>\t\t<button class="final_menu_button" id="recommended_reading_button">Further Reading</button>\t\t<button class="final_menu_button" id="play_again_button">Play Again!</button>\t</div>');
 
+     $("#map_footer").css({
+      position: "relative",
+      zIndex: "9999"
+    });
 
-    $("#game_window").html('<script src="https://cdn.jsdelivr.net/npm/chart.js"></script><div class="game_header">\t<h2>NEW CAMPAIGN TRAIL</h2>\t</div>\t<div id="main_content_area">\t<div id="results_container"><br><h3>Estimated Polling over time:</h3><br><br><div id="chartcontainer"><canvas id="myChart"></canvas></div></div></div><div id="map_footer">\t\t<button class="final_menu_button" id="overall_results_button">Final Election Results</button>\t\t<button class="final_menu_button" id="final_election_map_button">Election Map</button>\t\t<button class="final_menu_button" id="state_results_button">Results by State</button>\t\t<button class="final_menu_button" id="overall_details_button">Overall Results Details</button>\t\t<button class="final_menu_button" id="recommended_reading_button">Further Reading</button>\t\t<button class="final_menu_button" id="play_again_button">Play Again!</button>\t</div>');
 
         $("#overall_results_button").click(function() {
         p()
@@ -1265,8 +1310,15 @@ function charting(){
         y()
     })
 
-
     setTimeout(function() {
         executeWithRetry(Chartbuilder);
   }, 100);
+};
+
+function loadScript(url, callback) {
+  var script = document.createElement('script');
+  script.src = url;
+  script.onload = callback;
+
+  document.head.appendChild(script);
 };
