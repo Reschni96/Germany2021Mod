@@ -1128,13 +1128,19 @@ function Chartbuilder(type) {
             xAxis: {
                 title: {
                     text: 'Questions'
-                }
+                },
+                categories: Array.from({ length: polling[0].length }, (_, index) => index + 1)
+
             },
 
             legend: {
                 layout: 'vertical',
                 align: 'right',
                 verticalAlign: 'middle'
+            },
+                tooltip: {
+                valueSuffix: '%',
+                shared: true
             },
 
             plotOptions: {
@@ -1319,6 +1325,9 @@ function Chartbuilder(type) {
 
             xAxis: {
                 categories: ['Party']
+            },
+            tooltip: {
+                valueSuffix: '%'
             },
 
             series: [{
