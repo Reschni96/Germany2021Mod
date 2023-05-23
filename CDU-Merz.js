@@ -1104,6 +1104,9 @@ resultobserver.observe(document.documentElement, { childList: true, subtree: tru
 //chart stuff here, setup in cyoa function required
 function Chartbuilder(type) {
 
+       const chartButton = document.getElementById("chart_button");
+        chartButton.disabled = true;
+
     if(type === "line"){
          var myChart = Highcharts.chart('myChart', {
 

@@ -1110,6 +1110,9 @@ resultobserver.observe(document.documentElement, { childList: true, subtree: tru
 //chart stuff here, setup in cyoa function required
 function Chartbuilder(type) {
 
+    const chartButton = document.getElementById("chart_button");
+    chartButton.disabled = true;
+
     if(type === "line"){
          var myChart = Highcharts.chart('myChart', {
 
@@ -1488,3 +1491,13 @@ var charts = ["bar", "seats"]
 
 const buttonobserver = new MutationObserver(addMyButton);
 buttonobserver.observe(document.documentElement, { childList: true, subtree: true });
+
+function clearFooter() {
+  var footer = document.getElementById("map_footer");
+  if (footer) {
+    footer.style.clear = "both";
+  }
+}
+
+const footerObserver = new MutationObserver(clearFooter);
+footerObserver.observe(document.documentElement, { childList: true, subtree: true });
