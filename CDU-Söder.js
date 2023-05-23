@@ -1107,6 +1107,21 @@ function changechart(){
 var resultobserver = new MutationObserver(changechart);
 resultobserver.observe(document.documentElement, { childList: true, subtree: true });
 
+
+function mcaHeight() {
+  var mca = document.getElementById("main_content_area");
+  var map = document.getElementById("map_container")
+  if (mca) {
+    mca.style.height = "80%";
+    if(map){
+     mca.style.height = "76%";
+    }
+  }
+}
+
+const mcaObserver = new MutationObserver(mcaHeight);
+mcaObserver.observe(document.documentElement, { childList: true, subtree: true });
+
 //chart stuff here, setup in cyoa function required
 function Chartbuilder(type) {
 
@@ -1491,13 +1506,3 @@ var charts = ["bar", "seats"]
 
 const buttonobserver = new MutationObserver(addMyButton);
 buttonobserver.observe(document.documentElement, { childList: true, subtree: true });
-
-function clearFooter() {
-  var footer = document.getElementById("map_footer");
-  if (footer) {
-    footer.style.clear = "both";
-  }
-}
-
-const footerObserver = new MutationObserver(clearFooter);
-footerObserver.observe(document.documentElement, { childList: true, subtree: true });

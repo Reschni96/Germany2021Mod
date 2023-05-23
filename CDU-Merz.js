@@ -1101,6 +1101,20 @@ function changechart(){
 var resultobserver = new MutationObserver(changechart);
 resultobserver.observe(document.documentElement, { childList: true, subtree: true });
 
+function mcaHeight() {
+  var mca = document.getElementById("main_content_area");
+  var map = document.getElementById("map_container")
+  if (mca) {
+    mca.style.height = "80%";
+    if(map){
+     mca.style.height = "76%";
+    }
+  }
+}
+
+const mcaObserver = new MutationObserver(mcaHeight);
+mcaObserver.observe(document.documentElement, { childList: true, subtree: true });
+
 //chart stuff here, setup in cyoa function required
 function Chartbuilder(type) {
 
