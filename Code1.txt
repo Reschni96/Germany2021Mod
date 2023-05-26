@@ -51,7 +51,7 @@ var runformobserver = new MutationObserver(updateRunningMateForm);
 runformobserver.observe(document.documentElement, { childList: true, subtree: true });
 
 function removeCandidateSummary() {
-   sumobserver.disconnect();
+  sumobserver.disconnect();
   const candidateSummary = document.querySelector("#candidate_summary");
   if (candidateSummary) {
     const ulList = candidateSummary.querySelector("ul");
@@ -64,3 +64,43 @@ function removeCandidateSummary() {
 
 var sumobserver = new MutationObserver(removeCandidateSummary);
 sumobserver.observe(document.body, {childList: true,subtree: true});
+
+function modifyAllocationForm() {
+
+    alloformobserver.disconnect();
+    const form = document.querySelector('form[name="game_type_selection"]');
+        if(form){
+        const select = form.querySelector('select[name="game_type_id"]');
+
+        // change option value
+        const option = select.querySelector('option[value="1"]');
+        option.textContent = 'Default (D\'Hondt Proportional)';
+
+        // Remove second option
+        select.querySelector('option[value="2"]').remove();
+
+        // change h3 text
+        const h3 = form.querySelector('h3');
+        h3.textContent = 'How would you like the seats to be allocated?';
+        }
+
+    alloformobserver.observe(document.body, {childList: true,subtree: true});
+}
+
+var alloformobserver = new MutationObserver(modifyAllocationForm);
+alloformobserver.observe(document.body, {childList: true,subtree: true});
+
+//for some reason, this needs its own observer
+
+function changeOpponentSelectionDescription(){
+
+        oppodescobserver.disconnect();
+        const opponentSelectionDescription = document.getElementById("opponent_selection_description_window");
+        if(opponentSelectionDescription){
+        opponentSelectionDescription.innerHTML = `<p><strong>Use the default method of allocating seats in the Dutch House of Representatives.</strong></p><p>The Netherlands use a nationwide list-based proportional system. After all the votes have been tallied, successive quotients are calculated for each party. The party with the largest quotient wins one seat, and its quotient is recalculated. This is repeated until the required number of seats is filled.</p><p>This method means every vote is worth nearly the same. It also makes it very easy for small parties to win seats. On the other hand, it is nearly impossible for a single party to win a majority of the seats.</p>`;
+        }
+        oppodescobserver.observe(document.body, {childList: true,subtree: true});
+}
+
+var oppodescobserver = new MutationObserver(changeOpponentSelectionDescription)
+oppodescobserver.observe(document.body, {childList: true,subtree: true});
