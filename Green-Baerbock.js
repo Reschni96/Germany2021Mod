@@ -954,7 +954,7 @@ for (let i = 0; i < 7; i++) {
 cyoAdventure = function (a) {
     ans = campaignTrail_temp.player_answers[campaignTrail_temp.player_answers.length - 1]
     let pop_vote = getLatestRes(A(return_type=2))[0];
-    let playerPolling = (pop_vote.find(p => p.pk === 77)).pvp;
+    let playerPolling = (pop_vote.find(p => p.pk === 79)).pvp;
     let i = 0;
 
     pop_vote.sort((a, b) => {
@@ -967,6 +967,7 @@ cyoAdventure = function (a) {
       i++;
     });
 
+
 	if (ans === 4001) {
 	    campaignTrail_temp.questions_json[7]=extraQuestions[0];
 	    campaignTrail_temp.questions_json[9]=extraQuestions[1];
@@ -977,9 +978,10 @@ cyoAdventure = function (a) {
        campaignTrail_temp.questions_json[13]=extraQuestions[3];
     }
 
-
-    if (ans === 4089) {
-    campaignTrail_temp.question_number=23;
+    //polling collapse is stopped if party is closer to fist place than third and over 20%
+    if (pop_vote[0].pvp-playerPolling<playerPolling-pop_vote[2].pvp && playerPolling>0.2) {
+    campaignTrail_temp.questions_json[17]=extraQuestions[4];
+    campaignTrail_temp.questions_json[18]=extraQuestions[5];
     }
 
     //coalition weight adjustments here
