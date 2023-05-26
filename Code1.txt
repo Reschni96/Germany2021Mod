@@ -77,7 +77,10 @@ function modifyAllocationForm() {
         option.textContent = 'Default (D\'Hondt Proportional)';
 
         // Remove second option
+        try{
         select.querySelector('option[value="2"]').remove();
+        }
+        catch{}
 
         // change h3 text
         const h3 = form.querySelector('h3');
