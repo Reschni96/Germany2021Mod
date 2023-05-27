@@ -633,18 +633,24 @@ function endingOneBuilder(){
                     contestedElection = true;
 
                  }
-
-
-
             }
+
+            else if(e.final_overall_results[0].electoral_votes - playerParty.electoral_votes < 10){
+
+            header = "<h2>“At 8:51pm, we can't project yet who will win this election...”</h2>"
+            playerPerformance = "When the first results come in, it's already clear that this will be a historic night for the Green Party. You have more than doubled its voteshare compared to the last election and might even be on track to become the strongest party in the Bundestag! After a few celebratory, but tense hours, it becomes clear that unfortunately, you came in second - still a very impressive result, but a little disappointing nonetheless. The " + firstParty.fields.last_name + " has the initiative to form the government, but don't give up hope just yet - depending on how the coalition talks go, there's still a chance for you to become chancellor."
+            adjustWeights(3);
+            closeElection = true;
+            }
+
             else if (playerParty.popular_votes/totalPV<0.2){
-            header = "<h2>“Dear viewers, you're seeing this correctly, the CDU/CSU is below 20%”</h2>"
-            playerPerformance = "It's a tough night for you and your party as the first results at 6:00pm show a significant loss in votes already. Despite the polls predicting a similar outcome, it's still a blow to the once-proud CDU/CSU union. With more than half of the voters lost compared to two elections ago, many are blaming you for the losses, and the pressure to resign as party leader is mounting. The " + firstParty.fields.last_name + " has the clear initiative to form the government, and it seems unlikely that the CDU/CSU will have a chance to form its own government. While there is a slim chance that the coalition talks could fall through, it's more likely that your party will become either the opposition or a junior coalition partner."
+            header = "<h2>“No victory, but a strong showing for Baerbock”</h2>"
+            playerPerformance = "Election night is a time of mixed feelings for you and your party. While you have achieved a strong result and placed second for the first time in Green Party history, you're still a far way off from first place. This is not the result you had hoped for, but still something you can work with. The " + firstParty.fields.last_name + " will try to form a government now - you can try to become a junior coalition partner or maybe try to form your own government if coaltion talks fall through, but don't get your hopes up."
             adjustWeights(10);
             }
             else {
-            header = "<h2>“A bitter night for Laschet, who wanted to achieve a lot more than this”</h2>"
-            playerPerformance = "As the first projections came in at 18:00, you still held onto hope for a better result. However, as the election night progressed, it became increasingly clear that your party had suffered a significant loss. The CDU/CSU has lost a considerable amount of votes compared to the last election, and there are murmurs that the party needs a new leader after such a defeat. The " + firstParty.fields.last_name + " is now in a better position to form the government. While it's possible that the coalition talks could fall through, the chances of the CDU/CSU forming their own government are slim. It's more likely that they will become opposition or a junior coalition partner."
+            header = "<h2>“No victory, but a very strong showing for Baerbock”</h2>"
+            playerPerformance = "Election night is a time of mixed feelings for you and your party. While you have achieved a strong result and placed second for the first time in Green Party history, you're still quite a bit behind first place. This is not quite the result you had hoped for, but still impressive. The " + firstParty.fields.last_name + " will try to form a government now - you can try to become a junior coalition partner or maybe try to form your own government if coaltion talks fall through, but don't get your hopes up."
             adjustWeights(5);
             }
 
