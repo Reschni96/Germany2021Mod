@@ -176,39 +176,6 @@ e.multiple_endings = true;
 
   }
 
-
-  if(MerzTime){
-      if (e.final_overall_results[0].candidate === 77){
-          e.header="<h2>“The CDU/CSU and Friedrich Merz are the winners of this night”</h2>"
-          e.pages=[`<p>Following his victory in the CDU leadership challenge and subsequent triumph over Söder in the vote for the CDU/CSU's chancellor candidate, Merz has once again emerged victorious. He has won the federal election and is expected to form a government. When you see him celebrate on election night, you briefly dream of what could have been, but then again, there's no way to tell if you had won the election. During his nine-month leadership tenure, Merz has steered the CDU in a more conservative direction, and this trend is likely to continue during his chancellorship.</p><p>In contrast, you remained as the Minister-President of North Rhine-Westphalia, but your popularity took a hit due to a poor response to the floodings in the summer. You now face a choice between defending your post in 2022 or joining Merz's cabinet. Either way, your chances of ever becoming chancellor appear to be slim.</p>` ]
-          e.image="https://www.bundestag.de/resource/image/225552/3x4/594/792/41c47f0a63894c714cff2ac9fc890afb/2AC076E6C48DE98561C2E0BA18823C1A/kuppel.jpg"
-
-          return construct(0);
-      }
-      else{
-          e.header="<h2>“A bitter night for Merz and the CDU/CSU”</h2>"
-          e.pages=[`<p>Following his victory in the CDU leadership challenge and subsequent triumph over Söder in the vote for the CDU/CSU, this is a heavy blow for Friedrich Merz. His campaign had some troubled moments and now his political future is unclear after this defeat. While he may try to form a government, Scholz of the SPD definitely has the initiative.</p><p>In contrast, you remained as the Minister-President of North Rhine-Westphalia, but your popularity took a hit due to a poor response to the floodings in the summer. You can try to defend your post or, if Merz resigns as party leader, run for leadership again. Maybe you can even become chancellor in 2025.</p>` ]
-          e.image="https://www.bundestag.de/resource/image/225552/3x4/594/792/41c47f0a63894c714cff2ac9fc890afb/2AC076E6C48DE98561C2E0BA18823C1A/kuppel.jpg"
-            return construct(0);
-      }
-  }
-
-  if(SoederTime){
-  if (e.final_overall_results[0].candidate === 77){
-          e.header="<h2>“The CDU/CSU and Markus Söder are the winners of this night”</h2>"
-          e.pages=[`<p>After he successfully captured the chancellor candidacy, Markus Söder made history by being the first CSU politican to win a federal election. When you see him celebrate on election night, you briefly dream of what could have been, but then again, there's no way to tell if you had won the election. Söder will now try to form a coalition government and become chancellor.</p><p>In contrast, you remained as the Minister-President of North Rhine-Westphalia, but your popularity took a hit due to a poor response to the floodings in the summer. You now face a choice between defending your post in 2022 or joining Söder's cabinet. Either way, your chances of ever becoming chancellor appear to be slim.</p>` ]
-          e.image="https://www.bundestag.de/resource/image/225552/3x4/594/792/41c47f0a63894c714cff2ac9fc890afb/2AC076E6C48DE98561C2E0BA18823C1A/kuppel.jpg"
-
-          return construct(0);
-      }
-      else{
-          e.header="<h2>“A bitter night for Söder and the CDU/CSU”</h2>"
-          e.pages=[`<p>After he had become chancellor candidate, Söder had been so certain that he would win this election, and now this! Despite his best efforts, he lost the election, and Olaf Scholz of the SPD is expected to form a government. Söder can always return to Bavaria, where he remains popular, but his federal ambitions seem over.</p><p>In contrast, you remained as the Minister-President of North Rhine-Westphalia and party leader of the CDU, but your popularity took a hit due to a poor response to the floodings in the summer. You can try to defend your post as Minister-President in 2022 or maybe become leader of the opposition in Berlin. Maybe you can even become chancellor in 2025.</p>` ]
-          e.image="https://www.bundestag.de/resource/image/225552/3x4/594/792/41c47f0a63894c714cff2ac9fc890afb/2AC076E6C48DE98561C2E0BA18823C1A/kuppel.jpg"
-            return construct(0);
-      }
-  }
-
   if(!negotiationsDone){
   ending = endingOneBuilder();
   e.header=ending[0];
@@ -613,74 +580,63 @@ function endingOneBuilder(){
 
 
     if (playerParty.electoral_votes>totalSeats/2){
-        header = "<h2>“Laschet delievers stunning victory!”</h2>"
-        text = [`<p>As the election results pour in, a sense of shock sets in. Not only have you exceeded Merkel's performance, but you have become the first person since Adenauer in the 1950s to win an absolute majority! Some are skeptical about such a good outcome. Has Germany truly embraced Laschetmania, or is something more nefarious at play?</p><p> You have always been underestimated. Merkel never believed you had the potential to succeed her, Söder challenged you in the spring, and half of your party favored him over you. They even dubbed you "Würfel-Armin" on the internet and ridiculed your father's profession as a miner. But now, you have proved them all wrong.</p><p>Your historic victory may have been achieved by unconventional means, but nobody will ever find out. With one last button press, one last press of the spacebar, all evidence is gone.</p>`]
+        header = "<h2>“Baerbock stuns the political establishment”</h2>"
+        text = [`<p>Green majority, now what?</p><p> Don't know yet what to put here. Maybe something something switching off all coal power immediately and introducing very harsh tempo limits?'</p><p>Is there something funny about Baerbock herself?</p>`]
 
     }
 
     else{
         if(playerParty===e.final_overall_results[0]){
 
-            if (playerParty.popular_votes/totalPV>0.27){
+             if(playerParty.electoral_votes - e.final_overall_results[1].electoral_votes < 10){
 
-            header = "<h2>“With a result like this, Laschet shows himself to be worthy succesor of Merkel!”</h2>"
-            playerPerformance = "By 6:00 pm, the early projections already indicate that you are in a comfortable lead. As the night progresses, it becomes increasingly clear that you have emerged as the winner of the election. What's more, you have achieved a higher percentage of the vote than most pundits had predicted. Given that Merkel has been in power for 16 years, many had anticipated a greater desire for change among the electorate. Your victory not only reinforces your status as the leader of your party but also simplifies future coalition negotiations. After all, it is evident that the German people favor you as their chancellor."
-             adjustWeights(10);
+            header = "<h2>“At 8:51pm, we can't project yet who will win this election...”</h2>"
+            playerPerformance = "When the first results come in, it's already clear that this will be a historic night for the Green Party. You have more than doubled its voteshare compared to the last election and might even be on track to become the strongest party in the Bundestag! After a few celebratory, but tense hours, it becomes clear that you've made history and have lead the Greens to become the strongest party for the first time. However, in response to the tight result, " + secondPartyLeader.leaderName + " has declared that the " + secondParty.fields.last_name + " is also open to leading a government. Nonetheless, you are likely to have an advantage during the coalition talks."
+            adjustWeights(3);
+            closeElection = true;
             }
-            else if (playerParty.electoral_votes == e.final_overall_results[1].electoral_votes){
+
+            else{
+             header = "<h2>“A historic night for Germany and the Greens!”</h2>"
+            playerPerformance = "Until the were end of the campaign, there were doubts if the Green Party could actually win this election. At 6pm, when the first results come in, you've proven all this doubters wrong: For the first time in the history of the Federal Republic of German, a party other than the CDU/CSU and SPD has won an election. You and your party are ecstatic and celebrate the whole night. While you still have to form a government, your odds of becoming the youngest and first Green chancellor are good."
+             adjustWeights(5);
+            }
+        }
+        else if(playerParty===e.final_overall_results[1]){
+
+            if(playerParty.electoral_votes > e.final_overall_results[0].popular_votes){
 
             header = "<h2>“At 10:37pm, this is still too close to call...”</h2>"
-            playerPerformance = "Throughout the night, it remained unclear whether your party or the " + secondParty.fields.last_name + " emerged victorious in the election, with projections indicating a neck-and-neck race. The final result was announced in the morning and was hotly contested. Eventually, it became clear that you and the " + secondParty.fields.last_name + " have won the exact same amount of seats. This unprecedented situation in Germany has sparked intense discussions and competing claims of victory. Both you and " + secondPartyLeader.leaderName + " maintain that you have the strongest mandate to form the next government. The ensuing coalition negotiations are bound to be tumultuous."
+            playerPerformance = "When the first results come in, it's already clear that this will be a historic night for the Green Party. You have more than doubled its voteshare compared to the last election and might even be on track to become the strongest party in the Bundestag! After a few celebratory, but tense hours, the situation becomes muddy. While you won the popular vote, the " + firstParty.fields.last_name + " has won the most seats - probably due to overhanging mandates. Both you and " + firstPartyLeader.leaderName + " assert your right to form a government and begin coalition negotiations. It's going to be a tough fight, but you might still become the first Green chancellor."
             if(!contestedElection){
 
-                coalitions.forEach((coalition) => {
-                  if (coalition.parties.includes(playerParty.candidate) && coalition.parties.includes(secondParty.pk)) {
-                    coalition.weight = 0.001;
-                  }
-                });
-                contestedElection = true;
-
-             }
-             }
-             else if (playerParty.popular_votes < e.final_overall_results[1].popular_votes){
-
-                header = "<h2>“At 10:37pm, this is still too close to call...”</h2>"
-                playerPerformance = "Throughout the night, it remained unclear whether your party or the " + secondParty.fields.last_name + " emerged victorious in the election, with projections indicating a neck-and-neck race. The final result was announced in the morning and was hotly contested. Eventually, it becomes clear that you have won the most seats, most likely due to overhanging mandates in Bavaria, while the " + secondParty.fields.last_name + " has won the popular vote. This unprecedented situation in Germany has sparked intense discussions and competing claims of victory. Both you and " + secondPartyLeader.leaderName + " maintain that you have the strongest mandate to form the next government. The ensuing coalition negotiations are bound to be tumultuous."
-                if(!contestedElection){
-
                     coalitions.forEach((coalition) => {
-                      if (coalition.parties.includes(playerParty.candidate) && coalition.parties.includes(secondParty.pk)) {
+                      if (coalition.parties.includes(playerParty.candidate) && coalition.parties.includes(firstParty.pk)) {
                         coalition.weight = 0.001;
                       }
                     });
                     contestedElection = true;
 
                  }
-             }
-
-            else if(playerParty.electoral_votes - e.final_overall_results[1].electoral_votes < 10){
-
-            header = "<h2>“At 8:51pm, we can't project yet who will win this election...”</h2>"
-            playerPerformance = "Upon the first release of results, the election appeared to be a tighter race than you and your party had anticipated. However, you managed to gain a small but steady advantage and maintained it as the final results were tallied. Despite experiencing a significant drop in votes compared to the previous election, your party emerged victorious. Nevertheless, the small margin between you and the second-place finisher means that you cannot assert a particularly strong mandate. In response to the tight result, " + secondPartyLeader.leaderName + " has declared that the " + secondParty.fields.last_name + " is also open to leading a government. Nonetheless, you are likely to have an advantage during the coalition talks."
-            adjustWeights(2);
-            closeElection = true;
             }
-            else{
-             header = "<h2>“We can now project that the CDU/CSU has won this election.”</h2>"
-            playerPerformance = "Although the result is slightly closer than what you had initially anticipated, you maintained a lead throughout the election night and ultimately emerged as the winner. There is some discontent over the number of votes you've lost compared to the previous election, but most party members concede that this was an unavoidable outcome with Merkel stepping down. Forming a coalition is still necessary for you to become chancellor though. You should have an advantage, but it remains to be seen how easy or difficult the negotiations will be."
-             adjustWeights(5);
+            else if (playerParty.electoral_votes == e.final_overall_results[0].electoral_votes){
+
+            header = "<h2>“At 10:37pm, this is still too close to call...”</h2>"
+            playerPerformance = "When the first results come in, it's already clear that this will be a historic night for the Green Party. You have more than doubled its voteshare compared to the last election and might even be on track to become the strongest party in the Bundestag! After a few celebratory, but tense hours, the situation becomes muddy. You and the " + firstParty.fields.last_name + " have won the exact same amount of seats, an unprecedented situation. Both you and " + firstPartyLeader.leaderName + " assert your right to form a government and begin coalition negotiations. It's going to be a tough fight, but you might still become the first Green chancellor."
+            if(!contestedElection){
+
+                    coalitions.forEach((coalition) => {
+                      if (coalition.parties.includes(playerParty.candidate) && coalition.parties.includes(firstParty.pk)) {
+                        coalition.weight = 0.001;
+                      }
+                    });
+                    contestedElection = true;
+
+                 }
+
+
+
             }
-        }
-        else if(playerParty===e.final_overall_results[1]){
-
-            if(e.final_overall_results[0].electoral_votes - playerParty.electoral_votes  < 10){
-
-            header = "<h2>“At 8:51pm, we can't project yet who will win this election...”</h2>"
-            playerPerformance = "When the first results come in, it becomes clear that the election is going to be a nail-biter. Unfortunately, as the night progresses, you fall into second place, and ultimately lose the election. The margin of defeat is narrow, but a defeat is a defeat. There is some disappointment, but with the difference in seats between you and the  " + firstParty.fields.last_name + " being razor-thin, the eventual outcome is still uncertain. Both you and " + firstPartyLeader.leaderName + " assert your right to form a government and begin coalition negotiations. It's going to be a tough fight, but don't lose hope just yet."
-            adjustWeights(2);
-            closeElection = true;
-            }
-
             else if (playerParty.popular_votes/totalPV<0.2){
             header = "<h2>“Dear viewers, you're seeing this correctly, the CDU/CSU is below 20%”</h2>"
             playerPerformance = "It's a tough night for you and your party as the first results at 6:00pm show a significant loss in votes already. Despite the polls predicting a similar outcome, it's still a blow to the once-proud CDU/CSU union. With more than half of the voters lost compared to two elections ago, many are blaming you for the losses, and the pressure to resign as party leader is mounting. The " + firstParty.fields.last_name + " has the clear initiative to form the government, and it seems unlikely that the CDU/CSU will have a chance to form its own government. While there is a slim chance that the coalition talks could fall through, it's more likely that your party will become either the opposition or a junior coalition partner."
