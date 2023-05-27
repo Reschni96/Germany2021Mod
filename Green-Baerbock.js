@@ -181,6 +181,7 @@ e.multiple_endings = true;
   e.header=ending[0];
   e.pages=ending[1];
   e.image="https://www.bundestag.de/resource/image/225552/3x4/594/792/41c47f0a63894c714cff2ac9fc890afb/2AC076E6C48DE98561C2E0BA18823C1A/kuppel.jpg"
+  console.log(possibleCoalitions)
 
   return construct(0);
   }
@@ -639,7 +640,7 @@ function endingOneBuilder(){
 
             header = "<h2>“At 8:51pm, we can't project yet who will win this election...”</h2>"
             playerPerformance = "When the first results come in, it's already clear that this will be a historic night for the Green Party. You have more than doubled its voteshare compared to the last election and might even be on track to become the strongest party in the Bundestag! After a few celebratory, but tense hours, it becomes clear that unfortunately, you came in second - still a very impressive result, but a little disappointing nonetheless. The " + firstParty.fields.last_name + " has the initiative to form the government, but don't give up hope just yet - depending on how the coalition talks go, there's still a chance for you to become chancellor."
-            adjustWeights(3);
+            adjustWeights(2);
             closeElection = true;
             }
 
@@ -650,15 +651,47 @@ function endingOneBuilder(){
             }
             else {
             header = "<h2>“No victory, but a very strong showing for Baerbock”</h2>"
-            playerPerformance = "Election night is a time of mixed feelings for you and your party. While you have achieved a strong result and placed second for the first time in Green Party history, you're still quite a bit behind first place. This is not quite the result you had hoped for, but still impressive. The " + firstParty.fields.last_name + " will try to form a government now - you can try to become a junior coalition partner or maybe try to form your own government if coaltion talks fall through, but don't get your hopes up."
+            playerPerformance = "Election night is a time of mixed feelings for you and your party. While you have achieved a strong result and placed second for the first time in Green Party history, you're still quite a bit behind first place. This is not quite the result you had hoped for, but still impressive. The " + firstParty.fields.last_name + " will try to form a government now - you can try to become a junior coalition partner or maybe try to form your own government if coalition talks fall through, but don't get your hopes up."
             adjustWeights(5);
             }
 
         }
         else if(playerParty===e.final_overall_results[2]){
-            header = "<h2>“Our projections hold - CDU/CSU is in third place.”</h2>"
-            playerPerformance = "This is an unmitigated disaster. Not only have you lost this election, you didn't even come in second. Under your leadership, the CDU/CSU has suffered its worst-ever performance in a federal election, and there are few who don't hold you personally responsible. The pressure is so intense that you feel compelled to resign as party leader on the same night. With the " + firstParty.fields.last_name + " now attempting to form a coalition, many in your party believe that going into opposition is the only way to survive the next four years given these results. You've certainly made history, just not in the way you had hoped for."
-            disaster = true;
+
+            if(playerParty.popular_votes/totalPV>0.178){
+            header = "<h2>“A mixed night for the Green Party”</h2>"
+            playerPerformance = "It's a bit unclear what to make of this result for you and your party. On the one hand, you more than doubled the result of the Green Party compared to the last election, but on the other, many feel that a lot more than third place would have been possible considering your polling numbers in the spring. You even hear some people say that this is your fault and Habeck would have been the better choice."
+            }
+            else if(playerParty.popular_votes/totalPV<=0.178){
+            header = "<h2>“A very mixed night for the Green Party”</h2>"
+            playerPerformance = "It's a bit unclear what to make of this result for you and your party. For the first time since 2002, you've lead the Green Party into third place and you improved the performance of the party a lot compared to the last election However, almost everyone agrees that more had been possible considering your polling numbers in the spring. You even hear quite a few people say that this is your fault and Habeck would have not squandered this historic opportunity like you did."
+            }
+            if (e.final_overall_results[0].electoral_votes == e.final_overall_results[1].electoral_votes){
+            playerPerformance += " First place is actually tied, so the coalition talks are going to be interesting. There is a good chance that you'll become a junior partner in government if you want to."
+            coalitions.forEach((coalition) => {
+                      if (coalition.parties.includes(firstParty.pk) && coalition.parties.includes(secondParty.pk)) {
+                        coalition.weight = 0.001;
+                      }
+                    });
+            }
+            else if (e.final_overall_results[0].popular_votes < e.final_overall_results[1].popular_votes){
+            playerPerformance += " It's actually unclear who is the winner of this election, with the " + firstParty.fields.last_name + " having won the most seats and the " + secondParty.fields.last_name + " having won the most votes. Both parties want to form a government with you, so you are likely going to become a coalition partner if you want to."
+             coalitions.forEach((coalition) => {
+                  if (coalition.parties.includes(firstParty.pk) && coalition.parties.includes(secondParty.pk)) {
+                    coalition.weight = 0.001;
+                  }
+                });
+            }
+
+            else if (e.final_overall_results[0].electoral_votes - e.final_overall_results[1].electoral_votes < 10){
+            playerPerformance += " The race for the winner of this election was close, but in the end, the " + firstParty.fields.last_name + " prevailed. They will now try to form a government, though with how close the result was, the " + secondParty.fields.last_name + " also announced their intention to start coalition talks. In any case, you have a good chance to become a coalition partner if you want to."
+
+            adjustWeights(4);
+            }
+            else{
+            playerPerformance += " The clear winner of this election is the " + firstParty.fields.last_name + ". They are now searching for coalition partners, so you have an opportunity to become part of the governemnts if the negotiations work out."
+            adjustWeights(10);
+            }
         }
         else{
             header = "<h2>“A devastating night for Laschet and his party”</h2>"
@@ -952,8 +985,6 @@ cyoAdventure = function (a) {
        campaignTrail_temp.question_number=23;
     }
 
-    console.log(pop_vote[0].pvp-playerPolling)
-    console.log(playerPolling-pop_vote[1].pvp)
     //polling collapse is stopped if Greens are close enough to the CDU and far enough from the SPD
     if ([4063, 4064, 4065, 4066].includes(ans)) {
         if (pop_vote[0].pvp-playerPolling<playerPolling-pop_vote[1].pvp ) {
