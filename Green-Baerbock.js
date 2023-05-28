@@ -62,6 +62,8 @@ campaignTrail_temp.game_start_logging_id = '3662498';
     var totalSeats = 0;
     var contestedElection = false;
     var closeElection = false;
+    var thirdPlace = false;
+    var sneaky = false;
 
 // constructs endings based on header and pages
 
@@ -317,6 +319,21 @@ function addCoalitions() {
             const selectButton = document.createElement("button");
             selectButton.textContent = "Negotiate!";
             selectButton.addEventListener("click", () => {
+
+            //don't let the Greens get away with only negotiating Traffic Light, but no Jamaica
+            if (thirdPlace && (contestedElection || closeElection)) {
+              const coalition5 = possibleCoalitions.find(coalition => coalition.id === 5);
+              const coalition6 = possibleCoalitions.find(coalition => coalition.id === 6);
+
+              if (coalition6 && coalition5){
+              if(!coalitionCheckbox(coalition5) && coalitionCheckbox(coalition6)) {
+                coalition6.weight = 0;
+                sneaky = true;
+                console.log("Sneaky, sneaky")
+              }
+             }
+            }
+
               // Calculate total weight of possible coalitions
               let totalWeight = 0;
               possibleCoalitions.forEach(coalition => {
@@ -324,6 +341,7 @@ function addCoalitions() {
                   totalWeight += coalition.weight;
                 }
               });
+              console.log(possibleCoalitions)
 
               // Choose a random number between 0 and total weight
               const randomWeight = Math.random() * totalWeight;
@@ -563,6 +581,19 @@ function findLeader(coalition){
     return (partyLeaders.find((p) => p.party === partyWithHighestVotes))
 }
 
+function findSecondPlace(coalition) {
+  let partyVotes = [];
+
+  coalition.parties.forEach((party) => {
+    let partyVote = e.final_overall_results.find((result) => result.candidate === party).popular_votes;
+    partyVotes.push({ party, votes: partyVote });
+  });
+
+  partyVotes.sort((a, b) => b.votes - a.votes);
+
+  return partyLeaders.find((p) => p.party === partyVotes[1].party);
+}
+
 function endingOneBuilder(){
 
     var header = null;
@@ -658,6 +689,7 @@ function endingOneBuilder(){
 
         }
         else if(playerParty===e.final_overall_results[2]){
+            thirdPlace = true;
 
             if(playerParty.popular_votes/totalPV>0.178){
             header = "<h2>“A mixed night for the Green Party”</h2>"
@@ -669,29 +701,47 @@ function endingOneBuilder(){
             }
             if (e.final_overall_results[0].electoral_votes == e.final_overall_results[1].electoral_votes){
             playerPerformance += " First place is actually tied, so the coalition talks are going to be interesting. There is a good chance that you'll become a junior partner in government if you want to."
-            coalitions.forEach((coalition) => {
-                      if (coalition.parties.includes(firstParty.pk) && coalition.parties.includes(secondParty.pk)) {
+            if(!contestedElection){
+
+                    coalitions.forEach((coalition) => {
+                      if (coalition.parties.includes(playerParty.candidate) && coalition.parties.includes(firstParty.pk)) {
                         coalition.weight = 0.001;
                       }
                     });
+                    contestedElection = true;
+
+                 }
             }
             else if (e.final_overall_results[0].popular_votes < e.final_overall_results[1].popular_votes){
             playerPerformance += " It's actually unclear who is the winner of this election, with the " + firstParty.fields.last_name + " having won the most seats and the " + secondParty.fields.last_name + " having won the most votes. Both parties want to form a government with you, so you are likely going to become a coalition partner if you want to."
-             coalitions.forEach((coalition) => {
-                  if (coalition.parties.includes(firstParty.pk) && coalition.parties.includes(secondParty.pk)) {
-                    coalition.weight = 0.001;
-                  }
-                });
+            if(!contestedElection){
+
+                    coalitions.forEach((coalition) => {
+                      if (coalition.parties.includes(playerParty.candidate) && coalition.parties.includes(firstParty.pk)) {
+                        coalition.weight = 0.001;
+                      }
+                    });
+                    contestedElection = true;
+
+                 }
             }
 
             else if (e.final_overall_results[0].electoral_votes - e.final_overall_results[1].electoral_votes < 10){
             playerPerformance += " The race for the winner of this election was close, but in the end, the " + firstParty.fields.last_name + " prevailed. They will now try to form a government, though with how close the result was, the " + secondParty.fields.last_name + " also announced their intention to start coalition talks. In any case, you have a good chance to become a coalition partner if you want to."
+
+            closeElection = true;
 
             adjustWeights(4);
             }
             else{
             playerPerformance += " The clear winner of this election is the " + firstParty.fields.last_name + ". They are now searching for coalition partners, so you have an opportunity to become part of the government if the negotiations work out."
             adjustWeights(10);
+
+            //anti sneakiness operations
+            if (e.final_overall_results[0].candidate === 77){
+                console.log("Don't even think about it")
+                closeElection = true;
+                }
             }
         }
         else{
@@ -730,19 +780,26 @@ function endingTwoBuilder(){
     var text = null;
     var image = null;
     var coalitionLeader = findLeader(selectedCoalition);
+    var coalitionVice = findSecondPlace(selectedCoalition);
     var playerLeader = (partyLeaders.find((p) => p.party === e.candidate_id));
     var strongestLeader = (partyLeaders.find((p) => p.party === e.final_overall_results[0].candidate))
+    var topTwo = [e.final_overall_results[0].candidate, e.final_overall_results[1].candidate].includes(79);
     var coalitionText = "";
     var playerFate = "";
     var negotiations = "";
     var contestedText = "";
     var secondPage = false;
     var SecondPageText = "";
+    var sneakyText = "";
 
-    var chancellorFateHappy =  "You have fulfilled your ambition and have been elected chancellor of Germany, congratulations! Your task ahead is to guide the country through the remainder of the Covid pandemic, accelerate the energy transition, and handle any foreign policy challenges that arise. Considering your political beliefs, your chancellorship will probably not be too different from Merkel's. If you're successful, you'll hopefully be reelected as a popular incumbent in 2025."
-    var chancellorFateDown =  "While this coalition was not your favourite, you have fulfilled your ambition and have been elected chancellor of Germany. Your task ahead is to try guiding the country through the remainder of the Covid pandemic, accelerating the energy transition, and handling any foreign policy challenges that arise. Considering your political beliefs, your chancellorship will probably not be too different from Merkel's. If you're successful, you'll hopefully be reelected as a popular incumbent in 2025."
-    var viceFate = "In this new coalition, you have become Vice Chancellor and Minister of Finance, the same post that Scholz held in the last coalition. For now, you also managed to stay party leader, but others are already positioning themselves to challenge you. While this is not what you had hoped for, it could always have been worse. Maybe you can stay party leader and become chancellor in 2025, but don't get your hopes up."
-    var emptyFate = "The election outcome is a significant setback for you personally. With your party performing poorly, your position as party leader is now untenable, and your promise to move to Berlin after the election means that you are no longer Minister-President. You have been relegated to a simple backbencher, and it's unlikely that you will be able to regain your former status in the party or in politics in general."
+    var chancellorFate =  "You have made history by becoming the first Green chancellor of Germany, congratulations! This is a major upset to the German party system - you're the first non CDU or SPD chancellor since the founding of this state. Now you have to guide the country through the rest of the pandemic, handle foreign policy and, of course, make sure that finally enough is getting done to combat climate change and its consequences. The German people have placed a lot of trust in you - don't disappoint to hopefully cement the Green Party as one of the major parties and get reelected in 2025."
+    var viceFate = "In this new coalition, you have become Vice Chancellor and Foreign Minister. Since the Green Party mandates that their leaders can't be part of the government at the same time, you had to resign as party leader. However, you are still an important figure in the party. For now, you should focus on your role as minister. Perhaps in 2025, the party will select you as chancellor candidate again and you'll have even more success."
+    var ministerFateSecond = "In this new coalition, you have become Foreign Minister, while Robert Habeck has become Vice Chancellor and Minister of Economy and Climate. Since the Green Party mandates that their leaders can't be part of the government at the same time, you had to resign as party leader. However, you are still an important figure in the party. For now, you should focus on your role as minister. There is a chance the party will select you to run again in 2025, though many analysts expect Habeck or someone else entirely to have better chances."
+    var emptyFate = "This outcome is a setback for both the party and you personally. While you can try to stay on as party leader, the double failure of not winning the election and then not managing to negotiate a coalition that includes the Greens makes many wary to support you. Perhaps you'll manage to stay on, but you most probably won't have another chance to become chancellor."
+
+      if (sneaky){
+        sneakyText=" Your attempt to only negotiate a Traffic light coalition and no Jamaica didn't work out when the FDP refused to cooperate, leading to no coalition talks for either coalition."
+      }
 
       if(contestedElection){
         contestedText = "Many people are unhappy with this outcome, but that was to be expected with the contested declarations of victory. "
@@ -756,8 +813,13 @@ function endingTwoBuilder(){
             negotiations = "Months have passed, and the coalition talks have finally led to results - though unexpectedly, you managed to outsmart the election winner and form a coalition from second place. Not everyone is happy with this outcome, but that's no problem for you - you did it."
         }
         else{
-            negotiations = "Months have passed, and the coalition talks have finally led to results - though unexpectedly, despite being the party with the most seats, your rightful place as chancellor was stolen from you. Outrageous!"
-            var emptyFate = "This outcome is a setback for you personally. However, your party is as furious as you are that the chancellorship was stolen from you and has decided to keep you as party leader. You are now also the leader of a strong opposition, keeping the government on their toes and in 2025, you'll hopefully get your sweet revenge."
+            if (!thirdPlace){
+                negotiations = "Months have passed, and the coalition talks have finally led to results - though unexpectedly, despite being the party with the most seats, your rightful place as chancellor was stolen from you. The old parties just couldn't live with playing second fiddle to a strong Green Party, it seems!"
+                var emptyFate = "This outcome is a setback for you personally. However, your party is as furious as you are that the chancellorship was stolen from! You are now the leader of the parliamentary group and opposition leader in the Bundestag. If you're successful in that role, you are in a good position to try become chancellor again in 2025."
+            }
+            else{
+                negotiations = "Months have passed, and the coalition talks have finally led to results - though unexpectedly, it's not the strongest party that managed to form the government."
+            }
         }
 
       }
@@ -891,10 +953,10 @@ function endingTwoBuilder(){
         }
 
          if (secondPage){
-            text = [`<p>${contestedText}${negotiations}</p><p>${coalitionText}</p><p>${playerFate}</p>`,`<p>${secondPageText}</p>` ]
+            text = [`<p>${contestedText}${negotiations}${sneakyText}</p><p>${coalitionText}</p><p>${playerFate}</p>`,`<p>${secondPageText}</p>` ]
         }
         else{
-             text = [`<p>${contestedText}${negotiations}</p><p>${coalitionText}</p><p>${playerFate}</p>`,]
+             text = [`<p>${contestedText}${negotiations}${sneakyText}</p><p>${coalitionText}</p><p>${playerFate}</p>`,]
         }
         return[header, text, image];
 }
