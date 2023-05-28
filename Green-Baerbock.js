@@ -577,6 +577,7 @@ function endingOneBuilder(){
     var LeftParty = (e.final_overall_results.find((r) => r.candidate === 304));
     var partyPerformance = "";
     var LeftPerformance = "";
+    var BerlinWin = "";
     var disaster = false;
 
 
@@ -689,13 +690,13 @@ function endingOneBuilder(){
             adjustWeights(4);
             }
             else{
-            playerPerformance += " The clear winner of this election is the " + firstParty.fields.last_name + ". They are now searching for coalition partners, so you have an opportunity to become part of the governemnts if the negotiations work out."
+            playerPerformance += " The clear winner of this election is the " + firstParty.fields.last_name + ". They are now searching for coalition partners, so you have an opportunity to become part of the government if the negotiations work out."
             adjustWeights(10);
             }
         }
         else{
-            header = "<h2>“A devastating night for Laschet and his party”</h2>"
-            playerPerformance = "Despite the gloomy predictions of the polls, no one in the CDU/CSU could have foreseen the scale of this debacle. The election result is a catastrophic failure, far worse than any experienced by a major German party since the establishment of the Federal Republic in 1949, eclipsing even the 2009 defeat of the SPD. You have no choice but to resign in disgrace from all your party positions. Your party is reeling from the blow, and it will take some time for the ramifications of this defeat to be fully understood. However, one thing is certain - the CDU/CSU must learn from the errors made during this ill-fated campaign. While the " + firstParty.fields.last_name + " will attempt to establish a government, it is clear that the CDU/CSU must take time in opposition to rebuild and reinvigorate itself. The future of the party hinges on its ability to regain trust and avoid becoming irrelevant as a result of your catastrophic performance."
+            header = "<h2>“A disappointing nights fot the Greens”</h2>"
+            playerPerformance = "In the spring, the polls pointed to so much being possible for the Green Party, and many people believed you had the potential to become chancellor. However, you've completely squandered this opportunity, not even managing to get into third place. In fact, this result is so disappointing that you feel compelled to resign as party leader a few days after the election. While the Green Party might still become a part of the governing coalition, other people have to decide that now. You can either stay a backbencher or withdraw from politics all together."
             disaster = true;
         }
         var SSW = "In other news, the SSW, the party of the Danish minority, has won a seat for the first time since 1949. As party of a national minority, they are exempt from the 5% threshold."
@@ -708,11 +709,15 @@ function endingOneBuilder(){
             LeftPerformance = " The Left party also failed to meet the 5% threshold for the first time since 2002. This leaves them with only two MPs who won direct mandates in Berlin to represent them in parliament."
         }
 
+        if(e.final_state_results[2].result[0].candidate === 79 && e.final_state_results[2].result[0].percent - e.final_state_results[2].result[1].percent > 0.02){
+        BerlinWin = " Also, the Green Party placed first in the Berlin state elections, making it likely that Bettina Jarasch will become the second Green head of a state government."
+        }
+
         if (!disaster){
-            text = [`<p>${playerPerformance}</p><p>${SSW}${LeftPerformance}</p>`,`<div id="coalitionList"> Now is the time for coalition talks. Select all the coalitions you want to try to form and hope for the best!</div>` ]
+            text = [`<p>${playerPerformance}</p><p>${SSW}${LeftPerformance}${BerlinWin}</p>`,`<div id="coalitionList"> Now is the time for coalition talks. Select all the coalitions you want to try to form and hope for the best!</div>` ]
         }
         else{
-             text = [`<p>${playerPerformance}</p><p>${SSW}${LeftPerformance}</p>`]
+             text = [`<p>${playerPerformance}</p><p>${SSW}${LeftPerformance}${BerlinWin}</p>`]
         }
     }
 
