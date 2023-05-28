@@ -17,7 +17,7 @@ $(".container")[0].style.backgroundColor = "#001f58"
 document.body.background = "https://www.morgenpost.de/bin/src-207619493.jpg"
 document.body.style.backgroundRepeat = "no-repeat";
 document.body.style.backgroundSize = "cover";
-document.getElementById("header").src = "https://i.imgur.com/etrwicm.jpg";
+document.getElementById("header").src = "https://i.ibb.co/4f00Mjw/banner0-2.jpg";
 
 quotes = [`"Wir schaffen das!" - Angela Merkel`, `"Scheitert der Euro, scheitert Europa." - Angela Merkel`, `"Das Internet ist für uns alle Neuland." - Angela Merkel`, `"Die Demokratie ist kein Supermarkt." - Frank-Walther Steinmeier`, `In my homeland Baden-Württemberg we are all sitting in one boat.`, `"Rechts von der CDU/CSU darf es keine demokratisch legitimierte Partei geben" - Franz-Joseph Strauß`, `"Jetzt wächst zusammen, was zusammen gehört" - Willy Brandt`, `Was kümmert mich mein Geschwätz von gestern? - Konrad Adenauer`, `"Wer Visionen hat, sollte zum Arzt gehen" - Helmut Schmidt`, `There will never be a revolution in Germany. The bureaucratic paperwork for it is missing.`, ]
 customquote = quotes[Math.floor((Math.random() * quotes.length))]
