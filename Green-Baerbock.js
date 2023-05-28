@@ -794,7 +794,8 @@ function endingTwoBuilder(){
 
     var chancellorFate =  "You have made history by becoming the first Green chancellor of Germany, congratulations! This is a major upset to the German party system - you're the first non CDU or SPD chancellor since the founding of this state. Now you have to guide the country through the rest of the pandemic, handle foreign policy and, of course, make sure that finally enough is getting done to combat climate change and its consequences. The German people have placed a lot of trust in you - don't disappoint to hopefully cement the Green Party as one of the major parties and get reelected in 2025."
     var viceFate = "In this new coalition, you have become Vice Chancellor and Foreign Minister. Since the Green Party mandates that their leaders can't be part of the government at the same time, you had to resign as party leader. However, you are still an important figure in the party. For now, you should focus on your role as minister. Perhaps in 2025, the party will select you as chancellor candidate again and you'll have even more success."
-    var ministerFateSecond = "In this new coalition, you have become Foreign Minister, while Robert Habeck has become Vice Chancellor and Minister of Economy and Climate. Since the Green Party mandates that their leaders can't be part of the government at the same time, you had to resign as party leader. However, you are still an important figure in the party. For now, you should focus on your role as minister. There is a chance the party will select you to run again in 2025, though many analysts expect Habeck or someone else entirely to have better chances."
+    var ministerFateStrong = "In this new coalition, you have become Foreign Minister, while Robert Habeck has become Vice Chancellor and Minister of Economy and Climate. Since the Green Party mandates that their leaders can't be part of the government at the same time, you had to resign as party leader. However, you are still an important figure in the party. For now, you should focus on your role as minister. There is a chance the party will select you to run again in 2025, though many analysts expect Habeck or someone else entirely to have better chances."
+    var ministerFateWeak = "In this new coalition, you have become Foreign Minister. Since the Green Party mandates that their leaders can't be part of the government at the same time, you had to resign as party leader. However, you are still an important figure in the party. For now, you should focus on your role as minister. There is a chance the party will select you to run again in 2025, though many analysts expect Habeck or someone else entirely to have better chances."
     var emptyFate = "This outcome is a setback for both the party and you personally. While you can try to stay on as party leader, the double failure of not winning the election and then not managing to negotiate a coalition that includes the Greens makes many wary to support you. Perhaps you'll manage to stay on, but you most probably won't have another chance to become chancellor."
 
       if (sneaky){
@@ -828,117 +829,139 @@ function endingTwoBuilder(){
       case 1:
       header = "<h2>“An even grander coalition”</h2>"
 
-          if(coalitionLeader === playerLeader){
-            coalitionText = "After eight years of Grand Coalition, the German people were sick and tired of it. And now, what do they get? An even grander coalition, featuring the Green Party on top of the CDU/CSU and the SPD, called Kenya-Coalition due to the colours of the involved parties. The CDU/CSU kept the chancellorship, but isn't all that happy. Since you're governing with two left-wing parties, you've had to make a lot of compromises, and your base is grumbling that the coalition agreement is not conservative enough. While you personally are onboard with most of the policies, many of your party members had hoped for the CDU/CSU to return to their roots after Merkel. Alas, this is the inevitable price of holding power."
-            playerFate = chancellorFateDown;
+          if(coalitionLeader.party === 77){
+            coalitionText = "After eight years of Grand Coalition, the German people were sick and tired of it. And now, what do they get? An even grander coalition, featuring the Green Party on top of the CDU/CSU and the SPD, called Kenya-Coalition due to the colours of the involved parties. The CDU/CSU kept the chancellorship, the SPD stayed a junior partner and the Green Party has entered the government as well. While you managed to get some of your signature climate policies into the coalition agreement, overall, there were lots and lots of compromises and no one is all that happy with this. Hopefully, this government will at least bring stability."
+             if (playerParty === coalitionVice){
+                    playerFate = viceFate;
+             }
+             else{
+                playerFate = ministerFateWeak;
+             }
           }
-          else{coalitionText = "After eight years of Grand Coalition, the German people were sick and tired of it. And now, what do they get? An even grander coalition, featuring the Green Party on top of the CDU/CSU and the SPD, called Kenya-Coalition due to the colours of the involved parties. There is a bit of a twist to it though, as the CDU/CSU is now a junior partner and " + coalitionLeader.leaderName + " is the chancellor. Since you're governing with two left-wing parties, you've had to make a lot of compromises, and your base is grumbling that the coalition agreement is not conservative enough. While you personally are onboard with most of the policies, many of your party members had hoped for the CDU/CSU to return to their roots after Merkel. Alas, this is the inevitable price of holding power."
-
-           playerFate = viceFate;
-          }
+          else if(coalitionLeader.party === 78){
+            coalitionText = "After eight years of Grand Coalition, the German people were sick and tired of it. And now, what do they get? An even grander coalition, featuring the Green Party on top of the CDU/CSU and the SPD, called Kenya-Coalition due to the colours of the involved parties. There's at least some change, with the SPD now leading the government and the CDU/CSU and you both being junior coalition partners. While you managed to get some of your signature climate policies into the coalition agreement, overall, there were lots and lots of compromises and no one is all that happy with this. Hopefully, this government will at least bring stability."
+             if (playerParty === coalitionVice){
+                    playerFate = viceFate;
+             }
+             else{
+                playerFate = ministerFateWeak;
+             }
+             else{
+              coalitionText = "After eight years of Grand Coalition, the German people were sick and tired of it. And now, what do they get? An even grander coalition, featuring the Green Party on top of the CDU/CSU and the SPD, called Kenya-Coalition due to the colours of the involved parties. There's at least some change, with the Green Party leading the government and the CDU/CSU and SPD both relegated to junior coalition partners. While you managed to get some of your signature climate policies into the coalition agreement, overall, there were lots and lots of compromises and no one is all that happy with this. Hopefully, this government will at least bring stability."
+             playerFate = chancellorFate
+             }
           break;
 
       case 2:
 
          header = "<h2>“There's no escape from the inevitable”</h2>"
          if(coalitionLeader === playerLeader){
-            coalitionText = "It's a bit of a paradox really. The population as a whole doesn't like it. The parties involved certainly don't like it. The media is tired of it. But yet again, for the fourth time in five elections, a Grand coalition between the CDU/CSU and the SPD has formed. It seems that there is just no viable alternative, something is just broken with this political system! As usual, there a lots of compromises in the coalition agreement, no promises of sweeping reforms and no one is really happy with it. At least you managed to form a government at all."
-            playerFate = chancellorFateDown;
+            coalitionText = "It's a bit of a paradox really. The population as a whole doesn't like it. The parties involved certainly don't like it. The media is tired of it. But yet again, for the fourth time in five elections, a Grand coalition between the CDU/CSU and the SPD has formed and "+ coalitionLeader.leaderName + " has become chancellor. It seems that there is just no viable alternative, something is just broken with this political system! As usual, there a lots of compromises in the coalition agreement, no promises of sweeping reforms and no one is really happy with it. This means opposition for you once more - maybe next time, there will finally be a viable alternative to this coalition."
+            playerFate = emptyFate;
           }
-        else{
-        coalitionText = "It's a bit of a paradox really. The population as a whole doesn't like it. The parties involved certainly don't like it. The media is tired of it. But yet again, for the fourth time in five elections, a Grand coalition between the CDU/CSU and the SPD has formed. It seems that there is just no viable alternative, something is just broken with this political system! This time, there's at least a twist - Scholz of the SPD holds the chancellorship while the CDU/CSU plays the role of junior partner. As usual, there a lots of compromises in the coalition agreement, no promises of sweeping reforms and no one is really happy with it. At least you managed to form a government at all."
-            playerFate = viceFate;
-        }
 
       break;
 
       case 3:
       header = "<h2>“A modern coalition for modern times?”</h2>"
       if(coalitionLeader === playerLeader){
-            coalitionText = "Black-Green has been the up-and-coming coalition for a long time in the states, so no one is surprised when it finally happened on a federal level. While there have been some tough negotiations, especially on climate policy, you've forged a coalition agreement that both parties are happy with. People are hopeful that you've combined the best of both worlds and can get more done than the last eight years of the Grand Coalition, so try not to disappoint them!"
+            coalitionText = "Black-Green has been the up-and-coming coalition for a long time in the states, so no one is surprised when it finally happened on a federal level. In a bit of a twist, it's the Baden-Württemberg variation, with the Green Party being stronger than the CDU/CSU. While there have been some tough negotiations, especially on climate policy, you've forged a coalition agreement that both parties are happy with. People are hopeful that you've combined the best of both worlds and can get more done than the last eight years of the Grand Coalition, so try not to disappoint them!"
             playerFate = chancellorFateHappy;
           }
         else{
-            coalitionText = "Black-Green has been the up-and-coming coalition for a long time in the states, so no one is surprised when it finally happened on a federal level. In a bit of a twist, it's the Baden-Württemberg variation, with Baerbock becoming chancellor and you being the junior partner. While there have been some tough negotiations, especially on climate policy, you've forged a coalition agreement that both parties are happy with. People are hopeful that you've combined the best of both worlds and can get more done than the last eight years of the Grand Coalition, so try not to disappoint them!"
+            coalitionText = "Black-Green has been the up-and-coming coalition for a long time in the states, so no one is surprised when it finally happened on a federal level. While there have been some tough negotiations, especially on climate policy, you've forged a coalition agreement that both parties are happy with. People are hopeful that you've combined the best of both worlds and can get more done than the last eight years of the Grand Coalition, so try not to disappoint them!"
+            if(!thirdPlace){
               playerFate = viceFate;
+           }
+            else{
+              playerFate = ministerFateStrong;
+           }
         }
       break;
       case 4:
           header = "<h2>“After 16 years, Red-Green makes a comeback”</h2>"
-          coalitionText = "Perhaps it is no big surprise that this coalition formed, with the amount of things these two parties have in common. However, Red-Green having a majority on the federal level is something that just seemed mathematically impossible a few years ago, a relic of a simpler party systems. Now, " + coalitionLeader.leaderName + " has become chancellor. After 16 years in government, the CDU/CSU finds itself in the unfamiliar role of opposition party. Considering the government consists of two center-left parties, there will certainly be plenty to oppose."
 
-          playerFate=emptyFate;
+        if(coalitionLeader === playerLeader){
+        coalitionText = "Perhaps it is no big surprise that this coalition formed, with the amount of things you and the SPD have in common. However, Red-Green having a majority on the federal level is something that just seemed mathematically impossible a few years ago, a relic of a simpler party systems. This is a major triumph for the center-left part of the party spectrum, and the Green Party actually leading this coalition is the icing on the cake for you. The coalition talks have been a breeze, with you and the SPD in agreement about most things. Let's hope governing will be just as easy!"
+            playerFate = chancellorFateHappy;
+          }
+        else{
+            coalitionText = "Perhaps it is no big surprise that this coalition formed, with the amount of things you and the SPD have in common. However, Red-Green having a majority on the federal level is something that just seemed mathematically impossible a few years ago, a relic of a simpler party systems. This is a major triumph for the center-left part of the party spectrum. The coalition talks have been a breeze, with you and the SPD in agreement about most things. Let's hope governing will be just as easy!"
+            if(!thirdPlace){
+              playerFate = viceFate;
+           }
+            else{
+              playerFate = ministerFateStrong;
+           }
           break;
 
       case 5:
         header = "<h2>“Lessons learned - Jamaica coalition successfully formed”</h2>"
         if(coalitionLeader === playerLeader){
-            coalitionText = "In 2017, a Jamaica coalition consisting of the CDU/CSU, Greens and FDP almost formed, but negotiations fell through when FDP leader Christian Lindner famously said: 'It's better not to govern than to govern wrongly.' This time, negotiations were more successful and you managed to write a coalition agreement all three parties can agree with, even though there were of course some compromises. Still, this coalition can lead the country into a new, perhaps more modern direction after eight years of Grand coalition."
+            coalitionText = "In 2017, a Jamaica coalition consisting of the CDU/CSU, Greens and FDP almost formed, but negotiations fell through when FDP leader Christian Lindner famously said: 'It's better not to govern than to govern wrongly.' The situation was a bit different this time, with you being the strongest party. This time, negotiations were more successful and you managed to write a coalition agreement all three parties can agree with. Your base isn't happy with all provisions, though as chancellor, you can shape policy quite a lot. Hopefully, this coalition can lead the country into a new, perhaps more modern direction after eight years of Grand coalition."
             playerFate = chancellorFateHappy;
           }
            else{
-            coalitionText = "In 2017, a Jamaica coalition consisting of the CDU/CSU, Greens and FDP almost formed, but negotiations fell through when FDP leader Christian Lindner famously said: 'It's better not to govern than to govern wrongly.' The situation was a bit different after this election, with the Green party being the strongest. This time, negotiations were more successful and you managed to write a coalition agreement all three parties can agree with, even though there were of course some compromises. Still, this coalition can lead the country into a new, more modern direction after eight years of Grand coalition."
-            playerFate = chancellorFateHappy;
+            coalitionText = "In 2017, a Jamaica coalition consisting of the CDU/CSU, Greens and FDP almost formed, but negotiations fell through when FDP leader Christian Lindner famously said: 'It's better not to govern than to govern wrongly.'  This time, negotiations were more successful and you managed to write a coalition agreement all three parties can agree with. Your base isn't happy with all provisions and hoped for more in some regards. Still, this coalition can lead the country into a new, more modern direction after eight years of Grand coalition."
+             if(!thirdPlace){
+              playerFate = viceFate;
+           }
+            else{
+                if(playerParty === coalitionVice){
+              playerFate = ministerFateStrong;
+              }
+              else{
+              playerFate = ministerFateWeak;
+              }
+           }
           }
           break;
           case 6:
           header = "<h2>“Conceptually and mathematically difficult to imagine”</h2>"
-              coalitionText = "Conceptually and mathematically difficult to imagine - these were the words Christian Lindner, leader of the FDP used when asked about the traffic light coalition consisting of the SPD, Greens and FDP before the election. Apparently, there was enough imagination to form it anyway. Now, " + coalitionLeader.leaderName + " has become chancellor. The two more left wing parties had to make some concessions to appeal to the FDP, but in the end, they managed to form a coalition agreement and left you out cold. Your party is now the only somewhat centrist party in opposition - it has to use that role to hold the government accountable."
 
-          playerFate=emptyFate;
+          if(coalitionLeader === playerLeader){
+            coalitionText = "Conceptually and mathematically difficult to imagine - these were the words Christian Lindner, leader of the FDP used when asked about the traffic light coalition consisting of the SPD, Greens and FDP before the election. With enough imagination - and after tough negotiations, perhaps made a bit easier by you being stronger than the SPD - you managed to form it anyway. The coalition agreement has the imprint of all three parties, though your base isn't happy with all the concessions you had to get the FDP on board. Hopefully, you can combine the best parts of all parties to lead the country in a more modern direction."
+            playerFate = chancellorFateHappy;
+          }
+           else{
+            coalitionText = "Conceptually and mathematically difficult to imagine - these were the words Christian Lindner, leader of the FDP used when asked about the traffic light coalition consisting of the SPD, Greens and FDP before the election. With enough imagination - and after tough negotiations - you managed to form it anyway. The coalition agreement has the imprint of all three parties, though your base isn't happy with all the concessions you had to get the FDP on board. Hopefully, you can combine the best parts of all parties to lead the country in a more modern direction."
+             if(!thirdPlace){
+              playerFate = viceFate;
+           }
+            else{
+                if(playerParty === coalitionVice){
+              playerFate = ministerFateStrong;
+              }
+              else{
+              playerFate = ministerFateWeak;
+              }
+           }
+          }
           break;
 
           case 7:
-            contestedText="";
-            negotiations="";
-            var majority = selectedCoalition.parties.reduce((sum, partyId) => sum + e.final_overall_results.find(p => p.candidate === partyId).electoral_votes, 0);
-
-            if(majority-totalSeats/2 < 35){
-                header =  "<h2>“On the sixth ballot, there is still no new chancellor.”</h2>"
-                coalitionText = "When you expressed you interest in forming a Bahamas coalition consisting of the CDU/CSU, the FDP and the AfD during the campaign, there was outrage. When you actually started to negotiate with those parties, the outrage grew an grew. Now, you have a coalition agreement all three parties agreed to in theory, there's just one small problem: You're not getting elected chancellor, and since the ballots are secret, you don't even know if more moderate members of your own party and the FDP or extremists of the AfD are sabotaging you. There are shouting matches on the parliamentary floor not seen since the 1970s, demonstrations against this government in the streets and scathing editorials about you in the press."
-                secondPage = true;
-                if(majority-totalSeats/2 < 20){
-                    secondPageText = "Eventually, after it becomes clear that you won't be able to get a majority, an alliance of SPD, Greens and moderates from the CDU/CSU and FDP, elect CDU Minister-President Daniel Günther of Schleswig-Holstein as interim chancellor. He is seen as a more moderate figure, but his role is nothing more than keeping things going until the inevitable new elections. All three parties that tried to form the Bahamas coalition are at a breaking point, there's chatter of a new centrist party getting formed by the members who voted for Günther. After this disaster, you've also lost trust of all wings of the party and subsequently, your leadership position. History will not look kindly on you, Mr Laschet."
-                    }
-                else{
-                secondPageText = "Eventually, after a week of balloting, attempts of both you to sway every MP and the SPD and Greens to gather a majority against you, you get elected chancellor with a majority of just two votes. You had to make so many, sometimes conflicting concessions that it's unclear how you want to actually govern. The CDU/CSU and FDP also have bled MPs, with some becoming independents and a selected few even joining the SPD or Greens. Your own state parties have either denounced this coalition or have seen their governing partnerships with SPD and Greens collapse. The demonstrations in the streets aren't stopping. You have fulfilled your ambition and have been elected chancellor, but was it really worth it?"
-                }
-
-            }
-
-            else{
-            header =  "<h2>“Mass protest overshadow chancellor election”</h2>"
-            coalitionText = "When you expressed you interest in forming a Bahamas coalition consisting of the CDU/CSU, the FDP and the AfD during the campaign, there was outrage. When you actually started to negotiate with those parties, the outrage grew an grew. Now, you have a coalition agreement all three parties agreed on and have been elected chancellor. That will surely show those out-of-touch leftists! There are just a few small problems: This coalition you formed is far from stable. The CDU/CSU and FDP have bled MPs, with some becoming independents and a selected few even joining the SPD or Greens. Your own state parties have either denounced this coalition or have seen their governing partnerships with SPD and Greens collapse. The demonstrations in the streets aren't stopping. You have fulfilled your ambition and have been elected chancellor, but was it really worth it?"
-            }
+                header =  "<h2>“Wait, what?”</h2>"
+                coalitionText = "This isn't supposed to be possible. If you want to see a Bahamas coalition, form one yourself with one of the CDU/CSU candidates. In the meantime, please report this bug."
             break;
+
         case 8:
             header =  "<h2>“Dreams come true for Laschet and Lindner”</h2>"
-            coalitionText = "Despite it seeming mathematically impossible at the beginning of the election campaign, you managed to form the same coalition you've successfully led in North Rhine-Westphalia for the last four years. The CDU/CSU and FDP are natural governing partners who agree on most policies, so the coalitions talks were mostly a breeze and both parties are happy with the coalition agreement - a combination of modernizing what needs to be modernized and conserving what needs to be conserved."
-            playerFate = chancellorFateHappy;
+            coalitionText = "Despite it seeming mathematically impossible at the beginning of the election campaign, Laschet and Lindner managed to form the same coalition they had formed on a state level in North Rhine-Westphalia four years ago. This is a major blow to the left - both you and the SPD have been shut out off power, leaving you with little power to stop whatever right-wing agenda the CDU/CSU and FDP want to accomplish. Maybe the FDP will at least suffer as much electorally as they did after the last such coalition."
+            playerFate = emptyFate;
             break;
+
         case 9:
-            contestedText="";
-            negotiations="";
-            header =  "<h2>“Mass protest overshadow chancellor election”</h2>"
-            coalitionText = "When you expressed you interest in forming a Bahamas coalition consisting of the CDU/CSU, the FDP and the AfD during the campaign, there was outrage. When it turned out you didn't actually need the FDP and started negotiations with just the AfD, the outrage grew an grew. Now, you have a coalition agreement both parties agreed on and have been elected chancellor. That will surely show those out-of-touch leftists! There are just a few small problems: This coalition you formed is far from stable. The CDU/CSU has bled MPs, with some becoming independents some joining the FDP or even SPD. Your own state parties have either denounced this coalition or have seen their governing partnerships with SPD and Greens collapse. The demonstrations in the streets aren't stopping. You have fulfilled your ambition and have been elected chancellor, but was it really worth it?"
+            header =  "<h2>“Wait, what?”</h2>"
+            coalitionText = "This isn't supposed to be possible. If you want to see a Black-Blue coalition, form one yourself with one of the CDU/CSU candidates. In the meantime, please report this bug."
             break;
 
         case 10:
         header = "<h2>“An even grander coalition”</h2>"
 
-          if(coalitionLeader === playerLeader){
-
-            coalitionText = "After eight years of Grand Coalition, the German people were sick and tired of it. And now, what do they get? An even grander coalition, featuring the FDP on top of the CDU/CSU and the SPD, called Germany-Coalition due to the colours of the involved parties. The CDU/CSU kept the chancellorship, but isn't all that happy. There are two center-right parties in this coalitions, but to get the SPD on board, you had to make many concessions. Your base is grumbling a bit that more could have been possible in the coalition agreement. While you personally are onboard with most of the policies, many of your party members had hoped for the CDU/CSU to return to closer to their roots after Merkel. Alas, this is the inevitable price of holding power."
-            playerFate = chancellorFateDown;
-          }
-          else{
-              coalitionText = "After eight years of Grand Coalition, the German people were sick and tired of it. And now, what do they get? An even grander coalition, featuring the FDP on top of the CDU/CSU and the SPD, called Germany-Coalition due to the colours of the involved parties. There is a bit of a twist to it though, as the CDU/CSU is now a junior partner and " + coalitionLeader.leaderName + " is the chancellor. There are two center-right parties in this coalitions, but since the SPD is the strongest party, you had to make many concessions. Your base is grumbling that more could have been possible in the coalition agreement. While you personally are onboard with most of the policies, many of your party members had hoped for the CDU/CSU to return closer to their roots after Merkel. Alas, this is the inevitable price of holding power."
-              playerFate = viceFate;
-              }
-
-
-
+            coalitionText = "After eight years of Grand Coalition, the German people were sick and tired of it. And now, what do they get? An even grander coalition, featuring the FDP on top of the CDU/CSU and the SPD, called Germany-Coalition due to the colours of the involved parties. " + coalitionLeader.leaderName + " has become chancellor. Overall, their coalition agreement is full with compromises, the SPD driving a hard bargain against the two more center-right parties. It's unlikely that they will get a lot done, which should help the Greens as the only somewhat centrist opposition party."
+            playerFate = emptyFate;
           break;
+
         case 11:
             header = "<h2>“A blast from the past”</h2>"
             coalitionText = "In a development absolutely no one has predicted, the SPD and FDP have formed the first red-yellow government on a federal level since the early 1980s. Both parties had to make quite a lot of concessions, but with just two parties in government, both got a lot of their pet policies through as well. Now, " + coalitionLeader.leaderName + " has become chancellor. The last such coalition ended with a betrayal by the FDP, let's see if this one is more stable and can govern Germany successfully the next four years. The CDU/CSU and the Green party will be a strong opposition."
@@ -946,10 +969,50 @@ function endingTwoBuilder(){
               break;
 
         case 12:
-            header = "<h2>“Socialists in a German government for the first time since 1990”</h2>"
-            coalitionText = "Those damn lefties have actually done it! The whole election campaign, both Scholz and Baerbock said that they didn't want to form a coalition with the Left party, and now this: " + coalitionLeader.leaderName + " has become chancellor with votes from the Left party. There are rumours of some MPs leaving the governing parties soon, so at least this might not be the most stable arrangement. The CDU/CSU has a very important job to do: Be a strong opposition and frustrate the radical agenda of this left-wing government."
-              playerFate=emptyFate;
-              break;
+           contestedText="";
+            negotiations="";
+            var majority = selectedCoalition.parties.reduce((sum, partyId) => sum + e.final_overall_results.find(p => p.candidate === partyId).electoral_votes, 0);
+
+            if (playerParty === coalitionLeader){
+            if(majority-totalSeats/2 < 10){
+                header =  "<h2>“On the second ballot, there is still no new chancellor.”</h2>"
+                coalitionText = "It has almost become a tradition for the CDU/CSU and FDP to warn about a danger of a Red-Red-Green coalition on the federal level. All this time, most people thought that they were just fearmongering, but now it actually happened: You not only started coalition negotiations, but actually formed a - very leftist - coalition agreement. There's just one small problem: It's the second ballot for chancellor now, and in an unprecedented development you still haven't gotten a majority. Since the ballots are secret, you don't know who voted against you, but it seems likely that those moderates who voiced their serious concerns weren't bluffing."
+                secondPage = true;
+                if(majority-totalSeats/2 < 5){
+                    secondPageText = "After days of balloting and many more attempts, it becomes clear that there just isn't going to be a majority for you. In another ballot, the parliamentary group of your party votes against you as their leader, sidelining you for the renewed coalition talks. It's unclear what happens now - a coalition under a new Green leadership, another party winning the chancellorship and new elections all seem like possibilities. You will make history as the woman who just couldn't become chancellor"
+                    }
+                else{
+                secondPageText = "After days of balloting and many more attempt and negotiations in between, you finally get elected by just one vote. You've become chancellor, but this arrangement seems very unstable, so it's unclear if the government will last for the whole legislative session. Also, there are rumours about some more centrist members of the SPD and Greens leaving their respective parties for the FDP and CDU/CSU. The coming months and years are going to be a tumultuous time."
+                }
+
+            }
+
+            else{
+            header =  "<h2>“Protests overshadow chancellor election”</h2>"
+            coalitionText = "It has almost become a tradition for the CDU/CSU and FDP to warn about a danger of a Red-Red-Green coalition on the federal level. All this time, most people thought that they were just fearmongering, but now it actually happened: You not only started coalition negotiations, but actually formed a - very leftist - coalition agreement. There were some rumblings about you not getting a majority in the vote for chancellor, but even though you haven't received as many votes as the coalition has seats, you have still been elected chancellor. This coalition might not be the most stable and there are rumours about some more centrist members of the SPD and Greens leaving their respective parties for the FDP and CDU/CSU. Let's hope you can govern through the whole legislative session."
+            }
+            }
+            else{
+
+                if(majority-totalSeats/2 < 10){
+                header =  "<h2>“On the second ballot, there is still no new chancellor.”</h2>"
+                coalitionText = "It has almost become a tradition for the CDU/CSU and FDP to warn about a danger of a Red-Red-Green coalition on the federal level. All this time, most people thought that they were just fearmongering, but now it actually happened: You not only started coalition negotiations, but actually formed a - very leftist - coalition agreement. There's just one small problem: It's the second ballot for chancellor now, and in an unprecedented development Scholz of the SPD still hasn't gotten a majority. Since the ballots are secret, you don't know who voted against him, but it seems likely that those moderates who voiced their serious concerns weren't bluffing."
+                secondPage = true;
+                if(majority-totalSeats/2 < 5){
+                    secondPageText = "After days of balloting and many more attempts, it becomes clear that there just isn't going to be a majority for Scholz. In another ballot, the parliamentary group of your party votes against you as their leader, sidelining you for the renewed coalition talks. It's unclear what happens now -the SPD forming a different coalition, another party winning the chancellorship and new elections all seem like possibilities. With your involvement in this episode, you've made history, but not in the way you had hoped."
+                    }
+                else{
+                secondPageText = "After days of balloting and many more attempt and negotiations in between, Scholz finally gets elected by just one vote. He's become chancellor, but this arrangement seems very unstable, so it's unclear if the government will last for the whole legislative session. Also, there are rumours about some more centrist members of the SPD and Greens leaving their respective parties for the FDP and CDU/CSU. The coming months and years are going to be a tumultuous time."
+                }
+
+            }
+
+            else{
+            header =  "<h2>“Protests overshadow chancellor election”</h2>"
+            coalitionText = "It has almost become a tradition for the CDU/CSU and FDP to warn about a danger of a Red-Red-Green coalition on the federal level. All this time, most people thought that they were just fearmongering, but now it actually happened: You not only started coalition negotiations, but actually formed a - very leftist - coalition agreement. There were some rumblings about Scholz of the SPD not getting a majority in the vote for chancellor, but even though he hasn't received as many votes as the coalition has seats, he has still been elected chancellor. This coalition might not be the most stable and there are rumours about some more centrist members of the SPD and Greens leaving their respective parties for the FDP and CDU/CSU. Let's hope you can govern through the whole legislative session."
+            }
+            }
+            break;
         }
 
          if (secondPage){

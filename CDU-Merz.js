@@ -845,7 +845,7 @@ function endingTwoBuilder(){
             }
 
             else{
-            header =  "<h2>“Mass protest overshadow chancellor election”</h2>"
+            header =  "<h2>“Mass protest overshadows chancellor election”</h2>"
             coalitionText = "When you expressed you interest in forming a Bahamas coalition consisting of the CDU/CSU, the FDP and the AfD during the campaign, there was outrage. When you actually started to negotiate with those parties, the outrage grew an grew. Now, you have a coalition agreement all three parties agreed on and have been elected chancellor. That will surely show those out-of-touch leftists! There are just a few small problems: This coalition you formed is far from stable. The CDU/CSU and FDP have bled MPs, with some becoming independents and a selected few even joining the SPD or Greens. Your own state parties have either denounced this coalition or have seen their governing partnerships with SPD and Greens collapse. The demonstrations in the streets aren't stopping. You have fulfilled your ambition and have been elected chancellor by a conservative majority, but was it really worth it?"
             }
             break;
@@ -857,7 +857,7 @@ function endingTwoBuilder(){
         case 9:
             contestedText="";
             negotiations="";
-            header =  "<h2>“Mass protest overshadow chancellor election”</h2>"
+            header =  "<h2>“Mass protest overshadows chancellor election”</h2>"
             coalitionText = "When you expressed you interest in forming a Bahamas coalition consisting of the CDU/CSU, the FDP and the AfD during the campaign, there was outrage. When it turned out you didn't actually need the FDP and started negotiations with just the AfD, the outrage grew an grew. Now, you have a coalition agreement both parties agreed on and have been elected chancellor. That will surely show those out-of-touch leftists! There are just a few small problems: This coalition you formed is far from stable. The CDU/CSU has bled MPs, with some becoming independents some joining the FDP or even SPD. Your own state parties have either denounced this coalition or have seen their governing partnerships with SPD and Greens collapse. The demonstrations in the streets aren't stopping. You have fulfilled your ambition and have been elected chancellor by a conservative majority, but was it really worth it?"
             break;
 
