@@ -840,11 +840,12 @@ function endingTwoBuilder(){
           }
           else if(coalitionLeader.party === 78){
             coalitionText = "After eight years of Grand Coalition, the German people were sick and tired of it. And now, what do they get? An even grander coalition, featuring the Green Party on top of the CDU/CSU and the SPD, called Kenya-Coalition due to the colours of the involved parties. There's at least some change, with the SPD now leading the government and the CDU/CSU and you both being junior coalition partners. While you managed to get some of your signature climate policies into the coalition agreement, overall, there were lots and lots of compromises and no one is all that happy with this. Hopefully, this government will at least bring stability."
-             if (playerParty === coalitionVice){
-                    playerFate = viceFate;
-             }
-             else{
-                playerFate = ministerFateWeak;
+                 if (playerParty === coalitionVice){
+                        playerFate = viceFate;
+                 }
+                 else{
+                    playerFate = ministerFateWeak;
+                 }
              }
              else{
               coalitionText = "After eight years of Grand Coalition, the German people were sick and tired of it. And now, what do they get? An even grander coalition, featuring the Green Party on top of the CDU/CSU and the SPD, called Kenya-Coalition due to the colours of the involved parties. There's at least some change, with the Green Party leading the government and the CDU/CSU and SPD both relegated to junior coalition partners. While you managed to get some of your signature climate policies into the coalition agreement, overall, there were lots and lots of compromises and no one is all that happy with this. Hopefully, this government will at least bring stability."
@@ -892,6 +893,7 @@ function endingTwoBuilder(){
            }
             else{
               playerFate = ministerFateStrong;
+           }
            }
           break;
 
