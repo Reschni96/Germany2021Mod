@@ -24,15 +24,16 @@ customquote = quotes[Math.floor((Math.random() * quotes.length))]
 
 corrr="\n<h2>NEUE WAHLKAMPF-TOUR</h2><font id='wittyquote' size='4' color='white'><em>" + customquote + "</em></font>"
 
-function updateHeader(){
+function updateHeader() {
+  var gameHeader = document.getElementsByClassName("game_header")[0];
 
-      if (!document.getElementsByClassName("game_header")[0].classList.contains("modified")) {
-      document.getElementsByClassName("game_header")[0].classList.add("modified")
-      document.getElementsByClassName("game_header")[0].innerHTML = corrr;
-      document.getElementsByClassName("game_header")[0].style.backgroundColor = nct_stuff.themes[nct_stuff.selectedTheme].coloring_title;
-      }
-
+  if (gameHeader.getAttribute("id") !== "modifiedHeader") {
+    gameHeader.innerHTML = corrr;
+    gameHeader.style.backgroundColor = nct_stuff.themes[nct_stuff.selectedTheme].coloring_title;
+    gameHeader.setAttribute("id", "modifiedHeader");
+  }
 }
+
 var headerobserver = new MutationObserver(updateHeader);
 headerobserver.observe(document.documentElement, { childList: true, subtree: true });
 
