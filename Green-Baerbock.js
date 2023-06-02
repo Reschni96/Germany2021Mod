@@ -840,7 +840,7 @@ function endingTwoBuilder(){
           }
           else if(coalitionLeader.party === 78){
             coalitionText = "After eight years of Grand Coalition, the German people were sick and tired of it. And now, what do they get? An even grander coalition, featuring the Green Party on top of the CDU/CSU and the SPD, called Kenya-Coalition due to the colours of the involved parties. There's at least some change, with the SPD now leading the government and the CDU/CSU and you both being junior coalition partners. While you managed to get some of your signature climate policies into the coalition agreement, overall, there were lots and lots of compromises and no one is all that happy with this. Hopefully, this government will at least bring stability."
-                 if (playerParty === coalitionVice){
+                 if (playerLeader === coalitionVice){
                         playerFate = viceFate;
                  }
                  else{
@@ -908,7 +908,7 @@ function endingTwoBuilder(){
               playerFate = viceFate;
            }
             else{
-                if(playerParty === coalitionVice){
+                if(playerLeader === coalitionVice){
               playerFate = ministerFateStrong;
               }
               else{
@@ -930,7 +930,7 @@ function endingTwoBuilder(){
               playerFate = viceFate;
            }
             else{
-                if(playerParty === coalitionVice){
+                if(playerLeader === coalitionVice){
               playerFate = ministerFateStrong;
               }
               else{
@@ -974,7 +974,7 @@ function endingTwoBuilder(){
             negotiations="";
             var majority = selectedCoalition.parties.reduce((sum, partyId) => sum + e.final_overall_results.find(p => p.candidate === partyId).electoral_votes, 0);
 
-            if (playerParty === coalitionLeader){
+            if (playerLeader === coalitionLeader){
             if(majority-totalSeats/2 < 10){
                 header =  "<h2>“On the second ballot, there is still no new chancellor.”</h2>"
                 coalitionText = "It has almost become a tradition for the CDU/CSU and FDP to warn about a danger of a Red-Red-Green coalition on the federal level. All this time, most people thought that they were just fearmongering, but now it actually happened: You not only started coalition negotiations, but actually formed a - very leftist - coalition agreement. There's just one small problem: It's the second ballot for chancellor now, and in an unprecedented development you still haven't gotten a majority. Since the ballots are secret, you don't know who voted against you, but it seems likely that those moderates who voiced their serious concerns weren't bluffing."
