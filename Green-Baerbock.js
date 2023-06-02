@@ -614,7 +614,7 @@ function endingOneBuilder(){
 
     if (playerParty.electoral_votes>totalSeats/2){
         header = "<h2>“Baerbock stuns the political establishment”</h2>"
-        text = [`<p>Green majority, now what?</p><p> Don't know yet what to put here. Maybe something something switching off all coal power immediately and introducing very harsh tempo limits?'</p><p>Is there something funny about Baerbock herself?</p>`]
+        text = [`<p>Many people were already shocked by the first poll that showed the Green Party in the lead, but what transpired this election night was seemed unbelievable to basically every political pundit. Not only did you lead the Green Party to victory, you won an outright majority of seats. Never before has a left-wing party achieved a victory like this in the history of the Federal Republic.</p><p> Some people doubt that your victory was legitimate, but don't worry about them: It's time to enact your agenda. Switch off all coal and nuclear power stations, electricity grid stability be damned. A tempo limit of 80 km/h on every German Autobahn. Mandatory Veggie-Days, at least twice a week!</p><p>It's doubtful that all Germans will be happy with your agenda. But don't worry, even if you loose in four years - Germany will be a truly Green country by then!</p>`]
 
     }
 
