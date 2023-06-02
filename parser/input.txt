@@ -6,7 +6,7 @@ F1: It’s true that social media is almost expected today, so this probably hel
 A2: If I want to become chancellor, I can’t be dragged down by unnecessary scandals. I’ll make sure my finances are in order and will check if there are any problems with my website or other things on the internet.
 F2: Despite thoroughly searching for potential problems, you just don’t find anything. This feels like a waste of time, especially considering you could have used the time to campaign or do something else more useful.
 A3:  I want to get out there, go to talk shows, give interviews, and generally make sure the German people know me. This should improve both my name recognition and my favourability ratings.
-F3: It helps to be seen, and a few more people get to know you, though most Germans already had an opinion of you.
+F3: It helps to be seen, and a few more people get to know you, though most Germans already have an opinion of you.
 A4: Friday for Future is capable of mobilizing a massive amount of people. I will visit some demonstrations and meet with their leadership to get them on our side.
 F4: In the past, the Green Party has been criticized by Fridays for Future for not being ambitious enough. This might help mobilise the youth vote, though many people who care about the climate a lot already vote Green.
 
@@ -17,12 +17,12 @@ A2: Since the beginning of the pandemic, there hasn’t been enough of a focus o
 F2: This is a decent avenue of attack, many feel that the needs of children have not been adequately met, though you are not the best person to sell this. Young voters are also a core group of your coalition.
 A3: While the lockdowns were absolutely necessary at the beginning of the pandemic, we should be mindful - there has to be a balance between freedom and safety.
 F3: The FDP agrees with your position, and you might win over some of their voters - however, many others feel that this might be premature.
-A4: Every district association of the Green Party is lead more competently than this country. We need to do something to combat the lack of ideas on the federal level. The Green Party stands for a new beginning.
-F4: Many people agree that this country needs change and this is a damaging attack - it’s unclear though how many people prefer the Green Party as alternative.
+A4: Every district association of the Green Party is led more competently than this country. We need to do something to combat the lack of ideas on the federal level. The Green Party stands for a new beginning.
+F4: Many people agree that this country needs change and this is a damaging attack - it’s unclear though how many people prefer the Green Party as an alternative.
 
-Q3: April 2021: You’ve come to an agreement with your co-party leader Baerbock. In a bit of a surprise to you, she told you that she has no interest in become chancellor candidate and wants to support you. Now, it’s time for your first speech as official Green chancellor candidate!
-A1: When I was Minister of Agriculture and the Enviroment in Schleswig-Holstein, I listened to all people and strived to find compromises. As Chancellor, I want to continue this approach!
-F1: Your time as Minister was widely regarded as a success. The left wing of your party is not happy to hear the word ‘compromise’, though in general, it helps to be seen as pragmatic.
+Q3: April 2021: You’ve come to an agreement with your co-party leader Baerbock. In a bit of a surprise to you, she told you that she has no interest in becoming chancellor candidate and wants to support you. Now, it’s time for your first speech as the official Green chancellor candidate!
+A1: When I was Minister of Agriculture and the Environment in Schleswig-Holstein, I listened to all people and strived to find compromises. As Chancellor, I want to continue this approach!
+F1: Your time as Minister was widely regarded as a success. The left wing of your party is not happy to hear the word ‘compromise’, though in general, it helps to be seen as pragmatic. With both the CDU and SPD struggling in the polls, many people consider you as the best alternative.
 A2: Forty years ago, the Green Party was founded to make our politics care more about the environment. more about the environment. Today, I continue in this tradition, as the only candidate that truly takes climate change seriously.
 F2: A strong focus on climate change will mobilize your core voters. It’s unclear if that’s enough to win - however, with the CDU and SPD both struggling in the polls, an energized campaign might be the way to go. And as you know - 'There's no way around the climate goals'.
 A3: After eight years of Grand coalition and sixteen years of CDU chancellorship, this country needs change. I’m the right woman to give this country the new start it needs.
@@ -30,7 +30,7 @@ F3: A compelling argument, many voters desire change, and with the CDU and SPD b
 A4: We have a historic opportunity to win the chancellorship for the Green Party this election. I want to be a chancellor for everyone and promise to focus on sensible reform and proposals.
 F4: You seem to gamble that the left, 'Fundi'-wing of the Party is truly dead and that this race is won in the middle. As both big parties, CDU and SPD seem to struggle, there might be an opening to split them apart - but be mindful of your base.
 
-Q4: After a messy leadership contest, the CDU has - somewhat unexpectedly - chosen Markus Söder as their chancellor candidate and immediately somewhat surged in the polls. With this, you, the CDU/CSU and the SPD have all chosen a chancellor candidate. Now it's time to decide on a general strategy for this pivotal race.
+Q4: After a messy leadership contest, the CDU has - somewhat unexpectedly - chosen Markus Söder as their chancellor candidate and immediately stopped sliding in the polls. With this, you, the CDU/CSU and the SPD have all chosen a chancellor candidate. Now it's time to decide on a general strategy for this pivotal race.
 A1: It’s clear that the SPD is not going to win this election. I want to present myself as the candidate of the left-of-centre and try to coalesce left-wing voters around the Greens.
 F1: Voters on the Left have traditionally been your base. Some pundits wonder though if such an unexceptional approach is the right way to capitalize on the Greens' newfound polling highs, especially with the SPD down to not much more than their very core voters. Let's hope you're ready for the onslaught of attacks from the right.
 A2: Traditionally, the Greens have been a left-of-centre party. However, to actually win this, we need to draw voters from the CDU, especially with Söder as their nominee.
@@ -41,7 +41,7 @@ A4: Our polling numbers in West Germany are great, but we are struggling to even
 F4: Until now, the Green Party message didn't seem to resonate with East Germany, though the region is known for low turnout in general. Maybe you can get some people there to vote Green this time?
 
 Q5: With a Green chancellor now looking like a realistic option, many are curious about your foreign policy. Can you clarify your position on that?
-A1: The USA is our strongest ally outside of Europe and we want to increase the cooperation with both them and NATO. While we disagree on some things - like the 2% goal - we also want to go further than the current government, by stopping the North-Stream 2 pipeline.
+A1: The USA is our strongest ally outside of Europe and we want to increase cooperation with both them and NATO. While we disagree on some things - like the 2% goal - we also want to go further than the current government, by stopping the North-Stream 2 pipeline.
 F1: It seems like you are trying to outflank the CDU with your pro-USA stance. With Söder being criticized for visiting Putin last year, this could be an opening. Just be mindful not to scare off too many voters that are critical of the USA.
 A2: We need a more active foreign policy. While pacifism is still the ideal that should guide us, we have to do more - for example, we should deliver defensive weapons to Ukraine to help the defend themselves against the Russian-backed separatists.
 F2: In the future, this position will surely be vindicated. For now though, it goes too far for the average voter and especially for the more pacifist-minded part of the electorate that often votes Green.
@@ -51,24 +51,24 @@ A4: We don’t want to rock the boat here. I want to reaffirm our commitment to 
 F4: People really don't know what to make of this vagueness - you also don’t differentiate yourself from other parties. At least you keep some flexibility for future policy.
 
 Q6: May 2021: The Federal Constitutional Court just ruled the Climate Protection Act as unconstitutional and demands the government do more to lower emissions. The federal government in Berlin is now working on passing a stricter law. While the government can pass the law without Green Party votes, the media is still interested in your position.
-A1: We need to reduce our emissions by 70% until 2030 - to achieve that, we have to do a lot. For example, we need to double the tempo of the expansion of renewable energy.
+A1: We need to reduce our emissions by 70% by 2030 - to achieve that, we have to do a lot. For example, we need to double the tempo of the expansion of renewable energy.
 F1: As expected, you’re strongly pushing for more ambitious plans - this strong statement resonates with the voters who are sympathetic to you and energizes your campaign.
 A2: Every democratic party here agrees that something needs to be done, so let’s find solutions together. We want to work with other parties, though they finally have to take the climate crisis seriously!
 F2: You’re emphasizing consensus here - on the one hand, that might make coalition talks after the election easier, on the other, your core voters hoped for more. At least you make it clear that they need to move towards your position.
 A3: For the next government, climate change has to be the top priority. Therefore, we want to form a dedicated ministry for climate policy to coordinate our efforts better.
 F3: There's some talk in the beltway about how practicable it would be to dedicate such a cross-sectional task to one personality, but most just want something to be done. Also, you make some people think that you’ve already given up on becoming chancellor and want to run for climate minister instead.
-A4: The new law the Grand coalition has come up with is simply not enough. We need an end to enviromentally-unfriendly subsidies, a higher price for CO2, and to transform the traffic and agricultural sector to achieve the necessary reductions in emissions.
-F4: In general, voters like to hear concrete proposals. While your base likes them a lot, other voters are a lot more sceptical. It’s unclear if you’re helping yourself by demanding so much.
+A4: The new law the Grand coalition has come up with is simply not enough. We need an end to environmentally-unfriendly subsidies, a higher price for CO2, and to transform the traffic and agricultural sector to achieve the necessary reductions in emissions.
+F4: In general, voters like to hear concrete proposals. While your base likes them a lot, other voters are a lot more sceptical. In the future, you should try to mostly emphasize your more popular proposals.
 
 Q7: After announcing your candidacy, you’ve received some criticism from within the party for stealing the nomination from a woman - in general, the Green Party is very in favour of giving top jobs to women if possible. How do you want to address these allegations?
 A1: This was a decision we made together, and Baerbock and I agreed that I would be the most competent candidate. Besides, it’s kinda sexist to say that she should have gotten the nomination just because she’s a woman.
-F1: You’re not helping yourself with these kind f comments. Baerbock is popular in the party and time and energy that could have been spent on campaigning is now spent on discussing
+F1: You’re not helping yourself with these kinds of comments. Baerbock is popular in the party and time and energy that could have been spent on campaigning is now spent on discussing
 A2: I recognize that we have a problem with not enough women being in the highest positions of power. That’s why I promise that as chancellor, half of my cabinet will consist of women.
-F2: A smart pivot, though you avoided to address the allegations directly. Your base still is soothed by this promise, though some wonder how you want to achieve this when you form a coalition with the more right-wing parties that traditionally don’t have as many strong women.
-A3: Annalena Baerbock and me are co-party leaders and will both play an important part in this campaign. She will be mostly responsible for our foreign policy plans, for example.
+F2: A smart pivot, though you avoided addressing the allegations directly. Your base still is soothed by this promise, though some wonder how you want to achieve this when you form a coalition with the more right-wing parties that traditionally don’t have as many strong women.
+A3: Annalena Baerbock and I are co-party leaders and will both play an important part in this campaign. She will be mostly responsible for our foreign policy plans, for example.
 F3: Baerbock is happy to campaign with you and cooperate, and your base is happy. However, by emphasizing that you are a team so much, you make it harder to stick out as chancellor candidate.
 A4: It’s important that we stay united as a party if we want to win this election. Annalena Baerbock and I agreed that I should be the candidate, but she will of course have an important post in my cabinet if she wants it.
-F4: While the accusations don’t completely stop, by and large your party agrees that winning this election is more important than squabbling. Baerbock, for her part, is happy to campaign with you.
+F4: While the accusations don’t completely stop, by and large, your party agrees that winning this election is more important than squabbling. Baerbock, for her part, is happy to campaign with you.
 
 Q8: In the past, you’ve been criticized for some rather bizarre statements you made on Twitter, like calling Bavaria a one-party state or talking about bringing democracy to Thuringia. In response, you deleted your social media presence. Do you have anything to say about this?
 A1: It was a wise decision to delete my Twitter account. The platform is not good for political discourse, and the young and cool people are somewhere else anyway.
@@ -88,7 +88,7 @@ F3: Everyone but the most ardent environmentalists is deeply alarmed by that sta
 A4: After the price for CO2 went into effect at the beginning of the year, gas prices have risen by 6 cents per litre already - for now, this is enough.
 F4: The next day, Friday For Future calls for environmentally minded people to vote for climate lists instead of the Green Party. This will probably hurt you, especially among young people. Here's hoping you can make inroads among groups that turn out more reliably
 
-Q10: June 2021: As the election comes closer, many voters are giving you a closer look. In the last years, the Green Party hasacquired the reputation of being an elitist party for educated and rich people. You’ve studied Philosphy and Philology, giving your opponent an opening to call you an ivory-tower intellectual. How do you want to combat this?
+Q10: June 2021: As the election comes closer, many voters are giving you a closer look. In the last years, the Green Party has acquired the reputation of being an elitist party for educated and rich people. You’ve studied philosophy and philology, giving your opponent an opening to call you an ivory-tower intellectual. How do you want to combat this?
 A1: This is more of a problem with the whole party than with me personally. I want to focus on our programs that help poor and disadvantaged people in this country to combat this image.
 F1: You’re making some inroads with these groups, though Söder is winning the favourability battle for voters looking for a ‘man of the people’
 A2: When I was minister in Schleswig-Holstein, I talked with everyone, even people who would never vote Green. I’ll keep that attitude for the election campaign.
@@ -129,10 +129,10 @@ F3: Your base is very deflated by this, and the SPD and Left party keep advocati
 A4: Not only do we need a general tempo limit of 130 km/h on highways, but we also need one of 30 km/h within city limits - that would be a truly effective measure against climate change.
 F4: A general tempo limit on highways is divisive - 30 km/h within city limits is straight-up unpopular. You’ve done yourself no favour with this position.
 
-Q14: July 2021: There’s some trouble with your co-party leader Baerbock. In the past weeks, she has admitted to forgetting to report payments she got and having a misleading CV. Now, a book she published allegedly contains plagiatized passages. What’s your comment on this situation?
+Q14: July 2021: There’s some trouble with your co-party leader Baerbock. In the past weeks, she has admitted to forgetting to report payments she got and having a misleading CV. Now, a book she published allegedly contains plagiarised passages. What’s your comment on this situation?
 A1: The last thing I need now is Baerbock dragging me down with her scandals. For the rest of the campaign, I’ll sideline her as much as possible.
-F1: Both she and your party in general are unhappy about this, especially as some see this allegations as unfair. For the next few weeks, the mood at most party meeting is very subdued.
-A2: Both Baerbock herself and me admit that she made some mistakes. However, this should not distract us from the more important topics. I want to talk about policies!
+F1: Both she and your party in general are unhappy about this, especially as some see these allegations as unfair. For the next few weeks, the mood at most party meetings is very subdued.
+A2: Both Baerbock herself and I admit that she made some mistakes. However, this should not distract us from the more important topics. I want to talk about policies!
 F2: Since she is not the chancellor candidate, her problems never dominate the front pages for too long. They’re still an annoying distraction for your campaign, though.
 A3: These allegations are unfair and part of a right-wing smear campaign against the Green Party in general. I will fight back and defend Baerbock whenever I’m asked about this.
 F3: Baerbock is grateful that you’re sticking up for her, and this helps with party unity. However, this also keeps her scandals in the news cycle for longer, which isn’t helping the party’s image.
@@ -141,12 +141,12 @@ F4: This leads to accusations being thrown around between all three parties, dra
 
 Q15: Widespread flooding is affecting large areas of western, southern and middle Germany. Other politicians, like Laschet, are travelling to the affected areas. Do you want to go there too?
 A1: No, it would be improper to try to politicize this catastrophe. I’m of course making statements supporting all the emergency responders, but I won’t go there myself just to get some pictures.
-F1: Some people appreciate the restraint, but you’re accused of being unapproachable by others. Söder, in contrast, gets some nice picture of him in rubber boots and positive media attention.
+F1: Some people appreciate the restraint, but you’re accused of being unapproachable by others. Söder, in contrast, gets some nice pictures of him in rubber boots and positive media attention.
 A2: I will travel to some of the affected regions, yes. However, I don’t want the press to be around, I just want to talk to some affected people.
-F2: This helps you a bit locally, but people elsewhere wonder where you are. Söder, in contrast, gets some nice picture of him in rubber boots and positive media attention.
+F2: This helps you a bit locally, but people elsewhere wonder where you are. Söder, in contrast, gets some nice pictures of him in rubber boots and positive media attention.
 A3: Yes, I want to go there. Specifically, I want to go to some affected cities with Green Party mayors. I’ll look at the devastation and make a public statement with them.
-F3: You get some positive press coverage and good pictures. Meanwhile, Söder gets some nice picture of him in rubber boots and positive media attention.
-A4: Of course I want to travel there, talk to affected people and show myself as a man of action. I want to show that, when disaster strikes, I’m there for people.
+F3: You get some positive press coverage and good pictures. Meanwhile, Söder gets some nice pictures of him in rubber boots and positive media attention.
+A4: Of course, I want to travel there, talk to affected people and show myself as a man of action. I want to show that, when disaster strikes, I’m there for people.
 F4: You have a good way with people and your visits go very well, allowing you to outshine even Söder, who also visited the affected areas.
 
 Q16: After the devastating floodings, climate change is once again a much-discussed topic in the media and politics. You are expected to make a statement on this topic, did this catastrophe affect your stance?
@@ -208,16 +208,16 @@ A2: I want to categorically rule out a coalition with the Left party, they are j
 F2: This takes away an avenue of attack against you, though you might regret it during the coalition talks.
 A3: The only realistic path to a true left-wing government is with the SPD and the Left party. My favourite coalition would be with those two, I’m certain we can find compromises on contentious topics.
 F3: The Left party and more leftwing voters welcome this statement, but you’ve confirmed the worst fears of many moderates. It’s also unclear what compromise you can find on foreign policy with a party that wants to exit NATO.
-A4: In Schleswig Holstein, I’ve been part of a successful Jamaica coalition. I want a governement that takes climate change seriously, but have nothing against governing with thos two parties.
-F4: The Left party criticizes you for preferring right-wing parties to them, and some leftwing voters agree. This eases the concerns of many moderates though and blunts the impact of an anti Red-Red-Green scare campaign.
+A4: In Schleswig Holstein, I’ve been part of a successful Jamaica coalition. I want a government that takes climate change seriously, but I have nothing against governing with those two parties.
+F4: The Left party criticizes you for preferring right-wing parties to them, and some left-wing voters agree. This eases the concerns of many moderates though and blunts the impact of an anti-Red-Red-Green scare campaign.
 
 Q22: Pictures of the disastrous retreat of NATO troops from Afghanistan go around the globe. The government is sharply criticised for its botched evacuation. What is your opinion on the matter?
 A1: Both parties in government, the CDU/CSU and the SPD screwed up here. No matter how much they’re blaming each other, the voters will see that we need to move on from both of them.
 F1: With so much mudslinging going on, voters were looking for something more positive - though the government parties still get hurt.
 A2: Right now, it’s important that we don’t instrumentalize this topic for the election, but work to find concrete solutions to help the people. We called for an evacuation last month already, and we need to do something now before it’s too late.
-F2: Politicians of the SPD and CDU are accusing each other for the failure, while you manage to look pragmatic and sensible.
+F2: Politicians of the SPD and CDU are accusing each other of being responsible for the failure, while you manage to look pragmatic and sensible.
 A3: We need to evacuate as many people from Afghanistan as possible, especially people who cooperated with our troops, journalists and women’s rights activists. They are very endangered after the Taliban takeover.
-F3: It’s a good thing to advocate for taking in refugees since the type of person that considers voting for you is in favour of that. It halso differentiates you from anti-refugee Söder. However, it’s unclear how you want to actually save those people.
+F3: It’s a good thing to advocate for taking in refugees since the type of person that considers voting for you is in favour of that. It also differentiates you from anti-refugee Söder. However, it’s unclear how you want to actually save those people.
 A4: The Green Party is a party of pacifism, and we’ve been against this war in Afghanistan from the start. While the pictures are tragic and we need to do what we can to help, this whole episode shows why we shouldn’t get involved in these types of conflicts.
 F4: The Green Party voted for the Afghanistan mission and was even part of the government in 2001. This statement by you is attacked as both unproductive and factually wrong.
 
@@ -245,7 +245,7 @@ Q25: It’s the final days of the campaign now, the election will happen very so
 A1: Luisa Neubauer, the most famous German Fridays For Future activist, is actually a member of the Green Party. I want to hold some campaign events with her.
 F1: It takes a lot of convincing to get her to appear with you, but this should help energize the youth vote. Good luck tonight!
 A2: Annalena Baerbock has had some issues during the campaign, but she is the co-party leader and an important figure within the party. I want to campaign with her.
-F2:You energize your core voters and your party in general but don’t appeal to any specific group by campaigning with her. Good luck tonight!
+F2: You energize your core voters and your party in general but don’t appeal to any specific group by campaigning with her. Good luck tonight!
 A3: There will be state elections in Berlin and Mecklenburg-Vorpommern parallel to the federal elections. I want to campaign with Bettina Jarasch in Berlin to help make her the second Green head of state government!
 F3: While this might not be the best option for you electorally, hopefully, you can help her get over the line and finish first. Good luck tonight!
 A4: Winfried Kretschmann is the only Green Minister-President and a very important figure of the moderate wing of our party. I want to campaign with him.
