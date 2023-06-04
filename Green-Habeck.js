@@ -32,19 +32,19 @@ campaignTrail_temp.game_start_logging_id = '3662498';
     const coalitions = [
       { id: 1, name: 'Kenya Coalition', weight: 0.7, parties: [77, 78, 79], impossibleCoalitions: [] },
       { id: 2, name: 'Grand Coalition', weight: 0.6, parties: [77, 78], impossibleCoalitions: [1, 10] },
-      { id: 3, name: 'Black-Green Coalition', weight: 2.2, parties: [77, 79], impossibleCoalitions: [1, 5] },
-      { id: 4, name: 'Red-Green Coalition', weight: 3.0, parties: [78, 79], impossibleCoalitions: [1, 6, 12] },
-      { id: 5, name: 'Jamaica Coalition', weight: 1.7, parties: [77, 79, 303], impossibleCoalitions: [] },
+      { id: 3, name: 'Black-Green Coalition', weight: 2.3, parties: [77, 79], impossibleCoalitions: [1, 5] },
+      { id: 4, name: 'Red-Green Coalition', weight: 9.0, parties: [78, 79], impossibleCoalitions: [1, 6, 12] },
+      { id: 5, name: 'Jamaica Coalition', weight: 2.0, parties: [77, 79, 303], impossibleCoalitions: [] },
       { id: 6, name: 'Traffic Light Coalition', weight: 1.3, parties: [78, 79, 303], impossibleCoalitions: [] },
       { id: 7, name: 'Bahamas Coalition', weight: 0.0, parties: [77, 303, 305], impossibleCoalitions: [] },
-      { id: 8, name: 'Black-Yellow Coalition', weight: 3.0, parties: [78, 303], impossibleCoalitions: [5,7,10] },
+      { id: 8, name: 'Black-Yellow Coalition', weight: 9.0, parties: [78, 303], impossibleCoalitions: [5,7,10] },
       { id: 9, name: 'Black-Blue Coalition', weight: 0.0, parties: [77, 305], impossibleCoalitions: [7] },
       { id: 10, name: 'Germany Coalition', weight: 0.8, parties: [77, 78, 303], impossibleCoalitions: [] },
       { id: 11, name: 'Social-Liberal Coalition', weight: 0.6, parties: [78, 303], impossibleCoalitions: [6, 10] },
-      { id: 12, name: 'Red-Red-Green Coalition', weight: 0.4, parties: [78, 79, 304], impossibleCoalitions: [],
-      { id: 13, name: 'Red-Red Coalition', weight: 0.4, parties: [78, 304], impossibleCoalitions: [12],
-      { id: 14, name: 'Green-Left Coalition', weight: 0.4, parties: [79, 304], impossibleCoalitions: [12],
-      { id: 15, name: 'Green-Yellow Coalition', weight: 2.5, parties: [79, 303], impossibleCoalitions: [5, 6] }
+      { id: 12, name: 'Red-Red-Green Coalition', weight: 0.4, parties: [78, 79, 304], impossibleCoalitions: []},
+      { id: 13, name: 'Red-Red Coalition', weight: 0.6, parties: [78, 304], impossibleCoalitions: [12]},
+      { id: 14, name: 'Green-Left Coalition', weight: 0.6, parties: [79, 304], impossibleCoalitions: [12]},
+      { id: 15, name: 'Green-Yellow Coalition', weight: 2.2, parties: [79, 303], impossibleCoalitions: [5, 6] }
     ];
     const partyLeaders = [
     { party: 77, leaderName: 'Söder', image: 'https://cdn.discordapp.com/attachments/1085931527537434785/1086205163393527868/image.png' },
@@ -1017,6 +1017,24 @@ function endingTwoBuilder(){
             }
             }
             break;
+
+        case 13:
+            header = "<h2>“Socialists in a German government for the first time since 1990”</h2>"
+            coalitionText = "The Left party and the SPD has had a contentious relationship in the past. However, in a big surprise, they not only achieved a majority together, but also formed a coalition! Scholz has become chancellor through the backing of the two parties - though there are rumours of disgruntled moderate SPD MPs leaving the party, perhaps joining you instead. While the policies of the new government are not far from what you wanted to achieve, it still stings to be part of the opposition yet again."
+              playerFate=emptyFate;
+              break;
+
+        case 14:
+            header = "<h2>“Socialists in a German government for the first time since 1990”</h2>"
+            coalitionText = "A Green-Left coalition is historic in several ways: The first coalition on a federal level to not include the SPD or CDU, the first to include the Left Party and the most leftwing coalition ever formed in general. You were able to get a lot of your key promises into the coalition agreement, though foreign policy remained a contentious topic and some are concerned about the stability of this new government. Now it's time to govern though, no matter how much the right parties rally against this woke, socialist government!"
+              playerFate=chancellorFate;
+              break;
+
+        case 15:
+            header = "<h2>“The dawn of a new age in German politics”</h2>"
+            coalitionText = "A Green-Yellow coalition is historic: The first coalition on a federal level to not include the SPD or CDU, a stunning rebuke of the old party system. In their own way, the Greens and FDP both stand for modernizing Germany, and the coalition agreement reflects that, with lots of reforms promised. While you didn't get all your preferred policies, overall, the Green Party is still satisfied. Time will tell if this coalition was a fluke or if this is truly the beginning of a new age in German politics."
+              playerFate=chancellorFate;
+              break;
         }
 
          if (secondPage){

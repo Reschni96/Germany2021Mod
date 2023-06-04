@@ -33,18 +33,18 @@ campaignTrail_temp.game_start_logging_id = '3662498';
       { id: 1, name: 'Kenya Coalition', weight: 0.7, parties: [77, 78, 79], impossibleCoalitions: [] },
       { id: 2, name: 'Grand Coalition', weight: 0.6, parties: [77, 78], impossibleCoalitions: [1, 10] },
       { id: 3, name: 'Black-Green Coalition', weight: 2.2, parties: [77, 79], impossibleCoalitions: [1, 5] },
-      { id: 4, name: 'Red-Green Coalition', weight: 3.0, parties: [78, 79], impossibleCoalitions: [1, 6, 12] },
+      { id: 4, name: 'Red-Green Coalition', weight: 9.0, parties: [78, 79], impossibleCoalitions: [1, 6, 12] },
       { id: 5, name: 'Jamaica Coalition', weight: 1.7, parties: [77, 79, 303], impossibleCoalitions: [] },
       { id: 6, name: 'Traffic Light Coalition', weight: 1.3, parties: [78, 79, 303], impossibleCoalitions: [] },
       { id: 7, name: 'Bahamas Coalition', weight: 0.0, parties: [77, 303, 305], impossibleCoalitions: [] },
-      { id: 8, name: 'Black-Yellow Coalition', weight: 3.0, parties: [78, 303], impossibleCoalitions: [5,7,10] },
+      { id: 8, name: 'Black-Yellow Coalition', weight: 9.0, parties: [78, 303], impossibleCoalitions: [5,7,10] },
       { id: 9, name: 'Black-Blue Coalition', weight: 0.0, parties: [77, 305], impossibleCoalitions: [7] },
       { id: 10, name: 'Germany Coalition', weight: 0.8, parties: [77, 78, 303], impossibleCoalitions: [] },
       { id: 11, name: 'Social-Liberal Coalition', weight: 0.6, parties: [78, 303], impossibleCoalitions: [6, 10] },
-      { id: 12, name: 'Red-Red-Green Coalition', weight: 0.2, parties: [78, 79, 304], impossibleCoalitions: [],
-      { id: 13, name: 'Red-Red Coalition', weight: 0.4, parties: [78, 304], impossibleCoalitions: [12],
-      { id: 14, name: 'Green-Left Coalition', weight: 0.4, parties: [79, 304], impossibleCoalitions: [12],
-      { id: 15, name: 'Green-Yellow Coalition', weight: 2.5, parties: [79, 303], impossibleCoalitions: [5, 6] }
+      { id: 12, name: 'Red-Red-Green Coalition', weight: 0.2, parties: [78, 79, 304], impossibleCoalitions: []},
+      { id: 13, name: 'Red-Red Coalition', weight: 0.4, parties: [78, 304], impossibleCoalitions: [12]},
+      { id: 14, name: 'Green-Left Coalition', weight: 0.4, parties: [79, 304], impossibleCoalitions: [12]},
+      { id: 15, name: 'Green-Yellow Coalition', weight: 1.9, parties: [79, 303], impossibleCoalitions: [5, 6]}
     ];
     const partyLeaders = [
     { party: 77, leaderName: 'Laschet', image: 'https://cdn.discordapp.com/attachments/1085931527537434785/1086205163393527868/image.png' },
@@ -891,6 +891,24 @@ function endingTwoBuilder(){
         case 12:
             header = "<h2>“Socialists in a German government for the first time since 1990”</h2>"
             coalitionText = "Those damn lefties have actually done it! The whole election campaign, both Scholz and Baerbock said that they didn't want to form a coalition with the Left party, and now this: " + coalitionLeader.leaderName + " has become chancellor with votes from the Left party. There are rumours of some MPs leaving the governing parties soon, so at least this might not be the most stable arrangement. The CDU/CSU has a very important job to do: Be a strong opposition and frustrate the radical agenda of this left-wing government."
+              playerFate=emptyFate;
+              break;
+
+        case 13:
+            header = "<h2>“Socialists in a German government for the first time since 1990”</h2>"
+            coalitionText = "Those damn lefties have actually done it! The whole election campaign, Scholz said that he didn't want to form a coalition with the Left party, and now this: He has become chancellor with votes from the Left party. There are rumours of some MPs leaving the SPD soon, so at least this might not be the most stable arrangement. The CDU/CSU has a very important job to do: Be a strong opposition and frustrate the radical agenda of this left-wing government."
+              playerFate=emptyFate;
+              break;
+
+        case 14:
+            header = "<h2>“Socialists in a German government for the first time since 1990”</h2>"
+            coalitionText = "Those damn lefties have actually done it! The whole election campaign, Baerbock said that she didn't want to form a coalition with the Left party, and now this: She has become chancellor with votes from the Left party. This is also a sign of the decline of old German party system - for the first time, neither the SPD nor the CDU/CSU are part of a government. The CDU/CSU has a very important job to do: Be a strong opposition and frustrate the radical agenda of this left-wing government."
+              playerFate=emptyFate;
+              break;
+
+        case 15:
+            header = "<h2>“The dawn of a new age in German politics”</h2>"
+            coalitionText = "The election result was already a wake-up call for both you and the SPD. You've lost your once-dominant status in the German party system, and now, on top of that, neither of you is part of the government for the first time in German history. Instead, the Green Party and the FDP found together, with " + coalitionLeader.leaderName + " becoming chancellor, despite some differences on how to handle climate change and other topics. They claim to be the modern coalition Germany need right now - your job as opposition party is to show why you are still needed!"
               playerFate=emptyFate;
               break;
         }
