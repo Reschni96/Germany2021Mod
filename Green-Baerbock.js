@@ -742,7 +742,6 @@ function endingOneBuilder(){
 
             //anti sneakiness operations
             if (e.final_overall_results[0].candidate === 77){
-                console.log("Don't even think about it")
                 closeElection = true;
                 }
             }

@@ -616,8 +616,8 @@ function endingOneBuilder(){
 
 
     if (playerParty.electoral_votes>totalSeats/2){
-        header = "<h2>“Baerbock stuns the political establishment”</h2>"
-        text = [`<p>Green majority, now what?</p><p> Don't know yet what to put here. Maybe something something switching off all coal power immediately and introducing very harsh tempo limits?'</p><p>Is there something funny about Baerbock herself?</p>`]
+        header = "<h2>“Habeck stuns the political establishment”</h2>"
+        text = [`<p>Many people were already shocked by the first poll that showed the Green Party in the lead, but what transpired this election night was seemed unbelievable to basically every political pundit. Not only did you lead the Green Party to victory, you won an outright majority of seats. Never before has a left-wing party achieved a victory like this in the history of the Federal Republic.</p><p> Some people doubt that your victory was legitimate, but don't worry about them: It's time to enact your agenda. You've tweeted about it before, now it's time to bring democracy to Thuringia and end the one-party rule in Bavaria. And the people who were worried about the Green Party wanting to enact ban after ban on everything that isn't environmentally friendly - you will show them that your suggestions before the election campaign were tame compared to what's about to come. </p>`]
 
     }
 
@@ -634,7 +634,7 @@ function endingOneBuilder(){
 
             else{
              header = "<h2>“A historic night for Germany and the Greens!”</h2>"
-            playerPerformance = "Until the were end of the campaign, there were doubts if the Green Party could actually win this election. At 6pm, when the first results come in, you've proven all this doubters wrong: For the first time in the history of the Federal Republic of German, a party other than the CDU/CSU and SPD has won an election. You and your party are ecstatic and celebrate the whole night. While you still have to form a government, your odds of becoming the youngest and first Green chancellor are good."
+            playerPerformance = "Until the were end of the campaign, there were doubts if the Green Party could actually win this election. At 6pm, when the first results come in, you've proven all this doubters wrong: For the first time in the history of the Federal Republic of German, a party other than the CDU/CSU and SPD has won an election. You and your party are ecstatic and celebrate the whole night. While you still have to form a government, your odds of becoming the first Green chancellor are good."
              adjustWeights(5);
             }
         }
@@ -680,12 +680,12 @@ function endingOneBuilder(){
             }
 
             else if (playerParty.popular_votes/totalPV<0.2){
-            header = "<h2>“No victory, but a strong showing for Baerbock”</h2>"
+            header = "<h2>“No victory, but a strong showing for Habeck”</h2>"
             playerPerformance = "Election night is a time of mixed feelings for you and your party. While you have achieved a strong result and placed second for the first time in Green Party history, you're still a far way off from first place. This is not the result you had hoped for, but still something you can work with. The " + firstParty.fields.last_name + " will try to form a government now - you can try to become a junior coalition partner or maybe try to form your own government if coaltion talks fall through, but don't get your hopes up."
             adjustWeights(10);
             }
             else {
-            header = "<h2>“No victory, but a very strong showing for Baerbock”</h2>"
+            header = "<h2>“No victory, but a very strong showing for Habeck”</h2>"
             playerPerformance = "Election night is a time of mixed feelings for you and your party. While you have achieved a strong result and placed second for the first time in Green Party history, you're still quite a bit behind first place. This is not quite the result you had hoped for, but still impressive. The " + firstParty.fields.last_name + " will try to form a government now - you can try to become a junior coalition partner or maybe try to form your own government if coalition talks fall through, but don't get your hopes up."
             adjustWeights(5);
             }
@@ -696,11 +696,11 @@ function endingOneBuilder(){
 
             if(playerParty.popular_votes/totalPV>0.178){
             header = "<h2>“A mixed night for the Green Party”</h2>"
-            playerPerformance = "It's a bit unclear what to make of this result for you and your party. On the one hand, you more than doubled the result of the Green Party compared to the last election, but on the other, many feel that a lot more than third place would have been possible considering your polling numbers in the spring. You even hear some people say that this is your fault and Habeck would have been the better choice."
+            playerPerformance = "It's a bit unclear what to make of this result for you and your party. On the one hand, you more than doubled the result of the Green Party compared to the last election, but on the other, many feel that a lot more than third place would have been possible considering your polling numbers in the spring. You even hear some people say that this is your fault and Baerbock would have been the better choice."
             }
             else if(playerParty.popular_votes/totalPV<=0.178){
             header = "<h2>“A very mixed night for the Green Party”</h2>"
-            playerPerformance = "It's a bit unclear what to make of this result for you and your party. For the first time since 2002, you've lead the Green Party into third place and you improved the performance of the party a lot compared to the last election However, almost everyone agrees that more had been possible considering your polling numbers in the spring. You even hear quite a few people say that this is your fault and Habeck would have not squandered this historic opportunity like you did."
+            playerPerformance = "It's a bit unclear what to make of this result for you and your party. For the first time since 2002, you've lead the Green Party into third place and you improved the performance of the party a lot compared to the last election However, almost everyone agrees that more had been possible considering your polling numbers in the spring. You even hear quite a few people say that this is your fault and Baerbock would have not squandered this historic opportunity like you did."
             }
             if (e.final_overall_results[0].electoral_votes == e.final_overall_results[1].electoral_votes){
             playerPerformance += " First place is actually tied, so the coalition talks are going to be interesting. There is a good chance that you'll become a junior partner in government if you want to."
@@ -742,7 +742,6 @@ function endingOneBuilder(){
 
             //anti sneakiness operations
             if (e.final_overall_results[0].candidate === 77){
-                console.log("Don't even think about it")
                 closeElection = true;
                 }
             }
@@ -796,9 +795,9 @@ function endingTwoBuilder(){
     var sneakyText = "";
 
     var chancellorFate =  "You have made history by becoming the first Green chancellor of Germany, congratulations! This is a major upset to the German party system - you're the first non CDU or SPD chancellor since the founding of this state. Now you have to guide the country through the rest of the pandemic, handle foreign policy and, of course, make sure that finally enough is getting done to combat climate change and its consequences. The German people have placed a lot of trust in you - don't disappoint to hopefully cement the Green Party as one of the major parties and get reelected in 2025."
-    var viceFate = "In this new coalition, you have become Vice Chancellor and Foreign Minister. Since the Green Party mandates that their leaders can't be part of the government at the same time, you had to resign as party leader. However, you are still an important figure in the party. For now, you should focus on your role as minister. Perhaps in 2025, the party will select you as chancellor candidate again and you'll have even more success."
-    var ministerFateStrong = "In this new coalition, you have become Foreign Minister, while Robert Habeck has become Vice Chancellor and Minister of Economy and Climate. Since the Green Party mandates that their leaders can't be part of the government at the same time, you had to resign as party leader. However, you are still an important figure in the party. For now, you should focus on your role as minister. There is a chance the party will select you to run again in 2025, though many analysts expect Habeck or someone else entirely to have better chances."
-    var ministerFateWeak = "In this new coalition, you have become Foreign Minister. Since the Green Party mandates that their leaders can't be part of the government at the same time, you had to resign as party leader. However, you are still an important figure in the party. For now, you should focus on your role as minister. There is a chance the party will select you to run again in 2025, though many analysts expect Habeck or someone else entirely to have better chances."
+    var viceFate = "In this new coalition, you have become Vice Chancellor and Minister of Economy and Climate. Since the Green Party mandates that their leaders can't be part of the government at the same time, you had to resign as party leader. However, you are still an important figure in the party. For now, you should focus on your role as minister. Perhaps in 2025, the party will select you as chancellor candidate again and you'll have even more success."
+    var ministerFateStrong = "In this new coalition, have become Vice Chancellor and Minister of Economy and Climate. Since the Green Party mandates that their leaders can't be part of the government at the same time, you had to resign as party leader. However, you are still an important figure in the party. For now, you should focus on your role as minister. There is a chance the party will select you to run again in 2025, though many analysts expect Baerbock or someone else entirely to have better chances."
+    var ministerFateWeak = "In this new coalition, you have become Minister of Economy and Climate. Since the Green Party mandates that their leaders can't be part of the government at the same time, you had to resign as party leader. However, you are still an important figure in the party. For now, you should focus on your role as minister. There is a chance the party will select you to run again in 2025, though many analysts expect Baerbock or someone else entirely to have better chances."
     var emptyFate = "This outcome is a setback for both the party and you personally. While you can try to stay on as party leader, the double failure of not winning the election and then not managing to negotiate a coalition that includes the Greens makes many wary to support you. Perhaps you'll manage to stay on, but you most probably won't have another chance to become chancellor."
 
       if (sneaky){
@@ -902,11 +901,11 @@ function endingTwoBuilder(){
       case 5:
         header = "<h2>“Lessons learned - Jamaica coalition successfully formed”</h2>"
         if(coalitionLeader === playerLeader){
-            coalitionText = "In 2017, a Jamaica coalition consisting of the CDU/CSU, Greens and FDP almost formed, but negotiations fell through when FDP leader Christian Lindner famously said: 'It's better not to govern than to govern wrongly.' The situation was a bit different this time, with you being the strongest party. This time, negotiations were more successful and you managed to write a coalition agreement all three parties can agree with. Your base isn't happy with all provisions, though as chancellor, you can shape policy quite a lot. Hopefully, this coalition can lead the country into a new, perhaps more modern direction after eight years of Grand coalition."
+            coalitionText = "In 2017, a Jamaica coalition consisting of the CDU/CSU, Greens and FDP almost formed, but negotiations fell through when FDP leader Christian Lindner famously said: 'It's better not to govern than to govern wrongly.' The situation was a bit different this time, with you being the strongest party. This time, negotiations were more successful and you managed to write a coalition agreement all three parties can agree with. Your base isn't happy with all provisions, though you are more optimistic. After all, the Jamaica coalition you were part in Schleswig-Holstein was also productive. Hopefully, this coalition can lead the country into a new, perhaps more modern direction after eight years of Grand coalition."
             playerFate = chancellorFate;
           }
            else{
-            coalitionText = "In 2017, a Jamaica coalition consisting of the CDU/CSU, Greens and FDP almost formed, but negotiations fell through when FDP leader Christian Lindner famously said: 'It's better not to govern than to govern wrongly.'  This time, negotiations were more successful and you managed to write a coalition agreement all three parties can agree with. Your base isn't happy with all provisions and hoped for more in some regards. Still, this coalition can lead the country into a new, more modern direction after eight years of Grand coalition."
+            coalitionText = "In 2017, a Jamaica coalition consisting of the CDU/CSU, Greens and FDP almost formed, but negotiations fell through when FDP leader Christian Lindner famously said: 'It's better not to govern than to govern wrongly.'  This time, negotiations were more successful and you managed to write a coalition agreement all three parties can agree with. Your base isn't happy with all provisions and hoped for more in some regards, though you are more optimistic. After all, the Jamaica coalition you were part in Schleswig-Holstein was also productive. Hopefully, this coalition can lead the country into a new, more modern direction after eight years of Grand coalition."
              if(!thirdPlace){
               playerFate = viceFate;
            }
