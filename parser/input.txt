@@ -1,284 +1,343 @@
-Greens-Habeck
+SPD-Scholz
 
-Q1: March 2023: You and your Party Co-Leader, Annalena Baerbock, want to decide together who will be the Green Party chancellor candidate in around a month. Until then, what do you want to do to prepare for the upcoming election season?
-A1: Two years ago, I deleted my social media accounts. However, in this day and age, you need social media for a successful election campaign. I will reactivate them and start posting!
-F1: It’s true that social media is almost expected today, so this probably helps - as long as you avoid posting controversial statements like the ones that made you deactivate your accounts in the first place!
-A2: If I want to become chancellor, I can’t be dragged down by unnecessary scandals. I’ll make sure my finances are in order and will check if there are any problems with my website or other things on the internet.
-F2: Despite thoroughly searching for potential problems, you just don’t find anything. This feels like a waste of time, especially considering you could have used the time to campaign or do something else more useful.
-A3:  I want to get out there, go to talk shows, give interviews, and generally make sure the German people know me. This should improve both my name recognition and my favourability ratings.
-F3: It helps to be seen, and a few more people get to know you, though most Germans already have an opinion of you.
-A4: Friday for Future is capable of mobilizing a massive amount of people. I will visit some demonstrations and meet with their leadership to get them on our side.
-F4: In the past, the Green Party has been criticized by Fridays for Future for not being ambitious enough. This might help mobilise the youth vote, though many people who care about the climate a lot already vote Green.
+Q1: August 2019: It’s more than two years until the federal election. However, European elections just happened and the SPD has suffered disastrous losses. This prompted the party leader, Andrea Nahles, to resign. Now, the party members should vote for a new party leader. You have just declared your candidacy, together with Klara Geywitz. How do you want to convince the party members to vote for you?
+A1: The party needs to be reinvigorated, and we need to return to our Social Democratic roots for that. I want to emphasize that while I’ve been a moderate in the past, I will closely cooperate with the left wing of the party.
+F1: This is in tune with the mood of the party and gets you into the second round. Unfortunately, you narrowly lose to Saskia Esken and Norbert Walter-Borjans. You keep your job as Vice Chancellor and Finance Minister though.
+A2: In the last few years, the party has lost the trust of many voters. We need to win it back, which means finding Social Democratic answers to the questions of our time. For this, all wings of our party need to be unified.
+F2: With this pitch, you make it into the second round, but then lose to Saskia Esken and Norbert Walter-Borjans. You keep your job as Vice Chancellor and Finance Minister though.
+A3: I’m the candidate in this election who stands for the continuation of the Grand coalition. While it’s not popular with everyone, there’s a lot we have achieved together, and I believe it’s in the best interest of the SPD to keep doing what we’re doing.
+F3: You’re completely out of tune with the mood of the party and lose in the first round. When the chancellor candidate is chosen eventually, the party nominates Mützenich over you. You have to watch from the sidelines as he runs the election campaign.
+A4: I’m the incumbent Vice Chancellor and Finance Minister of Germany - none of the other candidates has my name recognition. I won’t focus on policy specifics and trust that being the most well-known candidate will carry me to victory.
+F4: The strategy somewhat works in the first round, but in the second, you clearly lose o Saskia Esken and Norbert Walter-Borjans. You keep your job as Vice Chancellor and Finance Minister, though your position within the party is weakened.
 
-Q2: The Corona Pandemic is the topic that is dominating the news and political discourse right now. With the Greens not governing on the federal level, you can do little in terms of actual policy though. What’s something you want to focus on concerning COVID policies?
-A1: Overall, we support the government’s policy. I will criticize their sometimes chaotic response but also make it clear that we broadly stand behind all necessary measures.
-F1: You don’t make headlines with this stance, but this is broadly popular and you don’t attract any negative attention, as most Germans seem to agree.
-A2: Since the beginning of the pandemic, there hasn’t been enough of a focus on children and families. We will present a plan to get them back to school quickly and provide financial aid for them.
-F2: This is a decent avenue of attack, many feel that the needs of children have not been adequately met, though you are not the best person to sell this. Young voters are also a core group of your coalition.
-A3: While the lockdowns were absolutely necessary at the beginning of the pandemic, we should be mindful - there has to be a balance between freedom and safety.
-F3: The FDP agrees with your position, and you might win over some of their voters - however, many others feel that this might be premature.
-A4: Every district association of the Green Party is led more competently than this country. We need to do something to combat the lack of ideas on the federal level. The Green Party stands for a new beginning.
-F4: Many people agree that this country needs change and this is a damaging attack - it’s unclear though how many people prefer the Green Party as an alternative.
+Q2: November 2019: One condition the SPD had for entering the Grand coalition was that there would be an evaluation at half-time. The time for that is now - as Vice Chancellor, you have some input. Are you satisfied with what the Grand coalition has achieved so far?
+A1: Overall, we are satisfied. We’ve finished about a third of the projects we wanted to do according to the coalition agreement and a lot more are currently on the way. We are on a good path.
+F1: This was the expected framing from you. It helps to point to the things you have achieved but in the past, achieving things hasn’t helped the SPD electorally.
+A2: We have made good progress on a lot of projects and definitively want to continue the coalition until the end of the term, yes. However, after the next election, the country needs a new government!
+F2: A lot of people, especially in your party agree - this Grand coalition was already more of an emergency solution after the Jamaica coalition talks fell through. Let’s see how the majorities will be after the next election.
+A3: Frankly, we can’t be satisfied with the last one and a half years. It’s simply not possible to pass what we need while governing with the CDU/CSU and I don’t know if it’s a good idea to continue this coalition.
+F3: After your behaviour during the leadership challenge, this is very surprising to hear from you. The CDU/CSU accuses you of trying to drag them down, with some even calling for your resignation. In the end, the coalition survives, but with everyone’s favourability damaged.
+A4: I am completely satisfied, yes. We are good governing partners and I’m looking forward to further cooperation - perhaps also after the next election.
+F4: The Grand coalition is very unpopular within the party and no one - apart from you, apparently -  wants to continue it after the next election. You’ve done yourself no favour by coming out for it so strongly. In fact, you’ve damaged your image enough that the party doesn’t even consider you as chancellor candidate and nominates Rolf Mützenich.
 
-Q3: April 2021: You’ve come to an agreement with your co-party leader Baerbock. In a bit of a surprise to you, she told you that she has no interest in becoming chancellor candidate and wants to support you. Now, it’s time for your first speech as the official Green chancellor candidate!
-A1: When I was Minister of Agriculture and the Environment in Schleswig-Holstein, I listened to all people and strived to find compromises. As Chancellor, I want to continue this approach!
-F1: Your time as Minister was widely regarded as a success. The left wing of your party is not happy to hear the word ‘compromise’, though in general, it helps to be seen as pragmatic. With both the CDU and SPD struggling in the polls, many people consider you as the best alternative.
-A2: Forty years ago, the Green Party was founded to make our politics care more about the environment. more about the environment. Today, I continue in this tradition, as the only candidate that truly takes climate change seriously.
-F2: A strong focus on climate change will mobilize your core voters. It’s unclear if that’s enough to win - however, with the CDU and SPD both struggling in the polls, an energized campaign might be the way to go. And as you know - 'There's no way around the climate goals'.
-A3: After eight years of Grand coalition and sixteen years of CDU chancellorship, this country needs change. I’m the right woman to give this country the new start it needs.
-F3: A compelling argument, many voters desire change, and with the CDU and SPD both struggling in the polls right now, you might be able to deliver it in the fall. As you know: 'Future doesn't happen - we're creating it.'
-A4: We have a historic opportunity to win the chancellorship for the Green Party this election. I want to be a chancellor for everyone and promise to focus on sensible reform and proposals.
-F4: You seem to gamble that the left, 'Fundi'-wing of the Party is truly dead and that this race is won in the middle. As both big parties, CDU and SPD seem to struggle, there might be an opening to split them apart - but be mindful of your base.
+Q3: July 2020: It’s more than a year until the federal election, though there are talks that the SPD already wants to nominate a chancellor candidate. You and Rolf Mützenich, the leader of the parliamentary group, are the names that are mentioned most often. The party leadership has invited you to talk to them - how do you want to convince them that you are the right person?
+A1: I see the writing on the wall -  I lost the leadership election to two politicians that are more leftwing than me. Therefore, I’ll promise to run a more leftwing campaign when nominated as chancellor candidate.
+F1: The leadership seems convinced by this - they nominate you as chancellor candidate, though they expect you to run a left-wing campaign now. Hopefully, this doesn’t clash with your previous image too much.
+A2: They know who I am and what I stand for. While I recognize that the left wing of the party is a significant force, I won’t fundamentally change who I am and run a campaign that’s not too leftist.
+F2: While there is lots of complaining, eventually, you are chosen as the nominee. Your relationship with the party leadership is somewhat damaged, but at least you are free to run a campaign that’s in tune with your persona.
+A3: They know who I am and what I stand for. While I recognize that the left wing of the party is a significant force, I won’t fundamentally change who I am and run a campaign that’s not too leftist.
+F3: In the end, this is just not enough for the party leadership. After much consideration, they nominate the more left-wing Mützenich, sidelining you for the election campaign.
+A4: I’m the most electable candidate, without me, the situation for the SPD will be even more hopeless than it already is. If we want to have an even small chance at winning, they have to nominate me, ideology be damned.
+F4: Unfortunately for you, the party doesn’t believe that you can lead them to victory either and is not swayed by this argument. Mützenich is chosen as the chancellor candidate and you are sidelined for the rest of the campaign.
 
-Q4: After a messy leadership contest, the CDU has - somewhat unexpectedly - chosen Markus Söder as their chancellor candidate and immediately stopped sliding in the polls. With this, you, the CDU/CSU and the SPD have all chosen a chancellor candidate. Now it's time to decide on a general strategy for this pivotal race.
-A1: It’s clear that the SPD is not going to win this election. I want to present myself as the candidate of the left-of-centre and try to coalesce left-wing voters around the Greens.
-F1: Voters on the Left have traditionally been your base. Some pundits wonder though if such an unexceptional approach is the right way to capitalize on the Greens' newfound polling highs, especially with the SPD down to not much more than their very core voters. Let's hope you're ready for the onslaught of attacks from the right.
-A2: Traditionally, the Greens have been a left-of-centre party. However, to actually win this, we need to draw voters from the CDU, especially with Söder as their nominee.
-F2: The core base of the CDU might be impossible to crack, and attacks from your left follow swiftly. You blunt the impact of Söders’ momentum, though for now, most voters prefer him to you.
-A3: Our base is largely young, urban, and well-off. We will put our resources into mobilizing them and getting the youth to turn out his election.
-F3: Your turnout-focused strategy might get more first-time voters and loyal Greens to the polls, but this might not be enough to get you into first place. In the last election, the electorate skewed older, and your core base only netted you around 8.9%.
-A4: Our polling numbers in West Germany are great, but we are struggling to even get to 10% in many East German states. There is an untapped voter potential for us there, so let’s focus on East Germany.
-F4: Until now, the Green Party message didn't seem to resonate with East Germany, though the region is known for low turnout in general. Maybe you can get some people there to vote Green this time?
+Q4: August 2020: Congratulations -  despite losing the race for SPD leadership, the party has just nominated you as their chancellor candidate. The SPD is polling in third place, and while it will be a while until the campaign starts properly, few people believe you can turn it around. What will your strategy in the coming months be?
+A1: I lost the leadership election because the left wing of the party was suspicious of me. In the coming months, I want to earn their trust and promise to lead the SPD on a more left-wing course.
+F1: This is good for party unity, and your outreach to the left wing also improves your relationship with the party leadership. You’re not going to win over moderate voters like this though and is not consistent with how you presented yourself in the past.
+A2: My biggest asset is my competent persona. I don’t want to get into policy specifics right now, instead, I want to present myself as a capable leader. Being Vice Chancellor and Finance Minister should make that easier.
+F2: You are personally popular with German voters, and you are consistently ranked as a competent minister. However, your party is unfortunately still not all that popular.
+A3: I’ve always been part of the party's moderate wing, and this is not something I’m going to hide. The centrist course of the SPD is correct and will lead us to victory next year.
+F3: In the last few elections, the SPD chancellor candidates all came from the moderate wing of the party and all lost. The left wing was already unhappy with your nomination, and with you confirming that you want to ignore them, they are close to open revolt against you.
+A4: We are far behind in the polls right now, and the only way to make up this difference is by running an aggressive campaign. I’ll attack both the CDU and the Greens.
+F4: It’s not election season yet and the country is in the middle of the Covid-pandemic. Your attacks are seen as unnecessary, out of character, and do more to damage your image than drag the other parties down.
 
-Q5: With a Green chancellor now looking like a realistic option, many are curious about your foreign policy. Can you clarify your position on that?
-A1: The USA is our strongest ally outside of Europe and we want to increase cooperation with both them and NATO. While we disagree on some things - like the 2% goal - we also want to go further than the current government, by stopping the North-Stream 2 pipeline.
-F1: It seems like you are trying to outflank the CDU with your pro-USA stance. With Söder being criticized for visiting Putin last year, this could be an opening. Just be mindful not to scare off too many voters that are critical of the USA.
-A2: We need a more active foreign policy. While pacifism is still the ideal that should guide us, we have to do more - for example, we should deliver defensive weapons to Ukraine to help the defend themselves against the Russian-backed separatists.
-F2: In the future, this position will surely be vindicated. For now though, it goes too far for the average voter and especially for the more pacifist-minded part of the electorate that often votes Green.
-A3: The Green Party has always been the party of pacifism. We need to drastically reduce our military spending and rethink our relationship with NATO. There are more important things we can spend this money on.
-F3: 30 years ago, this would have been a mainstream position within your party. Now, it’s on the fringe, and a worldview too simplistic for the median voter. Even the SPD needles you on your stance towards NATO - you might, however, gain from the Left, if that's your goal.
-A4: We don’t want to rock the boat here. I want to reaffirm our commitment to NATO but also emphasize that diplomatic solutions are always preferable to military conflicts.
-F4: People really don't know what to make of this vagueness - you also don’t differentiate yourself from other parties. At least you keep some flexibility for future policy.
+Q5: One topic that has been part of the political discourse in the last years is the minimum wage, which was introduced in 2015. Currently, it is 9.35€, with a non-political commission deciding when it will be adjusted. Do you want to promise changes for the election?
+A1: The minimum wage is not high enough for the hard-working people in this country. It has to be raised to 14€. Anything less is simply not enough to fully participate in our society.
+F1: With this proposal, you are outflanking even the Left party. It helps you win over voters from them, but for most moderates, this simply goes too far.
+A2: Our current minimum wage is not enough. That’s why we propose to raise it to 12€, which would help low-income earners significantly.
+F2: Your position is in tune with what the party expected - it helps you rally left-wing voters, though some moderates are turned off and insisting on this might be a hurdle during coalition talks.
+A3: The minimum wage commission has been doing a good job in the past, and it would not be right to say a number here just to win votes. We want to keep the system as it is.
+F3: This is too unambitious for your party to accept, which puts a pledge to raise the minimum wage to 12€ in the program regardless of what you said. Such a high-profile disagreement between the party and its chancellor candidate isn’t good, of course.
+A4: The minimum wage has to be raised by more than the commission would. I don’t want to give a number here - the exact number depends on a lot of factors, so it’s better to decide later.
+F4: Your analysis might be right, but the fact is, a specific number is just better for an election campaign. The party votes for a raise to 12€  regardless, making this moot, but your caution didn’t help you in this case.
 
-Q6: May 2021: The Federal Constitutional Court just ruled the Climate Protection Act as unconstitutional and demands the government do more to lower emissions. The federal government in Berlin is now working on passing a stricter law. While the government can pass the law without Green Party votes, the media is still interested in your position.
-A1: We need to reduce our emissions by 70% by 2030 - to achieve that, we have to do a lot. For example, we need to double the tempo of the expansion of renewable energy.
-F1: As expected, you’re strongly pushing for more ambitious plans - this strong statement resonates with the voters who are sympathetic to you and energizes your campaign.
-A2: Every democratic party here agrees that something needs to be done, so let’s find solutions together. We want to work with other parties, though they finally have to take the climate crisis seriously!
-F2: You’re emphasizing consensus here - on the one hand, that might make coalition talks after the election easier, on the other, your core voters hoped for more. At least you make it clear that they need to move towards your position.
-A3: For the next government, climate change has to be the top priority. Therefore, we want to form a dedicated ministry for climate policy to coordinate our efforts better.
-F3: There's some talk in the beltway about how practicable it would be to dedicate such a cross-sectional task to one personality, but most just want something to be done. Also, you make some people think that you’ve already given up on becoming chancellor and want to run for climate minister instead.
-A4: The new law the Grand coalition has come up with is simply not enough. We need an end to environmentally-unfriendly subsidies, a higher price for CO2, and to transform the traffic and agricultural sector to achieve the necessary reductions in emissions.
-F4: In general, voters like to hear concrete proposals. While your base likes them a lot, other voters are a lot more sceptical. In the future, you should try to mostly emphasize your more popular proposals.
+Q6: March 2021: During the winter, the country was gripped by the Covid pandemic and strict lockdowns were mandated. Now, the country is slowly starting to open up. You can either voice your opinion on the openings or focus more on your role as Finance Minister during this time.
+A1: During the winter, the lockdowns were needed, and we have to be careful not to open up to quickly. Our opening strategy and vaccination campaign should make it possible for people to go to beer gardens in the summer.
+F1: Most people had enough of lockdowns and like this promise - however, you’re not really differentiating yourself with an answer like this.
+A2: I want to use this as an opportunity to attack Laschet, the party leader of the CDU. His proposed “bridge lockdown” is confusing and North Rhine-Westphalia, the state governed by him, is not doing enough to slow down the spread.
+F2: Many agree that he didn’t handle the pandemic in a good way in the past few weeks, so this is a good way to attack him. Söder, the other potential CDU candidate, complains about your ‘smurfy grin’ during a meeting between the federal and state governments.
+A3: As Finance Minister, I have been responsible for the help our economy received during these difficult times. Now, I will call for additional financial help for people affected by the lockdowns. The culture industry - museums, theatres, cinemas and the like - especially need help.
+F3: Your measures as Finance Minister have generally been popular during the crisis - it helps to remind people that you helped guide the country through this.
+A4: It’s fiscally irresponsible to give out even more government aid than we already have. I’m worried about the national debt and inflation down the line - the aid we have already given out is enough.
+F4: Financial aid was popular, and there aren’t many people who are worried about fiscal stability at this moment. You get attacked for this position, mainly by the Left and Green Parties.
 
-Q7: After announcing your candidacy, you’ve received some criticism from within the party for stealing the nomination from a woman - in general, the Green Party is very in favour of giving top jobs to women if possible. How do you want to address these allegations?
-A1: This was a decision we made together, and Baerbock and I agreed that I would be the most competent candidate. Besides, it’s kinda sexist to say that she should have gotten the nomination just because she’s a woman.
-F1: You’re not helping yourself with these kinds of comments. Baerbock is popular in the party and time and energy that could have been spent on campaigning is now spent on discussing
-A2: I recognize that we have a problem with not enough women being in the highest positions of power. That’s why I promise that as chancellor, half of my cabinet will consist of women.
-F2: A smart pivot, though you avoided addressing the allegations directly. Your base still is soothed by this promise, though some wonder how you want to achieve this when you form a coalition with the more right-wing parties that traditionally don’t have as many strong women.
-A3: Annalena Baerbock and I are co-party leaders and will both play an important part in this campaign. She will be mostly responsible for our foreign policy plans, for example.
-F3: Baerbock is happy to campaign with you and cooperate, and your base is happy. However, by emphasizing that you are a team so much, you make it harder to stick out as chancellor candidate.
-A4: It’s important that we stay united as a party if we want to win this election. Annalena Baerbock and I agreed that I should be the candidate, but she will of course have an important post in my cabinet if she wants it.
-F4: While the accusations don’t completely stop, by and large, your party agrees that winning this election is more important than squabbling. Baerbock, for her part, is happy to campaign with you.
+Q7: Soon, the election campaign is going to begin properly. The CDU lost some support due to some of their MPs selling overpriced medical masks, but unfortunately, the SPD barely profited from that. In the run-up to the campaign, you’ve leaned into your moderate image - is that something you want to continue?
+A1: Yes - there are many voters in the centre of the political spectrum who are looking for an alternative to the CDU. I will present myself as the option for them.
+F1: You are a good fit personally for this strategy and this is consistent with your history. Let’s hope it’s what voters are looking for!
+A2: Broadly, I want to lean into my personal moderation and similar political style to Merkel. However, I will also emphasize some of the more leftist points in our program.
+F2: With this strategy, you're trying to have the best of both worlds, and it’s mostly working. Voters both see you as the best successor to Merkel and hope you can deliver some of the more leftist promises.
+A3: Actually, it seems that the country wants a more leftist government than we’ve had in the past decade. Therefore, I’ll abandon my moderate image and run a more leftist campaign.
+F3: This is a huge turnaround for you, especially after how moderate you presented yourself in the last few months. Voters simply don’t believe that this is genuine and lose trust in you.
 
-Q8: In the past, you’ve been criticized for some rather bizarre statements you made on Twitter, like calling Bavaria a one-party state or talking about bringing democracy to Thuringia. In response, you deleted your social media presence. Do you have anything to say about this?
-A1: It was a wise decision to delete my Twitter account. The platform is not good for political discourse, and the young and cool people are somewhere else anyway.
-F1: Perhaps you’re right in your analysis, and there are more important demographics to win over than Twitter users - still, your refusal to use social media hurts your campaign.
-A2: I admit that these statements were unfortunate - but they have been blown way out of proportion by the right-wing media. Still, I don’t think returning to Twitter is necessary to get my point across to the German people.
-F2: Most people don’t like how you’re trying to paint yourself as the victim in this situation and your refusal to use social media hurts your campaign.
-A3: There’s nothing wrong with preferring platforms that allow a more substantive discourse than Twitter. Besides, there are Green Party accounts for people to follow if they really want to use Twitter to stay up to date.
-F3: From time to time, you get needled for refusing to use the platform, but a Green Party account that posts many of your statements and status updates helps combat the issue.
+Q8: April 2021: In 2020, the financial payment provider Wirecard went bankrupt after massive fraud was discovered. There are allegations that a government agency that is under your responsibility as Finance Minister did a bad job and should have intervened earlier. Today, you have to talk to a parliamentary committee of inquiry about your role in this affair.
+A1: I will fight back hard against the allegations today. It’s a complete fairytale that the Finance Ministry protected Wirecard. We did our job just fine, no one could have foreseen this massive fraud.
+F1: Fighting back keeps voters from losing trust in you, for now. Let’s hope the committee doesn’t find anything compromising. There’s an open question about some E-Mails you sent from a private address…
+A2: We need to get to the bottom of this together - I promise to fully cooperate with the committee and turn over any E-Mails I might have missed in the past. Still, I maintain that the Finance Ministry is not to blame here.
+F2: Some praise you for your transparency and cooperation, let’s just hope that you didn’t make it easier for the committee to find problems with your account.
+A3: Deflect as much as possible! I will give nothing but the shortest possible answers, this whole committee is a political witchhunt by the opposition anyway!
+F3: Parts of the committee accuse you of obstructing their work, but overall, it doesn’t go too badly. Let’s hope they don’t find anything incriminating - there’s an open question about some E-Mails you sent from a private address…
+A4: Many people had their part in this unfortunate affair, and part of the fault lies with the behaviour of the Finance Ministry. I’m sorry that this happened under my watch and promise to help investigate how it came this far.
+F4: What are you doing? The committee had no proof that you were responsible - now you’ve given every ammunition to attack you. Hopefully, this will at least positively reflect in the findings of the commission.
 
-Q9: Time and time again, the Green Party has said that more needs to be done about climate change. In an interview, you are now asked what this means concretely for the price of gasoline.
-A1: Unfortunately, if we want to lower our carbon emissions, the price of gasoline has to rise by about 16 cents per litre over the next five years.
-F1: Environmental organisations agree, though, with gas prices at an all-time high already, this is sharply criticized by many others. The word 'unfortunately' unfortunately just isn't very popular politically.
-A2: As the price of CO2 rises, so will the price of gasoline. We have to keep an eye on affordability, but a price hike is unavoidable.
-F2: At least you are trying to hedge the issue and be mindful of the impacts of a higher price, though since you didn’t say a number, a lot of people assume the worst.
-A3: Gas prices have to rise a lot - around 28 cents per litre over the next five years. We need to invest in public transit as well to make individual traffic less attractive overall.
-F3: Everyone but the most ardent environmentalists is deeply alarmed by that statement - your opponents point out that this would make using a car unaffordable for large parts of the population. Rural voters especially seem to be sceptical towards this stance.
-A4: After the price for CO2 went into effect at the beginning of the year, gas prices have risen by 6 cents per litre already - for now, this is enough.
-F4: The next day, Friday For Future calls for environmentally minded people to vote for climate lists instead of the Green Party. This will probably hurt you, especially among young people. Here's hoping you can make inroads among groups that turn out more reliably
+Q9: The CDU/CSU has selected Armin Laschet as their chancellor candidate after a bruising nomination battle. Meanwhile, the Green Party selected Annalena Baerbock in a much smoother selection. Both of them are way ahead of you in the polls - what’s your strategy regarding them?
+A1: Let’s be honest, neither of them should become chancellor. Laschet simply doesn’t have the temperament to lead the country, Baerbock is too young and inexperienced. I’m a more capable leader.
+F1: Voters tend to agree and would vote for you if they could directly elect the chancellor. Sadly, they can’t, and many don’t seem to be convinced that voting for the SPD is the right move yet.
+A2: This is a good opportunity to go on the attack. Specifically, I want to call out Laschet - not even his own party is fully behind him and his recent Covid strategy in North Rhine-Westphalia was embarrassing.
+F2: These are some stinging attacks, Laschet’s popularity is falling down even more. Unfortunately, it’s unclear if you or the Greens benefit from it.
+A3: This is a good opportunity to go on the attack. Specifically, I want to call out Baerbock. She has never been part of the federal or even a state government before. This country needs a steady hand, not someone as unproven as her.
+F3: A lot of voters want change and a breath of fresh air. Others like stability though and are convinced by this - hopefully, you are their second choice.
+A4: I want to congratulate both of them on getting nominated. I’m looking forward to a fair election campaign between the three of us!
+F4: Taking the high road neither helps nor hurts you much here. Some people make fun of you for calling this a three-way race, but you have enough time to prove them wrong.
 
-Q10: June 2021: As the election comes closer, many voters are giving you a closer look. In the last years, the Green Party has acquired the reputation of being an elitist party for educated and rich people. You’ve studied philosophy and philology, giving your opponent an opening to call you an ivory-tower intellectual. How do you want to combat this?
-A1: This is more of a problem with the whole party than with me personally. I want to focus on our programs that help poor and disadvantaged people in this country to combat this image.
-F1: You’re making some inroads with these groups, though Söder is winning the favourability battle for voters looking for a ‘man of the people’
-A2: When I was minister in Schleswig-Holstein, I talked with everyone, even people who would never vote Green. I’ll keep that attitude for the election campaign.
-F2: This is good for you, voters generally find you approachable and easy to talk to when you go out to meet them. Hopefully, you can win the favourability battle against Scholz and Söder!
-A3: The Bundestag and politics as a whole have a problem with having mostly people with a university degree. We all need to come together to change this!
-F3: You are not wrong, but the Green Party is seen as the most elitist by many, and you are seen as an example of this.
-A4: Many people in Germany studied at university, so I don’t see how this makes me out of touch. It’s good if politicians are educated.
-F4: If you’re trying to sound elitist, this is the way to go. Your core voters don’t mind this as much, but it makes it harder to make inroads, especially among less educated people.
+Q10: A topic that comes up from time to time during this election season is the relationship with both Nato and Russia. Gerhard Schröder, former chancellor and SPD member, is criticized for his close ties to Putin. Do you have anything to say about this?
+A1: The SPD is committed to NATO, which guarantees the security of Europe. We also want to strengthen our cooperation with other European countries in military questions, especially France.
+F1: Pundits notice your silence on both Russia and the former chancellor. While your statement goes over well, the SPD is once again called a party of “Putin understanders”.
+A2: Schröder is no active politician anymore and is free to do whatever he wants to. We also have business interests regarding Russia - for example, the Nord-Stream 2 pipeline that will open next year and is very important for our energy supply.
+F2: Your East German state parties like this stance, though for some others, this is too friendly towards Russia.
+A3: The SPD has always been the party in favour of easing tensions with the East. We need to keep talking to Putin, and former chancellor Schröder could help us with his good connections.
+F3: While not entirely out of character for someone from the SPD, this statement still makes you sound very Russia-friendly. You get roundly criticized for not taking the danger Putin poses seriously.
+A4: Our current policy towards Russia has not been tough enough. Schröder should either cut ties with Russia or leave the SPD. Putin cannot be trusted and we should only open Nord-Stream 2 if we get concessions from him.
+F4: Your party isn’t thrilled by this, the SPD has always been more in favour of dialogue with Russia. The state party of Mecklenburg-Vorpommern - where Nord-Stream 2 ends - is openly distancing itself from you.
 
+Q11: May 2021: The Federal Constitutional Court just ruled the Climate Protection Act unconstitutional and demands the government do more to lower emissions. The federal government in Berlin is now working on making the law stricter. As Vice Chancellor, you can contribute to the new law.
+A1: We should quickly write a new Climate Protection Act that is ambitious, yet feasible - for example, being carbon neutral by 2045 should be the goal. It’s important that we pass this law quickly, so it should be written in a way that both the SPD and CDU can support it.
+F1: The new law passes without problems - the Greens are criticizing it for being too unambitious, but overall, it was good to get it through quickly.
+A2: We can now quickly correct the mistakes we made when writing the original version of this law. The CDU has stopped exactly the things the constitutional court ruled unlawful, I hope they will be more sensible this time.
+F2: You’re putting the CDU in a difficult spot here - they can’t really challenge that what you said is true but still want to work with you and correct the law quickly. When the new version is passed, the SPD gets most of the credit.
+A3: This is a great opportunity to pass a truly ambitious law that does enough to combat climate change. We need to put in the goal to become carbon neutral by 2040, now is not the time for slowing down.
+F3: You get cheers from the Green Party, but the CDU refuses to consider these proposals. After much back and forth, a very watered-down version of the law is passed, making people doubt your ability to get things done.
+A4: The court mandated that the law should be changed by the end of 2022. We should wait until after the election, this is a job better suited for the new government.
+F4: Your refusal to change the law now mobilises people who want a government that makes a more ambitious law after the election. Unfortunately for you, most of those people vote Green.
 
-Q11: Since 2005, long-time unemployed people in Germany get money from the state at the subsistence level, the so-called Hartz IV. However, they receive less money if they are not looking for a job. Many people are not happy with this system - what does the Green Party want to change?
-A1: We need to change how benefits are calculated so that everyone is receiving at least 50€ more. Furthermore, there should be no more sanctions if someone isn’t actively looking for a job.
-F1: This is somewhat on the left spectrum of the debate, though still palpable for moderates.  It also shouldn’t be a hindrance in coalition talks.
-A2: The current level of Hartz IV is a disgrace. There needs to be a massive raise, by around 200€, and an end to the unnecessary and inhumane sanctions for people not searching for a job.
-F2: With a proposal and rhetoric like this, you win over some Left Party voters and poorer people - though more moderate people find this too hard to stomach, and conservatives attack you for wanting unchecked government handouts.
-A3: Instead of Hartz IV, there should be a higher, universal basic income for all people in Germany. While this is expensive, the savings on bureaucracy make it possible to finance this.
-F3: Experts doubt your math here and call it impossible to finance. On the whole, this idea is on the fringe and not all that popular.
-A4: The system needs some minor adjustments - we can look into gradually raising the amount of money paid out but have to be careful that it doesn’t become excessive.
-F4: Rhetoric like this is less leftist than voters are used to from you. Some moderates like this, though people on the left and your own youth wing are less satisfied. Although this isn't entirely out of character, since it was your party who participated in the introduction of Hartz IV under Gerhard Schröder.
+Q12: Tax policy is an important topic in every election and this one is no exception. Broadly, parties on the right of the political spectrum have called for lower taxes across the board, while the more leftwing parties want to raise taxes on the rich. How do you want to position the SPD?
+A1: There need to be some corrections with our taxation system - higher income earners need to pay more, while low income should have to pay less. We shouldn’t change anything too radical though.
+F1: This is a position that is broadly acceptable to most moderates and leftists alike. It’s not particularly inspiring though.
+A2: Some minor adjustments are needed, but we don’t want to rock the boat here. Overall, taxes for the rich will be raised a bit to finance additional investments and some systems like the Soli should be reworked.
+F2: With a program that shows so little ambition, you get attacked by the more leftwing parties and parts of the SPD. Perhaps moderates can make up for this though?
+A3: A lot of these other programs, especially the ones from the CDU and FDP, would make the state get way less money in taxes. Since we need both investments in the future and fiscal stability, we can’t lower taxes like they promise. Instead, there needs to be a modest tax increase for high-income earners.
+F3: Your analysis is correct - however, the average voter doesn’t care about fiscal stability as much and is more concerned what the tax plans mean for them personally.
+A4: We need to do a big overhaul of our taxation system so it truly benefits the people. Much higher taxes for very high-income earners, a moderate decrease for low-income earners and a wealth tax are all needed.
+F4: You’ve staked out a position on the Left of the political discourse. Let’s see if the left-wing voters you win over will make it up for the frightened moderates you lose.
 
-Q12: A policy field which has been a surprisingly big topic this election - likely due to the Covid pandemic and subsequent lockdowns - is digitalization. What plans does the Green Party have?
-A1: The Grand coalition has failed Germany in this regard, as was plain to see during the lockdowns. Under a Green government, we will put a lot of resources into modernising the digital infrastructure of this country.
-F1: It’s good to press the attack here - you were part of the opposition in the last decade and can credibly offer change.
-A2: We have to do a lot more to make our government data transparent. Non-personal data should be made public for all citizens.
-F2: People concerned about data transparency like this. The average voter doesn’t really care, though.
-A3: Frankly, it’s embarrassing how much government agencies still rely on old-fashioned methods. We have to make investments here to help them build more modern, digital systems.
-F3: Almost everyone agrees, but this includes your opponents; you don't differentiate yourself from the field positively or negatively.
-A4: For too long, we have relied on American companies for everything related to digitalization. We need German and European solutions, to be more independent and protect our data better.
-F4: Generally, voters agree, though it’s unclear how much you can actually do to change this situation.
+Q13: Digitalization is an important topic in this election, with all parties unveiling plans for how to move forward with this. What is the plan of the SPD?
+A1: One thing we need to focus on here is digitalization in schools. We have learned some lessons during the pandemic and subsequent lockdowns. Every child needs access to the internet and an internet-capable device.
+F1: This is a good sub-topic to focus on. Just be ready for some uncomfortable questions about why the current government hasn’t done enough to prepare schools.
+A2: Access to the internet is an important right in this day and age. Every household in Germany needs access to a fast and reliable internet connection.
+F2: Of course, everyone likes fast internet (to play their favourite browser game New Campaign Trail)(probably better to remove this joke). Rural areas especially are looking forward to better connections.
+A3: The dominance of big American internet companies is not good for Germany. We need to find German and European solutions and help local online shops to compete.
+F3: Many people agree with this stance - however, it’s unclear how much you can do to actually achieve this.
+A4: We need to move forward with digitalization in government agencies, schools and the administration.
+F4: You don’t differentiate yourself from other parties here - basically everyone is calling for a variation of this.
 
-Q13: One possible measure to reduce carbon emissions that has been suggested by your party again and again is a general speed limit on the German Autobahn. You’re asked to clarify your position in an interview.
-A1: I want to reaffirm our position here -  we need a general tempo limit of 130 km/h to reduce carbon emissions. We have to hit our emission targets somehow and reducing traffic emissions is one part of that.
-F1: You’ve stuck to your principles here, but this is a divisive topic. The FDP in particular attacks you sharply for it.
-A2: We need a tempo limit, yes, but not just for climate reasons: A lot of accidents and deaths could be avoided if people wouldn’t be speeding excessively.
-F2: While the tempo limit is still divisive, this argument is somewhat more convincing than the pure climate one to the average German.
-A3: With a general tempo limit being so unpopular, that is not something we want to focus on in the next legislative session. However, we will look into introducing new tempo limits on selected highways.
-F3: Your base is very deflated by this, and the SPD and Left party keep advocating for a tempo limit, making you seem spineless.
-A4: Not only do we need a general tempo limit of 130 km/h on highways, but we also need one of 30 km/h within city limits - that would be a truly effective measure against climate change.
-F4: A general tempo limit on highways is divisive - 30 km/h within city limits is straight-up unpopular. You’ve done yourself no favour with this position.
+Q14: June 2021: The parliamentary commission investigating Wirecard has finished its job and created a report. In it, you are not directly implicated, and how much you are blamed depends mostly on the party of the person asked. During the debate about this in the Bundestag, how do you want to present yourself?
+A1: All this will blow over in a couple of days. I’ll let them criticize me, let other members of my party defend me and just wait this out.
+F1: With how hard it is to pin the blame for this on you and how obviously partisan the attacks are, this works. The Wirecard affair remains a bit of a sore spot during the campaign, though. At least you’re not the only one struggling right now - Baerbock is losing a lot of popularity due to a scandal surrounding her CV and some payments.
+A2: It’s obvious that these attacks on me are nothing but a cheap political ploy. There’s no clear evidence of any wrongdoing by me and I will fight back passionately against these allegations!
+F2: Fighting back passionately like this just doesn’t fit with your style. It helps to defend yourself, but you come across as awkward when you try to be fiery. At least you’re not the only one struggling right now - Baerbock is losing a lot of popularity due to a scandal surrounding her CV and some payments.
+A3: It’s obvious someone has to resign over this, and it won’t be me. Jörg Kukies, the State Secretary serving under me in the Finance Ministry will be fired over this.
+F3: Many are struggling to understand this move - he was a close advisor to you, and by firing him you only seem to admit that your ministry did something wrong. At least you’re not the only one struggling right now - Baerbock is losing a lot of popularity due to a scandal surrounding her CV and some payments.
 
-Q14: July 2021: There’s some trouble with your co-party leader Baerbock. In the past weeks, she has admitted to forgetting to report payments she got and having a misleading CV. Now, a book she published allegedly contains plagiarised passages. What’s your comment on this situation?
-A1: The last thing I need now is Baerbock dragging me down with her scandals. For the rest of the campaign, I’ll sideline her as much as possible.
-F1: Both she and your party in general are unhappy about this, especially as some see these allegations as unfair. For the next few weeks, the mood at most party meetings is very subdued.
-A2: Both Baerbock herself and I admit that she made some mistakes. However, this should not distract us from the more important topics. I want to talk about policies!
-F2: Since she is not the chancellor candidate, her problems never dominate the front pages for too long. They’re still an annoying distraction for your campaign, though.
-A3: These allegations are unfair and part of a right-wing smear campaign against the Green Party in general. I will fight back and defend Baerbock whenever I’m asked about this.
-F3: Baerbock is grateful that you’re sticking up for her, and this helps with party unity. However, this also keeps her scandals in the news cycle for longer, which isn’t helping the party’s image.
-A4: The CDU/CSU was involved in a massive scandal with many of their MPs selling overpriced medical masks. Scholz of the SPD oversaw the disastrous Wirecard collapse and was involved in corrupt cum-ex banking deals. Compared to that, Baerbock’s missteps are insignificant.
-F4: This leads to accusations being thrown around between all three parties, dragging down everyone’s favourability numbers. Populists on both sides of the aisle salivate at the mudslinging.
+Q15: Since 2005, long-time unemployed people in Germany get money from the state at the subsistence level, the so-called Hartz IV. However, they receive less money if they are not looking for a job. Many people are not happy with this system - what does the SPD want to change?
+A1: Hartz IV has to be replaced by something else we call citizen money. There will be fewer sanctions for people not actively looking for work and less bureaucracy.
+F1: These proposals go over well enough, many are glad the the SPD is finally redy to move on from the Hartz IV system it created. However, some people don’t like the lack of concrete numbers in this proposal.
+A2: The whole system needs to be reformed from the ground up. There should be no more sanctions for people not actively lookinf for work, at least 100€ more paid out per person per month and the burocracy of the system will be significantly reduced.
+F2: You’re promising a lot here - perhaps even too much, as this comes under fire from the CDU and even some in your own party that helped establish the Hartz IV system.
+A3: The SPD created the Hartz IV system, and while there are some parts of it that should be tweaked, we stand by it overall.
+F3: It’s true that the system was created by your party, but it’s increasingly unpopular both within the party and with voters in general. Other left-wing parties win over voters looking for reform of the system now.
+A4: People receiving Hartz IV have struggled a lot during the Covid pandemic. That’s why we’re in favour of a larger one-time payment for them to help them get by in these difficult times.
+F4: Of course, people like receiving money, but it’s both a bit late for that now and they would have preferred to hear about your general plans for the system.
 
-Q15: Widespread flooding is affecting large areas of western, southern and middle Germany. Other politicians, like Laschet, are travelling to the affected areas. Do you want to go there too?
-A1: No, it would be improper to try to politicize this catastrophe. I’m of course making statements supporting all the emergency responders, but I won’t go there myself just to get some pictures.
-F1: Some people appreciate the restraint, but you’re accused of being unapproachable by others. Söder, in contrast, gets some nice pictures of him in rubber boots and positive media attention.
-A2: I will travel to some of the affected regions, yes. However, I don’t want the press to be around, I just want to talk to some affected people.
-F2: This helps you a bit locally, but people elsewhere wonder where you are. Söder, in contrast, gets some nice pictures of him in rubber boots and positive media attention.
-A3: Yes, I want to go there. Specifically, I want to go to some affected cities with Green Party mayors. I’ll look at the devastation and make a public statement with them.
-F3: You get some positive press coverage and good pictures. Meanwhile, Söder gets some nice pictures of him in rubber boots and positive media attention.
-A4: Of course, I want to travel there, talk to affected people and show myself as a man of action. I want to show that, when disaster strikes, I’m there for people.
-F4: You have a good way with people and your visits go very well, allowing you to outshine even Söder, who also visited the affected areas.
+Q16: Widespread flooding is affecting large areas of western, southern and middle Germany. Other politicians, like Laschet, are travelling to the affected areas. Do you want to go there too?
+A1: No, I don’t want to be seen as politicizing this catastrophe. Instead, I want to focus on my role as Finance Minister and promise quick, unbureaucratic financial aid to the affected regions.
+F1: That’s a decent strategy. You’re more credible when calling for financial aid than Laschet. Furthermore, he is pictured laughing while visiting the affected areas and Baerbock, still reeling from a plagiarism scandal, is nowhere to be seen. Many voters are starting to give you a second look…
+A2: Yes, I want to go there, and talk to some affected people. However, I don’t want to do this in front of cameras, I’m not doing this for the media attention.
+F2: Since you are the Vice Chancellor, many people expected to see and hear more of you, though the local people appreciate your visits. Meanwhile, Laschet is pictured laughing while visiting the affected areas and Baerbock, still reeling from a plagiarism scandal, is nowhere to be seen. Many voters are starting to give you a second look…
+A3: I will travel to the affected areas and promise them federal, financial help. The government will help to fix the problems that can be fixed with money.
+F3: Your statement goes over very well, especially compared to the other two chancellor candidates.  Laschet is pictured laughing while visiting the affected areas and Baerbock, still reeling from a plagiarism scandal, is nowhere to be seen. Many voters are starting to give you a second look…
+A4: Of course, I will travel there, and show myself as a man of action, with rubber boots and shovels!
+F4: Some mock your pictures and accuse you of doing this for publicity, while others are more appreciative. Meanwhile, Laschet is pictured laughing while visiting the affected areas and Baerbock, still reeling from a plagiarism scandal, is nowhere to be seen. Many voters are starting to give you a second look…
 
-Q16: After the devastating floodings, climate change is once again a much-discussed topic in the media and politics. You are expected to make a statement on this topic, did this catastrophe affect your stance?
-A1: We, the Green Party, have said for decades that we need to do more against climate change to avoid catastrophes like this. That’s why we call, for example, for an end of using coal to produce electricity by 2030.
-F1: Coal-producing regions aren’t happy, but this is nothing new. Other than that, this is fairly well received, and your party sees itself vindicated, though some accuse you of politicizing the situation. Söder also attacks this proposal as unrealistic.
-A2: I don’t want to come across as wanting to profit from this disaster. Instead of talking about climate change, I will talk about helping the victims in the coming days.
-F2: Many feel like you are leaving an opportunity on the table here, with climate change being such a big topic without you having to start the discussion. The affected people appreciate your concerns though.
-A3: This catastrophe has shown that we need to do much, much more to prepare for flooding and other extreme weather events. At the same time, we need to do more to reduce our carbon emissions.
-F3: While a few people accuse you of exploiting the catastrophe for political gain, many people agree with this and see you as the most credible party on climate issues at first. However, Söder somewhat steals your thunder with his climate plans.
-A4: Of course, we need to do more against climate change. I’m happy that Söder is coming around, though I would like to remind people that under his government, Bavaria has barely done anything to combat climate change.
-F4: This attack stings for Söder. He tries to hit back by calling your proposals unrealistic. It’s a bruising exchange, though observers agree that you have the other hand here.
+Q17: After the devastating floodings, climate change is once again a much-discussed topic in the media and politics. You are expected to make a statement on this topic, did this catastrophe affect your stance?
+A1: There’s no doubt that man-made climate change has something to do with this catastrophe. This needs to be a motivation to do even more to combat climate change!
+F1: With Baerbock struggling, many potential Green voters are looking for an alternative. You are a bit light on policy, but give them no reason not to vote for you instead of her.
+A2: The flooding has shown us that we need to do more to combat climate change, yes. However, helping the affected people and getting them the financial aid they need has a higher priority now.
+F2: Some advisors think you leave an opportunity on the table to win over wavering Green Party voters, but people in the flooded areas appreciate your focus.
+A3: It’s clear that we need a way more ambitious climate program. A higher price for carbon and stricter emission targets should not be off the table - alongside measures to protect people from disasters like this.
+F3: While you certainly win over Green voters with this stance, your core voters are more sceptical. How can they afford energy in the future and keep their industry jobs if this is your program?
+A4: Laschet said that because of a day like this, you don’t change politics, and I have to agree. While we have to evaluate if there’s anything we need to do, let’s not make hasty decisions.
+F4: Laschet is both your opponent and was widely criticised for his statement, so it’s unclear why you come to his defence. The Green Party has an easy time painting both of you as out of touch with the current mood.
 
-Q17: It’s now less than two months until the election, and the campaign is heating up. Is there any specific region you want to focus on until election day?
-A1: Our party colleagues in the Saarland had some conflict and didn’t manage to settle on a valid candidate list yet. Let’s help them sort this out.
-F1: With your help, they manage to finish the list. The Saarland is quite small, but every vote potentially counts, so it’s good that you are eligible there.
-A2: Winfried Kretschman, the only Green Minister-President, has just won his reelection this spring and is very popular. I want to campaign with him in Baden-Württemberg and South Germany in general.
-F2: Kretschmann’s popularity is an asset in these regions. In a bad development, your state party in the Saarland screwed up their candidate list though, meaning you can’t receive any votes in that state.
-A3: I’m quite content with our polling numbers in West Germany, but we are still far behind in East Germany. I want to focus on this region, both by travelling there and promising do to more to help them catch up.
-F3: Let’s see if you can help your party perform better in these states than usual.  In a bad development, your state party in the Saarland screwed up their candidate list though, meaning you can’t receive any votes in that state.
-A4: The states of Berlin and Mecklenburg-Vorpommern have their state elections parallel to our federal elections. I want to campaign there to help our leading candidates in these elections.
-F4: While these might not be the best strategy for your personal result, the two state parties appreciate your help a lot.  In a bad development, your state party in the Saarland screwed up their candidate list though, meaning you can’t receive any votes in that state.
+Q18: After early successes, the vaccination campaign has become sluggish in recent weeks. Some politicians are going so far as to demand making the vaccine mandatory.
+A1: We need to do whatever we can to convince unvaccinated people to get the vaccine, even if that means offering a Bratwurst as a bonus when you get vaccinated. I’m against mandatory vaccinations though.
+F1: It’s unclear if such proposals will actually help the vaccination campaign, but they certainly don’t hurt.
+A2: There needs to be stronger incentives to get vaccinated. I’m advocating for making Covid tests no longer free - if the unvaccinated want to go to the restaurant for example, they’ll need to pay to get tested beforehand.
+F2: Some accuse you of wanting a rift in society between vaccinated and unvaccinated people - however, this is likely to be an efficient measure to help the ailing vaccination campaign.
+A3: I agree, if there’s not a significant uptick in vaccinations in the coming months, we need to think about making the mandatory. It’s something to look into in the coming weeks.
+F3: This is a position on the fringe and not all that popular right now.
+A4: It’s a personal decision if someone wants to get vaccinated or not. We shouldn’t discriminate against people who don’t want the vaccination and don’t waste too much money on this vaccination campaign.
+F4: Perhaps you can win over a few vaccine-sceptical Querdenker and AfD voters with a statement like this. The rest of the political spectrum is mostly unified in criticising you for this.
 
+Q19: August 2021: When you were nominated as chancellor candidate almost a year ago, your campaign seemed hopeless. Now, after missteps by both of your opponents, your position in the polls has improved significantly, while both the Greens and the CDU struggle. How do you want to capitalize on this?
+A1: Baerbock seems like the more vulnerable opponent, and a lot of her voters are looking to a centre-left alternative to her. I will present myself as a good choice and the man who can beat Laschet to them.
+F1: This strategy is a success - the Greens keep collapsing and you keep rising, making a chancellor Scholz after the election a realistic prospect.
+A2: It seems better to go after Laschet voters - he lost some after his floofing gaffe and this is a good opportunity to remind voters that I would be a much better chancellor than him.
+F2: While some people are convinced, many CDU voters will never vote for the SPD. You pick up some and get some Green voters regardless of your strategy.
+A3: There’s no need to attack either of them. I will simply keep doing what I’m doing, show myself as the calm, competent alternative, and voters will come to me.
+F3: With both other chancellor candidates floundering so much, there’s not much more you have to do than wait and let more and more voters flock to you.
+A4: Both Laschet and Baerbock have shown there incompetence in the past weeks and frankly disqualiefied themselves in this race. I’ll go on the attack and will call out their failings at every opportunity.
+F4: Attacking them like this goes against your calm nature and does probably more to damage your image than theirs. Still, your position continues to improve somewhat.
 
-Q18: August 2021: The Covid vaccine has become widely available to the whole population this summer. While a lot of people have gotten it already, the vaccination campaign has become sluggish in recent weeks. What should be done about that in your opinion?
-A1: It is legitimate that unvaccinated people don’t have the same rights and privileges as vaccinated people. Maybe that will help convince everyone to get vaccinated.
-F1: Broadly, voters agree, though you get attacked by the FDP and elements in your own party for this. Some are worried about this leading to a two-class society.
-A2: We are doing a lot to get everyone vaccinated right now without thinking about the consequences. What if the vaccine is toxic? We should try some more natural medicine instead.
-F2: There is a certain, tiny element of the Green Party that likes this. The rest of your party - as well as voters in general - are wondering if you’ve lost your mind.
-A3: At this point, we don’t need mandatory vaccinations yet, though it is something that is probably needed later on if the vaccination rates stay too low.
-F3: Your core voter base is open to this, but compulsory vaccinations are generally unpopular right now, and this statement leaves you wide open for attacks.
-A4: Overall, we are on the right path with the vaccination campaign. We need to do more to reach everyone though, including mobile vaccination teams going to areas with low vaccination rates.
-F4: This is a sensible proposal that also sets you apart from the other parties.
+Q20: The election is in about a month now, and as usual, there will most probably be a coalition government afterwards. Which parties do you want to talk to?
+A1: There’s only one coalition that can both get a majority and bring true, left change to this country: A Red-Red-Green coalition with the SPD, Greens and Left party.
+F1: There are quite a few leftist hoping for this, but probably more moderates scared of this. It allows the CDU and FDP to run an effective fear campaign against you, too.
+A2: My favourite coalition would be Red-Green. If that has no majority, we’ll have to see how we can best for a government.
+F2: Since it is unlikely that Red-Green will have a majority, this isn’t saying much. Laschet needles you on your silence regarding the Left party, but this keeps your options open.
+A3: One thing is clear - this Grand coalition of the past eight years can’t continue. We need to find majorities beyond it.
+F3: The Grand coalition is unpopular and many voters want to move on from it. Hopefully, there will actually be better alternatives after the election.
+A4: While I don’t want to rule out something completely, it’S hard to see how a coalition with the Left party would work if they don’t significantly change some of their views, especially on NATO.
+F4: You’re soothing the concerns of moderates and make it harder to attack you for your openness towards the Left. Let’s just hope you won’t need them to form a government later.
 
-Q19:  Throughout the campaign, Olaf Scholz and the SPD have struggled in the polls, and while some people were sceptical of you in the spring, your polling numbers are still good. What’s your strategy for the final few weeks of the campaign?
-A1: Our main opponent is the CDU, so I will emphasize our moderation and commitment to lead a sensible government. Söder is an opportunist who will say what gets him elected, but can’t be trusted in government.
-F1: Söder is very popular, and it helps to attack him to stay in contention - opportunist or not, it isn’t easy to dent his popularity though.
-A2: The SPD is down, but still the party that’s politically most similar to us, so their voters should be easiest to win over. I will make an effort to target them and get them to vote Green this election.
-F2: A few voters are convinced, but mostly, the SPD is down to their loyal core voters already.
-A3: It looks like the Left party might struggle to reach 5%. I’ll specifically target their voters, maybe we can keep them out of parliament and simplify finding a majority.
-F3: While the amount of votes you gain this way is minimal, this might change the majority calculus after the election. Let’s see if this gambit pays off.
-A4: They might be a bit weaker than they were four years ago, but the amount of votes the AfD is projected to receive is still way too high. I’ll try to win over some of their voters.
-F4: Your motives are admirable, but how exactly do you plan to do that? There are probably no two parties that have as little overlap as you and the AfD. Your efforts will have minimal effects at best and confuse your core base.
+Q21: Pictures of the disastrous retreat of NATO troops from Afghanistan go around the globe. The government is sharply criticised for its botched evacuation. What do you want to emphasize in this situation?
+A1: The situation in Afghanistan right now is depressing, much that we fought for is being destroyed. We need to assess how it could come this far.
+F1: Showing compassions is good, but people blame your government specifically and would have liked to hear something more concrete.
+A2: We can’t let people alone as we have in the past. Endangered people have to be brought to Germany or supported in countries neighbouring Afghanistan.
+F2: This separates you from Laschet, who is more cautious regarding refugees. However, it’s unclear how you actually want to save these people right now.
+A3: The CDU has started to blame Foreign Minister Maas, even though the Ministry of Defence under CDU politician Kramp-Karrenbauer is really to blame. Voters have to see through this attempt to slander the SPD!
+F3: Accusing each other back and forth benefits neither the SPD nor the CDU. You’re in government together, so voters just hear that both of you are incompetent
+A4: I admit that the government has made mistakes, Foreign Minister Maas included. We shouldn’t spend time on the blame game now though and instead see how we can help people!
+F4: Despite the government being lead by the CDU right now, you’re the candidate that stand most strongly for a continuation of the current government. Admitting mistakes is noble, but unlikely to help you.
 
+Q22: September 2021: Both the Finance Ministry led by you and the Justice Ministry let by a party colleague have just been searched by the police. The search was due to investigations into these agencies helping cover up money laundering. You’ve promptly been criticised for not having your own ministry in order.
+A1: The public attorneys could have just sent a written request for information. This search was unnecessary and excessive.
+F1: Probably, this will hurt you a bit regardless, but the whole thing isn’t directly related to you, and your statement doesn’t keep this in the news much longer.
+A2: I refuse to comment on this. The police search wasn’t related to any of my actions and I don’t want to give this story any oxygen.
+F2: Despite your refusal to talk about it, the story is still in the news for several days. Your silence doesn’t put you in a good light.
+A3: This is all part of a political witchhunt! First the Wirecard investigation, now this, someone is trying to keep me from becoming chancellor!
+F3: A very unusual outburst from you. Connecting this to Wirecard hurts you and it’s unclear who you are even accusing right now. This doesn’t go over well with voters at all.
+A4: The problems with the specific part of the ministry that’s being investigated already started when it was still led by the CDU. I don’t have a part in this, it’s not my fault this happened.
+F4: While you are technically correct, this still sounds like an attempt to shift the blame to voters.
 
-Q20: One topic that’s important basically every election season is tax policy. Many people wonder how you want to finance all the new spending you promise - do you want to raise taxes to achieve that?
-A1: To finance necessary government spending, taxes on the rich have to be raised. We should reinstate the wealth tax and raise the income tax, but in a way that leaves small and medium-income earners unaffected.
-F1: Your position is very similar to the SPD`s there. It’s broadly popular on the left spectrum, but you don’t do much to differentiate yourself.
-A2: Effectively combatting climate change is our number one priority, and to finance this, taxes need to be raised across the board. The wealthy will of course have to bear the highest increase, but unfortunately, everyone will have to contribute more.
-F2: With this position, you’re barely pleasing anyone. Parties on the right attack you for wanting to raise taxes so much, and parties on the left accuse you of being indifferent towards poorer people.
-A3: We need to raise taxes on the rich a bit, yes. However, we also need to modify the clause in our constitution that disallows too much government borrowing. It should be possible to take out loans for investments in important projects.
-F3: A lot of voters follow your logic. However, since a 2/3rds majority is needed to modify the constitution, others wonder if there is any way for you to actually achieve what you want here.
-A4: Well, people are right, all the things we promised to do to combat climate change are very expensive. It’s more important to not raise taxes though, so unfortunately, we have to abandon a lot of those promises and only do what’s affordable with current state income.
-F4: Your intentions to move towards the middle are good, but giving up your core promise to be the party that actually wants to invest money to do something about climate change will cost you a lot of support.
+Q23  For the first time in German history, a Green Party candidate has been invited to the chancellor debate. In another first, the debate will be three-way, between you, Olaf Scholz of the SPD and Armin Laschet of the CDU. Who do you want to focus on?
+A1: Laschet seems like the more dangerous opponent, so I will focus on him.
+F1: Let’s hope you can convince voters that you are better chancellor material than him.
+A2: It will be easier to win over voters from Baerbock, so focusing on her is better.
+F2: Let’s hope you can convince some potential Green voters to switch to you.
+A3: I want to present myself as calm and composed. Let them attack me and each other, I won’t be baited.
+F3: This fits with your persona - let’s hope it’s a good strategy for this debate.
+A4: Actually, I don’t want to give them an opportunity to attack me. I won’t participate in this Triell!
+F4: What are you doing? By staying away, this makes it seem to watchers like the race for chancellor is only between Baerbock and Laschet.
 
-Q21: The election is in about a month now, and as usual, there will most probably be a coalition government afterwards. Which parties do you want to talk to?
-A1: The party we have the most overlap with is the SPD - therefore, I want to form a government with them.
-F1: Your programs share a lot of similarities, but it’s improbable that you’ll get a majority together. People also notice your silence on the Left party.
-A2: I want to categorically rule out a coalition with the Left party, they are just too far from us on foreign policy. Apart from that, we’ll talk to all democratic parties.
-F2: This takes away an avenue of attack against you, though you might regret it during the coalition talks.
-A3: The only realistic path to a true left-wing government is with the SPD and the Left party. My favourite coalition would be with those two, I’m certain we can find compromises on contentious topics.
-F3: The Left party and more leftwing voters welcome this statement, but you’ve confirmed the worst fears of many moderates. It’s also unclear what compromise you can find on foreign policy with a party that wants to exit NATO.
-A4: In Schleswig Holstein, I’ve been part of a successful Jamaica coalition. I want a government that takes climate change seriously, but I have nothing against governing with those two parties.
-F4: The Left party criticizes you for preferring right-wing parties to them, and some left-wing voters agree. This eases the concerns of many moderates though and blunts the impact of an anti-Red-Red-Green scare campaign.
-
-Q22: Pictures of the disastrous retreat of NATO troops from Afghanistan go around the globe. The government is sharply criticised for its botched evacuation. What is your opinion on the matter?
-A1: Both parties in government, the CDU/CSU and the SPD screwed up here. No matter how much they’re blaming each other, the voters will see that we need to move on from both of them.
-F1: With so much mudslinging going on, voters were looking for something more positive - though the government parties still get hurt.
-A2: Right now, it’s important that we don’t instrumentalize this topic for the election, but work to find concrete solutions to help the people. We called for an evacuation last month already, and we need to do something now before it’s too late.
-F2: Politicians of the SPD and CDU are accusing each other of being responsible for the failure, while you manage to look pragmatic and sensible.
-A3: We need to evacuate as many people from Afghanistan as possible, especially people who cooperated with our troops, journalists and women’s rights activists. They are very endangered after the Taliban takeover.
-F3: It’s a good thing to advocate for taking in refugees since the type of person that considers voting for you is in favour of that. It also differentiates you from anti-refugee Söder. However, it’s unclear how you want to actually save those people.
-A4: The Green Party is a party of pacifism, and we’ve been against this war in Afghanistan from the start. While the pictures are tragic and we need to do what we can to help, this whole episode shows why we shouldn’t get involved in these types of conflicts.
-F4: The Green Party voted for the Afghanistan mission and was even part of the government in 2001. This statement by you is attacked as both unproductive and factually wrong.
-
-Q23: September 2021: For the first time in German history, a Green Party candidate has been invited to the chancellor debate. In another first, the debate will be three-way, between you, Olaf Scholz of the SPD and Markus Söder of the CSU. Who do you want to focus on?
-A1: It will be easier to win over SPD voters, so I will focus on attacking Scholz.
-F1: Let’s see how this goes, hopefully, you can peel off some left-leaning voters.
-A2: To win this election, I need to take some voters from Söder. I will focus my attacks on him.
-F2: Let’s see how this goes, hopefully you can weaken his position.
-A3: Actually, I don’t want to attack anyone, I want to remain positive and above the fray.
-F3: Hopefully, the German people will appreciate your positive strategy.
-A4: I’ve been invited to this debate, yes, but I doubt the moderators will give me a fair shake. I refuse to participate!
-F4: No one understands why you refuse this historic opportunity. This makes it look to people like the chancellor race being between Scholz and Söder now.
-
-Q24: During the Triell, you decided to focus on Olaf Scholz, vice chancellor and candidate of the SPD. What do you want to attack him on?
-A1: He’s the incumbent vice chancellor and has been a part of the Grand coalition for the last four years. People who want real change in this country have to look elsewhere!
-F1: Overall, you are right, but Scholz points out that he doesn’t want to enter a new Grand coalition and his program contains many new ideas for Germany. Overall, you and Söder tie the debate.
-A2: I want to hit him on his scandals, both as finance minister and earlier. He mishandled the Wirecard collapse, was involved in the cum-ex banking scandal and had a disastrous response to the G20 meeting when he was mayor of Hamburg.
-F2: These are damaging attacks that really undermine his image as the most competent candidate. Overall, you win the debate.
-A3: He’s just not as leftwing as he pretends to be now, not on climate change, not on social security. He’s always been known as a moderate, I’ll attack him on not being serious about all the change promised in the SPD program.
-F3: Ah, leftist infighting, a classic. He and you argue a lot about who has the more ambitious, yet realistic, proposals and in the end, Söder wins the debate.
+Q24: During the Triell, you decided on Armin Laschet, Minister-President of North Rhine-Westphalia and chancellor candidate of the CDU. How do you want to attack him?
+A1: His gaffe during the visit after the flooding and some strange statements he’s made show that he just doesn’t have the temperament to be chancellor. I’m much better suited to lead this country.
+F1: You definitely are seen as the better potential chancellor than him by most voters, though some would have liked you to talk more about policy. Overall, you still win the debate.
+A2: The proposals of his party are just not what this country needs. Be it taxes, minimum wage or Hartz IV, the SPD has the better program for the common man.
+F2: This leads to some heated exchanges, with Baerbock jumping in on your side. Laschet tries to present himself as the voice of reason, but in the end, you and Baerbock tie the debate.
+A3: Laschet has no real solutions for climate change. Especially after the flooding in the summer, it’s irresponsible to do as little as he proposes.
+F3: It’s not a bad avenue for attack, though Baerbock benefits more from the climate focus of the debate than you. In the end, she’s seen as the winner.
 A4: Actually, I’ve changed my mind. I’m just going to present myself as calm and above petty attacks.
-F4: Since you haven’t prepared for this strategy, this doesn’t help you. Söder is seen as the winner of the debate.
+F4: While you haven’t prepared for this strategy, this calm demeanour is second nature to you. You manage to win the debate.
 
-Q25: It’s the final days of the campaign now, the election will happen very soon. With whom do you want to campaign in these last few days?
-A1: Luisa Neubauer, the most famous German Fridays For Future activist, is actually a member of the Green Party. I want to hold some campaign events with her.
-F1: It takes a lot of convincing to get her to appear with you, but this should help energize the youth vote. Good luck tonight!
-A2: Annalena Baerbock has had some issues during the campaign, but she is the co-party leader and an important figure within the party. I want to campaign with her.
-F2: You energize your core voters and your party in general but don’t appeal to any specific group by campaigning with her. Good luck tonight!
-A3: There will be state elections in Berlin and Mecklenburg-Vorpommern parallel to the federal elections. I want to campaign with Bettina Jarasch in Berlin to help make her the second Green head of state government!
-F3: While this might not be the best option for you electorally, hopefully, you can help her get over the line and finish first. Good luck tonight!
-A4: Winfried Kretschmann is the only Green Minister-President and a very important figure of the moderate wing of our party. I want to campaign with him.
-F4: He’s popular with both moderates and in Baden-Württemberg, so that should especially help you there. Good luck tonight!
+Q25: It’s the final few days of the campaign now, with election night just around the corner. Who do you want to campaign with during these last few days?
+A1: Franziska Giffey and Manuela Schwesig are trying to win the state elections for the SPD in Berlin and Mecklenburg-Vorpommern respectively. I want to campaign with them to give them a boost!
+F1: While this might not be the most impactful move for you, they are grateful for the help. Good luck tonight!
+A2: Kevin Kühnert, former leader of our youth wing, is very popular among young and leftwing people. I want to campaign with him.
+F2: Hopefully, he can help you with these demographics. Good luck tonight!
+A3: I want to campaign with the leaders of our party, Saskia Esken and Norbert Walter-Borjans. To win this, the whole SPD has to come together!
+F3: While they are not the most charismatic speakers, this focus on party unity will likely help you boost turnout. Good luck tonight!
+A4: It’s a bit unconventional, but despite being from a different party, I share many similarities with the outgoing chancellor Angela Merkel. She won’t campaign for me, but let’s try to get to appear her at an event with me.
+F4: Observers have noticed similarities between you in the past, but Merkel is still a loyal CDU woman and would rather campaign with Laschet than meet with you. Still, good luck tonight!
 
-Alternative zu Q8 falls Social Media in Frage 1
-Q26: At first, your return to social media went well, but now you are criticized for a tweet in which you compare Söder to a third-world strongman. This is not the first time you’ve made a bizarre tweet - some years ago, you had implied that Bavaria is a one-party state and Thuringia is not democratic. How do you want to react?
-A1: It was a mistake to return to social media - I apologize for the remark and delete my accounts, this time for good.
-F1: Deleting your accounts so soon after returning makes you seem indecisive - some voters also question if you’re the right person to represent Germany if you can’t stop yourself from making these statements.
-A2: First, I want to apologize to Markus Söder, I should have chosen my words better. From now on, I want my twitter account to be run by a team that double-checks my tweets.
-F2: Söder accepts the apology, but this still hurts you. Let’s hope that from now on, you will be stopped before you tweet out something like this.
-A3: People keep taking my words out of context - they might sound bad if you only here a half-sentence, but overall, I stand by the gist of what I said.
-F3: This reaction is not seen as appropriate by most people, and CDU/CSU politicians attack you harshly over your defamatory comments in the coming days. Your party isn’t amused either and convinces you to have a team check all your tweets before you publish them.
-A4: I recognize that my tweet was inappropriate and apologize for it. However, in this day and age, you need social media, and I will keep using it.
-F4: While your apology is accepted, the party is not thrilled about you potentially ruining the campaign with your tweets. After some heated discussion, you agree to a team that checks all your tweets before you publish them.
+Alternative zu Q2 falls linkeste Antwort in Q1
+Q26: November 2020: One condition the SPD had for entering the Grand coalition was that there would be an evaluation at half-time. Since even you are expressing a desire for more left-wing policies, there are some speculations that the Grand coalition might not survive. As Vice Chancellor, you can help shape this report - what do you want to put in?
+A1: Despite some misgivings, we can be satisfied overall. We’ve finished about a third of the projects we wanted to do according to the coalition agreement and a lot more are currently on the way. We are on a good path.
+F1: The coalition holds, your reassurance helps with stability. However, after the way you ran the leadership campaign, this is seen as a flip-flop by you.
+A2: We have made progress on a lot of projects and want to continue the coalition until the end of the term, it would be irresponsible to let the government collapse now. However, after the next election, the country needs a new government!
+F2: Pundits notice your focus on stability. In the end, everyone agrees that it’s better to not let the government collapse, though there’s little appetite to continue this coalition longer than at all necessary.
+A3: Frankly, we can’t be satisfied with the last one and a half years. It’s simply not possible to pass what we need while governing with the CDU/CSU and I don’t know if it’s a good idea to continue this coalition.
+F3: Some had feared this after your tack to the left during the leadership challenge. For a few days, it looks like the coalition is over, with CDU and SPD accusing each other of being responsible. In the end, a cabinet reshuffle and some extra agreements save the coalition, though the whole affair was not popular with most voters.
+A4: I am almost completely satisfied, yes. We are good governing partners and I’m looking forward to further cooperation - perhaps also after the next election.
+F4: It’s unclear what to make of this - is this a ploy to save the coalition or are you really this much of a flip-flopper? In any case, the government holds, but your standing in the party does not improve. In fact, you’ve damaged your image enough that the party doesn’t even consider you as a chancellor candidate and nominates Rolf Mützenich.
 
-Q27: During the Triell, you decided to focus on Markus Söder, Minister-President of Bavaria and chancellor candidate of the CDU/CSU. What do you want to attack him on?
-A1: He’s a political opportunist whose position changes like a flag in the wind. Germany needs a chancellor with strong values, not someone like him!
-F1: Söder fights back passionately against this attack, claiming his positions evolve when new information comes along. Overall, he and Scholz tie the debate.
-A2: The program of his party regarding climate change is very unambitious. In the past, the CDU/CSU has not done enough to combat climate change, and while he likes to present himself as a fighter for climate change, it’s all rhetoric and no substance.
-F2: He hits right back, calling your proposals unaffordable and going too far, compared to his realistic proposals. Overall, he gets the better of you and wins the debate.
-A3: For the last 16 years, this country has been governed by the CDU/CSU, and they are out of ideas on what to do in government. This country needs change and Söder is not the outsider he claims to be, but a part of the establishment.
-F3: A convincing argument, especially considering that many voters want change. However, Söder presents himself as more than just a continuation of the Merkel years. Overall, you and he tie the debate.
+Alternative to 7 if between left and moderate
+Q27: Soon, the election campaign is going to begin properly. The CDU lost some support due to some of their MPs selling overpriced medical masks, but unfortunately, the SPD barely profited from that. In the run-up to the campaign, you’ve vacillated between leaning into your moderate image and appealing to the left wing. What’s your strategy for the campaign?
+A1: I needed to triangulate to become chancellor candidate - now that the campaign is starting, I’ll fully return to my image as moderate
+F1: You are a good fit personally for this strategy, but voters notice some back-and-forth in your rhetoric in the last year. Hopefully, they’ll still trust you as the moderate alternative!
+A2: This was deliberate, and I want to continue this strategy. Broadly, I want to lean into my personal moderation and similar political style to Merkel. However, I will also emphasize some of the more leftist points in our program.
+F2: Voters like consistency, so your back-and-forth in the last year is not appreciated by them. However, this strategy itself is sound, let’s hope it works out!
+A3: I’ve leaned into it a bit before, but now it’s time to fully move to the left. I will abandon my moderate image fully to run a leftist campaign.
+F3: This is quite a big turnaround for you, however, there it doesn’t come as a total surprise after your behaviour in the last year. Still, voters are apprehensive if you’re actually serious about this.
+
+Alternative to 7 if left
+Q28: Soon, the election campaign is going to begin properly. The CDU lost some support due to some of their MPs selling overpriced medical masks, but unfortunately, the SPD barely profited from that. In the runup to the campaign, you’ve been surprisingly leftist with your rhetoric - is this something you want to keep up?
+A1: That was something I had to do to win the candidacy - now, I want to return to my previous image of a sensible moderate.
+F1: While this is fitting with your general image, this clashes with your rhetoric in the past year. Voters and the party are confused by your behaviour.
+A2: Partly, I want to keep this up, by leaning into our more leftist policy proposals. However, I also want to emphasize my personal moderate style and cast myself as a politician similar to Merkel.
+F2: The strategy you employ here is decent - it’s not clear if voters still see you as similar to Merkel after your leftist turn in the last year.
+A3:Of course! Time and time again, more moderate SPD candidates have lost against Merkel. To win, I want to present myself as the true, leftwing alternative for this country!
+F3: There was some chatter if this “New Scholz” would stay around for the general election campaign, and it seems like he does! Voters aren’t entirely surprised by this after the last year, but this leftist turn is still not entirely consistent with your image.
+
+Alternative zu Q14 falls Emails übergeben
+Q29: June 2021: The parliamentary commission investigating Wirecard has finished its job and created a report. You didn’t get clearly implicated, but with the help of the E-Mails you turned over, it’s undeniable that you and your ministry made mistakes. During the debate about this in the Bundestag, how do you want to present yourself?
+A1: All this will blow over in a couple of days. I’ll let them criticize me, let other members of my party defend me and just wait this out.
+F1: This is simply not enough - not defending yourself makes yourself seem passive and calls for your resignation grow louder and louder. At least you’re not the only one struggling right now - Baerbock is losing a lot of popularity due to a scandal surrounding her CV and some payments.
+A2: It’s obvious that these attacks on me are nothing but a cheap political ploy. There’s no clear evidence of any wrongdoing by me and I will fight back passionately against these allegations!
+F2: Fighting back passionately like this just doesn’t fit with your style. However, it’s still better than being passive, and you manage you turn this into more of a partisan issue. At least you’re not the only one struggling right now - Baerbock is losing a lot of popularity due to a scandal surrounding her CV and some payments.
+A3: It’s obvious someone has to resign over this, and it won’t be me. Jörg Kukies, the State Secretary serving under me in the Finance Ministry will be fired over this.
+F3: It’s painful for you to let him go, but pinning the blame on him somewhat silences the voices calling for your resignation. At least you’re not the only one struggling right now - Baerbock is losing a lot of popularity due to a scandal surrounding her CV and some payments.
+
+Same text as 18, different effect if close to Greens
+Q30: After early successes, the vaccination campaign has become sluggish in recent weeks. Some politicians are going so far as to demand making the vaccine mandatory.
+A1: We need to do whatever we can to convince unvaccinated people to get the vaccine, even if that means offering a Bratwurst as a bonus when you get vaccinated. I’m against mandatory vaccinations though.
+F1: It’s unclear if such proposals will actually help the vaccination campaign, but they certainly don’t hurt.
+A2: There needs to be stronger incentives to get vaccinated. I’m advocating for making Covid tests no longer free - if the unvaccinated want to go to the restaurant for example, they’ll need to pay to get tested beforehand.
+F2: Some accuse you of wanting a rift in society between vaccinated and unvaccinated people - however, this is likely to be an efficient measure to help the ailing vaccination campaign.
+A3: I agree, if there’s not a significant uptick in vaccinations in the coming months, we need to think about making the mandatory. It’s something to look into in the coming weeks.
+F3: This is a position on the fringe and not all that popular right now.
+A4: It’s a personal decision if someone wants to get vaccinated or not. We shouldn’t discriminate against people who don’t want the vaccination and don’t waste too much money on this vaccination campaign.
+F4: Perhaps you can win over a few vaccine-sceptical Querdenker and AfD voters with a statement like this. The rest of the political spectrum is mostly unified in criticising you for this.
+
+Alternative to 19 if bad polling
+Q30: When you were nominated as chancellor candidate almost a year ago, your campaign seemed hopeless. Now, despite missteps by both of your opponents, you are still quite a bit behind. Do you have a strategy to turn this campaign around in the final weeks?
+A1: Baerbock seems like the more vulnerable opponent, and a lot of her voters are looking to a centre-left alternative to her. I will present myself as a good choice and the man who can beat Laschet to them.
+F1: This strategy is somewhat successful - the Greens lose some ground in the polls, you gain some, but many people just don’t prefer you over Baerbock despite her failings.
+A2: It seems better to go after Laschet voters - he lost some after his floofing gaffe and this is a good opportunity to remind voters that I would be a much better chancellor than him.
+F2: While some people are convinced, many CDU voters will never vote for the SPD. It doesn’t help that opinions, if you’d actually be a better chancellor than Laschet, are quite muddled.
+A3: There’s no need to attack either of them. I will simply keep doing what I’m doing, and show myself as the calm, competent alternative, and voters will come to me.
+F3: Sitting back and doing nothing is not enough in this situation. Voters have their misgivings about Baerbock and Laschet, but they’re not enthusiastic about you either.
+A4: Both Laschet and Baerbock have shown their incompetence in the past weeks and frankly disqualified themselves in this race. I’ll go on the attack and will call out their failings at every opportunity.
+F4: Attacking them like this goes against your calm nature and does probably more to damage your image than theirs. Your position in the polls won’t improve if you keep this up.
+
+Q31: During the Triell, you decided on Annalena Baerbock, party leader and chancellor candidate of the Green Party. How do you want to attack her?
+A1: She’s young, inexperienced and had a slew of scandals this summer. The German people need a better leader than her.
+F1: Some find these attacks effective, but others accuse you of being condescending and sexist. Overall, you and Laschet tie the debate.
+A2: Her party's proposals on social issues like the minimum wage and Hartz IV sound nice, but do you trust the Greens to deliver them? Especially in a coalition with the CDU?
+F2: This leads to the two of you arguing about minute differences in your plans, while Laschet gets to present himself as an alternative and voice of reason. He wins the debate.
+A3: The Green Party is nothing more than a single-issue party against climate change. While it’s an important issue, there are other important topics that her party doesn’t care about enough.
+F3: Baerbock responds to this by both listing her other policies and emphasizing the central importance of fighting climate change. It’s quite effective for her and she wins the debate.
 A4: Actually, I’ve changed my mind. I’m just going to present myself as calm and above petty attacks.
-F4: Since you haven’t prepared for this strategy, this doesn’t help you. Söder is seen as the winner of the debate.
+F4: While you haven’t prepared for this strategy, this calm demeanour is second nature to you. You manage to win the debate.
 
-Q28: During the Triell, you decided to focus on presenting your case to the German people without too strong attacks. What are your main points?
-A1: The CDU/CSU has been in government for 16 years, the SPD for 8. This country needs change, and I’m a fresh face that can deliver it, unlike the other two candidates.
-F1: Some voters prefer stability, but many want to see some change in this country. Overall, you win this debate.
-A2: There is one issue that really matters in this election: Climate change! I’m the only one to have a program that’s ambitious enough to truly make a difference.
-F2: While you put out a passionate plea, Scholz and especially Söder hit you hard on some of your more unpopular proposals. Overall, Söder is the winner of the debate.
-A3: I’d like to focus on our social policies, like a higher minimum wage, higher taxes for the rich and a reform of the Hartz IV system.
-F3: You and Scholz have similar positions here, allowing Söder to get in effective attacks and differentiate himself. Overall, Söder wins the debate.
+Q32: During the Triell, you’ve decided to present yourself as calm and collected without focusing on an opponent. How do you want to do that?
+A1: I’m going to explicitly present myself as the natural continuation of the Merkel years. While we are from different parties, we are both moderate and known for our calmness.
+F1: A lot of people want something new, but many are also looking for stability. Baerbock presents herself as the fresher alternative, but Laschet is unable to counter. Overall, you and Baerbock tie the debate.
+A2: Leaning into my persona will be enough. I’ll just answer all of the questions in a calm way, won’t let myself get baited into heated exchanges and subtly emphasise my experience.
+F2: For some reason, voters in Germany really like this style of politics. It’s enough to carry you to victory.
+A3: The Social Democrats have always been the party fighting for the common man. I’ll put my emphasis on that, to contrast both against the CDU’s business interest and the Green Party’s elitism.
+F3: This goes over somewhat alright, though a lot of the working class has left your party for the populist fringes and is unlikely to be swayed by this debate. Overall, it’s a tie between you and Laschet.
 A4: Actually, screw this! I will attack them both whenever an opportunity presents itself. That way, I can sharpen my profile and show myself as the most competent candidate.
-F4: You come across as unprepared and overly aggressive. This doesn’t help you at all and overall, Söder wins the debate.
+F4: You come across as unprepared and weirdly aggressive compared to your usual demeanour. This doesn’t help you at all and overall, Laschet and Baerbock tie the debate.
+
+
+Cut content for now
+In the past, pensions have been a main topic of the SPD. Just this year, a new law that was passed by the Grand coalition came into effect, guaranteeing a certain level of pensions for people who have worked long and receive little in pensions. What do you want to emphasize regarding pensions?
+A1: This guaranteed pension level is a great achievement of the SPD. It shows that even in a Grand coalition, we are fighting for the little guy and achieving meaningful change.
+F1: The law is fairly popular and it certainly helps to talk about your achievements during the last for years. People tend to forget what you actually do as the junior partner in this coalition.
+A2: Right now, the usual age for getting pensions is 67. However, due to higher life expectancy and fewer young people, we need to raise it to 68 or 69.
+F2: Few proposals are as unpopular as raising the entry age for pensions. Even though some economists agree this is necessary in the long run, it’s not something you want to say before an election.
+A3: Our pension system needs to be streamlined. State employees, self-employed people and other exceptions should all use the same government pension insurance as normal employees instead of the complicated system we have now.
+F3: This is a proposal that a lot of people agree with, but it’s not exactly something that makes the masses enthusiastic.
+A4: We have to resist any impulse to raise the entry age for pensions beyond 67, guarantee the level of pensions or even raise it. The poverty of some pensioners is also something that needs to be combatted relentlessly.
+F4: You are perhaps not the right man to sell this program. Not increasing the pension age and higher pensions are popular, but it’s unclear how this can be financed - and since you’ve been a proponent of fiscal stability in the past, this makes you look indecisive.
+
+
+
 
