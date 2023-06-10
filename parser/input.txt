@@ -139,7 +139,7 @@ F3: Many are struggling to understand this move - he was a close advisor to you,
 Q15: Since 2005, long-time unemployed people in Germany get money from the state at the subsistence level, the so-called Hartz IV. However, they receive less money if they are not looking for a job. Many people are not happy with this system - what does the SPD want to change?
 A1: Hartz IV has to be replaced by something else we call citizen money. There will be fewer sanctions for people not actively looking for work and less bureaucracy.
 F1: These proposals go over well enough, many are glad the the SPD is finally redy to move on from the Hartz IV system it created. However, some people don’t like the lack of concrete numbers in this proposal.
-A2: The whole system needs to be reformed from the ground up. There should be no more sanctions for people not actively lookinf for work, at least 100€ more paid out per person per month and the burocracy of the system will be significantly reduced.
+A2: The whole system needs to be reformed from the ground up. There should be no more sanctions for people not actively looking for work, at least 100€ more paid out per person per month and the burocracy of the system will be significantly reduced.
 F2: You’re promising a lot here - perhaps even too much, as this comes under fire from the CDU and even some in your own party that helped establish the Hartz IV system.
 A3: The SPD created the Hartz IV system, and while there are some parts of it that should be tweaked, we stand by it overall.
 F3: It’s true that the system was created by your party, but it’s increasingly unpopular both within the party and with voters in general. Other left-wing parties win over voters looking for reform of the system now.
@@ -179,7 +179,7 @@ F4: Perhaps you can win over a few vaccine-sceptical Querdenker and AfD voters w
 Q19: August 2021: When you were nominated as chancellor candidate almost a year ago, your campaign seemed hopeless. Now, after missteps by both of your opponents, your position in the polls has improved significantly, while both the Greens and the CDU struggle. How do you want to capitalize on this?
 A1: Baerbock seems like the more vulnerable opponent, and a lot of her voters are looking to a centre-left alternative to her. I will present myself as a good choice and the man who can beat Laschet to them.
 F1: This strategy is a success - the Greens keep collapsing and you keep rising, making a chancellor Scholz after the election a realistic prospect.
-A2: It seems better to go after Laschet voters - he lost some after his floofing gaffe and this is a good opportunity to remind voters that I would be a much better chancellor than him.
+A2: It seems better to go after Laschet voters - he lost some after his flooding gaffe and this is a good opportunity to remind voters that I would be a much better chancellor than him.
 F2: While some people are convinced, many CDU voters will never vote for the SPD. You pick up some and get some Green voters regardless of your strategy.
 A3: There’s no need to attack either of them. I will simply keep doing what I’m doing, show myself as the calm, competent alternative, and voters will come to me.
 F3: With both other chancellor candidates floundering so much, there’s not much more you have to do than wait and let more and more voters flock to you.
@@ -284,16 +284,6 @@ F2: Fighting back passionately like this just doesn’t fit with your style. How
 A3: It’s obvious someone has to resign over this, and it won’t be me. Jörg Kukies, the State Secretary serving under me in the Finance Ministry will be fired over this.
 F3: It’s painful for you to let him go, but pinning the blame on him somewhat silences the voices calling for your resignation. At least you’re not the only one struggling right now - Baerbock is losing a lot of popularity due to a scandal surrounding her CV and some payments.
 
-Same text as 18, different effect if close to Greens
-Q30: After early successes, the vaccination campaign has become sluggish in recent weeks. Some politicians are going so far as to demand making the vaccine mandatory.
-A1: We need to do whatever we can to convince unvaccinated people to get the vaccine, even if that means offering a Bratwurst as a bonus when you get vaccinated. I’m against mandatory vaccinations though.
-F1: It’s unclear if such proposals will actually help the vaccination campaign, but they certainly don’t hurt.
-A2: There needs to be stronger incentives to get vaccinated. I’m advocating for making Covid tests no longer free - if the unvaccinated want to go to the restaurant for example, they’ll need to pay to get tested beforehand.
-F2: Some accuse you of wanting a rift in society between vaccinated and unvaccinated people - however, this is likely to be an efficient measure to help the ailing vaccination campaign.
-A3: I agree, if there’s not a significant uptick in vaccinations in the coming months, we need to think about making the mandatory. It’s something to look into in the coming weeks.
-F3: This is a position on the fringe and not all that popular right now.
-A4: It’s a personal decision if someone wants to get vaccinated or not. We shouldn’t discriminate against people who don’t want the vaccination and don’t waste too much money on this vaccination campaign.
-F4: Perhaps you can win over a few vaccine-sceptical Querdenker and AfD voters with a statement like this. The rest of the political spectrum is mostly unified in criticising you for this.
 
 Alternative to 19 if bad polling
 Q30: When you were nominated as chancellor candidate almost a year ago, your campaign seemed hopeless. Now, despite missteps by both of your opponents, you are still quite a bit behind. Do you have a strategy to turn this campaign around in the final weeks?
