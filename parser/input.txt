@@ -62,7 +62,7 @@ F4: Financial aid was popular, and there aren’t many people who are worried ab
 
 Q7: Soon, the election campaign is going to begin properly. The CDU lost some support due to some of their MPs selling overpriced medical masks, but unfortunately, the SPD barely profited from that. In the run-up to the campaign, you’ve leaned into your moderate image - is that something you want to continue?
 A1: Yes - there are many voters in the centre of the political spectrum who are looking for an alternative to the CDU. I will present myself as the option for them.
-F1: You are a good fit personally for this strategy and this is consistent with your history. Let’s hope it’s what voters are looking for!
+F1: You are a good fit personally for this strategy and this is consistent with your history. Let’s hope it’s what voters are looking for. Your party leaders are not thrilled about this approach, so their support is tepid.
 A2: Broadly, I want to lean into my personal moderation and similar political style to Merkel. However, I will also emphasize some of the more leftist points in our program.
 F2: With this strategy, you're trying to have the best of both worlds, and it’s mostly working. Voters both see you as the best successor to Merkel and hope you can deliver some of the more leftist promises.
 A3: Actually, it seems that the country wants a more leftist government than we’ve had in the past decade. Therefore, I’ll abandon my moderate image and run a more leftist campaign.
@@ -272,8 +272,8 @@ A1: That was something I had to do to win the candidacy - now, I want to return 
 F1: While this is fitting with your general image, this clashes with your rhetoric in the past year. Voters and the party are confused by your behaviour.
 A2: Partly, I want to keep this up, by leaning into our more leftist policy proposals. However, I also want to emphasize my personal moderate style and cast myself as a politician similar to Merkel.
 F2: The strategy you employ here is decent - it’s not clear if voters still see you as similar to Merkel after your leftist turn in the last year.
-A3:Of course! Time and time again, more moderate SPD candidates have lost against Merkel. To win, I want to present myself as the true, leftwing alternative for this country!
-F3: There was some chatter if this “New Scholz” would stay around for the general election campaign, and it seems like he does! Voters aren’t entirely surprised by this after the last year, but this leftist turn is still not entirely consistent with your image.
+A3: Of course! Time and time again, more moderate SPD candidates have lost against Merkel. To win, I want to present myself as the true, leftwing alternative for this country!
+F3: There was some chatter if this “New Scholz” would stay around for the general election campaign, and it seems like he does! Voters aren’t entirely surprised by this after the last year, but this leftist turn is still not entirely consistent with your image. Still, the party, especially the leaders, like this and offer you additional support for the campaign.
 
 Alternative zu Q14 falls Emails übergeben
 Q29: June 2021: The parliamentary commission investigating Wirecard has finished its job and created a report. You didn’t get clearly implicated, but with the help of the E-Mails you turned over, it’s undeniable that you and your ministry made mistakes. During the debate about this in the Bundestag, how do you want to present yourself?
