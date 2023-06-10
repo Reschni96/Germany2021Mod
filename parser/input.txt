@@ -8,7 +8,7 @@ F2: With this pitch, you make it into the second round, but then lose to Saskia 
 A3: I’m the candidate in this election who stands for the continuation of the Grand coalition. While it’s not popular with everyone, there’s a lot we have achieved together, and I believe it’s in the best interest of the SPD to keep doing what we’re doing.
 F3: You’re completely out of tune with the mood of the party and lose in the first round. When the chancellor candidate is chosen eventually, the party nominates Mützenich over you. You have to watch from the sidelines as he runs the election campaign.
 A4: I’m the incumbent Vice Chancellor and Finance Minister of Germany - none of the other candidates has my name recognition. I won’t focus on policy specifics and trust that being the most well-known candidate will carry me to victory.
-F4: The strategy somewhat works in the first round, but in the second, you clearly lose o Saskia Esken and Norbert Walter-Borjans. You keep your job as Vice Chancellor and Finance Minister, though your position within the party is weakened.
+F4: The strategy somewhat works in the first round, but in the second, you clearly lose to Saskia Esken and Norbert Walter-Borjans. You keep your job as Vice Chancellor and Finance Minister, though your position within the party so weakened that you aren’t
 
 Q2: November 2019: One condition the SPD had for entering the Grand coalition was that there would be an evaluation at half-time. The time for that is now - as Vice Chancellor, you have some input. Are you satisfied with what the Grand coalition has achieved so far?
 A1: Overall, we are satisfied. We’ve finished about a third of the projects we wanted to do according to the coalition agreement and a lot more are currently on the way. We are on a good path.
@@ -24,7 +24,7 @@ Q3: July 2020: It’s more than a year until the federal election, though there 
 A1: I see the writing on the wall -  I lost the leadership election to two politicians that are more leftwing than me. Therefore, I’ll promise to run a more leftwing campaign when nominated as chancellor candidate.
 F1: The leadership seems convinced by this - they nominate you as chancellor candidate, though they expect you to run a left-wing campaign now. Hopefully, this doesn’t clash with your previous image too much.
 A2: They know who I am and what I stand for. While I recognize that the left wing of the party is a significant force, I won’t fundamentally change who I am and run a campaign that’s not too leftist.
-F2: While there is lots of complaining, eventually, you are chosen as the nominee. Your relationship with the party leadership is somewhat damaged, but at least you are free to run a campaign that’s in tune with your persona.
+F2: While there is some complaining, eventually, you are chosen as the nominee. Your relationship with the party leadership is somewhat damaged, but at least you are free to run a campaign that’s in tune with your persona.
 A3: They know who I am and what I stand for. While I recognize that the left wing of the party is a significant force, I won’t fundamentally change who I am and run a campaign that’s not too leftist.
 F3: In the end, this is just not enough for the party leadership. After much consideration, they nominate the more left-wing Mützenich, sidelining you for the election campaign.
 A4: I’m the most electable candidate, without me, the situation for the SPD will be even more hopeless than it already is. If we want to have an even small chance at winning, they have to nominate me, ideology be damned.
@@ -54,7 +54,7 @@ Q6: March 2021: During the winter, the country was gripped by the Covid pandemic
 A1: During the winter, the lockdowns were needed, and we have to be careful not to open up to quickly. Our opening strategy and vaccination campaign should make it possible for people to go to beer gardens in the summer.
 F1: Most people had enough of lockdowns and like this promise - however, you’re not really differentiating yourself with an answer like this.
 A2: I want to use this as an opportunity to attack Laschet, the party leader of the CDU. His proposed “bridge lockdown” is confusing and North Rhine-Westphalia, the state governed by him, is not doing enough to slow down the spread.
-F2: Many agree that he didn’t handle the pandemic in a good way in the past few weeks, so this is a good way to attack him. Söder, the other potential CDU candidate, complains about your ‘smurfy grin’ during a meeting between the federal and state governments.
+F2: Many agree that he didn’t handle the pandemic in a good way in the past few weeks, so this is a good way to attack him. Söder, the other potential CDU/CSU candidate, complains about your ‘smurfy grin’ during a meeting between the federal and state governments.
 A3: As Finance Minister, I have been responsible for the help our economy received during these difficult times. Now, I will call for additional financial help for people affected by the lockdowns. The culture industry - museums, theatres, cinemas and the like - especially need help.
 F3: Your measures as Finance Minister have generally been popular during the crisis - it helps to remind people that you helped guide the country through this.
 A4: It’s fiscally irresponsible to give out even more government aid than we already have. I’m worried about the national debt and inflation down the line - the aid we have already given out is enough.
@@ -80,13 +80,13 @@ F4: What are you doing? The committee had no proof that you were responsible - n
 
 Q9: The CDU/CSU has selected Armin Laschet as their chancellor candidate after a bruising nomination battle. Meanwhile, the Green Party selected Annalena Baerbock in a much smoother selection. Both of them are way ahead of you in the polls - what’s your strategy regarding them?
 A1: Let’s be honest, neither of them should become chancellor. Laschet simply doesn’t have the temperament to lead the country, Baerbock is too young and inexperienced. I’m a more capable leader.
-F1: Voters tend to agree and would vote for you if they could directly elect the chancellor. Sadly, they can’t, and many don’t seem to be convinced that voting for the SPD is the right move yet.
+F1: Voters tend to agree and would vote for you if they could directly elect the chancellor. Sadly, they can’t, and many don’t seem to be convinced that voting for the SPD is the right move yet. Baerbock, meanwhile, surges at the expense of Laschet.
 A2: This is a good opportunity to go on the attack. Specifically, I want to call out Laschet - not even his own party is fully behind him and his recent Covid strategy in North Rhine-Westphalia was embarrassing.
-F2: These are some stinging attacks, Laschet’s popularity is falling down even more. Unfortunately, it’s unclear if you or the Greens benefit from it.
-A3: This is a good opportunity to go on the attack. Specifically, I want to call out Baerbock. She has never been part of the federal or even a state government before. This country needs a steady hand, not someone as unproven as her.
-F3: A lot of voters want change and a breath of fresh air. Others like stability though and are convinced by this - hopefully, you are their second choice.
+F2: These are some stinging attacks, Laschet’s popularity is falling down even more. Unfortunately, it’s unclear if you or the Greens benefit from it - Baerbock is surging at Laschet’s expense in any case right now.
+A3: This is a good opportunity to go on the attack. Specifically, I want to call out Baerbock. She has never been part of the federal or even a state government before. This country needs a steady hand, not someone as unproven as her. Despite your attacks, she keeps surging, at Laschet’s expense.
+F3: A lot of voters want change and a breath of fresh air. Others like stability though and are convinced by this - hopefully, you are their second choice behind Baerbock.
 A4: I want to congratulate both of them on getting nominated. I’m looking forward to a fair election campaign between the three of us!
-F4: Taking the high road neither helps nor hurts you much here. Some people make fun of you for calling this a three-way race, but you have enough time to prove them wrong.
+F4: Taking the high road neither really helps nor hurts you much here. Some people make fun of you for calling this a three-way race, but you have enough time to prove them wrong. To close the gap, you should probably be a bit more forceful though. Baerbock, meanwhile, surges at the expense of Laschet.
 
 Q10: A topic that comes up from time to time during this election season is the relationship with both Nato and Russia. Gerhard Schröder, former chancellor and SPD member, is criticized for his close ties to Putin. Do you have anything to say about this?
 A1: The SPD is committed to NATO, which guarantees the security of Europe. We also want to strengthen our cooperation with other European countries in military questions, especially France.
@@ -112,7 +112,7 @@ Q12: Tax policy is an important topic in every election and this one is no excep
 A1: There need to be some corrections with our taxation system - higher income earners need to pay more, while low income should have to pay less. We shouldn’t change anything too radical though.
 F1: This is a position that is broadly acceptable to most moderates and leftists alike. It’s not particularly inspiring though.
 A2: Some minor adjustments are needed, but we don’t want to rock the boat here. Overall, taxes for the rich will be raised a bit to finance additional investments and some systems like the Soli should be reworked.
-F2: With a program that shows so little ambition, you get attacked by the more leftwing parties and parts of the SPD. Perhaps moderates can make up for this though?
+F2: With a program that shows so little ambition, you get attacked by the more leftwing parties and parts of the SPD itself. Perhaps moderates can make up for this though?
 A3: A lot of these other programs, especially the ones from the CDU and FDP, would make the state get way less money in taxes. Since we need both investments in the future and fiscal stability, we can’t lower taxes like they promise. Instead, there needs to be a modest tax increase for high-income earners.
 F3: Your analysis is correct - however, the average voter doesn’t care about fiscal stability as much and is more concerned what the tax plans mean for them personally.
 A4: We need to do a big overhaul of our taxation system so it truly benefits the people. Much higher taxes for very high-income earners, a moderate decrease for low-income earners and a wealth tax are all needed.
@@ -122,7 +122,7 @@ Q13: Digitalization is an important topic in this election, with all parties unv
 A1: One thing we need to focus on here is digitalization in schools. We have learned some lessons during the pandemic and subsequent lockdowns. Every child needs access to the internet and an internet-capable device.
 F1: This is a good sub-topic to focus on. Just be ready for some uncomfortable questions about why the current government hasn’t done enough to prepare schools.
 A2: Access to the internet is an important right in this day and age. Every household in Germany needs access to a fast and reliable internet connection.
-F2: Of course, everyone likes fast internet (to play their favourite browser game New Campaign Trail)(probably better to remove this joke). Rural areas especially are looking forward to better connections.
+F2: Of course, everyone likes fast internet, for example, to play their favourite browser game New Campaign Trail (probably better to remove this joke). Rural areas especially are looking forward to better connections.
 A3: The dominance of big American internet companies is not good for Germany. We need to find German and European solutions and help local online shops to compete.
 F3: Many people agree with this stance - however, it’s unclear how much you can do to actually achieve this.
 A4: We need to move forward with digitalization in government agencies, schools and the administration.
@@ -193,7 +193,7 @@ A2: My favourite coalition would be Red-Green. If that has no majority, we’ll 
 F2: Since it is unlikely that Red-Green will have a majority, this isn’t saying much. Laschet needles you on your silence regarding the Left party, but this keeps your options open.
 A3: One thing is clear - this Grand coalition of the past eight years can’t continue. We need to find majorities beyond it.
 F3: The Grand coalition is unpopular and many voters want to move on from it. Hopefully, there will actually be better alternatives after the election.
-A4: While I don’t want to rule out something completely, it’S hard to see how a coalition with the Left party would work if they don’t significantly change some of their views, especially on NATO.
+A4: While I don’t want to rule out something completely, it’s hard to see how a coalition with the Left party would work if they don’t significantly change some of their views, especially on NATO.
 F4: You’re soothing the concerns of moderates and make it harder to attack you for your openness towards the Left. Let’s just hope you won’t need them to form a government later.
 
 Q21: Pictures of the disastrous retreat of NATO troops from Afghanistan go around the globe. The government is sharply criticised for its botched evacuation. What do you want to emphasize in this situation?
@@ -216,7 +216,7 @@ F3: A very unusual outburst from you. Connecting this to Wirecard hurts you and 
 A4: The problems with the specific part of the ministry that’s being investigated already started when it was still led by the CDU. I don’t have a part in this, it’s not my fault this happened.
 F4: While you are technically correct, this still sounds like an attempt to shift the blame to voters.
 
-Q23  For the first time in German history, a Green Party candidate has been invited to the chancellor debate. In another first, the debate will be three-way, between you, Olaf Scholz of the SPD and Armin Laschet of the CDU. Who do you want to focus on?
+Q23:  For the first time in German history, a Green Party candidate has been invited to the chancellor debate. In another first, the debate will be three-way, between you, Olaf Scholz of the SPD and Armin Laschet of the CDU. Who do you want to focus on?
 A1: Laschet seems like the more dangerous opponent, so I will focus on him.
 F1: Let’s hope you can convince voters that you are better chancellor material than him.
 A2: It will be easier to win over voters from Baerbock, so focusing on her is better.
