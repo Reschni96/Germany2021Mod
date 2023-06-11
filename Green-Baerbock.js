@@ -640,7 +640,7 @@ function endingOneBuilder(){
         }
         else if(playerParty===e.final_overall_results[1]){
 
-            if(playerParty.electoral_votes > e.final_overall_results[0].popular_votes){
+            if(playerParty.popular_votes > e.final_overall_results[0].popular_votes){
 
             header = "<h2>“At 10:37pm, this is still too close to call...”</h2>"
             playerPerformance = "When the first results come in, it's already clear that this will be a historic night for the Green Party. You have more than doubled its voteshare compared to the last election and might even be on track to become the strongest party in the Bundestag! After a few celebratory, but tense hours, the situation becomes muddy. While you won the popular vote, the " + firstParty.fields.last_name + " has won the most seats - probably due to overhanging mandates. Both you and " + firstPartyLeader.leaderName + " assert your right to form a government and begin coalition negotiations. It's going to be a tough fight, but you might still become the first Green chancellor."
