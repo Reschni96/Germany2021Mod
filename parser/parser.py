@@ -2,7 +2,7 @@ import re
 
 question_regex = re.compile(r'^Q(\d+):\s*')  # Regular expression to match question lines
 
-candidate = 79
+candidate = 78
 pk = 717  # Starting value for pk
 question_initial = pk
 
