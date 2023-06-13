@@ -24,104 +24,112 @@ customquote = quotes[Math.floor((Math.random() * quotes.length))]
 
 corrr="\n<h2>NEUE WAHLKAMPF-TOUR</h2><font id='wittyquote' size='4' color='white'><em>" + customquote + "</em></font>"
 
-function updateHeader() {
-  var gameHeader = document.getElementsByClassName("game_header")[0];
+var element = document.getElementById('my-invisible-element');
+if (!element) {
+    function updateHeader() {
+      var gameHeader = document.getElementsByClassName("game_header")[0];
 
-  if (gameHeader.getAttribute("id") !== "modifiedHeader") {
-    gameHeader.innerHTML = corrr;
-    gameHeader.style.backgroundColor = nct_stuff.themes[nct_stuff.selectedTheme].coloring_title;
-    gameHeader.setAttribute("id", "modifiedHeader");
-  }
-}
-
-var headerobserver = new MutationObserver(updateHeader);
-headerobserver.observe(document.documentElement, { childList: true, subtree: true });
-
-
-function updateCandidateForm() {
-  formobserver.disconnect();
-  const heading = document.querySelector("#candidate_form form h3");
-
-  if (heading) {
-    heading.textContent = "Please select your party:";
-  }
-  formobserver.observe(document.documentElement, { childList: true, subtree: true });
-}
-
-var formobserver = new MutationObserver(updateCandidateForm);
-formobserver.observe(document.documentElement, { childList: true, subtree: true });
-
-function updateRunningMateForm() {
-  runformobserver.disconnect();
-  const heading = document.querySelector("#running_mate_form form h3");
-
-  if (heading) {
-    heading.textContent = "Please select your candidate:";
-  }
-  runformobserver.observe(document.documentElement, { childList: true, subtree: true });
-}
-
-var runformobserver = new MutationObserver(updateRunningMateForm);
-runformobserver.observe(document.documentElement, { childList: true, subtree: true });
-
-function removeCandidateSummary() {
-  sumobserver.disconnect();
-  const candidateSummary = document.querySelector("#candidate_summary");
-  if (candidateSummary) {
-    const ulList = candidateSummary.querySelector("ul");
-    if (ulList) {
-      candidateSummary.removeChild(ulList);
+      if (gameHeader.getAttribute("id") !== "modifiedHeader") {
+        gameHeader.innerHTML = corrr;
+        gameHeader.style.backgroundColor = nct_stuff.themes[nct_stuff.selectedTheme].coloring_title;
+        gameHeader.setAttribute("id", "modifiedHeader");
+      }
     }
-  }
-  sumobserver.observe(document.body, {childList: true,subtree: true});
-}
 
-var sumobserver = new MutationObserver(removeCandidateSummary);
-sumobserver.observe(document.body, {childList: true,subtree: true});
-
-function modifyAllocationForm() {
-
-    alloformobserver.disconnect();
-    oppodescobserver.disconnect();
-    const form = document.querySelector('form[name="game_type_selection"]');
-        if(form){
-        const select = form.querySelector('select[name="game_type_id"]');
-
-        // change option value
-        const option = select.querySelector('option[value="1"]');
-        option.textContent = 'Default (D\'Hondt Proportional)';
+    var headerobserver = new MutationObserver(updateHeader);
+    headerobserver.observe(document.documentElement, { childList: true, subtree: true });
 
 
-        var optionToRemove = document.querySelector('option[value="2"]');
-        if (optionToRemove) {
-          optionToRemove.style.display = 'none';
+    function updateCandidateForm() {
+      formobserver.disconnect();
+      const heading = document.querySelector("#candidate_form form h3");
+
+      if (heading) {
+        heading.textContent = "Please select your party:";
+      }
+      formobserver.observe(document.documentElement, { childList: true, subtree: true });
+    }
+
+    var formobserver = new MutationObserver(updateCandidateForm);
+    formobserver.observe(document.documentElement, { childList: true, subtree: true });
+
+    function updateRunningMateForm() {
+      runformobserver.disconnect();
+      const heading = document.querySelector("#running_mate_form form h3");
+
+      if (heading) {
+        heading.textContent = "Please select your candidate:";
+      }
+      runformobserver.observe(document.documentElement, { childList: true, subtree: true });
+    }
+
+    var runformobserver = new MutationObserver(updateRunningMateForm);
+    runformobserver.observe(document.documentElement, { childList: true, subtree: true });
+
+    function removeCandidateSummary() {
+      sumobserver.disconnect();
+      const candidateSummary = document.querySelector("#candidate_summary");
+      if (candidateSummary) {
+        const ulList = candidateSummary.querySelector("ul");
+        if (ulList) {
+          candidateSummary.removeChild(ulList);
         }
+      }
+      sumobserver.observe(document.body, {childList: true,subtree: true});
+    }
 
-        // change h3 text
-        const h3 = form.querySelector('h3');
-        h3.textContent = 'How would you like the seats to be allocated?';
-        }
+    var sumobserver = new MutationObserver(removeCandidateSummary);
+    sumobserver.observe(document.body, {childList: true,subtree: true});
 
-    alloformobserver.observe(document.body, {childList: true,subtree: true});
-    oppodescobserver.observe(document.body, {childList: true,subtree: true});
-}
-
-var alloformobserver = new MutationObserver(modifyAllocationForm);
-alloformobserver.observe(document.body, {childList: true,subtree: true});
-
-//for some reason, this needs its own observer
-
-function changeOpponentSelectionDescription(){
+    function modifyAllocationForm() {
 
         alloformobserver.disconnect();
         oppodescobserver.disconnect();
-        const opponentSelectionDescription = document.getElementById("opponent_selection_description_window");
-        if(opponentSelectionDescription){
-        opponentSelectionDescription.innerHTML = `<p><strong>Use the default method of allocating seats in the Dutch House of Representatives.</strong></p><p>The Netherlands use a nationwide list-based proportional system. After all the votes have been tallied, successive quotients are calculated for each party. The party with the largest quotient wins one seat, and its quotient is recalculated. This is repeated until the required number of seats is filled.</p><p>This method means every vote is worth nearly the same. It also makes it very easy for small parties to win seats. On the other hand, it is nearly impossible for a single party to win a majority of the seats.</p>`;
-        }
-    alloformobserver.observe(document.body, {childList: true,subtree: true});
-    oppodescobserver.observe(document.body, {childList: true,subtree: true});
-}
+        const form = document.querySelector('form[name="game_type_selection"]');
+            if(form){
+            const select = form.querySelector('select[name="game_type_id"]');
 
-var oppodescobserver = new MutationObserver(changeOpponentSelectionDescription)
-oppodescobserver.observe(document.body, {childList: true,subtree: true});
+            // change option value
+            const option = select.querySelector('option[value="1"]');
+            option.textContent = 'Default (D\'Hondt Proportional)';
+
+
+            var optionToRemove = document.querySelector('option[value="2"]');
+            if (optionToRemove) {
+              optionToRemove.style.display = 'none';
+            }
+
+            // change h3 text
+            const h3 = form.querySelector('h3');
+            h3.textContent = 'How would you like the seats to be allocated?';
+            }
+
+        alloformobserver.observe(document.body, {childList: true,subtree: true});
+        oppodescobserver.observe(document.body, {childList: true,subtree: true});
+    }
+
+    var alloformobserver = new MutationObserver(modifyAllocationForm);
+    alloformobserver.observe(document.body, {childList: true,subtree: true});
+
+    //for some reason, this needs its own observer
+
+    function changeOpponentSelectionDescription(){
+
+            alloformobserver.disconnect();
+            oppodescobserver.disconnect();
+            const opponentSelectionDescription = document.getElementById("opponent_selection_description_window");
+            if(opponentSelectionDescription){
+            opponentSelectionDescription.innerHTML = `<p><strong>Use the default method of allocating seats in the Dutch House of Representatives.</strong></p><p>The Netherlands use a nationwide list-based proportional system. After all the votes have been tallied, successive quotients are calculated for each party. The party with the largest quotient wins one seat, and its quotient is recalculated. This is repeated until the required number of seats is filled.</p><p>This method means every vote is worth nearly the same. It also makes it very easy for small parties to win seats. On the other hand, it is nearly impossible for a single party to win a majority of the seats.</p>`;
+            }
+        alloformobserver.observe(document.body, {childList: true,subtree: true});
+        oppodescobserver.observe(document.body, {childList: true,subtree: true});
+    }
+
+    var oppodescobserver = new MutationObserver(changeOpponentSelectionDescription)
+    oppodescobserver.observe(document.body, {childList: true,subtree: true});
+    
+    var invisibleElement = document.createElement('div');
+    invisibleElement.style.display = 'none';
+    invisibleElement.id = 'my-invisible-element';
+    document.body.appendChild(invisibleElement);
+}
