@@ -127,7 +127,7 @@ if (!element) {
 
     var oppodescobserver = new MutationObserver(changeOpponentSelectionDescription)
     oppodescobserver.observe(document.body, {childList: true,subtree: true});
-    
+
     var invisibleElement = document.createElement('div');
     invisibleElement.style.display = 'none';
     invisibleElement.id = 'my-invisible-element';

@@ -1242,12 +1242,16 @@ var resultobserver = new MutationObserver(changechart);
 resultobserver.observe(document.documentElement, { childList: true, subtree: true });
 
 function mcaHeight() {
-  var mca = document.getElementById("main_content_area");
-  var map = document.getElementById("map_container")
-  if (mca) {
-    mca.style.height = "80%";
-    if(map){
-     mca.style.height = "76%";
+  var results_container = document.getElementById("results_container");
+  var chart = document.getElementById("myChart")
+  if (results_container) {
+    if (!chart){
+        results_container.style.height = "98%";
+        results_container.style.overflow = "scroll";
+    }
+    else{
+        var mca = document.getElementById("main_content_area");
+        mca.style.height = "80%";
     }
   }
 }
