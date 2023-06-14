@@ -615,16 +615,22 @@ function endingOneBuilder(){
              if(playerParty.electoral_votes - e.final_overall_results[1].electoral_votes < 10){
 
             header = "<h2>“At 8:51pm, we can't project yet who will win this election...”</h2>"
-            playerPerformance = "When the first results come in, it's already clear that this will be a historic night for the Green Party. You have more than doubled its voteshare compared to the last election and might even be on track to become the strongest party in the Bundestag! After a few celebratory, but tense hours, it becomes clear that you've made history and have lead the Greens to become the strongest party for the first time. However, in response to the tight result, " + secondPartyLeader.leaderName + " has declared that the " + secondParty.fields.last_name + " is also open to leading a government. Nonetheless, you are likely to have an advantage during the coalition talks."
-            adjustWeights(3);
+            playerPerformance = "When the first results of the night are released, it looks closer than most observers had anticipated. Given your polling in the spring, your party members are already happy with how many votes you won after all. It takes a few hours, but finally, the SPD inches ahead in every forecast and is declared winner of the night, to much celebration by the party. However, in response to the tight result, " + secondPartyLeader.leaderName + " has declared that the " + secondParty.fields.last_name + " is also open to leading a government. Nonetheless, you are likely to have an advantage during the coalition talks."
+            adjustWeights(2);
             closeElection = true;
             }
 
-            else{
-             header = "<h2>“A historic night for Germany and the Greens!”</h2>"
-            playerPerformance = "Until the very end of the campaign, there were doubts if the Green Party could actually win this election. At 6pm, when the first results come in, you've proven all these doubters wrong: For the first time in the history of the Federal Republic of German, a party other than the CDU/CSU and SPD has won an election. You and your party are ecstatic and celebrate the whole night. While you still have to form a government, your odds of becoming the youngest and first Green chancellor are good."
-             adjustWeights(5);
+            else if (playerParty.popular_votes/totalPV>0.257){
+             header = "<h2>“Under Scholz, the SPD truly returns to form”</h2>"
+            playerPerformance = "In the last few days, when your surge in the polls seemed unstoppable, the party had developed high hopes. Now, after the first results came in, it's clear you've not disappointed them. Under your leadership, the SPD has won the election and reached its highest voteshare since 2005. This is an especially impressive feat considering your polling just a few months ago. The whole party is glad that, despite some misgivings, you were made the candidate. Now, you just have to jump one last hurdle, the coalition talks, to ascend from Vice Chancellor to Chancellor - but that should be little more than a formality."
+             adjustWeights(10);
             }
+            else{
+            header = "<h2>“Under Scholz, the SPD returns to form”</h2>"
+            playerPerformance = "In the last few days, when your surge in the polls seemed unstoppable, the party had developed high hopes. Now, after the first results came in, it's clear you've not disappointed them. Under your leadership, the SPD has won the election, though with the lowest voteshare for an election winner since the founding of this country. This is still an impressive feat considering your polling just a few months ago. Many are glad that, despite some misgivings, you were made the candidate - though some naysayers claim that another candidate could have performed even better. Now, you just have to jump one last hurdle, the coalition talks, to ascend from Vice Chancellor to Chancellor - but as the winner, you have the clear initiative to form a government"
+             adjustWeights(5);
+             }
+
         }
         else if(playerParty===e.final_overall_results[1]){
 
