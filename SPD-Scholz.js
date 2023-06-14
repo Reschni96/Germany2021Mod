@@ -1138,7 +1138,7 @@ cyoAdventure = function (a) {
 	   if(leftist > 0 && moderate > 1){
 	        campaignTrail_temp.questions_json[6]=extraQuestions[1];
 	   }
-	   else if (leftist > 2){
+	   else if (leftist > 1){
 	        campaignTrail_temp.questions_json[6]=extraQuestions[2];
 	   }
 	}
