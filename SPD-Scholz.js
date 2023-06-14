@@ -325,20 +325,6 @@ function addCoalitions() {
             selectButton.textContent = "Negotiate!";
             selectButton.addEventListener("click", () => {
 
-            //don't let the Greens get away with only negotiating Traffic Light, but no Jamaica
-            if (thirdPlace && (contestedElection || closeElection)) {
-              const coalition5 = possibleCoalitions.find(coalition => coalition.id === 5);
-              const coalition6 = possibleCoalitions.find(coalition => coalition.id === 6);
-
-              if (coalition6 && coalition5){
-              if(!coalitionCheckbox(coalition5) && coalitionCheckbox(coalition6)) {
-                coalition6.weight = 0;
-                sneaky = true;
-                console.log("Sneaky, sneaky")
-              }
-             }
-            }
-
               // Calculate total weight of possible coalitions
               let totalWeight = 0;
               possibleCoalitions.forEach(coalition => {

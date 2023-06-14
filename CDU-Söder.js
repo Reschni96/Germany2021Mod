@@ -345,8 +345,6 @@ function addCoalitions() {
 
               // Choose a random number between 0 and total weight
               const randomWeight = Math.random() * totalWeight;
-              console.log(totalWeight);
-              console.log(randomWeight);
 
               // Find the coalition that matches the random weight
               let currentWeight = 0;
@@ -738,8 +736,6 @@ function endingTwoBuilder(){
     var contestedText = "";
     var secondPage = false;
     var SecondPageText = "";
-    console.log(playerLeader)
-    console.log(coalitionLeader)
 
     var chancellorFateHappy =  "You have fulfilled your ambition and become the first CSU politician to be elected chancellor of Germany, congratulations! Your task ahead is to guide the country through the remainder of the Covid pandemic, accelerate the energy transition, and handle any foreign policy challenges that arise. With your good political instincts, you are probably up for that task. If you're successful, you'll hopefully be reelected as a popular incumbent in 2025."
     var chancellorFateDown =  "While this coalition was not your favourite, you have fulfilled your ambition and have become the first CSU politician to be elected chancellor of Germany. Your task ahead is to try guiding the country through the remainder of the Covid pandemic, accelerating the energy transition, and handling any foreign policy challenges that arise. With your good political instincts, you are probably up for that task. If you're successful, you'll hopefully be reelected as a popular incumbent in 2025."
@@ -1457,7 +1453,7 @@ function executeWithRetry(fn, ...args) {
       fn(...args);
       return;
     } catch (err) {
-      console.log(err);
+
       if (retry < maxRetries - 1) {
         setTimeout(() => {}, delayMs);
       }
@@ -1481,7 +1477,6 @@ function charting(chartIndex=0){
     backButton.style.marginRight = "10px";
     nextButton.style.marginLeft = "10px";
 
-    console.log(chartIndex)
     if (chartIndex === 0){
         backButton.style.display = 'none';
     }

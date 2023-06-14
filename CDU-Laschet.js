@@ -1442,7 +1442,6 @@ function executeWithRetry(fn, ...args) {
       fn(...args);
       return;
     } catch (err) {
-      console.log(err);
       if (retry < maxRetries - 1) {
         setTimeout(() => {}, delayMs);
       }
@@ -1466,7 +1465,6 @@ function charting(chartIndex=0){
     backButton.style.marginRight = "10px";
     nextButton.style.marginLeft = "10px";
 
-    console.log(chartIndex)
     if (chartIndex === 0){
         backButton.style.display = 'none';
     }

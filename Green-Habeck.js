@@ -186,7 +186,7 @@ e.multiple_endings = true;
   e.header=ending[0];
   e.pages=ending[1];
   e.image="https://www.bundestag.de/resource/image/225552/3x4/594/792/41c47f0a63894c714cff2ac9fc890afb/2AC076E6C48DE98561C2E0BA18823C1A/kuppel.jpg"
-  console.log(possibleCoalitions)
+
 
   return construct(0);
   }
@@ -332,7 +332,7 @@ function addCoalitions() {
               if(!coalitionCheckbox(coalition5) && coalitionCheckbox(coalition6)) {
                 coalition6.weight = 0;
                 sneaky = true;
-                console.log("Sneaky, sneaky")
+
               }
              }
             }
@@ -344,7 +344,6 @@ function addCoalitions() {
                   totalWeight += coalition.weight;
                 }
               });
-              console.log(possibleCoalitions)
 
               // Choose a random number between 0 and total weight
               const randomWeight = Math.random() * totalWeight;
