@@ -634,10 +634,10 @@ function endingOneBuilder(){
         }
         else if(playerParty===e.final_overall_results[1]){
 
-            if(playerParty.electoral_votes > e.final_overall_results[0].popular_votes){
+            if(playerParty.popular_votes > e.final_overall_results[0].popular_votes){
 
             header = "<h2>“At 10:37pm, this is still too close to call...”</h2>"
-            playerPerformance = "When the first results come in, it's already clear that this will be a historic night for the Green Party. You have more than doubled its voteshare compared to the last election and might even be on track to become the strongest party in the Bundestag! After a few celebratory, but tense hours, the situation becomes muddy. While you won the popular vote, the " + firstParty.fields.last_name + " has won the most seats - probably due to overhanging mandates. Both you and " + firstPartyLeader.leaderName + " assert your right to form a government and begin coalition negotiations. It's going to be a tough fight, but you might still become the first Green chancellor."
+            playerPerformance = "When the first results come in, it's clear that the election is going to be a nail-biter. That alone is quite a good development, considering your standing in the polls a few months ago. The final results, however, are a bit of a problem: While you won the popular vote, the " + firstParty.fields.last_name + " has won the most seats - probably due to overhanging mandates in Bavaria. Both you and " + firstPartyLeader.leaderName + " assert your right to form a government and begin coalition negotiations. It's going to be a tough fight, but you might still rise from Vice Chancellor to Chancellor."
             if(!contestedElection){
 
                     coalitions.forEach((coalition) => {
@@ -651,8 +651,8 @@ function endingOneBuilder(){
             }
             else if (playerParty.electoral_votes == e.final_overall_results[0].electoral_votes){
 
-            header = "<h2>“At 10:37pm, this is still too close to call...”</h2>"
-            playerPerformance = "When the first results come in, it's already clear that this will be a historic night for the Green Party. You have more than doubled its voteshare compared to the last election and might even be on track to become the strongest party in the Bundestag! After a few celebratory, but tense hours, the situation becomes muddy. You and the " + firstParty.fields.last_name + " have won the exact same amount of seats, an unprecedented situation. Both you and " + firstPartyLeader.leaderName + " assert your right to form a government and begin coalition negotiations. It's going to be a tough fight, but you might still become the first Green chancellor."
+             header = "<h2>“At 10:37pm, this is still too close to call...”</h2>"
+            playerPerformance = "When the first results come in, it's clear that the election is going to be a nail-biter. That alone is quite a good development, considering your standing in the polls a few months ago. The final results, however, are a bit of a problem: Both you and the " + firstParty.fields.last_name + " have won the exact same amount of seats, and unprecedented situation. Now, " + firstPartyLeader.leaderName + " and you both assert your right to form a government and begin coalition negotiations. It's going to be a tough fight, but you might still rise from Vice Chancellor to Chancellor."
             if(!contestedElection){
 
                     coalitions.forEach((coalition) => {
@@ -668,19 +668,20 @@ function endingOneBuilder(){
             else if(e.final_overall_results[0].electoral_votes - playerParty.electoral_votes < 10){
 
             header = "<h2>“At 8:51pm, we can't project yet who will win this election...”</h2>"
-            playerPerformance = "When the first results come in, it's already clear that this will be a historic night for the Green Party. You have more than doubled its voteshare compared to the last election and might even be on track to become the strongest party in the Bundestag! After a few celebratory, but tense hours, it becomes clear that unfortunately, you came in second - still a very impressive result, but a little disappointing nonetheless. The " + firstParty.fields.last_name + " has the initiative to form the government, but don't give up hope just yet - depending on how the coalition talks go, there's still a chance for you to become chancellor."
+            playerPerformance = "When the first results of the night are released, it looks closer than most observers had anticipated. Given your polling in the spring, your party members are already happy with how many votes you won after all. It takes a few hours, but finally, it becomes clear that unfortunately, you came in second - still a good result, but a little disappointing nonetheless. The " + firstParty.fields.last_name + " has the initiative to form the government, but don't give up hope just yet - depending on how the coalition talks go, there's still a chance for you to rise from Vice Chancellor to Chancellor."
             adjustWeights(2);
             closeElection = true;
             }
 
-            else if (playerParty.popular_votes/totalPV<0.2){
-            header = "<h2>“No victory, but a strong showing for Baerbock”</h2>"
-            playerPerformance = "Election night is a time of mixed feelings for you and your party. While you have achieved a strong result and placed second for the first time in Green Party history, you're still a far way off from first place. This is not the result you had hoped for, but still something you can work with. The " + firstParty.fields.last_name + " will try to form a government now - you can try to become a junior coalition partner or maybe try to form your own government if coaltion talks fall through, but don't get your hopes up."
+            else if (playerParty.popular_votes/totalPV<0.205){
+            header = "<h2>“Scholz can't stop the decline of German Social Democracy”</h2>"
+            playerPerformance = "When you were nominated as chancellor candidate, it looked like a hopeless campaign, with the SPD clearly in third place. You didn't perform as badly as the pessimists predicted, but you didn't achieve much either - despite your best efforts, the SPD lost votes compared to the last election. The only solace is that you didn't lose second place to the Greens, but this is still disappointing - enough so that there are calls for you to step back from politics.  The " + firstParty.fields.last_name + " will try to form a government now - you could try to become their junior partner once again or gamble on the miniscule chance that coalition talks fall through for them."
             adjustWeights(10);
             }
+
             else {
-            header = "<h2>“No victory, but a very strong showing for Baerbock”</h2>"
-            playerPerformance = "Election night is a time of mixed feelings for you and your party. While you have achieved a strong result and placed second for the first time in Green Party history, you're still quite a bit behind first place. This is not quite the result you had hoped for, but still impressive. The " + firstParty.fields.last_name + " will try to form a government now - you can try to become a junior coalition partner or maybe try to form your own government if coalition talks fall through, but don't get your hopes up."
+            header = "<h2>“Scholz leads SPD to mixed result”</h2>"
+            playerPerformance = "Once the results come in, neither pundits nor your party quite know what to make of them. On the one hand, you gained votes compared to the last election and performed much better than expected in the spring. On the other, once again, you've been relegated to second place. Some praise you for this results, while others grumble about a wasted opportunity considering your rivals. Regardless, the " + firstParty.fields.last_name + " will try to form a government now - you can try to become a junior coalition partner or maybe try to form your own government if coalition talks fall through. Just don't get your hopes up."
             adjustWeights(5);
             }
 

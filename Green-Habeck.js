@@ -680,12 +680,12 @@ function endingOneBuilder(){
 
             else if (playerParty.popular_votes/totalPV<0.2){
             header = "<h2>“No victory, but a strong showing for Habeck”</h2>"
-            playerPerformance = "Election night is a time of mixed feelings for you and your party. While you have achieved a strong result and placed second for the first time in Green Party history, you're still a far way off from first place. This is not the result you had hoped for, but still something you can work with. The " + firstParty.fields.last_name + " will try to form a government now - you can try to become a junior coalition partner or maybe try to form your own government if coaltion talks fall through, but don't get your hopes up."
+            playerPerformance = "Election night is a time of mixed feelings for you and your party. While you have achieved a strong result and placed second for the first time in Green Party history, you're still a far way off from first place. This is not the result you had hoped for, but still something you can work with. The " + firstParty.fields.last_name + " will try to form a government now - you can try to become a junior coalition partner or maybe try to form your own government if coaltion talks fall through. The odds of the latter happening are miniscule, though."
             adjustWeights(10);
             }
             else {
             header = "<h2>“No victory, but a very strong showing for Habeck”</h2>"
-            playerPerformance = "Election night is a time of mixed feelings for you and your party. While you have achieved a strong result and placed second for the first time in Green Party history, you're still quite a bit behind first place. This is not quite the result you had hoped for, but still impressive. The " + firstParty.fields.last_name + " will try to form a government now - you can try to become a junior coalition partner or maybe try to form your own government if coalition talks fall through, but don't get your hopes up."
+            playerPerformance = "Election night is a time of mixed feelings for you and your party. While you have achieved a strong result and placed second for the first time in Green Party history, you're still quite a bit behind first place. This is not quite the result you had hoped for, but still impressive. The " + firstParty.fields.last_name + " will try to form a government now - you can try to become a junior coalition partner or maybe try to form your own government if coalition talks fall through. Just don't get your hopes up."
             adjustWeights(5);
             }
 
