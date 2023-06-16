@@ -599,8 +599,9 @@ function endingOneBuilder(){
     var LeftParty = (e.final_overall_results.find((r) => r.candidate === 304));
     var partyPerformance = "";
     var LeftPerformance = "";
-    var BerlinWin = "";
     var disaster = false;
+    var midResult = false
+    var badResult 0 false;
 
 
     if (playerParty.electoral_votes>totalSeats/2){
@@ -673,10 +674,25 @@ function endingOneBuilder(){
             closeElection = true;
             }
 
-            else if (playerParty.popular_votes/totalPV<0.205){
+            else if (playerParty.popular_votes/totalPV<0.205 && playerParty.popular_votes/totalPV>0.18){
             header = "<h2>“Scholz can't stop the decline of German Social Democracy”</h2>"
             playerPerformance = "When you were nominated as chancellor candidate, it looked like a hopeless campaign, with the SPD clearly in third place. You didn't perform as badly as the pessimists predicted, but you didn't achieve much either - despite your best efforts, the SPD lost votes compared to the last election. The only solace is that you didn't lose second place to the Greens, but this is still disappointing - enough so that there are calls for you to step back from politics.  The " + firstParty.fields.last_name + " will try to form a government now - you could try to become their junior partner once again or gamble on the miniscule chance that coalition talks fall through for them."
             adjustWeights(10);
+            midResult = true;
+            }
+
+            else if (playerParty.popular_votes/totalPV<0.18){
+            header = "<h2>“Scholz can't stop the decline of German Social Democracy”</h2>"
+            playerPerformance = "When you were nominated as chancellor candidate, it looked like a hopeless campaign, with the SPD clearly in third place. You didn't perform as quite badly as the pessimists predicted, but you still lost quite a few more votes compared to the already disastrous result for years ago. The only solace is that you didn't lose second place to the Greens, but this is still very disappointing - enough so that there are loud calls for you to step back from politics.  The " + firstParty.fields.last_name + " will try to form a government now. For the SPD, one thing is clear: Another coalition with the CDU/CSU can't be an option."
+            adjustWeights(10);
+            badResult = true;
+
+            coalitions.forEach((coalition) => {
+              if (coalition.parties.includes(playerParty.candidate) && coalition.parties.includes(77)) {
+                coalition.weight = 0;
+              }
+            });
+
             }
 
             else {
@@ -689,13 +705,15 @@ function endingOneBuilder(){
         else if(playerParty===e.final_overall_results[2]){
             thirdPlace = true;
 
-            if(playerParty.popular_votes/totalPV>0.178){
-            header = "<h2>“A mixed night for the Green Party”</h2>"
-            playerPerformance = "It's a bit unclear what to make of this result for you and your party. On the one hand, you more than doubled the result of the Green Party compared to the last election, but on the other, many feel that a lot more than third place would have been possible considering your polling numbers in the spring. You even hear some people say that this is your fault and Habeck would have been the better choice."
+            if(playerParty.popular_votes/totalPV>0.18){
+             header = "<h2>“SPD declines to third place under Scholz”</h2>"
+            playerPerformance = "The first reaction to the election results at the party headquarters is shock. Despite predictions pointing towards this, there was still hope that the SPD didn't slide into third place. You didn't perform as quite badly as the pessimists predicted, but you still lost quite a few more votes compared to the already disastrous result for years ago. Despite not loosing that many votes compared to last election, the party is still disappointed - enough so that there are loud calls for you to step back from politics.  The " + firstParty.fields.last_name + " will try to form a government now. Maybe they'll need you as a junior partner, though there are growing calls for the SPD to become part of the opposition."
+            midResult = true;
             }
-            else if(playerParty.popular_votes/totalPV<=0.178){
-            header = "<h2>“A very mixed night for the Green Party”</h2>"
-            playerPerformance = "It's a bit unclear what to make of this result for you and your party. For the first time since 2002, you've lead the Green Party into third place and you improved the performance of the party a lot compared to the last election However, almost everyone agrees that more had been possible considering your polling numbers in the spring. You even hear quite a few people say that this is your fault and Habeck would have not squandered this historic opportunity like you did."
+            else if(playerParty.popular_votes/totalPV<=0.18){
+             header = "<h2>“SPD tumbles down to third place under Scholz”</h2>"
+            playerPerformance = "The first reaction to the election results at the party headquarters is shock. Despite predictions pointing towards this, there was still hope that the SPD didn't slide into third place. But just as it was feared, the party kept loosing votes under your leadership. During the election night, there are loud calls for your resignation, not just from the left wing of your party, and you barely hold on.  The " + firstParty.fields.last_name + " will try to form a government now. For the SPD, one thing is clear: Another coalition with the CDU/CSU can't be an option."
+            badResult = true;
             }
             if (e.final_overall_results[0].electoral_votes == e.final_overall_results[1].electoral_votes){
             playerPerformance += " First place is actually tied, so the coalition talks are going to be interesting. There is a good chance that you'll become a junior partner in government if you want to."
@@ -725,25 +743,20 @@ function endingOneBuilder(){
             }
 
             else if (e.final_overall_results[0].electoral_votes - e.final_overall_results[1].electoral_votes < 10){
-            playerPerformance += " The race for the winner of this election was close, but in the end, the " + firstParty.fields.last_name + " prevailed. They will now try to form a government, though with how close the result was, the " + secondParty.fields.last_name + " also announced their intention to start coalition talks. In any case, you have a good chance to become a coalition partner if you want to."
+            playerPerformance += " The race for the winner of this election was close, but in the end, the " + firstParty.fields.last_name + " prevailed. They will now try to form a government, though with how close the result was, the " + secondParty.fields.last_name + " also announced their intention to start coalition talks."
 
             closeElection = true;
 
-            adjustWeights(4);
+            adjustWeights(2);
             }
             else{
             playerPerformance += " The clear winner of this election is the " + firstParty.fields.last_name + ". They are now searching for coalition partners, so you have an opportunity to become part of the government if the negotiations work out."
-            adjustWeights(10);
+            adjustWeights(5);
 
-            //anti sneakiness operations
-            if (e.final_overall_results[0].candidate === 77){
-                closeElection = true;
-                }
-            }
         }
         else{
-            header = "<h2>“A disappointing nights fot the Greens”</h2>"
-            playerPerformance = "In the spring, the polls pointed to so much being possible for the Green Party, and many people believed you had the potential to become chancellor. However, you've completely squandered this opportunity, not even managing to get into third place. In fact, this result is so disappointing that you feel compelled to resign as party leader a few days after the election. While the Green Party might still become a part of the governing coalition, other people have to decide that now. You can either stay a backbencher or withdraw from politics all together."
+            header = "<h2>“A disastrous nights for the SPD”</h2>"
+            playerPerformance = "When the results come in, the first reaction is shock - but it's soon replaced by resignation. The party is used to bad result, to disastrous election nights, and while not even getting into the top three is a catastrophy new low, it doesn't come as a complete surprise after your horrible campaign. Under mounting pressure, you feel compelled to resign the same night and announce your withdrawal from politics overall. Perhaps the SPD will recover, perhaps you'll always be known as the man who squandered the last chance to reverse its decline."
             disaster = true;
         }
         var SSW = "In other news, the SSW, the party of the Danish minority, has won a seat for the first time since 1949. As party of a national minority, they are exempt from the 5% threshold."
@@ -754,10 +767,6 @@ function endingOneBuilder(){
 
         else if(LeftParty.electoral_votes <= 2){
             LeftPerformance = " The Left party also failed to meet the 5% threshold for the first time since 2002. This leaves them with only two MPs who won direct mandates in Berlin to represent them in parliament."
-        }
-
-        if(e.final_state_results[2].result[0].candidate === 79 && e.final_state_results[2].result[0].percent - e.final_state_results[2].result[1].percent > 0.02){
-        BerlinWin = " Also, the Green Party placed first in the Berlin state elections, making it likely that Bettina Jarasch will become the second Green head of a state government."
         }
 
         if (!disaster){
@@ -787,17 +796,12 @@ function endingTwoBuilder(){
     var contestedText = "";
     var secondPage = false;
     var SecondPageText = "";
-    var sneakyText = "";
 
     var chancellorFate =  "You have made history by becoming the first Green chancellor of Germany, congratulations! This is a major upset to the German party system - you're the first non CDU or SPD chancellor since the founding of this state. Now you have to guide the country through the rest of the pandemic, handle foreign policy and, of course, make sure that finally enough is getting done to combat climate change and its consequences. The German people have placed a lot of trust in you - don't disappoint to hopefully cement the Green Party as one of the major parties and get reelected in 2025."
     var viceFate = "In this new coalition, you have become Vice Chancellor and Foreign Minister. Since the Green Party mandates that their leaders can't be part of the government at the same time, you had to resign as party leader. However, you are still an important figure in the party. For now, you should focus on your role as minister. Perhaps in 2025, the party will select you as chancellor candidate again and you'll have even more success."
     var ministerFateStrong = "In this new coalition, you have become Foreign Minister, while Robert Habeck has become Vice Chancellor and Minister of Economy and Climate. Since the Green Party mandates that their leaders can't be part of the government at the same time, you had to resign as party leader. However, you are still an important figure in the party. For now, you should focus on your role as minister. There is a chance the party will select you to run again in 2025, though many analysts expect Habeck or someone else entirely to have better chances."
     var ministerFateWeak = "In this new coalition, you have become Foreign Minister. Since the Green Party mandates that their leaders can't be part of the government at the same time, you had to resign as party leader. However, you are still an important figure in the party. For now, you should focus on your role as minister. There is a chance the party will select you to run again in 2025, though many analysts expect Habeck or someone else entirely to have better chances."
     var emptyFate = "This outcome is a setback for both the party and you personally. While you can try to stay on as party leader, the double failure of not winning the election and then not managing to negotiate a coalition that includes the Greens makes many wary to support you. Perhaps you'll manage to stay on, but you most probably won't have another chance to become chancellor."
-
-      if (sneaky){
-        sneakyText=" Your attempt to only negotiate a Traffic light coalition and no Jamaica didn't work out when the FDP refused to cooperate, leading to no coalition talks for either coalition."
-      }
 
       if(contestedElection){
         contestedText = "Many people are unhappy with this outcome, but that was to be expected with the contested declarations of victory. "
@@ -1032,10 +1036,10 @@ function endingTwoBuilder(){
         }
 
          if (secondPage){
-            text = [`<p>${contestedText}${negotiations}${sneakyText}</p><p>${coalitionText}</p><p>${playerFate}</p>`,`<p>${secondPageText}</p>` ]
+            text = [`<p>${contestedText}${negotiations}</p><p>${coalitionText}</p><p>${playerFate}</p>`,`<p>${secondPageText}</p>` ]
         }
         else{
-             text = [`<p>${contestedText}${negotiations}${sneakyText}</p><p>${coalitionText}</p><p>${playerFate}</p>`,]
+             text = [`<p>${contestedText}${negotiations}</p><p>${coalitionText}</p><p>${playerFate}</p>`,]
         }
         return[header, text, image];
 }
