@@ -981,10 +981,11 @@ function endingTwoBuilder(){
                 coalitionText = "It has almost become a tradition for the CDU/CSU and FDP to warn about a danger of a Red-Red-Green coalition on the federal level. All this time, most people thought that they were just fearmongering, but now it actually happened: You not only started coalition negotiations, but actually formed a - very leftist - coalition agreement. There's just one small problem: It's the second ballot for chancellor now, and in an unprecedented development you still haven't gotten a majority. Since the ballots are secret, you don't know who voted against you, but it seems likely that those moderates who voiced their serious concerns weren't bluffing."
                 secondPage = true;
                 if(majority-totalSeats/2 < 5){
-                    secondPageText = "After days of balloting and many more attempts, it becomes clear that there just isn't going to be a majority for you. In another ballot, the parliamentary group of your party votes against you as their leader, sidelining you for the renewed coalition talks. It's unclear what happens now - a coalition under a new Green leadership, another party winning the chancellorship and new elections all seem like possibilities. You will make history as the woman who just couldn't become chancellor"
+                    secondPageText = "After days of balloting and many more attempts, it becomes clear that there just isn't going to be a majority for you. In another ballot, the parliamentary group of your party votes against you as their leader, sidelining you for the renewed coalition talks. It's unclear what happens now - a coalition under a new Green leadership, another party winning the chancellorship and new elections all seem like possibilities. No matter what, your political career is unlikely to ever recover from this. You will make history as the man who just couldn't become chancellor."
                     }
                 else{
                 secondPageText = "After days of balloting and many more attempt and negotiations in between, you finally get elected by just one vote. You've become chancellor, but this arrangement seems very unstable, so it's unclear if the government will last for the whole legislative session. Also, there are rumours about some more centrist members of the SPD and Greens leaving their respective parties for the FDP and CDU/CSU. The coming months and years are going to be a tumultuous time."
+                playerFate = chancellorFate;
                 }
 
             }
@@ -992,6 +993,7 @@ function endingTwoBuilder(){
             else{
             header =  "<h2>“Protests overshadow chancellor election”</h2>"
             coalitionText = "It has almost become a tradition for the CDU/CSU and FDP to warn about a danger of a Red-Red-Green coalition on the federal level. All this time, most people thought that they were just fearmongering, but now it actually happened: You not only started coalition negotiations, but actually formed a - very leftist - coalition agreement. There were some rumblings about you not getting a majority in the vote for chancellor, but even though you haven't received as many votes as the coalition has seats, you have still been elected chancellor. This coalition might not be the most stable and there are rumours about some more centrist members of the SPD and Greens leaving their respective parties for the FDP and CDU/CSU. Let's hope you can govern through the whole legislative session."
+            playerFate = chancellorFate;
             }
             }
             else{
@@ -1001,10 +1003,11 @@ function endingTwoBuilder(){
                 coalitionText = "It has almost become a tradition for the CDU/CSU and FDP to warn about a danger of a Red-Red-Green coalition on the federal level. All this time, most people thought that they were just fearmongering, but now it actually happened: You not only started coalition negotiations, but actually formed a - very leftist - coalition agreement. There's just one small problem: It's the second ballot for chancellor now, and in an unprecedented development Scholz of the SPD still hasn't gotten a majority. Since the ballots are secret, you don't know who voted against him, but it seems likely that those moderates who voiced their serious concerns weren't bluffing."
                 secondPage = true;
                 if(majority-totalSeats/2 < 5){
-                    secondPageText = "After days of balloting and many more attempts, it becomes clear that there just isn't going to be a majority for Scholz. In another ballot, the parliamentary group of your party votes against you as their leader, sidelining you for the renewed coalition talks. It's unclear what happens now -the SPD forming a different coalition, another party winning the chancellorship and new elections all seem like possibilities. With your involvement in this episode, you've made history, but not in the way you had hoped."
+                    secondPageText = "After days of balloting and many more attempts, it becomes clear that there just isn't going to be a majority for Scholz. In another ballot, the parliamentary group of your party votes against you as their leader, sidelining you for the renewed coalition talks. It's unclear what happens now - the SPD forming a different coalition, another party winning the chancellorship and new elections all seem like possibilities. No matter what happens now, it's unlikely that your political career will recover. With your involvement in this episode, you've made history - just not in the way you had hoped. "
                     }
                 else{
                 secondPageText = "After days of balloting and many more attempt and negotiations in between, Scholz finally gets elected by just one vote. He's become chancellor, but this arrangement seems very unstable, so it's unclear if the government will last for the whole legislative session. Also, there are rumours about some more centrist members of the SPD and Greens leaving their respective parties for the FDP and CDU/CSU. The coming months and years are going to be a tumultuous time."
+                playerFate=viceFate
                 }
 
             }
@@ -1012,9 +1015,11 @@ function endingTwoBuilder(){
             else{
             header =  "<h2>“Protests overshadow chancellor election”</h2>"
             coalitionText = "It has almost become a tradition for the CDU/CSU and FDP to warn about a danger of a Red-Red-Green coalition on the federal level. All this time, most people thought that they were just fearmongering, but now it actually happened: You not only started coalition negotiations, but actually formed a - very leftist - coalition agreement. There were some rumblings about Scholz of the SPD not getting a majority in the vote for chancellor, but even though he hasn't received as many votes as the coalition has seats, he has still been elected chancellor. This coalition might not be the most stable and there are rumours about some more centrist members of the SPD and Greens leaving their respective parties for the FDP and CDU/CSU. Let's hope you can govern through the whole legislative session."
+            playerFate = viceFate;
             }
             }
             break;
+
 
         case 13:
             header = "<h2>“Socialists in a German government for the first time since 1990”</h2>"
