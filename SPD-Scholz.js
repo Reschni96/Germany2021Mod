@@ -1210,9 +1210,19 @@ cyoAdventure = function (a) {
     if ([4020, 4021, 4022, 4023].includes(ans)) {
 	   if(leftist > 0 && moderate > 1){
 	        campaignTrail_temp.questions_json[6]=extraQuestions[1];
+	        coalitions.forEach(coalition => {
+          if (coalition.id === 12) {
+            coalition.weight += 0.2;
+          }
+        });
 	   }
 	   else if (leftist > 1){
 	        campaignTrail_temp.questions_json[6]=extraQuestions[2];
+	        coalitions.forEach(coalition => {
+          if (coalition.id === 12) {
+            coalition.weight += 0.4;
+          }
+        });
 	   }
 	}
 
@@ -1243,46 +1253,28 @@ cyoAdventure = function (a) {
        campaignTrail_temp.questions_json[18]=extraQuestions[4];
         }
     }
-    //coalition weight adjustments here
-    if ([4011, 4013, 4042].includes(ans)) {
-       coalitions.forEach(coalition => {
-          if ([3, 5].includes(coalition.id)) {
-            coalition.weight += 0.2;
-          }
-          if (coalition.id === 12) {
-            coalition.weight -= 0.1;
-          }
-        });
-    }
 
-      if (ans === 4021) {
-       coalitions.forEach(coalition => {
-          if ([1, 3, 4, 5].includes(coalition.id)) {
-            coalition.weight += 0.2;
-          }
-        });
-    }
 
-     if (ans === 4079) {
+     if (ans === 4074) {
        coalitions.forEach(coalition => {
           if (coalition.id === 12) {
-            coalition.weight = 0.0;
+            coalition.weight += 0.6;
           }
         });
     }
 
-     if (ans === 4080) {
+     if (ans === 4076) {
        coalitions.forEach(coalition => {
           if (coalition.id === 12) {
             coalition.weight += 0.5;
           }
-          if ([3, 5, 6].includes(coalition.id)) {
-            coalition.weight -= 0.4;
+          if ([1, 2, 10].includes(coalition.id)) {
+            coalition.weight -= 0.2;
           }
         });
     }
 
-     if (ans === 4081) {
+     if (ans === 4077) {
        coalitions.forEach(coalition => {
           if (coalition.id === 12) {
             coalition.weight -= 0.25;
