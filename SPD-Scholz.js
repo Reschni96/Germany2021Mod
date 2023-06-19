@@ -640,7 +640,7 @@ function endingOneBuilder(){
             playerPerformance = "When the first results come in, it's clear that the election is going to be a nail-biter. That alone is quite a good development, considering your standing in the polls a few months ago. The final results, however, are a bit of a problem: While you won the popular vote, the " + firstParty.fields.last_name + " has won the most seats - probably due to overhanging mandates in Bavaria. Both you and " + firstPartyLeader.leaderName + " assert your right to form a government and begin coalition negotiations. It's going to be a tough fight, but you might still rise from Vice Chancellor to Chancellor."
             if(!contestedElection){
 
-                    coalitions.forEach((coalition) => {
+                    possibleCoalitions.forEach((coalition) => {
                       if (coalition.parties.includes(playerParty.candidate) && coalition.parties.includes(firstParty.pk)) {
                         coalition.weight = 0.001;
                       }
@@ -655,7 +655,7 @@ function endingOneBuilder(){
             playerPerformance = "When the first results come in, it's clear that the election is going to be a nail-biter. That alone is quite a good development, considering your standing in the polls a few months ago. The final results, however, are a bit of a problem: Both you and the " + firstParty.fields.last_name + " have won the exact same amount of seats, and unprecedented situation. Now, " + firstPartyLeader.leaderName + " and you both assert your right to form a government and begin coalition negotiations. It's going to be a tough fight, but you might still rise from Vice Chancellor to Chancellor."
             if(!contestedElection){
 
-                    coalitions.forEach((coalition) => {
+                    possibleCoalitions.forEach((coalition) => {
                       if (coalition.parties.includes(playerParty.candidate) && coalition.parties.includes(firstParty.pk)) {
                         coalition.weight = 0.001;
                       }
@@ -719,7 +719,7 @@ function endingOneBuilder(){
             playerPerformance += " First place is actually tied, so the coalition talks are going to be interesting. The coalition talks will certainly be interesting"
             if(!contestedElection){
 
-                    coalitions.forEach((coalition) => {
+                    possibleCoalitions.forEach((coalition) => {
                       if (coalition.parties.includes(secondParty.pk) && coalition.parties.includes(firstParty.pk)) {
                         coalition.weight = 0.001;
                       }
@@ -732,8 +732,8 @@ function endingOneBuilder(){
             playerPerformance += " It's actually unclear who is the winner of this election, with the " + firstParty.fields.last_name + " having won the most seats and the " + secondParty.fields.last_name + " having won the most votes. The coalition talks will certainly be interesting."
             if(!contestedElection){
 
-                    coalitions.forEach((coalition) => {
-                      if (coalition.parties.includes(playerParty.candidate) && coalition.parties.includes(firstParty.pk)) {
+                    possibleCoalitions.forEach((coalition) => {
+                      if (coalition.parties.includes(secondParty.pk) && coalition.parties.includes(firstParty.pk)) {
                         coalition.weight = 0.001;
                       }
                     });

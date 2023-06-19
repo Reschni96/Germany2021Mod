@@ -638,7 +638,7 @@ function endingOneBuilder(){
             playerPerformance = "Throughout the night, it remained unclear whether your party or the " + secondParty.fields.last_name + " emerged victorious in the election, with projections indicating a neck-and-neck race. The final result was announced in the morning and was hotly contested. Eventually, it became clear that you and the " + secondParty.fields.last_name + " have won the exact same amount of seats. This unprecedented situation in Germany has sparked intense discussions and competing claims of victory. Both you and " + secondPartyLeader.leaderName + " maintain that you have the strongest mandate to form the next government. The ensuing coalition negotiations are bound to be tumultuous."
             if(!contestedElection){
 
-                coalitions.forEach((coalition) => {
+                possibleCoalitions.forEach((coalition) => {
                   if (coalition.parties.includes(playerParty.candidate) && coalition.parties.includes(secondParty.pk)) {
                     coalition.weight = 0.001;
                   }
@@ -653,7 +653,7 @@ function endingOneBuilder(){
                 playerPerformance = "Throughout the night, it remained unclear whether your party or the " + secondParty.fields.last_name + " emerged victorious in the election, with projections indicating a neck-and-neck race. The final result was announced in the morning and was hotly contested. Eventually, it becomes clear that you have won the most seats, most likely due to overhanging mandates in Bavaria, while the " + secondParty.fields.last_name + " has won the popular vote. This unprecedented situation in Germany has sparked intense discussions and competing claims of victory. Both you and " + secondPartyLeader.leaderName + " maintain that you have the strongest mandate to form the next government. The ensuing coalition negotiations are bound to be tumultuous."
                 if(!contestedElection){
 
-                    coalitions.forEach((coalition) => {
+                    possibleCoalitions.forEach((coalition) => {
                       if (coalition.parties.includes(playerParty.candidate) && coalition.parties.includes(secondParty.pk)) {
                         coalition.weight = 0.001;
                       }
