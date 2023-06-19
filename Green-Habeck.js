@@ -1023,7 +1023,7 @@ function endingTwoBuilder(){
 
         case 13:
             header = "<h2>“Socialists in a German government for the first time since 1990”</h2>"
-            coalitionText = "The Left party and the SPD has had a contentious relationship in the past. However, in a big surprise, they not only achieved a majority together, but also formed a coalition! Scholz has become chancellor through the backing of the two parties - though there are rumours of disgruntled moderate SPD MPs leaving the party, perhaps joining you instead. While the policies of the new government are not far from what you wanted to achieve, it still stings to be part of the opposition yet again."
+            coalitionText = "The Left party and the SPD has had a contentious relationship in the past. However, in a big surprise, they not only achieved a majority together, but also formed a coalition! Scholz has become chancellor through the backing of the two parties - though there are rumours of disgruntled moderate SPD members of parliament leaving the party, perhaps joining you instead. While the policies of the new government are not far from what you wanted to achieve, it still stings to be part of the opposition yet again."
               playerFate=emptyFate;
               break;
 
