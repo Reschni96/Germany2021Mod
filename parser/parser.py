@@ -1,76 +1,64 @@
 import re
 
 question_regex = re.compile(r'^Q(\d+):\s*')  # Regular expression to match question lines
+answer_regex = re.compile(r'.*A(\d+): (.*)')  # Regular expression to match answer lines
+feedback_regex = re.compile(r'F(\d+): (.*)')  # Regular expression to match feedback lines
 
-candidate = 78
-pk = 717  # Starting value for pk
-question_initial = pk
+candidate = 77
+pk_questions = 717  # Starting value for pk for questions
+pk_answers = 4000  # Starting value for pk for answers
+pk_feedback = 5000  # Starting value for pk for feedback
+processing_answers = False
+processing_feedback = False
 
-with open('input.txt', 'r', encoding='utf-8') as infile, open('output_questions.txt', 'w', encoding='utf-8') as outfile:
-    for line in infile:
-        # Check if the line contains a question
-        question_match = question_regex.match(line)
-        if question_match:
-            # Extract the question number and description from the line
-            description = line[question_match.end():].strip()
+try:
+    with open('input.txt', 'r', encoding='utf-8') as infile, \
+         open('output_questions.txt', 'w', encoding='utf-8') as out_questions, \
+         open('output_answers.txt', 'w', encoding='utf-8') as out_answers, \
+         open('output_feedback.txt', 'w', encoding='utf-8') as out_feedback:
 
-            # Write the question data to the output file in the desired format
-            outfile.write('{{\\"model\\": \\"campaign_trail.question\\", \\"pk\\": {}, \\"fields\\": {{\\"priority\\": 1, \\"description\\": \\"{}\\", \\"likelihood\\": 1.0}}}}, '.format(pk, description))
+        for line in infile:
+            # Check if the line contains a question, an answer, or feedback
+            question_match = question_regex.match(line)
+            answer_match = answer_regex.match(line)
+            feedback_match = feedback_regex.match(line)
 
-            # Increment the pk value for the next question
-            pk += 1
+            if question_match:
+                if processing_answers:
+                    # We've reached a new question, so all answers for the last question have been processed
+                    processing_answers = False
+                    pk_questions += 1
 
-    size = outfile.tell()  # get the current position (i.e., end of file)
-    outfile.seek(size - 2)  # move the cursor two positions back from the end
-    outfile.truncate()  # remove the last two characters
+                description = line[question_match.end():].strip()
+                description = description.replace('"', '\\"')  # Escape any quotation marks
 
-# Open input and output files for answers
-with open('input.txt', 'r', encoding='utf-8') as infile, open('output_answers.txt', 'w', encoding='utf-8') as outfile:
-    pk = 4000  # Starting pk value
-    initial_answer = pk
-    question = question_initial-1  # Starting question value
+                out_questions.write(
+                    '{{\\"model\\": \\"campaign_trail.question\\", \\"pk\\": {}, \\"fields\\": {{\\"priority\\": 1, \\"description\\": \\"{}\\", \\"likelihood\\": 1.0}}}}, '.format(
+                        pk_questions, description))
 
-    # Loop through input file line by line
-    for line in infile:
-        # Match pk, question, and description using regular expressions
-        question_match = re.match(question_regex, line)
-        description_match = re.match(r'.*A(\d+): (.*)', line)
+            elif answer_match:
+                processing_answers = True
+                if processing_feedback:
+                    # We've reached a new answer, so all feedback for the last answer have been processed
+                    processing_feedback = False
+                    pk_answers += 1
 
-        # If question match found, increment question
-        if question_match:
-            question = question + 1  # Increment question
+                description = answer_match.group(2).strip()
+                description = description.replace('"', '\\"')
+                out_answers.write('{{\\"model\\": \\"campaign_trail.answer\\", \\"pk\\": {}, \\"fields\\": {{\\"question\\": {}, \\"description\\": \\"{}\\"}}}}, '.format(pk_answers, pk_questions, description))
 
-        # If description match found, write to output file
-        elif description_match:
-            outfile.write('{{\\"model\\": \\"campaign_trail.answer\\", \\"pk\\": {}, \\"fields\\": {{'.format(pk))
-            description = description_match.group(2).strip()  # Extract description text and remove leading/trailing whitespace
-            outfile.write('\\"question\\": {}, \\"description\\": \\"{}\\"}}'.format(question, description))
-            outfile.write('}, ')
-            pk = pk + 1
-    size = outfile.tell()  # get the current position (i.e., end of file)
-    outfile.seek(size - 2)  # move the cursor two positions back from the end
-    outfile.truncate()  # remove the last two characters
+            elif feedback_match:
+                processing_feedback = True
+                feedback = feedback_match.group(2).strip()
+                feedback = feedback.replace('"', '\\"')
+                out_feedback.write('{{\\"model\\": \\"campaign_trail.answer_feedback\\", \\"pk\\": {}, \\"fields\\": {{\\"answer\\": {}, \\"candidate\\": {}, \\"answer_feedback\\": \\"{}\\"}}}}, '.format(pk_feedback, pk_answers, candidate, feedback))
+                pk_feedback += 1
 
-# Open input and output files
-with open('input.txt', 'r', encoding='utf-8') as infile, open('output_feedback.txt', 'w', encoding='utf-8') as outfile:
-    pk = 5000  # Starting pk value
-    answer = initial_answer  # Starting answer value
+        # Remove the last two characters from each output file
+        for outfile in [out_questions, out_answers, out_feedback]:
+            size = outfile.tell()
+            outfile.seek(size - 2)
+            outfile.truncate()
 
-    # Loop through input file line by line
-    for line in infile:
-
-        feedback_match = re.match(r'F(\d+): (.*)', line)
-
-        # If feedback match found, write to output file
-        if feedback_match:
-            outfile.write('{{\\"model\\": \\"campaign_trail.answer_feedback\\", \\"pk\\": {}, \\"fields\\": {{'.format(pk))
-            feedback = feedback_match.group(2).strip()  # Extract feedback text and remove leading/trailing whitespace
-            outfile.write('\\"answer\\": {}, \\"candidate\\": {}, \\"answer_feedback\\": \\"{}\\"}}'.format(answer, candidate, feedback))
-            outfile.write('}, ')
-            pk = pk + 1
-            answer = answer + 1
-    size = outfile.tell()  # get the current position (i.e., end of file)
-    outfile.seek(size - 2)  # move the cursor two positions back from the end
-    outfile.truncate()  # remove the last two characters
-
-
+except IOError as e:
+    print(f"An error occurred: {e}")
