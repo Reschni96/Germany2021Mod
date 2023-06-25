@@ -1197,10 +1197,18 @@ cyoAdventure = function (a) {
     }
 }
 
-//css stuff here
+//css stuff herelet observerRunning = false;
+
 function addScrollbar() {
+  if(observerRunning) return;
+  observerRunning = true;
+
+  observer.disconnect();
+
   const overallResult = document.getElementById('overall_result');
   if (!overallResult) {
+    observer.observe(document.documentElement, { childList: true, subtree: true });
+    observerRunning = false;
     return;
   }
 
@@ -1211,10 +1219,14 @@ function addScrollbar() {
     overallResult.style.overflow = 'auto';
   };
   buttons.forEach(button => button.addEventListener('click', handleClick));
+
+  observer.observe(document.documentElement, { childList: true, subtree: true });
+  observerRunning = false;
 }
 
 const observer = new MutationObserver(addScrollbar);
 observer.observe(document.documentElement, { childList: true, subtree: true });
+
 let changeChartRunning = false;
 let mcaHeightRunning = false;
 
