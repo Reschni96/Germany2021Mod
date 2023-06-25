@@ -1084,52 +1084,64 @@ function addScrollbar() {
 
 const observer = new MutationObserver(addScrollbar);
 observer.observe(document.documentElement, { childList: true, subtree: true });
+let changeChartRunning = false;
+let mcaHeightRunning = false;
 
-function changechart(){
+function changechart() {
+    if (changeChartRunning) return;
+    changeChartRunning = true;
+
     resultobserver.disconnect();
+
     if (document.getElementById("overall_vote_statistics")!=null) {
-        overallthing=document.getElementById("overall_vote_statistics").innerHTML;
-        overallthing.toString()
-        overallthing=overallthing.replace("Electoral Votes","Seats")
-        overallthing=overallthing.replace("Candidate","Party")
-        document.getElementById("overall_vote_statistics").innerHTML=overallthing
+        let overallthing=document.getElementById("overall_vote_statistics").innerHTML;
+        overallthing=overallthing.replace("Electoral Votes","Seats");
+        overallthing=overallthing.replace("Candidate","Party");
+        document.getElementById("overall_vote_statistics").innerHTML=overallthing;
     }
     else if (document.getElementById("state_result_data_summary")!=null) {
-        overallthing=document.getElementById("state_result_data_summary").innerHTML;
-        overallthing.toString()
-        overallthing=overallthing.replace("Electoral Votes","Seats")
-        overallthing=overallthing.replace("Candidate","Party")
-        document.getElementById("state_result_data_summary").innerHTML=overallthing
+        let overallthing=document.getElementById("state_result_data_summary").innerHTML;
+        overallthing=overallthing.replace("Electoral Votes","Seats");
+        overallthing=overallthing.replace("Candidate","Party");
+        document.getElementById("state_result_data_summary").innerHTML=overallthing;
     }
     else if (document.getElementById("overall_details_container")!=null) {
-        overallthing=document.getElementById("overall_details_container").innerHTML;
-        overallthing.toString()
-        overallthing=overallthing.replace("Electoral Votes","Seats")
-        overallthing=overallthing.replace("Candidate","Party")
-        document.getElementById("overall_details_container").innerHTML=overallthing
+        let overallthing=document.getElementById("overall_details_container").innerHTML;
+        overallthing=overallthing.replace("Electoral Votes","Seats");
+        overallthing=overallthing.replace("Candidate","Party");
+        document.getElementById("overall_details_container").innerHTML=overallthing;
     }
+
     resultobserver.observe(document.documentElement, { childList: true, subtree: true });
+
+    changeChartRunning = false;
 }
 
-var resultobserver = new MutationObserver(changechart);
+let resultobserver = new MutationObserver(changechart);
 resultobserver.observe(document.documentElement, { childList: true, subtree: true });
 
 function mcaHeight() {
-  var results_container = document.getElementById("results_container");
-  var chart = document.getElementById("myChart")
-  if (results_container) {
-    if (!chart){
-        results_container.style.height = "98%";
-        results_container.style.overflow = "scroll";
+    if (mcaHeightRunning) return;
+    mcaHeightRunning = true;
+
+    let results_container = document.getElementById("results_container");
+    let chart = document.getElementById("myChart");
+
+    if (results_container) {
+        if (!chart){
+            results_container.style.height = "98%";
+            results_container.style.overflow = "scroll";
+        }
+        else {
+            let mca = document.getElementById("main_content_area");
+            mca.style.height = "80%";
+        }
     }
-    else{
-        var mca = document.getElementById("main_content_area");
-        mca.style.height = "80%";
-    }
-  }
+
+    mcaHeightRunning = false;
 }
 
-const mcaObserver = new MutationObserver(mcaHeight);
+let mcaObserver = new MutationObserver(mcaHeight);
 mcaObserver.observe(document.documentElement, { childList: true, subtree: true });
 
 //chart stuff here, setup in cyoa function required
