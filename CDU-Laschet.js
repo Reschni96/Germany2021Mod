@@ -1068,94 +1068,98 @@ cyoAdventure = function (a) {
 
 //css stuff here
 let observerRunning = false;
-
-function addScrollbar() {
-  if(observerRunning) return;
-  observerRunning = true;
-
-  observer.disconnect();
-
-  const overallResult = document.getElementById('overall_result');
-  if (!overallResult) {
-    observer.observe(document.documentElement, { childList: true, subtree: true });
-    observerRunning = false;
-    return;
-  }
-
-  overallResult.style.overflow = 'auto';
-
-  const buttons = document.querySelectorAll('#view_electoral_map, #answer_select_button, #ok_button, #final_election_map_button');
-  const handleClick = () => {
-    overallResult.style.overflow = 'auto';
-  };
-  buttons.forEach(button => button.addEventListener('click', handleClick));
-
-  observer.observe(document.documentElement, { childList: true, subtree: true });
-  observerRunning = false;
-}
-
-const observer = new MutationObserver(addScrollbar);
-observer.observe(document.documentElement, { childList: true, subtree: true });
-
 let changeChartRunning = false;
 let mcaHeightRunning = false;
+let processedNodes = new Set();
 
-function changechart() {
-    if (changeChartRunning) return;
-    changeChartRunning = true;
+// Throttle function
+const throttle = (func, delay) => {
+    let lastFunc;
+    let lastRan;
+    return function() {
+        const context = this;
+        const args = arguments;
+        if (!lastRan) {
+            func.apply(context, args);
+            lastRan = Date.now();
+        } else {
+            clearTimeout(lastFunc);
+            lastFunc = setTimeout(function() {
+                if ((Date.now() - lastRan) >= delay) {
+                    func.apply(context, args);
+                    lastRan = Date.now();
+                }
+            }, delay - (Date.now() - lastRan));
+        }
+    };
+};
 
-    resultobserver.disconnect();
+async function handleMutations(mutationsList, observer) {
+    if (observerRunning) return;
+    observerRunning = true;
 
-    if (document.getElementById("overall_vote_statistics")!=null) {
-        let overallthing=document.getElementById("overall_vote_statistics").innerHTML;
-        overallthing=overallthing.replace("Electoral Votes","Seats");
-        overallthing=overallthing.replace("Candidate","Party");
-        document.getElementById("overall_vote_statistics").innerHTML=overallthing;
+    // stop observing
+    observer.disconnect();
+
+    // addScrollbar
+    const overallResult = document.getElementById('overall_result');
+    if (overallResult && !processedNodes.has(overallResult)) {
+        overallResult.style.overflow = 'auto';
+        const buttons = document.querySelectorAll('#view_electoral_map, #answer_select_button, #ok_button, #final_election_map_button');
+        const handleClick = () => {
+            overallResult.style.overflow = 'auto';
+        };
+        buttons.forEach(button => button.addEventListener('click', handleClick));
+        processedNodes.add(overallResult);
     }
-    else if (document.getElementById("state_result_data_summary")!=null) {
-        let overallthing=document.getElementById("state_result_data_summary").innerHTML;
-        overallthing=overallthing.replace("Electoral Votes","Seats");
-        overallthing=overallthing.replace("Candidate","Party");
-        document.getElementById("state_result_data_summary").innerHTML=overallthing;
-    }
-    else if (document.getElementById("overall_details_container")!=null) {
-        let overallthing=document.getElementById("overall_details_container").innerHTML;
-        overallthing=overallthing.replace("Electoral Votes","Seats");
-        overallthing=overallthing.replace("Candidate","Party");
-        document.getElementById("overall_details_container").innerHTML=overallthing;
+
+    // changechart
+    if (!changeChartRunning) {
+        changeChartRunning = true;
+        const elementIDs = ["overall_vote_statistics", "state_result_data_summary", "overall_details_container"];
+        for(let id of elementIDs) {
+            let element = document.getElementById(id);
+            if (element && !processedNodes.has(element)) {
+                let overallthing = element.innerHTML;
+                overallthing = overallthing.replace("Electoral Votes","Seats");
+                overallthing = overallthing.replace("Candidate","Party");
+                element.innerHTML = overallthing;
+                processedNodes.add(element);
+            }
+        }
+        changeChartRunning = false;
     }
 
-    resultobserver.observe(document.documentElement, { childList: true, subtree: true });
+    // mcaHeight
+    if (!mcaHeightRunning) {
+        mcaHeightRunning = true;
+        let results_container = document.getElementById("results_container");
+        let chart = document.getElementById("myChart");
+        if (results_container && !processedNodes.has(results_container)) {
+            if (!chart){
+                results_container.style.height = "98%";
+                results_container.style.overflow = "scroll";
+            } else {
+                let mca = document.getElementById("main_content_area");
+                if (mca) {
+                    mca.style.height = "80%";
+                }
+            }
+            processedNodes.add(results_container);
+        }
+        mcaHeightRunning = false;
+    }
 
-    changeChartRunning = false;
+    // Resume observing
+    observer.observe(document.documentElement, { childList: true, subtree: true });
+    observerRunning = false;
 }
 
-let resultobserver = new MutationObserver(changechart);
-resultobserver.observe(document.documentElement, { childList: true, subtree: true });
+// Throttled mutation handler
+let throttledHandleMutations = throttle(handleMutations, 200);
 
-function mcaHeight() {
-    if (mcaHeightRunning) return;
-    mcaHeightRunning = true;
-
-    let results_container = document.getElementById("results_container");
-    let chart = document.getElementById("myChart");
-
-    if (results_container) {
-        if (!chart){
-            results_container.style.height = "98%";
-            results_container.style.overflow = "scroll";
-        }
-        else {
-            let mca = document.getElementById("main_content_area");
-            mca.style.height = "80%";
-        }
-    }
-
-    mcaHeightRunning = false;
-}
-
-let mcaObserver = new MutationObserver(mcaHeight);
-mcaObserver.observe(document.documentElement, { childList: true, subtree: true });
+let singleObserver = new MutationObserver(throttledHandleMutations);
+singleObserver.observe(document.documentElement, { childList: true, subtree: true });
 
 //chart stuff here, setup in cyoa function required
 function Chartbuilder(type) {
