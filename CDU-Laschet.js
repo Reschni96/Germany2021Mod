@@ -1072,28 +1072,6 @@ let changeChartRunning = false;
 let mcaHeightRunning = false;
 let processedNodes = new Set();
 
-// Throttle function
-const throttle = (func, delay) => {
-    let lastFunc;
-    let lastRan;
-    return function() {
-        const context = this;
-        const args = arguments;
-        if (!lastRan) {
-            func.apply(context, args);
-            lastRan = Date.now();
-        } else {
-            clearTimeout(lastFunc);
-            lastFunc = setTimeout(function() {
-                if ((Date.now() - lastRan) >= delay) {
-                    func.apply(context, args);
-                    lastRan = Date.now();
-                }
-            }, delay - (Date.now() - lastRan));
-        }
-    };
-};
-
 async function handleMutations(mutationsList, observer) {
     if (observerRunning) return;
     observerRunning = true;
@@ -1155,10 +1133,7 @@ async function handleMutations(mutationsList, observer) {
     observerRunning = false;
 }
 
-// Throttled mutation handler
-let throttledHandleMutations = throttle(handleMutations, 200);
-
-let singleObserver = new MutationObserver(throttledHandleMutations);
+let singleObserver = new MutationObserver(handleMutations);
 singleObserver.observe(document.documentElement, { childList: true, subtree: true });
 
 //chart stuff here, setup in cyoa function required
