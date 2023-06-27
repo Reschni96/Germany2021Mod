@@ -627,14 +627,14 @@ function endingOneBuilder(){
 
             header = "<h2>“At 8:51pm, we can't project yet who will win this election...”</h2>"
             playerPerformance = "When the first results come in, it's already clear that this will be a historic night for the Green Party. You have more than doubled its voteshare compared to the last election and might even be on track to become the strongest party in the Bundestag! After a few celebratory, but tense hours, it becomes clear that you've made history and have lead the Greens to become the strongest party for the first time. However, in response to the tight result, " + secondPartyLeader.leaderName + " has declared that the " + secondParty.fields.last_name + " is also open to leading a government. Nonetheless, you are likely to have an advantage during the coalition talks."
-            adjustWeights(3);
+            adjustWeights(3.5);
             closeElection = true;
             }
 
             else{
              header = "<h2>“A historic night for Germany and the Greens!”</h2>"
             playerPerformance = "Until the very end of the campaign, there were doubts if the Green Party could actually win this election. At 6pm, when the first results come in, you've proven all this doubters wrong: For the first time in the history of the Federal Republic of German, a party other than the CDU/CSU and SPD has won an election. You and your party are ecstatic and celebrate the whole night. While you still have to form a government, your odds of becoming the first Green chancellor are good."
-             adjustWeights(5);
+             adjustWeights(6);
             }
         }
         else if(playerParty===e.final_overall_results[1]){
@@ -674,7 +674,7 @@ function endingOneBuilder(){
 
             header = "<h2>“At 8:51pm, we can't project yet who will win this election...”</h2>"
             playerPerformance = "When the first results come in, it's already clear that this will be a historic night for the Green Party. You have more than doubled its voteshare compared to the last election and might even be on track to become the strongest party in the Bundestag! After a few celebratory, but tense hours, it becomes clear that unfortunately, you came in second - still a very impressive result, but a little disappointing nonetheless. The " + firstParty.fields.last_name + " has the initiative to form the government, but don't give up hope just yet - depending on how the coalition talks go, there's still a chance for you to become chancellor."
-            adjustWeights(2);
+            adjustWeights(3);
             closeElection = true;
             }
 
@@ -1146,10 +1146,27 @@ cyoAdventure = function (a) {
         });
     }
 
-      if (ans === 4021) {
+         if (ans === 4021) {
        coalitions.forEach(coalition => {
-          if ([1, 3, 4, 5].includes(coalition.id)) {
+          if ([1, 3, 4, 5, 6].includes(coalition.id)) {
             coalition.weight += 0.2;
+          }
+        });
+    }
+
+    //coalitions with SPD
+    if ([4086].contains(ans)) {
+       coalitions.forEach(coalition => {
+          if ([1, 4, 6, 12].includes(coalition.id)) {
+            coalition.weight -= 0.2;
+          }
+        });
+    }
+    //coalitions with CDU
+    if ([4062, 4087].contains(ans)) {
+       coalitions.forEach(coalition => {
+          if ([1, 3, 5].includes(coalition.id)) {
+            coalition.weight -= 0.2;
           }
         });
     }

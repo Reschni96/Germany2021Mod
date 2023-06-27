@@ -665,13 +665,13 @@ function endingOneBuilder(){
 
             header = "<h2>“At 8:51pm, we can't project yet who will win this election...”</h2>"
             playerPerformance = "Upon the first release of results, the election appeared to be a tighter race than you and your party had anticipated. However, you managed to gain a small but steady advantage and maintained it as the final results were tallied. Despite experiencing a significant drop in votes compared to the previous election, your party emerged victorious. Nevertheless, the small margin between you and the second-place finisher means that you cannot assert a particularly strong mandate. In response to the tight result, " + secondPartyLeader.leaderName + " has declared that the " + secondParty.fields.last_name + " is also open to leading a government. Nonetheless, you are likely to have an advantage during the coalition talks."
-            adjustWeights(2);
+            adjustWeights(3);
             closeElection = true;
             }
             else{
              header = "<h2>“We can now project that the CDU/CSU has won this election.”</h2>"
             playerPerformance = "Although the result is slightly closer than what you had initially anticipated, you maintained a lead throughout the election night and ultimately emerged as the winner. There is some discontent over the number of votes you've lost compared to the previous election, but most party members concede that this was an unavoidable outcome with Merkel stepping down. Forming a coalition is still necessary for you to become chancellor though. You should have an advantage, but it remains to be seen how easy or difficult the negotiations will be."
-             adjustWeights(5);
+             adjustWeights(6);
             }
         }
         else if(playerParty===e.final_overall_results[1]){
@@ -680,7 +680,7 @@ function endingOneBuilder(){
 
             header = "<h2>“At 8:51pm, we can't project yet who will win this election...”</h2>"
             playerPerformance = "When the first results come in, it becomes clear that the election is going to be a nail-biter. Unfortunately, as the night progresses, you fall into second place, and ultimately lose the election. The margin of defeat is narrow, but it's enough to leave you and your supporters feeling disappointed, despite the difference in seats between you and the  " + firstParty.fields.last_name + " being razor-thin. The eventual outcome is still uncertain, as both you and " + firstPartyLeader.leaderName + " assert your right to form a government and begin coalition negotiations. It's going to be a tough fight, but don't lose hope just yet."
-            adjustWeights(2);
+            adjustWeights(3);
             closeElection = true;
             }
 

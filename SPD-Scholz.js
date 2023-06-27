@@ -631,7 +631,7 @@ function endingOneBuilder(){
 
             header = "<h2>“At 8:51pm, we can't project yet who will win this election...”</h2>"
             playerPerformance = "When the first results of the night are released, it looks closer than most observers had anticipated. Given your polling in the spring, your party members are already happy with how many votes you won after all. It takes a few hours, but finally, the SPD inches ahead in every forecast and is declared winner of the night, to much celebration by the party. However, in response to the tight result, " + secondPartyLeader.leaderName + " has declared that the " + secondParty.fields.last_name + " is also open to leading a government. Nonetheless, you are likely to have an advantage during the coalition talks."
-            adjustWeights(2);
+            adjustWeights(3.5);
             closeElection = true;
             }
 
@@ -643,7 +643,7 @@ function endingOneBuilder(){
             else{
             header = "<h2>“Under Scholz, the SPD returns to form”</h2>"
             playerPerformance = "In the last few days, when your surge in the polls seemed unstoppable, the party had developed high hopes. Now, after the first results came in, it's clear you've not disappointed them. Under your leadership, the SPD has won the election, though with the lowest voteshare for an election winner since the founding of this country. This is still an impressive feat considering your polling just a few months ago. Many are glad that, despite some misgivings, you were made the candidate - though some naysayers claim that another candidate could have performed even better. Now, you just have to jump one last hurdle, the coalition talks, to ascend from Vice Chancellor to Chancellor - but as the winner, you have the clear initiative to form a government"
-             adjustWeights(5);
+             adjustWeights(6);
              }
 
         }
@@ -684,7 +684,7 @@ function endingOneBuilder(){
 
             header = "<h2>“At 8:51pm, we can't project yet who will win this election...”</h2>"
             playerPerformance = "When the first results of the night are released, it looks closer than most observers had anticipated. Given your polling in the spring, your party members are already happy with how many votes you won after all. It takes a few hours, but finally, it becomes clear that unfortunately, you came in second - still a good result, but a little disappointing nonetheless. The " + firstParty.fields.last_name + " has the initiative to form the government, but don't give up hope just yet - depending on how the coalition talks go, there's still a chance for you to rise from Vice Chancellor to Chancellor."
-            adjustWeights(2);
+            adjustWeights(3);
             closeElection = true;
             }
 
@@ -1301,6 +1301,24 @@ cyoAdventure = function (a) {
         });
     }
 
+    //coalitions with Green downgrade
+    if ([4031, 4033, 4070,4073, 4087, 4111, 4114].includes(ans)) {
+       coalitions.forEach(coalition => {
+          if ([1, 4, 6, 12].includes(coalition.id)) {
+            coalition.weight -= 0.2;
+          }
+        });
+    }
+
+     //coalitions with CDU downgrade
+    if ([4021, 4032, 4033, 4071,4073, 4086, 4112, 4114].includes(ans)) {
+       coalitions.forEach(coalition => {
+          if ([1, 2, 10].includes(coalition.id)) {
+            coalition.weight -= 0.2;
+          }
+        });
+    }
+
     //only chart a full campaign
     if([4097, 4096, 4095, 4094].includes(ans)){
         charts.push("line");
@@ -1312,7 +1330,7 @@ cyoAdventure = function (a) {
     }
 }
 
-//css stuff herelet observerRunning = false;
+//css stuff here
 let observerRunning = false;
 let changeChartRunning = false;
 let mcaHeightRunning = false;
