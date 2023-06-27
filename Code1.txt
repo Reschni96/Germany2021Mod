@@ -40,35 +40,26 @@ if (!element) {
     var headerobserver = new MutationObserver(updateHeader);
     headerobserver.observe(document.documentElement, { childList: true, subtree: true });
 
-
     function updateCandidateForm() {
-      formobserver.disconnect();
+
       const heading = document.querySelector("#candidate_form form h3");
 
       if (heading) {
         heading.textContent = "Please select your party:";
       }
-      formobserver.observe(document.documentElement, { childList: true, subtree: true });
-    }
-
-    var formobserver = new MutationObserver(updateCandidateForm);
-    formobserver.observe(document.documentElement, { childList: true, subtree: true });
+     }
 
     function updateRunningMateForm() {
-      runformobserver.disconnect();
+
       const heading = document.querySelector("#running_mate_form form h3");
 
       if (heading) {
         heading.textContent = "Please select your candidate:";
       }
-      runformobserver.observe(document.documentElement, { childList: true, subtree: true });
     }
 
-    var runformobserver = new MutationObserver(updateRunningMateForm);
-    runformobserver.observe(document.documentElement, { childList: true, subtree: true });
 
     function removeCandidateSummary() {
-      sumobserver.disconnect();
       const candidateSummary = document.querySelector("#candidate_summary");
       if (candidateSummary) {
         const ulList = candidateSummary.querySelector("ul");
@@ -76,16 +67,10 @@ if (!element) {
           candidateSummary.removeChild(ulList);
         }
       }
-      sumobserver.observe(document.body, {childList: true,subtree: true});
     }
-
-    var sumobserver = new MutationObserver(removeCandidateSummary);
-    sumobserver.observe(document.body, {childList: true,subtree: true});
 
     function modifyAllocationForm() {
 
-        alloformobserver.disconnect();
-        oppodescobserver.disconnect();
         const form = document.querySelector('form[name="game_type_selection"]');
             if(form){
             const select = form.querySelector('select[name="game_type_id"]');
@@ -104,30 +89,85 @@ if (!element) {
             const h3 = form.querySelector('h3');
             h3.textContent = 'How would you like the seats to be allocated?';
             }
-
-        alloformobserver.observe(document.body, {childList: true,subtree: true});
-        oppodescobserver.observe(document.body, {childList: true,subtree: true});
-    }
-
-    var alloformobserver = new MutationObserver(modifyAllocationForm);
-    alloformobserver.observe(document.body, {childList: true,subtree: true});
-
-    //for some reason, this needs its own observer
+   }
 
     function changeOpponentSelectionDescription(){
 
-            alloformobserver.disconnect();
-            oppodescobserver.disconnect();
             const opponentSelectionDescription = document.getElementById("opponent_selection_description_window");
             if(opponentSelectionDescription){
             opponentSelectionDescription.innerHTML = `<p><strong>Use the default method of allocating seats in the Dutch House of Representatives.</strong></p><p>The Netherlands use a nationwide list-based proportional system. After all the votes have been tallied, successive quotients are calculated for each party. The party with the largest quotient wins one seat, and its quotient is recalculated. This is repeated until the required number of seats is filled.</p><p>This method means every vote is worth nearly the same. It also makes it very easy for small parties to win seats. On the other hand, it is nearly impossible for a single party to win a majority of the seats.</p>`;
             }
-        alloformobserver.observe(document.body, {childList: true,subtree: true});
-        oppodescobserver.observe(document.body, {childList: true,subtree: true});
+  }
+
+    function walkAndReplace(node, wordsToFind) {
+        if (node.nodeType === Node.TEXT_NODE) {
+            // Ignore nodes that are already wrapped with our span
+            if (node.parentNode.nodeName.toLowerCase() === "span" && node.parentNode.style.color === 'white') {
+                return;
+            }
+
+            let matched = false;
+            let newNodeValue = node.nodeValue;
+
+            for(let word of wordsToFind) {
+                let searchRegEx = new RegExp(word, 'g');
+                if (searchRegEx.test(newNodeValue)) {
+                    matched = true;
+                    newNodeValue = newNodeValue.replace(searchRegEx, `<span style="color: white;">${word}</span>`);
+                }
+            }
+
+            if (matched) {
+                let div = document.createElement('div');
+                div.innerHTML = newNodeValue;
+                let parent = node.parentNode;
+                while (div.firstChild) {
+                    parent.insertBefore(div.firstChild, node);
+                }
+                parent.removeChild(node);
+            }
+
+        } else {
+            for(let i = 0; i < node.childNodes.length; i++) {
+                walkAndReplace(node.childNodes[i], wordsToFind);
+            }
+        }
     }
 
-    var oppodescobserver = new MutationObserver(changeOpponentSelectionDescription)
-    oppodescobserver.observe(document.body, {childList: true,subtree: true});
+    let changesInProgress = false;
+
+    // Define the MutationObserver
+    let masterObserver = new MutationObserver(masterFunction);
+
+
+    // Master function
+    function masterFunction() {
+        if (changesInProgress) return;
+        changesInProgress = true;
+        masterObserver.disconnect();
+
+        // Call all the functions here
+        updateCandidateForm();
+        updateRunningMateForm();
+        removeCandidateSummary();
+        modifyAllocationForm();
+        changeOpponentSelectionDescription();
+        applyColorStyles();
+
+        // Re-observe the document
+        changesInProgress = false;
+        masterObserver.observe(document.body, { childList: true, subtree: true });
+    }
+
+    // Start observing the document with the master observer
+    masterObserver.observe(document.body, { childList: true, subtree: true });
+
+    // Ensure we don't re-enter applyColorStyles
+    function applyColorStyles() {
+        let wordsToFind = ['Please select the election you will run in:', 'This scenario was made by u/Vilvilea.', 'Please select your party:', 'Please select your candidate', 'How would you like the seats to be allocated?', 'Please choose your difficulty level:'];
+
+        walkAndReplace(document.body, wordsToFind);
+    }
 
     var invisibleElement = document.createElement('div');
     invisibleElement.style.display = 'none';
