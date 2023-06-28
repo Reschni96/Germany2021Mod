@@ -1783,7 +1783,3 @@ var charts = ["bar", "seats"]
 
 const buttonobserver = new MutationObserver(addMyButton);
 buttonobserver.observe(document.documentElement, { childList: true, subtree: true });
-
-if (Math.random() < 0.5) {
-    campaignTrail_temp.election_json[0].fields.has_visits = 0;
-}

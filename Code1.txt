@@ -87,7 +87,7 @@ if (!element) {
 
             // change h3 text
             const h3 = form.querySelector('h3');
-            h3.textContent = 'How would you like the seats to be allocated?';
+            h3.textContent = 'How would you like the seats to be allocated';
             }
    }
 
@@ -164,7 +164,7 @@ if (!element) {
 
     // Ensure we don't re-enter applyColorStyles
     function applyColorStyles() {
-        let wordsToFind = ['Please select the election you will run in:', 'This scenario was made by u/Vilvilea.', 'Please select your party:', 'Please select your candidate', 'How would you like the seats to be allocated?', 'Please choose your difficulty level:'];
+        let wordsToFind = ['Please select the election you will run in:', 'This scenario was made by u/Vilvilea.', 'Please select your party:', 'Please select your candidate:', 'How would you like the seats to be allocated?', 'Please choose your difficulty level:'];
 
         walkAndReplace(document.body, wordsToFind);
     }
