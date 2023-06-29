@@ -9,6 +9,7 @@ campaignTrail_temp.temp_election_list = [{"id": 9, "year": 2021, "is_premium": 0
 campaignTrail_temp.show_premium = true;
 campaignTrail_temp.premier_ab_test_version = -1;
 campaignTrail_temp.credits = 'u/Vilvilea';
+campaignTrail_temp.coalitionDifficulty = 1;
 $("#game_window")[0].style.backgroundImage = "url(https://i.imgur.com/9nFY6eE.jpg)";
 nct_stuff.themes[nct_stuff.selectedTheme].coloring_title = "#070785"
 nct_stuff.themes[nct_stuff.selectedTheme].coloring_window = "#031299"
@@ -98,6 +99,65 @@ if (!element) {
             opponentSelectionDescription.innerHTML = `<p><strong>Use the default method of allocating seats in the Dutch House of Representatives.</strong></p><p>The Netherlands use a nationwide list-based proportional system. After all the votes have been tallied, successive quotients are calculated for each party. The party with the largest quotient wins one seat, and its quotient is recalculated. This is repeated until the required number of seats is filled.</p><p>This method means every vote is worth nearly the same. It also makes it very easy for small parties to win seats. On the other hand, it is nearly impossible for a single party to win a majority of the seats.</p>`;
             }
   }
+  function addCoalitionDifficultyDropdown() {
+        var difficultyDiv = document.getElementById("difficulty_level");
+        if (difficultyDiv && !document.getElementById("coalitionDifficultyDropdown")) {
+            var difficulties = ["Guaranteed", "Very Easy", "Easy", "Normal", "Hard", "Impossible"];
+            var difficultyValues = [1000000, 5, 1.5, 1, 0.75, 0.2];
+            var dropdown = document.createElement("select");
+            dropdown.id = "coalitionDifficultyDropdown";
+
+            for (var i = 0; i < difficulties.length; i++) {
+                var opt = document.createElement("option");
+                opt.text = difficulties[i];
+                if (difficulties[i] === "Normal") {
+                    opt.selected = true;
+                }
+                opt.value = difficultyValues[i];
+                dropdown.options.add(opt);
+            }
+
+            var form = document.createElement("form");
+            form.name = "coalition_difficulty_level_selection";
+            var header = document.createElement("h3");
+            header.textContent = "Select coalition difficulty:";
+            form.appendChild(header);
+            form.appendChild(dropdown);
+            difficultyDiv.appendChild(form);
+
+            var visitsForm = document.createElement("form");
+            visitsForm.name = "state_visits_selection";
+            var visitsHeader = document.createElement("h3");
+            visitsHeader.textContent = "Enable state visits";
+            visitsForm.appendChild(visitsHeader);
+            var visitsCheckbox = document.createElement("input");
+            visitsCheckbox.type = "checkbox";
+            visitsCheckbox.id = "stateVisitsCheckbox";
+            visitsCheckbox.checked = true;
+            campaignTrail_temp.election_json[0].fields.has_visits = 1;
+            visitsForm.appendChild(visitsCheckbox);
+            difficultyDiv.appendChild(visitsForm);
+
+            visitsCheckbox.addEventListener("change", function() {
+                campaignTrail_temp.election_json[0].fields.has_visits = this.checked ? 1 : 0;
+            });
+
+            var difficultyForm = document.querySelector('form[name="difficulty_level_selection"]');
+            var difficultyHeader = difficultyForm.querySelector('h3');
+            difficultyHeader.textContent = "Select campaign difficulty:";
+
+            var forms = document.querySelectorAll("#difficulty_level form");
+            for (var i = 0; i < forms.length; i++) {
+              forms[i].style.display = "inline-block";
+              forms[i].style.paddingLeft = "10px"; // adjust the value as needed
+              forms[i].style.paddingRight = "10px"; // adjust the value as needed
+            }
+
+            dropdown.addEventListener("change", function() {
+                campaignTrail_temp.coalitionDifficulty = this.value;
+            });
+        }
+    }
 
     function walkAndReplace(node, wordsToFind) {
         if (node.nodeType === Node.TEXT_NODE) {
@@ -153,6 +213,7 @@ if (!element) {
         modifyAllocationForm();
         changeOpponentSelectionDescription();
         applyColorStyles();
+        addCoalitionDifficultyDropdown();
 
         // Re-observe the document
         changesInProgress = false;
@@ -164,7 +225,7 @@ if (!element) {
 
     // Ensure we don't re-enter applyColorStyles
     function applyColorStyles() {
-        let wordsToFind = ['Please select the election you will run in:', 'This scenario was made by u/Vilvilea.', 'Please select your party:', 'Please select your candidate:', 'How would you like the seats to be allocated?', 'Please choose your difficulty level:'];
+        let wordsToFind = ['Enable state visits?', 'Select coalition difficulty:', 'Please select the election you will run in:', 'This scenario was made by u/Vilvilea.', 'Please select your party:', 'Please select your candidate:', 'How would you like the seats to be allocated?', 'Select campaign difficulty:'];
 
         walkAndReplace(document.body, wordsToFind);
     }
