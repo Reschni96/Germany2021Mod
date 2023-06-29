@@ -1208,6 +1208,7 @@ cyoAdventure = function (a) {
 
 	if ([4003, 4004, 4098, 4009, 4014, 4018].includes(ans)) {
 	    moderate++;
+
 	}
     if (ans === 4007) {
 	    moderate += 2;
