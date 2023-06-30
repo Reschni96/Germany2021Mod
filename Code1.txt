@@ -78,7 +78,7 @@ if (!element) {
 
             // change option value
             const option = select.querySelector('option[value="1"]');
-            option.textContent = 'Default (D\'Hondt Proportional)';
+            option.textContent = 'Proportional (Bundestag)';
 
 
             var optionToRemove = document.querySelector('option[value="2"]');
@@ -96,7 +96,7 @@ if (!element) {
 
             const opponentSelectionDescription = document.getElementById("opponent_selection_description_window");
             if(opponentSelectionDescription){
-            opponentSelectionDescription.innerHTML = `<p><strong>Use the default method of allocating seats in the Dutch House of Representatives.</strong></p><p>The Netherlands use a nationwide list-based proportional system. After all the votes have been tallied, successive quotients are calculated for each party. The party with the largest quotient wins one seat, and its quotient is recalculated. This is repeated until the required number of seats is filled.</p><p>This method means every vote is worth nearly the same. It also makes it very easy for small parties to win seats. On the other hand, it is nearly impossible for a single party to win a majority of the seats.</p>`;
+            opponentSelectionDescription.innerHTML = `<p><strong>Use the allocation method for the German Bundestag.</strong></p><p>The German electoral system is quite complex. Every voter has two votes, one for a party and one for a directly elected candidate in their constituency. Theoretically, half the parliament is determined first past the post by these direct elections and half proportionally through the party votes, with seats allocated with the Sainte-Laguë method on a per-state basis.<br> However, if a party receives more seats through this system than it would if the parliament was elected by strictly proportional votes, they get extra (overhanging) mandates and all over parties get compensatory mandates. Overall, all but three overhanging mandates get compensated. <br> To enter parliament, a party either needs 5% of the proportional vote or win in at least three districts. <br> For the purpose of this game, the system has been simplified. Only the proportional vote has been simulated - though there are some heuristics to guess the number of constituencies won by parties where this is relevant.</p>`;
             }
   }
   function addCoalitionDifficultyDropdown() {
