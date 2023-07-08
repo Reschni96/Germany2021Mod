@@ -109,9 +109,9 @@ const construct = (a = 1) => {
   return html;
 }
 
-const endingConstructor = (a = 1) => {
-  $("#final_results_description")[0].innerHTML = construct(a);
-}
+ endingConstructor = (a = 1) => {
+   $("#final_results_description")[0].innerHTML = construct(a);
+ }
 
 
 e.multiple_endings = true;
