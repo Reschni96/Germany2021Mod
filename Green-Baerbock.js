@@ -70,55 +70,56 @@ campaignTrail_temp.game_start_logging_id = '3662498';
 
 // constructs endings based on header and pages
 
-construct = (a = 1) => {
+const construct = (a = 1) => {
+  e.page = e.page + a < e.pages.length ? e.page + a : 0;
+  let html = e.header;
+  html += e.pages[e.page] + "<br>";
+  if (e.page > 0) {
+    html += `<button onclick='endingConstructor(a = -1)'>Back</button>`
+  }
+  if (e.page < e.pages.length - 1) {
+    html += `<button onclick='endingConstructor(a = 1)'>Next</button>`
+  }
 
-   e.page = e.page + a < e.pages.length ? e.page + a : 0
-   let html = e.header;
-   html += e.pages[e.page] + "<br>";
-   if (e.page > 0) {
-     html += `<button onclick='endingConstructor(a = -1)'>Back</button>`
-   }
-   if (e.page < e.pages.length - 1) {
-     html += `<button onclick='endingConstructor(a = 1)'>Next</button>`
-   }
+  setTimeout(() => {
+    let candImg = $(".person_image")[0];
+    if (candImg) {
+      if (e.image === true) {
+        candImg.remove()
+        $("#final_results_description")[0].style = `
+          text-align:center;
+          width: 70%;
+          text-overflow: ellipsis;
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+        `;
+      } else {
+        let imageUrl = '';
+        if (Array.isArray(e.image)) {
+          imageUrl = e.image[e.page % e.image.length];
+        } else {
+          imageUrl = e.image;
+        }
+        candImg.src = imageUrl;
+      }
+    }
+  }, 10);
 
-   if (e.image == true)
-     setTimeout(()=>{
-       candImg = $(".person_image")[0]
-       if (candImg) {
-         candImg.remove()
-         $("#final_results_description")[0].style = `
-           text-align:center;
-           width: 70%;
-           text-overflow: ellipsis;
-           display: block;
-           margin-left: auto;
-           margin-right: auto;
-         `
-       }
-     }, 10)
-   else if (e.image)
-   setTimeout(()=>{
-       candImg = $(".person_image")[0];
-       if (candImg)
-         candImg.src = e.image;
-     }, 10)
+  return html;
+}
 
-   return html;
- }
+const endingConstructor = (a = 1) => {
+  $("#final_results_description")[0].innerHTML = construct(a);
+}
 
- endingConstructor = (a = 1) => {
-   $("#final_results_description")[0].innerHTML = construct(a);
- }
 
 e.multiple_endings = true;
 
- e.header = "<h1>Error-Handling Message (oops)</h1>";
- e.pages = ["<p>This is an error handler</p>", "<p>I dun goof</p>", "<p>Contact me on Discord (DecstarG#4326) or Reddit (u/DecstarG) and we'll see if I can fix up your problem.</p>", "<p>Sorry!</p>"];
  e.page = 0;
  e.initDC = false
 
- endingPicker = (out, totv, aa, quickstats) => {
+ endingPicker = () => {
 
   if (!e.initDC) {
     e.initDC = true

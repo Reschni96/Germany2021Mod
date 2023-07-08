@@ -74,55 +74,56 @@ campaignTrail_temp.game_start_logging_id = '3662498';
 
 // constructs endings based on header and pages
 
-construct = (a = 1) => {
+const construct = (a = 1) => {
+  e.page = e.page + a < e.pages.length ? e.page + a : 0;
+  let html = e.header;
+  html += e.pages[e.page] + "<br>";
+  if (e.page > 0) {
+    html += `<button onclick='endingConstructor(a = -1)'>Back</button>`
+  }
+  if (e.page < e.pages.length - 1) {
+    html += `<button onclick='endingConstructor(a = 1)'>Next</button>`
+  }
 
-   e.page = e.page + a < e.pages.length ? e.page + a : 0
-   let html = e.header;
-   html += e.pages[e.page] + "<br>";
-   if (e.page > 0) {
-     html += `<button onclick='endingConstructor(a = -1)'>Back</button>`
-   }
-   if (e.page < e.pages.length - 1) {
-     html += `<button onclick='endingConstructor(a = 1)'>Next</button>`
-   }
+  setTimeout(() => {
+    let candImg = $(".person_image")[0];
+    if (candImg) {
+      if (e.image === true) {
+        candImg.remove()
+        $("#final_results_description")[0].style = `
+          text-align:center;
+          width: 70%;
+          text-overflow: ellipsis;
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+        `;
+      } else {
+        let imageUrl = '';
+        if (Array.isArray(e.image)) {
+          imageUrl = e.image[e.page % e.image.length];
+        } else {
+          imageUrl = e.image;
+        }
+        candImg.src = imageUrl;
+      }
+    }
+  }, 10);
 
-   if (e.image == true)
-     setTimeout(()=>{
-       candImg = $(".person_image")[0]
-       if (candImg) {
-         candImg.remove()
-         $("#final_results_description")[0].style = `
-           text-align:center;
-           width: 70%;
-           text-overflow: ellipsis;
-           display: block;
-           margin-left: auto;
-           margin-right: auto;
-         `
-       }
-     }, 10)
-   else if (e.image)
-   setTimeout(()=>{
-       candImg = $(".person_image")[0];
-       if (candImg)
-         candImg.src = e.image;
-     }, 10)
+  return html;
+}
 
-   return html;
- }
+const endingConstructor = (a = 1) => {
+  $("#final_results_description")[0].innerHTML = construct(a);
+}
 
- endingConstructor = (a = 1) => {
-   $("#final_results_description")[0].innerHTML = construct(a);
- }
 
 e.multiple_endings = true;
 
- e.header = "<h1>Error-Handling Message (oops)</h1>";
- e.pages = ["<p>This is an error handler</p>", "<p>I dun goof</p>", "<p>Contact me on Discord (DecstarG#4326) or Reddit (u/DecstarG) and we'll see if I can fix up your problem.</p>", "<p>Sorry!</p>"];
  e.page = 0;
  e.initDC = false
 
- endingPicker = (out, totv, aa, quickstats) => {
+ endingPicker = () => {
 
   if (!e.initDC) {
     e.initDC = true
@@ -190,7 +191,7 @@ e.multiple_endings = true;
       if (e.final_overall_results[0].candidate === 78){
           e.header="<h2>“The SPD and Rolf Mützenich are the winners of this night”</h2>"
           e.pages=[`<p>To the surprise of most pundits, Rolf Mützenich has actually won the election for the SPD and now appears to be on track to be elected chancellor. Considering the polling last year, his performance is widely celebrated, and more than a few party members express relief that he was selected over you. Privately, you think that this was just a winnable election, with how much Baerbock and Laschet screwed up, but oh well - you are happy that the SPD won, too!</p><p> Maybe there will be a spot in Mützenich's cabinet for you, or maybe you will return to the state politics of Hamburg. Either way, it's unlikely you'll reach a role as important as Vice Chancellor again, but wh knows - maybe at some point, the SPD will decide to nominate you after all.</p>` ]
-          e.image="https://www.bundestag.de/resource/image/225552/3x4/594/792/41c47f0a63894c714cff2ac9fc890afb/2AC076E6C48DE98561C2E0BA18823C1A/kuppel.jpg"
+          e.image=["https://www.bundestag.de/resource/image/225552/3x4/594/792/41c47f0a63894c714cff2ac9fc890afb/2AC076E6C48DE98561C2E0BA18823C1A/kuppel.jpg",]
 
           return construct(0);
       }
