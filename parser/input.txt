@@ -6,9 +6,9 @@ F1: Scholz and his partner in the leadership challenge, Klara Geywitz, narrowly 
 A2: The European elections were a wake-up call that we need to make some changes. That’s why I support Saskia Esken and Norbert Walter-Borjans in this challenge. They can guide the party on a more leftist course while still remaining in the Grand Coalition.
 F2: Perhaps due to your support, they get the most votes in the first round and win the second. Scholz’s image is damaged from losing, your star is rising, and your relationship with the new leadership starts on good footing.(+2 point or nomination)
 A3: It’s clear what’s to blame for the current malaise - our decision to participate in yet another Grand Coalition. That’s why I’m backing the duo of Lauterbach und Scheer, who advocate for an end of this construct.
-F3: Yery closely, Lauterbach and Scheer make it into the second round, where they end up losing against Esken and Walter-Borjans. Scholz, who didn’t even make it into the second round, is gravely embarrassed by not even making it out of round one. (+1 point)
+F3: Very closely, Lauterbach and Scheer make it into the second round, where they end up losing against Esken and Walter-Borjans. Scholz, who didn’t even make it into the second round, is gravely embarrassed by not even making it out of round one. (+1 point)
 A4: When I ascended from temporary to permanent leadership of the parliamentary group, I had almost unanimous support. That’s why I believe that I should look into running in the leadership election myself.
-F4:After talking to some advisors and trying to find a suitable female partner to run with, you decide against entering into the contest after all. Esken and Walter-Borjans win in the second run, you look indecisive and weak. Some member of the parliamentary group even have second thoughts about you as leader. (-1 point)
+F4: After talking to some advisors and trying to find a suitable female partner to run with, you decide against entering into the contest after all. Esken and Walter-Borjans win in the second run, you look indecisive and weak. Some member of the parliamentary group even have second thoughts about you as leader. (-1 point)
 
 Q2: November 2019: An agreed half-time evaluation of the Grand Coalition is coming up soon. As leader of the parliamentary group, you’re not directly involved in the evaluation process - however, your opinion is still sought and your actions here could indicate your general leadership style. How do you want to proceed?
 A1: I’m not part of the government, so it’s not my job to influence this evaluation. Whatever is decided, I’ll make sure that the parliamentary group follows through with implementing it. That is my job, after all.
@@ -35,7 +35,7 @@ F4: Without your intervention, the nomination process becomes very heated, with 
 
 If 2 points or fewer
 Q4: July 2020: There are rumours swirling around that you are considered as chancellor candidate for the upcoming election - while most insiders believe that Scholz will be nominated, your name is also dropped quite often, with one magazin even stating that the party has decided on you. How do you want to approach this situation?
-A1:This is a great opportunity. I will talk to the party leadership -  Esken and Walter-Borjans - in private, to convince them that I’m a better candidate than Scholz. From what I’ve heard, they prefer me anyway.
+A1: This is a great opportunity. I will talk to the party leadership -  Esken and Walter-Borjans - in private, to convince them that I’m a better candidate than Scholz. From what I’ve heard, they prefer me anyway.
 F1: It seems you heard wrong. While they tell you that they like you, they have already decided on Scholz as they see him as the stronger nominee. You have to watch from the sidelines as he tries to become chancellor.
 A2: I’m not going to comment on any rumours that are circulating here. I trust the party has a plan, and whatever will happen, I accept it.
 F2: When you hear that the party has chosen Scholz over you, you feel a bit of disappointment, though it’s no real surprise. You now have to watch from the sidelines as he tries to become chancellor.
@@ -254,7 +254,7 @@ F4: Potential CDU voters who don’t like Laschet might be won over this way. Go
 
 If exactly 3 points at Q4
 Q26: July 2020: There are rumours swirling around that you are considered as chancellor candidate for the upcoming election - while most insiders believe that Scholz will be nominated, your name is also dropped quite often, with one magazin even stating that the party has decided on you. How do you want to approach this situation?
-A1:This is a great opportunity. I will talk to the party leadership -  Esken and Walter-Borjans - in private, to convince them that I’m a better candidate than Scholz. From what I’ve heard, they prefer me anyway.
+A1: This is a great opportunity. I will talk to the party leadership -  Esken and Walter-Borjans - in private, to convince them that I’m a better candidate than Scholz. From what I’ve heard, they prefer me anyway.
 F1: It seems you heard right. They first push for you behind closed doors, and once they have most of the party behind you, officially introduce you as candidate. Congratulations and good luck with the campaign!
 A2: I’m not going to comment on any rumours that are circulating here. I trust the party has a plan, and whatever will happen, I accept it.
 F2: When you hear that the party has chosen Scholz over you, you feel a bit of disappointment, though it’s no real surprise. You now have to watch from the sidelines as he tries to become chancellor.
@@ -265,7 +265,7 @@ F4: With this pitch, you’ve laid the divisions within the party open. Unfortun
 
 If 4-5 points at question 4
 Q27: July 2020: There are rumours swirling around that you are considered as chancellor candidate for the upcoming election - while most insiders believe that Scholz will be nominated, your name is also dropped quite often, with one magazin even stating that the party has decided on you. How do you want to approach this situation?
-A1:This is a great opportunity. I will talk to the party leadership -  Esken and Walter-Borjans - in private, to convince them that I’m a better candidate than Scholz. From what I’ve heard, they prefer me anyway.
+A1: This is a great opportunity. I will talk to the party leadership -  Esken and Walter-Borjans - in private, to convince them that I’m a better candidate than Scholz. From what I’ve heard, they prefer me anyway.
 F1: It seems you heard right. They first push for you behind closed doors, and once they have most of the party behind you, officially introduce you as candidate. Congratulations and good luck with the campaign!
 A2: I’m not going to comment on any rumours that are circulating here. I trust the party has a plan, and whatever will happen, I accept it.
 F2: When you hear that the party has chosen Scholz over you, you feel a bit of disappointment, though it’s no real surprise. You now have to watch from the sidelines as he tries to become chancellor.
@@ -276,7 +276,7 @@ F4: With this pitch, you’ve laid the divisions within the party open. The publ
 
 If 6 points:
 Q28: July 2020: There are rumours swirling around that you are considered as chancellor candidate for the upcoming election - while most insiders believe that Scholz will be nominated, your name is also dropped quite often, with one magazin even stating that the party has decided on you. How do you want to approach this situation?
-A1:This is a great opportunity. I will talk to the party leadership -  Esken and Walter-Borjans - in private, to convince them that I’m a better candidate than Scholz. From what I’ve heard, they prefer me anyway.
+A1: This is a great opportunity. I will talk to the party leadership -  Esken and Walter-Borjans - in private, to convince them that I’m a better candidate than Scholz. From what I’ve heard, they prefer me anyway.
 F1: It seems you heard right. They first push for you behind closed doors, and once they have most of the party behind you, officially introduce you as candidate. Congratulations and good luck with the campaign!
 A2: I’m not going to comment on any rumours that are circulating here. I trust the party has a plan, and whatever will happen, I accept it.
 F2: To the surprise of many people - even your own - the plan of the party is to place you as their nominee for the election. It seems like your position within the party was just that strong. Congratulations and good luck with the campaign!
