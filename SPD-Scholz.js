@@ -70,6 +70,7 @@ campaignTrail_temp.game_start_logging_id = '3662498';
     var thirdPlace = false;
     var midResult = false;
     var badResult = false;
+    var weightsUpdated = false;
 
 
 // constructs endings based on header and pages
@@ -206,7 +207,7 @@ e.multiple_endings = true;
   e.header=ending[0];
   e.pages=ending[1];
   e.image="https://www.bundestag.de/resource/image/225552/3x4/594/792/41c47f0a63894c714cff2ac9fc890afb/2AC076E6C48DE98561C2E0BA18823C1A/kuppel.jpg"
-  console.log(possibleCoalitions)
+
 
   return construct(0);
   }
@@ -343,6 +344,15 @@ function addCoalitions() {
             selectButton.textContent = "Negotiate!";
             selectButton.addEventListener("click", () => {
 
+             if (!weightsUpdated) {  // If weights have not been updated yet
+                  possibleCoalitions.forEach(coalition => {
+                    const hasPlayerParty = coalition.parties.includes(e.candidate_id);
+                    if (hasPlayerParty) {
+                      coalition.weight *= e.coalitionDifficulty;
+                    }
+                  });
+                  weightsUpdated = true;  // Set the flag to true after updating weights
+                }
               // Calculate total weight of possible coalitions
               let totalWeight = 0;
               possibleCoalitions.forEach(coalition => {
@@ -350,7 +360,6 @@ function addCoalitions() {
                   totalWeight += coalition.weight;
                 }
               });
-              console.log(possibleCoalitions)
 
               // Choose a random number between 0 and total weight
               const randomWeight = Math.random() * totalWeight;

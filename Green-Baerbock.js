@@ -67,6 +67,7 @@ campaignTrail_temp.game_start_logging_id = '3662498';
     var closeElection = false;
     var thirdPlace = false;
     var sneaky = false;
+    var weightsUpdated = false;
 
 // constructs endings based on header and pages
 
@@ -336,6 +337,16 @@ function addCoalitions() {
               }
              }
             }
+
+            if (!weightsUpdated) {  // If weights have not been updated yet
+                  possibleCoalitions.forEach(coalition => {
+                    const hasPlayerParty = coalition.parties.includes(e.candidate_id);
+                    if (hasPlayerParty) {
+                      coalition.weight *= e.coalitionDifficulty;
+                    }
+                  });
+                  weightsUpdated = true;  // Set the flag to true after updating weights
+                }
 
               // Calculate total weight of possible coalitions
               let totalWeight = 0;
