@@ -1249,11 +1249,11 @@ cyoAdventure = function (a) {
         }
     }
 
-
-
-	if ([4028, 4030].includes(ans)) {
-	    campaignTrail_temp.questions_json[13]=extraQuestions[3];
-	}
+        if ([4012, 4013, 4099, 4103, 4014, 4100, 4104, 4108, 4015, 4101].includes(ans)) {
+            scholz = true;
+            campaignTrail_temp.question_number=24;
+        }
+    }
 
     if (ans === 4087) {
        campaignTrail_temp.questions_json[23]=extraQuestions[5];
