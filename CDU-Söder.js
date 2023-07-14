@@ -373,7 +373,8 @@ function addCoalitions() {
               if (selectedCoalition) {
                 negotiationsDone = true;
                 e.page = 0;
-                p();
+                endingPicker();
+                endingConstructor();
 
               } else {
                 alert("No coalition selected");
@@ -982,7 +983,7 @@ for (let i = 0; i < 7; i++) {
 
 cyoAdventure = function (a) {
     ans = campaignTrail_temp.player_answers[campaignTrail_temp.player_answers.length - 1]
-    let pop_vote = getLatestRes(A(return_type=2))[0];
+    let pop_vote = e.current_results[0];
     let playerPolling = (pop_vote.find(p => p.pk === 77)).pvp;
     let i = 0;
 
@@ -1478,7 +1479,17 @@ function executeWithRetry(fn, ...args) {
 
 function charting(chartIndex=0){
 
-    $("#game_window").html('<div class="game_header">\t<h2>NEW CAMPAIGN TRAIL</h2>\t</div>\t<div id="main_content_area">\t<div id="results_container"><br>  <div id="title_container"><button id="backButton">Back</button><h3 class="campaign-title">Election Charts:</h3><button id="nextButton">Next</button></div><br><div id="chartcontainer"><figure class="highcharts-figure"><div id="myChart"></div></figure></div></div></div><div id="map_footer">\t\t<button class="final_menu_button" id="overall_results_button">Final Election Results</button>\t\t<button class="final_menu_button" id="final_election_map_button">Election Map</button>\t\t<button class="final_menu_button" id="state_results_button">Results by State</button>\t\t<button class="final_menu_button" id="overall_details_button">Overall Results Details</button>\t\t<button class="final_menu_button" id="recommended_reading_button">Further Reading</button>\t\t<button class="final_menu_button" id="play_again_button">Play Again!</button>\t</div>');
+    // Select the element to keep
+    let mapFooter = $('#map_footer');
+
+    // Temporarily detach the element from DOM (it preserves bound events and data)
+    mapFooter.detach();
+
+
+    $("#game_window").html('<div class="game_header">\t<h2>NEW CAMPAIGN TRAIL</h2>\t</div>\t<div id="main_content_area">\t<div id="results_container"><br>  <div id="title_container"><button id="backButton">Back</button><h3 class="campaign-title">Election Charts:</h3><button id="nextButton">Next</button></div><br><div id="chartcontainer"><figure class="highcharts-figure"><div id="myChart"></div></figure></div></div></div>');
+
+    $("#game_window").append(mapFooter);
+    $('#map_footer button').prop('disabled', false);
 
     var container = document.getElementById("title_container");
     var backButton = document.getElementById("backButton");
@@ -1502,21 +1513,7 @@ function charting(chartIndex=0){
       position: "relative",
       zIndex: "9999"
     });
-
-
-        $("#overall_results_button").click(function() {
-        p()
-    }), $("#final_election_map_button").click(function() {
-        h()
-    }), $("#state_results_button").click(function() {
-        g()
-    }), $("#overall_details_button").click(function() {
-        b()
-    }), $("#recommended_reading_button").click(function() {
-        w()
-    }), $("#play_again_button").click(function() {
-        y()
-    }),$("#backButton").click(function() {
+    $("#backButton").click(function() {
         charting(chartIndex-1)
     }),
     $("#nextButton").click(function() {
