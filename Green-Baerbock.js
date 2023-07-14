@@ -71,15 +71,15 @@ campaignTrail_temp.game_start_logging_id = '3662498';
 
 // constructs endings based on header and pages
 
-const construct = (a = 1) => {
-  e.page = e.page + a < e.pages.length ? e.page + a : 0;
+const construct = (a = 0) => {
+  e.page = a;
   let html = e.header;
   html += e.pages[e.page] + "<br>";
   if (e.page > 0) {
-    html += `<button onclick='endingConstructor(a = -1)'>Back</button>`
+    html += `<button onclick='endingConstructor(${e.page - 1})'>Back</button>`
   }
   if (e.page < e.pages.length - 1) {
-    html += `<button onclick='endingConstructor(a = 1)'>Next</button>`
+    html += `<button onclick='endingConstructor(${e.page + 1})'>Next</button>`
   }
 
   setTimeout(() => {
@@ -1115,7 +1115,7 @@ for (let i = 0; i < 7; i++) {
 cyoAdventure = function (a) {
     ans = campaignTrail_temp.player_answers[campaignTrail_temp.player_answers.length - 1]
     let pop_vote = e.current_results[0];
-    let playerPolling = (pop_vote.find(p => p.pk === 79)).pvp;
+    let playerPolling = (pop_vote.find(p => p.pk === e.candidate_id)).pvp;
     let i = 0;
 
     pop_vote.sort((a, b) => {
@@ -1179,7 +1179,7 @@ cyoAdventure = function (a) {
     }
 
     //coalitions with SPD
-    if ([4086].contains(ans)) {
+    if (4086===ans) {
        coalitions.forEach(coalition => {
           if ([1, 4, 6, 12].includes(coalition.id)) {
             coalition.weight -= 0.2;
@@ -1187,7 +1187,7 @@ cyoAdventure = function (a) {
         });
     }
     //coalitions with CDU
-    if ([4062, 4117, 4087].contains(ans)) {
+    if ([4062, 4117, 4087].includes(ans)) {
        coalitions.forEach(coalition => {
           if ([1, 3, 5].includes(coalition.id)) {
             coalition.weight -= 0.2;
@@ -1623,7 +1623,6 @@ function executeWithRetry(fn, ...args) {
   }
 }
 
-
 function charting(chartIndex=0){
 
     // Select the element to keep
@@ -1631,6 +1630,9 @@ function charting(chartIndex=0){
 
     // Temporarily detach the element from DOM (it preserves bound events and data)
     mapFooter.detach();
+
+    // Cache the current content of #game_window
+    let cachedContent = $('#game_window').html();
 
 
     $("#game_window").html('<div class="game_header">\t<h2>NEW CAMPAIGN TRAIL</h2>\t</div>\t<div id="main_content_area">\t<div id="results_container"><br>  <div id="title_container"><button id="backButton">Back</button><h3 class="campaign-title">Election Charts:</h3><button id="nextButton">Next</button></div><br><div id="chartcontainer"><figure class="highcharts-figure"><div id="myChart"></div></figure></div></div></div>');
@@ -1670,6 +1672,25 @@ function charting(chartIndex=0){
     setTimeout(function() {
         executeWithRetry(Chartbuilder, charts[chartIndex]);
   }, 100);
+
+    $('#map_footer button:not(#chart_button)').on('click', function() {
+        // Check if #chartcontainer exists in the current #game_window
+        if ($('#game_window #chartcontainer').length > 0) {
+            // If it does, restore the cached content
+            let mapFooter = $('#map_footer');
+            mapFooter.detach();
+            $('#game_window').html(cachedContent);
+            $("#game_window").append(mapFooter);
+
+            // Enable all buttons
+            $('#map_footer button').prop('disabled', false);
+
+            // Disable the clicked button
+            $(this).prop('disabled', true);
+
+            e.page = 0;
+        }
+    });
 };
 
 function loadScript(url, callback) {
