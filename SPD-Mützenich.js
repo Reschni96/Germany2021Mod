@@ -1199,6 +1199,8 @@ for (let i = 0; i < 7; i++) {
 }
 
 cyoAdventure = function (a) {
+
+    console.log(A());
     ans = campaignTrail_temp.player_answers[campaignTrail_temp.player_answers.length - 1]
     let pop_vote = getLatestRes(A(return_type=2))[0];
     let playerPolling = (pop_vote.find(p => p.pk === 78)).pvp;
