@@ -341,7 +341,7 @@ F4: Unfortunately for you, the party seems to want a break from the policies of 
 
 
 Cut content for now
-In the past, pensions have been a main topic of the SPD. Just this year, a new law that was passed by the Grand coalition came into effect, guaranteeing a certain level of pensions for people who have worked long and receive little in pensions. What do you want to emphasize regarding pensions?
+EQ1: In the past, pensions have been a main topic of the SPD. Just this year, a new law that was passed by the Grand coalition came into effect, guaranteeing a certain level of pensions for people who have worked long and receive little in pensions. What do you want to emphasize regarding pensions?
 A1: This guaranteed pension level is a great achievement of the SPD. It shows that even in a Grand coalition, we are fighting for the little guy and achieving meaningful change.
 F1: The law is fairly popular and it certainly helps to talk about your achievements during the last for years. People tend to forget what you actually do as the junior partner in this coalition.
 A2: Right now, the usual age for getting pensions is 67. However, due to higher life expectancy and fewer young people, we need to raise it to 68 or 69.

@@ -44,7 +44,7 @@ campaignTrail_temp.game_start_logging_id = '3662498';
       { id: 12, name: 'Red-Red-Green Coalition', weight: 0.3, parties: [78, 79, 304], impossibleCoalitions: []},
       { id: 13, name: 'Red-Red Coalition', weight: 0.4, parties: [78, 304], impossibleCoalitions: [12]},
       { id: 14, name: 'Green-Left Coalition', weight: 0.4, parties: [79, 304], impossibleCoalitions: [12]},
-      { id: 15, name: 'Green-Yellow Coalition', weight: 1.9, parties: [79, 303], impossibleCoalitions: [5, 6 }
+      { id: 15, name: 'Green-Yellow Coalition', weight: 1.9, parties: [79, 303], impossibleCoalitions: [5, 6] }
     ];
     const partyLeaders = [
     { party: 77, leaderName: 'Merz', image: 'https://cdn.discordapp.com/attachments/1085931527537434785/1086205163393527868/image.png' },
