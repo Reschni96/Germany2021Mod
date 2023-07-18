@@ -1222,7 +1222,49 @@ async function appendStyle() {
           background-color: #f2f2f2;
           border-radius: 10px;
           padding: 5px;
-        }`;
+        }
+
+        /* Remove the default appearance of the radio button */
+        input[type="radio"] {
+          appearance: none;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+        }
+
+        /* Create a custom radio button */
+        input[type="radio"] {
+          position: relative;
+          display: inline-block;
+          width: 16px; /* reduce width */
+          height: 16px; /* reduce height */
+          border: 2px solid black;
+          border-radius: 4px; /* add border radius */
+        }
+
+        /* Create the cross icon (hidden when not checked) */
+        input[type="radio"]:after {
+          content: "";
+          position: absolute;
+          display: none;
+        }
+
+        /* Show the cross icon when checked */
+        input[type="radio"]:checked:after {
+          display: block;
+        }
+
+        /* Style the cross icon */
+        input[type="radio"]:after {
+          left: -2px;
+          top: -2px;
+          width: 20px;
+          height: 20px;
+          content: "❌"; /* use the cross mark character */
+          font-size: 12px; /* adjust the font size */
+          color: red; /* adjust the color */
+        }
+        `;
+
         document.head.appendChild(style);
     }
 }
