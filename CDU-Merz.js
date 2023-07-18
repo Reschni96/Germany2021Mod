@@ -1185,12 +1185,24 @@ async function handleFooter() {
     }
 
     var oldCandidatePic = document.getElementById('candidate_pic');
-    var candidatePicSrc = oldCandidatePic.src;
-    oldCandidatePic.remove();
+
+    if(oldCandidatePic){
+        var candidatePicSrc = oldCandidatePic.src;
+        oldCandidatePic.remove();
+    }
+    else{
+        return
+    }
 
     var oldRunningMatePic = document.getElementById('running_mate_pic');
-    var runningMatePicSrc = oldRunningMatePic.src;
-    oldRunningMatePic.remove();
+
+    if(oldRunningMatePic) {
+        var runningMatePicSrc = oldRunningMatePic.src;
+        oldRunningMatePic.remove();
+    }
+    else{
+        return
+    }
 
     var new_footer = document.createElement("div");
     new_footer.id = "new_footer";
