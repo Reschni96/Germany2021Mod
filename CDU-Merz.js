@@ -1401,7 +1401,7 @@ async function appendStyle() {
             height: auto;
         }
         #visit_window {
-            height: 28em;
+            height: auto;
         }
         #visit_content {
             height: 79%;
@@ -1414,9 +1414,21 @@ async function appendStyle() {
         }
 
         @media only screen and (max-width: 768px) {
-            #results_container {
-                font-size: 1em;
+            .inner_window_question {
+                font-size: 1.8em;
             }
+            #results_container {
+                font-size: 1.8em;
+            }
+            #visit_window {
+                font-size: 1.8em;
+                width: 90%;
+                left:5%;
+            }
+                .inner_window_question button,
+                #visit_window button {
+                    line-height: 2.5em;
+                }
         }
         `;
 
