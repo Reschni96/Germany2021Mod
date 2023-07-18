@@ -37,6 +37,7 @@ if (!element) {
         gameHeader.innerHTML = corrr;
         gameHeader.style.backgroundColor = nct_stuff.themes[nct_stuff.selectedTheme].coloring_title;
         gameHeader.setAttribute("id", "modifiedHeader");
+        gameHeader.style.height="6.5em";
       }
     }
 
