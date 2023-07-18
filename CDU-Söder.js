@@ -1441,6 +1441,11 @@ function addMyButton(){
 
     if(document.getElementById("map_footer")&&e.initDC){
 
+        const existingButton = document.getElementById("chart_button");
+        if (existingButton) {
+            return;
+        }
+
         if (!buttonAdded) {
             buttonAdded=true;
             const buttonrow = document.getElementById("map_footer");
@@ -1454,14 +1459,9 @@ function addMyButton(){
             buttonrow.insertBefore(chartButton, buttonrow.children[buttonrow.children.length - 1]);
         }
         else {
-            const chartButton = document.getElementById("chart_button");
-            if(!chartButton){
-                // reconnect the observer
-                buttonAdded=false;
-            }
-
-
-          }
+            // reconnect the observer
+            buttonAdded=false;
+        }
     }
 }
 
