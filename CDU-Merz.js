@@ -1176,6 +1176,103 @@ async function handleRadioButtons(processedNodes) {
     }
 }
 
+async function handleFooter() {
+    var gameWindow = document.getElementById('game_window');
+
+    var existingFooter = document.getElementById('new_footer');
+    if (existingFooter) {
+        return;
+    }
+
+    var oldCandidatePic = document.getElementById('candidate_pic');
+    var candidatePicSrc = oldCandidatePic.src;
+    oldCandidatePic.remove();
+
+    var oldRunningMatePic = document.getElementById('running_mate_pic');
+    var runningMatePicSrc = oldRunningMatePic.src;
+    oldRunningMatePic.remove();
+
+    var new_footer = document.createElement("div");
+    new_footer.id = "new_footer";
+    new_footer.style.display = "flex";
+    new_footer.style.justifyContent = "center";
+    new_footer.style.alignItems = "center";
+
+    var candidatePic = createNewImageElement(candidatePicSrc, 'borderBottom');
+    var runningMatePic = createNewImageElement(runningMatePicSrc, 'borderBottom');
+
+    var candidateBox = createBox(candidatePic, campaignTrail_temp.candidate_last_name);
+    var runningMateBox = createBox(runningMatePic, campaignTrail_temp.running_mate_last_name);
+
+    var questionInfo = "Question " + (campaignTrail_temp.question_number + 1) + " of " + campaignTrail_temp.global_parameter_json[0].fields.question_count;
+    var questionBox = createBoxWithTextAndPic(questionInfo, current_footer_picture);
+
+    new_footer.appendChild(candidateBox);
+    new_footer.appendChild(questionBox);
+    new_footer.appendChild(runningMateBox);
+
+    gameWindow.appendChild(new_footer);
+
+    var signDisplay = document.getElementsByClassName('inner_window_sign_display')[0];
+    signDisplay.style.display = "none";
+};
+
+function createNewImageElement(src, border) {
+    var newImage = document.createElement('img');
+    newImage.src = src;
+    newImage.style.height = '14em';
+    if (border === 'borderBottom') {
+        newImage.style.borderBottom = '2px solid black';
+    } else if (border === 'borderTop') {
+        newImage.style.borderTop = '2px solid black';
+    }
+    return newImage;
+}
+
+function createBox(imageElement, text) {
+    var container = document.createElement('div');
+    container.style.display = 'flex';
+    container.style.flexDirection = 'column';
+    container.style.justifyContent = 'center';
+    container.style.border = '4px solid black';
+    container.style.margin = '10px';
+    container.style.backgroundColor = 'white';
+
+    var textBox = document.createElement('div');
+    textBox.style.padding = '5px';
+    textBox.style.textAlign = 'center';
+    textBox.innerHTML = '<h3>' + text + '</h3>';
+
+    container.appendChild(imageElement);
+    container.appendChild(textBox);
+
+    return container;
+}
+
+function createBoxWithTextAndPic(text, pictureSrc) {
+    var container = document.createElement('div');
+    container.style.display = 'flex';
+    container.style.flexDirection = 'column';
+    container.style.justifyContent = 'center';
+    container.style.border = '4px solid black';
+    container.style.margin = '10px';
+    container.style.backgroundColor = 'white';
+
+    var textBox = document.createElement('div');
+    textBox.style.padding = '5px';
+    textBox.style.textAlign = 'center';
+    textBox.innerHTML = '<h3>' + text + '</h3>';
+
+    var pictureElement = createNewImageElement(pictureSrc, 'borderTop');
+
+    container.appendChild(textBox);
+    container.appendChild(pictureElement);
+
+    return container;
+}
+
+let current_footer_picture = "https://cdn.discordapp.com/attachments/1109846390575730788/1130856731577155694/image.png";
+
 async function appendStyle() {
     if (!document.querySelector('#radio-option-style')) {
         let style = document.createElement('style');
@@ -1287,6 +1384,7 @@ async function handleMutations(mutationsList, observer) {
     await adjustMcaHeight(processedNodes);
 
     await handleGameWindow();
+    await handleFooter();
 
     await handleRadioButtons(processedNodes);
 
