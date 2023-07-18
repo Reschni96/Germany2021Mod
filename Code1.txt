@@ -231,6 +231,9 @@ if (!element) {
         walkAndReplace(document.body, wordsToFind);
     }
 
+    const bodyElement = document.body;
+    bodyElement.style.backgroundAttachment = 'fixed';
+
     var invisibleElement = document.createElement('div');
     invisibleElement.style.display = 'none';
     invisibleElement.id = 'my-invisible-element';

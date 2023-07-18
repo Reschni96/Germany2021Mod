@@ -1147,11 +1147,11 @@ async function handleGameWindow(innerWindowQuestionExists) {
     let innerInnerWindow = document.querySelector('.inner_inner_window');
 
     if (innerWindowQuestionExists) {
-        if (gameWindow) gameWindow.style.height = '60em';
+        if (gameWindow) gameWindow.style.height = 'auto';
         if (candidateImage) candidateImage.style.marginLeft = '12em';
         if (innerWindowSignDisplay) innerWindowSignDisplay.style.width = '27%';
-        if (innerWindowQuestion) innerWindowQuestion.style.height = '58%';
-        if (visitWindow) visitWindow.style.height = '47%';
+        if (innerWindowQuestion) innerWindowQuestion.style.height = 'auto';
+        if (visitWindow) visitWindow.style.height = '28em';
         if (visitContent) visitContent.style.height = '79%';
         if (innerInnerWindow) innerInnerWindow.style.height = '90%';
         let candidatePic = document.getElementById('candidate_pic');
@@ -1162,7 +1162,7 @@ async function handleGameWindow(innerWindowQuestionExists) {
         elementsToResize.forEach(el => {
             if (el) {
                 el.classList.add('resize-height');
-                el.style.height = '24%';
+                el.style.height = '14em';
             }
         });
     } else {
@@ -1222,6 +1222,7 @@ async function appendStyle() {
           background-color: #f2f2f2;
           border-radius: 10px;
           padding: 5px;
+          margin-bottom: 5px;
         }
 
         /* Remove the default appearance of the radio button */
