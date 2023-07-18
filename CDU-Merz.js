@@ -1092,21 +1092,9 @@ cyoAdventure = function (a) {
     }
 }
 
-//css stuff here
-let observerRunning = false;
-let changeChartRunning = false;
-let mcaHeightRunning = false;
-let processedNodes = new Set();
-
-async function handleMutations(mutationsList, observer) {
-    if (observerRunning) return;
-    observerRunning = true;
-
-    // stop observing
-    observer.disconnect();
-
-    // addScrollbar
-    const overallResult = document.getElementById('overall_result');
+// style stuff here
+// These functions handle a specific mutation task
+async function addScrollbar(overallResult, processedNodes) {
     if (overallResult && !processedNodes.has(overallResult)) {
         overallResult.style.overflow = 'auto';
         const buttons = document.querySelectorAll('#view_electoral_map, #answer_select_button, #ok_button, #final_election_map_button');
@@ -1116,70 +1104,156 @@ async function handleMutations(mutationsList, observer) {
         buttons.forEach(button => button.addEventListener('click', handleClick));
         processedNodes.add(overallResult);
     }
+}
 
-    // changechart
-    if (!changeChartRunning) {
-        changeChartRunning = true;
-        const elementIDs = ["overall_vote_statistics", "state_result_data_summary", "overall_details_container"];
-        for(let id of elementIDs) {
-            let element = document.getElementById(id);
-            if (element && !processedNodes.has(element)) {
-                let overallthing = element.innerHTML;
-                overallthing = overallthing.replace("Electoral Votes","Seats");
-                overallthing = overallthing.replace("Candidate","Party");
-                element.innerHTML = overallthing;
-                processedNodes.add(element);
+async function changeChart(processedNodes) {
+    const elementIDs = ["overall_vote_statistics", "state_result_data_summary", "overall_details_container"];
+    for(let id of elementIDs) {
+        let element = document.getElementById(id);
+        if (element && !processedNodes.has(element)) {
+            let overallthing = element.innerHTML;
+            overallthing = overallthing.replace("Electoral Votes","Seats");
+            overallthing = overallthing.replace("Candidate","Party");
+            element.innerHTML = overallthing;
+            processedNodes.add(element);
+        }
+    }
+}
+
+async function adjustMcaHeight(processedNodes) {
+    let results_container = document.getElementById("results_container");
+    let chart = document.getElementById("myChart");
+    if (results_container && !processedNodes.has(results_container)) {
+        if (!chart){
+            results_container.style.height = "98%";
+            results_container.style.overflow = "scroll";
+        } else {
+            let mca = document.getElementById("main_content_area");
+            if (mca) {
+                mca.style.height = "80%";
             }
         }
-        changeChartRunning = false;
+        processedNodes.add(results_container);
     }
+}
 
-    // mcaHeight
-    if (!mcaHeightRunning) {
-        mcaHeightRunning = true;
-        let results_container = document.getElementById("results_container");
-        let chart = document.getElementById("myChart");
-        if (results_container && !processedNodes.has(results_container)) {
-            if (!chart){
-                results_container.style.height = "98%";
-                results_container.style.overflow = "scroll";
-            } else {
-                let mca = document.getElementById("main_content_area");
-                if (mca) {
-                    mca.style.height = "80%";
-                }
-            }
-            processedNodes.add(results_container);
-        }
-        mcaHeightRunning = false;
-    }
-
-
+async function handleGameWindow(innerWindowQuestionExists) {
     let gameWindow = document.getElementById('game_window');
     let candidateImage = document.getElementById('candidate_pic');
     let innerWindowSignDisplay = document.querySelector('.inner_window_sign_display');
+    let innerWindowQuestion = document.querySelector('.inner_window_question');
     let visitWindow = document.getElementById('visit_window');
     let visitContent = document.getElementById('visit_content');
-
-    let innerWindowQuestionExists = document.querySelector('.inner_window_question') !== null;
+    let innerInnerWindow = document.querySelector('.inner_inner_window');
 
     if (innerWindowQuestionExists) {
-        if (gameWindow) gameWindow.style.height = '55em';
+        if (gameWindow) gameWindow.style.height = '60em';
         if (candidateImage) candidateImage.style.marginLeft = '12em';
         if (innerWindowSignDisplay) innerWindowSignDisplay.style.width = '27%';
-        if (visitWindow) visitWindow.style.height = '52%';
+        if (innerWindowQuestion) innerWindowQuestion.style.height = '58%';
+        if (visitWindow) visitWindow.style.height = '47%';
         if (visitContent) visitContent.style.height = '79%';
+        if (innerInnerWindow) innerInnerWindow.style.height = '90%';
+        let candidatePic = document.getElementById('candidate_pic');
+        let runningMatePic = document.getElementById('running_mate_pic');
+
+        let elementsToResize = [candidatePic, runningMatePic, innerWindowSignDisplay];
+
+        elementsToResize.forEach(el => {
+            if (el) {
+                el.classList.add('resize-height');
+                el.style.height = '24%';
+            }
+        });
     } else {
         if (gameWindow) gameWindow.style.height = '45em';
     }
+}
 
-    // Resume observing
+async function handleRadioButtons(processedNodes) {
+    let questionForms = document.querySelectorAll('form[name="question"]');
+    for(let form of questionForms) {
+        if (!processedNodes.has(form)) {
+            let inputs = form.querySelectorAll('input[type="radio"]');
+            for(let input of inputs) {
+                let wrapperDiv = document.createElement('div');
+                wrapperDiv.className = 'radio-option';
+                input.parentNode.insertBefore(wrapperDiv, input);
+                let label = form.querySelector(`label[for="${input.id}"]`);
+                wrapperDiv.appendChild(input);
+                if(label) {
+                    wrapperDiv.appendChild(label);
+                }
+
+                let br = wrapperDiv.nextElementSibling;
+                if (br && br.nodeName === 'BR') {
+                    form.removeChild(br);
+                }
+            }
+
+            processedNodes.add(form);
+        }
+    }
+}
+
+async function appendStyle() {
+    if (!document.querySelector('#radio-option-style')) {
+        let style = document.createElement('style');
+        style.type = 'text/css';
+        style.id = 'radio-option-style';
+        style.innerHTML = `
+        .inner_inner_window {
+          display: flex;
+          flex-direction: column;
+        }
+          #question_form {
+          flex: 1;
+          box-sizing: border-box;
+        }
+        form[name="question"] {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          height: 100%;
+          box-sizing: border-box;
+        }
+        .radio-option {
+          border: 2px solid #000000;
+          background-color: #f2f2f2;
+          border-radius: 10px;
+          padding: 5px;
+        }`;
+        document.head.appendChild(style);
+    }
+}
+
+// This function becomes a simple list of calls to other functions
+async function handleMutations(mutationsList, observer) {
+    if (observerRunning) return;
+    observerRunning = true;
+
+    observer.disconnect();
+
+    const overallResult = document.getElementById('overall_result');
+    await addScrollbar(overallResult, processedNodes);
+    await changeChart(processedNodes);
+    await adjustMcaHeight(processedNodes);
+
+    let innerWindowQuestionExists = document.querySelector('.inner_window_question') !== null;
+    handleGameWindow(innerWindowQuestionExists);
+
+    await handleRadioButtons(processedNodes);
+    await appendStyle();
+
     observer.observe(document.documentElement, { childList: true, subtree: true });
     observerRunning = false;
 }
 
+let processedNodes = new Set();
+let observerRunning = false;
 let singleObserver = new MutationObserver(handleMutations);
 singleObserver.observe(document.documentElement, { childList: true, subtree: true });
+
 
 //chart stuff here, setup in cyoa function required
 function Chartbuilder(type) {
