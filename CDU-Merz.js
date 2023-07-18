@@ -1169,6 +1169,16 @@ async function handleRadioButtons(processedNodes) {
                 if (br && br.nodeName === 'BR') {
                     form.removeChild(br);
                 }
+
+                // Add click event listener to the wrapperDiv
+                wrapperDiv.addEventListener('click', function(event) {
+                    input.checked = true;
+                });
+
+                // Stop event propagation when radio button is clicked
+                input.addEventListener('click', function(event) {
+                    event.stopPropagation();
+                });
             }
 
             processedNodes.add(form);
@@ -1320,8 +1330,12 @@ async function appendStyle() {
             background-color: #e0e0e0; /* or any other color that is slightly different than #f2f2f2 */
         }
 
-        .radio-option:hover .hoverable-text {
+        .radio-option:hover label{
             font-weight: bold;
+        }
+
+        .radio-option label {
+          pointer-events: none;
         }
 
         /* Remove the default appearance of the radio button */
@@ -1386,6 +1400,9 @@ async function appendStyle() {
         }
         #visit_content {
             height: 79%;
+        }
+        #state_info {
+          height: 125%
         }
         `;
 
