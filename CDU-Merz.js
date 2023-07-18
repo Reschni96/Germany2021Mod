@@ -1294,12 +1294,22 @@ async function appendStyle() {
           height: 100%;
           box-sizing: border-box;
         }
+
         .radio-option {
-          border: 2px solid #000000;
-          background-color: #f2f2f2;
-          border-radius: 10px;
-          padding: 5px;
-          margin-bottom: 5px;
+            border: 2px solid #000000;
+            background-color: #f2f2f2;
+            border-radius: 10px;
+            padding: 5px;
+            margin-bottom: 5px;
+            transition: background-color 0.1s ease;
+        }
+
+        .radio-option:hover {
+            background-color: #e0e0e0; /* or any other color that is slightly different than #f2f2f2 */
+        }
+
+        .radio-option:hover .hoverable-text {
+            font-weight: bold;
         }
 
         /* Remove the default appearance of the radio button */
