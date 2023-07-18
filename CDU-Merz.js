@@ -1254,16 +1254,20 @@ async function appendStyle() {
           display: block;
         }
 
-        /* Style the cross icon */
-        input[type="radio"]:after {
-          left: -2px;
-          top: -2px;
-          width: 20px;
-          height: 20px;
-          content: "❌"; /* use the cross mark character */
-          font-size: 12px; /* adjust the font size */
-          color: red; /* adjust the color */
+        input[type="radio"]:checked:after {
+            content: "";
+            display: inline-block;
+            background-image: url("https://cdn.discordapp.com/attachments/1109846390575730788/1130851559371198544/Red-x-mark-transparent-background-1-Transparent-Images.png");
+            background-repeat: no-repeat;
+            background-size: contain; /* Or use a specific size like '10px 10px' */
+            width: 20px;
+            height: 20px;
+            position: absolute; /* This takes the pseudo-element out of the document flow */
+            left: -1px;
+            top: -2px;
+            z-index: 1;
         }
+
         `;
 
         document.head.appendChild(style);
