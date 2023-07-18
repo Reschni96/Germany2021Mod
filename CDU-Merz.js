@@ -1296,6 +1296,11 @@ function createBoxWithTextAndPic(text, pictureSrc) {
 let current_footer_picture = "https://cdn.discordapp.com/attachments/1109846390575730788/1130856731577155694/image.png";
 
 async function appendStyle() {
+    var metaTag=document.createElement('meta');
+    metaTag.name = "viewport";
+    metaTag.content = "width=device-width, initial-scale=1";
+    document.getElementsByTagName('head')[0].appendChild(metaTag);
+
     if (!document.querySelector('#radio-option-style')) {
         let style = document.createElement('style');
         style.type = 'text/css';
@@ -1406,6 +1411,12 @@ async function appendStyle() {
         }
         #map_container {
           height: 30.78em
+        }
+
+        @media only screen and (max-width: 768px) {
+            #results_container {
+                font-size: 1em;
+            }
         }
         `;
 
