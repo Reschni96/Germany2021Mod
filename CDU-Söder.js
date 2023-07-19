@@ -1104,20 +1104,7 @@ cyoAdventure = function (a) {
 }
 
 //css stuff here
-let observerRunning = false;
-let changeChartRunning = false;
-let mcaHeightRunning = false;
-let processedNodes = new Set();
-
-async function handleMutations(mutationsList, observer) {
-    if (observerRunning) return;
-    observerRunning = true;
-
-    // stop observing
-    observer.disconnect();
-
-    // addScrollbar
-    const overallResult = document.getElementById('overall_result');
+async function addScrollbar(overallResult, processedNodes) {
     if (overallResult && !processedNodes.has(overallResult)) {
         overallResult.style.overflow = 'auto';
         const buttons = document.querySelectorAll('#view_electoral_map, #answer_select_button, #ok_button, #final_election_map_button');
@@ -1127,49 +1114,221 @@ async function handleMutations(mutationsList, observer) {
         buttons.forEach(button => button.addEventListener('click', handleClick));
         processedNodes.add(overallResult);
     }
+}
 
-    // changechart
-    if (!changeChartRunning) {
-        changeChartRunning = true;
-        const elementIDs = ["overall_vote_statistics", "state_result_data_summary", "overall_details_container"];
-        for(let id of elementIDs) {
-            let element = document.getElementById(id);
-            if (element && !processedNodes.has(element)) {
-                let overallthing = element.innerHTML;
-                overallthing = overallthing.replace("Electoral Votes","Seats");
-                overallthing = overallthing.replace("Candidate","Party");
-                element.innerHTML = overallthing;
-                processedNodes.add(element);
+async function changeChart(processedNodes) {
+    const elementIDs = ["overall_vote_statistics", "state_result_data_summary", "overall_details_container"];
+    for(let id of elementIDs) {
+        let element = document.getElementById(id);
+        if (element && !processedNodes.has(element)) {
+            let overallthing = element.innerHTML;
+            overallthing = overallthing.replace("Electoral Votes","Seats");
+            overallthing = overallthing.replace("Candidate","Party");
+            element.innerHTML = overallthing;
+            processedNodes.add(element);
+        }
+    }
+}
+
+async function adjustMcaHeight(processedNodes) {
+    let results_container = document.getElementById("results_container");
+    let chart = document.getElementById("myChart");
+    if (results_container && !processedNodes.has(results_container)) {
+        if (!chart){
+            results_container.style.height = "98%";
+            results_container.style.overflow = "scroll";
+        } else {
+            let mca = document.getElementById("main_content_area");
+            if (mca) {
+                mca.style.height = "80%";
             }
         }
-        changeChartRunning = false;
+        processedNodes.add(results_container);
     }
+}
 
-    // mcaHeight
-    if (!mcaHeightRunning) {
-        mcaHeightRunning = true;
-        let results_container = document.getElementById("results_container");
-        let chart = document.getElementById("myChart");
-        if (results_container && !processedNodes.has(results_container)) {
-            if (!chart){
-                results_container.style.height = "98%";
-                results_container.style.overflow = "scroll";
-            } else {
-                let mca = document.getElementById("main_content_area");
-                if (mca) {
-                    mca.style.height = "80%";
+async function handleGameWindow() {
+    let gameWindow = document.getElementById('game_window');
+    let innerWindowQuestionExists = document.querySelector('.inner_window_question') !== null;
+    if (gameWindow) {
+        if (innerWindowQuestionExists) {
+            gameWindow.style.height = 'auto';
+        } else {
+            gameWindow.style.height = '45em';
+        }
+    }
+}
+
+
+async function handleRadioButtons(processedNodes) {
+    let questionForms = document.querySelectorAll('form[name="question"]');
+    for(let form of questionForms) {
+        if (!processedNodes.has(form)) {
+            let inputs = form.querySelectorAll('input[type="radio"]');
+            for(let input of inputs) {
+                let wrapperDiv = document.createElement('div');
+                wrapperDiv.className = 'radio-option';
+                input.parentNode.insertBefore(wrapperDiv, input);
+                let label = form.querySelector(`label[for="${input.id}"]`);
+                wrapperDiv.appendChild(input);
+                if(label) {
+                    wrapperDiv.appendChild(label);
                 }
+
+                let br = wrapperDiv.nextElementSibling;
+                if (br && br.nodeName === 'BR') {
+                    form.removeChild(br);
+                }
+
+                // Add click event listener to the wrapperDiv
+                wrapperDiv.addEventListener('click', function(event) {
+                    input.checked = true;
+                });
+
+                // Stop event propagation when radio button is clicked
+                input.addEventListener('click', function(event) {
+                    event.stopPropagation();
+                });
             }
-            processedNodes.add(results_container);
+
+            processedNodes.add(form);
         }
-        mcaHeightRunning = false;
+    }
+}
+
+async function handleFooter() {
+    var gameWindow = document.getElementById('game_window');
+
+    var existingFooter = document.getElementById('new_footer');
+    if (existingFooter) {
+        return;
     }
 
-    // Resume observing
+    var oldCandidatePic = document.getElementById('candidate_pic');
+
+    if(oldCandidatePic){
+        var candidatePicSrc = oldCandidatePic.src;
+        oldCandidatePic.remove();
+    }
+    else{
+        return
+    }
+
+    var oldRunningMatePic = document.getElementById('running_mate_pic');
+
+    if(oldRunningMatePic) {
+        var runningMatePicSrc = oldRunningMatePic.src;
+        oldRunningMatePic.remove();
+    }
+    else{
+        return
+    }
+
+    var new_footer = document.createElement("div");
+    new_footer.id = "new_footer";
+    new_footer.style.display = "flex";
+    new_footer.style.justifyContent = "center";
+    new_footer.style.alignItems = "center";
+
+    var candidatePic = createNewImageElement(candidatePicSrc, 'borderBottom');
+    var runningMatePic = createNewImageElement(runningMatePicSrc, 'borderBottom');
+
+    var candidateBox = createBox(candidatePic, campaignTrail_temp.candidate_last_name);
+    var runningMateBox = createBox(runningMatePic, campaignTrail_temp.running_mate_last_name);
+
+    var questionInfo = "Question " + (campaignTrail_temp.question_number + 1) + " of " + campaignTrail_temp.global_parameter_json[0].fields.question_count;
+    var questionBox = createBoxWithTextAndPic(questionInfo, current_footer_picture);
+
+    new_footer.appendChild(candidateBox);
+    new_footer.appendChild(questionBox);
+    new_footer.appendChild(runningMateBox);
+
+    gameWindow.appendChild(new_footer);
+
+    var signDisplay = document.getElementsByClassName('inner_window_sign_display')[0];
+    signDisplay.style.display = "none";
+};
+
+function createNewImageElement(src, border) {
+    var newImage = document.createElement('img');
+    newImage.src = src;
+    newImage.style.height = '14em';
+    if (border === 'borderBottom') {
+        newImage.style.borderBottom = '2px solid black';
+    } else if (border === 'borderTop') {
+        newImage.style.borderTop = '2px solid black';
+    }
+    return newImage;
+}
+
+function createBox(imageElement, text) {
+    var container = document.createElement('div');
+    container.style.display = 'flex';
+    container.style.flexDirection = 'column';
+    container.style.justifyContent = 'center';
+    container.style.border = '4px solid black';
+    container.style.margin = '10px';
+    container.style.backgroundColor = 'white';
+
+    var textBox = document.createElement('div');
+    textBox.style.padding = '5px';
+    textBox.style.textAlign = 'center';
+    textBox.innerHTML = '<h3>' + text + '</h3>';
+
+    container.appendChild(imageElement);
+    container.appendChild(textBox);
+
+    return container;
+}
+
+function createBoxWithTextAndPic(text, pictureSrc) {
+    var container = document.createElement('div');
+    container.style.display = 'flex';
+    container.style.flexDirection = 'column';
+    container.style.justifyContent = 'center';
+    container.style.border = '4px solid black';
+    container.style.margin = '10px';
+    container.style.backgroundColor = 'white';
+
+    var textBox = document.createElement('div');
+    textBox.style.padding = '5px';
+    textBox.style.textAlign = 'center';
+    textBox.innerHTML = '<h3>' + text + '</h3>';
+
+    var pictureElement = createNewImageElement(pictureSrc, 'borderTop');
+
+    container.appendChild(textBox);
+    container.appendChild(pictureElement);
+
+    return container;
+}
+
+let current_footer_picture = "https://cdn.discordapp.com/attachments/1109846390575730788/1130856731577155694/image.png";
+
+
+// This function becomes a simple list of calls to other functions
+async function handleMutations(mutationsList, observer) {
+    if (observerRunning) return;
+    observerRunning = true;
+
+    observer.disconnect();
+
+    const overallResult = document.getElementById('overall_result');
+    await addScrollbar(overallResult, processedNodes);
+    await changeChart(processedNodes);
+    await adjustMcaHeight(processedNodes);
+
+    await handleGameWindow();
+    await handleFooter();
+
+    await handleRadioButtons(processedNodes);
+
     observer.observe(document.documentElement, { childList: true, subtree: true });
     observerRunning = false;
 }
 
+let processedNodes = new Set();
+let observerRunning = false;
 let singleObserver = new MutationObserver(handleMutations);
 singleObserver.observe(document.documentElement, { childList: true, subtree: true });
 
@@ -1504,7 +1663,7 @@ function charting(chartIndex=0){
     let cachedContent = $('#game_window').html();
 
 
-    $("#game_window").html('<div class="game_header">\t<h2>NEW CAMPAIGN TRAIL</h2>\t</div>\t<div id="main_content_area">\t<div id="results_container"><br>  <div id="title_container"><button id="backButton">Back</button><h3 class="campaign-title">Election Charts:</h3><button id="nextButton">Next</button></div><br><div id="chartcontainer"><figure class="highcharts-figure"><div id="myChart"></div></figure></div></div></div>');
+     $("#game_window").html('<div class="game_header">\t<h2>NEW CAMPAIGN TRAIL</h2>\t</div>\t<div id="main_content_area">\t<div id="results_container"><br class="mobile-hide">  <div id="title_container"><button id="backButton">Back</button><h3 class="campaign-title">Election Charts:</h3><button id="nextButton">Next</button></div><br class="mobile-hide"><div id="chartcontainer"><figure class="highcharts-figure"><div id="myChart"></div></figure></div></div></div>');
 
     $("#game_window").append(mapFooter);
     $('#map_footer button').prop('disabled', false);
