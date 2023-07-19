@@ -22,6 +22,7 @@ document.body.style.backgroundRepeat = "no-repeat";
 document.body.style.backgroundSize = "cover";
 document.getElementById("header").src = "https://cdn.discordapp.com/attachments/1109846390575730788/1131322097562558514/Germany3.png";
 nct_stuff.themes[nct_stuff.selectedTheme].text_col = "white"
+var shuffleEnabled = false;
 
 quotes = [`"Wir schaffen das!" - Angela Merkel`, `"Scheitert der Euro, scheitert Europa." - Angela Merkel`, `"Das Internet ist für uns alle Neuland." - Angela Merkel`, `"Die Demokratie ist kein Supermarkt." - Frank-Walther Steinmeier`, `In my homeland Baden-Württemberg we are all sitting in one boat.`, `"Rechts von der CDU/CSU darf es keine demokratisch legitimierte Partei geben" - Franz-Joseph Strauß`, `"Jetzt wächst zusammen, was zusammen gehört" - Willy Brandt`, `Was kümmert mich mein Geschwätz von gestern? - Konrad Adenauer`, `"Wer Visionen hat, sollte zum Arzt gehen" - Helmut Schmidt`, `There will never be a revolution in Germany. The bureaucratic paperwork for it is missing.`, ]
 customquote = quotes[Math.floor((Math.random() * quotes.length))]
@@ -31,6 +32,8 @@ corrr="\n<h2>NEUE WAHLKAMPF-TOUR</h2><font id='wittyquote' size='4' color='white
 var element = document.getElementById('my-invisible-element');
 if (!element) {
 
+    let trackIndices;
+    let shuffledIndices;
 
  $("#game_start").click((event) => {
     event.preventDefault();
@@ -62,7 +65,7 @@ musicMode = () => {
   text-align:left;
   border-style:solid;
   border-width:3px;
-  height:150px;
+  height:200px;
   width:200px;
   background-color:#999999;
   float:right;
@@ -84,6 +87,7 @@ musicMode = () => {
         pausePlay.id = "position-display";
         pausePlay.innerHTML = "<b>Pause</b>"
         pausePlay.style.width = "100%";
+        pausePlay.style.margin = "2px";
         pausePlay.addEventListener("click", event => {
             event.preventDefault();
             updatePositionDisplay();
@@ -97,6 +101,49 @@ musicMode = () => {
             event.target.innerHTML = "<b>Play</b>";
             return;
         })
+        var shuffleButton = document.createElement("button");
+        shuffleButton.id = "shuffle-button";
+        shuffleButton.innerHTML = "<b>Shuffle</b>"
+        shuffleButton.style.width = "100%"
+        shuffleButton.style.margin = "2px";;
+        shuffleButton.addEventListener("click", event => {
+            event.preventDefault();
+            shuffleEnabled = !shuffleEnabled;
+            event.target.innerHTML = shuffleEnabled ? "<b>Unshuffle</b>" : "<b>Shuffle</b>";
+            if (shuffleEnabled) {
+                shuffledIndices = shuffle(trackIndices.slice());
+                let currentTrackIndex = Number(document.querySelector('input[name="trackSelector"]:checked').value);
+                shuffledIndices = shuffledIndices.filter(index => index !== currentTrackIndex);
+                shuffledIndices.unshift(currentTrackIndex);
+            }
+        });
+        var skipButton = document.createElement("button");
+        skipButton.id = "skip-button";
+        skipButton.innerHTML = "<b>Skip</b>"
+        skipButton.style.width = "100%";
+        skipButton.style.margin = "2px"; // Add margin
+        skipButton.addEventListener("click", event => {
+            event.preventDefault();
+            let selected = Number(document.querySelector('input[name="trackSelector"]:checked').value);
+            let newSel;
+            if (shuffleEnabled) {
+                if (!shuffledIndices) {
+                    shuffledIndices = shuffle(trackIndices.slice());
+                }
+                let currentIndex = shuffledIndices.findIndex(index => index === selected);
+                if (currentIndex === shuffledIndices.length - 1) {
+                    shuffledIndices = shuffle(trackIndices.slice());
+                    currentIndex = -1;
+                }
+                newSel = shuffledIndices[currentIndex + 1];
+            } else {
+                newSel = selected + 1 === soundtracks[e.selectedSoundtrack].tracklist.length ? 0 : selected + 1;
+            }
+            let buttons = Array.from(document.getElementById("trackSel").children).filter(f => {
+                    return f.tagName == "LABEL"
+                }).map(f => f.children[0])
+            buttons[newSel].click()
+        });
         var volumeLabel = document.createElement("gg");
         volumeLabel.id = "volume-label";
         volumeLabel.innerHTML = "<br><b>Volume: </b>"
@@ -110,8 +157,8 @@ musicMode = () => {
         volumeSlider.id = "volume-slider";
         volumeSlider.value = audio.volume;
         timeTracker.appendChild(pausePlay);
-        timeTracker.appendChild(document.createElement("br"));
-        timeTracker.appendChild(document.createElement("br"));
+        timeTracker.appendChild(shuffleButton);
+        timeTracker.appendChild(skipButton);
         timeTracker.appendChild(positionDisplay);
         timeTracker.appendChild(timeSlider);
         timeTracker.appendChild(volumeLabel);
@@ -132,10 +179,11 @@ musicMode = () => {
         timeSlider.addEventListener("input", changeTime);
         volumeSlider.addEventListener("input", updateVolume)
     }
+
     function newMusicPlayer() {
         trackSel = document.createElement("div");
         trackSel.id = "trackSelParent"
-        let z = `<br><br><br><br><br><br><br><br><br><br><div id='trackSel' style="text-align:left;border-style:solid;border-width:3px;overflow-y: scroll;overflow-x: hidden;height:200px; width:400px;background-color:#999999;float:right;">`
+        let z = `<br><br><br><br><br><br><br><br><br><br><br><br><div id='trackSel' style="text-align:left;border-style:solid;border-width:3px;overflow-y: scroll;overflow-x: hidden;height:200px; width:400px;background-color:#999999;float:right;">`
         z += `<b><select id='selectSoundtrack'><option value='` + soundtracks[e.selectedSoundtrack].name + `'>` + soundtracks[e.selectedSoundtrack].name + "</option>"
         for (i in soundtracks) {
             if (soundtracks[e.selectedSoundtrack] != soundtracks[i]) {
@@ -176,16 +224,31 @@ musicMode = () => {
         }
         musicBox.children[2].loop = false
         musicBox.children[2].src = soundtracks[e.selectedSoundtrack].tracklist[0].url
+        trackIndices = Array.from({length: soundtracks[e.selectedSoundtrack].tracklist.length}, (_, i) => i);
+
         musicBox.children[2].onended = function() {
             console.log("next track")
             let selected = Number(document.querySelector('input[name="trackSelector"]:checked').value);
-            let newSel = clamp(selected + 1, soundtracks[e.selectedSoundtrack].tracklist.length - 1, 0)
+            let newSel;
+            if (shuffleEnabled) {
+                if (!shuffledIndices) {
+                    shuffledIndices = shuffle(trackIndices.slice());
+                }
+                let currentIndex = shuffledIndices.findIndex(index => index === selected);
+                if (currentIndex === shuffledIndices.length - 1) {
+                    shuffledIndices = shuffle(trackIndices.slice());
+                    currentIndex = -1;
+                }
+                newSel = shuffledIndices[currentIndex + 1];
+            } else {
+                newSel = selected + 1 === soundtracks[e.selectedSoundtrack].tracklist.length ? 0 : selected + 1;
+            }
             let buttons = Array.from(document.getElementById("trackSel").children).filter(f => {
                     return f.tagName == "LABEL"
                 }).map(f => f.children[0])
-                //let selectedIndex = buttons.map(f=>f.children[0]).map(f=>f.checked)
             buttons[newSel].click()
         }
+
         for (w = 0; w < 7; w++) {
           document.getElementById("trackSelParent").appendChild(document.createElement("br"))
         }
@@ -279,6 +342,22 @@ musicMode = () => {
     }
     newMusicPlayer()
   }
+
+      function shuffle(array) {
+        let currentIndex = array.length, temporaryValue, randomIndex;
+
+        while (0 !== currentIndex) {
+            randomIndex = Math.floor(Math.random() * currentIndex);
+            currentIndex -= 1;
+
+            temporaryValue = array[currentIndex];
+            array[currentIndex] = array[randomIndex];
+            array[randomIndex] = temporaryValue;
+        }
+
+        return array;
+    }
+
 
     function updateHeader() {
       var gameHeader = document.getElementsByClassName("game_header")[0];
