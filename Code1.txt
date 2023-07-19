@@ -20,7 +20,7 @@ $(".container")[0].style.backgroundColor = "#001f58"
 document.body.background = "https://www.morgenpost.de/bin/src-207619493.jpg"
 document.body.style.backgroundRepeat = "no-repeat";
 document.body.style.backgroundSize = "cover";
-document.getElementById("header").src = "https://cdn.discordapp.com/attachments/1114283675467661372/1114625908200964127/image.png";
+document.getElementById("header").src = "https://cdn.discordapp.com/attachments/1109846390575730788/1131322097562558514/Germany3.png";
 nct_stuff.themes[nct_stuff.selectedTheme].text_col = "white"
 
 quotes = [`"Wir schaffen das!" - Angela Merkel`, `"Scheitert der Euro, scheitert Europa." - Angela Merkel`, `"Das Internet ist für uns alle Neuland." - Angela Merkel`, `"Die Demokratie ist kein Supermarkt." - Frank-Walther Steinmeier`, `In my homeland Baden-Württemberg we are all sitting in one boat.`, `"Rechts von der CDU/CSU darf es keine demokratisch legitimierte Partei geben" - Franz-Joseph Strauß`, `"Jetzt wächst zusammen, was zusammen gehört" - Willy Brandt`, `Was kümmert mich mein Geschwätz von gestern? - Konrad Adenauer`, `"Wer Visionen hat, sollte zum Arzt gehen" - Helmut Schmidt`, `There will never be a revolution in Germany. The bureaucratic paperwork for it is missing.`, ]
@@ -232,6 +232,47 @@ musicMode = () => {
             {
               "name": "Einzug der Götter in Walhall",
               "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296655837249657/Richard_Wagner__hr-Sinfonieorchester_-_Einzug_der_Gotter_in_Walhall_Das_Rheingold.mp3"
+            }
+        ]
+            },
+            1: {
+          name: "German Oldies",
+          tracklist: [
+            {
+              "name": "Nena – 99 Luftballons",
+              "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296608349327381/NENA_-_99_Luftballons.mp3"
+            },
+            {
+              "name": "Trio – Da Da Da",
+              "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296755221270558/Trio_-_Da_Da_Da.mp3"
+            },
+            {
+              "name": "Kraftwerk – Autobahn",
+              "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296574350303412/Kraftwerk_-_Autobahn.mp3"
+            },
+            {
+              "name": "Udo Jürgens – Griechischer Wein ",
+              "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296762661978183/Udo_Jurgens_-_Griechischer_Wein.mp3"
+            },
+            {
+              "name": "Udo Lindenberg – Sonderzug nach Pankow ",
+              "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296771319017544/Udo_Lindenberg_-_Sonderzug_nach_Pankow.mp3"
+            },
+            {
+              "name": "Nina Hagen – Du hast den Farbfilm vergessen ",
+              "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296635834613781/Nina_Hagen_-_Du_hast_den_Farbfilm_vergessen.mp3"
+            },
+            {
+              "name": "Nena – Irgendwie, Irgendwo, Irgendwann",
+              "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296615899070544/NENA_-_Irgendwie_Irgendwo_Irgendwann.mp3"
+            },
+            {
+              "name": "Die Ärzte - Schrei nach Liebe",
+              "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296418104090744/Die_Arzte_-_Schrei_nach_Liebe.mp3"
+            },
+            {
+              "name": "Die Ärzte - Deine Schuld",
+              "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296396750893077/Die_Arzte_-_Deine_Schuld.mp3"
             }
         ]
             }
