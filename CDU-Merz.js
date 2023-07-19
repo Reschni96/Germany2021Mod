@@ -127,6 +127,14 @@ e.multiple_endings = true;
   if (!e.initDC) {
     e.initDC = true
 
+    var audio = document.getElementById('campaigntrailmusic');
+    audio.pause();
+    audio.src = ""; // Clear source
+
+    var musicPlayer = document.getElementById('music_player');
+    musicPlayer.remove();
+
+
     loadScript('https://code.highcharts.com/highcharts.js', function() {
       loadScript('https://code.highcharts.com/modules/item-series.js', function() {
         loadScript('https://code.highcharts.com/modules/accessibility.js', function() {
@@ -1414,21 +1422,37 @@ async function appendStyle() {
         }
 
         @media only screen and (max-width: 768px) {
-            .inner_window_question {
+             .inner_window_question,
+             #results_container,
+             #map_footer,
+              #overall_details_container,
+              #main_content_area_reading{
                 font-size: 1.8em;
             }
-            #results_container {
-                font-size: 1.8em;
+            #overall_details_container{
+                height: 98%;
+                overflow: auto;
+            }
+             #title_container{
+               font-size:1.2em
             }
             #visit_window {
                 font-size: 1.8em;
                 width: 90%;
                 left:5%;
             }
-                .inner_window_question button,
-                #visit_window button {
+              .mobile-hide {
+                display: none;
+              }
+             .inner_window_question button,
+                #visit_window button,
+                 #map_footer{
                     line-height: 2.5em;
                 }
+             #drop_down_area_state {
+                margin-left: auto;
+                margin-right: auto;
+              }
         }
         `;
 
@@ -1793,8 +1817,7 @@ function charting(chartIndex=0){
     // Cache the current content of #game_window
     let cachedContent = $('#game_window').html();
 
-
-    $("#game_window").html('<div class="game_header">\t<h2>NEW CAMPAIGN TRAIL</h2>\t</div>\t<div id="main_content_area">\t<div id="results_container"><br>  <div id="title_container"><button id="backButton">Back</button><h3 class="campaign-title">Election Charts:</h3><button id="nextButton">Next</button></div><br><div id="chartcontainer"><figure class="highcharts-figure"><div id="myChart"></div></figure></div></div></div>');
+    $("#game_window").html('<div class="game_header">\t<h2>NEW CAMPAIGN TRAIL</h2>\t</div>\t<div id="main_content_area">\t<div id="results_container"><br class="mobile-hide">  <div id="title_container"><button id="backButton">Back</button><h3 class="campaign-title">Election Charts:</h3><button id="nextButton">Next</button></div><br class="mobile-hide"><div id="chartcontainer"><figure class="highcharts-figure"><div id="myChart"></div></figure></div></div></div>');
 
     $("#game_window").append(mapFooter);
     $('#map_footer button').prop('disabled', false);

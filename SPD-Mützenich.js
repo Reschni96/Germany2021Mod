@@ -132,6 +132,15 @@ e.multiple_endings = true;
   if (!e.initDC) {
     e.initDC = true
 
+
+    var audio = document.getElementById('campaigntrailmusic');
+    audio.pause();
+    audio.src = ""; // Clear source
+
+    var musicPlayer = document.getElementById('music_player');
+    musicPlayer.remove();
+
+
      loadScript('https://code.highcharts.com/highcharts.js', function() {
       loadScript('https://code.highcharts.com/modules/item-series.js', function() {
         loadScript('https://code.highcharts.com/modules/accessibility.js', function() {
