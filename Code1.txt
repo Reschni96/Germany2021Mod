@@ -215,6 +215,9 @@ musicMode = () => {
                     break
                 }
             }
+            e.music.shuffleEnabled = false;
+            shuffledIndices = null;
+
             document.getElementById("trackSelParent").remove()
             newMusicPlayer()
         }
