@@ -371,6 +371,31 @@ musicMode = () => {
               "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131509584436154388/Polarkreis_18_-_Allein_Allein.mp3"
             }
         ]
+            },
+            3: {
+          name: "Deutsche Volkslieder (CDU)",
+          tracklist: [
+            {
+              "name": "Kein Schöner Land in dieser Zeit",
+              "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296350626140241/Anton_Wilhelm_von_Zuccalmaglio_-_Kein_schoner_Land_in_dieser_Zeit.mp3"
+            },
+            {
+              "name": "Die Gedanken sind frei",
+              "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296366619009094/August_Hoffmann_von_Fallersleben_-_Die_Gedanken_sind_frei.mp3"
+            },
+            {
+              "name": "Loreley (Ich weiß nicht, was soll es bedeuten)",
+              "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296500606046349/Heinrich_Heine__Friedrich_Silcher_-_Loreley_Ich_wei_nicht_was_soll_es_bedeuten.mp3"
+            },
+            {
+              "name": "Du, Du liegst mir im Herzen",
+              "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296591505002516/Marlene_Dietrich-_Du_Du_Liegst_Mir_Im_Herzen.mp3"
+            },
+            {
+              "name": "Wenn die bunten Fahnen wehen",
+              "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296329440702575/Alf_Zschiesche_-_Wenn_die_bunten_Fahnen_wehen.mp3"
+            }
+        ]
             }
     }
     newMusicPlayer()
