@@ -23,6 +23,7 @@ document.body.style.backgroundSize = "cover";
 document.getElementById("header").src = "https://cdn.discordapp.com/attachments/1109846390575730788/1131322097562558514/Germany3.png";
 nct_stuff.themes[nct_stuff.selectedTheme].text_col = "white"
 var shuffleEnabled = false;
+var musicVolume=0.3;
 
 quotes = [`"Wir schaffen das!" - Angela Merkel`, `"Scheitert der Euro, scheitert Europa." - Angela Merkel`, `"Das Internet ist für uns alle Neuland." - Angela Merkel`, `"Die Demokratie ist kein Supermarkt." - Frank-Walther Steinmeier`, `In my homeland Baden-Württemberg we are all sitting in one boat.`, `"Rechts von der CDU/CSU darf es keine demokratisch legitimierte Partei geben" - Franz-Joseph Strauß`, `"Jetzt wächst zusammen, was zusammen gehört" - Willy Brandt`, `Was kümmert mich mein Geschwätz von gestern? - Konrad Adenauer`, `"Wer Visionen hat, sollte zum Arzt gehen" - Helmut Schmidt`, `There will never be a revolution in Germany. The bureaucratic paperwork for it is missing.`, ]
 customquote = quotes[Math.floor((Math.random() * quotes.length))]
@@ -155,6 +156,7 @@ musicMode = () => {
         volumeSlider.value = 0;
         volumeSlider.style.width = "200px";
         volumeSlider.id = "volume-slider";
+        audio.volume= musicVolume;
         volumeSlider.value = audio.volume;
         timeTracker.appendChild(pausePlay);
         timeTracker.appendChild(shuffleButton);
@@ -174,6 +176,7 @@ musicMode = () => {
         }
         updateVolume = event => {
             audio.volume = event.target.value;
+            musicVolume=audio.volume;
         }
         setInterval(updatePositionDisplay, 1000);
         timeSlider.addEventListener("input", changeTime);
