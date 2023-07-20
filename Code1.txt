@@ -22,8 +22,9 @@ document.body.style.backgroundRepeat = "no-repeat";
 document.body.style.backgroundSize = "cover";
 document.getElementById("header").src = "https://cdn.discordapp.com/attachments/1109846390575730788/1131322097562558514/Germany3.png";
 nct_stuff.themes[nct_stuff.selectedTheme].text_col = "white"
-var shuffleEnabled = false;
-var musicVolume=0.3;
+e.music = {};
+e.music.shuffleEnabled = false;
+e.music.Volume=0.3;
 
 quotes = [`"Wir schaffen das!" - Angela Merkel`, `"Scheitert der Euro, scheitert Europa." - Angela Merkel`, `"Das Internet ist für uns alle Neuland." - Angela Merkel`, `"Die Demokratie ist kein Supermarkt." - Frank-Walther Steinmeier`, `In my homeland Baden-Württemberg we are all sitting in one boat.`, `"Rechts von der CDU/CSU darf es keine demokratisch legitimierte Partei geben" - Franz-Joseph Strauß`, `"Jetzt wächst zusammen, was zusammen gehört" - Willy Brandt`, `Was kümmert mich mein Geschwätz von gestern? - Konrad Adenauer`, `"Wer Visionen hat, sollte zum Arzt gehen" - Helmut Schmidt`, `There will never be a revolution in Germany. The bureaucratic paperwork for it is missing.`, ]
 customquote = quotes[Math.floor((Math.random() * quotes.length))]
@@ -109,9 +110,9 @@ musicMode = () => {
         shuffleButton.style.margin = "2px";;
         shuffleButton.addEventListener("click", event => {
             event.preventDefault();
-            shuffleEnabled = !shuffleEnabled;
-            event.target.innerHTML = shuffleEnabled ? "<b>Unshuffle</b>" : "<b>Shuffle</b>";
-            if (shuffleEnabled) {
+            e.music.shuffleEnabled = !e.music.shuffleEnabled;
+            event.target.innerHTML = e.music.shuffleEnabled ? "<b>Unshuffle</b>" : "<b>Shuffle</b>";
+            if (e.music.shuffleEnabled) {
                 shuffledIndices = shuffle(trackIndices.slice());
                 let currentTrackIndex = Number(document.querySelector('input[name="trackSelector"]:checked').value);
                 shuffledIndices = shuffledIndices.filter(index => index !== currentTrackIndex);
@@ -127,7 +128,7 @@ musicMode = () => {
             event.preventDefault();
             let selected = Number(document.querySelector('input[name="trackSelector"]:checked').value);
             let newSel;
-            if (shuffleEnabled) {
+            if (e.music.shuffleEnabled) {
                 if (!shuffledIndices) {
                     shuffledIndices = shuffle(trackIndices.slice());
                 }
@@ -156,7 +157,7 @@ musicMode = () => {
         volumeSlider.value = 0;
         volumeSlider.style.width = "200px";
         volumeSlider.id = "volume-slider";
-        audio.volume= musicVolume;
+        audio.volume= e.music.Volume;
         volumeSlider.value = audio.volume;
         timeTracker.appendChild(pausePlay);
         timeTracker.appendChild(shuffleButton);
@@ -176,7 +177,7 @@ musicMode = () => {
         }
         updateVolume = event => {
             audio.volume = event.target.value;
-            musicVolume=audio.volume;
+            e.music.Volume=audio.volume;
         }
         setInterval(updatePositionDisplay, 1000);
         timeSlider.addEventListener("input", changeTime);
@@ -233,7 +234,7 @@ musicMode = () => {
             console.log("next track")
             let selected = Number(document.querySelector('input[name="trackSelector"]:checked').value);
             let newSel;
-            if (shuffleEnabled) {
+            if (e.music.shuffleEnabled) {
                 if (!shuffledIndices) {
                     shuffledIndices = shuffle(trackIndices.slice());
                 }
@@ -397,6 +398,31 @@ musicMode = () => {
             {
               "name": "Wenn die bunten Fahnen wehen",
               "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296329440702575/Alf_Zschiesche_-_Wenn_die_bunten_Fahnen_wehen.mp3"
+            }
+        ]
+            },
+            4: {
+          name: "Deutsche Protestlieder (Greens)",
+          tracklist: [
+            {
+              "name": "Gänsehaut - Karl der Käfer",
+              "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296471967338617/Gansehaut_-_Karl_der_Kafer.mp3"
+            },
+            {
+              "name": "Ton Steine Scherben – Keine Macht für niemand",
+              "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296741602377738/Ton_Steine_Scherben_-_Keine_Macht_fur_niemand.mp3"
+            },
+            {
+              "name": "Bots - Aufstehen",
+              "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296393466761226/Bots_-_Aufstehen.mp3"
+            },
+            {
+              "name": "Fehlfarben - Ein Jahr (Es geht voran)",
+              "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296445107011694/Fehlfarben_-_Ein_Jahr_Es_geht_voran.mp3"
+            },
+            {
+              "name": "Teller Bunte Knete - Stadtmensch",
+              "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296715027251270/Teller_Bunte_Knete_-_Stadtmensch.mp3"
             }
         ]
             }
