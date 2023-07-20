@@ -771,6 +771,18 @@ musicMode = () => {
                 z-index: 1;
             }
 
+            .rounded-box {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                border: 4px solid black;
+                margin: 10px;
+                background-color: white;
+                border-radius: 10px;
+                overflow: hidden;
+            }
+
+
              #candidate_pic,
             #running_mate_pic,
             .inner_window_sign_display {

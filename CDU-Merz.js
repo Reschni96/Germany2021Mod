@@ -1249,12 +1249,7 @@ function createNewImageElement(src, border) {
 
 function createBox(imageElement, text) {
     var container = document.createElement('div');
-    container.style.display = 'flex';
-    container.style.flexDirection = 'column';
-    container.style.justifyContent = 'center';
-    container.style.border = '4px solid black';
-    container.style.margin = '10px';
-    container.style.backgroundColor = 'white';
+    container.classList.add('rounded-box');
 
     var textBox = document.createElement('div');
     textBox.style.padding = '5px';
@@ -1269,12 +1264,7 @@ function createBox(imageElement, text) {
 
 function createBoxWithTextAndPic(text, pictureSrc) {
     var container = document.createElement('div');
-    container.style.display = 'flex';
-    container.style.flexDirection = 'column';
-    container.style.justifyContent = 'center';
-    container.style.border = '4px solid black';
-    container.style.margin = '10px';
-    container.style.backgroundColor = 'white';
+    container.classList.add('rounded-box');
 
     var textBox = document.createElement('div');
     textBox.style.padding = '5px';
