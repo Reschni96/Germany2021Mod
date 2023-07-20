@@ -39,10 +39,7 @@ if (!element) {
 
  $("#game_start").click((event) => {
     event.preventDefault();
-    $("#election_id_button").click((event) => {
-        event.preventDefault();
-               musicMode()
-})
+    musicMode()
   })
 musicMode = () => {
     $("#music_player")[0].children[0].style.display = "none"
@@ -810,7 +807,11 @@ musicMode = () => {
               height: 30.78em
             }
 
-            #overall_result {
+            #overall_result,
+            #election_description_window,
+            #candidate_description_window,
+            #running_mate_description_window,
+            #opponent_selection_description_window{
                 overflow: auto;
             }
 
@@ -819,9 +820,39 @@ musicMode = () => {
                  #results_container,
                  #map_footer,
                   #overall_details_container,
-                  #main_content_area_reading{
+                  #main_content_area_reading,
+                  #inner_window_2,
+                  #inner_window_3,
+                   #inner_window_4{
                     font-size: 1.8em;
                 }
+                #inner_window_2 select,
+                    #inner_window_3 select,
+                    #inner_window_4 select {
+                        font-size: 1em;
+                        padding: 10px;
+                    }
+
+                    #inner_window_2 button,
+                    #inner_window_3 button,
+                    #inner_window_4 button {
+                        font-size: 1em;
+                        line-height: 2em;
+                    }
+
+                 #inner_window_2,
+                 #inner_window_3,
+                 #inner_window_4{
+                    overflow:auto;
+                }
+                #opponent_selection_description_window,
+                #election_year_form,
+                #candidate_description_window,
+                #running_mate_description_window,
+                #opponent_selection_description_window{
+                height: auto;
+                overflow: visible;
+            }
                 #overall_details_container{
                     height: 98%;
                     overflow: auto;
