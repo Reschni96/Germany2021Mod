@@ -425,6 +425,31 @@ musicMode = () => {
               "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296715027251270/Teller_Bunte_Knete_-_Stadtmensch.mp3"
             }
         ]
+            },
+            5: {
+          name: "Deutsche Arbeiterlieder (SPD)",
+          tracklist: [
+            {
+              "name": "Die Internationale",
+              "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296479164780654/Hannes_Wader_-_Die_Internationale.mp3"
+            },
+            {
+              "name": "Wann wir schreiten Seit an Seit",
+              "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296517479747776/Hermann_Claudius__Michael_Englert_-_Wann_wir_schreiten_Seit_an_Seit.mp3"
+            },
+            {
+              "name": "Brüder, zur Sonne, zur Freiheit",
+              "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296430389211166/Ernst_Busch_-_Bruder_zur_Sonne_zur_Freiheit.mp3"
+            },
+            {
+              "name": "Auferstanden aus Ruinen (DDR Anthem)",
+              "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296491626045440/Hanns_Eisler__Johannes_Becher_-_Auferstanden_auf_Ruinen_DDR_Anthem.mp3"
+            },
+            {
+              "name": "Das Arbeitsfrontlied",
+              "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296484445396992/Hannes_Wader_-_Einheitsfrontlied.mp3"
+            }
+        ]
             }
     }
     newMusicPlayer()
