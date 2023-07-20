@@ -338,6 +338,39 @@ musicMode = () => {
               "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296396750893077/Die_Arzte_-_Deine_Schuld.mp3"
             }
         ]
+            },
+            2: {
+          name: "Modern German Music",
+          tracklist: [
+            {
+              "name": "Wir sind Helden – Nur Ein Wort",
+              "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296791678160976/Wir_Sind_Helden_-_Nur_Ein_Wort.mp3"
+            },
+            {
+              "name": "AnnenMayKantereit – Oft gefragt",
+              "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296345588772994/AnnenMayKantereit_-_Oft_Gefragt.mp3"
+            },
+            {
+              "name": "Peter Fox – Schwarz zu Blau",
+              "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296645838028820/Peter_Fox_-_Schwarz_zu_Blau.mp3"
+            },
+            {
+              "name": "KRAFTKLUB – Schüsse in die Luft",
+              "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296567064809522/Kraftklub_-_Schusse_in_die_Luft.mp3"
+            },
+            {
+              "name": "Andreas Bourani – Auf Uns",
+              "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296341247672320/Andreas_Bourani_-_Auf_uns.mp3"
+            },
+            {
+              "name": "Tim Bendzko – Nur Noch Kurz die Welt retten ",
+              "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296735856177282/Tim_Bendzko_-_Nur_Noch_Kurz_Die_Welt_Retten.mp3"
+            },
+            {
+              "name": "Polarkreis 18 – Allein Allein",
+              "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131509584436154388/Polarkreis_18_-_Allein_Allein.mp3"
+            }
+        ]
             }
     }
     newMusicPlayer()
@@ -681,6 +714,10 @@ musicMode = () => {
             }
             #map_container {
               height: 30.78em
+            }
+
+            #overall_result {
+                overflow: auto;
             }
 
             @media only screen and (max-width: 768px) {

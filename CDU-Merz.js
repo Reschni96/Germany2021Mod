@@ -1102,18 +1102,6 @@ cyoAdventure = function (a) {
 
 // style stuff here
 // These functions handle a specific mutation task
-async function addScrollbar(overallResult, processedNodes) {
-    if (overallResult && !processedNodes.has(overallResult)) {
-        overallResult.style.overflow = 'auto';
-        const buttons = document.querySelectorAll('#view_electoral_map, #answer_select_button, #ok_button, #final_election_map_button');
-        const handleClick = () => {
-            overallResult.style.overflow = 'auto';
-        };
-        buttons.forEach(button => button.addEventListener('click', handleClick));
-        processedNodes.add(overallResult);
-    }
-}
-
 async function changeChart(processedNodes) {
     const elementIDs = ["overall_vote_statistics", "state_result_data_summary", "overall_details_container"];
     for(let id of elementIDs) {
@@ -1311,8 +1299,6 @@ async function handleMutations(mutationsList, observer) {
 
     observer.disconnect();
 
-    const overallResult = document.getElementById('overall_result');
-    await addScrollbar(overallResult, processedNodes);
     await changeChart(processedNodes);
     await adjustMcaHeight(processedNodes);
 
