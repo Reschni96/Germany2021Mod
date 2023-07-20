@@ -3,7 +3,7 @@ campaignTrail_temp.candidate_json = JSON.parse("[{\"model\": \"campaign_trail.ca
 campaignTrail_temp.running_mate_json = JSON.parse("[{\"model\": \"campaign_trail.running_mate\", \"pk\": 47, \"fields\": {\"candidate\": 77, \"running_mate\": 307}}, {\"model\": \"campaign_trail.running_mate\", \"pk\": 56, \"fields\": {\"candidate\": 77, \"running_mate\": 308}}, {\"model\": \"campaign_trail.running_mate\", \"pk\": 76, \"fields\": {\"candidate\": 77, \"running_mate\": 309}}, {\"model\": \"campaign_trail.running_mate\", \"pk\": 106, \"fields\": {\"candidate\": 78, \"running_mate\": 310}}, {\"model\": \"campaign_trail.running_mate\", \"pk\": 105, \"fields\": {\"candidate\": 79, \"running_mate\": 311}}, {\"model\": \"campaign_trail.running_mate\", \"pk\": 81, \"fields\": {\"candidate\": 79, \"running_mate\": 312}}]");
 campaignTrail_temp.opponents_default_json = JSON.parse("[{\"election\": 9, \"candidates\": [77, 78, 79, 303, 304, 305, 306]}]");
 campaignTrail_temp.opponents_weighted_json = JSON.parse("[{\"election\": 9, \"candidates\": [77, 78, 79, 303, 304, 305, 306]}]");
-campaignTrail_temp.global_parameter_json = JSON.parse("[{\"model\": \"campaign_trail.global_parameter\", \"pk\": 1, \"fields\": {\"vote_variable\": 1.125, \"max_swing\": 0.12, \"start_point\": 0.94, \"candidate_issue_weight\": 10.0, \"running_mate_issue_weight\": 0.0, \"issue_stance_1_max\": -0.71, \"issue_stance_2_max\": -0.3, \"issue_stance_3_max\": -0.125, \"issue_stance_4_max\": 0.125, \"issue_stance_5_max\": 0.3, \"issue_stance_6_max\": 0.71, \"global_variance\": 0.01, \"state_variance\": 0.005, \"question_count\": 25, \"default_map_color_hex\": \"#C9C9C9\", \"no_state_map_color_hex\": \"#999999\"}}]");
+campaignTrail_temp.global_parameter_json = JSON.parse("[{\"model\": \"campaign_trail.global_parameter\", \"pk\": 1, \"fields\": {\"vote_variable\": 1.125, \"max_swing\": 0.12, \"start_point\": 0.94, \"candidate_issue_weight\": 10.0, \"running_mate_issue_weight\": 0.0, \"issue_stance_1_max\": -0.71, \"issue_stance_2_max\": -0.3, \"issue_stance_3_max\": -0.125, \"issue_stance_4_max\": 0.125, \"issue_stance_5_max\": 0.3, \"issue_stance_6_max\": 0.71, \"global_variance\": 0.01, \"state_variance\": 0.005, \"question_count\": 33, \"default_map_color_hex\": \"#C9C9C9\", \"no_state_map_color_hex\": \"#999999\"}}]");
 campaignTrail_temp.candidate_dropout_json = JSON.parse("[{\"model\": \"campaign_trail.candidate_dropout\", \"pk\": 1, \"fields\": {\"candidate\": 36, \"affected_candidate\": 18, \"probability\": 1.0}}]");
 campaignTrail_temp.temp_election_list = [{"id": 9, "year": 2021, "is_premium": 0, "display_year": "2021"}];
 campaignTrail_temp.show_premium = true;
@@ -34,441 +34,483 @@ corrr="\n<h2>NEUE WAHLKAMPF-TOUR</h2><font id='wittyquote' size='4' color='white
 var element = document.getElementById('my-invisible-element');
 if (!element) {
 
+    // Get the reference to the bar
+    var bar = document.getElementById('bottomBar');
+
+    // Create the checkbox
+    var checkbox = document.createElement('input');
+    checkbox.type = 'checkbox';
+    checkbox.id = 'volumeCheckbox';
+    checkbox.checked = true;  // Checked by default
+
+    // Create the label for the checkbox
+    var label = document.createElement('label');
+    label.htmlFor = 'volumeCheckbox';
+    label.style.fontSize = '18px';  // Increase the size of the text
+    label.style.fontWeight = 'bold';  // Make the text bold
+    label.appendChild(document.createTextNode('Enable Volume'));
+
+    // Wrap the checkbox and label in a div and style it
+    var wrapper = document.createElement('div');
+    wrapper.style.padding = '10px';  // Add some padding
+    wrapper.style.borderRadius = '10px';  // Round the corners
+    wrapper.style.backgroundColor = '#d3d3d3';  // Set the background color to the default button color
+    wrapper.style.border = '1px solid black';  // Add a black border
+    wrapper.appendChild(checkbox);
+    wrapper.appendChild(label);
+
+    // Position the wrapper in the middle of the bar
+    var div = document.createElement('div');
+    div.style.position = 'absolute';
+    div.style.left = '50%';
+    div.style.transform = 'translate(-50%, 0)';  // Center the div
+    div.appendChild(wrapper);
+
+    // Add the div to the bar
+    bar.appendChild(div);
+
+    // Add event listener to the checkbox
+    checkbox.addEventListener('change', function() {
+        if (!this.checked) {
+            e.music.Volume = 0;  // Set the initial volume of the music player to 0
+        }
+    });
+
+
     let trackIndices;
     let shuffledIndices;
 
  $("#game_start").click((event) => {
     event.preventDefault();
     musicMode()
-  })
-musicMode = () => {
-    $("#music_player")[0].children[0].style.display = "none"
-    $("#music_player")[0].children[1].style.display = "none"
-    document.getElementById("modLoadReveal").style.display = "none"
-    document.getElementById("modloaddiv").style.display = "none"
-    musicBox = document.getElementById("music_player")
-    musicBox.style.display = ""
-    var trackSel;
-    e = campaignTrail_temp
-    e.selectedSoundtrack = 0
-    toTime = (seconds) => {
-        var date = new Date(null);
-        date.setSeconds(seconds);
-        return date.toISOString().substr(11, 8);
-    }
-    generateTime = () => {
-        // Get the audio element
-        var audio = document.getElementById("campaigntrailmusic");
-        timeTracker = document.createElement("div");
-        timeTracker.style = `
-  text-align:left;
-  border-style:solid;
-  border-width:3px;
-  height:200px;
-  width:200px;
-  background-color:#999999;
-  float:right;
-  padding: 10px;
-  `
-        $("#trackSelParent")[0].prepend(timeTracker);
-        $("#trackSelParent")[0].prepend(document.createElement("br"));
-        var positionDisplay = document.createElement("gg");
-        positionDisplay.id = "position-display";
-        var timeSlider = document.createElement("input");
-        timeSlider.type = "range";
-        timeSlider.min = 0;
-        timeSlider.max = 1;
-        timeSlider.step = 0.001;
-        timeSlider.value = 0;
-        timeSlider.style.width = "200px";
-        timeSlider.id = "time-slider";
-        var pausePlay = document.createElement("button");
-        pausePlay.id = "position-display";
-        pausePlay.innerHTML = "<b>Pause</b>"
-        pausePlay.style.width = "100%";
-        pausePlay.style.margin = "2px";
-        pausePlay.addEventListener("click", event => {
-            event.preventDefault();
-            updatePositionDisplay();
-            let audio = document.getElementById("campaigntrailmusic");
-            if (audio.paused) {
-                audio.play();
-                event.target.innerHTML = "<b>Pause</b>";
+      })
+    musicMode = () => {
+        $("#music_player")[0].children[0].style.display = "none"
+        $("#music_player")[0].children[1].style.display = "none"
+        document.getElementById("modLoadReveal").style.display = "none"
+        document.getElementById("modloaddiv").style.display = "none"
+        musicBox = document.getElementById("music_player")
+        musicBox.style.display = ""
+        var trackSel;
+        e = campaignTrail_temp
+        e.selectedSoundtrack = 0
+        toTime = (seconds) => {
+            var date = new Date(null);
+            date.setSeconds(seconds);
+            return date.toISOString().substr(11, 8);
+        }
+        generateTime = () => {
+            // Get the audio element
+            var audio = document.getElementById("campaigntrailmusic");
+            timeTracker = document.createElement("div");
+            timeTracker.style = `
+      text-align:left;
+      border-style:solid;
+      border-width:3px;
+      height:200px;
+      width:200px;
+      background-color:#999999;
+      float:right;
+      padding: 10px;
+      `
+            $("#trackSelParent")[0].prepend(timeTracker);
+            $("#trackSelParent")[0].prepend(document.createElement("br"));
+            var positionDisplay = document.createElement("gg");
+            positionDisplay.id = "position-display";
+            var timeSlider = document.createElement("input");
+            timeSlider.type = "range";
+            timeSlider.min = 0;
+            timeSlider.max = 1;
+            timeSlider.step = 0.001;
+            timeSlider.value = 0;
+            timeSlider.style.width = "200px";
+            timeSlider.id = "time-slider";
+            var pausePlay = document.createElement("button");
+            pausePlay.id = "position-display";
+            pausePlay.innerHTML = "<b>Pause</b>"
+            pausePlay.style.width = "100%";
+            pausePlay.style.margin = "2px";
+            pausePlay.addEventListener("click", event => {
+                event.preventDefault();
+                updatePositionDisplay();
+                let audio = document.getElementById("campaigntrailmusic");
+                if (audio.paused) {
+                    audio.play();
+                    event.target.innerHTML = "<b>Pause</b>";
+                    return;
+                }
+                audio.pause();
+                event.target.innerHTML = "<b>Play</b>";
                 return;
-            }
-            audio.pause();
-            event.target.innerHTML = "<b>Play</b>";
-            return;
-        })
-        var shuffleButton = document.createElement("button");
-        shuffleButton.id = "shuffle-button";
-        shuffleButton.innerHTML = "<b>Shuffle</b>"
-        shuffleButton.style.width = "100%"
-        shuffleButton.style.margin = "2px";;
-        shuffleButton.addEventListener("click", event => {
-            event.preventDefault();
-            e.music.shuffleEnabled = !e.music.shuffleEnabled;
-            event.target.innerHTML = e.music.shuffleEnabled ? "<b>Unshuffle</b>" : "<b>Shuffle</b>";
-            if (e.music.shuffleEnabled) {
-                shuffledIndices = shuffle(trackIndices.slice());
-                let currentTrackIndex = Number(document.querySelector('input[name="trackSelector"]:checked').value);
-                shuffledIndices = shuffledIndices.filter(index => index !== currentTrackIndex);
-                shuffledIndices.unshift(currentTrackIndex);
-            }
-        });
-        var skipButton = document.createElement("button");
-        skipButton.id = "skip-button";
-        skipButton.innerHTML = "<b>Skip</b>"
-        skipButton.style.width = "100%";
-        skipButton.style.margin = "2px"; // Add margin
-        skipButton.addEventListener("click", event => {
-            event.preventDefault();
-            let selected = Number(document.querySelector('input[name="trackSelector"]:checked').value);
-            let newSel;
-            if (e.music.shuffleEnabled) {
-                if (!shuffledIndices) {
+            })
+            var shuffleButton = document.createElement("button");
+            shuffleButton.id = "shuffle-button";
+            shuffleButton.innerHTML = "<b>Shuffle</b>"
+            shuffleButton.style.width = "100%"
+            shuffleButton.style.margin = "2px";;
+            shuffleButton.addEventListener("click", event => {
+                event.preventDefault();
+                e.music.shuffleEnabled = !e.music.shuffleEnabled;
+                event.target.innerHTML = e.music.shuffleEnabled ? "<b>Unshuffle</b>" : "<b>Shuffle</b>";
+                if (e.music.shuffleEnabled) {
                     shuffledIndices = shuffle(trackIndices.slice());
+                    let currentTrackIndex = Number(document.querySelector('input[name="trackSelector"]:checked').value);
+                    shuffledIndices = shuffledIndices.filter(index => index !== currentTrackIndex);
+                    shuffledIndices.unshift(currentTrackIndex);
                 }
-                let currentIndex = shuffledIndices.findIndex(index => index === selected);
-                if (currentIndex === shuffledIndices.length - 1) {
-                    shuffledIndices = shuffle(trackIndices.slice());
-                    currentIndex = -1;
+            });
+            var skipButton = document.createElement("button");
+            skipButton.id = "skip-button";
+            skipButton.innerHTML = "<b>Skip</b>"
+            skipButton.style.width = "100%";
+            skipButton.style.margin = "2px"; // Add margin
+            skipButton.addEventListener("click", event => {
+                event.preventDefault();
+                let selected = Number(document.querySelector('input[name="trackSelector"]:checked').value);
+                let newSel;
+                if (e.music.shuffleEnabled) {
+                    if (!shuffledIndices) {
+                        shuffledIndices = shuffle(trackIndices.slice());
+                    }
+                    let currentIndex = shuffledIndices.findIndex(index => index === selected);
+                    if (currentIndex === shuffledIndices.length - 1) {
+                        shuffledIndices = shuffle(trackIndices.slice());
+                        currentIndex = -1;
+                    }
+                    newSel = shuffledIndices[currentIndex + 1];
+                } else {
+                    newSel = selected + 1 === soundtracks[e.selectedSoundtrack].tracklist.length ? 0 : selected + 1;
                 }
-                newSel = shuffledIndices[currentIndex + 1];
-            } else {
-                newSel = selected + 1 === soundtracks[e.selectedSoundtrack].tracklist.length ? 0 : selected + 1;
+                let buttons = Array.from(document.getElementById("trackSel").children).filter(f => {
+                        return f.tagName == "LABEL"
+                    }).map(f => f.children[0])
+                buttons[newSel].click()
+            });
+            var volumeLabel = document.createElement("gg");
+            volumeLabel.id = "volume-label";
+            volumeLabel.innerHTML = "<br><b>Volume: </b>"
+            var volumeSlider = document.createElement("input");
+            volumeSlider.type = "range";
+            volumeSlider.min = 0;
+            volumeSlider.max = 1;
+            volumeSlider.step = 0.001;
+            volumeSlider.value = 0;
+            volumeSlider.style.width = "200px";
+            volumeSlider.id = "volume-slider";
+            audio.volume= e.music.Volume;
+            volumeSlider.value = audio.volume;
+            timeTracker.appendChild(pausePlay);
+            timeTracker.appendChild(shuffleButton);
+            timeTracker.appendChild(skipButton);
+            timeTracker.appendChild(positionDisplay);
+            timeTracker.appendChild(timeSlider);
+            timeTracker.appendChild(volumeLabel);
+            timeTracker.appendChild(volumeSlider);
+            updatePositionDisplay();
+            function updatePositionDisplay() {
+                positionDisplay.innerHTML = "<b>Time:</b> " + toTime(audio.currentTime) + "<br>";
+                timeSlider.value = audio.duration ? audio.currentTime / audio.duration : 0;
             }
-            let buttons = Array.from(document.getElementById("trackSel").children).filter(f => {
-                    return f.tagName == "LABEL"
-                }).map(f => f.children[0])
-            buttons[newSel].click()
-        });
-        var volumeLabel = document.createElement("gg");
-        volumeLabel.id = "volume-label";
-        volumeLabel.innerHTML = "<br><b>Volume: </b>"
-        var volumeSlider = document.createElement("input");
-        volumeSlider.type = "range";
-        volumeSlider.min = 0;
-        volumeSlider.max = 1;
-        volumeSlider.step = 0.001;
-        volumeSlider.value = 0;
-        volumeSlider.style.width = "200px";
-        volumeSlider.id = "volume-slider";
-        audio.volume= e.music.Volume;
-        volumeSlider.value = audio.volume;
-        timeTracker.appendChild(pausePlay);
-        timeTracker.appendChild(shuffleButton);
-        timeTracker.appendChild(skipButton);
-        timeTracker.appendChild(positionDisplay);
-        timeTracker.appendChild(timeSlider);
-        timeTracker.appendChild(volumeLabel);
-        timeTracker.appendChild(volumeSlider);
-        updatePositionDisplay();
-        function updatePositionDisplay() {
-            positionDisplay.innerHTML = "<b>Time:</b> " + toTime(audio.currentTime) + "<br>";
-            timeSlider.value = audio.duration ? audio.currentTime / audio.duration : 0;
+            function changeTime() {
+                positionDisplay.innerHTML = "<b>Time:</b> " + toTime(audio.currentTime) + "<br>";
+                audio.currentTime = timeSlider.value * audio.duration;
+            }
+            updateVolume = event => {
+                audio.volume = event.target.value;
+                e.music.Volume=audio.volume;
+            }
+            setInterval(updatePositionDisplay, 1000);
+            timeSlider.addEventListener("input", changeTime);
+            volumeSlider.addEventListener("input", updateVolume)
         }
-        function changeTime() {
-            positionDisplay.innerHTML = "<b>Time:</b> " + toTime(audio.currentTime) + "<br>";
-            audio.currentTime = timeSlider.value * audio.duration;
-        }
-        updateVolume = event => {
-            audio.volume = event.target.value;
-            e.music.Volume=audio.volume;
-        }
-        setInterval(updatePositionDisplay, 1000);
-        timeSlider.addEventListener("input", changeTime);
-        volumeSlider.addEventListener("input", updateVolume)
-    }
 
-    function newMusicPlayer() {
-        trackSel = document.createElement("div");
-        trackSel.id = "trackSelParent"
-        let z = `<br><br><br><br><br><br><br><br><br><br><br><br><div id='trackSel' style="text-align:left;border-style:solid;border-width:3px;overflow-y: scroll;overflow-x: hidden;height:200px; width:400px;background-color:#999999;float:right;">`
-        z += `<b><select id='selectSoundtrack'><option value='` + soundtracks[e.selectedSoundtrack].name + `'>` + soundtracks[e.selectedSoundtrack].name + "</option>"
-        for (i in soundtracks) {
-            if (soundtracks[e.selectedSoundtrack] != soundtracks[i]) {
-                z += `<option value='` + soundtracks[i].name + `'>` + soundtracks[i].name + `</option>`
-            }
-        }
-        z += `</select></b><br><br>`
-            // <label><input type="radio" name="option" value="option1">Option 1</label><br>
-        for (i in soundtracks[e.selectedSoundtrack].tracklist) {
-            let a = soundtracks[e.selectedSoundtrack].tracklist[i]
-            let b = `<label><input class="trackSelector" type="radio" name="trackSelector" value="` + i + `">` + a.name + `</label><br>`
-            z += b
-        }
-        z += "</div><br><br>"
-        trackSel.innerHTML = z
-        musicBox.appendChild(trackSel);
-        Array.from(document.getElementById("trackSel").children).filter(f => {
-            return f.tagName == "LABEL"
-        }).map(f => f.children[0])[0].checked = true
-        soundtrackSelector = document.getElementById("selectSoundtrack")
-        soundtrackSelector.onchange = function() {
+        function newMusicPlayer() {
+            trackSel = document.createElement("div");
+            trackSel.id = "trackSelParent"
+            let z = `<br><br><br><br><br><br><br><br><br><br><br><br><div id='trackSel' style="text-align:left;border-style:solid;border-width:3px;overflow-y: scroll;overflow-x: hidden;height:200px; width:400px;background-color:#999999;float:right;">`
+            z += `<b><select id='selectSoundtrack'><option value='` + soundtracks[e.selectedSoundtrack].name + `'>` + soundtracks[e.selectedSoundtrack].name + "</option>"
             for (i in soundtracks) {
-                if (soundtracks[i].name == soundtrackSelector.value) {
-                    e.selectedSoundtrack = i
-                    break
+                if (soundtracks[e.selectedSoundtrack] != soundtracks[i]) {
+                    z += `<option value='` + soundtracks[i].name + `'>` + soundtracks[i].name + `</option>`
                 }
             }
-            e.music.shuffleEnabled = false;
-            shuffledIndices = null;
-
-            document.getElementById("trackSelParent").remove()
-            newMusicPlayer()
-        }
-        var matches = document.querySelectorAll('.trackSelector');
-        for (match in matches) {
-            matches[match].onchange = function() {
-                audio = $("#campaigntrailmusic")[0];
-                audio.src = soundtracks[e.selectedSoundtrack].tracklist[this.value].url
-                audio.currentTime = 0
+            z += `</select></b><br><br>`
+                // <label><input type="radio" name="option" value="option1">Option 1</label><br>
+            for (i in soundtracks[e.selectedSoundtrack].tracklist) {
+                let a = soundtracks[e.selectedSoundtrack].tracklist[i]
+                let b = `<label><input class="trackSelector" type="radio" name="trackSelector" value="` + i + `">` + a.name + `</label><br>`
+                z += b
             }
-        }
-        musicBox.children[2].loop = false
-        musicBox.children[2].src = soundtracks[e.selectedSoundtrack].tracklist[0].url
-        trackIndices = Array.from({length: soundtracks[e.selectedSoundtrack].tracklist.length}, (_, i) => i);
-
-        musicBox.children[2].onended = function() {
-            console.log("next track")
-            let selected = Number(document.querySelector('input[name="trackSelector"]:checked').value);
-            let newSel;
-            if (e.music.shuffleEnabled) {
-                if (!shuffledIndices) {
-                    shuffledIndices = shuffle(trackIndices.slice());
+            z += "</div><br><br>"
+            trackSel.innerHTML = z
+            musicBox.appendChild(trackSel);
+            Array.from(document.getElementById("trackSel").children).filter(f => {
+                return f.tagName == "LABEL"
+            }).map(f => f.children[0])[0].checked = true
+            soundtrackSelector = document.getElementById("selectSoundtrack")
+            soundtrackSelector.onchange = function() {
+                for (i in soundtracks) {
+                    if (soundtracks[i].name == soundtrackSelector.value) {
+                        e.selectedSoundtrack = i
+                        break
+                    }
                 }
-                let currentIndex = shuffledIndices.findIndex(index => index === selected);
-                if (currentIndex === shuffledIndices.length - 1) {
-                    shuffledIndices = shuffle(trackIndices.slice());
-                    currentIndex = -1;
+                e.music.shuffleEnabled = false;
+                shuffledIndices = null;
+
+                document.getElementById("trackSelParent").remove()
+                newMusicPlayer()
+            }
+            var matches = document.querySelectorAll('.trackSelector');
+            for (match in matches) {
+                matches[match].onchange = function() {
+                    audio = $("#campaigntrailmusic")[0];
+                    audio.src = soundtracks[e.selectedSoundtrack].tracklist[this.value].url
+                    audio.currentTime = 0
                 }
-                newSel = shuffledIndices[currentIndex + 1];
-            } else {
-                newSel = selected + 1 === soundtracks[e.selectedSoundtrack].tracklist.length ? 0 : selected + 1;
             }
-            let buttons = Array.from(document.getElementById("trackSel").children).filter(f => {
-                    return f.tagName == "LABEL"
-                }).map(f => f.children[0])
-            buttons[newSel].click()
+            musicBox.children[2].loop = false
+            musicBox.children[2].src = soundtracks[e.selectedSoundtrack].tracklist[0].url
+            trackIndices = Array.from({length: soundtracks[e.selectedSoundtrack].tracklist.length}, (_, i) => i);
+
+            musicBox.children[2].onended = function() {
+                let selected = Number(document.querySelector('input[name="trackSelector"]:checked').value);
+                let newSel;
+                if (e.music.shuffleEnabled) {
+                    if (!shuffledIndices) {
+                        shuffledIndices = shuffle(trackIndices.slice());
+                    }
+                    let currentIndex = shuffledIndices.findIndex(index => index === selected);
+                    if (currentIndex === shuffledIndices.length - 1) {
+                        shuffledIndices = shuffle(trackIndices.slice());
+                        currentIndex = -1;
+                    }
+                    newSel = shuffledIndices[currentIndex + 1];
+                } else {
+                    newSel = selected + 1 === soundtracks[e.selectedSoundtrack].tracklist.length ? 0 : selected + 1;
+                }
+                let buttons = Array.from(document.getElementById("trackSel").children).filter(f => {
+                        return f.tagName == "LABEL"
+                    }).map(f => f.children[0])
+                buttons[newSel].click()
+            }
+
+            for (w = 0; w < 7; w++) {
+              document.getElementById("trackSelParent").appendChild(document.createElement("br"))
+            }
+            generateTime();
         }
-
-        for (w = 0; w < 7; w++) {
-          document.getElementById("trackSelParent").appendChild(document.createElement("br"))
+        clamp = function(a, max, min, overflow = true) {
+            if (overflow) {
+                return a > max ? min : a < min ? max : a;
+            }
+            return a > max ? max : a < min ? min : a;
         }
-        generateTime();
-    }
-    clamp = function(a, max, min, overflow = true) {
-        if (overflow) {
-            return a > max ? min : a < min ? max : a;
+        var soundtracks = {
+            0: {
+              name: "German Kulturgut",
+              tracklist: [
+                {
+                  "name": "Tagesthemen Intro die Ärzte",
+                  "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296705669775400/Tagesthemen_Intro_Die_Arzte.mp3"
+                },
+                {
+                  "name": "Tagesschau Intro",
+                  "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296698044534914/Tagesschau_Intro.mp3"
+                },
+                {
+                  "name": "Tagesschau Theme",
+                  "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296495463833741/Hans_Carste__Henning_Lohner_-_ARD_Tagesschau_Theme.mp3"
+                },
+                {
+                  "name": "Tatort Intro",
+                  "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296542708473906/Klaus_Doldinger_-_Tatort_Intro.mp3"
+                },
+                {
+                  "name": "Lindenstraße Musik",
+                  "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296532390490172/Jurgen_Knieper_-_Lindenstrae_Titelmelodie.mp3"
+                },
+                {
+                  "name": "Das Lied der Deutschen",
+                  "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296382335057980/August_Hoffmann_von_Fallersleben_-_Lied_der_Deutschen_German_National_Anthem.mp3"
+                },
+                {
+                  "name": "Europahymne",
+                  "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296462551134340/Friedrich_Schiller__Ludwig_van_Beethoven_-_An_die_Freude_EU_Anthem.mp3"
+                },
+                {
+                  "name": "Einzug der Götter in Walhall",
+                  "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296655837249657/Richard_Wagner__hr-Sinfonieorchester_-_Einzug_der_Gotter_in_Walhall_Das_Rheingold.mp3"
+                }
+            ]
+                },
+                1: {
+              name: "German Oldies",
+              tracklist: [
+                {
+                  "name": "Nena – 99 Luftballons",
+                  "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296608349327381/NENA_-_99_Luftballons.mp3"
+                },
+                {
+                  "name": "Trio – Da Da Da",
+                  "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296755221270558/Trio_-_Da_Da_Da.mp3"
+                },
+                {
+                  "name": "Kraftwerk – Autobahn",
+                  "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296574350303412/Kraftwerk_-_Autobahn.mp3"
+                },
+                {
+                  "name": "Udo Jürgens – Griechischer Wein ",
+                  "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296762661978183/Udo_Jurgens_-_Griechischer_Wein.mp3"
+                },
+                {
+                  "name": "Udo Lindenberg – Sonderzug nach Pankow ",
+                  "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296771319017544/Udo_Lindenberg_-_Sonderzug_nach_Pankow.mp3"
+                },
+                {
+                  "name": "Nina Hagen – Du hast den Farbfilm vergessen ",
+                  "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296635834613781/Nina_Hagen_-_Du_hast_den_Farbfilm_vergessen.mp3"
+                },
+                {
+                  "name": "Nena – Irgendwie, Irgendwo, Irgendwann",
+                  "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296615899070544/NENA_-_Irgendwie_Irgendwo_Irgendwann.mp3"
+                },
+                {
+                  "name": "Die Ärzte - Schrei nach Liebe",
+                  "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296418104090744/Die_Arzte_-_Schrei_nach_Liebe.mp3"
+                },
+                {
+                  "name": "Die Ärzte - Deine Schuld",
+                  "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296396750893077/Die_Arzte_-_Deine_Schuld.mp3"
+                }
+            ]
+                },
+                2: {
+              name: "Modern German Music",
+              tracklist: [
+                {
+                  "name": "Wir sind Helden – Nur Ein Wort",
+                  "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296791678160976/Wir_Sind_Helden_-_Nur_Ein_Wort.mp3"
+                },
+                {
+                  "name": "AnnenMayKantereit – Oft gefragt",
+                  "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296345588772994/AnnenMayKantereit_-_Oft_Gefragt.mp3"
+                },
+                {
+                  "name": "Peter Fox – Schwarz zu Blau",
+                  "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296645838028820/Peter_Fox_-_Schwarz_zu_Blau.mp3"
+                },
+                {
+                  "name": "KRAFTKLUB – Schüsse in die Luft",
+                  "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296567064809522/Kraftklub_-_Schusse_in_die_Luft.mp3"
+                },
+                {
+                  "name": "Andreas Bourani – Auf Uns",
+                  "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296341247672320/Andreas_Bourani_-_Auf_uns.mp3"
+                },
+                {
+                  "name": "Tim Bendzko – Nur Noch Kurz die Welt retten ",
+                  "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296735856177282/Tim_Bendzko_-_Nur_Noch_Kurz_Die_Welt_Retten.mp3"
+                },
+                {
+                  "name": "Polarkreis 18 – Allein Allein",
+                  "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131509584436154388/Polarkreis_18_-_Allein_Allein.mp3"
+                }
+            ]
+                },
+                3: {
+              name: "Deutsche Volkslieder (CDU)",
+              tracklist: [
+                {
+                  "name": "Kein Schöner Land in dieser Zeit",
+                  "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296350626140241/Anton_Wilhelm_von_Zuccalmaglio_-_Kein_schoner_Land_in_dieser_Zeit.mp3"
+                },
+                {
+                  "name": "Die Gedanken sind frei",
+                  "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296366619009094/August_Hoffmann_von_Fallersleben_-_Die_Gedanken_sind_frei.mp3"
+                },
+                {
+                  "name": "Loreley (Ich weiß nicht, was soll es bedeuten)",
+                  "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296500606046349/Heinrich_Heine__Friedrich_Silcher_-_Loreley_Ich_wei_nicht_was_soll_es_bedeuten.mp3"
+                },
+                {
+                  "name": "Du, Du liegst mir im Herzen",
+                  "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296591505002516/Marlene_Dietrich-_Du_Du_Liegst_Mir_Im_Herzen.mp3"
+                },
+                {
+                  "name": "Wenn die bunten Fahnen wehen",
+                  "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296329440702575/Alf_Zschiesche_-_Wenn_die_bunten_Fahnen_wehen.mp3"
+                }
+            ]
+                },
+                4: {
+              name: "Deutsche Protestlieder (Greens)",
+              tracklist: [
+                {
+                  "name": "Gänsehaut - Karl der Käfer",
+                  "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296471967338617/Gansehaut_-_Karl_der_Kafer.mp3"
+                },
+                {
+                  "name": "Ton Steine Scherben – Keine Macht für niemand",
+                  "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296741602377738/Ton_Steine_Scherben_-_Keine_Macht_fur_niemand.mp3"
+                },
+                {
+                  "name": "Bots - Aufstehen",
+                  "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296393466761226/Bots_-_Aufstehen.mp3"
+                },
+                {
+                  "name": "Fehlfarben - Ein Jahr (Es geht voran)",
+                  "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296445107011694/Fehlfarben_-_Ein_Jahr_Es_geht_voran.mp3"
+                },
+                {
+                  "name": "Teller Bunte Knete - Stadtmensch",
+                  "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296715027251270/Teller_Bunte_Knete_-_Stadtmensch.mp3"
+                }
+            ]
+                },
+                5: {
+              name: "Deutsche Arbeiterlieder (SPD)",
+              tracklist: [
+                {
+                  "name": "Die Internationale",
+                  "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296479164780654/Hannes_Wader_-_Die_Internationale.mp3"
+                },
+                {
+                  "name": "Wann wir schreiten Seit an Seit",
+                  "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296517479747776/Hermann_Claudius__Michael_Englert_-_Wann_wir_schreiten_Seit_an_Seit.mp3"
+                },
+                {
+                  "name": "Brüder, zur Sonne, zur Freiheit",
+                  "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296430389211166/Ernst_Busch_-_Bruder_zur_Sonne_zur_Freiheit.mp3"
+                },
+                {
+                  "name": "Auferstanden aus Ruinen (DDR Anthem)",
+                  "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296491626045440/Hanns_Eisler__Johannes_Becher_-_Auferstanden_auf_Ruinen_DDR_Anthem.mp3"
+                },
+                {
+                  "name": "Das Arbeitsfrontlied",
+                  "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296484445396992/Hannes_Wader_-_Einheitsfrontlied.mp3"
+                }
+            ]
+                }
         }
-        return a > max ? max : a < min ? min : a;
-    }
-    var soundtracks = {
-        0: {
-          name: "German Kulturgut",
-          tracklist: [
-            {
-              "name": "Tagesthemen Intro die Ärzte",
-              "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296705669775400/Tagesthemen_Intro_Die_Arzte.mp3"
-            },
-            {
-              "name": "Tagesschau Intro",
-              "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296698044534914/Tagesschau_Intro.mp3"
-            },
-            {
-              "name": "Tagesschau Theme",
-              "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296495463833741/Hans_Carste__Henning_Lohner_-_ARD_Tagesschau_Theme.mp3"
-            },
-            {
-              "name": "Tatort Intro",
-              "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296542708473906/Klaus_Doldinger_-_Tatort_Intro.mp3"
-            },
-            {
-              "name": "Lindenstraße Musik",
-              "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296532390490172/Jurgen_Knieper_-_Lindenstrae_Titelmelodie.mp3"
-            },
-            {
-              "name": "Das Lied der Deutschen",
-              "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296382335057980/August_Hoffmann_von_Fallersleben_-_Lied_der_Deutschen_German_National_Anthem.mp3"
-            },
-            {
-              "name": "Europahymne",
-              "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296462551134340/Friedrich_Schiller__Ludwig_van_Beethoven_-_An_die_Freude_EU_Anthem.mp3"
-            },
-            {
-              "name": "Einzug der Götter in Walhall",
-              "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296655837249657/Richard_Wagner__hr-Sinfonieorchester_-_Einzug_der_Gotter_in_Walhall_Das_Rheingold.mp3"
-            }
-        ]
-            },
-            1: {
-          name: "German Oldies",
-          tracklist: [
-            {
-              "name": "Nena – 99 Luftballons",
-              "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296608349327381/NENA_-_99_Luftballons.mp3"
-            },
-            {
-              "name": "Trio – Da Da Da",
-              "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296755221270558/Trio_-_Da_Da_Da.mp3"
-            },
-            {
-              "name": "Kraftwerk – Autobahn",
-              "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296574350303412/Kraftwerk_-_Autobahn.mp3"
-            },
-            {
-              "name": "Udo Jürgens – Griechischer Wein ",
-              "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296762661978183/Udo_Jurgens_-_Griechischer_Wein.mp3"
-            },
-            {
-              "name": "Udo Lindenberg – Sonderzug nach Pankow ",
-              "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296771319017544/Udo_Lindenberg_-_Sonderzug_nach_Pankow.mp3"
-            },
-            {
-              "name": "Nina Hagen – Du hast den Farbfilm vergessen ",
-              "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296635834613781/Nina_Hagen_-_Du_hast_den_Farbfilm_vergessen.mp3"
-            },
-            {
-              "name": "Nena – Irgendwie, Irgendwo, Irgendwann",
-              "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296615899070544/NENA_-_Irgendwie_Irgendwo_Irgendwann.mp3"
-            },
-            {
-              "name": "Die Ärzte - Schrei nach Liebe",
-              "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296418104090744/Die_Arzte_-_Schrei_nach_Liebe.mp3"
-            },
-            {
-              "name": "Die Ärzte - Deine Schuld",
-              "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296396750893077/Die_Arzte_-_Deine_Schuld.mp3"
-            }
-        ]
-            },
-            2: {
-          name: "Modern German Music",
-          tracklist: [
-            {
-              "name": "Wir sind Helden – Nur Ein Wort",
-              "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296791678160976/Wir_Sind_Helden_-_Nur_Ein_Wort.mp3"
-            },
-            {
-              "name": "AnnenMayKantereit – Oft gefragt",
-              "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296345588772994/AnnenMayKantereit_-_Oft_Gefragt.mp3"
-            },
-            {
-              "name": "Peter Fox – Schwarz zu Blau",
-              "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296645838028820/Peter_Fox_-_Schwarz_zu_Blau.mp3"
-            },
-            {
-              "name": "KRAFTKLUB – Schüsse in die Luft",
-              "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296567064809522/Kraftklub_-_Schusse_in_die_Luft.mp3"
-            },
-            {
-              "name": "Andreas Bourani – Auf Uns",
-              "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296341247672320/Andreas_Bourani_-_Auf_uns.mp3"
-            },
-            {
-              "name": "Tim Bendzko – Nur Noch Kurz die Welt retten ",
-              "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296735856177282/Tim_Bendzko_-_Nur_Noch_Kurz_Die_Welt_Retten.mp3"
-            },
-            {
-              "name": "Polarkreis 18 – Allein Allein",
-              "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131509584436154388/Polarkreis_18_-_Allein_Allein.mp3"
-            }
-        ]
-            },
-            3: {
-          name: "Deutsche Volkslieder (CDU)",
-          tracklist: [
-            {
-              "name": "Kein Schöner Land in dieser Zeit",
-              "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296350626140241/Anton_Wilhelm_von_Zuccalmaglio_-_Kein_schoner_Land_in_dieser_Zeit.mp3"
-            },
-            {
-              "name": "Die Gedanken sind frei",
-              "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296366619009094/August_Hoffmann_von_Fallersleben_-_Die_Gedanken_sind_frei.mp3"
-            },
-            {
-              "name": "Loreley (Ich weiß nicht, was soll es bedeuten)",
-              "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296500606046349/Heinrich_Heine__Friedrich_Silcher_-_Loreley_Ich_wei_nicht_was_soll_es_bedeuten.mp3"
-            },
-            {
-              "name": "Du, Du liegst mir im Herzen",
-              "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296591505002516/Marlene_Dietrich-_Du_Du_Liegst_Mir_Im_Herzen.mp3"
-            },
-            {
-              "name": "Wenn die bunten Fahnen wehen",
-              "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296329440702575/Alf_Zschiesche_-_Wenn_die_bunten_Fahnen_wehen.mp3"
-            }
-        ]
-            },
-            4: {
-          name: "Deutsche Protestlieder (Greens)",
-          tracklist: [
-            {
-              "name": "Gänsehaut - Karl der Käfer",
-              "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296471967338617/Gansehaut_-_Karl_der_Kafer.mp3"
-            },
-            {
-              "name": "Ton Steine Scherben – Keine Macht für niemand",
-              "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296741602377738/Ton_Steine_Scherben_-_Keine_Macht_fur_niemand.mp3"
-            },
-            {
-              "name": "Bots - Aufstehen",
-              "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296393466761226/Bots_-_Aufstehen.mp3"
-            },
-            {
-              "name": "Fehlfarben - Ein Jahr (Es geht voran)",
-              "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296445107011694/Fehlfarben_-_Ein_Jahr_Es_geht_voran.mp3"
-            },
-            {
-              "name": "Teller Bunte Knete - Stadtmensch",
-              "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296715027251270/Teller_Bunte_Knete_-_Stadtmensch.mp3"
-            }
-        ]
-            },
-            5: {
-          name: "Deutsche Arbeiterlieder (SPD)",
-          tracklist: [
-            {
-              "name": "Die Internationale",
-              "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296479164780654/Hannes_Wader_-_Die_Internationale.mp3"
-            },
-            {
-              "name": "Wann wir schreiten Seit an Seit",
-              "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296517479747776/Hermann_Claudius__Michael_Englert_-_Wann_wir_schreiten_Seit_an_Seit.mp3"
-            },
-            {
-              "name": "Brüder, zur Sonne, zur Freiheit",
-              "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296430389211166/Ernst_Busch_-_Bruder_zur_Sonne_zur_Freiheit.mp3"
-            },
-            {
-              "name": "Auferstanden aus Ruinen (DDR Anthem)",
-              "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296491626045440/Hanns_Eisler__Johannes_Becher_-_Auferstanden_auf_Ruinen_DDR_Anthem.mp3"
-            },
-            {
-              "name": "Das Arbeitsfrontlied",
-              "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296484445396992/Hannes_Wader_-_Einheitsfrontlied.mp3"
-            }
-        ]
-            }
-    }
-    newMusicPlayer()
-  }
+        newMusicPlayer()
+      }
 
-      function shuffle(array) {
-        let currentIndex = array.length, temporaryValue, randomIndex;
+          function shuffle(array) {
+            let currentIndex = array.length, temporaryValue, randomIndex;
 
-        while (0 !== currentIndex) {
-            randomIndex = Math.floor(Math.random() * currentIndex);
-            currentIndex -= 1;
+            while (0 !== currentIndex) {
+                randomIndex = Math.floor(Math.random() * currentIndex);
+                currentIndex -= 1;
 
-            temporaryValue = array[currentIndex];
-            array[currentIndex] = array[randomIndex];
-            array[randomIndex] = temporaryValue;
+                temporaryValue = array[currentIndex];
+                array[currentIndex] = array[randomIndex];
+                array[randomIndex] = temporaryValue;
+            }
+
+            return array;
         }
-
-        return array;
-    }
 
 
     function updateHeader() {

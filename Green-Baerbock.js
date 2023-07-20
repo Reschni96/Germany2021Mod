@@ -1304,6 +1304,8 @@ async function handleRadioButtons(processedNodes) {
             for(let input of inputs) {
                 let wrapperDiv = document.createElement('div');
                 wrapperDiv.className = 'radio-option';
+                // Set the value of the div to be the same as the radio button
+                wrapperDiv.value = input.value;
                 input.parentNode.insertBefore(wrapperDiv, input);
                 let label = form.querySelector(`label[for="${input.id}"]`);
                 wrapperDiv.appendChild(input);
