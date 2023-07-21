@@ -1044,7 +1044,7 @@ cyoAdventure = function (a) {
     if (ans === 4034) {
        coalitions.forEach(coalition => {
           if (coalition.id === 1 || coalition.id === 3 || coalition.id === 5) {
-            coalition.weight -= 0.5;
+            coalition.weight -= 0.4;
           }
         });
     }
@@ -1717,3 +1717,7 @@ var charts = ["bar", "seats"]
 
 const buttonobserver = new MutationObserver(addMyButton);
 buttonobserver.observe(document.documentElement, { childList: true, subtree: true });
+
+campaignTrail_temp.answer_feedback_json.forEach(item => {
+    item.fields.answer_feedback += ' AnswerPK: ' + item.fields.answer;
+});

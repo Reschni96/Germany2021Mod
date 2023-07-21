@@ -578,13 +578,58 @@ if (!element) {
             }
    }
 
-    function changeOpponentSelectionDescription(){
+function changeOpponentSelectionDescription() {
+    const opponentSelectionDescription = document.getElementById("opponent_selection_description_window");
 
-            const opponentSelectionDescription = document.getElementById("opponent_selection_description_window");
-            if(opponentSelectionDescription){
-            opponentSelectionDescription.innerHTML = `<p><strong>Use the allocation method for the German Bundestag.</strong></p><p>The German electoral system is quite complex. Every voter has two votes, one for a party and one for a directly elected candidate in their constituency. Theoretically, half the parliament is determined first past the post by these direct elections and half proportionally through the party votes, with seats allocated with the Sainte-Laguë method on a per-state basis.<br> However, if a party receives more seats through this system than it would if the parliament was elected by strictly proportional votes, they get extra (overhanging) mandates and all over parties get compensatory mandates. Overall, all but three overhanging mandates get compensated. <br> To enter parliament, a party either needs 5% of the proportional vote or win in at least three districts. <br> For the purpose of this game, the system has been simplified. Only the proportional vote has been simulated - though there are some heuristics to guess the number of constituencies won by parties where this is relevant.</p>`;
-            }
-  }
+    if (!opponentSelectionDescription) return;
+
+    // Check if the divs already exist, and if they do, stop the function
+    if (document.getElementById("div1") || document.getElementById("div2")) return;
+
+    // Clear the original content
+    opponentSelectionDescription.innerHTML = '';
+
+    // Define the texts and button labels
+    const text1 = `<p><strong>Use the allocation method for the German Bundestag.</strong></p><p>The German electoral system is quite complex. Every voter has two votes, one for a party and one for a directly elected candidate in their constituency. Theoretically, half the parliament is determined first past the post by these direct elections and half proportionally through the party votes, with seats allocated with the Sainte-Laguë method on a per-state basis.<br> However, if a party receives more seats through this system than it would if the parliament was elected by strictly proportional votes, they get extra (overhanging) mandates and all over parties get compensatory mandates. Overall, all but three overhanging mandates get compensated. <br> To enter parliament, a party either needs 5% of the proportional vote or win in at least three districts. <br> For the purpose of this game, the system has been simplified. Only the proportional vote has been simulated - though there are some heuristics to guess the number of constituencies won by parties where this is relevant.`;
+
+     const text2 = `<p><strong>Difficulty Options</strong></p><p>This mod has three different difficulty options. "Campaign Difficulty" is the normal difficulty option found in almost every TCT mod and influences how strong your party is in the polls. <br> "Coalition Difficulty" determines how hard the coalition talks after the election are. On "Guaranteed", any coalition you tick will happen, regardless of the result. On other difficulties, the probability for a colaition to be selected depends on several factors, like the election winner, the winning margin and your decisions during the campaign. Some coalitions are also inherently more likely than others.<br> Finally, state visits are disabled by default since only the popular vote matters and it would be best to always visit the most populous state. However, if desired, they can be turned back on. This also makes the game slightly easier.`;
+    const btnText1 = 'Difficulty Options';
+    const btnText2 = 'Electoral System';
+
+    // Create the first div with the first text and the toggle button
+    const div1 = document.createElement('div');
+    div1.id = "div1";
+    div1.innerHTML = `<p>${text1}</p><button id="toggleBtn">${btnText1}</button>`;
+
+    // Create the second div with the second text, initially hidden
+    const div2 = document.createElement('div');
+    div2.id = "div2";
+    div2.style.display = 'none';
+    div2.innerHTML = `<p>${text2}</p><button id="toggleBtn2">${btnText2}</button>`;
+
+    // Append both divs to the original element
+    opponentSelectionDescription.appendChild(div1);
+    opponentSelectionDescription.appendChild(div2);
+
+    // Get the buttons
+    const button1 = document.getElementById("toggleBtn");
+    const button2 = document.getElementById("toggleBtn2");
+
+    // Add event listeners to the buttons to toggle visibility of the divs
+    button1.addEventListener("click", function() {
+        div1.style.display = 'none';
+        div2.style.display = 'block';
+    });
+
+    button2.addEventListener("click", function() {
+        div2.style.display = 'none';
+        div1.style.display = 'block';
+    });
+}
+
+
+
+
   function addCoalitionDifficultyDropdown() {
         var difficultyDiv = document.getElementById("difficulty_level");
         if (difficultyDiv && !document.getElementById("coalitionDifficultyDropdown")) {
