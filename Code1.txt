@@ -109,7 +109,7 @@ if (!element) {
       border-width:3px;
       height:200px;
       width:200px;
-      background-color:#999999;
+      background-color:#6699CC;
       float:right;
       padding: 10px;
       `
@@ -227,7 +227,7 @@ if (!element) {
         function newMusicPlayer() {
             trackSel = document.createElement("div");
             trackSel.id = "trackSelParent"
-            let z = `<br><br><br><br><br><br><br><br><br><br><br><br><div id='trackSel' style="text-align:left;border-style:solid;border-width:3px;overflow-y: scroll;overflow-x: hidden;height:200px; width:400px;background-color:#999999;float:right;">`
+            let z = `<br><br><br><br><br><br><br><br><br><br><br><br><div id='trackSel' style="text-align:left;border-style:solid;border-width:3px;overflow-y: scroll;overflow-x: hidden;height:200px; width:400px;background-color:#6699CC;float:right;">`
             z += `<b><select id='selectSoundtrack'><option value='` + soundtracks[e.selectedSoundtrack].name + `'>` + soundtracks[e.selectedSoundtrack].name + "</option>"
             for (i in soundtracks) {
                 if (soundtracks[e.selectedSoundtrack] != soundtracks[i]) {
@@ -895,9 +895,9 @@ function changeOpponentSelectionDescription() {
             }
 
             #overall_result,
-            #election_description_window,
-            #candidate_description_window,
-            #running_mate_description_window,
+            #election_summary,
+            #candidate_summary,
+            #running_mate_summary,
             #opponent_selection_description_window{
                 overflow: auto;
             }
