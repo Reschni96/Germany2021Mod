@@ -1184,8 +1184,10 @@ function simulateMA(n, lookback) {
   const values = [];
 
   // Generate warmup error terms
-  for (let i = 0; i < n+warmup; i++) {
-    errors.push(generateNormalRandom(0, 0.002));
+  for (let i = 0; i < n + warmup; i++) {
+    // If we're in the last three steps, use half the variance
+    const variance = i >= n + warmup - 3 ? 0.001 : 0.002;
+    errors.push(generateNormalRandom(0, variance));
   }
 
   // Generate MA process values
@@ -1211,7 +1213,7 @@ var polling = [];
 var prepolling = [];
 for (let i = 0; i < 7; i++) {
   polling.push([]);
-  prepolling.push(simulateMA(25,5));
+  prepolling.push(simulateMA(33,5));
 }
 
 cyoAdventure = function (a) {
@@ -1302,7 +1304,7 @@ cyoAdventure = function (a) {
      if (ans === 4074) {
        coalitions.forEach(coalition => {
           if (coalition.id === 12) {
-            coalition.weight += 0.6;
+            coalition.weight *=2.2;
           }
         });
     }
@@ -1310,10 +1312,10 @@ cyoAdventure = function (a) {
      if (ans === 4076) {
        coalitions.forEach(coalition => {
           if (coalition.id === 12) {
-            coalition.weight += 0.5;
+            coalition.weight *=1.8;
           }
           if ([1, 2, 10].includes(coalition.id)) {
-            coalition.weight -= 0.2;
+            coalition.weight *=0.8;
           }
         });
     }
@@ -1321,9 +1323,7 @@ cyoAdventure = function (a) {
      if (ans === 4077) {
        coalitions.forEach(coalition => {
           if (coalition.id === 12) {
-            coalition.weight -= 0.25;
-            //make sure the coalition is always visible, but might be basically impossible
-            coalition.weight = Math.max(coalition.weight, 0.001);
+            coalition.weight *=0.3;
           }
         });
     }
@@ -1332,7 +1332,7 @@ cyoAdventure = function (a) {
     if ([4031, 4033, 4070,4073, 4087, 4111, 4114].includes(ans)) {
        coalitions.forEach(coalition => {
           if ([1, 4, 6, 12].includes(coalition.id)) {
-            coalition.weight -= 0.2;
+            coalition.weight *=0.8;
           }
         });
     }
@@ -1341,7 +1341,7 @@ cyoAdventure = function (a) {
     if ([4021, 4032, 4033, 4071,4073, 4086, 4112, 4114].includes(ans)) {
        coalitions.forEach(coalition => {
           if ([1, 2, 10].includes(coalition.id)) {
-            coalition.weight -= 0.2;
+            coalition.weight *=0.8;
           }
         });
     }

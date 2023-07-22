@@ -967,7 +967,6 @@ function generateNormalRandom(mean, variance) {
 }
 
 // Simulate MA process
-// Simulate MA process
 function simulateMA(n, lookback) {
   const warmup = lookback;
   const errors = [];
@@ -1134,7 +1133,7 @@ cyoAdventure = function (a) {
     }
 
    //only chart a full campaign
-    if(ans > 4101){
+    if(ans > 4101 && ans < 4500){
         charts.push("line");
     }
 

@@ -965,8 +965,10 @@ function simulateMA(n, lookback) {
   const values = [];
 
   // Generate warmup error terms
-  for (let i = 0; i < n+warmup; i++) {
-    errors.push(generateNormalRandom(0, 0.002));
+  for (let i = 0; i < n + warmup; i++) {
+    // If we're in the last three steps, use half the variance
+    const variance = i >= n + warmup - 3 ? 0.001 : 0.002;
+    errors.push(generateNormalRandom(0, variance));
   }
 
   // Generate MA process values
@@ -988,12 +990,11 @@ function simulateMA(n, lookback) {
   return values;
 }
 
-
 var polling = [];
 var prepolling = [];
 for (let i = 0; i < 7; i++) {
   polling.push([]);
-  prepolling.push(simulateMA(25,5));
+  prepolling.push(simulateMA(33,5));
 }
 
 cyoAdventure = function (a) {
@@ -1053,7 +1054,7 @@ cyoAdventure = function (a) {
     if (ans === 4034) {
        coalitions.forEach(coalition => {
           if (coalition.id === 1 || coalition.id === 3 || coalition.id === 5) {
-            coalition.weight -= 0.5;
+            coalition.weight *= 0.7;
           }
         });
     }
@@ -1061,7 +1062,7 @@ cyoAdventure = function (a) {
     if ([4079, 4042].includes(ans)) {
        coalitions.forEach(coalition => {
           if (coalition.id === 1 || coalition.id === 3 || coalition.id === 5) {
-            coalition.weight += 0.3;
+            coalition.weight *= 1.2;
           }
         });
     }
@@ -1069,7 +1070,7 @@ cyoAdventure = function (a) {
      if (4086===ans) {
        coalitions.forEach(coalition => {
           if (coalition.id === 1 || coalition.id === 2 || coalition.id === 10) {
-            coalition.weight -= 0.2;
+            coalition.weight *=0.8;
           }
         });
     }
@@ -1077,7 +1078,7 @@ cyoAdventure = function (a) {
      if (ans === 4087) {
        coalitions.forEach(coalition => {
           if (coalition.id === 1 || coalition.id === 3 || coalition.id === 5) {
-            coalition.weight -= 0.2;
+            coalition.weight *=0.8;
           }
         });
     }
@@ -1087,7 +1088,7 @@ cyoAdventure = function (a) {
             coalition.weight -= 10;
           }
           if ([7, 9].includes(coalition.id)) {
-            coalition.weight += 0.7;
+            coalition.weight += 0.6;
           }
         });
     }
