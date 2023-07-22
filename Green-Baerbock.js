@@ -661,7 +661,7 @@ function endingOneBuilder(){
             else{
              header = "<h2>“A historic night for Germany and the Greens!”</h2>"
             playerPerformance = "Until the very end of the campaign, there were doubts if the Green Party could actually win this election. At 6pm, when the first results come in, you've proven all these doubters wrong: For the first time in the history of the Federal Republic of German, a party other than the CDU/CSU and SPD has won an election. You and your party are ecstatic and celebrate the whole night. While you still have to form a government, your odds of becoming the youngest and first Green chancellor are good."
-             adjustWeights(6);
+             adjustWeights(8);
             }
         }
         else if(playerParty===e.final_overall_results[1]){

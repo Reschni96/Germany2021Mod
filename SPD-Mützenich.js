@@ -663,7 +663,7 @@ function endingOneBuilder(){
             else if (playerParty.popular_votes/totalPV>0.257){
              header = "<h2>“Under Scholz, the SPD truly returns to form”</h2>"
             playerPerformance = "In the last few days, when your surge in the polls seemed unstoppable, the party had developed high hopes. Now, after the first results came in, it's clear you've not disappointed them. Under your leadership, the SPD has won the election and reached its highest voteshare since 2005. This is an especially impressive feat considering your polling just a few months ago. The whole party is glad that, despite some misgivings, you were made the candidate. Now, you just have to jump one last hurdle, the coalition talks, to ascend from Vice Chancellor to Chancellor - but that should be little more than a formality."
-             adjustWeights(10);
+             adjustWeights(20);
             }
             else{
             header = "<h2>“Under Scholz, the SPD returns to form”</h2>"

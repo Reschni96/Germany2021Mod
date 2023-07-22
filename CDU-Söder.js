@@ -642,13 +642,13 @@ function endingOneBuilder(){
 
             header = "<h2>“A truly impressive performance by Söder”</h2>"
             playerPerformance = "By 6:00 pm, the early projections already indicate that you are in a very comfortable lead. As the night progresses, it becomes increasingly clear that you have emerged as the clear winner of the election. What's more, you have achieved a much higher percentage of the vote than most pundits had predicted. Given that Merkel has been in power for 16 years, many had anticipated a greater desire for change among the electorate and many doubted that a CSU-politician could get such a good result outside Bavaria. Your victory greatly simplifies future coalition negotiations - with such a strong mandate, it's almost impossible that a coalition against you will be formed. After all, it is evident that the German people overwhelmingly favor you as their chancellor."
-             adjustWeights(25);
+             adjustWeights(30);
             }
             else if (playerParty.popular_votes/totalPV>0.275){
 
             header = "<h2>“A very strong showing for Söder and the CDU/CSU”</h2>"
             playerPerformance = "By 6:00 pm, the early projections already indicate that you are in a comfortable lead. As the night progresses, it becomes increasingly clear that you have emerged as the clear winner of the election. What's more, you have achieved a higher percentage of the vote than most pundits had predicted. Given that Merkel has been in power for 16 years, many had anticipated a greater desire for change among the electorate and many doubted that a CSU-politician could get such a good result outside Bavaria. Your victory simplifies future coalition negotiations - with such a strong mandate, it's very unlikely that a coalition against you will be formed. After all, it is evident that the German people favor you as their chancellor."
-             adjustWeights(10);
+             adjustWeights(15);
             }
             else if (playerParty.electoral_votes == e.final_overall_results[1].electoral_votes){
 

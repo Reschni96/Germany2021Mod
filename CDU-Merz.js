@@ -655,7 +655,7 @@ function endingOneBuilder(){
 
             header = "<h2>“Merz's new course a complete success”</h2>"
             playerPerformance = "By 6:00 pm, the early projections already indicate that you are in a comfortable lead. As the night progresses, it becomes increasingly clear that you have emerged as the winner of the election. What's more, you have achieved a higher percentage of the vote than most pundits had predicted. Given that Merkel has been in power for 16 years, many had anticipated a greater desire for change among the electorate, but maybe your more conservative direction was precisely the change they were looking for. Your victory not only reinforces your status as the leader of your party but also simplifies future coalition negotiations. After all, it is evident that the German people favor you as their chancellor."
-             adjustWeights(10);
+             adjustWeights(20);
             }
             else if (playerParty.electoral_votes == e.final_overall_results[1].electoral_votes){
 
