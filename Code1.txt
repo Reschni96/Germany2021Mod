@@ -756,7 +756,7 @@ function changeOpponentSelectionDescription() {
             targetTable.outerHTML = myTableHTML;
         }
     }
-    
+
 
     let changesInProgress = false;
 
@@ -930,6 +930,9 @@ function changeOpponentSelectionDescription() {
             }
             #results_container{
                 overflow-x: hidden;
+            }
+            .description_window_small{
+                height: 50%;
             }
            .campaign_trail_start_emphasis {
                 background-color: #5f9aed;
