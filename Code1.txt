@@ -928,9 +928,6 @@ function changeOpponentSelectionDescription() {
             #map_container {
               height: 30.78em
             }
-            #results_container{
-                overflow-x: hidden;
-            }
             .description_window_small{
                 height: 50%;
             }
