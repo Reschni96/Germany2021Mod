@@ -1188,7 +1188,6 @@ async function handleGameWindow() {
     }
 }
 
-
 async function handleRadioButtons(processedNodes) {
     let questionForms = document.querySelectorAll('form[name="question"]');
     for(let form of questionForms) {
@@ -1233,8 +1232,6 @@ async function handleRadioButtons(processedNodes) {
         }
     }
 }
-
-
 
 async function handleFooter() {
     var gameWindow = document.getElementById('game_window');

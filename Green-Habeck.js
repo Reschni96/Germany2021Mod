@@ -1310,6 +1310,13 @@ async function handleRadioButtons(processedNodes) {
                     form.removeChild(br);
                 }
 
+                // Create two invisible divs
+                for (let i = 0; i < 2; i++) {
+                    let invisibleDiv = document.createElement('div');
+                    invisibleDiv.style.display = 'none';
+                    form.insertBefore(invisibleDiv, wrapperDiv.nextSibling);
+                }
+
                 // Add click event listener to the wrapperDiv
                 wrapperDiv.addEventListener('click', function(event) {
                     input.checked = true;
@@ -1325,6 +1332,7 @@ async function handleRadioButtons(processedNodes) {
         }
     }
 }
+
 
 async function handleFooter() {
     var gameWindow = document.getElementById('game_window');
