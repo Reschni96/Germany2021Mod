@@ -1032,7 +1032,7 @@ cyoAdventure = function (a) {
        ideologyRight +=1
     }
     if ([4504].includes(ans)) {
-       ideologyRight +=1
+       ideologyRight +=2
     }
 
     if ([4039, 4040, 4041, 4042].includes(ans)) {
@@ -1047,7 +1047,7 @@ cyoAdventure = function (a) {
      if (ans === 4537) {
        coalitions.forEach(coalition => {
           if ([1, 2, 3, 5, 10].includes(coalition.id)) {
-            coalition.weight -= 0.5;
+            coalition.weight *= 0.7;
           }
           if ([7, 9].includes(coalition.id)) {
             coalition.weight += 0.2;
