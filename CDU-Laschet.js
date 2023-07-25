@@ -360,7 +360,7 @@ function addCoalitions() {
 
         // Create a container element for the table
           const container = document.createElement("div");
-          container.style.height = "calc(4 * 2.5em)"; // Set the height to 4 rows of 2.5em each (adjust as needed)
+          container.style.height = "11em"; // Set the height to 4 rows of 2.5em each (adjust as needed)
           container.style.overflow = "auto"; // Add a scrollbar when there are more rows than visible
           container.appendChild(coalitionTable);
 
