@@ -734,12 +734,18 @@ function changeOpponentSelectionDescription() {
                 // Get the first cell of the second row
                 const firstColumnSecondRow = table.rows[1].cells[0];
 
-                // Remove the span content and whitespace from the cell text
-                const textAfterSpan = firstColumnSecondRow.innerHTML.split('</span>')[1].trim();
+                // Split the cell HTML by '</span>'
+                const splitHTML = firstColumnSecondRow.innerHTML.split('</span>');
 
-                // Check if the text is 'Replace Me'
-                if (textAfterSpan === 'Replace Me') {
-                    return true;
+                // Check if the HTML contains '</span>'
+                if (splitHTML.length > 1) {
+                    // Remove the whitespace from the text after the span
+                    const textAfterSpan = splitHTML[1].trim();
+
+                    // Check if the text is 'Replace Me'
+                    if (textAfterSpan === 'Replace Me') {
+                        return true;
+                    }
                 }
             }
             return false;
@@ -749,6 +755,7 @@ function changeOpponentSelectionDescription() {
             targetTable.outerHTML = myTableHTML;
         }
     }
+
 
 
 
