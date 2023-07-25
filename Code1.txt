@@ -11,6 +11,7 @@ campaignTrail_temp.premier_ab_test_version = -1;
 campaignTrail_temp.credits = 'u/Vilvilea';
 campaignTrail_temp.coalitionDifficulty = 1;
 e=campaignTrail_temp;
+HistName=["Replace Me"];
 e.collect_results = true;
 $("#game_window")[0].style.backgroundImage = "url(https://i.imgur.com/9nFY6eE.jpg)";
 nct_stuff.themes[nct_stuff.selectedTheme].coloring_title = "#070785"
@@ -724,6 +725,37 @@ function changeOpponentSelectionDescription() {
         }
     }
 
+    const myTableHTML = `
+        <table> <tbody> <tr> <th>Party</th> <th>Seats</th> <th>Popular Votes</th> <th>Popular Vote %</th> </tr>            <tr><td style="text-align: left;">            <span style="background-color: #D61A29; color: #D61A29;">----</span>  SPD</td><td> 206 </td><td> 11,955,434 </td><td> 25.7% </td></tr>            <tr><td style="text-align: left;">            <span style="background-color: #28282B; color: #28282B;">----</span>  CDU/CSU</td><td> 197 </td><td> 11,178,298 </td><td> 24.1% </td></tr>            <tr><td style="text-align: left;">            <span style="background-color: #13A12D; color: #13A12D;">----</span>  Green Party</td><td> 118 </td><td> 6,852,206 </td><td> 14.8% </td></tr>            <tr><td style="text-align: left;">            <span style="background-color: #F5F518; color: #F5F518;">----</span>  FDP</td><td> 92 </td><td> 5,319,952 </td><td> 11.5% </td></tr>            <tr><td style="text-align: left;">            <span style="background-color: #2B8FE0; color: #2B8FE0;">----</span>  AfD</td><td> 83 </td><td> 4,803,902 </td><td> 10.3% </td></tr>            <tr><td style="text-align: left;">            <span style="background-color: #C910BA; color: #C910BA;">----</span>  The Left</td><td> 39 </td><td> 2,270,906 </td><td> 4.9% </td></tr>            <tr><td style="text-align: left;">            <span style="background-color: #807E7F; color: #807E7F;">----</span>  Others</td><td> 1 </td><td> 4,061,325 </td><td> 8.7% </td></tr></tbody></table>
+    `;
+
+    function resultReplacer() {
+        const allTables = document.querySelectorAll('table');
+
+        const targetTable = Array.from(allTables).find(table => {
+            if (table.rows.length > 1 && table.rows[1].cells.length > 0) {
+                // Get the first cell of the second row
+                const firstColumnSecondRow = table.rows[1].cells[0];
+
+                // Remove the span content and whitespace from the cell text
+                const textAfterSpan = firstColumnSecondRow.innerHTML.split('</span>')[1].trim();
+
+                // Check if the text is 'Replace Me'
+                if (textAfterSpan === 'Replace Me') {
+                    return true;
+                }
+            }
+            return false;
+        });
+
+        if (targetTable) {
+            targetTable.outerHTML = myTableHTML;
+        }
+    }
+
+
+
+
     let changesInProgress = false;
 
     // Define the MutationObserver
@@ -744,6 +776,7 @@ function changeOpponentSelectionDescription() {
         changeOpponentSelectionDescription();
         applyColorStyles();
         addCoalitionDifficultyDropdown();
+        resultReplacer();
 
         // Re-observe the document
         changesInProgress = false;
@@ -894,6 +927,11 @@ function changeOpponentSelectionDescription() {
               height: 30.78em
             }
 
+            #overall_details_container{
+                    height: 98%;
+                    overflow: auto;
+                }
+
             #overall_result,
             #election_summary,
             #candidate_summary,
@@ -940,10 +978,6 @@ function changeOpponentSelectionDescription() {
                 height: auto;
                 overflow: visible;
             }
-                #overall_details_container{
-                    height: 98%;
-                    overflow: auto;
-                }
                  #title_container{
                    font-size:1.2em
                 }
