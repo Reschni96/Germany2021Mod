@@ -1274,7 +1274,7 @@ async function handleFooter() {
     var runningMateBox = createBox(runningMatePic, campaignTrail_temp.running_mate_last_name);
 
     var questionInfo = "Question " + (campaignTrail_temp.question_number + 1) + " of " + campaignTrail_temp.global_parameter_json[0].fields.question_count;
-    var questionBox = createBoxWithTextAndPic(questionInfo, current_footer_picture);
+    var questionBox = createBoxWithTextAndPic(questionInfo, pictureDict[campaignTrail_temp.question_number]);
 
     new_footer.appendChild(candidateBox);
     new_footer.appendChild(questionBox);
@@ -1330,7 +1330,42 @@ function createBoxWithTextAndPic(text, pictureSrc) {
     return container;
 }
 
-let current_footer_picture = "https://cdn.discordapp.com/attachments/1109846390575730788/1130856731577155694/image.png";
+var pictureDict = {
+    0: "https://cdn.discordapp.com/attachments/1109846390575730788/1130856731577155694/image.png",
+    1: "https://i.ibb.co/X3HVxhh/Laschet-Rede-1-cropped.jpg",
+    2: "",
+    3: "https://i.ibb.co/vmWWfbh/Laschet-Talk-1-cropped.jpg",
+    4: "",
+    5: "",
+    6: "https://i.ibb.co/25dsws2/Laschet-S-der-cropped.jpg",
+    7: "https://i.ibb.co/7k8B04X/Laschet-Rede-2-cropped.jpg",
+    8: "",
+    9: "https://i.ibb.co/LpQxprP/Kretschmer-Russland-cropped.jpg",
+    10: "https://i.ibb.co/7vS3Hbq/Fl-chtlinge-1-cropped.webp",
+    11: "https://i.ibb.co/y6XsHcZ/FFF-cropped.jpg",
+    12: "",
+    13: "",
+    14: "https://i.ibb.co/hYQCJ16/NATO-Flag-cropped.png",
+    15: "https://i.ibb.co/MRYCjvy/Laschet-Talk-2-cropped.jpg",
+    16: "https://i.ibb.co/zxvJCxh/Haselhoff-cropped.webp",
+    17: "",
+    18: "",
+    19: "https://i.ibb.co/0cY6kF7/Mieten-cropped.jpg",
+    20: "https://i.ibb.co/D9rndYc/Ahrtal-1-cropped.jpg",
+    21: "https://i.ibb.co/ZmXLYKj/Ahrtal-2-cropped.jpg",
+    22: "https://i.ibb.co/ZmXLYKj/Ahrtal-2-cropped.jpg",
+    23: "https://i.ibb.co/LpNjyFG/Laschet-Talk-3-cropped.jpg",
+    24: "",
+    25: "https://i.ibb.co/vmWWfbh/Laschet-Talk-1-cropped.jpg",
+    26: "https://i.ibb.co/X3HVxhh/Laschet-Rede-1-cropped.jpg",
+    27: "https://i.ibb.co/LpNjyFG/Laschet-Talk-3-cropped.jpg",
+    28: "",
+    29: "https://i.ibb.co/7k8B04X/Laschet-Rede-2-cropped.jpg",
+    30: "",
+    31: "",
+    32: ""
+};
+
 
 
 // This function becomes a simple list of calls to other functions
