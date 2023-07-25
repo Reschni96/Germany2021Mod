@@ -347,7 +347,7 @@ function addCoalitions() {
         // Create a container element for the table
           const container = document.createElement("div");
           container.style.height = "calc(4 * 2.5em)"; // Set the height to 4 rows of 2.5em each (adjust as needed)
-          container.style.overflow = "scroll"; // Add a scrollbar when there are more rows than visible
+          container.style.overflow = "auto"; // Add a scrollbar when there are more rows than visible
           container.appendChild(coalitionTable);
 
           // Add the container to the coalitionListDiv
@@ -1379,7 +1379,7 @@ async function adjustMcaHeight(processedNodes) {
     if (results_container && !processedNodes.has(results_container)) {
         if (!chart){
             results_container.style.height = "98%";
-            results_container.style.overflow = "scroll";
+            results_container.style.overflow = "auto";
         } else {
             let mca = document.getElementById("main_content_area");
             if (mca) {

@@ -923,6 +923,9 @@ function changeOpponentSelectionDescription() {
             #map_container {
               height: 30.78em
             }
+            #results_container{
+                overflow-x: hidden;
+            }
            .campaign_trail_start_emphasis {
                 background-color: #5f9aed;
             }
