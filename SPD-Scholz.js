@@ -1570,9 +1570,17 @@ async function handleMutations(mutationsList, observer) {
 
 let processedNodes = new Set();
 let observerRunning = false;
-let singleObserver = new MutationObserver(handleMutations);
-singleObserver.observe(document.documentElement, { childList: true, subtree: true });
 
+var element = document.getElementById('controlElement');
+if (!element) {
+	console.log("created");
+	let singleObserver = new MutationObserver(handleMutations);
+	singleObserver.observe(document.documentElement, { childList: true, subtree: true });
+	var controlElement = document.createElement('div');
+	controlElement.style.display = 'none';
+	controlElement.id = 'controlElement';
+	document.body.appendChild(controlElement);
+}
 //chart stuff here, setup in cyoa function required
 function Chartbuilder(type) {
 
