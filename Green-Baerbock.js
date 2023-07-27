@@ -779,8 +779,12 @@ function endingOneBuilder(){
         }
         var SSW = "In other news, the SSW, the party of the Danish minority, has won a seat for the first time since 1949. As party of a national minority, they are exempt from the 5% threshold."
 
-        if(LeftParty.popular_votes/totalPV<0.05 && LeftParty.electoral_votes >2){
+        if(LeftParty.popular_votes/totalPV<0.0495 && LeftParty.electoral_votes >2){
             LeftPerformance = " Despite missing the 5% threshold, the Left party managed to secure three direct mandates, two in Berlin and one in Saxony. Taking at least three direct mandates means that the party will receive seats in proportion to their percentage of the total popular vote."
+        }
+
+        else if(LeftParty.popular_votes/totalPV<0.05 && LeftParty.electoral_votes >2){
+            LeftPerformance = " Despite missing the 5% threshold by an extremely close margin - rounded up, they got 5.0%, but the actual count was a little below that - the Left party managed to secure three direct mandates, two in Berlin and one in Saxony. Taking at least three direct mandates means that the party will receive seats in proportion to their percentage of the total popular vote."
         }
 
         else if(LeftParty.electoral_votes <= 2){
