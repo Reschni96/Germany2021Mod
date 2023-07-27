@@ -1854,7 +1854,3 @@ var charts = ["bar", "seats"]
 
 const buttonobserver = new MutationObserver(addMyButton);
 buttonobserver.observe(document.documentElement, { childList: true, subtree: true });
-
-campaignTrail_temp.answer_feedback_json.forEach(item => {
-    item.fields.answer_feedback += ' AnswerPK: ' + item.fields.answer;
-});
