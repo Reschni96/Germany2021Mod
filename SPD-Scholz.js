@@ -366,13 +366,13 @@ function addCoalitions() {
              let likelihoodText;
                     if (likelihood > 95) {
                       likelihoodText = document.createTextNode("Smooth Sailing");
-                    } else if (likelihood >= 75) {
+                    } else if (likelihood >= 80) {
                       likelihoodText = document.createTextNode("Promising");
-                    } else if (likelihood >= 50) {
+                    } else if (likelihood >= 60) {
                       likelihoodText = document.createTextNode("Certainly Workable");
-                    } else if (likelihood >= 25) {
+                    } else if (likelihood >= 40) {
                       likelihoodText = document.createTextNode("Cautious");
-                    } else if (likelihood >= 10) {
+                    } else if (likelihood >= 20) {
                       likelihoodText = document.createTextNode("Tough Negotiations Ahead");
                     } else if (likelihood >= 5) {
                       likelihoodText = document.createTextNode("Very Long Shot");
