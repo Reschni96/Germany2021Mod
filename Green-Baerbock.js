@@ -166,13 +166,13 @@ e.multiple_endings = true;
     e.final_overall_results.forEach((result, i)   => {
     if (e.final_overall_results[i].popular_votes/totalPopularVote < threshold) {
 
-        //special case: If the left gets more than 9% in Saxony, assume they get in through Grundmandatsklausel
+        //special case: If the left gets more than 8.8% in Saxony, assume they get in through Grundmandatsklausel
         if (e.final_overall_results[i].candidate === 304){
 
             const sax = e.final_state_results.map(f=>f.state).indexOf(3012)
             left_result =  e.final_state_results[sax].result.map(f=>f.candidate).indexOf(304);
 
-            if (e.final_state_results[sax].result[left_result].percent < 0.09){
+            if (e.final_state_results[sax].result[left_result].percent < 0.088){
                 missedCandidates.push(e.final_overall_results[i].candidate);
             }
         }
