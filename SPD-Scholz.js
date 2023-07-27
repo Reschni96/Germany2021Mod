@@ -235,7 +235,6 @@ e.multiple_endings = true;
   }
 }
 
-
 function addCoalitions() {
 
       let tableAdded = false;
@@ -260,7 +259,7 @@ function addCoalitions() {
         if (coalitionNames){
             // Create a header cell for the coalition name
             const nameHeader = document.createElement("th");
-            nameHeader.style.width = "33%";
+            nameHeader.style.width = "25%";
             nameHeader.style.fontWeight = "bold";
             const nameHeaderText = document.createTextNode("Name");
             nameHeader.appendChild(nameHeaderText);
@@ -269,7 +268,7 @@ function addCoalitions() {
 
         // Create a header cell for the list of parties
         const partiesHeader = document.createElement("th");
-        partiesHeader.style.width = "33%";
+        partiesHeader.style.width = "25%";
         partiesHeader.style.fontWeight = "bold";
         const partiesHeaderText = document.createTextNode("Parties involved");
         partiesHeader.appendChild(partiesHeaderText);
@@ -277,11 +276,18 @@ function addCoalitions() {
 
         // Create a header cell for the checkbox
         const checkboxHeader = document.createElement("th");
-        checkboxHeader.style.width = "33%";
+        checkboxHeader.style.width = "25%";
         checkboxHeader.style.fontWeight = "bold";
         const checkboxHeaderText = document.createTextNode("Negotiate?");
         checkboxHeader.appendChild(checkboxHeaderText);
         headerRow.appendChild(checkboxHeader);
+
+          const likelihoodHeader = document.createElement("th");
+          likelihoodHeader.style.width = "25%";
+          likelihoodHeader.style.fontWeight = "bold";
+          const likelihoodHeaderText = document.createTextNode("Negotiation Mood:");
+          likelihoodHeader.appendChild(likelihoodHeaderText);
+          headerRow.appendChild(likelihoodHeader);
 
         // Add the header row to the table
         coalitionTable.appendChild(headerRow);
@@ -296,7 +302,7 @@ function addCoalitions() {
           if(coalitionNames){
               // Create a cell for the coalition name and add it to the row
               const nameCell = document.createElement("td");
-              nameCell.style.width = "33%";
+              nameCell.style.width = "25%";
               const coalitionName = document.createTextNode(coalition.name);
               nameCell.appendChild(coalitionName);
               row.appendChild(nameCell);
@@ -304,7 +310,7 @@ function addCoalitions() {
 
             // Create a cell for the list of parties and add it to the row
             const partiesCell = document.createElement("td");
-            partiesCell.style.width = "33%";
+            partiesCell.style.width = "25%";
             const partiesList = coalition.parties
             .map(partyId => {
               const party = e.candidate_json.find(p => p.pk === partyId);
@@ -318,9 +324,18 @@ function addCoalitions() {
 
           // Create a cell for the checkbox and add it to the row
           const checkboxCell = document.createElement("td");
-          checkboxCell.style.width = "33%";
+          checkboxCell.style.width = "25%";
           const player_pk = e.candidate_id;
           const hasPlayerParty = coalition.parties.includes(player_pk);
+
+          let totalWeight = 0;
+          possibleCoalitions.forEach(coalition => {
+            let coalitionWeight = coalition.weight;
+            if (coalition.parties.includes(e.candidate_id)) {
+              coalitionWeight *= e.coalitionDifficulty;
+            }
+            totalWeight += coalitionWeight;
+          });
 
             // If the coalition contains the player's party, create a checkbox that can be checked/unchecked
             if (hasPlayerParty) {
@@ -340,9 +355,39 @@ function addCoalitions() {
             }
           row.append(checkboxCell)
 
-          // Add the row to the table
+            // Create a cell for the likelihood and add it to the row
+            const likelihoodCell = document.createElement("td");
+            likelihoodCell.style.width = "25%";
+            let coalitionWeight = coalition.weight;
+            if (coalition.parties.includes(e.candidate_id)) {
+              coalitionWeight *= e.coalitionDifficulty;
+            }
+            const likelihood = (coalitionWeight / totalWeight) * 100;
+             let likelihoodText;
+                    if (likelihood > 95) {
+                      likelihoodText = document.createTextNode("Smooth Sailing");
+                    } else if (likelihood >= 75) {
+                      likelihoodText = document.createTextNode("Promising");
+                    } else if (likelihood >= 50) {
+                      likelihoodText = document.createTextNode("Certainly Workable");
+                    } else if (likelihood >= 25) {
+                      likelihoodText = document.createTextNode("Cautious");
+                    } else if (likelihood >= 10) {
+                      likelihoodText = document.createTextNode("Tough Negotiations Ahead");
+                    } else if (likelihood >= 5) {
+                      likelihoodText = document.createTextNode("Very Long Shot");
+                    } else {
+                      likelihoodText = document.createTextNode("Angry Shouting");
+                    }
+
+              likelihoodCell.appendChild(likelihoodText);
+              row.appendChild(likelihoodCell);
+            likelihoodCell.appendChild(likelihoodText);
+            row.appendChild(likelihoodCell);
+
+           // Add the row to the table
           coalitionTable.appendChild(row);
-        });
+            });
 
         // Create a container element for the table
           const container = document.createElement("div");
