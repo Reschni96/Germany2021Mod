@@ -26,6 +26,7 @@ nct_stuff.themes[nct_stuff.selectedTheme].text_col = "white"
 e.music = {};
 e.music.shuffleEnabled = false;
 e.music.Volume=0.3;
+e.displayTooltips = true;
 
 quotes = [`"Wir schaffen das!" - Angela Merkel`, `"Scheitert der Euro, scheitert Europa." - Angela Merkel`, `"Das Internet ist für uns alle Neuland." - Angela Merkel`, `"Die Demokratie ist kein Supermarkt." - Frank-Walther Steinmeier`, `In my homeland Baden-Württemberg we are all sitting in one boat.`, `"Rechts von der CDU/CSU darf es keine demokratisch legitimierte Partei geben" - Franz-Joseph Strauß`, `"Jetzt wächst zusammen, was zusammen gehört" - Willy Brandt`, `Was kümmert mich mein Geschwätz von gestern? - Konrad Adenauer`, `"Wer Visionen hat, sollte zum Arzt gehen" - Helmut Schmidt`, `There will never be a revolution in Germany. The bureaucratic paperwork for it is missing.`, ]
 customquote = quotes[Math.floor((Math.random() * quotes.length))]
@@ -590,7 +591,7 @@ function changeOpponentSelectionDescription() {
     // Define the texts and button labels
     const text1 = `<p><strong>Use the allocation method for the German Bundestag.</strong></p><p>The German electoral system is quite complex. Every voter has two votes, one for a party and one for a directly elected candidate in their constituency. Theoretically, half the parliament is determined first past the post by these direct elections and half proportionally through the party votes, with seats allocated with the Sainte-Laguë method on a per-state basis.<br> However, if a party receives more seats through this system than it would if the parliament was elected by strictly proportional votes, they get extra (overhanging) mandates and all over parties get compensatory mandates. Overall, all but three overhanging mandates get compensated. <br> To enter parliament, a party either needs 5% of the proportional vote or win in at least three districts. <br> For the purpose of this game, the system has been simplified. Only the proportional vote has been simulated - though there are some heuristics to guess the number of constituencies won by parties where this is relevant.`;
 
-     const text2 = `<p><strong>Difficulty Options</strong></p><p>This mod has three different difficulty options. "Campaign Difficulty" is the normal difficulty option found in almost every TCT mod and influences how strong your party is in the polls. <br> "Coalition Difficulty" determines how hard the coalition talks after the election are. On "Guaranteed", any coalition you tick will happen, regardless of the result. On other difficulties, the probability for a colaition to be selected depends on several factors, like the election winner, the winning margin and your decisions during the campaign. Some coalitions are also inherently more likely than others.<br> Finally, state visits are disabled by default since only the popular vote matters and it would be best to always visit the most populous state. However, if desired, they can be turned back on. This also makes the game slightly easier.`;
+     const text2 = `<p><strong>Difficulty Options</strong></p><p>This mod has three different difficulty options. "Campaign Difficulty" is the normal difficulty option found in almost every TCT mod and influences how strong your party is in the polls. <br> "Coalition Difficulty" determines how hard the coalition talks after the election are. On "Guaranteed", any coalition you tick will happen, regardless of the result. On other difficulties, the probability for a colaition to be selected depends on several factors, like the election winner, the winning margin and your decisions during the campaign. Some coalitions are also inherently more likely than others.<br> State visits are disabled by default since only the popular vote matters and it would be best to always visit the most populous state. However, if desired, they can be turned back on. This also makes the game slightly easier. <br>Finally, he tooltip option will enable tooltips for a few phrases that give you additional explanations. It can be helpful for players unfamiliar with German politics.`;
     const btnText1 = 'Difficulty Options';
     const btnText2 = 'Electoral System';
 
@@ -669,6 +670,24 @@ function changeOpponentSelectionDescription() {
             visitsCheckbox.addEventListener("change", function() {
                 campaignTrail_temp.election_json[0].fields.has_visits = this.checked ? 1 : 0;
             });
+
+             // Add tooltip checkbox here
+            var tooltipForm = document.createElement("form");
+            tooltipForm.name = "tooltip_selection";
+            var tooltipHeader = document.createElement("h3");
+            tooltipHeader.textContent = "Enable tooltips";
+            tooltipForm.appendChild(tooltipHeader);
+            var tooltipCheckbox = document.createElement("input");
+            tooltipCheckbox.type = "checkbox";
+            tooltipCheckbox.id = "tooltipCheckbox";
+            tooltipCheckbox.checked = true;
+            tooltipForm.appendChild(tooltipCheckbox);
+            difficultyDiv.appendChild(tooltipForm);
+
+            tooltipCheckbox.addEventListener("change", function() {
+                e.displayTooltips = this.checked;
+            });
+
 
             var difficultyForm = document.querySelector('form[name="difficulty_level_selection"]');
             var difficultyHeader = difficultyForm.querySelector('h3');
@@ -822,8 +841,10 @@ function changeOpponentSelectionDescription() {
         applyColorStyles();
         addCoalitionDifficultyDropdown();
         resultReplacer();
-        replaceWithTooltip(document.body, "NRW", "North Rhine-Westphalia");
-        replaceWithTooltip(document.body, "Soli", "Solidaritätszuschlag. An extra tax levelled since 1990 to help East Germany");
+        if(e.displayTooltips){
+            replaceWithTooltip(document.body, "NRW", "North Rhine-Westphalia");
+            replaceWithTooltip(document.body, "Soli", "Solidaritätszuschlag. An extra tax levelled since 1995 to help East Germany");
+        }
 
         // Re-observe the document
         changesInProgress = false;
@@ -835,7 +856,7 @@ function changeOpponentSelectionDescription() {
 
     // Ensure we don't re-enter applyColorStyles
     function applyColorStyles() {
-        let wordsToFind = ['Enable state visits?', 'Select coalition difficulty:', 'Please select the election you will run in:', 'This scenario was made by u/Vilvilea.', 'Please select your party:', 'Please select your candidate:', 'How would you like the seats to be allocated?', 'Select campaign difficulty:'];
+        let wordsToFind = ['Enable state visits?', 'Select coalition difficulty:', 'Please select the election you will run in:', 'This scenario was made by u/Vilvilea.', 'Please select your party:', 'Please select your candidate:', 'How would you like the seats to be allocated?', 'Select campaign difficulty:', 'Enable tooltips?'];
 
         walkAndReplace(document.body, wordsToFind);
     }
