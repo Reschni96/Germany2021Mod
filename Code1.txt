@@ -757,6 +757,49 @@ function changeOpponentSelectionDescription() {
         }
     }
 
+        function replaceWithTooltip(node, searchString, explanationText) {
+            if (node.nodeType === Node.TEXT_NODE) {
+                let parent = node.parentNode;
+                while (parent) {
+                    if (parent.className === "tooltip") {
+                        return;
+                    }
+                    parent = parent.parentNode;
+                }
+
+                let regex = new RegExp(`\\b${searchString}\\b`, 'g');
+                if (regex.test(node.nodeValue)) {
+                    let fragments = node.nodeValue.split(regex);
+                    parent = node.parentNode;
+
+                    parent.removeChild(node);
+
+                    fragments.forEach((fragment, index) => {
+                        parent.appendChild(document.createTextNode(fragment));
+
+                        // Don't append tooltip after the last fragment
+                        if (index < fragments.length - 1) {
+                            let tooltipSpan = document.createElement('span');
+                            tooltipSpan.className = 'tooltip';
+                            tooltipSpan.textContent = searchString;
+
+                            let tooltipTextSpan = document.createElement('span');
+                            tooltipTextSpan.className = 'tooltiptext';
+                            tooltipTextSpan.textContent = explanationText;
+
+                            tooltipSpan.appendChild(tooltipTextSpan);
+                            parent.appendChild(tooltipSpan);
+                        }
+                    });
+                }
+            } else {
+                for(let i = 0; i < node.childNodes.length; i++) {
+                    replaceWithTooltip(node.childNodes[i], searchString, explanationText);
+                }
+            }
+        }
+
+
 
     let changesInProgress = false;
 
@@ -779,6 +822,8 @@ function changeOpponentSelectionDescription() {
         applyColorStyles();
         addCoalitionDifficultyDropdown();
         resultReplacer();
+        replaceWithTooltip(document.body, "NRW", "North Rhine-Westphalia");
+        replaceWithTooltip(document.body, "Soli", "Solidaritätszuschlag. An extra tax levelled since 1990 to help East Germany");
 
         // Re-observe the document
         changesInProgress = false;
@@ -839,12 +884,18 @@ function changeOpponentSelectionDescription() {
                 background-color: #e0e0e0; /* or any other color that is slightly different than #f2f2f2 */
             }
 
-            .radio-option:hover label{
-                font-weight: bold;
+            .radio-option:hover label {
+                font-size: .92em;
+                font-weight: 700;
+                margin-bottom: .1em;
             }
 
             .radio-option label {
               pointer-events: none;
+            }
+
+            .radio-option label .tooltip {
+              pointer-events: auto;
             }
 
             /* Remove the default appearance of the radio button */
@@ -947,6 +998,38 @@ function changeOpponentSelectionDescription() {
             #opponent_selection_description_window{
                 overflow: auto;
             }
+
+
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+            text-decoration: underline;
+            text-decoration-thickness: 1px;
+            z-index: 98;
+        }
+
+        .tooltip .tooltiptext {
+            width: 180px;
+            background-color: #b0b0b0;
+            color: black;
+            text-align: center;
+            border-radius: 6px;
+            padding: 10px;
+            position: absolute;
+            z-index: 99;
+            bottom: 20%;
+            left: 20%;
+            margin-left: -90px;
+            opacity: 0;
+            transition: opacity 0.3s;
+            border: 1px solid black;
+        }
+
+
+        .tooltip:hover .tooltiptext {
+            opacity: 1;
+        }
 
             @media only screen and (max-width: 768px) {
                  .inner_window_question,
