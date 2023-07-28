@@ -1673,7 +1673,7 @@ function Chartbuilder(type) {
               ['Alliance 90/The Greens', (e.final_overall_results.find((r) => r.candidate === 79)).electoral_votes, e.candidate_json[2].fields.color_hex, 'GREEN'],
               ['South Schleswig Voters\' Assosiaction', 1, '#162491', 'SSW'],
               ['Free Democratic Party', (e.final_overall_results.find((r) => r.candidate === 303)).electoral_votes, e.candidate_json[3].fields.color_hex, 'FDP'],
-              ['Christian Democratic Union', (e.final_overall_results.find((r) => r.candidate === 77)).electoral_votes, e.candidate_json[0].fields.color_hex, 'CDU'],
+              ['Union Parliamentary Group (CDU/CSU)', (e.final_overall_results.find((r) => r.candidate === 77)).electoral_votes, e.candidate_json[0].fields.color_hex, 'CDU/CSU'],
               ['Alternative for Germany', (e.final_overall_results.find((r) => r.candidate === 305)).electoral_votes, e.candidate_json[5].fields.color_hex, 'AfD']
             ],
             dataLabels: {
