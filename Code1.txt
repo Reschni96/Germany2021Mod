@@ -845,6 +845,7 @@ function changeOpponentSelectionDescription() {
             replaceWithTooltip(document.body, "NRW", "North Rhine-Westphalia");
             replaceWithTooltip(document.body, "Soli", "Solidaritätszuschlag. An extra tax levelled since 1995 to help East Germany");
         }
+        replaceWithTooltip(document.body, "tooltip option", "Look out for words with a light blue background like this and hover them for a tooltip.");
 
         // Re-observe the document
         changesInProgress = false;
@@ -1025,8 +1026,7 @@ function changeOpponentSelectionDescription() {
             position: relative;
             display: inline-block;
             cursor: pointer;
-            text-decoration: underline;
-            text-decoration-thickness: 1px;
+            background-color: lightblue;
             z-index: 98;
         }
 
