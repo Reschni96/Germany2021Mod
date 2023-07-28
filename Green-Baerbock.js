@@ -33,18 +33,18 @@ campaignTrail_temp.game_start_logging_id = '3662498';
       { id: 1, name: 'Kenya Coalition', weight: 0.7, parties: [77, 78, 79], impossibleCoalitions: [] },
       { id: 2, name: 'Grand Coalition', weight: 0.6, parties: [77, 78], impossibleCoalitions: [1, 10] },
       { id: 3, name: 'Black-Green Coalition', weight: 2.2, parties: [77, 79], impossibleCoalitions: [1, 5] },
-      { id: 4, name: 'Red-Green Coalition', weight: 9.0, parties: [78, 79], impossibleCoalitions: [1, 6, 12] },
+      { id: 4, name: 'Red-Green Coalition', weight: 20.0, parties: [78, 79], impossibleCoalitions: [1, 6, 12] },
       { id: 5, name: 'Jamaica Coalition', weight: 1.7, parties: [77, 79, 303], impossibleCoalitions: [] },
       { id: 6, name: 'Traffic Light Coalition', weight: 1.3, parties: [78, 79, 303], impossibleCoalitions: [] },
       { id: 7, name: 'Bahamas Coalition', weight: 0.0, parties: [77, 303, 305], impossibleCoalitions: [] },
-      { id: 8, name: 'Black-Yellow Coalition', weight: 9.0, parties: [78, 303], impossibleCoalitions: [5,7,10] },
+      { id: 8, name: 'Black-Yellow Coalition', weight: 20.0, parties: [77, 303], impossibleCoalitions: [5,7,10] },
       { id: 9, name: 'Black-Blue Coalition', weight: 0.0, parties: [77, 305], impossibleCoalitions: [7] },
       { id: 10, name: 'Germany Coalition', weight: 0.8, parties: [77, 78, 303], impossibleCoalitions: [] },
       { id: 11, name: 'Social-Liberal Coalition', weight: 0.6, parties: [78, 303], impossibleCoalitions: [6, 10] },
-      { id: 12, name: 'Red-Red-Green Coalition', weight: 0.4, parties: [78, 79, 304], impossibleCoalitions: []},
-      { id: 13, name: 'Red-Red Coalition', weight: 0.6, parties: [78, 304], impossibleCoalitions: [12]},
-      { id: 14, name: 'Green-Left Coalition', weight: 0.6, parties: [79, 304], impossibleCoalitions: [12]},
-      { id: 15, name: 'Green-Yellow Coalition', weight: 1.9, parties: [79, 303], impossibleCoalitions: [5, 6] }
+      { id: 12, name: 'Red-Red-Green Coalition', weight: 0.2, parties: [78, 79, 304], impossibleCoalitions: []},
+      { id: 13, name: 'Red-Red Coalition', weight: 0.4, parties: [78, 304], impossibleCoalitions: [12]},
+      { id: 14, name: 'Green-Left Coalition', weight: 0.4, parties: [79, 304], impossibleCoalitions: [12]},
+      { id: 15, name: 'Green-Yellow Coalition', weight: 1.9, parties: [79, 303], impossibleCoalitions: [5, 6]}
     ];
     const partyLeaders = [
     { party: 77, leaderName: 'Laschet', image: 'https://cdn.discordapp.com/attachments/1085931527537434785/1086205163393527868/image.png' },
@@ -344,15 +344,15 @@ function addCoalitions() {
             }
             const likelihood = (coalitionWeight / totalWeight) * 100;
              let likelihoodText;
-                    if (likelihood > 95) {
+                    if (likelihood > 85) {
                       likelihoodText = document.createTextNode("Smooth Sailing");
-                    } else if (likelihood >= 80) {
+                    } else if (likelihood >= 67) {
                       likelihoodText = document.createTextNode("Promising");
-                    } else if (likelihood >= 60) {
+                    } else if (likelihood >= 50) {
                       likelihoodText = document.createTextNode("Certainly Workable");
-                    } else if (likelihood >= 40) {
+                    } else if (likelihood >= 35) {
                       likelihoodText = document.createTextNode("Cautious");
-                    } else if (likelihood >= 20) {
+                    } else if (likelihood >= 18) {
                       likelihoodText = document.createTextNode("Tough Negotiations Ahead");
                     } else if (likelihood >= 5) {
                       likelihoodText = document.createTextNode("Very Long Shot");
