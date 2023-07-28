@@ -1063,7 +1063,27 @@ cyoAdventure = function (a) {
       i++;
     });
 
-    console.log(ans)
+     if ([4013, 4030, 4502, 4042].includes(ans)) {
+       ideologyCenter +=1
+    }
+    if ([4503].includes(ans)) {
+       ideologyCenter +=2
+    }
+    if ([4015, 4028, 4039].includes(ans)) {
+       ideologyRight +=1
+    }
+    if ([4504].includes(ans)) {
+       ideologyRight +=2
+    }
+
+    if ([4039, 4040, 4041, 4042].includes(ans)) {
+       if ((ideologyRight-ideologyCenter) > 2) {
+            campaignTrail_temp.questions_json[12]=extraQuestions[5];
+       }
+        else if ((ideologyRight-ideologyCenter) > -3) {
+            campaignTrail_temp.questions_json[12]=extraQuestions[4];
+       }
+    }
 
 
 	if (ans === 4087) {
