@@ -62,6 +62,8 @@ campaignTrail_temp.game_start_logging_id = '3662498';
     //variable below here only relevant for this specific mod
     var LaschetTime = false;
     var SöderScheme = 0;
+    var ideologyCenter = 0;
+    var ideologyRight = 0;
     var totalSeats = 0;
     var contestedElection = false;
     var closeElection = false;
