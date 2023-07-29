@@ -125,6 +125,13 @@ e.multiple_endings = true;
  e.page = 0;
  e.initDC = false
 
+loadScript('https://code.highcharts.com/highcharts.js', function() {
+      loadScript('https://code.highcharts.com/modules/item-series.js', function() {
+        loadScript('https://code.highcharts.com/modules/accessibility.js', function() {
+        });
+      });
+    });
+
  endingPicker = () => {
 
   if (!e.initDC) {
@@ -136,15 +143,6 @@ e.multiple_endings = true;
 
     var musicPlayer = document.getElementById('music_player');
     musicPlayer.remove();
-
-
-    loadScript('https://code.highcharts.com/highcharts.js', function() {
-          loadScript('https://code.highcharts.com/modules/item-series.js', function() {
-            loadScript('https://code.highcharts.com/modules/accessibility.js', function() {
-            });
-          });
-        });
-
 
     //give states their seats
     for (var i = 0; i < 16; i++) {
@@ -1023,7 +1021,7 @@ function simulateMA(n, lookback) {
   // Generate warmup error terms
   for (let i = 0; i < n + warmup; i++) {
     // If we're in the last three steps, use half the variance
-    const variance = i >= n + warmup - 3 ? 0.001 : 0.002;
+    const variance = i >= n + warmup - 5 ? 0.2 : 0.8;
     errors.push(generateNormalRandom(0, variance));
   }
 
@@ -1035,7 +1033,7 @@ function simulateMA(n, lookback) {
     for (let j = 0; j < lookback; j++) {
       const errorIndex = i - j - 1;
       const error = errorIndex >= 0 ? errors[errorIndex] : 0;
-      const weight = Math.pow(0.7, j);
+      const weight = Math.pow(0.8, j);
       maValue += weight * error;
     }
 
@@ -1057,18 +1055,38 @@ cyoAdventure = function (a) {
     ans = campaignTrail_temp.player_answers[campaignTrail_temp.player_answers.length - 1]
     let pop_vote = e.current_results[0];
     let playerPolling = (pop_vote.find(p => p.pk === e.candidate_id)).pvp;
-    console.log(playerPolling)
     let i = 0;
 
     pop_vote.sort((a, b) => {
       return a.pk - b.pk;
     });
 
-    // record the current polling data for all parties and inject some randomness
-    pop_vote.forEach((entry) => {
-      polling[i].push(Math.round(entry.pvp*1000*prepolling[i][campaignTrail_temp.question_number])/10);
-      i++;
-    });
+   // Iterate over each party and inject randomness
+    for (let i = 0; i < pop_vote.length; i++) {
+      const entry = pop_vote[i];
+      let adjustedPvp = entry.pvp * 100 + prepolling[i][campaignTrail_temp.question_number];
+
+      // Introduce systematic error for the party at index 4
+      if (i === 4) {
+        adjustedPvp += 1;
+      }
+
+      polling[i].push(Math.round(adjustedPvp * 10) / 10);
+    }
+
+    // Now normalize the last entry in each polling list
+    let totalPolling = 0;
+    for (let i = 0; i < polling.length; i++) {
+      totalPolling += polling[i][polling[i].length - 1];
+    }
+
+    for (let i = 0; i < polling.length; i++) {
+      // Normalize and round to one significant digit
+      const normalizedValue = polling[i][polling[i].length - 1] / totalPolling * 100;
+      polling[i][polling[i].length - 1] = Math.round(normalizedValue * 10) / 10;
+    }
+
+
 
     if ([4004, 4007, 4013, 4027, 4032, 4502, 4042].includes(ans)) {
        ideologyCenter +=1
@@ -1414,7 +1432,23 @@ var pictureDict = {
     32: ""
 };
 
+function updateFooter() {
+    var mapFooter = document.getElementById("map_footer");
+    var chartButton = document.getElementById("campaign_chart_button");
 
+    if(mapFooter){
+
+        if (chartButton && !isChartView) {
+            // Apply the styles to map_footer
+            mapFooter.style.float = "left";
+            mapFooter.style.paddingLeft = "6em";
+        } else {
+            // Reset the styles
+            mapFooter.style.float = "";
+            mapFooter.style.paddingLeft = "";
+        }
+    }
+}
 
 // This function becomes a simple list of calls to other functions
 async function handleMutations(mutationsList, observer) {
@@ -1428,6 +1462,7 @@ async function handleMutations(mutationsList, observer) {
 
     await handleGameWindow();
     await handleFooter();
+    updateFooter();
 
     await handleRadioButtons(processedNodes);
 
@@ -1473,7 +1508,7 @@ function Chartbuilder(type) {
                 title: {
                     text: 'Questions'
                 },
-                categories: Array.from({ length: polling[0].length }, (_, index) => index + 1)
+                categories: Array.from({ length: polling[0].length }, (_, index) => index)
 
             },
 
@@ -1854,3 +1889,183 @@ var charts = ["bar", "seats"]
 
 const buttonobserver = new MutationObserver(addMyButton);
 buttonobserver.observe(document.documentElement, { childList: true, subtree: true });
+
+setTimeout(function() {
+    let pop_vote = e.current_results[0];
+    let i = 0;
+
+    pop_vote.sort((a, b) => {
+      return a.pk - b.pk;
+    });
+
+    // record the current polling data for all parties and inject some randomness
+    pop_vote.forEach((entry) => {
+      polling[i].push(Math.round(entry.pvp*1000)/10);
+      i++;
+    });
+}, 100);
+
+
+function createPollingBarChart(polling) {
+    var myChart = Highcharts.chart('myChart', {
+        chart: {
+            type: 'column'
+        },
+        title: {
+            text: 'Current polling results'
+        },
+        yAxis: {
+            title: {
+                text: 'Percentage'
+            }
+        },
+        xAxis: {
+            categories: ['Party']
+        },
+        tooltip: {
+            valueSuffix: '%'
+        },
+        series: [{
+            name: 'CDU/CSU',
+            data: [Math.round(polling[0][polling[0].length - 1] * 2) / 2],
+            color: e.candidate_json[0].fields.color_hex
+        }, {
+            name: 'SPD',
+            data: [Math.round(polling[1][polling[1].length - 1] * 2) / 2],
+            color: e.candidate_json[1].fields.color_hex
+        },{
+            name: 'Greens',
+            data: [Math.round(polling[2][polling[2].length - 1] * 2) / 2],
+            color: e.candidate_json[2].fields.color_hex
+        },{
+            name: 'FDP',
+            data: [Math.round(polling[3][polling[3].length - 1] * 2) / 2],
+            color: e.candidate_json[3].fields.color_hex
+        },{
+            name: 'Left',
+            data: [Math.round(polling[4][polling[4].length - 1] * 2) / 2],
+            color: e.candidate_json[4].fields.color_hex
+        },{
+            name: 'AfD',
+            data: [Math.round(polling[5][polling[5].length - 1] * 2) / 2],
+            color: e.candidate_json[5].fields.color_hex
+        },{
+            name: 'Others',
+            data: [Math.round(polling[6][polling[6].length - 1] * 2) / 2],
+            color: e.candidate_json[6].fields.color_hex
+        }]
+    });
+
+          var div = document.getElementById('chartcontainer');
+      div.style.border = 'medium double';
+      div.style.backgroundColor = 'rgba(255, 255, 255, 0.5)';
+      div.style.borderColor = '#c9c9c9';
+
+      var element = document.querySelector('.highcharts-background');
+      if (element) { // Check if element exists before trying to remove it
+          element.remove();
+      }
+
+      const container = document.getElementById('chartcontainer');
+      container.style.background ='rgba(255, 255, 255, 0.5)';
+
+}
+
+var campaignButtonAdded = false;
+function addCampaignChartButton() {
+    if (document.getElementById("map_footer") && document.getElementById("resume_questions_button")) {
+        const existingButton = document.getElementById("campaign_chart_button");
+        if (existingButton) {
+            return;
+        }
+
+        if (!campaignButtonAdded) {
+            campaignButtonAdded = true;
+            const buttonrow = document.getElementById("map_footer");
+            const campaignChartButton = document.createElement("button");
+            campaignChartButton.textContent = "Current Polls";
+            campaignChartButton.id = "campaign_chart_button";
+            campaignChartButton.addEventListener("click", function() {
+                campaignCharting();
+            });
+            buttonrow.insertBefore(campaignChartButton, buttonrow.children[buttonrow.children.length - 2]);
+        }
+        else {
+            // reconnect the observer
+            campaignButtonAdded = false;
+        }
+    }
+}
+
+const cbuttonobserver = new MutationObserver(addCampaignChartButton);
+cbuttonobserver.observe(document.documentElement, { childList: true, subtree: true });
+
+var isChartView = false; // A flag indicating whether the current view is a chart
+
+function campaignCharting() {
+  var campaignChartButton = document.getElementById("campaign_chart_button");
+  var mainContentArea = document.getElementById("main_content_area");
+  var gameWindow = document.getElementById("game_window"); // Parent container
+  var chartContainer = document.getElementById("chartcontainer");
+
+
+    // If the chartContainer does not exist, we create it once
+    if (!chartContainer) {
+      chartContainer = document.createElement("div");
+      chartContainer.id = "chartcontainer";
+      chartContainer.style.display = "none"; // hide it initially
+      chartContainer.innerHTML = '<figure class="highcharts-figure"><div id="myChart"></div></figure>';
+      gameWindow.insertBefore(chartContainer, mainContentArea); // Insert before the mainContentArea
+    }
+
+  if (!isChartView) { // If it's not a chart view
+    // Hide the main content and show the chart container
+    mainContentArea.style.display = "none";
+    chartContainer.style.display = "block";
+
+    // Change the button's text
+    campaignChartButton.textContent = "Show map";
+
+    // Update the flag
+    isChartView = true;
+
+    // Draw the chart
+    setTimeout(function() {
+      executeWithRetry(createPollingBarChart(polling));
+    }, 100);
+
+  } else { // If it's a chart view
+    // Hide the chart container and show the main content
+    mainContentArea.style.display = "block";
+    chartContainer.style.display = "none";
+
+    // Revert the button's text
+    campaignChartButton.textContent = "Current Polls";
+
+    // Update the flag
+    isChartView = false;
+  }
+
+  // Ensure things are reset properly when the "resume questions" button is clicked
+  document.getElementById("resume_questions_button").addEventListener("click", function() {
+    // Reset the isChartView flag
+    isChartView = false;
+
+    // Revert the button's text
+    campaignChartButton.textContent = "Current Polls";
+  });
+}
+
+// Create a new stylesheet
+var style = document.createElement('style');
+
+// Add your CSS rules
+style.innerHTML = `
+  #pvswitcher,
+  #ev_est {
+    display: none;
+  }
+`;
+
+// Append the new stylesheet to the head of your document
+document.head.appendChild(style);
