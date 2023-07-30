@@ -1037,7 +1037,7 @@ function simulateMA(n, lookback) {
     }
 
     // Add current MA value
-    values.push(maValue/3);
+    values.push(maValue/2);
   }
 
   return values;
