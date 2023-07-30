@@ -1020,7 +1020,7 @@ function simulateMA(n, lookback) {
 
   // Generate warmup error terms
   for (let i = 0; i < n + warmup; i++) {
-    const variance = i >= n + warmup - 5 ? 0.15 : 0.65;
+    const variance = i >= n + warmup - 5 ? 0.5 : 1;
     errors.push(generateNormalRandom(0, variance));
   }
 
@@ -1037,7 +1037,7 @@ function simulateMA(n, lookback) {
     }
 
     // Add current MA value
-    values.push(maValue);
+    values.push(maValue/3);
   }
 
   return values;
