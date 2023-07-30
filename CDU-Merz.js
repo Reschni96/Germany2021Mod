@@ -124,6 +124,13 @@ e.multiple_endings = true;
  e.page = 0;
  e.initDC = false
 
+     loadScript('https://code.highcharts.com/highcharts.js', function() {
+      loadScript('https://code.highcharts.com/modules/item-series.js', function() {
+        loadScript('https://code.highcharts.com/modules/accessibility.js', function() {
+        });
+      });
+    });
+
  endingPicker = () => {
 
   if (!e.initDC) {
@@ -135,14 +142,6 @@ e.multiple_endings = true;
 
     var musicPlayer = document.getElementById('music_player');
     musicPlayer.remove();
-
-
-    loadScript('https://code.highcharts.com/highcharts.js', function() {
-      loadScript('https://code.highcharts.com/modules/item-series.js', function() {
-        loadScript('https://code.highcharts.com/modules/accessibility.js', function() {
-        });
-      });
-    });
 
     //give states their seats
     for (var i = 0; i < 16; i++) {

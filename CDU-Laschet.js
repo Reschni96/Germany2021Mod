@@ -1020,7 +1020,6 @@ function simulateMA(n, lookback) {
 
   // Generate warmup error terms
   for (let i = 0; i < n + warmup; i++) {
-    // If we're in the last three steps, use half the variance
     const variance = i >= n + warmup - 5 ? 0.2 : 0.8;
     errors.push(generateNormalRandom(0, variance));
   }
@@ -1056,6 +1055,7 @@ cyoAdventure = function (a) {
     let pop_vote = e.current_results[0];
     let playerPolling = (pop_vote.find(p => p.pk === e.candidate_id)).pvp;
     let i = 0;
+    console.log(e.current_results[0])
 
     pop_vote.sort((a, b) => {
       return a.pk - b.pk;
