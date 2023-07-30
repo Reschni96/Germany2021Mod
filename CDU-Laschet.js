@@ -1020,7 +1020,7 @@ function simulateMA(n, lookback) {
 
   // Generate warmup error terms
   for (let i = 0; i < n + warmup; i++) {
-    const variance = i >= n + warmup - 5 ? 0.2 : 0.8;
+    const variance = i >= n + warmup - 5 ? 0.15 : 0.65;
     errors.push(generateNormalRandom(0, variance));
   }
 
@@ -1890,20 +1890,14 @@ var charts = ["bar", "seats"]
 const buttonobserver = new MutationObserver(addMyButton);
 buttonobserver.observe(document.documentElement, { childList: true, subtree: true });
 
-setTimeout(function() {
-    let pop_vote = e.current_results[0];
-    let i = 0;
+let initialPolls = [0.272, 0.171, 0.197, 0.119, 0.057,0.103,0.083]; // your hardcoded array
+let i = 0;
 
-    pop_vote.sort((a, b) => {
-      return a.pk - b.pk;
-    });
+initialPolls.forEach((entry) => {
+  polling[i].push((entry*1000)/10);
+  i++;
+});
 
-    // record the current polling data for all parties and inject some randomness
-    pop_vote.forEach((entry) => {
-      polling[i].push(Math.round(entry.pvp*1000)/10);
-      i++;
-    });
-}, 100);
 
 
 function createPollingBarChart(polling) {
