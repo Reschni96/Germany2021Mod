@@ -1070,6 +1070,10 @@ function changeOpponentSelectionDescription() {
                 overflow: auto;
             }
 
+              #ev_est {
+                display: none;
+              }
+
 
         .tooltip {
             position: relative;
