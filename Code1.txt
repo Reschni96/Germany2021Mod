@@ -804,7 +804,7 @@ function changeOpponentSelectionDescription() {
 
                             let tooltipTextSpan = document.createElement('span');
                             tooltipTextSpan.className = 'tooltiptext';
-                            tooltipTextSpan.textContent = explanationText;
+                            tooltipTextSpan.innerHTML = explanationText;
 
                             tooltipSpan.appendChild(tooltipTextSpan);
                             parent.appendChild(tooltipSpan);
@@ -874,8 +874,8 @@ function changeOpponentSelectionDescription() {
             replaceWithTooltip(document.body, "Vendetta", "Friedrich Merz was party group leader from 2000-2002 - until CDU chair Angela Merkel and CSU chair Edmund Stoiber made a deal, that the latter was to become chancellor candidate, the former new party group leader. Merz wasn’t consulted, and relegated to irrelevancy.");
             replaceWithTooltip(document.body, "Beleidigte Leberwurst", "“offended liver sausage” - German word for someone who is childishly sulking.");
             replaceWithTooltip(document.body, "Maut", "Old German word for a road toll. The CSU sought to establish tolls for private vehicles in 2015, but the European courts disallowed this in 2019, citing discrimination against foreign vehicle owners.");
-            replaceWithTooltip(document.body, "Genosse Olaf", "<img src=”https://media.discordapp.net/attachments/1131296206908301423/1135578447561904179/Olaf_Scholz_1984.jpg?width=1136&height=757”>");
-            replaceWithTooltip(document.body, "Terror-Shrek", "<img src=”https://media.discordapp.net/attachments/1131296206908301423/1135578677632045056/3-formatOriginal.jpg?width=1136&height=758”> That’s not even half of it. The guy has made several eccentric costumes - look up “Markus Söder Homer Simpson”.");
+            replaceWithTooltip(document.body, "Genosse Olaf", "<img src=https://media.discordapp.net/attachments/1131296206908301423/1135578447561904179/Olaf_Scholz_1984.jpg?width=1136&height=757>");
+            replaceWithTooltip(document.body, "Terror-Shrek", "<img src=https://media.discordapp.net/attachments/1131296206908301423/1135578677632045056/3-formatOriginal.jpg?width=1136&height=758> That’s not even half of it. The guy has made several eccentric costumes - look up “Markus Söder Homer Simpson”.");
             replaceWithTooltip(document.body, "2015", "In 2015, about 2 million people sought refuge in Europe, coming from the Mediterranean Sea and the Balkans. A great amount had been held up in Hungary, until Merkel unilaterally decided to let them come to Germany. About 400k Syrians fled to Germany during this time.");
             replaceWithTooltip(document.body, "JU", "“Junge Union”, “Young Union”. The youth organization of the CDU/CSU. Usually considered quite unadventurous.");
             replaceWithTooltip(document.body, "Jusos", "“JungsozialistInnen”, “Young Socialists”. The youth organization of the SPD. Noticeably more left-wing than the national party. Has gained in influence over the last few years.");
