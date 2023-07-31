@@ -1477,31 +1477,27 @@ function updatePolling() {
                   var newPollingData = "";
                   var partyData = [];
 
+                  var partyNames = e.candidate_json
+                    .map(candidate => candidate.fields.last_name);
+
                   for (var i = 0; i < polling.length; i++) {
                     var partyPolling = polling[i][polling[i].length - 1];
-                    partyData.push({ polling: partyPolling });
+                    partyData.push({ name: partyNames[i], polling: partyPolling });
                   }
 
                   partyData.sort((a, b) => b.polling - a.polling);
 
-                  var partyNames;
-                  if (e.current_results && e.current_results[0]) {
-                    partyNames = e.current_results[0]
-                      .sort((a, b) => b.pvp - a.pvp)
-                      .map(result => result.fields.last_name);
-                  } else {
-                    partyNames = ["CDU／CSU", "Green Party", "SPD", "FDP", "AfD", "Others", "Left"];
-                  }
-
                   for (var i = 0; i < partyData.length; i++) {
                     var roundedPolling = Math.round(partyData[i].polling * 2) / 2;
-                    newPollingData += "<b>" + partyNames[i] + "</b> - " + roundedPolling.toFixed(1) + "%<br>";
+                    newPollingData += "<b>" + partyData[i].name + "</b> - " + roundedPolling.toFixed(1) + "%<br>";
                   }
 
                   newPollingUL.innerHTML = newPollingData;
                 }
               }, 0);
             });
+
+
 
             pollingButton.classList.add('listener-attached');
         }
