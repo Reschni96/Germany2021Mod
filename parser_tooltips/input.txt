@@ -1,3 +1,9 @@
+NRW
+North Rhine-Westphalia
+
+Soli
+Solidaritätszuschlag. An extra tax levelled since 1995 to help East Germany.
+
 Nord-Stream 2
 Planned natural gas pipeline from Russia to Germany, through the Baltic Sea.
 
@@ -53,7 +59,7 @@ Rubber Boots
 In 2002, SPD chancellor Schröder allegedly won reelection due to media coverage of him strutting about in rubber boots during the flooding of the river Elbe.
 
 Laschets Lacher
-<img src=”https://media.discordapp.net/attachments/1131296206908301423/1135571560950935702/kritik-an-laschet-wegen-lacher-im-flutgebiet-image.jpg.webp”>
+<img src=https://media.discordapp.net/attachments/1131296206908301423/1135571560950935702/kritik-an-laschet-wegen-lacher-im-flutgebiet-image.jpg.webp> I’m sure it was very funny.
 
 GroKo
 Abbr.“Große Koalition” - “Grand coalition”; consisting of Germany’s traditional two major parties, the SPD and the CDU/CSU. Has governed from 1966-1969, 2005-2009 and 2013-2021.
@@ -62,7 +68,7 @@ Querdenker
 “Skewed Thinker” or “Across Thinker”; German word for someone who thinks outside the norm. Popularized by its usage on Covid skeptics during the pandemic.
 
 Bubatz
-<img src=”https://media.discordapp.net/attachments/1131296206908301423/1135575649814327307/c80463b818429cf523e9f4527d901ae1.jpg”>
+<img src=https://media.discordapp.net/attachments/1131296206908301423/1135575649814327307/c80463b818429cf523e9f4527d901ae1.jpg> episch
 
 Die Bild
 Famous German boulevard newspaper. Quite popular, although widely mocked for its low journalistic standards. Punk Band <i>Die Ärzte</i> succinctly summed them up as “fear, hate, tits and the weather report”.
@@ -83,10 +89,10 @@ Maut
 Old German word for a road toll. The CSU sought to establish tolls for private vehicles in 2015, but the European courts disallowed this in 2019, citing discrimination against foreign vehicle owners.
 
 Genosse Olaf
-<img src=”https://media.discordapp.net/attachments/1131296206908301423/1135578447561904179/Olaf_Scholz_1984.jpg?width=1136&height=757”>
+<img src=https://media.discordapp.net/attachments/1131296206908301423/1135578447561904179/Olaf_Scholz_1984.jpg?width=1136&height=757> Freundschaft, Genosse!
 
 Terror-Shrek
-<img src=”https://media.discordapp.net/attachments/1131296206908301423/1135578677632045056/3-formatOriginal.jpg?width=1136&height=758”> That’s not even half of it. The guy has made several eccentric costumes - look up “Markus Söder Homer Simpson”.
+<img src=https://media.discordapp.net/attachments/1131296206908301423/1135621337826721792/markus_Soder_Shrek.jpg> That’s not even half of it. Look up “Markus Söder Carnival Costumes".
 
 2015
 In 2015, about 2 million people sought refuge in Europe, coming from the Mediterranean Sea and the Balkans. A great amount had been held up in Hungary, until Merkel unilaterally decided to let them come to Germany. About 400k Syrians fled to Germany during this time.
@@ -110,4 +116,25 @@ Norbert Röttgen
 Once a prominent CDU politician and Minister of the Environment (2009-2012): humiliatingly fired after his defeat as the CDU candidate for the North Rhine-Westphalian elections. In 2020 he tried for a comeback, but ended up as a third wheel behind Laschet and Merz.
 
 Konrad Adenauer
-First chancellor of West Germany (1949-1963). Started his career in Weimar Germany and was imprisoned during the Nazi era. He helped found the CDU, was responsible for the  and remains a great icon for German conservatives and the nation as a whole.
+First chancellor of West Germany (1949-1963). Started his career in Weimar Germany and was imprisoned during the Nazi era. He helped found the CDU, was responsible for the founding of the European Community and remains a great icon for German conservatives and the nation as a whole.
+
+Wolfgang Schäuble
+Legendary CDU politician. MP since 1972, he’s had several prominent positions in party and government between 1984 and 2017 - most recently President of the Bundestag. Since an assassination attempt in 1990, he’s been in a wheelchair, but that did not stop him from having a great influence on German politics.
+
+Reiner Haseloff
+Minister-President of Sachsen-Anhalt (CDU, since 2011). Grew up in East Germany, and joined the CDU- block party in the DDR early on. Generally uncontroversial and respected.
+
+Guido Westerwelle
+FDP party chair (2001-2011) and later Foreign Minister (2009-2013). Was named as  “chancellor candidate” by the FDP in 2002, in a bid to win 18%, but only got 7.4. One of the first German politicians to come out as gay, he sadly died in 2016 from leukemia.
+
+Gerhard Schröder
+Former German chancellor (SPD, 1998-2005). Ended 16 years of chancellor Kohl, and enacted neoliberal policies in a Red-Green coalition. Was defeated in a snap election in 2005 by Angela Merkel. Afterwards, he’s been involved with Russian companies, and is a personal friend of Vladimir Putin, to this day.
+
+Gerd Müller
+Not to be confused with famous soccer player Gerd Müller (1945-2021), he was the CSU Minister of Economic Cooperation and Development (2013-2021). He advocated for a “Marshall Plan for Africa” and was called “the good conscience of the CSU”. Nowadays, he’s UNIDO director general.
+
+Christian Drosten
+German virologist, and professor at the Charité in Berlin. He was a scientific advisor for the government and one of the most cited scientists in the media during the Covid pandemic. He has earned awards for his science communication.
+
+Martin Luther
+Historic church reformer in the 15th century. He started the Protestant Reformation that broke the Catholic dominance of Europe, by translating the Bible into German instead of Latin and distributing it with Johannes Guttenberg’s first printing press.
