@@ -1432,7 +1432,7 @@ var pictureDict = {
     32: ""
 };
 
-function updateFooter() {
+function updatePolling() {
     var mapFooter = document.getElementById("map_footer");
     var chartButton = document.getElementById("campaign_chart_button");
 
@@ -1448,7 +1448,66 @@ function updateFooter() {
             mapFooter.style.paddingLeft = "";
         }
     }
+
+    // Get the button by its ID
+    var pollingButton = document.getElementById("pvswitcher");
+
+        if(pollingButton && !pollingButton.classList.contains("customListener")){
+            pollingButton.classList.add("customListener");
+            pollingButton.addEventListener("click", function() {
+              setTimeout(function() {
+                var pollingDisplay = document.getElementById("switchingEst");
+                var overallResult = document.getElementById("overall_result");
+                var newPollingUL = document.getElementById("newPollingUL");
+
+                if (!newPollingUL) {
+                  newPollingUL = document.createElement("ul");
+                  newPollingUL.id = "newPollingUL";
+                  newPollingUL.style = pollingDisplay.style.cssText;  // apply the style of pollingDisplay to newPollingUL
+                  overallResult.insertBefore(newPollingUL, overallResult.children[1]);
+                }
+
+                if (pollingButton.innerText === "PV Estimate") {
+                  newPollingUL.style.display = "none";
+                  pollingDisplay.style.display = "block";
+                } else {
+                  newPollingUL.style.display = "block";
+                  pollingDisplay.style.display = "none";
+
+                  var newPollingData = "";
+                  var partyData = [];
+
+                  for (var i = 0; i < polling.length; i++) {
+                    var partyPolling = polling[i][polling[i].length - 1];
+                    partyData.push({ polling: partyPolling });
+                  }
+
+                  partyData.sort((a, b) => b.polling - a.polling);
+
+                  var partyNames;
+                  if (e.current_results && e.current_results[0]) {
+                    partyNames = e.current_results[0]
+                      .sort((a, b) => b.pvp - a.pvp)
+                      .map(result => result.fields.last_name);
+                  } else {
+                    partyNames = ["CDU／CSU", "Green Party", "SPD", "FDP", "AfD", "Others", "Left"];
+                  }
+
+                  for (var i = 0; i < partyData.length; i++) {
+                    var roundedPolling = Math.round(partyData[i].polling * 2) / 2;
+                    newPollingData += "<b>" + partyNames[i] + "</b> - " + roundedPolling.toFixed(1) + "%<br>";
+                  }
+
+                  newPollingUL.innerHTML = newPollingData;
+                }
+              }, 0);
+            });
+
+            pollingButton.classList.add('listener-attached');
+        }
 }
+
+
 
 // This function becomes a simple list of calls to other functions
 async function handleMutations(mutationsList, observer) {
@@ -1462,7 +1521,7 @@ async function handleMutations(mutationsList, observer) {
 
     await handleGameWindow();
     await handleFooter();
-    updateFooter();
+    updatePolling();
 
     await handleRadioButtons(processedNodes);
 
@@ -1475,7 +1534,6 @@ let observerRunning = false;
 
 var element = document.getElementById('controlElement');
 if (!element) {
-	console.log("created");
 	let singleObserver = new MutationObserver(handleMutations);
 	singleObserver.observe(document.documentElement, { childList: true, subtree: true });
 	var controlElement = document.createElement('div');
@@ -2049,17 +2107,3 @@ function campaignCharting() {
     campaignChartButton.textContent = "Current Polls";
   });
 }
-
-// Create a new stylesheet
-var style = document.createElement('style');
-
-// Add your CSS rules
-style.innerHTML = `
-  #pvswitcher,
-  #ev_est {
-    display: none;
-  }
-`;
-
-// Append the new stylesheet to the head of your document
-document.head.appendChild(style);
