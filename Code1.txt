@@ -847,12 +847,43 @@ function changeOpponentSelectionDescription() {
 
             //parsed tooltips
             replaceWithTooltip(document.body, "Nord-Stream 2", "Planned natural gas pipeline from Russia to Germany, through the Baltic Sea.");
-            replaceWithTooltip(document.body, "Cum-Ex", "Stock-trading scheme, the goal of which is to get several refunds from capital gains taxes that were paid just once. The most prominent case is that of the Hamburg-based Warburg-Bank, who defrauded the state while Olaf Scholz was Mayor.");
-            replaceWithTooltip(document.body, "Wirecard", "Financial company, who ran a bank until 2020, when they shut down due to several billion Euros missing. The dedicated regulatory authority under Minister of Finances Olaf Scholz  was criticized heavily for its lack of action.");
-            replaceWithTooltip(document.body, "Riester-System", "State-encouraged private pension system named after former Minister of Labour, Walter Riester (SPD, 1998-2002), aimed at low-income workers. A person who is “riestering” may get tax refunds on privately saved up money.");
-            replaceWithTooltip(document.body, "Black Zero", "“Schwarze Null” in German; economic principle that forbids new debts as well as promising a balanced budget. While there is a balanced budget amendment in the German constitution, the refusal to take on new debts through the  “Schwarze Null” is only a political promise.");
+            replaceWithTooltip(document.body, "Cum-Ex", "Stock-trading scheme, the goal of which is to get several refunds from capital gains taxes that were paid just once. A prominent case is the Hamburg-based Warburg-Bank, who defrauded the state while Olaf Scholz was Mayor.");
+            replaceWithTooltip(document.body, "Wirecard", "Financial company, who ran a bank until 2020, when they shut down due to several billion Euros missing. The regulatory organization under Minister of Finances Olaf Scholz was heavily criticized for its lack of action.");
+            replaceWithTooltip(document.body, "Riester-System", "State-encouraged private pension system named after former Minister of Labour, Walter Riester (SPD, 1998-2002), aimed at low-income workers who may get tax refunds on privately saved up money.");
+            replaceWithTooltip(document.body, "Black Zero", "“Schwarze Null” in German; economic principle that forbids new debts while promising a balanced budget.");
             replaceWithTooltip(document.body, "Der Spiegel", "Famous German news magazine, known for its investigative journalism, breaking several scandals since 1947. Tends to be center left-liberal.");
-            replaceWithTooltip(document.body, "Fukushima", "In 2011, the nuclear reactor in Fukushima, Japan, had a critical failure with disastrous consequences. Resulted in Merkel changing course on Nuclear Energy and resuming the phase-out, which started under the preceding Red-Green coalition.");
+            replaceWithTooltip(document.body, "Fukushima", "In 2011, a disaster took place at the nuclear reactor in Fukushima, Japan. Resulted in the first Green surge, and Merkel changing course on Nuclear Energy and resuming the phase-out, which started under the preceding Red-Green coalition.");
+            replaceWithTooltip(document.body, "Frontex", "The European Agency for Border- and coastal protection of the Schengen Area (internally, the EU does not have border patrols).");
+            replaceWithTooltip(document.body, "Environmental Protection Act", "“Klimaschutzgesetz” in German. Originally enacted by the Grand Coalition in 2019, it promises to uphold the goals by the Paris Conference and lays down concrete goals for CO²-emissions until 2030.");
+            replaceWithTooltip(document.body, "Prioritization system", "When covid vaccines were sparse, certain groups had a prerogative, among them people above 60, with certain pre-existing conditions or with a high risk of infection due to their profession.");
+            replaceWithTooltip(document.body, "Bundeswehr", "Name for the German armed forces and their civilian organizations.");
+            replaceWithTooltip(document.body, "Social Market Economy", "Germany’s traditional economic system; consisting of a free market economy with a welfare state. Originally envisioned by Minister of the Economy Ludwig Erhard (CDU, 1949-1963).");
+            replaceWithTooltip(document.body, "Landesvater", "“State-Father”. Traditionally a feudal lord, today jokingly used for a Head of Government in a state, usually an older male, serving as a trustworthy icon of a statesman.");
+            replaceWithTooltip(document.body, "Rotkäppchen", "Famous East German brand of sparkling wine, from Freyburg/Unstrut, since 1894.");
+            replaceWithTooltip(document.body, "Baumkuchen", "“Tree Cake”. Spit cake, baked over an open flame, with a layered dough, like the rings of a tree. Also quite popular in Japan.");
+            replaceWithTooltip(document.body, "Eigenheim", "“Own-Home”. A small detached home, owned by a family. The dream of many Germans.");
+            replaceWithTooltip(document.body, "Berghain", "Infamous techno club in Berlin. What happens in the Berghain, stays in the Berghain.");
+            replaceWithTooltip(document.body, "Rubber Boots", "In 2002, SPD chancellor Schröder allegedly won reelection due to media coverage of him strutting about in rubber boots during the flooding of the river Elbe.");
+            replaceWithTooltip(document.body, "Laschets Lacher", "<img src=”https://media.discordapp.net/attachments/1131296206908301423/1135571560950935702/kritik-an-laschet-wegen-lacher-im-flutgebiet-image.jpg.webp”>");
+            replaceWithTooltip(document.body, "GroKo", "Abbr.“Große Koalition” - “Grand coalition”; consisting of Germany’s traditional two major parties, the SPD and the CDU/CSU. Has governed from 1966-1969, 2005-2009 and 2013-2021.");
+            replaceWithTooltip(document.body, "Querdenker", "“Skewed Thinker” or “Across Thinker”; German word for someone who thinks outside the norm. Popularized by its usage on Covid skeptics during the pandemic.");
+            replaceWithTooltip(document.body, "Bubatz", "<img src=”https://media.discordapp.net/attachments/1131296206908301423/1135575649814327307/c80463b818429cf523e9f4527d901ae1.jpg”>");
+            replaceWithTooltip(document.body, "Die Bild", "Famous German boulevard newspaper. Quite popular, although widely mocked for its low journalistic standards. Punk Band <i>Die Ärzte</i> succinctly summed them up as “fear, hate, tits and the weather report”.");
+            replaceWithTooltip(document.body, "Oktoberfest", "Traditional Bavarian folk festival. Internationally known for its served big mugs of beer (“Maß”) and the display of traditional Bavarian clothing (“Tracht”). Often incorrectly assumed to be a general German tradition.");
+            replaceWithTooltip(document.body, "Heute-Show", "Popular German satire show on the public TV station ZDF, moderated by Oliver Welke. The German adaptation of The Daily Show.");
+            replaceWithTooltip(document.body, "Vendetta", "Friedrich Merz was party group leader from 2000-2002 - until CDU chair Angela Merkel and CSU chair Edmund Stoiber made a deal, that the latter was to become chancellor candidate, the former new party group leader. Merz wasn’t consulted, and relegated to irrelevancy.");
+            replaceWithTooltip(document.body, "Beleidigte Leberwurst", "“offended liver sausage” - German word for someone who is childishly sulking.");
+            replaceWithTooltip(document.body, "Maut", "Old German word for a road toll. The CSU sought to establish tolls for private vehicles in 2015, but the European courts disallowed this in 2019, citing discrimination against foreign vehicle owners.");
+            replaceWithTooltip(document.body, "Genosse Olaf", "<img src=”https://media.discordapp.net/attachments/1131296206908301423/1135578447561904179/Olaf_Scholz_1984.jpg?width=1136&height=757”>");
+            replaceWithTooltip(document.body, "Terror-Shrek", "<img src=”https://media.discordapp.net/attachments/1131296206908301423/1135578677632045056/3-formatOriginal.jpg?width=1136&height=758”> That’s not even half of it. The guy has made several eccentric costumes - look up “Markus Söder Homer Simpson”.");
+            replaceWithTooltip(document.body, "2015", "In 2015, about 2 million people sought refuge in Europe, coming from the Mediterranean Sea and the Balkans. A great amount had been held up in Hungary, until Merkel unilaterally decided to let them come to Germany. About 400k Syrians fled to Germany during this time.");
+            replaceWithTooltip(document.body, "JU", "“Junge Union”, “Young Union”. The youth organization of the CDU/CSU. Usually considered quite unadventurous.");
+            replaceWithTooltip(document.body, "Jusos", "“JungsozialistInnen”, “Young Socialists”. The youth organization of the SPD. Noticeably more left-wing than the national party. Has gained in influence over the last few years.");
+            replaceWithTooltip(document.body, "Bridge-lockdown", "Proposal by Armin Laschet. The goal is to generally open up, but to have a short term, harsh lockdown in April, to bridge the time until more people are vaccinated and more tests are available.");
+            replaceWithTooltip(document.body, "3rd CSU candidate", "The CSU has put up only two chancellor candidates for the Union: Franz-Josef Strauß in 1980 and Edmund Stoiber in 2002. Both lost against SPD incumbents.");
+            replaceWithTooltip(document.body, "Annegret-Kramp-Karrenbauer", "The CDU Saarland party chair 2011-2019, and for a short while in 2018 General Secretary of the CDU, she was indirectly chosen by Merkel as her successor as party leader. After her tenure was heavily criticized, she got the Ministry of Defense (2019-2021) and retired shortly after.");
+            replaceWithTooltip(document.body, "Norbert Röttgen", "Once a prominent CDU politician and Minister of the Environment (2009-2012): humiliatingly fired after his defeat as the CDU candidate for the North Rhine-Westphalian elections. In 2020 he tried for a comeback, but ended up as a third wheel behind Laschet and Merz.");
+            replaceWithTooltip(document.body, "Konrad Adenauer", "First chancellor of West Germany (1949-1963). Started his career in Weimar Germany and was imprisoned during the Nazi era. He helped found the CDU, was responsible for the  and remains a great icon for German conservatives and the nation as a whole.");
 
         }
         replaceWithTooltip(document.body, "tooltip option", "Look out for words with a light blue background like this and hover them for a tooltip.");
@@ -1059,6 +1090,7 @@ function changeOpponentSelectionDescription() {
             font-size:13px !important;
             line-height:1.5em !important;
             font-weight:normal !important;
+            font-style: normal !important;
         }
 
         .tooltip:hover .tooltiptext {
