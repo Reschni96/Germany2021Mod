@@ -1065,7 +1065,7 @@ cyoAdventure = function (a) {
       i++;
     });
 
-     if ([4013, 4030, 4502, 4042].includes(ans)) {
+     if ([4013, 4030, 4502, 4042, 4032, 4029].includes(ans)) {
        ideologyCenter +=1
     }
     if ([4503].includes(ans)) {
