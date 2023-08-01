@@ -1147,8 +1147,7 @@ function simulateMA(n, lookback) {
 
   // Generate warmup error terms
   for (let i = 0; i < n + warmup; i++) {
-    // If we're in the last three steps, use half the variance
-    const variance = i >= n + warmup - 3 ? 0.001 : 0.002;
+    const variance = i >= n + warmup - 5 ? 0.5 : 1;
     errors.push(generateNormalRandom(0, variance));
   }
 
@@ -1160,12 +1159,12 @@ function simulateMA(n, lookback) {
     for (let j = 0; j < lookback; j++) {
       const errorIndex = i - j - 1;
       const error = errorIndex >= 0 ? errors[errorIndex] : 0;
-      const weight = Math.pow(0.7, j);
+      const weight = Math.pow(0.8, j);
       maValue += weight * error;
     }
 
     // Add current MA value
-    values.push(maValue);
+    values.push(maValue/2);
   }
 
   return values;
@@ -1188,11 +1187,30 @@ cyoAdventure = function (a) {
       return a.pk - b.pk;
     });
 
-    // record the current polling data for all parties and inject some randomness
-    pop_vote.forEach((entry) => {
-      polling[i].push(Math.round(entry.pvp*1000*prepolling[i][campaignTrail_temp.question_number])/10);
-      i++;
-    });
+   // Iterate over each party and inject randomness
+    for (let i = 0; i < pop_vote.length; i++) {
+      const entry = pop_vote[i];
+      let adjustedPvp = entry.pvp * 100 + prepolling[i][campaignTrail_temp.question_number];
+
+      // Introduce systematic error for the party at index 4
+      if (i === 4) {
+        adjustedPvp += 1;
+      }
+
+      polling[i].push(Math.round(adjustedPvp * 10) / 10);
+    }
+
+    // Now normalize the last entry in each polling list
+    let totalPolling = 0;
+    for (let i = 0; i < polling.length; i++) {
+      totalPolling += polling[i][polling[i].length - 1];
+    }
+
+    for (let i = 0; i < polling.length; i++) {
+      // Normalize and round to one significant digit
+      const normalizedValue = polling[i][polling[i].length - 1] / totalPolling * 100;
+      polling[i][polling[i].length - 1] = Math.round(normalizedValue * 10) / 10;
+    }
 
 
 	if (ans === 4001) {
@@ -1431,7 +1449,7 @@ async function handleFooter() {
     var runningMateBox = createBox(runningMatePic, campaignTrail_temp.running_mate_last_name);
 
     var questionInfo = "Question " + (campaignTrail_temp.question_number + 1) + " of " + campaignTrail_temp.global_parameter_json[0].fields.question_count;
-    var questionBox = createBoxWithTextAndPic(questionInfo, current_footer_picture);
+    var questionBox = createBoxWithTextAndPic(questionInfo, pictureDict[campaignTrail_temp.question_number]);
 
     new_footer.appendChild(candidateBox);
     new_footer.appendChild(questionBox);
@@ -1487,7 +1505,77 @@ function createBoxWithTextAndPic(text, pictureSrc) {
     return container;
 }
 
-let current_footer_picture = "https://cdn.discordapp.com/attachments/1109846390575730788/1130856731577155694/image.png";
+function updatePolling() {
+    var mapFooter = document.getElementById("map_footer");
+    var chartButton = document.getElementById("campaign_chart_button");
+
+    if(mapFooter){
+
+        if (chartButton && !isChartView) {
+            // Apply the styles to map_footer
+            mapFooter.style.float = "left";
+            mapFooter.style.paddingLeft = "6em";
+        } else {
+            // Reset the styles
+            mapFooter.style.float = "";
+            mapFooter.style.paddingLeft = "";
+        }
+    }
+
+    // Get the button by its ID
+    var pollingButton = document.getElementById("pvswitcher");
+
+        if(pollingButton && !pollingButton.classList.contains("customListener")){
+            pollingButton.classList.add("customListener");
+            pollingButton.addEventListener("click", function() {
+              setTimeout(function() {
+                var pollingDisplay = document.getElementById("switchingEst");
+                var overallResult = document.getElementById("overall_result");
+                var newPollingUL = document.getElementById("newPollingUL");
+
+                if (!newPollingUL) {
+                  newPollingUL = document.createElement("ul");
+                  newPollingUL.id = "newPollingUL";
+                  newPollingUL.style = pollingDisplay.style.cssText;  // apply the style of pollingDisplay to newPollingUL
+                  overallResult.insertBefore(newPollingUL, overallResult.children[1]);
+                }
+
+                if (pollingButton.innerText === "PV Estimate") {
+                  newPollingUL.style.display = "none";
+                  pollingDisplay.style.display = "block";
+                } else {
+                  newPollingUL.style.display = "block";
+                  pollingDisplay.style.display = "none";
+
+                  var newPollingData = "";
+                  var partyData = [];
+
+                  var partyNames = e.candidate_json
+                    .map(candidate => candidate.fields.last_name);
+
+                  for (var i = 0; i < polling.length; i++) {
+                    var partyPolling = polling[i][polling[i].length - 1];
+                    partyData.push({ name: partyNames[i], polling: partyPolling });
+                  }
+
+                  partyData.sort((a, b) => b.polling - a.polling);
+
+                  for (var i = 0; i < partyData.length; i++) {
+                    var roundedPolling = Math.round(partyData[i].polling * 2) / 2;
+                    newPollingData += "<b>" + partyData[i].name + "</b> - " + roundedPolling.toFixed(1) + "%<br>";
+                  }
+
+                  newPollingUL.innerHTML = newPollingData;
+                }
+              }, 0);
+            });
+
+
+
+            pollingButton.classList.add('listener-attached');
+        }
+}
+
 
 
 // This function becomes a simple list of calls to other functions
@@ -1502,6 +1590,9 @@ async function handleMutations(mutationsList, observer) {
 
     await handleGameWindow();
     await handleFooter();
+    if(e.realisticPolls){
+        updatePolling();
+    }
 
     await handleRadioButtons(processedNodes);
 
@@ -1929,3 +2020,202 @@ var charts = ["bar", "seats"]
 
 const buttonobserver = new MutationObserver(addMyButton);
 buttonobserver.observe(document.documentElement, { childList: true, subtree: true });
+
+let initialPolls = [0.272, 0.171, 0.197, 0.119, 0.057,0.103,0.083];
+let i = 0;
+
+initialPolls.forEach((entry) => {
+  polling[i].push((entry*1000)/10);
+  i++;
+});
+
+
+
+function createPollingBarChart(polling) {
+    var myChart = Highcharts.chart('myChart', {
+        chart: {
+            type: 'column'
+        },
+        title: {
+            text: 'Current polling results'
+        },
+        yAxis: {
+            title: {
+                text: 'Percentage'
+            }
+        },
+        xAxis: {
+            categories: ['Party']
+        },
+        tooltip: {
+            valueSuffix: '%'
+        },
+        series: [{
+            name: 'CDU/CSU',
+            data: [Math.round(polling[0][polling[0].length - 1] * 2) / 2],
+            color: e.candidate_json[0].fields.color_hex
+        }, {
+            name: 'SPD',
+            data: [Math.round(polling[1][polling[1].length - 1] * 2) / 2],
+            color: e.candidate_json[1].fields.color_hex
+        },{
+            name: 'Greens',
+            data: [Math.round(polling[2][polling[2].length - 1] * 2) / 2],
+            color: e.candidate_json[2].fields.color_hex
+        },{
+            name: 'FDP',
+            data: [Math.round(polling[3][polling[3].length - 1] * 2) / 2],
+            color: e.candidate_json[3].fields.color_hex
+        },{
+            name: 'Left',
+            data: [Math.round(polling[4][polling[4].length - 1] * 2) / 2],
+            color: e.candidate_json[4].fields.color_hex
+        },{
+            name: 'AfD',
+            data: [Math.round(polling[5][polling[5].length - 1] * 2) / 2],
+            color: e.candidate_json[5].fields.color_hex
+        },{
+            name: 'Others',
+            data: [Math.round(polling[6][polling[6].length - 1] * 2) / 2],
+            color: e.candidate_json[6].fields.color_hex
+        }]
+    });
+
+          var div = document.getElementById('chartcontainer');
+      div.style.border = 'medium double';
+      div.style.backgroundColor = 'rgba(255, 255, 255, 0.5)';
+      div.style.borderColor = '#c9c9c9';
+
+      var element = document.querySelector('.highcharts-background');
+      if (element) { // Check if element exists before trying to remove it
+          element.remove();
+      }
+
+      const container = document.getElementById('chartcontainer');
+      container.style.background ='rgba(255, 255, 255, 0.5)';
+
+}
+
+var campaignButtonAdded = false;
+function addCampaignChartButton() {
+    if (document.getElementById("map_footer") && document.getElementById("resume_questions_button")) {
+        const existingButton = document.getElementById("campaign_chart_button");
+        if (existingButton) {
+            return;
+        }
+
+        if (!campaignButtonAdded) {
+            campaignButtonAdded = true;
+            const buttonrow = document.getElementById("map_footer");
+            const campaignChartButton = document.createElement("button");
+            campaignChartButton.textContent = "Current Polls";
+            campaignChartButton.id = "campaign_chart_button";
+            campaignChartButton.addEventListener("click", function() {
+                campaignCharting();
+            });
+            buttonrow.insertBefore(campaignChartButton, buttonrow.children[buttonrow.children.length - 2]);
+        }
+        else {
+            // reconnect the observer
+            campaignButtonAdded = false;
+        }
+    }
+}
+
+const cbuttonobserver = new MutationObserver(addCampaignChartButton);
+if(e.realisticPolls){
+    cbuttonobserver.observe(document.documentElement, { childList: true, subtree: true });
+}
+
+var isChartView = false; // A flag indicating whether the current view is a chart
+
+function campaignCharting() {
+  var campaignChartButton = document.getElementById("campaign_chart_button");
+  var mainContentArea = document.getElementById("main_content_area");
+  var gameWindow = document.getElementById("game_window"); // Parent container
+  var chartContainer = document.getElementById("chartcontainer");
+
+
+    // If the chartContainer does not exist, we create it once
+    if (!chartContainer) {
+      chartContainer = document.createElement("div");
+      chartContainer.id = "chartcontainer";
+      chartContainer.style.display = "none"; // hide it initially
+      chartContainer.innerHTML = '<figure class="highcharts-figure"><div id="myChart"></div></figure>';
+      gameWindow.insertBefore(chartContainer, mainContentArea); // Insert before the mainContentArea
+    }
+
+  if (!isChartView) { // If it's not a chart view
+    // Hide the main content and show the chart container
+    mainContentArea.style.display = "none";
+    chartContainer.style.display = "block";
+
+    // Change the button's text
+    campaignChartButton.textContent = "Show map";
+
+    // Update the flag
+    isChartView = true;
+
+    // Draw the chart
+    setTimeout(function() {
+      executeWithRetry(createPollingBarChart(polling));
+    }, 100);
+
+  } else { // If it's a chart view
+    // Hide the chart container and show the main content
+    mainContentArea.style.display = "block";
+    chartContainer.style.display = "none";
+
+    // Revert the button's text
+    campaignChartButton.textContent = "Current Polls";
+
+    // Update the flag
+    isChartView = false;
+  }
+
+  // Ensure things are reset properly when the "resume questions" button is clicked
+  document.getElementById("resume_questions_button").addEventListener("click", function() {
+    // Reset the isChartView flag
+    isChartView = false;
+
+    // Revert the button's text
+    campaignChartButton.textContent = "Current Polls";
+  });
+}
+
+
+var pictureDict = {
+    0: "https://cdn.discordapp.com/attachments/1109846390575730788/1130856731577155694/image.png",
+    1: "https://i.ibb.co/X3HVxhh/Laschet-Rede-1-cropped.jpg",
+    2: "",
+    3: "https://i.ibb.co/vmWWfbh/Laschet-Talk-1-cropped.jpg",
+    4: "",
+    5: "",
+    6: "https://i.ibb.co/25dsws2/Laschet-S-der-cropped.jpg",
+    7: "https://i.ibb.co/7k8B04X/Laschet-Rede-2-cropped.jpg",
+    8: "",
+    9: "https://i.ibb.co/LpQxprP/Kretschmer-Russland-cropped.jpg",
+    10: "https://i.ibb.co/7vS3Hbq/Fl-chtlinge-1-cropped.webp",
+    11: "https://i.ibb.co/y6XsHcZ/FFF-cropped.jpg",
+    12: "",
+    13: "",
+    14: "https://i.ibb.co/hYQCJ16/NATO-Flag-cropped.png",
+    15: "https://i.ibb.co/MRYCjvy/Laschet-Talk-2-cropped.jpg",
+    16: "https://i.ibb.co/zxvJCxh/Haselhoff-cropped.webp",
+    17: "",
+    18: "",
+    19: "https://i.ibb.co/0cY6kF7/Mieten-cropped.jpg",
+    20: "https://i.ibb.co/D9rndYc/Ahrtal-1-cropped.jpg",
+    21: "https://i.ibb.co/ZmXLYKj/Ahrtal-2-cropped.jpg",
+    22: "https://i.ibb.co/ZmXLYKj/Ahrtal-2-cropped.jpg",
+    23: "https://i.ibb.co/LpNjyFG/Laschet-Talk-3-cropped.jpg",
+    24: "",
+    25: "https://i.ibb.co/vmWWfbh/Laschet-Talk-1-cropped.jpg",
+    26: "https://i.ibb.co/X3HVxhh/Laschet-Rede-1-cropped.jpg",
+    27: "https://i.ibb.co/LpNjyFG/Laschet-Talk-3-cropped.jpg",
+    28: "",
+    29: "https://i.ibb.co/7k8B04X/Laschet-Rede-2-cropped.jpg",
+    30: "",
+    31: "",
+    32: ""
+};

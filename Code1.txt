@@ -27,6 +27,7 @@ e.music = {};
 e.music.shuffleEnabled = false;
 e.music.Volume=0.3;
 e.displayTooltips = true;
+e.realisticPolls = true;
 
 quotes = [`"Wir schaffen das!" - Angela Merkel`, `"Scheitert der Euro, scheitert Europa." - Angela Merkel`, `"Das Internet ist für uns alle Neuland." - Angela Merkel`, `"Die Demokratie ist kein Supermarkt." - Frank-Walther Steinmeier`, `In my homeland Baden-Württemberg we are all sitting in one boat.`, `"Rechts von der CDU/CSU darf es keine demokratisch legitimierte Partei geben" - Franz-Joseph Strauß`, `"Jetzt wächst zusammen, was zusammen gehört" - Willy Brandt`, `Was kümmert mich mein Geschwätz von gestern? - Konrad Adenauer`, `"Wer Visionen hat, sollte zum Arzt gehen" - Helmut Schmidt`, `There will never be a revolution in Germany. The bureaucratic paperwork for it is missing.`, ]
 customquote = quotes[Math.floor((Math.random() * quotes.length))]
@@ -591,8 +592,21 @@ function changeOpponentSelectionDescription() {
     // Define the texts and button labels
     const text1 = `<p><strong>Use the allocation method for the German Bundestag.</strong></p><p>The German electoral system is quite complex. Every voter has two votes, one for a party and one for a directly elected candidate in their constituency. Theoretically, half the parliament is determined first past the post by these direct elections and half proportionally through the party votes, with seats allocated with the Sainte-Laguë method on a per-state basis.<br> However, if a party receives more seats through this system than it would if the parliament was elected by strictly proportional votes, they get extra (overhanging) mandates and all over parties get compensatory mandates. Overall, all but three overhanging mandates get compensated. <br> To enter parliament, a party either needs 5% of the proportional vote or win in at least three districts. <br> For the purpose of this game, the system has been simplified. Only the proportional vote has been simulated - though there are some heuristics to guess the number of constituencies won by parties where this is relevant.`;
 
-     const text2 = `<p><strong>Difficulty Options</strong></p><p>This mod has three different difficulty options. "Campaign Difficulty" is the normal difficulty option found in almost every TCT mod and influences how strong your party is in the polls. <br> "Coalition Difficulty" determines how hard the coalition talks after the election are. On "Guaranteed", any coalition you tick will happen, regardless of the result. On other difficulties, the probability for a coalition to be selected depends on several factors, like the election winner, the winning margin and your decisions during the campaign. Some coalitions are also inherently more likely than others.<br> State visits are disabled by default since only the popular vote matters and it would be best to always visit the most populous state. However, if desired, they can be turned back on. This also makes the game slightly easier. <br>Finally, the tooltip option will enable tooltips for a few phrases that give you additional explanations. It can be helpful for players unfamiliar with German politics.`;
-    const btnText1 = 'Difficulty Options';
+     const text2 = `<p><strong>Difficulty Options</strong></p>
+
+    <p>This mod offers five unique difficulty settings to customize your game.<br>
+
+    <strong>Campaign Difficulty</strong> is the standard difficulty setting that impacts your party's standing in the polls.<br>
+
+    <strong>Coalition Difficulty</strong> determines the difficulty of post-election coalition negotiations. On "Guaranteed", any coalition you select will form, independent of election results. Generally, coalition probabilities are based on the election winner, margin of victory, campaign decisions, and certain coalitions' inherent likelihood.<br>
+
+    <strong>State Visits</strong> are disabled by default as they have less relevance in a popular vote scenario. However, they can be activated for variety and making the game slightly easier.<br>
+
+    The <strong>Realistic polls</strong> toggle allows for either realistic polls with rounding and potential errors or completely accurate polls like in other mods.<br>
+
+    The <strong>Tooltip option </strong>provides tooltips for key phrases, offering extra explanations - especially beneficial for those not acquainted with German politics.</p>
+  `
+   const btnText1 = 'Difficulty Options';
     const btnText2 = 'Electoral System';
 
     // Create the first div with the first text and the toggle button
@@ -670,6 +684,24 @@ function changeOpponentSelectionDescription() {
             visitsCheckbox.addEventListener("change", function() {
                 campaignTrail_temp.election_json[0].fields.has_visits = this.checked ? 1 : 0;
             });
+
+            // Add realistic polls checkbox here
+            var realisticPollsForm = document.createElement("form");
+            realisticPollsForm.name = "realistic_polls_selection";
+            var realisticPollsHeader = document.createElement("h3");
+            realisticPollsHeader.textContent = "Realistic Polls";
+            realisticPollsForm.appendChild(realisticPollsHeader);
+            var realisticPollsCheckbox = document.createElement("input");
+            realisticPollsCheckbox.type = "checkbox";
+            realisticPollsCheckbox.id = "realisticPollsCheckbox";
+            realisticPollsCheckbox.checked = e.realisticPolls;
+            realisticPollsForm.appendChild(realisticPollsCheckbox);
+            difficultyDiv.appendChild(realisticPollsForm);
+
+            realisticPollsCheckbox.addEventListener("change", function() {
+                e.realisticPolls = this.checked;
+            });
+
 
              // Add tooltip checkbox here
             var tooltipForm = document.createElement("form");
@@ -894,7 +926,7 @@ function changeOpponentSelectionDescription() {
         ];
         replaceWithTooltip(document.body, tooltipList);
         }
-        replaceWithTooltip(document.body, [{searchString:"tooltip option", explanationText: "Look out for words with a light blue background like this and hover them for a tooltip."}]);
+        replaceWithTooltip(document.body, [{searchString:"Tooltip option", explanationText: "Look out for words with a light blue background like this and hover them for a tooltip."}]);
 
         // Re-observe the document
         changesInProgress = false;
@@ -906,7 +938,7 @@ function changeOpponentSelectionDescription() {
 
     // Ensure we don't re-enter applyColorStyles
     function applyColorStyles() {
-        let wordsToFind = ['Enable state visits?', 'Select coalition difficulty:', 'Please select the election you will run in:', 'This scenario was made by u/Vilvilea.', 'Please select your party:', 'Please select your candidate:', 'How would you like the seats to be allocated?', 'Select campaign difficulty:', 'Enable tooltips?'];
+        let wordsToFind = ['Realistic Polls','Enable state visits?', 'Select coalition difficulty:', 'Please select the election you will run in:', 'This scenario was made by u/Vilvilea.', 'Please select your party:', 'Please select your candidate:', 'How would you like the seats to be allocated?', 'Select campaign difficulty:', 'Enable tooltips?'];
 
         walkAndReplace(document.body, wordsToFind);
     }

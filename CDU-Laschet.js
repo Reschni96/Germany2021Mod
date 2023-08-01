@@ -1055,7 +1055,6 @@ cyoAdventure = function (a) {
     let pop_vote = e.current_results[0];
     let playerPolling = (pop_vote.find(p => p.pk === e.candidate_id)).pvp;
     let i = 0;
-    console.log(e.current_results[0])
 
     pop_vote.sort((a, b) => {
       return a.pk - b.pk;
@@ -1085,8 +1084,6 @@ cyoAdventure = function (a) {
       const normalizedValue = polling[i][polling[i].length - 1] / totalPolling * 100;
       polling[i][polling[i].length - 1] = Math.round(normalizedValue * 10) / 10;
     }
-
-
 
     if ([4004, 4007, 4013, 4027, 4032, 4502, 4042].includes(ans)) {
        ideologyCenter +=1
@@ -1396,42 +1393,6 @@ function createBoxWithTextAndPic(text, pictureSrc) {
     return container;
 }
 
-var pictureDict = {
-    0: "https://cdn.discordapp.com/attachments/1109846390575730788/1130856731577155694/image.png",
-    1: "https://i.ibb.co/X3HVxhh/Laschet-Rede-1-cropped.jpg",
-    2: "",
-    3: "https://i.ibb.co/vmWWfbh/Laschet-Talk-1-cropped.jpg",
-    4: "",
-    5: "",
-    6: "https://i.ibb.co/25dsws2/Laschet-S-der-cropped.jpg",
-    7: "https://i.ibb.co/7k8B04X/Laschet-Rede-2-cropped.jpg",
-    8: "",
-    9: "https://i.ibb.co/LpQxprP/Kretschmer-Russland-cropped.jpg",
-    10: "https://i.ibb.co/7vS3Hbq/Fl-chtlinge-1-cropped.webp",
-    11: "https://i.ibb.co/y6XsHcZ/FFF-cropped.jpg",
-    12: "",
-    13: "",
-    14: "https://i.ibb.co/hYQCJ16/NATO-Flag-cropped.png",
-    15: "https://i.ibb.co/MRYCjvy/Laschet-Talk-2-cropped.jpg",
-    16: "https://i.ibb.co/zxvJCxh/Haselhoff-cropped.webp",
-    17: "",
-    18: "",
-    19: "https://i.ibb.co/0cY6kF7/Mieten-cropped.jpg",
-    20: "https://i.ibb.co/D9rndYc/Ahrtal-1-cropped.jpg",
-    21: "https://i.ibb.co/ZmXLYKj/Ahrtal-2-cropped.jpg",
-    22: "https://i.ibb.co/ZmXLYKj/Ahrtal-2-cropped.jpg",
-    23: "https://i.ibb.co/LpNjyFG/Laschet-Talk-3-cropped.jpg",
-    24: "",
-    25: "https://i.ibb.co/vmWWfbh/Laschet-Talk-1-cropped.jpg",
-    26: "https://i.ibb.co/X3HVxhh/Laschet-Rede-1-cropped.jpg",
-    27: "https://i.ibb.co/LpNjyFG/Laschet-Talk-3-cropped.jpg",
-    28: "",
-    29: "https://i.ibb.co/7k8B04X/Laschet-Rede-2-cropped.jpg",
-    30: "",
-    31: "",
-    32: ""
-};
-
 function updatePolling() {
     var mapFooter = document.getElementById("map_footer");
     var chartButton = document.getElementById("campaign_chart_button");
@@ -1517,7 +1478,9 @@ async function handleMutations(mutationsList, observer) {
 
     await handleGameWindow();
     await handleFooter();
-    updatePolling();
+    if(e.realisticPolls){
+        updatePolling();
+    }
 
     await handleRadioButtons(processedNodes);
 
@@ -1944,7 +1907,7 @@ var charts = ["bar", "seats"]
 const buttonobserver = new MutationObserver(addMyButton);
 buttonobserver.observe(document.documentElement, { childList: true, subtree: true });
 
-let initialPolls = [0.272, 0.171, 0.197, 0.119, 0.057,0.103,0.083]; // your hardcoded array
+let initialPolls = [0.272, 0.171, 0.197, 0.119, 0.057,0.103,0.083];
 let i = 0;
 
 initialPolls.forEach((entry) => {
@@ -2046,7 +2009,9 @@ function addCampaignChartButton() {
 }
 
 const cbuttonobserver = new MutationObserver(addCampaignChartButton);
-cbuttonobserver.observe(document.documentElement, { childList: true, subtree: true });
+if(e.realisticPolls){
+    cbuttonobserver.observe(document.documentElement, { childList: true, subtree: true });
+}
 
 var isChartView = false; // A flag indicating whether the current view is a chart
 
@@ -2103,3 +2068,40 @@ function campaignCharting() {
     campaignChartButton.textContent = "Current Polls";
   });
 }
+
+
+var pictureDict = {
+    0: "https://cdn.discordapp.com/attachments/1109846390575730788/1130856731577155694/image.png",
+    1: "https://i.ibb.co/X3HVxhh/Laschet-Rede-1-cropped.jpg",
+    2: "",
+    3: "https://i.ibb.co/vmWWfbh/Laschet-Talk-1-cropped.jpg",
+    4: "",
+    5: "",
+    6: "https://i.ibb.co/25dsws2/Laschet-S-der-cropped.jpg",
+    7: "https://i.ibb.co/7k8B04X/Laschet-Rede-2-cropped.jpg",
+    8: "",
+    9: "https://i.ibb.co/LpQxprP/Kretschmer-Russland-cropped.jpg",
+    10: "https://i.ibb.co/7vS3Hbq/Fl-chtlinge-1-cropped.webp",
+    11: "https://i.ibb.co/y6XsHcZ/FFF-cropped.jpg",
+    12: "",
+    13: "",
+    14: "https://i.ibb.co/hYQCJ16/NATO-Flag-cropped.png",
+    15: "https://i.ibb.co/MRYCjvy/Laschet-Talk-2-cropped.jpg",
+    16: "https://i.ibb.co/zxvJCxh/Haselhoff-cropped.webp",
+    17: "",
+    18: "",
+    19: "https://i.ibb.co/0cY6kF7/Mieten-cropped.jpg",
+    20: "https://i.ibb.co/D9rndYc/Ahrtal-1-cropped.jpg",
+    21: "https://i.ibb.co/ZmXLYKj/Ahrtal-2-cropped.jpg",
+    22: "https://i.ibb.co/ZmXLYKj/Ahrtal-2-cropped.jpg",
+    23: "https://i.ibb.co/LpNjyFG/Laschet-Talk-3-cropped.jpg",
+    24: "",
+    25: "https://i.ibb.co/vmWWfbh/Laschet-Talk-1-cropped.jpg",
+    26: "https://i.ibb.co/X3HVxhh/Laschet-Rede-1-cropped.jpg",
+    27: "https://i.ibb.co/LpNjyFG/Laschet-Talk-3-cropped.jpg",
+    28: "",
+    29: "https://i.ibb.co/7k8B04X/Laschet-Rede-2-cropped.jpg",
+    30: "",
+    31: "",
+    32: ""
+};
