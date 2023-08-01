@@ -843,7 +843,7 @@ function replaceWithTooltip(node, tooltipList) {
 
                         let tooltipTextSpan = document.createElement('span');
                         tooltipTextSpan.className = 'tooltiptext';
-                        tooltipTextSpan.textContent = explanationText;
+                        tooltipTextSpan.innerHTML = explanationText; // changed textContent to innerHTML
 
                         tooltipSpan.appendChild(tooltipTextSpan);
                         parentOfNode.insertBefore(tooltipSpan, referenceNode); // insert the tooltipSpan before referenceNode
@@ -909,7 +909,7 @@ function replaceWithTooltip(node, tooltipList) {
                 {searchString: "Die Bild", explanationText: "Famous German boulevard newspaper. Quite popular, although widely mocked for its low journalistic standards. Punk Band <i>Die Ärzte</i> succinctly summed them up as “fear, hate, tits and the weather report”."},
                 {searchString: "Oktoberfest", explanationText: "Traditional Bavarian folk festival. Internationally known for its served big mugs of beer (“Maß”) and the display of traditional Bavarian clothing (“Tracht”). Often incorrectly assumed to be a general German tradition."},
                 {searchString: "Heute-Show", explanationText: "Popular German satire show on the public TV station ZDF, moderated by Oliver Welke. The German adaptation of The Daily Show."},
-                {searchString: "Vendetta", explanationText: "Friedrich Merz was party group leader from 2000-2002 - until CDU chair Angela Merkel and CSU chair Edmund Stoiber made a deal, that the latter was to become chancellor candidate, the former new party group leader. Merz wasn’t consulted, and relegated to irrelevancy."},
+                {searchString: "vendetta", explanationText: "Friedrich Merz was party group leader from 2000-2002 - until CDU chair Angela Merkel and CSU chair Edmund Stoiber made a deal, that the latter was to become chancellor candidate, the former new party group leader. Merz wasn’t consulted, and relegated to irrelevancy."},
                 {searchString: "Beleidigte Leberwurst", explanationText: "“offended liver sausage” - German word for someone who is childishly sulking."},
                 {searchString: "Maut", explanationText: "Old German word for a road toll. The CSU sought to establish tolls for private vehicles in 2015, but the European courts disallowed this in 2019, citing discrimination against foreign vehicle owners."},
                 {searchString: "Genosse Olaf", explanationText: "<img src=https://media.discordapp.net/attachments/1131296206908301423/1135578447561904179/Olaf_Scholz_1984.jpg?width=1136&height=757> Freundschaft, Genosse!"},
