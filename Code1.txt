@@ -384,7 +384,7 @@ if (!element) {
                 },
                 {
                   "name": "Die Ärzte - Deine Schuld",
-                  "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296396750893077/Die_Arzte_-_Deine_Schuld.mp3"
+                  "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1135606197345583165/Die_Arzte_-_Deine_Schuld.mp3"
                 }
             ]
                 },
