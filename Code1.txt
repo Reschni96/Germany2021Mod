@@ -851,7 +851,7 @@ function replaceWithTooltip(node, tooltipList) {
                 });
             }
         });
-    } else if (node.id !== "modifiedHeader") { // Don't process 'modifiedHeader' or its children
+    } else if (node.id !== "modifiedHeader" && node.id !== "inner_window_3"){
         for(let i = 0; i < node.childNodes.length; i++) {
             replaceWithTooltip(node.childNodes[i], tooltipList);
         }
@@ -919,7 +919,7 @@ function replaceWithTooltip(node, tooltipList) {
                 {searchString: "Jusos", explanationText: "“JungsozialistInnen”, “Young Socialists”. The youth organization of the SPD. Noticeably more left-wing than the national party. Has gained in influence over the last few years."},
                 {searchString: "bridge lockdown", explanationText: "Proposal by Armin Laschet. The goal is to generally open up, but to have a short term, harsh lockdown in April, to bridge the time until more people are vaccinated and more tests are available."},
                 {searchString: "3rd CSU candidate", explanationText: "The CSU has put up only two chancellor candidates for the Union: Franz-Josef Strauß in 1980 and Edmund Stoiber in 2002. Both lost against SPD incumbents."},
-                {searchString: "Annegret-Kramp-Karrenbauer", explanationText: "The CDU Saarland party chair 2011-2019, and for a short while in 2018 General Secretary of the CDU, she was indirectly chosen by Merkel as her successor as party leader. After her tenure was heavily criticized, she got the Ministry of Defense (2019-2021) and retired shortly after."},
+                {searchString: "Annegret Kramp-Karrenbauer", explanationText: "The CDU Saarland party chair 2011-2019, and for a short while in 2018 General Secretary of the CDU, she was indirectly chosen by Merkel as her successor as party leader. After her tenure was heavily criticized, she got the Ministry of Defense (2019-2021) and retired shortly after."},
                 {searchString: "Norbert Röttgen", explanationText: "Once a prominent CDU politician and Minister of the Environment (2009-2012): humiliatingly fired after his defeat as the CDU candidate for the North Rhine-Westphalian elections. In 2020 he tried for a comeback, but ended up as a third wheel behind Laschet and Merz."},
                 {searchString: "Konrad Adenauer", explanationText: "First chancellor of West Germany (1949-1963). Started his career in Weimar Germany and was imprisoned during the Nazi era. He helped found the CDU, was responsible for the founding of the European Community and remains a great icon for German conservatives and the nation as a whole."},
                 {searchString: "Wolfgang Schäuble", explanationText: "Legendary CDU politician. MP since 1972, he’s had several prominent positions in party and government between 1984 and 2017 - most recently President of the Bundestag. Since an assassination attempt in 1990, he’s been in a wheelchair, but that did not stop him from having a great influence on German politics."},
