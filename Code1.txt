@@ -1156,6 +1156,12 @@ function replaceWithTooltip(node, tooltipList) {
             font-style: normal !important;
         }
 
+        .tooltip .tooltiptext img {
+            max-width: 240px;
+            height: auto;
+        }
+
+
         .tooltip:hover .tooltiptext {
             opacity: 1;
             transition-delay: 0.5s;
