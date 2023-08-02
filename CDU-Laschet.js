@@ -2069,7 +2069,6 @@ function campaignCharting() {
   });
 }
 
-
 var pictureDict = {
     0: "https://cdn.discordapp.com/attachments/1109846390575730788/1130856731577155694/image.png",
     1: "https://i.ibb.co/X3HVxhh/Laschet-Rede-1-cropped.jpg",
@@ -2095,7 +2094,7 @@ var pictureDict = {
     21: "https://i.ibb.co/ZmXLYKj/Ahrtal-2-cropped.jpg",
     22: "https://i.ibb.co/ZmXLYKj/Ahrtal-2-cropped.jpg",
     23: "https://i.ibb.co/VwQb9gJ/vaccination-Campaign-cropped.jpg",
-    24: "https://i.ibb.co/LpNjyFG/Laschet-Talk-3-cropped.jpg",
+    24: "https://i.ibb.co/MRYCjvy/Laschet-Talk-2-cropped.jpg",
     25: "https://i.ibb.co/vmWWfbh/Laschet-Talk-1-cropped.jpg",
     26: "https://i.ibb.co/X3HVxhh/Laschet-Rede-1-cropped.jpg",
     27: "https://i.ibb.co/LpNjyFG/Laschet-Talk-3-cropped.jpg",

@@ -909,7 +909,7 @@ function replaceWithTooltip(node, tooltipList) {
                 {searchString: "Die Bild", explanationText: "Famous German boulevard newspaper. Quite popular, although widely mocked for its low journalistic standards. Punk Band <i>Die Ärzte</i> succinctly summed them up as “fear, hate, tits and the weather report”."},
                 {searchString: "Oktoberfest", explanationText: "Traditional Bavarian folk festival. Internationally known for its served big mugs of beer (“Maß”) and the display of traditional Bavarian clothing (“Tracht”). Often incorrectly assumed to be a general German tradition."},
                 {searchString: "Heute-Show", explanationText: "Popular German satire show on the public TV station ZDF, moderated by Oliver Welke. The German adaptation of The Daily Show."},
-                {searchString: "vendetta", explanationText: "Friedrich Merz was party group leader from 2000-2002 - until CDU chair Angela Merkel and CSU chair Edmund Stoiber made a deal, that the latter was to become chancellor candidate, the former new party group leader. Merz wasn’t consulted, and relegated to irrelevancy."},
+                {searchString: "small vendetta", explanationText: "Friedrich Merz was party group leader from 2000-2002 - until CDU chair Angela Merkel and CSU chair Edmund Stoiber made a deal, that the latter was to become chancellor candidate, the former new party group leader. Merz wasn’t consulted, and relegated to irrelevancy."},
                 {searchString: "Beleidigte Leberwurst", explanationText: "“offended liver sausage” - German word for someone who is childishly sulking."},
                 {searchString: "Maut", explanationText: "Old German word for a road toll. The CSU sought to establish tolls for private vehicles in 2015, but the European courts disallowed this in 2019, citing discrimination against foreign vehicle owners."},
                 {searchString: "Genosse Olaf", explanationText: "<img src=https://media.discordapp.net/attachments/1131296206908301423/1135578447561904179/Olaf_Scholz_1984.jpg?width=1136&height=757> Freundschaft, Genosse!"},
@@ -924,6 +924,7 @@ function replaceWithTooltip(node, tooltipList) {
                 {searchString: "Konrad Adenauer", explanationText: "First chancellor of West Germany (1949-1963). Started his career in Weimar Germany and was imprisoned during the Nazi era. He helped found the CDU, was responsible for the founding of the European Community and remains a great icon for German conservatives and the nation as a whole."},
                 {searchString: "Wolfgang Schäuble", explanationText: "Legendary CDU politician. MP since 1972, he’s had several prominent positions in party and government between 1984 and 2017 - most recently President of the Bundestag. Since an assassination attempt in 1990, he’s been in a wheelchair, but that did not stop him from having a great influence on German politics."},
                 {searchString: "Reiner Haseloff", explanationText: "Minister-President of Sachsen-Anhalt (CDU, since 2011). Grew up in East Germany, and joined the CDU- block party in the DDR early on. Generally uncontroversial and respected."},
+                {searchString: "Haseloff", explanationText: "Reiner Haseloff, Minister-President of Sachsen-Anhalt (CDU, since 2011). Grew up in East Germany, and joined the CDU- block party in the DDR early on. Generally uncontroversial and respected."},
                 {searchString: "Guido Westerwelle", explanationText: "FDP party chair (2001-2011) and later Foreign Minister (2009-2013). Was named as  “chancellor candidate” by the FDP in 2002, in a bid to win 18%, but only got 7.4. One of the first German politicians to come out as gay, he sadly died in 2016 from leukemia."},
                 {searchString: "Gerhard Schröder", explanationText: "Former German chancellor (SPD, 1998-2005). Ended 16 years of chancellor Kohl, and enacted neoliberal policies in a Red-Green coalition. Was defeated in a snap election in 2005 by Angela Merkel. Afterwards, he’s been involved with Russian companies, and is a personal friend of Vladimir Putin, to this day."},
                 {searchString: "Gerd Müller", explanationText: "Not to be confused with famous soccer player Gerd Müller (1945-2021), he was the CSU Minister of Economic Cooperation and Development (2013-2021). He advocated for a “Marshall Plan for Africa” and was called “the good conscience of the CSU”. Nowadays, he’s UNIDO director general."},
@@ -1007,7 +1008,7 @@ function replaceWithTooltip(node, tooltipList) {
             }
 
             .radio-option:hover label {
-                font-size: .92em;
+                font-size: 0.92em;
                 font-weight: 700;
                 margin-bottom: .1em;
             }
