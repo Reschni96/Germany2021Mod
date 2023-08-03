@@ -1129,6 +1129,9 @@ function replaceWithTooltip(node, tooltipList) {
                 display: none;
               }
 
+            .inner_window_question h3 {
+                background-color: lightgoldenrodyellow;
+              }
 
         .tooltip {
             position: relative;
