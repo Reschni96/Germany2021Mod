@@ -74,7 +74,14 @@ campaignTrail_temp.game_start_logging_id = '3662498';
 
 const construct = (a = 0) => {
   e.page = a;
-  let html = e.header;
+     let headerContent = '';
+  if (Array.isArray(e.header)) {
+    headerContent = e.header[e.page % e.header.length];
+  } else {
+    headerContent = e.header;
+  }
+
+  let html = headerContent;
   html += e.pages[e.page] + "<br>";
   if (e.page > 0) {
     html += `<button onclick='endingConstructor(${e.page - 1})'>Back</button>`

@@ -78,7 +78,14 @@ campaignTrail_temp.game_start_logging_id = '3662498';
 
 const construct = (a = 1) => {
   e.page = e.page + a < e.pages.length ? e.page + a : 0;
-  let html = e.header;
+     let headerContent = '';
+  if (Array.isArray(e.header)) {
+    headerContent = e.header[e.page % e.header.length];
+  } else {
+    headerContent = e.header;
+  }
+
+  let html = headerContent;
   console.log(e.page)
   html += e.pages[e.page] + "<br>";
   if (e.page > 0) {
