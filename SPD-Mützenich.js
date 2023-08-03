@@ -2151,7 +2151,7 @@ function createPollingBarChart(polling) {
             type: 'column'
         },
         title: {
-            text: 'Current polling results'
+            text: 'Current Predictions'
         },
         yAxis: {
             title: {
