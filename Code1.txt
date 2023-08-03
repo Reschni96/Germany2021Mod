@@ -1115,6 +1115,7 @@ function replaceWithTooltip(node, tooltipList) {
                 }
 
             #overall_result,
+            #final_results_description,
             #election_summary,
             #candidate_summary,
             #running_mate_summary,
