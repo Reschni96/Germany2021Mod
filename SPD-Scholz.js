@@ -201,6 +201,10 @@ e.multiple_endings = true;
     statePKs.forEach(statePK => {
     calculateSeats(statePK, missedCandidates);
     });
+
+    //adjustment magic to guarantee the correct ranking
+    adjustSeatAllocation(campaignTrail_temp, missedCandidates);
+
     possibleCoalitions = coalitionTalks(e.final_overall_results);
 
     //all coalitions with the winning party have their weight multiplied by this value
@@ -589,6 +593,110 @@ calculateSeats = (statePK, candidateIdsToIgnore=[]) => {
     e.final_overall_results.sort((a, b) => b.electoral_votes - a.electoral_votes);
 }
 
+function calculateNationalSeats(e, candidateIdsToIgnore) {
+    let totalPopularVotes = e.final_overall_results.reduce((total, party) => {
+        if (!candidateIdsToIgnore.includes(party.candidate)) {
+            return total + party.popular_votes;
+        } else {
+            return total;
+        }
+    }, 0);
+
+    let totalSeats = e.final_overall_results.reduce((total, party) => total + party.electoral_votes - getBonusSeats(party, candidateIdsToIgnore), 0);
+    let divisor = totalPopularVotes / totalSeats;
+
+    let PartyDivisorsSmall = new Array(7 - candidateIdsToIgnore.length).fill(0);
+    let PartyDivisorsBig = new Array(7 - candidateIdsToIgnore.length).fill(0);
+
+    let allocatedSeats = 0;
+    while (allocatedSeats !== totalSeats) {
+        allocatedSeats = 0;
+        e.final_overall_results.forEach((result, i) => {
+            if (candidateIdsToIgnore.includes(result.candidate)) return;
+
+            let seats = Math.round(result.popular_votes / divisor);
+            allocatedSeats += seats;
+
+            if (seats > 0) {
+                PartyDivisorsBig[i] = result.popular_votes / (seats - 0.5);
+            } else {
+                PartyDivisorsBig[i] = 99999;
+            }
+            PartyDivisorsSmall[i] = result.popular_votes / (seats + 0.5);
+        });
+
+        // Not enough seats
+        if (allocatedSeats < totalSeats) {
+            let sortedDivisors = PartyDivisorsSmall.filter(element => typeof element === 'number').sort((a, b) => b - a);
+            divisor = (sortedDivisors[0] + sortedDivisors[1]) / 2;
+        }
+        // Too many seats
+        else if (allocatedSeats > totalSeats) {
+            let sortedDivisors = PartyDivisorsBig.filter(element => typeof element === 'number').sort((a, b) => a - b);
+            divisor = (sortedDivisors[0] + sortedDivisors[1]) / 2;
+        }
+    }
+
+     let nationalSeats = {};
+        e.final_overall_results.forEach(party => {
+            if (!candidateIdsToIgnore.includes(party.candidate)) {
+                nationalSeats[party.candidate] = Math.round(party.popular_votes / divisor);
+            } else {
+                nationalSeats[party.candidate] = party.electoral_votes;
+            }
+        });
+
+
+    return nationalSeats;
+}
+
+function getBonusSeats(party, candidateIdsToIgnore) {
+    // Number of bonus seats for special cases
+    if (party.candidate === 77) return 3;
+    if (party.candidate === 306 && candidateIdsToIgnore.includes(306)) return 1;
+    if (party.candidate === 304 && candidateIdsToIgnore.includes(304)) return 2;
+    return 0;
+}
+function adjustSeatAllocation(e, candidateIdsToIgnore=[]) {
+    // Compute the national-level allocation first
+    let nationalSeats = calculateNationalSeats(e, candidateIdsToIgnore);
+
+    // For each party, check if they got fewer seats than they should have
+    e.final_overall_results.forEach(party => {
+        if (!candidateIdsToIgnore.includes(party.candidate)) {
+            // Subtract bonus seats for special cases before comparing
+            let bonusSeats = getBonusSeats(party, candidateIdsToIgnore);
+            let adjustedSeats = party.electoral_votes - bonusSeats;
+
+            let nationalSeatCount = nationalSeats[party.candidate];
+            if (adjustedSeats < nationalSeatCount) {
+                // Grant additional seats
+                party.electoral_votes += nationalSeatCount - adjustedSeats;
+            }
+        }
+    });
+
+    // Now check the rankings
+    let voteRanking = [...e.final_overall_results]
+        .filter(party => !candidateIdsToIgnore.includes(party.candidate))
+        .sort((a, b) => b.popular_votes - a.popular_votes);
+
+    let seatRanking = [...e.final_overall_results]
+        .filter(party => !candidateIdsToIgnore.includes(party.candidate))
+        .sort((a, b) => (b.electoral_votes - getBonusSeats(b, candidateIdsToIgnore)) - (a.electoral_votes - getBonusSeats(a, candidateIdsToIgnore)));
+
+    for (let i = 0; i < voteRanking.length; i++) {
+        if (voteRanking[i].candidate !== seatRanking[i].candidate) {
+            // Give additional seats to the party until their seat count is equal
+            let voteRankParty = voteRanking[i];
+            let seatRankParty = seatRanking[i];
+            let extraSeats = seatRankParty.electoral_votes - voteRankParty.electoral_votes;
+            voteRankParty.electoral_votes += extraSeats;
+        }
+    }
+    e.final_overall_results.sort((a, b) => b.electoral_votes - a.electoral_votes || b.popular_votes - a.popular_votes);
+
+}
 
 function coalitionTalks(results){
     // Define the election result, with the number of seats each party received
