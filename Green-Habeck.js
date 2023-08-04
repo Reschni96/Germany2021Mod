@@ -2087,7 +2087,7 @@ function charting(chartIndex=0){
   }, 100);
 
     // Add an event listener to all buttons in #map_footer, excluding #chart_button
-    $('#map_footer button:not(#chart_button)').on('click', function() {
+    $('#map_footer button:not(#chart_button):not(#play_again_button)').on('click', function() {
         // Check if #chartcontainer exists in the current #game_window
         if ($('#game_window #chartcontainer').length > 0) {
             // If it does, restore the cached content
