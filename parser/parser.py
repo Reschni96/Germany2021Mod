@@ -31,6 +31,7 @@ try:
 
             if question_match:
                 question_type = question_match.group(1)
+                question_number = question_match.group(2)  # Added to capture the question number
                 last_question_type = question_type
                 if processing_answers:
                     # We've reached a new question, so all answers for the last question have been processed
@@ -44,8 +45,8 @@ try:
                 description = description.replace('"', '\\"')  # Escape any quotation marks
                 pk = pk_questions if question_type == 'Q' else pk_eq_questions
                 out_questions.write(
-                    '{{\\"model\\": \\"campaign_trail.question\\", \\"pk\\": {}, \\"fields\\": {{\\"priority\\": 1, \\"description\\": \\"{}\\", \\"likelihood\\": 1.0}}}}, '.format(
-                        pk, description))
+                    '{{\\"model\\": \\"campaign_trail.question\\", \\"pk\\": {}, \\"fields\\": {{\\"priority\\": 1, \\"description\\": \\"{}\\", \\"likelihood\\": 1.0, \\"question_number\\": \\"{}\\"}}}}, '.format(
+                        pk, description, question_number))  # Added question_number to JSON
 
             elif answer_match:
                 processing_answers = True
