@@ -858,7 +858,138 @@ function replaceWithTooltip(node, tooltipList) {
         }
     }
 }
+let pages = [];
+let currentPage = 0;
+let maxCharsPerPage = 1250;
 
+function displayPage(pageNumber) {
+  const contentDiv = document.getElementById('running_mate_summary');
+  const oldParagraphs = Array.from(contentDiv.getElementsByTagName('p'));
+  oldParagraphs.forEach(p => p.remove());
+
+  pages[pageNumber].forEach(function(paragraph) {
+    contentDiv.appendChild(paragraph.cloneNode(true));
+  });
+  if (contentDiv.querySelector('ul')) {
+    contentDiv.querySelector('ul').style.display = (pageNumber === 0) ? 'block' : 'none';
+  }
+
+  // Update button visibility
+  const prevButton = document.getElementById('prevButton');
+  const nextButton = document.getElementById('nextButton');
+
+  if (prevButton) {
+    prevButton.style.display = (currentPage === 0) ? 'none' : 'block';
+  }
+
+  if (nextButton) {
+    nextButton.style.display = (currentPage === pages.length - 1) ? 'none' : 'block';
+  }
+
+  const buttonContainer = document.getElementById('buttonContainer');
+  if(buttonContainer) {
+    contentDiv.appendChild(buttonContainer);
+  }
+}
+
+
+
+function nextPage() {
+  if (currentPage < pages.length - 1) {
+    currentPage++;
+    displayPage(currentPage);
+  } else {
+    alert("You're on the last page");
+  }
+}
+
+function prevPage() {
+  if (currentPage > 0) {
+    currentPage--;
+    displayPage(currentPage);
+  } else {
+    alert("You're on the first page");
+  }
+}
+
+function createButtons() {
+  const contentDiv = document.getElementById('running_mate_summary');
+  const buttonContainer = document.createElement('div');
+  buttonContainer.id = 'buttonContainer';
+  buttonContainer.style.display = 'flex';
+
+  const prevButton = document.createElement("button");
+  prevButton.innerHTML = "Previous";
+  prevButton.onclick = prevPage;
+  prevButton.id = 'prevButton';
+
+  const nextButton = document.createElement("button");
+  nextButton.innerHTML = "Next";
+  nextButton.onclick = nextPage;
+  nextButton.id = 'nextButton';
+
+  buttonContainer.appendChild(prevButton);
+  buttonContainer.appendChild(nextButton);
+
+  contentDiv.appendChild(buttonContainer);
+}
+
+
+function removeButtons() {
+  const buttonContainer = document.getElementById('buttonContainer');
+  if (buttonContainer) buttonContainer.remove();
+}
+
+function paginateContent() {
+  const contentDiv = document.getElementById('running_mate_summary');
+  if (!contentDiv) {
+    return;
+  }
+
+  // Check if pagination has been applied
+  if (contentDiv.querySelector('.pagination-applied')) {
+    return;
+  }
+
+  const paragraphs = Array.from(contentDiv.getElementsByTagName('p'));
+
+  // Clear pages array
+  pages = [];
+  currentPage = 0;
+
+  let page = [];
+  let charCount = 600;
+
+  paragraphs.forEach(paragraph => {
+    charCount += paragraph.textContent.length;
+
+    if (charCount <= maxCharsPerPage) {
+      page.push(paragraph);
+    } else {
+      pages.push(page);
+      page = [paragraph]; // Start new page
+      charCount = paragraph.textContent.length; // Reset char count
+    }
+  });
+
+  if (page.length > 0) {
+    pages.push(page); // Push last page
+  }
+
+  removeButtons();
+
+  if (pages.length > 1) {
+    createButtons();
+  }
+
+  displayPage(currentPage);
+
+  // Add marker indicating pagination has been applied
+  const paginationMarker = document.createElement('div');
+  paginationMarker.style.display = 'none';
+  paginationMarker.className = 'pagination-applied';
+  contentDiv.appendChild(paginationMarker);
+}
 
     let changesInProgress = false;
 
@@ -881,6 +1012,7 @@ function replaceWithTooltip(node, tooltipList) {
         applyColorStyles();
         addCoalitionDifficultyDropdown();
         resultReplacer();
+        paginateContent();
         if(e.displayTooltips){
             var tooltipList = [
                 {searchString: "NRW", explanationText: "North Rhine-Westphalia"},
