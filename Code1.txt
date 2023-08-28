@@ -843,7 +843,7 @@ function replaceWithTooltip(node, tooltipList) {
                         tooltipSpan.textContent = searchString;
 
                         let tooltipTextSpan = document.createElement('span');
-                        tooltipTextSpan.className = 'tooltiptext';
+                        tooltipTextSpan.className = 'mytooltiptext';
                         tooltipTextSpan.innerHTML = explanationText; // changed textContent to innerHTML
 
                         tooltipSpan.appendChild(tooltipTextSpan);
@@ -1277,7 +1277,7 @@ function paginateContent() {
             background-color: lightblue;
         }
 
-        .tooltip .tooltiptext {
+        .tooltip .mytooltiptext {
             width: 240px;  /* Adjust as needed */
             background-color: #b0b0b0;
             color: black;
@@ -1299,13 +1299,13 @@ function paginateContent() {
             font-style: normal !important;
         }
 
-        .tooltip .tooltiptext img {
+        .tooltip .mytooltiptext img {
             max-width: 240px;
             height: auto;
         }
 
 
-        .tooltip:hover .tooltiptext {
+        .tooltip:hover .mytooltiptext {
             opacity: 1;
             transition-delay: 0.5s;
         }
