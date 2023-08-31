@@ -813,7 +813,7 @@ function replaceWithTooltip(node, tooltipList) {
     if (node.nodeType === Node.TEXT_NODE) {
         let parent = node.parentNode;
         while (parent) {
-            if (parent.className === "tooltip" || parent.id === "modifiedHeader") {
+            if (parent.className === "mytooltip" || parent.id === "modifiedHeader") {
                 return;
             }
             parent = parent.parentNode;
@@ -839,7 +839,7 @@ function replaceWithTooltip(node, tooltipList) {
                     // Don't append tooltip after the last fragment
                     if (index < fragments.length - 1 && parentOfNode) {
                         let tooltipSpan = document.createElement('span');
-                        tooltipSpan.className = 'tooltip';
+                        tooltipSpan.className = 'mytooltip';
                         tooltipSpan.textContent = searchString;
 
                         let tooltipTextSpan = document.createElement('span');
@@ -1150,7 +1150,7 @@ function paginateContent() {
               pointer-events: none;
             }
 
-            .radio-option label .tooltip {
+            .radio-option label .mytooltip {
               pointer-events: auto;
             }
 
@@ -1266,18 +1266,18 @@ function paginateContent() {
                 display: none;
               }
 
-            .inner_window_question h3 .tooltip{
+            .inner_window_question h3 .mytooltip{
                 background-color: lightskyblue;
               }
 
-        .tooltip {
+        .mytooltip {
             position: relative;
             display: inline-block;
             cursor: pointer;
             background-color: lightblue;
         }
 
-        .tooltip .mytooltiptext {
+        .mytooltip .mytooltiptext {
             width: 240px;  /* Adjust as needed */
             background-color: #b0b0b0;
             color: black;
@@ -1299,13 +1299,13 @@ function paginateContent() {
             font-style: normal !important;
         }
 
-        .tooltip .mytooltiptext img {
+        .mytooltip .mytooltiptext img {
             max-width: 240px;
             height: auto;
         }
 
 
-        .tooltip:hover .mytooltiptext {
+        .mytooltip:hover .mytooltiptext {
             opacity: 1;
             transition-delay: 0.5s;
         }
