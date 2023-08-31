@@ -852,7 +852,7 @@ function replaceWithTooltip(node, tooltipList) {
                 });
             }
         });
-    } else if (node.id !== "modifiedHeader" && node.id !== "inner_window_3" && node.id !== "inner_window_4"){
+    } else if (node.id !== "modifiedHeader" && node.id !== "inner_window_3" && node.id !== "running_mate_description_window"){
         for(let i = 0; i < node.childNodes.length; i++) {
             replaceWithTooltip(node.childNodes[i], tooltipList);
         }
