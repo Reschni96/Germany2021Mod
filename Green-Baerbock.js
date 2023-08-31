@@ -2337,4 +2337,25 @@ var pictureDict = {
     32: ""
 };
 
+if(e.displayTooltips){
+    function applyTooltipsToString(str) {
+      tooltipList.forEach(({searchString, explanationText}) => {
+        let regex = new RegExp(`\\b(${searchString})\\b`, 'g');
+        str = str.replace(regex, `<span class='mytooltip'>$1<span class='mytooltiptext'>${explanationText}</span></span>`);
+      });
+      return str;
+    }
+
+    function applyTooltipsToObject(obj) {
+      for (let key in obj) {
+        if (typeof obj[key] === 'string') {
+          obj[key] = applyTooltipsToString(obj[key]);
+        } else if (typeof obj[key] === 'object') {
+          applyTooltipsToObject(obj[key]); // Recursive call
+        }
+      }
+    }
+    applyTooltipsToObject(campaignTrail_temp);
+}
+
 campaignTrail_temp.global_parameter_json[0].fields.question_count=34;

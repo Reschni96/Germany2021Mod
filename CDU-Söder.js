@@ -2211,3 +2211,23 @@ var pictureDict = {
     31: "https://i.ibb.co/SPfvcv5/vierkampf-cropped.jpg",
     32: "https://i.ibb.co/yBg4DZJ/S-der-wahlkampf-cropped.jpg"
 };
+if(e.displayTooltips){
+    function applyTooltipsToString(str) {
+      tooltipList.forEach(({searchString, explanationText}) => {
+        let regex = new RegExp(`\\b(${searchString})\\b`, 'g');
+        str = str.replace(regex, `<span class='mytooltip'>$1<span class='mytooltiptext'>${explanationText}</span></span>`);
+      });
+      return str;
+    }
+
+    function applyTooltipsToObject(obj) {
+      for (let key in obj) {
+        if (typeof obj[key] === 'string') {
+          obj[key] = applyTooltipsToString(obj[key]);
+        } else if (typeof obj[key] === 'object') {
+          applyTooltipsToObject(obj[key]); // Recursive call
+        }
+      }
+    }
+    applyTooltipsToObject(campaignTrail_temp);
+}

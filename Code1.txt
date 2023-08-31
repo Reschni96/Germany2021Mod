@@ -605,7 +605,7 @@ function changeOpponentSelectionDescription() {
 
     The <strong>Realistic polls</strong> toggle allows for either realistic polls with rounding and potential errors or completely accurate polls like in other mods.<br>
 
-    The <strong>Tooltip option </strong>provides tooltips for key phrases, offering extra explanations - especially beneficial for those not acquainted with German politics.</p>
+    The <strong><span class="mytooltip">Tooltip option<span class="mytooltiptext">Look out for words with a light blue background like this and hover them for a tooltip.</span></span> </strong>provides tooltips for key phrases, offering extra explanations - especially beneficial for those not acquainted with German politics.</p>
   `
    const btnText1 = 'Difficulty Options';
     const btnText2 = 'Electoral System';
@@ -1013,8 +1013,26 @@ function paginateContent() {
         addCoalitionDifficultyDropdown();
         resultReplacer();
         paginateContent();
-        if(e.displayTooltips){
-            var tooltipList = [
+
+        // Re-observe the document
+        changesInProgress = false;
+        masterObserver.observe(document.body, { childList: true, subtree: true });
+    }
+
+    // Start observing the document with the master observer
+    masterObserver.observe(document.body, { childList: true, subtree: true });
+
+    // Ensure we don't re-enter applyColorStyles
+    function applyColorStyles() {
+        let wordsToFind = ['Realistic Polls?','Enable state visits?', 'Select coalition difficulty:', 'Please select the election you will run in:', 'This scenario was made by u/Vilvilea.', 'Please select your party:', 'Please select your candidate:', 'How would you like the seats to be allocated?', 'Select campaign difficulty:', 'Enable tooltips?'];
+
+        walkAndReplace(document.body, wordsToFind);
+    }
+
+    const bodyElement = document.body;
+    bodyElement.style.backgroundAttachment = 'fixed';
+
+    tooltipList = [
                 {searchString: "NRW", explanationText: "North Rhine-Westphalia"},
                 {searchString: "Soli", explanationText: "Solidaritätszuschlag. An extra tax levelled since 1995 to help East Germany."},
                 {searchString: "Nord-Stream 2", explanationText: "Planned natural gas pipeline from Russia to Germany, through the Baltic Sea."},
@@ -1076,29 +1094,6 @@ function paginateContent() {
                 {searchString: "Volker Bouffier", explanationText: "Minister-President of Hesse (2010-2022). Known for his sonorous voice and his leadership of one of the first Black-Green coalitions."},
                 {searchString: "Bouffier", explanationText: "Volker Bouffier, Minister-President of Hesse (2010-2022). Known for his sonorous voice and his leadership of one of the first Black-Green coalitions."},
             ];
-            replaceWithTooltip(document.body, tooltipList);
-
-        }
-        replaceWithTooltip(document.body, [{searchString:"Tooltip option", explanationText: "Look out for words with a light blue background like this and hover them for a tooltip."}]);
-
-        // Re-observe the document
-        changesInProgress = false;
-        masterObserver.observe(document.body, { childList: true, subtree: true });
-    }
-
-    // Start observing the document with the master observer
-    masterObserver.observe(document.body, { childList: true, subtree: true });
-
-    // Ensure we don't re-enter applyColorStyles
-    function applyColorStyles() {
-        let wordsToFind = ['Realistic Polls?','Enable state visits?', 'Select coalition difficulty:', 'Please select the election you will run in:', 'This scenario was made by u/Vilvilea.', 'Please select your party:', 'Please select your candidate:', 'How would you like the seats to be allocated?', 'Select campaign difficulty:', 'Enable tooltips?'];
-
-        walkAndReplace(document.body, wordsToFind);
-    }
-
-    const bodyElement = document.body;
-    bodyElement.style.backgroundAttachment = 'fixed';
-
 
     async function appendStyle() {
         var metaTag=document.createElement('meta');
