@@ -1533,7 +1533,7 @@ function updatePolling() {
 }
 
 
-            function aggregateVotes(final_state_results, final_overall_results) {
+   function aggregateVotes(final_state_results, final_overall_results) {
     // Initialize popular and electoral vote counts for each candidate
     for (let i = 0; i < final_overall_results.length; i++) {
         final_overall_results[i].popular_votes = 0;
