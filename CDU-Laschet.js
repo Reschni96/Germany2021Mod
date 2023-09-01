@@ -1531,6 +1531,61 @@ function updatePolling() {
             pollingButton.classList.add('listener-attached');
         }
 }
+
+
+            function aggregateVotes(final_state_results, final_overall_results) {
+    // Initialize popular and electoral vote counts for each candidate
+    for (let i = 0; i < final_overall_results.length; i++) {
+        final_overall_results[i].popular_votes = 0;
+        final_overall_results[i].electoral_votes = 0;
+    }
+
+    // Loop through final_state_results and update the popular and electoral votes
+    for (let a = 0; a < final_state_results.length; a++) {
+        for (let s = 0; s < final_state_results[a].result.length; s++) {
+            for (let n = 0; n < final_overall_results.length; n++) {
+                if (final_overall_results[n].candidate === final_state_results[a].result[s].candidate) {
+                    final_overall_results[n].popular_votes += final_state_results[a].result[s].votes;
+                    final_overall_results[n].electoral_votes += final_state_results[a].result[s].electoral_votes;
+                }
+            }
+        }
+    }
+
+    // Sort candidates by electoral votes and then by popular votes
+    const sortedResults = [];
+    for (let a = 0; a < final_overall_results.length; a++) {
+        let o = [];
+        for (let s = 0; s < final_overall_results.length; s++) {
+            let flag = 1;
+            for (let n = 0; n < sortedResults.length; n++) {
+                if (sortedResults[n].candidate === final_overall_results[s].candidate) {
+                    flag = 0;
+                }
+            }
+            if (flag === 1) {
+                o.push(final_overall_results[s]);
+            }
+        }
+
+        let highestElectoralVotes = 0;
+        let highestPopularVotes = 0;
+        let candidateIndex = -1;
+
+        for (let s = 0; s < o.length; s++) {
+            if (o[s].electoral_votes > highestElectoralVotes ||
+               (o[s].electoral_votes === highestElectoralVotes && o[s].popular_votes >= highestPopularVotes)) {
+                highestElectoralVotes = o[s].electoral_votes;
+                highestPopularVotes = o[s].popular_votes;
+                candidateIndex = s;
+            }
+        }
+        sortedResults.push(o[candidateIndex]);
+    }
+
+    return(sortedResults);
+}
+
 var eventListenerAttached = false;
 function seatCalculator() {
   // Change text inside p tag in a div with id "election_night_content"
@@ -1558,18 +1613,18 @@ function seatCalculator() {
             const statePKs = Array.from({length: 3016 - 3000}, (_, i) => i + 3000);
 
             //find candidates that missed the threshold
+            allVotes=aggregateVotes(campaignTrail_temp.final_state_results, JSON.parse(JSON.stringify(campaignTrail_temp.final_overall_results)))
             const threshold = 0.05;
             missedCandidates = []
             var totalPopularVote = 0;
 
             //calculate total popular vote
-
-             e.final_overall_results.forEach((result, i)   => {
-                totalPopularVote += e.final_overall_results[i].popular_votes;
+             allVotes.forEach((result, i)   => {
+                totalPopularVote += allVotes[i].popular_votes;
                });
-
-            e.final_overall_results.forEach((result, i)   => {
-            if (e.final_overall_results[i].popular_votes/totalPopularVote < threshold) {
+            console.log(totalPopularVote)
+            allVotes.forEach((result, i)   => {
+            if (allVotes[i].popular_votes/totalPopularVote < threshold) {
 
                 //special case: If the left gets more than 8.8% in Saxony, assume they get in through Grundmandatsklausel
                 if (e.final_overall_results[i].candidate === 304){
@@ -1583,7 +1638,7 @@ function seatCalculator() {
                 }
 
                 else {
-                    missedCandidates.push(e.final_overall_results[i].candidate);
+                    missedCandidates.push(allVotes[i].candidate);
                 }
                 }
                });
