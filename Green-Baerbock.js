@@ -2517,21 +2517,26 @@ function campaignCharting() {
   var mainContentArea = document.getElementById("main_content_area");
   var gameWindow = document.getElementById("game_window"); // Parent container
   var chartContainer = document.getElementById("chartcontainer");
+  var marginSwitcher = document.getElementById("margin_switcher"); 
+  var advisorButton = document.getElementById("AdvisorButton"); 
 
-
-    // If the chartContainer does not exist, we create it once
-    if (!chartContainer) {
-      chartContainer = document.createElement("div");
-      chartContainer.id = "chartcontainer";
-      chartContainer.style.display = "none"; // hide it initially
-      chartContainer.innerHTML = '<figure class="highcharts-figure"><div id="myChart"></div></figure>';
-      gameWindow.insertBefore(chartContainer, mainContentArea); // Insert before the mainContentArea
-    }
+  // If the chartContainer does not exist, we create it once
+  if (!chartContainer) {
+    chartContainer = document.createElement("div");
+    chartContainer.id = "chartcontainer";
+    chartContainer.style.display = "none"; // hide it initially
+    chartContainer.innerHTML = '<figure class="highcharts-figure"><div id="myChart"></div></figure>';
+    gameWindow.insertBefore(chartContainer, mainContentArea); // Insert before the mainContentArea
+  }
 
   if (!isChartView) { // If it's not a chart view
     // Hide the main content and show the chart container
     mainContentArea.style.display = "none";
     chartContainer.style.display = "block";
+
+    // Hide the other buttons
+    if (marginSwitcher) marginSwitcher.style.display = "none"; 
+    if (advisorButton) advisorButton.style.display = "none"; 
 
     // Change the button's text
     campaignChartButton.textContent = "Show map";
@@ -2549,6 +2554,10 @@ function campaignCharting() {
     mainContentArea.style.display = "block";
     chartContainer.style.display = "none";
 
+    // Show the other buttons
+    if (marginSwitcher) marginSwitcher.style.display = "unset";
+    if (advisorButton) advisorButton.style.display = "unset";
+
     // Revert the button's text
     campaignChartButton.textContent = "Current Polls";
 
@@ -2563,8 +2572,13 @@ function campaignCharting() {
 
     // Revert the button's text
     campaignChartButton.textContent = "Current Polls";
+
+    // Show the other buttons
+    if (marginSwitcher) marginSwitcher.style.display = "unset";
+    if (advisorButton) advisorButton.style.display = "unset";
   });
 }
+
 
 
 var pictureDict = {
