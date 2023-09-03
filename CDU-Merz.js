@@ -2216,22 +2216,43 @@ var pictureDict = {
     32: "https://i.ibb.co/NmpkszL/Merz-wahlkampf-cropped.webp"
 };
 if(e.displayTooltips){
-    function applyTooltipsToString(str) {
-      tooltipList.forEach(({searchString, explanationText}) => {
+    tooltipList.sort((a, b) => b.searchString.length - a.searchString.length);
+
+    // First pass: Mark for tooltips
+    function markForTooltips(str) {
+      tooltipList.forEach(({ searchString }) => {
         let regex = new RegExp(`\\b(${searchString})\\b`, 'g');
+        str = str.replace(regex, `<span class='mytooltip'>$1</span>`);
+      });
+      return str;
+    }
+
+    // Second pass: Add tooltips
+    function addTooltips(str) {
+      tooltipList.forEach(({ searchString, explanationText }) => {
+        let regex = new RegExp(`<span class='mytooltip'>(${searchString})</span>`, 'g');
         str = str.replace(regex, `<span class='mytooltip'>$1<span class='mytooltiptext'>${explanationText}</span></span>`);
       });
       return str;
     }
 
     function applyTooltipsToObject(obj) {
+      // First pass: mark for tooltips
       for (let key in obj) {
         if (typeof obj[key] === 'string') {
-          obj[key] = applyTooltipsToString(obj[key]);
+          obj[key] = markForTooltips(obj[key]);
         } else if (typeof obj[key] === 'object') {
           applyTooltipsToObject(obj[key]); // Recursive call
         }
       }
+
+      // Second pass: add tooltips
+      for (let key in obj) {
+        if (typeof obj[key] === 'string') {
+          obj[key] = addTooltips(obj[key]);
+        }
+      }
     }
+
     applyTooltipsToObject(campaignTrail_temp);
 }
