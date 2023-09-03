@@ -204,6 +204,10 @@ if (!element) {
             audio.volume= e.music.Volume;
             volumeSlider.value = audio.volume;
             timeTracker.appendChild(pausePlay);
+            if (audio.volume === 0) {
+                audio.pause();
+                pausePlay.innerHTML = "<b>Play</b>";  // Update the pause button text to "Play"
+            }
             timeTracker.appendChild(shuffleButton);
             timeTracker.appendChild(skipButton);
             timeTracker.appendChild(positionDisplay);
@@ -275,6 +279,7 @@ if (!element) {
             }
             musicBox.children[2].loop = false
             musicBox.children[2].src = soundtracks[e.selectedSoundtrack].tracklist[0].url
+
             trackIndices = Array.from({length: soundtracks[e.selectedSoundtrack].tracklist.length}, (_, i) => i);
 
             musicBox.children[2].onended = function() {
