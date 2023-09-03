@@ -152,52 +152,6 @@ e.multiple_endings = true;
     var musicPlayer = document.getElementById('music_player');
     musicPlayer.remove();
 
-    //give states their seats
-    for (var i = 0; i < 16; i++) {
-        e.states_json[i].fields.electoral_votes = seats[i];
-    }
-    // Array of statePKs to iterate over (put in one higher than your highest and your lowest)
-    const statePKs = Array.from({length: 3016 - 3000}, (_, i) => i + 3000);
-
-    //find candidates that missed the threshold
-    const threshold = 0.05;
-    const missedCandidates = []
-    var totalPopularVote = 0;
-
-    //calculate total popular vote
-
-     e.final_overall_results.forEach((result, i)   => {
-        totalPopularVote += e.final_overall_results[i].popular_votes;
-       });
-
-    e.final_overall_results.forEach((result, i)   => {
-    if (e.final_overall_results[i].popular_votes/totalPopularVote < threshold) {
-
-        //special case: If the left gets more than 8.8% in Saxony, assume they get in through Grundmandatsklausel
-        if (e.final_overall_results[i].candidate === 304){
-
-            const sax = e.final_state_results.map(f=>f.state).indexOf(3012)
-            left_result =  e.final_state_results[sax].result.map(f=>f.candidate).indexOf(304);
-
-            if (e.final_state_results[sax].result[left_result].percent < 0.088){
-                missedCandidates.push(e.final_overall_results[i].candidate);
-            }
-        }
-
-        else {
-            missedCandidates.push(e.final_overall_results[i].candidate);
-        }
-        }
-       });
-
-    //always exclude "other"
-    missedCandidates.push(306);
-
-    // Loop through the statePKs and call the changeState function for each statePK
-    statePKs.forEach(statePK => {
-    calculateSeats(statePK, missedCandidates);
-    });
-
     //adjustment magic to guarantee the correct ranking
     adjustSeatAllocation(campaignTrail_temp, missedCandidates);
 
@@ -1698,7 +1652,77 @@ function updatePolling() {
         }
 }
 
+var eventListenerAttached = false;
+function seatCalculator() {
+  // Change text inside p tag in a div with id "election_night_content"
+  const contentDiv = document.getElementById("election_night_content");
+  if (contentDiv) {
+    const pTag = contentDiv.querySelector("p");
+    if (pTag) {
+      pTag.textContent = "Election night has arrived. Settle in and wait for the returns, however long it may take. Please be aware that the final seat count might differ slightly from the one during election night. Best of luck!";
+    }
+  }
 
+  // Add an event listener to a button with id "ok_button"
+  if (!eventListenerAttached) { // Check if event listener has already been attached
+    const buttonsDiv = document.getElementById("election_night_buttons");
+    if (buttonsDiv) {
+      const okButton = buttonsDiv.querySelector("#ok_button");
+      if (okButton) {
+        okButton.addEventListener("click", function() {
+
+            //give states their seats
+            for (var i = 0; i < 16; i++) {
+                e.states_json[i].fields.electoral_votes = seats[i];
+            }
+            // Array of statePKs to iterate over (put in one higher than your highest and your lowest)
+            const statePKs = Array.from({length: 3016 - 3000}, (_, i) => i + 3000);
+
+            //find candidates that missed the threshold
+            allVotes=aggregateVotes(campaignTrail_temp.final_state_results, JSON.parse(JSON.stringify(campaignTrail_temp.final_overall_results)))
+            const threshold = 0.05;
+            missedCandidates = []
+            var totalPopularVote = 0;
+
+            //calculate total popular vote
+             allVotes.forEach((result, i)   => {
+                totalPopularVote += allVotes[i].popular_votes;
+               });
+            console.log(totalPopularVote)
+            allVotes.forEach((result, i)   => {
+            if (allVotes[i].popular_votes/totalPopularVote < threshold) {
+
+                //special case: If the left gets more than 8.8% in Saxony, assume they get in through Grundmandatsklausel
+                if (e.final_overall_results[i].candidate === 304){
+
+                    const sax = e.final_state_results.map(f=>f.state).indexOf(3012)
+                    left_result =  e.final_state_results[sax].result.map(f=>f.candidate).indexOf(304);
+
+                    if (e.final_state_results[sax].result[left_result].percent < 0.088){
+                        missedCandidates.push(e.final_overall_results[i].candidate);
+                    }
+                }
+
+                else {
+                    missedCandidates.push(allVotes[i].candidate);
+                }
+                }
+               });
+
+            //always exclude "other"
+            missedCandidates.push(306);
+
+            // Loop through the statePKs and call the changeState function for each statePK
+            statePKs.forEach(statePK => {
+            calculateSeats(statePK, missedCandidates);
+            });
+
+        });
+        eventListenerAttached = true; // Set the flag to true to prevent attaching the event listener multiple times
+      }
+    }
+  }
+}
 
 // This function becomes a simple list of calls to other functions
 async function handleMutations(mutationsList, observer) {
@@ -1715,6 +1739,8 @@ async function handleMutations(mutationsList, observer) {
     if(e.realisticPolls){
         updatePolling();
     }
+
+    seatCalculator();
 
     await handleRadioButtons(processedNodes);
 
