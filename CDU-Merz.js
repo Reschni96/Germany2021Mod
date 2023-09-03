@@ -1323,9 +1323,32 @@ async function handleRadioButtons(processedNodes) {
                 wrapperDiv.className = 'radio-option';
                 // Set the value of the div to be the same as the radio button
                 wrapperDiv.value = input.value;
+
+                // Check for tooltip div
+                let prevSibling = input.previousElementSibling;
+                let tooltipDiv = null;
+                if (prevSibling && prevSibling.className === 'tooltip') {
+                    tooltipDiv = prevSibling;
+                }
+
+                // If tooltipDiv exists, replace it with an empty div
+                if (tooltipDiv) {
+                    let emptyDiv = document.createElement('div');
+                    form.insertBefore(emptyDiv, tooltipDiv);
+                    tooltipDiv.remove();
+                }
+
                 input.parentNode.insertBefore(wrapperDiv, input);
-                let label = form.querySelector(`label[for="${input.id}"]`);
+
+                // If tooltipDiv exists, insert it into wrapperDiv
+                if (tooltipDiv) {
+                    wrapperDiv.appendChild(tooltipDiv);
+                }
+
+                // Now add the radio input and label
                 wrapperDiv.appendChild(input);
+
+                let label = form.querySelector(`label[for="${input.id}"]`);
                 if(label) {
                     wrapperDiv.appendChild(label);
                 }
@@ -1357,6 +1380,7 @@ async function handleRadioButtons(processedNodes) {
         }
     }
 }
+
 
 async function handleFooter() {
     var gameWindow = document.getElementById('game_window');
