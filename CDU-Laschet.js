@@ -1491,7 +1491,7 @@ function updatePolling() {
 
     if(mapFooter){
 
-        if (chartButton && !isChartView) {
+        if (chartButton && !isChartView && !window.matchMedia("(max-width: 768px)").matches) {
             // Apply the styles to map_footer
             mapFooter.style.float = "left";
             mapFooter.style.paddingLeft = "6em";

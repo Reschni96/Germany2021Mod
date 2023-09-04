@@ -1822,7 +1822,7 @@ function updatePolling() {
 
     if(mapFooter){
 
-        if (chartButton && !isChartView) {
+        if (chartButton && !isChartView && !window.matchMedia("(max-width: 768px)").matches) {
             // Apply the styles to map_footer
             mapFooter.style.float = "left";
             mapFooter.style.paddingLeft = "6em";
@@ -2247,8 +2247,14 @@ function showAdvisors() {
 
     let rowDiv; // for storing each row of up to 3 advisors
 
+    var perRow = 3;
+
+    if(window.matchMedia("(max-width: 768px)").matches){
+        perRow=2;
+    }
+
     filteredAdvisorsList.forEach((advisor, index) => {
-        if (index % 3 === 0) {
+        if (index % perRow === 0) {
             rowDiv = document.createElement('div');
             rowDiv.style.display = 'flex';
             rowDiv.style.justifyContent = 'space-around';
