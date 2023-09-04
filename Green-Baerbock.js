@@ -63,7 +63,7 @@ campaignTrail_temp.game_start_logging_id = '3662498';
     var HabeckTime = false;
     var ideologyCenter = 0;
     var ideologyLeft = 0;
-    var mood = "Ecstatic"
+    var mood = "Optimistic"
     var likeability = 10;
     var totalSeats = 0;
     var contestedElection = false;
@@ -1405,6 +1405,26 @@ cyoAdventure = function (a) {
       // Normalize and round to one significant digit
       const normalizedValue = polling[i][polling[i].length - 1] / totalPolling * 100;
       polling[i][polling[i].length - 1] = Math.round(normalizedValue * 10) / 10;
+    }
+
+    //mood
+    if (playerPolling>0.225){
+        mood= "Ecstatic"
+    }
+    else if (campaignTrail_temp.question_number<5){
+        mood="Optimistic"
+    }
+    else if (playerPolling>0.2){
+        mood= "Hopeful"
+    }
+    else if (playerPolling>0.18){
+        mood= "Ambivalent"
+    }
+    else if (playerPolling>0.15){
+        mood= "Disappointed"
+    }
+    else {
+        mood= "Dejected"
     }
 
     //direction question
