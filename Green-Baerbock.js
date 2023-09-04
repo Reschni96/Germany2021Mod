@@ -1435,6 +1435,25 @@ cyoAdventure = function (a) {
         likeability += likeabilitypMap[ans];
     }
 
+    if(campaignTrail_temp.question_number===25){
+
+        let selectedQuestion = extraQuestions[15];
+
+        if (playerPolling < 0.22) {
+            if (likeability < 5) {
+                selectedQuestion = extraQuestions[12];
+            } else if (likeability < 10) {
+                selectedQuestion = extraQuestions[13];
+            } else if (likeability < 15 || playerPolling < 0.18) {
+                selectedQuestion = extraQuestions[14];
+            }
+        }
+
+        e.questions_json.splice(26, 0, selectedQuestion);
+
+
+    }
+
 	if (ans === 4001) {
 	    campaignTrail_temp.questions_json[9]=extraQuestions[0];
 	    campaignTrail_temp.questions_json[13]=extraQuestions[1];
@@ -2768,4 +2787,4 @@ if(e.displayTooltips){
     applyTooltipsToObject(campaignTrail_temp);
 }
 
-campaignTrail_temp.global_parameter_json[0].fields.question_count=34;
+campaignTrail_temp.global_parameter_json[0].fields.question_count=35;
