@@ -1430,6 +1430,9 @@ cyoAdventure = function (a) {
     });
     var currentCoalitions=coalitionTalks(temp.final_overall_results);
 
+    console.log(temp)
+    console.log(currentCoalitions)
+
     //mood
     if (playerPolling>0.225){
         mood= "Ecstatic"
@@ -1482,7 +1485,7 @@ cyoAdventure = function (a) {
 
         let selectedQuestion = extraQuestions[15];
 
-        if (playerPolling < 0.22) {
+        if (playerPolling < 0.24) {
             if (likeability < 5) {
                 selectedQuestion = extraQuestions[12];
             } else if (likeability < 10) {
@@ -2893,9 +2896,17 @@ let i = 0;
 initialPolls.forEach((entry) => {
   polling[i].push((entry*1000)/10);
   i++;
-});
+})
 
-
+var temp = {};
+temp.final_overall_results=[{ candidate: 77, electoral_votes: 224, popular_votes: 28 },
+{ candidate: 78, electoral_votes: 138, popular_votes: 17.3 },
+{ candidate: 79, electoral_votes: 152, popular_votes: 19.1 },
+{ candidate: 303, electoral_votes: 96, popular_votes: 12 },
+{ candidate: 304, electoral_votes: 41, popular_votes: 5.1 },
+{ candidate: 305, electoral_votes: 81, popular_votes: 10.1 },
+{ candidate: 306, electoral_votes: 0, popular_votes: 8.4 }]
+var currentCoalitions = coalitionTalks(temp.final_overall_results)
 
 function createPollingBarChart(polling) {
     var myChart = Highcharts.chart('myChart', {
