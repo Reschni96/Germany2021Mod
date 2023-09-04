@@ -1631,7 +1631,59 @@ function updatePolling() {
     // Get the button by its ID
     var pollingButton = document.getElementById("pvswitcher");
 
-        if(pollingButton && !pollingButton.classList.contains("customListener")){
+                        if(pollingButton && !pollingButton.classList.contains("customListener")){
+                var seatEstimateButton = document.getElementById("seatEstimateButton");
+                if (!seatEstimateButton) {
+                    seatEstimateButton = document.createElement("button");
+                    seatEstimateButton.id = "seatEstimateButton";
+                    seatEstimateButton.innerText = "Seat Estimate";
+                    seatEstimateButton.style.margin = "0.5em 1em"; // Set margins
+                    pollingButton.insertAdjacentElement("afterend", seatEstimateButton); // Insert below the PV Estimate button
+                }
+
+                var overallResult = document.getElementById("overall_result");
+
+                // Create a new container for seat estimate
+                var seatEstimateUL = document.createElement("ul");
+                seatEstimateUL.id = "seatEstimateUL";
+                seatEstimateUL.style.display = "none"; // Hide it initially
+                overallResult.insertBefore(seatEstimateUL, overallResult.children[1]);
+
+                seatEstimateButton.addEventListener("click", function() {
+                    seatEstimateButton.style.display = "none"; // Hide the button when clicked
+                    var pollingDisplay = document.getElementById("switchingEst");
+                    var newPollingUL = document.getElementById("newPollingUL");
+
+                    if (newPollingUL) {
+                        newPollingUL.style.display = "none"; // Hide newPollingUL if it exists
+                    }
+
+                    pollingDisplay.style.display = "none";
+                    seatEstimateUL.style.display = ''; // Display the seat estimate
+
+                    // Sort candidates by estimated seat count
+                    var sortedResults = temp.final_overall_results.slice().sort((a, b) => b.electoral_votes - a.electoral_votes);
+
+                    var seatData = ""; // Initialize empty string for seat data
+                    sortedResults.forEach(function(result) {
+                        var candidateDetails = campaignTrail_temp.candidate_json.find(c => c.pk === result.candidate);
+                        var roundedElectoralVotes = Math.round(result.electoral_votes / 5) * 5;
+                        var name = candidateDetails ? candidateDetails.fields.last_name : 'Unknown';
+
+                        seatData += `<b>${name}</b> - ${roundedElectoralVotes}<br>`; // Use <br> for line breaks
+                    });
+
+                    seatEstimateUL.innerHTML = seatData;
+                });
+
+                // When PV Estimate button is clicked
+                pollingButton.addEventListener("click", function() {
+                    seatEstimateButton.style.display = '';
+                    seatEstimateUL.style.display = "none"; // Hide the seat estimate
+                });
+
+                pollingButton.classList.add('listener-attached');
+
             pollingButton.classList.add("customListener");
             pollingButton.addEventListener("click", function() {
               setTimeout(function() {
