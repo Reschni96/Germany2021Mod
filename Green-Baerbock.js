@@ -2120,6 +2120,7 @@ var dismissalsLeft=2;
 var likeabilityDescription = ["People find you unlikeable, toxic even", "People seem to have their doubts about your competence", "People are carefully intrigued by you", "People see you as energetic and sympathetic "]
 function openHeadquarter() {
 
+    console.log(temp.final_overall_results);
     advisor_news=false;
     let questions = document.querySelector(".inner_window_question");
 
@@ -2395,6 +2396,85 @@ function openHeadquarter() {
     middleCol.appendChild(dismissInfoDiv);
 }
 
+    // Create a div to display the polling/seats data
+    let pollingDiv = document.createElement('div');
+    pollingDiv.id = 'pollingDiv';
+    pollingDiv.style.backgroundColor = 'lightgreen';
+    pollingDiv.style.border = '5px solid black';
+    pollingDiv.style.borderRadius = '10px';
+    pollingDiv.style.padding = '5px';
+    pollingDiv.style.margin = '5px';
+    pollingDiv.style.marginTop = '4em';
+
+    // Add header
+    let PollingHeader = document.createElement('h3');
+    PollingHeader.innerText = 'Current Predictions';
+    PollingHeader.style.fontWeight = 'bold';
+    pollingDiv.appendChild(PollingHeader);
+
+    // Create an inner div for the entries
+    let entryDiv = document.createElement('div');
+    entryDiv.id = 'entryDiv';
+    pollingDiv.appendChild(entryDiv);
+
+    // Create a button to toggle between polling and seats
+    let toggleButton = document.createElement('button');
+    toggleButton.innerText = 'Show Seats';
+    toggleButton.addEventListener('click', toggleInfo);
+    pollingDiv.appendChild(toggleButton);
+
+    let pollData=temp.final_overall_results;
+
+    // Flag to know what we're currently displaying
+    let showingPolling = true;
+
+    // Function to find last_name based on pk
+    function findLastName(pk) {
+        let candidate = campaignTrail_temp.candidate_json.find(c => c.pk === pk);
+        return candidate ? candidate.fields.last_name : 'Unknown';
+    }
+    function populateDiv() {
+        // Clear the existing info
+        while (entryDiv.firstChild) {
+            entryDiv.removeChild(entryDiv.firstChild);
+        }
+
+        pollData.forEach((data) => {
+            let lastName = findLastName(data.candidate);
+            let infoValue;
+            if (showingPolling) {
+                infoValue = (Math.round(data.popular_votes * 2) / 2).toFixed(1);
+                infoValue += '%';
+            } else {
+                infoValue = Math.round(data.electoral_votes / 5) * 5;
+                infoValue += ' seats';
+            }
+
+            let boldLastName = document.createElement('strong');
+            boldLastName.appendChild(document.createTextNode(`${lastName}: `));
+            entryDiv.appendChild(boldLastName);
+            entryDiv.appendChild(document.createTextNode(`${infoValue}`));
+            entryDiv.appendChild(document.createElement('br'));
+
+            // Add a little space between entries (equivalent to half a <br>)
+            let spacer = document.createElement('div');
+            spacer.style.height = '0.5em';
+            entryDiv.appendChild(spacer);
+        });
+    }
+
+    // Function to toggle between polling and seats
+    function toggleInfo() {
+        showingPolling = !showingPolling;
+        toggleButton.innerText = showingPolling ? 'Show Seats' : 'Show PV';
+        populateDiv();
+    }
+
+    // Initial population and append button
+    populateDiv();
+
+    // Add to the left column
+    leftCol.appendChild(pollingDiv);
 
     // Add back button
     let backButton = document.createElement('button');
