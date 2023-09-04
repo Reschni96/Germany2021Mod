@@ -2117,6 +2117,7 @@ function addHeadquarterButton() {
 
 campaignTrail_temp.staff_mode = true;
 var dismissalsLeft=2;
+var likeabilityDescription = ["People find you unlikeable, toxic even", "People seem to have their doubts about your competence", "People are carefully intrigued by you", "People see you as energetic and sympathetic "]
 function openHeadquarter() {
 
     advisor_news=false;
@@ -2132,49 +2133,156 @@ function openHeadquarter() {
     // Create and set up the headquarters div
     let hqDiv = document.createElement('div');
     hqDiv.id = 'headquarter';
-    hqDiv.style.color = 'white';
-    hqDiv.style.backgroundColor = 'darkblue';
+    hqDiv.style.display = 'flex';  // Set layout to flex to allow columns
+    hqDiv.style.color = 'black';
+    hqDiv.style.backgroundImage = 'url("https://cdn.discordapp.com/attachments/1109846390575730788/1148365022267969556/grunes_wahlplakat.jpg")';
+    hqDiv.style.backgroundSize = 'cover';
+    hqDiv.style.backgroundRepeat = 'no-repeat';
+    hqDiv.style.backgroundColor = 'rgba(255, 255, 255, 0.7)';  // dark green with 60% opacity
+    hqDiv.style.backgroundBlendMode = 'overlay';
+    hqDiv.style.border = '5px solid black';
+    hqDiv.style.borderRadius = '10px';
     hqDiv.style.boxShadow = '0 0 15px rgba(0,0,0,0.5)';
+    hqDiv.style.height='650px';
 
-    // Add the Campaign header
+
+    // Create inner divs for columns
+    let leftCol = document.createElement('div');
+    leftCol.style.width = '30%';
+    hqDiv.appendChild(leftCol);
+
+    let middleCol = document.createElement('div');
+    middleCol.style.width = '40%';
+    hqDiv.appendChild(middleCol);
+
+    let rightCol = document.createElement('div');
+    rightCol.style.width = '30%';
+    hqDiv.appendChild(rightCol);
+
+    // Create wrapper div for the header and mood
+    let headerWrapper = document.createElement('div');
+    headerWrapper.style.display = 'block'; // Stack the divs on top of each other
+    headerWrapper.style.padding = '0'; // No padding
+    headerWrapper.style.marginTop = '6px';
+
+    // Create a div for Campaign header (h1) with specific style
+    let headerDiv = document.createElement('div');
+    headerDiv.style.backgroundColor = 'lightgreen';
+    headerDiv.style.border = '5px solid black';
+    headerDiv.style.borderRadius = '10px';  // Round all corners
+    headerDiv.style.marginBottom = '0';  // Remove bottom margin to avoid gap
+
     let header = document.createElement('h1');
     header.innerText = "Campaign Headquarters";
-    hqDiv.appendChild(header);
+    headerDiv.appendChild(header);
+    headerWrapper.appendChild(headerDiv); // Append to wrapper instead
 
-    // Add mood information
-    let displayMood = document.createElement('p');
+    // Create a div for Mood (h2) with specific style
+    let moodDiv = document.createElement('div');
+    moodDiv.style.backgroundColor = 'lightgreen';
+    moodDiv.style.border = '5px solid black';
+    moodDiv.style.borderRadius = '0 0 10px 10px';  // Round only bottom corners
+    moodDiv.style.marginTop = '-21px';  // To overlap the bottom border of the headerDiv
+    moodDiv.style.borderTop = 'none';  // Remove the top border
+    moodDiv.style.width = '70%';  // Set width to 70%
+    moodDiv.style.marginLeft = 'auto';  // Centering horizontally
+    moodDiv.style.marginRight = 'auto';  // Centering horizontally
+
+    let displayMood = document.createElement('h2');
     displayMood.innerText = `Mood: ${mood}`;
-    hqDiv.appendChild(displayMood);
+    moodDiv.appendChild(displayMood);
+    headerWrapper.appendChild(moodDiv);  // Append to wrapper instead
 
-    let patienceLabel = document.createElement('p');
-    patienceLabel.innerText = "Likeability:";
-    hqDiv.appendChild(patienceLabel);
+    // Append the wrapper div to the middle column
+    middleCol.appendChild(headerWrapper);
 
+
+
+     // Create a wrapping div to center everything vertically and horizontally
+    let wrapDiv = document.createElement('div');
+    wrapDiv.style.display = 'flex';
+    wrapDiv.style.flexDirection = 'column';
+    wrapDiv.style.alignItems = 'center';
+    wrapDiv.style.justifyContent = 'center';
+    wrapDiv.style.height = '100%';
+
+    // Create div for Likeability Header and wrap h2 in it
+    let patienceHeaderDiv = document.createElement('div');
+    patienceHeaderDiv.style.margin = '5px';  // Change margin to 5px
+    patienceHeaderDiv.style.border = '5px solid black';
+    patienceHeaderDiv.style.backgroundColor = 'lightgreen';
+    patienceHeaderDiv.style.borderRadius = '10px';
+
+
+    let patienceLabel = document.createElement('h2');
+    patienceLabel.innerText = "Annalena's Likeability";
+    patienceLabel.style.color = 'black';
+    patienceLabel.style.backgroundColor = 'lightgreen';
+    patienceLabel.style.padding = '1em';
+    patienceLabel.style.textAlign = 'center';
+    patienceHeaderDiv.appendChild(patienceLabel);
+
+    wrapDiv.appendChild(patienceHeaderDiv);
+
+    // Create Likeability Circles Div
     let patienceDiv = document.createElement('div');
     patienceDiv.style.display = 'flex';
-    patienceDiv.style.justifyContent = 'center';
+    patienceDiv.style.flexDirection = 'column-reverse';
+    patienceDiv.style.alignItems = 'center';
+    patienceDiv.style.height = '15em';
+    patienceDiv.style.width = '5em';
+    patienceDiv.style.border = '5px solid black';
+    patienceDiv.style.backgroundColor = 'lightgreen';  // Added background color
+    patienceDiv.style.margin = '5px';  // Change margin to 5px
+    patienceDiv.style.borderRadius = '10px';
+    wrapDiv.appendChild(patienceDiv);
 
-    for (let i = 0; i <= Math.floor(likeability/5); i++) {
+    for (let i = 0; i < 4; i++) {
         let circle = document.createElement('div');
         circle.style.width = '3em';
         circle.style.height = '3em';
         circle.style.borderRadius = '50%';
-        circle.style.marginRight = '5px'; // Spacing between circles
+        circle.style.margin = '5px';
+        circle.style.border = '1px solid black';  // Added border
 
-        if (i === 0) circle.style.backgroundColor = 'red';
-        else if (i === 1) circle.style.backgroundColor = 'orange';
-        else if (i === 2) circle.style.backgroundColor = 'yellow';
-        else circle.style.backgroundColor = 'green';
-
+        if (i <= Math.floor(likeability / 5)) {
+            if (i === 0) circle.style.backgroundColor = 'red';
+            else if (i === 1) circle.style.backgroundColor = 'orange';
+            else if (i === 2) circle.style.backgroundColor = 'yellow';
+            else circle.style.backgroundColor = 'green';
+        } else {
+            circle.style.display = 'none';
+        }
         patienceDiv.appendChild(circle);
     }
-    hqDiv.appendChild(patienceDiv);
+
+    let likeabilityDescDiv = document.createElement('div');
+    likeabilityDescDiv.innerText = likeabilityDescription[Math.floor(likeability / 5)];  // Updated logic
+    likeabilityDescDiv.style.color = 'black';
+    likeabilityDescDiv.style.backgroundColor = 'lightgreen';
+    likeabilityDescDiv.style.padding = '1em';
+    likeabilityDescDiv.style.textAlign = 'center';
+    likeabilityDescDiv.style.border = '5px solid black';
+    likeabilityDescDiv.style.borderRadius = '10px';  // More rounded corners
+    likeabilityDescDiv.style.margin = '5px';  // Change margin to 5px
+
+    wrapDiv.appendChild(likeabilityDescDiv);
+
+
+    // Add the wrapDiv to the right column
+    rightCol.appendChild(wrapDiv);
 
     if (campaignTrail_temp.staff_mode) {
 
+        let advisorHeaderDiv = document.createElement('div');
+        advisorHeaderDiv.style.border = '5px solid black';
+        advisorHeaderDiv.style.borderRadius = '10px';
+        advisorHeaderDiv.style.backgroundColor = 'lightgreen';
+        advisorHeaderDiv.style.margin = "8px";
         let advisorHeader = document.createElement('h2');
         advisorHeader.innerText = "Advisors";
-        hqDiv.appendChild(advisorHeader);
+        advisorHeaderDiv.appendChild(advisorHeader);
+        middleCol.appendChild(advisorHeaderDiv);
 
         let advisorContainer = document.createElement('div');
         advisorContainer.style.display = 'flex';
@@ -2216,6 +2324,9 @@ function openHeadquarter() {
                 let dismissBtn = document.createElement('button');
                 dismissBtn.innerText = 'Dismiss';
                 dismissBtn.style.margin = '1em';
+                dismissBtn.style.backgroundColor = 'lightgreen';
+                dismissBtn.style.boxShadow = '0 0 20px 4px rgba(144, 238, 144, 0.9)';  // Stronger light green glow
+
                 if (dismissalsLeft > 0) {  // Check dismissalsLeft
                     dismissBtn.onclick = function() {
                         dismissalsLeft += -1;
@@ -2262,23 +2373,26 @@ function openHeadquarter() {
     advisorContainer.appendChild(slot);
 }
 
-    hqDiv.appendChild(advisorContainer);
+    middleCol.appendChild(advisorContainer);
 
     // Add hire button with margin
     let hireButton = document.createElement('button');
     hireButton.innerText = 'Hire Advisors';
-    hireButton.style.margin = '1em';  // Add margin
+    hireButton.style.margin = '1em';
+    hireButton.style.backgroundColor = 'lightgreen';
+    hireButton.style.boxShadow = '0 0 20px 4px rgba(144, 238, 144, 0.9)';  // Stronger light green glow
     hireButton.onclick = showAdvisors;
-    hqDiv.appendChild(hireButton);
+    middleCol.appendChild(hireButton);
 
     // Add dismissal information
+    let dismissInfoDiv = document.createElement('div');
+    dismissInfoDiv.style.border = '5px solid black';
+    dismissInfoDiv.style.borderRadius = '10px';
+    dismissInfoDiv.style.backgroundColor = 'lightgreen';
     let dismissInfo = document.createElement('p');
     dismissInfo.innerText = `You can dismiss advisors ${dismissalsLeft} more times.`;
-    if (e.dismissalsLeft === 0) {
-        let dismissButtons = hqDiv.querySelectorAll('button');
-        dismissButtons.forEach(btn => btn.style.display = 'none');
-    }
-    hqDiv.appendChild(dismissInfo);
+    dismissInfoDiv.appendChild(dismissInfo);
+    middleCol.appendChild(dismissInfoDiv);
 }
 
 
@@ -2287,12 +2401,14 @@ function openHeadquarter() {
     backButton.innerText = 'Back';
     backButton.style.marginTop = '2em';
     backButton.style.marginBottom = '1em';
+    backButton.style.backgroundColor = 'lightgreen';
+    backButton.style.boxShadow = '0 0 20px 4px rgba(144, 238, 144, 0.9)';  // Stronger light green glow
     backButton.onclick = function() {
         // Hide headquarters and show the original content
         hqDiv.style.display = 'none';
         questions.style.display= '';
         };
-    hqDiv.appendChild(backButton);
+    middleCol.appendChild(backButton);
 
     // Append the headquarters div to the game window
     questions.parentNode.insertBefore(hqDiv, questions.nextSibling);

@@ -1243,9 +1243,7 @@ function paginateContent() {
             #visit_content {
                 height: 79%;
             }
-            #state_info {
-              height: 125%
-            }
+
             #map_container {
               height: 30.78em
             }
