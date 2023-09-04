@@ -1369,6 +1369,30 @@ cyoAdventure = function (a) {
       polling[i][polling[i].length - 1] = Math.round(normalizedValue * 10) / 10;
     }
 
+
+    var temp = {};
+    temp.final_overall_results = pop_vote.map((item, index) => {
+      const lastPollingValue = polling[index][polling[index].length - 1];
+      return {
+        candidate: item.pk,
+        electoral_votes: index === 0 ? 736 : 0,
+        popular_votes: lastPollingValue
+      };
+    });
+
+    var currentMisses=[306];
+    if (polling[4][polling[i].length - 1]<0.05){
+        currentMisses.push(304)
+    }
+
+    var currentSeats=calculateNationalSeats(temp, currentMisses);
+    temp.final_overall_results.forEach(entry => {
+      if(currentSeats.hasOwnProperty(entry.candidate)) {
+        entry.electoral_votes = currentSeats[entry.candidate];
+      }
+    });
+    var currentCoalitions=coalitionTalks(temp.final_overall_results);
+
 	if ([4003, 4004, 4098, 4009, 4014, 4018].includes(ans)) {
 	    moderate++;
 
