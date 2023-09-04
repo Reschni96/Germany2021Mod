@@ -471,16 +471,13 @@ Likeability unter 5:
 
 EQ10: There has been plenty of talk about your performance thus far as chancellor candidate. You have had numerous gaffes and your image is not as clean as it once was with the press. It might be sexism, it might be genuine concern; but fact of the matter is, many think Robert Habeck would have been a better candidate - and openly demand him to take over and save The Greens’ campaign. There have even been some public calls from lower level Green party officials asking for the same thing.
 A1: This is unbelievable. These rumors are pure sexism, and I will meet the demands head-on. I’m going to make a statement that replacing the only woman in this race will be an affront to all German girls and women deserving of representation.
-F1: Your own party takes you aside and tells you that it might actually not just be sexism. They agree that you’ve been treated by unfair standards, but something has to give - and most think, it’s you.
-</br>Few days later, you receive a fateful call. You hang up, dissolved. Robert calls you, shortly after. You’re to talk it over, about the announcement. He’s sorry.
+F1: Your own party takes you aside and tells you that it might actually not just be sexism. They agree that you’ve been treated by unfair standards, but something has to give - and most think, it’s you. <br>Few days later, you receive a fateful call. You hang up, dissolved. Robert calls you, shortly after. You’re to talk it over, about the announcement. He’s sorry.
 A2: I won’t even address these concerns. They are of no serious importance. I’ll just let my party dispel these rumors and keep campaigning like normal.
-F2: Oh yes, they are. Think of Hillary Clinton - “likeability” seems to be a real thing for voters. Merkel herself willingly softened her image around 2015. Your party is unusually hesitant to defend you these days. Behind closed doors, the rumor is you aren’t taking this thing seriously.
-</br> Few days later, you receive a fateful call. You hang up, dissolved. Robert calls you, shortly after. You’re to talk it over, about the announcement. He’s sorry.
+F2: Oh yes, they are. Think of Hillary Clinton - “likeability” seems to be a real thing for voters. Merkel herself willingly softened her image around 2015. Your party is unusually hesitant to defend you these days. Behind closed doors, the rumor is you aren’t taking this thing seriously.<br> Few days later, you receive a fateful call. You hang up, dissolved. Robert calls you, shortly after. You’re to talk it over, about the announcement. He’s sorry.
 A3: I have to take this seriously. I will change some staff around and amend my rhetoric, I will be out there with full passion, making myself more visible. Maybe we can give a few likable interviews in my home, showing off my hard work as a mother.
 F3: Your renewed vigor and change in tactics could temporarily stop the bleeding, but your numbers are still abhorrent compared to the beginning of this campaign. The party is happy that you’ve recognized the problem and are doing something about it, but it will take a lot more than this to make an epic comeback.
 A4: They’re not ready. I have to admit it - I really want to lead this country into a new age, but without the right numbers, it won’t be possible. These annoying inconveniences won’t tamper with our momentum anymore. Robert, it seems this is your time after all: take it away.
-F4: Robert understands. He talks it over with the party bosses, who are a bit relieved. Within a week, they prepared statements for the both of you. It is a hard moment, stepping in front of the camera, and announcing your unprecedented retreat from the candidacy.
-</br> You can’t help but choke up about it at home, but deep inside, you feel relief.
+F4: Robert understands. He talks it over with the party bosses, who are a bit relieved. Within a week, they prepared statements for the both of you. It is a hard moment, stepping in front of the camera, and announcing your unprecedented retreat from the candidacy. <br> You can’t help but choke up about it at home, but deep inside, you feel relief.
 
 
 Likeability unter 10:
@@ -493,8 +490,7 @@ F2: Unfortunately, they kind of are. Think of Hillary Clinton - “likeability�
 A3: I have to take this seriously. I will change some staff around and amend my rhetoric, I will be out there with full passion, making myself more visible. Maybe we can give a few likable interviews in my home, showing off my hard work as a mother.
 F3: Your renewed vigor and change in tactics might’ve saved you from disaster, but let this be a warning. This country might not be fair to you, but nonetheless, you’re running for chancellor in it - better be more thoroughly prepared for the end of the campaign.
 A4: They’re not ready. I have to admit it - I really want to lead this country into a new age, but without the right numbers, it won’t be possible. These annoying inconveniences won’t tamper with our momentum anymore. Robert, it seems this is your time after all: take it away.
-F4: Robert understands. He talks it over with the party bosses, and within a week, they prepared statements for the both of you. It is a hard moment, stepping in front of the camera, and announcing your unprecedented retreat from the candidacy.
-</br> You can’t help but choke up about it at home, but deep inside, you feel relief.
+F4: Robert understands. He talks it over with the party bosses, and within a week, they prepared statements for the both of you. It is a hard moment, stepping in front of the camera, and announcing your unprecedented retreat from the candidacy. <br> You can’t help but choke up about it at home, but deep inside, you feel relief.
 
 Likeability zwischen 10 und 15, oder über 15 aber polling numbers unter 18
 
@@ -506,8 +502,7 @@ F2: Unfortunately, they kind of are. Think of Hillary Clinton - “likeability�
 A3: I have to take this seriously. I will change some staff around and amend my rhetoric, I will be out there with full passion, making myself more visible. Maybe we can give a few likable interviews in my home, showing off my hard work as a mother.
 F3: Your renewed vigor and change in tactics quickly quells any rumors and issues about this topic. It might be a tad cynical that it takes the “housewife”-card, but your numbers with older voters noticeably improve. Your party continues to stand by your side, unequivocally.
 A4: They’re not ready. I have to admit it - I really want to lead this country into a new age, but without the right numbers, it won’t be possible. These annoying inconveniences won’t tamper with our momentum anymore. Robert, it seems this is your time after all: take it away.
-F4: Hey, I know it’s hard, but you’re overreacting. Your advisor Michael takes you aside and talks it over, and Robert assures you, he deferred to you for a reason. He’s ready to take on a bigger role for the campaign, but you have to ride this out. </br>
-You can do it, Annalena.
+F4: Hey, I know it’s hard, but you’re overreacting. Your advisor Michael takes you aside and talks it over, and Robert assures you, he deferred to you for a reason. He’s ready to take on a bigger role for the campaign, but you have to ride this out. <br>You can do it, Annalena.
 
 
 Likeability zwischen 15-20, oder polling numbers über 22:
