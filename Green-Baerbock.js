@@ -2040,6 +2040,8 @@ function addHeadquarterButton() {
   refButton.insertAdjacentElement('afterend', newButton);
 }
 
+campaignTrail_temp.staff_mode = true;
+var dismissalsLeft=2;
 function openHeadquarter() {
 
     advisor_news=false;
@@ -2093,7 +2095,117 @@ function openHeadquarter() {
     }
     hqDiv.appendChild(patienceDiv);
 
-    // Rest of the function remains the same ...
+    if (campaignTrail_temp.staff_mode) {
+
+        let advisorHeader = document.createElement('h2');
+        advisorHeader.innerText = "Advisors";
+        hqDiv.appendChild(advisorHeader);
+
+        let advisorContainer = document.createElement('div');
+        advisorContainer.style.display = 'flex';
+        advisorContainer.style.justifyContent = 'center';
+
+        let filledSlots = 0;
+
+        advisorsList.forEach(advisor => {
+            if (advisor.status === 'active') {
+                filledSlots++;
+
+                let slot = document.createElement('div');
+                slot.classList.add('advisor-slot');
+
+                let img = document.createElement('img');
+                img.src = advisor.picture;
+                img.style.height = '12em';
+                img.style.borderBottom = '2px solid black';
+
+                let imgContainer = document.createElement('div');
+                imgContainer.style.display = 'flex';
+                imgContainer.style.flexDirection = 'column';
+                imgContainer.style.justifyContent = 'center';
+                imgContainer.style.border = '4px solid black';
+                imgContainer.style.margin = '10px';
+                imgContainer.style.backgroundColor = 'white';
+                imgContainer.style.borderRadius = '10px';
+                imgContainer.style.overflow = 'hidden';
+                imgContainer.appendChild(img);
+
+                let name = document.createElement('div');
+                name.innerText = advisor.name;
+                name.style.color='black'
+                name.style.padding='0.5em'
+                name.style.fontWeight = 'bold';
+                imgContainer.appendChild(name);
+                slot.appendChild(imgContainer);
+
+                let dismissBtn = document.createElement('button');
+                dismissBtn.innerText = 'Dismiss';
+                dismissBtn.style.margin = '1em';
+                if (dismissalsLeft > 0) {  // Check dismissalsLeft
+                    dismissBtn.onclick = function() {
+                        dismissalsLeft += -1;
+                        advisor.dismiss();
+                        hqDiv.remove();
+                        openHeadquarter();
+                    };
+
+                slot.appendChild(dismissBtn);
+                }
+
+              advisorContainer.appendChild(slot);  // Add the slot to the advisorContainer instead of hqDiv
+              }
+        });
+
+    for (let i = filledSlots; i < 2; i++) {
+    let slot = document.createElement('div');
+    slot.classList.add('advisor-slot');
+
+    let img = document.createElement('img');
+    img.src = 'https://uuabq.org/wp-content/uploads/2015/03/woman-head-silhouette-png-black-and-white-download-female-silhouette-head-11563010560sqe7wt34hg-293x300.png';
+    img.style.height = '12em';
+    img.style.borderBottom = '2px solid black';
+
+    let imgContainer = document.createElement('div');
+    imgContainer.style.display = 'flex';
+    imgContainer.style.flexDirection = 'column';
+    imgContainer.style.justifyContent = 'center';
+    imgContainer.style.border = '4px solid black';
+    imgContainer.style.margin = '10px';
+    imgContainer.style.backgroundColor = 'white';
+    imgContainer.style.borderRadius = '10px';
+    imgContainer.style.overflow = 'hidden';
+    imgContainer.appendChild(img);
+
+    let name = document.createElement('div');
+    name.innerText = 'Unfilled Advisor Slot';
+    name.style.color='black'
+    name.style.padding='0.5em'
+    name.style.fontWeight = 'bold';
+    imgContainer.appendChild(name);
+
+    slot.appendChild(imgContainer);
+    advisorContainer.appendChild(slot);
+}
+
+    hqDiv.appendChild(advisorContainer);
+
+    // Add hire button with margin
+    let hireButton = document.createElement('button');
+    hireButton.innerText = 'Hire Advisors';
+    hireButton.style.margin = '1em';  // Add margin
+    hireButton.onclick = showAdvisors;
+    hqDiv.appendChild(hireButton);
+
+    // Add dismissal information
+    let dismissInfo = document.createElement('p');
+    dismissInfo.innerText = `You can dismiss advisors ${dismissalsLeft} more times.`;
+    if (e.dismissalsLeft === 0) {
+        let dismissButtons = hqDiv.querySelectorAll('button');
+        dismissButtons.forEach(btn => btn.style.display = 'none');
+    }
+    hqDiv.appendChild(dismissInfo);
+}
+
 
     // Add back button
     let backButton = document.createElement('button');
@@ -2110,6 +2222,195 @@ function openHeadquarter() {
     // Append the headquarters div to the game window
     questions.parentNode.insertBefore(hqDiv, questions.nextSibling);
 }
+
+function showAdvisors() {
+
+    let numberOfHiredAdvisors = advisorsList.filter(a => a.status === 'active').length;
+     const filteredAdvisorsList = advisorsList.filter(advisor => advisor.canBeHired());
+
+
+    // Remove existing HQ div
+    const hq = document.getElementById('headquarter');
+    hq.remove();
+
+    // Create and set up advisorsDiv
+    let advisorsDiv = document.createElement('div');
+    advisorsDiv.id = 'advisors';
+    advisorsDiv.style.boxShadow = '0 0 15px rgba(0,0,0,0.5)';
+    advisorsDiv.style.color = 'white';
+    advisorsDiv.style.backgroundColor = 'darkblue';
+
+    // Add header
+    let header = document.createElement('h1');
+    header.innerText = "Hire Advisors";
+    advisorsDiv.appendChild(header);
+
+    let rowDiv; // for storing each row of up to 3 advisors
+
+    filteredAdvisorsList.forEach((advisor, index) => {
+        if (index % 3 === 0) {
+            rowDiv = document.createElement('div');
+            rowDiv.style.display = 'flex';
+            rowDiv.style.justifyContent = 'space-around';
+            advisorsDiv.appendChild(rowDiv);
+        }
+
+        if (advisor.canBeHired()) {
+            let advisorContainer = document.createElement('div');
+            advisorContainer.style.margin = '1em';
+
+            let img = document.createElement('img');
+            img.src = advisor.picture;
+            img.style.height = '16em';
+            img.style.borderBottom = '2px solid black'; // Give bottom border to the image
+            img.onload = function() {
+                imgContainer.style.width = `${this.width}px`;
+                descriptionContainer.style.width = `${this.width}px`; // Set the descriptionContainer width
+            };
+
+            let name = document.createElement('div');
+            name.innerText = advisor.name;
+            name.style.fontWeight = 'bold';
+            name.style.color = 'black';
+            name.style.padding='0.2em'
+
+            let description = document.createElement('div');
+            description.innerText = advisor.description;
+            description.style.color = 'black';
+
+            // Wrap the description in another div
+            let descriptionContainer = document.createElement('div');
+            descriptionContainer.style.borderTop = '2px solid black';
+            descriptionContainer.style.padding='0.5em'
+            descriptionContainer.style.height='8em'
+            descriptionContainer.appendChild(description);
+
+            // Styling the image container
+            let imgContainer = document.createElement('div');
+            imgContainer.style = `display: flex; flex-direction: column; align-items: center;
+                                   border: 4px solid black; margin: 10px; background-color: white;
+                                   border-radius: 10px; overflow: hidden;`;
+            imgContainer.appendChild(img);
+            imgContainer.appendChild(name);
+            imgContainer.appendChild(descriptionContainer);
+
+            let hireBtn = document.createElement('button');
+            hireBtn.innerText = 'Hire';
+            if (numberOfHiredAdvisors >= 2) {
+                hireBtn.disabled = true;
+            }
+            hireBtn.onclick = function() {
+                advisor.hire();
+                advisorsDiv.remove();
+                openHeadquarter();
+            };
+
+            if (advisor.status === 'locked') {
+                img.style.filter = 'blur(5px)';
+                description.style.filter = 'blur(5px)';
+                hireBtn.disabled = true;
+            }
+
+            advisorContainer.appendChild(imgContainer);
+            advisorContainer.appendChild(hireBtn);
+
+            rowDiv.appendChild(advisorContainer);
+        }
+    });
+
+    // Add back button with padding and id
+    let backButton = document.createElement('button');
+    backButton.innerText = 'Back';
+    backButton.style.margin = '1em';
+    backButton.id = 'advisorsBackButton';
+    backButton.onclick = function() {
+        advisorsDiv.remove();
+        openHeadquarter();
+    };
+    advisorsDiv.appendChild(backButton);
+
+    let questions = document.querySelector(".inner_window_question");
+    questions.parentNode.insertBefore(advisorsDiv, questions.nextSibling);
+}
+
+class Advisor {
+    constructor(id, name, picture, description, hireCode, dismissCode, status) {
+        this.id = id;
+        this.name = name;
+        this.picture = picture;
+        this.description = description;
+        this.hireCode = hireCode; // function to run when hired
+        this.dismissCode = dismissCode; // function to run when dismissed
+        this.status = status; // "active", "available", "locked", or "dismissed"
+    }
+
+    hire() {
+        this.hireCode();
+        this.status = "active";
+    }
+
+    dismiss() {
+        this.dismissCode();
+        this.status = "dismissed";
+    }
+}
+
+Advisor.prototype.canBeHired = function() {
+    return this.status === 'available' || this.status === 'locked';
+};
+
+// Example advisors
+const exampleAdvisor1 = new Advisor(
+    1,
+    "Annalena",
+    "https://i.ibb.co/MP0P2yQ/Baerbock.jpg",
+    "Don't hire yourself",
+    function() { console.log("John has been hired."); },
+    function() { console.log("John has been dismissed."); },
+    "available"
+);
+
+const exampleAdvisor2 = new Advisor(
+    2,
+    "Annalena2",
+    "https://i.ibb.co/MP0P2yQ/Baerbock.jpg",
+    "Huh?",
+    function() { console.log("Sally has been hired."); },
+    function() { console.log("Sally has been dismissed."); },
+    "available"
+);
+
+const exampleAdvisor3 = new Advisor(
+    3,
+    "Robert",
+    "https://i.ibb.co/MP0P2yQ/Baerbock.jpg",
+    "He's competent",
+    function() { console.log("Sally has been hired."); },
+    function() { console.log("Sally has been dismissed."); },
+    "available"
+);
+
+const exampleAdvisor4 = new Advisor(
+    4,
+    "Winfried",
+    "https://i.ibb.co/MP0P2yQ/Baerbock.jpg",
+    "BW",
+    function() { console.log("Sally has been hired."); },
+    function() { console.log("Sally has been dismissed."); },
+    "available"
+);
+
+const exampleAdvisor5 = new Advisor(
+    5,
+    "Boris",
+    "https://i.ibb.co/MP0P2yQ/Baerbock.jpg",
+    "Don't hire!",
+    function() { console.log("Sally has been hired."); },
+    function() { console.log("Sally has been dismissed."); },
+    "locked"
+);
+
+ var advisorsList = [exampleAdvisor1, exampleAdvisor2, exampleAdvisor3, exampleAdvisor4, exampleAdvisor5];
 
 
 // This function becomes a simple list of calls to other functions
