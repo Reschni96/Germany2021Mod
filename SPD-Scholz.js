@@ -1971,6 +1971,22 @@ function seatCalculator() {
     }
   }
 }
+function removeElectoralVotesZero() {
+  // Get the div element by its ID
+  var stateInfoDiv = document.getElementById("state_info");
+  if(stateInfoDiv){
+  // Get all direct <p> child elements of the div
+  var childParagraphs = stateInfoDiv.querySelectorAll(":scope > p");
+
+  // Loop through each <p> element to find the one with the specific text
+  childParagraphs.forEach(function(paragraph) {
+    if (paragraph.textContent === "Electoral Votes: 0") {
+      // Remove the paragraph from the div
+      stateInfoDiv.removeChild(paragraph);
+    }
+  });
+  }
+}
 
 // This function becomes a simple list of calls to other functions
 async function handleMutations(mutationsList, observer) {
@@ -1978,7 +1994,7 @@ async function handleMutations(mutationsList, observer) {
     observerRunning = true;
 
     observer.disconnect();
-
+    removeElectoralVotesZero()
     await changeChart(processedNodes);
     await adjustMcaHeight(processedNodes);
 
