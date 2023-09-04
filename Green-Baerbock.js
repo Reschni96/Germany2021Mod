@@ -63,6 +63,8 @@ campaignTrail_temp.game_start_logging_id = '3662498';
     var HabeckTime = false;
     var ideologyCenter = 0;
     var ideologyLeft = 0;
+    var mood = "Ecstatic"
+    var likeability = 10;
     var totalSeats = 0;
     var contestedElection = false;
     var closeElection = false;
@@ -1428,6 +1430,11 @@ cyoAdventure = function (a) {
         }
     }
 
+    //likeability
+    if (likeabilitypMap.hasOwnProperty(ans)) {
+        likeability += likeabilitypMap[ans];
+    }
+
 	if (ans === 4001) {
 	    campaignTrail_temp.questions_json[9]=extraQuestions[0];
 	    campaignTrail_temp.questions_json[13]=extraQuestions[1];
@@ -1959,6 +1966,108 @@ function seatCalculator() {
   }
 }
 
+var advisor_news = true;
+
+function addHeadquarterButton() {
+  // Check if the button already exists
+  if (document.getElementById('headquarter_button')) {
+    return;
+  }
+
+  // Find the reference button by its ID
+  const refButton = document.getElementById('view_electoral_map');
+  if (!refButton) {
+    return;
+  }
+
+  // Create a new button element
+  const newButton = document.createElement('button');
+
+  newButton.id = 'headquarter_button';
+
+  newButton.style.marginLeft = '1.5em';
+
+  newButton.innerHTML = advisor_news ? '<strong><span style="color: red;">!</span></strong>  Headquarter' : 'Headquarter';
+
+  // Attach the click event listener
+  newButton.addEventListener('click', openHeadquarter);
+
+  // Insert the new button next to the reference button
+  refButton.insertAdjacentElement('afterend', newButton);
+}
+
+function openHeadquarter() {
+
+    advisor_news=false;
+    let questions = document.querySelector(".inner_window_question");
+
+    questions.style.display = 'none';
+
+    const hqButton = document.getElementById('headquarter_button');
+    if (hqButton) {
+        hqButton.remove();
+    }
+
+    // Create and set up the headquarters div
+    let hqDiv = document.createElement('div');
+    hqDiv.id = 'headquarter';
+    hqDiv.style.color = 'white';
+    hqDiv.style.backgroundColor = 'darkblue';
+    hqDiv.style.boxShadow = '0 0 15px rgba(0,0,0,0.5)';
+
+    // Add the Campaign header
+    let header = document.createElement('h1');
+    header.innerText = "Campaign Headquarters";
+    hqDiv.appendChild(header);
+
+    // Add mood information
+    let displayMood = document.createElement('p');
+    displayMood.innerText = `Mood: ${mood}`;
+    hqDiv.appendChild(displayMood);
+
+    let patienceLabel = document.createElement('p');
+    patienceLabel.innerText = "Likeability:";
+    hqDiv.appendChild(patienceLabel);
+
+    let patienceDiv = document.createElement('div');
+    patienceDiv.style.display = 'flex';
+    patienceDiv.style.justifyContent = 'center';
+
+    for (let i = 0; i <= Math.floor(likeability/5); i++) {
+        let circle = document.createElement('div');
+        circle.style.width = '3em';
+        circle.style.height = '3em';
+        circle.style.borderRadius = '50%';
+        circle.style.marginRight = '5px'; // Spacing between circles
+
+        if (i === 0) circle.style.backgroundColor = 'red';
+        else if (i === 1) circle.style.backgroundColor = 'orange';
+        else if (i === 2) circle.style.backgroundColor = 'yellow';
+        else circle.style.backgroundColor = 'green';
+
+        patienceDiv.appendChild(circle);
+    }
+    hqDiv.appendChild(patienceDiv);
+
+    // Rest of the function remains the same ...
+
+    // Add back button
+    let backButton = document.createElement('button');
+    backButton.innerText = 'Back';
+    backButton.style.marginTop = '2em';
+    backButton.style.marginBottom = '1em';
+    backButton.onclick = function() {
+        // Hide headquarters and show the original content
+        hqDiv.style.display = 'none';
+        questions.style.display= '';
+        };
+    hqDiv.appendChild(backButton);
+
+    // Append the headquarters div to the game window
+    questions.parentNode.insertBefore(hqDiv, questions.nextSibling);
+}
+
+
 // This function becomes a simple list of calls to other functions
 async function handleMutations(mutationsList, observer) {
     if (observerRunning) return;
@@ -1975,6 +2084,7 @@ async function handleMutations(mutationsList, observer) {
         updatePolling();
     }
 
+    addHeadquarterButton()
     seatCalculator();
 
     await handleRadioButtons(processedNodes);
@@ -1988,7 +2098,6 @@ let observerRunning = false;
 
 var element = document.getElementById('controlElement');
 if (!element) {
-	console.log("created");
 	let singleObserver = new MutationObserver(handleMutations);
 	singleObserver.observe(document.documentElement, { childList: true, subtree: true });
 	var controlElement = document.createElement('div');

@@ -2297,7 +2297,7 @@ function campaignCharting() {
     campaignChartButton.textContent = "Current Polls";
 
     // Show the other buttons
-    if (marginSwitcher) marginSwitcher.style.display = "unset"; 
+    if (marginSwitcher) marginSwitcher.style.display = "unset";
     if (advisorButton) advisorButton.style.display = "unset";
   });
 }
