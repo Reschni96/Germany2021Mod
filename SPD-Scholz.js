@@ -1369,8 +1369,6 @@ cyoAdventure = function (a) {
       polling[i][polling[i].length - 1] = Math.round(normalizedValue * 10) / 10;
     }
 
-
-    var temp = {};
     temp.final_overall_results = pop_vote.map((item, index) => {
       const lastPollingValue = polling[index][polling[index].length - 1];
       return {
@@ -1391,7 +1389,7 @@ cyoAdventure = function (a) {
         entry.electoral_votes = currentSeats[entry.candidate];
       }
     });
-    var currentCoalitions=coalitionTalks(temp.final_overall_results);
+    currentCoalitions=coalitionTalks(temp.final_overall_results);
 
 	if ([4003, 4004, 4098, 4009, 4014, 4018].includes(ans)) {
 	    moderate++;
@@ -2485,6 +2483,23 @@ var isChartView = false; // A flag indicating whether the current view is a char
 
 var isChartView = false; // A flag indicating whether the current view is a chart
 
+
+function populateSeatEstimate(final_overall_results, candidate_json) {
+  var container = document.getElementById("seat_estimate_container");
+  container.innerHTML = '<h2>Current seat estimate</h2>'; // Add the header back
+
+  final_overall_results.forEach(function(result) {
+    var candidateDetails = candidate_json.find(c => c.pk === result.candidate);
+    var roundedElectoralVotes = Math.round(result.electoral_votes / 5) * 5;
+
+    var color = candidateDetails ? candidateDetails.fields.color_hex : "#000";
+    var name = candidateDetails ? candidateDetails.fields.last_name : 'Unknown';
+
+    var content = `<p><span style="background-color:${color}; width: 15px; height: 15px; display: inline-block;"></span> ${name} - ${roundedElectoralVotes}</p>`;
+    container.innerHTML += content;
+  });
+}
+
 function campaignCharting() {
   var campaignChartButton = document.getElementById("campaign_chart_button");
   var mainContentArea = document.getElementById("main_content_area");
@@ -2502,10 +2517,33 @@ function campaignCharting() {
     gameWindow.insertBefore(chartContainer, mainContentArea); // Insert before the mainContentArea
   }
 
+  var seatEstimateContainer = document.getElementById("seat_estimate_container");
+  if (!seatEstimateContainer) {
+    seatEstimateContainer = document.createElement("div");
+    seatEstimateContainer.id = "seat_estimate_container";
+    seatEstimateContainer.style.display = "none";
+    seatEstimateContainer.style.width = "19%";
+    seatEstimateContainer.style.height = "33em";
+    seatEstimateContainer.style.float = "right";
+    seatEstimateContainer.style.backgroundColor = "rgba(255, 255, 255, 0.5)";
+    seatEstimateContainer.style.border = "1px solid white"; // Adding white border
+    gameWindow.insertBefore(seatEstimateContainer, mainContentArea);
+  }
+
+
   if (!isChartView) { // If it's not a chart view
     // Hide the main content and show the chart container
     mainContentArea.style.display = "none";
     chartContainer.style.display = "block";
+
+    chartContainer.style.display = "inline-block";
+    chartContainer.style.width = "80%";
+    chartContainer.style.float = "left";
+
+    console.log(temp.final_overall_results)
+    // Show the seat estimate container and populate it
+    seatEstimateContainer.style.display = "inline-block";
+    populateSeatEstimate(temp.final_overall_results, campaignTrail_temp.candidate_json);
 
     // Hide the other buttons
     if (marginSwitcher) marginSwitcher.style.display = "none";
@@ -2526,6 +2564,7 @@ function campaignCharting() {
     // Hide the chart container and show the main content
     mainContentArea.style.display = "block";
     chartContainer.style.display = "none";
+    seatEstimateContainer.style.display = "none";
 
     // Show the other buttons
     if (marginSwitcher) marginSwitcher.style.display = "unset";
