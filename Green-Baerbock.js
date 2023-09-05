@@ -2325,9 +2325,12 @@ function openHeadquarter() {
 
                 let name = document.createElement('div');
                 name.innerText = advisor.name;
-                name.style.color='black'
-                name.style.padding='0.5em'
+                name.style.color = 'black';
+                name.style.padding = '0.5em';
                 name.style.fontWeight = 'bold';
+                name.style.whiteSpace = 'normal';  // Allows the text to wrap
+                name.style.overflowWrap = 'break-word';  // Breaks the word if necessary
+                name.style.maxWidth = '115px';  
                 imgContainer.appendChild(name);
                 slot.appendChild(imgContainer);
 
@@ -2404,6 +2407,11 @@ function openHeadquarter() {
     dismissInfoDiv.appendChild(dismissInfo);
     middleCol.appendChild(dismissInfoDiv);
 }
+
+    let predictionWrapperDiv = document.createElement('div');
+    predictionWrapperDiv.id = 'predictionWrapperDiv';
+    predictionWrapperDiv.style.width = '70%';
+    predictionWrapperDiv.style.margin = 'auto';
 
     // Create a div to display the polling/seats data
     let pollingDiv = document.createElement('div');
@@ -2483,7 +2491,7 @@ function openHeadquarter() {
     populateDiv();
 
     // Add to the left column
-    leftCol.appendChild(pollingDiv);
+    predictionWrapperDiv.appendChild(pollingDiv);
 
     // Create a div to display the coalition data
     let coalitionDiv = document.createElement('div');
@@ -2542,7 +2550,9 @@ function openHeadquarter() {
     populateCoalitionDiv();
 
     // Add to the left column
-    leftCol.appendChild(coalitionDiv);
+    predictionWrapperDiv.appendChild(coalitionDiv);
+
+    leftCol.appendChild(predictionWrapperDiv);
 
     // Add back button
     let backButton = document.createElement('button');
