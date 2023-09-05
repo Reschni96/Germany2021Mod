@@ -1377,7 +1377,7 @@ var polling = [];
 var prepolling = [];
 for (let i = 0; i < 7; i++) {
   polling.push([]);
-  prepolling.push(simulateMA(33,5));
+  prepolling.push(simulateMA(35,5));
 }
 
 cyoAdventure = function (a) {
@@ -1483,6 +1483,7 @@ cyoAdventure = function (a) {
     //likeability
     if (likeabilitypMap.hasOwnProperty(ans)) {
         likeability += likeabilitypMap[ans];
+        likeability= Math.max(0, likeability);
     }
 
     if(campaignTrail_temp.question_number===25){
@@ -2412,7 +2413,7 @@ function openHeadquarter() {
     pollingDiv.style.borderRadius = '10px';
     pollingDiv.style.padding = '5px';
     pollingDiv.style.margin = '5px';
-    pollingDiv.style.marginTop = '4em';
+    pollingDiv.style.marginTop = '3em';
 
     // Add header
     let PollingHeader = document.createElement('h3');
@@ -2483,6 +2484,65 @@ function openHeadquarter() {
 
     // Add to the left column
     leftCol.appendChild(pollingDiv);
+
+    // Create a div to display the coalition data
+    let coalitionDiv = document.createElement('div');
+    coalitionDiv.id = 'coalitionDiv';
+    coalitionDiv.style.backgroundColor = 'lightgreen';
+    coalitionDiv.style.border = '5px solid black';
+    coalitionDiv.style.borderRadius = '10px';
+    coalitionDiv.style.padding = '5px';
+    coalitionDiv.style.margin = '5px';
+    coalitionDiv.style.marginTop = '1.5em';
+
+    // Add header
+    let coalitionHeader = document.createElement('h3');
+    coalitionHeader.innerText = 'Current Coalition Majorities';
+    coalitionHeader.style.fontWeight = 'bold';
+    coalitionDiv.appendChild(coalitionHeader);
+
+    // Your data object with three sub-objects
+    let coalitionData = currentCoalitions;
+
+    // Function to populate the coalitionDiv with the correct data
+    function populateCoalitionDiv() {
+        // Define categories
+        let categories = ['Likely', 'Shaky', 'Unlikely'];
+        let keys = ['coalitionsSet1', 'coalitionsSet2', 'coalitionsSet3'];
+
+        keys.forEach((key, index) => {
+            let coalitions = coalitionData[key];
+            if (coalitions && coalitions.length > 0) {
+                // Add subheader
+                let subHeader = document.createElement('h4');
+                subHeader.innerText = categories[index];
+                coalitionDiv.appendChild(subHeader);
+
+                // Add coalitions
+                coalitions.forEach((coalition, idx) => {
+                    let info = document.createTextNode(coalition.name);
+                    let spacer = document.createTextNode(" ");
+                    coalitionDiv.appendChild(info);
+                    if (idx !== coalitions.length - 1) {
+                        let breakElement = document.createElement('br');
+                        coalitionDiv.appendChild(breakElement);
+                        coalitionDiv.appendChild(spacer);
+                    }
+                });
+
+                // Half spacing between categories
+                let halfBreak = document.createElement('div');
+                halfBreak.style.height = '0.5em';
+                coalitionDiv.appendChild(halfBreak);
+            }
+        });
+    }
+
+    // Initial population
+    populateCoalitionDiv();
+
+    // Add to the left column
+    leftCol.appendChild(coalitionDiv);
 
     // Add back button
     let backButton = document.createElement('button');
