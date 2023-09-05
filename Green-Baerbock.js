@@ -1536,6 +1536,63 @@ cyoAdventure = function (a) {
         campaignTrail_temp.questions_json[25]=extraQuestions[5];
         }
     }
+    //advisor stuff
+    if([4538, 4539, 4510].includes(ans)){
+        advisorKretschmann.status="available";
+        advisor_news=true;
+    }
+
+    if([4535, 4536].includes(ans)){
+        advisorPiel.status="available";
+        advisor_news=true;
+    }
+
+    if([4017].includes(ans)){
+        advisorFischer.status="available";
+        advisor_news=true;
+    }
+
+    if([4103].includes(ans)){
+        advisorHolefleisch.status="available";
+        advisor_news=true;
+    }
+
+    if([4535, 4536, 4537, 4540, 4508, 4509].includes(ans)){
+        advisorRoth.status="available";
+        advisor_news=true;
+    }
+
+    if([4505, 4506].includes(ans)){
+        advisorOezdemir.status="available";
+        advisor_news=true;
+    }
+
+    if([4066].includes(ans)){
+        advisorJarasch.status="available";
+        advisor_news=true;
+    }
+
+    if([4081].includes(ans)){
+        advisorBayaz.status="available";
+        advisor_news=true;
+    }
+
+    if(campaignTrail_temp.player_answers.includes(4501)&&[4003].includes(ans)){
+        advisorPeters.status="available";
+        advisor_news=true;
+    }
+
+    if([4081].includes(ans)){
+        advisorBayaz.status="available";
+        advisor_news=true;
+    }
+
+    if([4015, 4065].includes(ans)){
+        if(advisorGuenther.status==='locked'){
+            advisorGuenther.status="available";
+            advisor_news=true;
+        }
+    }
 
     //Mini-CYOA here
     if (ans === 4507) {
