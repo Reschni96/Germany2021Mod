@@ -557,8 +557,8 @@ function calculateNationalSeats(e, candidateIdsToIgnore) {
     }, 0);
 
     let totalSeats = e.final_overall_results.reduce((total, party) => total + party.electoral_votes - getBonusSeats(party, candidateIdsToIgnore), 0);
-        if(totalPopularVote === 0){
-        totalPopularVote=1;
+    if(totalPopularVotes === 0){
+        totalPopularVotes=1;
     }
    if(totalSeats === 0){
         totalSeats=732;

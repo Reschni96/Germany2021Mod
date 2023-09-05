@@ -641,8 +641,8 @@ function calculateNationalSeats(e, candidateIdsToIgnore) {
 
     let totalSeats = e.final_overall_results.reduce((total, party) => total + party.electoral_votes - getBonusSeats(party, candidateIdsToIgnore), 0);
      //this is a workaround for a strange bug that happens from time to time
-    if(totalPopularVote === 0){
-        totalPopularVote=1;
+    if(totalPopularVotes === 0){
+        totalPopularVotes=1;
     }
    if(totalSeats === 0){
         totalSeats=732;
@@ -1404,7 +1404,7 @@ cyoAdventure = function (a) {
 
       // Introduce systematic error for the party at index 4
       if (i === 4) {
-        adjustedPvp += 1;
+        adjustedPvp += -4;
       }
 
       polling[i].push(Math.round(adjustedPvp * 10) / 10);
