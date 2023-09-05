@@ -550,16 +550,9 @@ function calculateNationalSeats(e, candidateIdsToIgnore) {
     }, 0);
 
     let totalSeats = e.final_overall_results.reduce((total, party) => total + party.electoral_votes - getBonusSeats(party, candidateIdsToIgnore), 0);
-    if(totalPopularVotes === 0){
-        totalPopularVotes=1;
-    }
-   if(totalSeats === 0){
-        totalSeats=732;
-    }
     let divisor = totalPopularVotes / totalSeats;
-
-    let PartyDivisorsSmall = new Array(7 - candidateIdsToIgnore.length).fill(0);
-    let PartyDivisorsBig = new Array(7 - candidateIdsToIgnore.length).fill(0);
+    let PartyDivisorsSmall = new Array(7 - candidateIdsToIgnore.length).fill(undefined);
+    let PartyDivisorsBig = new Array(7 - candidateIdsToIgnore.length).fill(undefined);
 
     let allocatedSeats = 0;
     let iterationCount = 0;
@@ -1171,7 +1164,7 @@ cyoAdventure = function (a) {
     });
 
     var currentMisses=[306];
-    if (polling[4][polling[i].length - 1]<0.05){
+    if (polling[4][polling[i].length - 1]<5){
         currentMisses.push(304)
     }
 

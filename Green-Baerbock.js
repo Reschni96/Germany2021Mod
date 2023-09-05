@@ -156,7 +156,6 @@ const likeabilitypMap = {
         4540: -1,
         4133: -2,
     };
-    console.log(likeabilitypMap);
 
 // constructs endings based on header and pages
 
@@ -640,18 +639,10 @@ function calculateNationalSeats(e, candidateIdsToIgnore) {
     }, 0);
 
     let totalSeats = e.final_overall_results.reduce((total, party) => total + party.electoral_votes - getBonusSeats(party, candidateIdsToIgnore), 0);
-     //this is a workaround for a strange bug that happens from time to time
-    if(totalPopularVotes === 0){
-        totalPopularVotes=1;
-    }
-   if(totalSeats === 0){
-        totalSeats=732;
-    }
+
     let divisor = totalPopularVotes / totalSeats;
-
-    let PartyDivisorsSmall = new Array(7 - candidateIdsToIgnore.length).fill(0);
-    let PartyDivisorsBig = new Array(7 - candidateIdsToIgnore.length).fill(0);
-
+    let PartyDivisorsSmall = new Array(7 - candidateIdsToIgnore.length).fill(undefined);
+    let PartyDivisorsBig = new Array(7 - candidateIdsToIgnore.length).fill(undefined);
     let allocatedSeats = 0;
     let iterationCount = 0;
     const maxIterations = 20;
@@ -660,7 +651,7 @@ function calculateNationalSeats(e, candidateIdsToIgnore) {
         allocatedSeats = 0;
         e.final_overall_results.forEach((result, i) => {
             if (candidateIdsToIgnore.includes(result.candidate)) return;
-
+            console.log(result.candidate)
             let seats = Math.round(result.popular_votes / divisor);
             allocatedSeats += seats;
 
@@ -671,7 +662,6 @@ function calculateNationalSeats(e, candidateIdsToIgnore) {
             }
             PartyDivisorsSmall[i] = result.popular_votes / (seats + 0.5);
         });
-
         // Not enough seats
         if (allocatedSeats < totalSeats) {
             let sortedDivisors = PartyDivisorsSmall.filter(element => typeof element === 'number').sort((a, b) => b - a);
@@ -1307,7 +1297,6 @@ function answerSwapper(pk1, pk2, takeEffects = true) {
 
   // Check if objects with those PKs exist
   if (index1 === -1 || index2 === -1) {
-    console.log('One or both PKs not found in answerData.');
     return;
   }
 
@@ -1404,7 +1393,7 @@ cyoAdventure = function (a) {
 
       // Introduce systematic error for the party at index 4
       if (i === 4) {
-        adjustedPvp += -4;
+        adjustedPvp += -1;
       }
 
       polling[i].push(Math.round(adjustedPvp * 10) / 10);
@@ -1432,16 +1421,17 @@ cyoAdventure = function (a) {
     });
 
     var currentMisses=[306];
-    if (polling[4][polling[i].length - 1]<0.05){
+    if (polling[4][polling[i].length - 1]<5){
         currentMisses.push(304)
     }
-
+    console.log(JSON.parse(JSON.stringify(temp)));
     var currentSeats=calculateNationalSeats(temp, currentMisses);
     temp.final_overall_results.forEach(entry => {
       if(currentSeats.hasOwnProperty(entry.candidate)) {
         entry.electoral_votes = currentSeats[entry.candidate];
       }
     });
+    console.log(JSON.parse(JSON.stringify(temp)));
     currentCoalitions=coalitionTalks(temp.final_overall_results, optionalMode=true);
 
     //mood
@@ -2065,7 +2055,6 @@ function seatCalculator() {
              allVotes.forEach((result, i)   => {
                 totalPopularVote += allVotes[i].popular_votes;
                });
-            console.log(totalPopularVote)
             allVotes.forEach((result, i)   => {
             if (allVotes[i].popular_votes/totalPopularVote < threshold) {
 
@@ -2136,7 +2125,6 @@ var dismissalsLeft=2;
 var likeabilityDescription = ["People find you unlikeable, toxic even", "People seem to have their doubts about your competence", "People are carefully intrigued by you", "People see you as energetic and sympathetic "]
 function openHeadquarter() {
 
-    console.log(temp.final_overall_results);
     advisor_news=false;
     let questions = document.querySelector(".inner_window_question");
 
