@@ -2177,7 +2177,7 @@ function openHeadquarter() {
 
     // Create a div for Campaign header (h1) with specific style
     let headerDiv = document.createElement('div');
-    headerDiv.style.backgroundColor = 'lightgreen';
+    headerDiv.className = 'happy-box';
     headerDiv.style.border = '5px solid black';
     headerDiv.style.borderRadius = '10px';  // Round all corners
     headerDiv.style.marginBottom = '0';  // Remove bottom margin to avoid gap
@@ -2189,11 +2189,11 @@ function openHeadquarter() {
 
     // Create a div for Mood (h2) with specific style
     let moodDiv = document.createElement('div');
-    moodDiv.style.backgroundColor = 'lightgreen';
+    moodDiv.className = 'happy-box';
     moodDiv.style.border = '5px solid black';
     moodDiv.style.borderRadius = '0 0 10px 10px';  // Round only bottom corners
-    moodDiv.style.marginTop = '-21px';  // To overlap the bottom border of the headerDiv
-    moodDiv.style.borderTop = 'none';  // Remove the top border
+    moodDiv.style.marginTop = '-4px';  // To overlap the bottom border of the headerDiv
+    moodDiv.style.borderTop = '1px solid black';  // Remove the top border
     moodDiv.style.width = '70%';  // Set width to 70%
     moodDiv.style.marginLeft = 'auto';  // Centering horizontally
     moodDiv.style.marginRight = 'auto';  // Centering horizontally
@@ -2218,16 +2218,17 @@ function openHeadquarter() {
 
     // Create div for Likeability Header and wrap h2 in it
     let patienceHeaderDiv = document.createElement('div');
-    patienceHeaderDiv.style.margin = '5px';  // Change margin to 5px
+    patienceHeaderDiv.style.margin = '5px';
+    patienceHeaderDiv.style.marginBottom = '0px';
     patienceHeaderDiv.style.border = '5px solid black';
-    patienceHeaderDiv.style.backgroundColor = 'lightgreen';
+    patienceHeaderDiv.className = 'happy-box';
     patienceHeaderDiv.style.borderRadius = '10px';
 
 
     let patienceLabel = document.createElement('h2');
     patienceLabel.innerText = "Annalena's Likeability";
     patienceLabel.style.color = 'black';
-    patienceLabel.style.backgroundColor = 'lightgreen';
+    patienceLabel.className = 'happy-box';
     patienceLabel.style.padding = '1em';
     patienceLabel.style.textAlign = 'center';
     patienceHeaderDiv.appendChild(patienceLabel);
@@ -2241,10 +2242,14 @@ function openHeadquarter() {
     patienceDiv.style.alignItems = 'center';
     patienceDiv.style.height = '15em';
     patienceDiv.style.width = '5em';
-    patienceDiv.style.border = '5px solid black';
-    patienceDiv.style.backgroundColor = 'lightgreen';  // Added background color
-    patienceDiv.style.margin = '5px';  // Change margin to 5px
-    patienceDiv.style.borderRadius = '10px';
+    patienceDiv.style.border = '1px solid black';
+    patienceDiv.style.borderLeft = '5px solid black';
+    patienceDiv.style.borderRight = '5px solid black';
+    patienceDiv.className = 'happy-box';
+    patienceDiv.style.margin = '5px';
+    patienceDiv.style.marginTop = '-4px';
+    patienceDiv.style.marginBottom = '-4px';
+    patienceDiv.style.zIndex = '2';
     wrapDiv.appendChild(patienceDiv);
 
     for (let i = 0; i < 4; i++) {
@@ -2269,12 +2274,13 @@ function openHeadquarter() {
     let likeabilityDescDiv = document.createElement('div');
     likeabilityDescDiv.innerText = likeabilityDescription[Math.floor(likeability / 5)];  // Updated logic
     likeabilityDescDiv.style.color = 'black';
-    likeabilityDescDiv.style.backgroundColor = 'lightgreen';
+    likeabilityDescDiv.className = 'happy-box';
     likeabilityDescDiv.style.padding = '1em';
     likeabilityDescDiv.style.textAlign = 'center';
     likeabilityDescDiv.style.border = '5px solid black';
     likeabilityDescDiv.style.borderRadius = '10px';  // More rounded corners
-    likeabilityDescDiv.style.margin = '5px';  // Change margin to 5px
+    likeabilityDescDiv.style.margin = '5px';
+    likeabilityDescDiv.style.marginTop = '0px';
 
     wrapDiv.appendChild(likeabilityDescDiv);
 
@@ -2287,8 +2293,9 @@ function openHeadquarter() {
         let advisorHeaderDiv = document.createElement('div');
         advisorHeaderDiv.style.border = '5px solid black';
         advisorHeaderDiv.style.borderRadius = '10px';
-        advisorHeaderDiv.style.backgroundColor = 'lightgreen';
-        advisorHeaderDiv.style.margin = "8px";
+        advisorHeaderDiv.className = 'happy-box';
+        advisorHeaderDiv.style.margin = "20px";
+        advisorHeaderDiv.style.marginBottom = "0px";
         let advisorHeader = document.createElement('h2');
         advisorHeader.innerText = "Advisors";
         advisorHeaderDiv.appendChild(advisorHeader);
@@ -2316,10 +2323,12 @@ function openHeadquarter() {
                 imgContainer.style.display = 'flex';
                 imgContainer.style.flexDirection = 'column';
                 imgContainer.style.justifyContent = 'center';
-                imgContainer.style.border = '4px solid black';
                 imgContainer.style.margin = '10px';
+                imgContainer.style.marginTop = '-5px';
                 imgContainer.style.backgroundColor = 'white';
-                imgContainer.style.borderRadius = '10px';
+                imgContainer.style.border = '4px solid black';
+                imgContainer.style.borderTop = '1px solid black'
+                imgContainer.style.borderRadius = '0 0 10px 10px';
                 imgContainer.style.overflow = 'hidden';
                 imgContainer.appendChild(img);
 
@@ -2368,10 +2377,12 @@ function openHeadquarter() {
     imgContainer.style.display = 'flex';
     imgContainer.style.flexDirection = 'column';
     imgContainer.style.justifyContent = 'center';
-    imgContainer.style.border = '4px solid black';
     imgContainer.style.margin = '10px';
+    imgContainer.style.marginTop = '-5px';
     imgContainer.style.backgroundColor = 'white';
-    imgContainer.style.borderRadius = '10px';
+    imgContainer.style.border = '4px solid black';
+    imgContainer.style.borderTop = '1px solid black'
+    imgContainer.style.borderRadius = '0 0 10px 10px';
     imgContainer.style.overflow = 'hidden';
     imgContainer.appendChild(img);
 
@@ -2401,7 +2412,7 @@ function openHeadquarter() {
     let dismissInfoDiv = document.createElement('div');
     dismissInfoDiv.style.border = '5px solid black';
     dismissInfoDiv.style.borderRadius = '10px';
-    dismissInfoDiv.style.backgroundColor = 'lightgreen';
+    dismissInfoDiv.className = 'happy-box';
     let dismissInfo = document.createElement('p');
     dismissInfo.innerText = `You can dismiss advisors ${dismissalsLeft} more times.`;
     dismissInfoDiv.appendChild(dismissInfo);
@@ -2416,7 +2427,7 @@ function openHeadquarter() {
     // Create a div to display the polling/seats data
     let pollingDiv = document.createElement('div');
     pollingDiv.id = 'pollingDiv';
-    pollingDiv.style.backgroundColor = 'lightgreen';
+    pollingDiv.className = 'happy-box';
     pollingDiv.style.border = '5px solid black';
     pollingDiv.style.borderRadius = '10px';
     pollingDiv.style.padding = '5px';
@@ -2438,6 +2449,7 @@ function openHeadquarter() {
     let toggleButton = document.createElement('button');
     toggleButton.innerText = 'Show Seats';
     toggleButton.addEventListener('click', toggleInfo);
+    toggleButton.style.backgroundColor = 'lightgreen';
     pollingDiv.appendChild(toggleButton);
 
     let pollData=temp.final_overall_results;
@@ -2496,7 +2508,7 @@ function openHeadquarter() {
     // Create a div to display the coalition data
     let coalitionDiv = document.createElement('div');
     coalitionDiv.id = 'coalitionDiv';
-    coalitionDiv.style.backgroundColor = 'lightgreen';
+    coalitionDiv.className = 'happy-box';
     coalitionDiv.style.border = '5px solid black';
     coalitionDiv.style.borderRadius = '10px';
     coalitionDiv.style.padding = '5px';
@@ -2571,6 +2583,32 @@ function openHeadquarter() {
     // Append the headquarters div to the game window
     questions.parentNode.insertBefore(hqDiv, questions.nextSibling);
 }
+// Create a <style> element
+const HQStyle = document.createElement('style');
+
+// Add CSS rules for the background image of the body and the happy little boxes
+HQStyle.innerHTML = `
+  .happy-box {
+    background-image: url('https://cdn.discordapp.com/attachments/1109846390575730788/1148555437839499284/greengradient.png');
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+  }
+  .happy-box:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background-image: inherit;
+    background-size: cover;
+    background-position: inherit;
+    opacity: 0.5;
+  }
+`;
+document.head.appendChild(HQStyle);
 
 function showAdvisors() {
 
