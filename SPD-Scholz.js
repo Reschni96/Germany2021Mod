@@ -563,7 +563,10 @@ function calculateNationalSeats(e, candidateIdsToIgnore) {
     let PartyDivisorsBig = new Array(7 - candidateIdsToIgnore.length).fill(0);
 
     let allocatedSeats = 0;
-    while (allocatedSeats !== totalSeats) {
+    let iterationCount = 0;
+    const maxIterations = 20;
+    while (allocatedSeats !== totalSeats && iterationCount < maxIterations) {
+        iterationCount++;
         allocatedSeats = 0;
         e.final_overall_results.forEach((result, i) => {
             if (candidateIdsToIgnore.includes(result.candidate)) return;
@@ -589,6 +592,7 @@ function calculateNationalSeats(e, candidateIdsToIgnore) {
             let sortedDivisors = PartyDivisorsBig.filter(element => typeof element === 'number').sort((a, b) => a - b);
             divisor = (sortedDivisors[0] + sortedDivisors[1]) / 2;
         }
+
     }
 
      let nationalSeats = {};
@@ -652,46 +656,51 @@ function adjustSeatAllocation(e, candidateIdsToIgnore=[]) {
 
 }
 
-function coalitionTalks(results){
-    // Define the election result, with the number of seats each party received
-    const electionResult = results
+function coalitionTalks(results, optionalMode = false){
+  const electionResult = results;
 
-    totalSeats = electionResult.reduce((sum, party) => sum + party.electoral_votes, 0)
-    // Define a function to check if a coalition has a majority of seats
-    function hasMajority(coalition) {
-      const coalitionSeats = coalition.parties.reduce((sum, partyId) => sum + electionResult.find(p => p.candidate === partyId).electoral_votes, 0);
+  totalSeats = electionResult.reduce((sum, party) => sum + party.electoral_votes, 0);
 
-      return coalitionSeats > (totalSeats / 2);
-    }
+  function hasMajority(coalition) {
+    const coalitionSeats = coalition.parties.reduce((sum, partyId) => sum + electionResult.find(p => p.candidate === partyId).electoral_votes, 0);
+    return coalitionSeats > (totalSeats / 2);
+  }
 
-    // Define a function to get a list of all possible coalitions that have a majority of seats
-    function getMajorityCoalitions() {
-      const majorityCoalitions = [];
-      for (let i = 0; i < coalitions.length; i++) {
-        if (hasMajority(coalitions[i])) {
-            if(coalitions[i].weight >0){
-                majorityCoalitions.push(coalitions[i]);
-            }
-        }
+  function getCoalitionsBySeatsRange(start, end) {
+    const coalitionsBySeatsRange = [];
+    for (let i = 0; i < coalitions.length; i++) {
+      const coalitionSeats = coalitions[i].parties.reduce((sum, partyId) => sum + electionResult.find(p => p.candidate === partyId).electoral_votes, 0);
+      const majorityGap = coalitionSeats - (totalSeats / 2);
+      if (majorityGap >= start && majorityGap <= end && coalitions[i].weight > 0) {
+        coalitionsBySeatsRange.push(coalitions[i]);
       }
-      return majorityCoalitions;
     }
+    return coalitionsBySeatsRange;
+  }
 
-    // Define a function to remove all coalitions that are impossible due to other coalitions already in the list
-    function removeImpossibleCoalitions(coalitionList) {
-      const possibleCoalitionsFunc = coalitionList.filter(coalition => {
-        const impossibleCoalitions = coalition.impossibleCoalitions;
-        return !coalitionList.some(c => c !== coalition && c.impossibleCoalitions.includes(coalition.id));
-      });
-      return possibleCoalitionsFunc;
-    }
+  function getMajorityCoalitions() {
+    return getCoalitionsBySeatsRange(1, Infinity);
+  }
 
-    // Get the list of all possible coalitions that have a majority of seats
+  function removeImpossibleCoalitions(coalitionList) {
+    const possibleCoalitionsFunc = coalitionList.filter(coalition => {
+      const impossibleCoalitions = coalition.impossibleCoalitions;
+      return !coalitionList.some(c => c !== coalition && c.impossibleCoalitions.includes(coalition.id));
+    });
+    return possibleCoalitionsFunc;
+  }
+
+  if (optionalMode) {
+    const coalitionsSet1 = getCoalitionsBySeatsRange(10, Infinity);  // 10 or more seats above majority
+    const coalitionsSet2 = getCoalitionsBySeatsRange(-10, 9);      // Between 10 seats below and 10 seats above majority
+    const coalitionsSet3 = getCoalitionsBySeatsRange(-30, -11);     // More than 10 but less than 30 seats below majority
+
+    return { coalitionsSet1, coalitionsSet2, coalitionsSet3 };
+  } else {
     const majorityCoalitions = getMajorityCoalitions();
-
-    // Remove all coalitions that are impossible due to other coalitions already in the list
     const possibleCoalitionsFunc = removeImpossibleCoalitions(majorityCoalitions);
     return possibleCoalitionsFunc;
+  }
 }
 
 function adjustWeights(factor){
