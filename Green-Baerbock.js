@@ -2383,6 +2383,9 @@ function openHeadquarter() {
 
     let name = document.createElement('div');
     name.innerText = 'Unfilled Advisor Slot';
+    name.style.whiteSpace = 'normal';  // Allows the text to wrap
+    name.style.overflowWrap = 'break-word';  // Breaks the word if necessary
+    name.style.maxWidth = '115px';
     name.style.color='black'
     name.style.padding='0.5em'
     name.style.fontWeight = 'bold';
@@ -2620,19 +2623,22 @@ function showAdvisors() {
     advisorsDiv.id = 'advisors';
     advisorsDiv.style.boxShadow = '0 0 15px rgba(0,0,0,0.5)';
     advisorsDiv.style.color = 'white';
-    advisorsDiv.style.backgroundColor = 'darkblue';
+    advisorsDiv.style.backgroundImage = "url('https://cdn.discordapp.com/attachments/1109846390575730788/1148555437839499284/greengradient.png')";
+    advisorsDiv.style.backgroundSize = 'cover';
 
     // Add header
     let header = document.createElement('h1');
     header.innerText = "Hire Advisors";
     advisorsDiv.appendChild(header);
 
-    let rowDiv; // for storing each row of up to 3 advisors
+    let outerDiv = document.createElement('div'); // Create an extra div to wrap all rows
+    outerDiv.style.height = '500px';
+    outerDiv.style.overflow = 'auto'; // Enable scroll when content overflows
 
     var perRow = 3;
 
-    if(window.matchMedia("(max-width: 768px)").matches){
-        perRow=2;
+    if (window.matchMedia("(max-width: 768px)").matches) {
+        perRow = 2;
     }
 
     filteredAdvisorsList.forEach((advisor, index) => {
@@ -2640,7 +2646,7 @@ function showAdvisors() {
             rowDiv = document.createElement('div');
             rowDiv.style.display = 'flex';
             rowDiv.style.justifyContent = 'space-around';
-            advisorsDiv.appendChild(rowDiv);
+            outerDiv.appendChild(rowDiv);
         }
 
         if (advisor.canBeHired()) {
@@ -2668,7 +2674,6 @@ function showAdvisors() {
 
             // Wrap the description in another div
             let descriptionContainer = document.createElement('div');
-            descriptionContainer.style.borderTop = '2px solid black';
             descriptionContainer.style.padding='0.5em'
             descriptionContainer.style.height='8em'
             descriptionContainer.appendChild(description);
@@ -2695,7 +2700,8 @@ function showAdvisors() {
 
             if (advisor.status === 'locked') {
                 img.style.filter = 'blur(5px)';
-                description.style.filter = 'blur(5px)';
+                name.style.filter = 'blur(5px)';
+                description.innerText = advisor.descriptionLocked;
                 hireBtn.disabled = true;
             }
 
@@ -2705,6 +2711,8 @@ function showAdvisors() {
             rowDiv.appendChild(advisorContainer);
         }
     });
+
+    advisorsDiv.appendChild(outerDiv);
 
     // Add back button with padding and id
     let backButton = document.createElement('button');
@@ -2722,11 +2730,12 @@ function showAdvisors() {
 }
 
 class Advisor {
-    constructor(id, name, picture, description, hireCode, dismissCode, status) {
+    constructor(id, name, picture, description, lockedDescription, hireCode, dismissCode, status) {
         this.id = id;
         this.name = name;
         this.picture = picture;
         this.description = description;
+        this.lockedDescription = lockedDescription;
         this.hireCode = hireCode; // function to run when hired
         this.dismissCode = dismissCode; // function to run when dismissed
         this.status = status; // "active", "available", "locked", or "dismissed"
@@ -2748,57 +2757,46 @@ Advisor.prototype.canBeHired = function() {
 };
 
 // Example advisors
-const exampleAdvisor1 = new Advisor(
-    1,
-    "Annalena",
-    "https://i.ibb.co/MP0P2yQ/Baerbock.jpg",
-    "Don't hire yourself",
-    function() { console.log("John has been hired."); },
-    function() { console.log("John has been dismissed."); },
-    "available"
-);
+const advisorHabeck = new Advisor(1, "Robert Habeck", null, null, null, null, null, 'available');
+const advisorKellner = new Advisor(2, "Michael Kellner", null, null, null, null, null, 'available');
+const advisorUnmuessig = new Advisor(3, "Barbara Unmüßig", null, null, null, null, null, 'available');
+const advisorScharfschwerdt = new Advisor(4, "Michael Scharfschwerdt", null, null, null, null, null, 'available');
+const advisorLemke = new Advisor(5, "Steffi Lemke", null, null, null, null, null, 'available');
+const advisorDahmen = new Advisor(6, "Janosch Dahmen", null, null, null, null, null, 'available');
+const advisorTressel = new Advisor(7, "Markus Tressel", null, null, null, null, null, 'available');
+const advisorKretschmann = new Advisor(8, "Winfried Kretschmann", null, null, null, null, null, 'locked');
+const advisorPiel = new Advisor(9, "Anja Piel", null, null, null, null, null, 'locked');
+const advisorFischer = new Advisor(10, "Joschka Fischer", null, null, null, null, null, 'locked');
+const advisorHolefleisch = new Advisor(11, "Daniel Holefleisch", null, null, null, null, null, 'locked');
+const advisorRoth = new Advisor(12, "Claudia Roth", null, null, null, null, null, 'locked');
+const advisorOezdemir = new Advisor(13, "Cem Özdemir", null, null, null, null, null, 'locked');
+const advisorJarasch = new Advisor(14, "Bettina Jarasch", null, null, null, null, null, 'locked');
+const advisorBayaz = new Advisor(15, "Danyal Bayaz", null, null, null, null, null, 'locked');
+const advisorPeters = new Advisor(16, "Anna Peters", null, null, null, null, null, 'locked');
+const advisorBuntenbach = new Advisor(17, "Annelie Buntenbach", null, null, null, null, null, 'locked');
+const advisorGuenther = new Advisor(18, "Wolfram Günther", null, null, null, null, null, 'locked');
 
-const exampleAdvisor2 = new Advisor(
-    2,
-    "Annalena2",
-    "https://i.ibb.co/MP0P2yQ/Baerbock.jpg",
-    "Huh?",
-    function() { console.log("Sally has been hired."); },
-    function() { console.log("Sally has been dismissed."); },
-    "available"
-);
+const advisorsList = [
+    advisorHabeck,
+    advisorKellner,
+    advisorUnmuessig,
+    advisorScharfschwerdt,
+    advisorLemke,
+    advisorDahmen,
+    advisorTressel,
+    advisorKretschmann,
+    advisorPiel,
+    advisorFischer,
+    advisorHolefleisch,
+    advisorRoth,
+    advisorOezdemir,
+    advisorJarasch,
+    advisorBayaz,
+    advisorPeters,
+    advisorBuntenbach,
+    advisorGuenther
+];
 
-const exampleAdvisor3 = new Advisor(
-    3,
-    "Robert",
-    "https://i.ibb.co/MP0P2yQ/Baerbock.jpg",
-    "He's competent",
-    function() { console.log("Sally has been hired."); },
-    function() { console.log("Sally has been dismissed."); },
-    "available"
-);
-
-const exampleAdvisor4 = new Advisor(
-    4,
-    "Winfried",
-    "https://i.ibb.co/MP0P2yQ/Baerbock.jpg",
-    "BW",
-    function() { console.log("Sally has been hired."); },
-    function() { console.log("Sally has been dismissed."); },
-    "available"
-);
-
-const exampleAdvisor5 = new Advisor(
-    5,
-    "Boris",
-    "https://i.ibb.co/MP0P2yQ/Baerbock.jpg",
-    "Don't hire!",
-    function() { console.log("Sally has been hired."); },
-    function() { console.log("Sally has been dismissed."); },
-    "locked"
-);
-
- var advisorsList = [exampleAdvisor1, exampleAdvisor2, exampleAdvisor3, exampleAdvisor4, exampleAdvisor5];
 
 function removeElectoralVotesZero() {
   // Get the div element by its ID

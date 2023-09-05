@@ -34,6 +34,12 @@ class ImageCropper:
         self.canvas.bind("<ButtonPress-1>", self.on_button_press)
         self.canvas.bind("<B1-Motion>", self.on_button_move)
 
+        aspect_ratio_button = tk.Button(button_frame, text='Set Aspect Ratio', command=self.set_aspect_ratio)
+        aspect_ratio_button.pack(side=tk.LEFT)
+
+        # Add a variable to hold the aspect ratio
+        self.aspect_ratio = None
+
     def open_image(self):
         self.image_path = filedialog.askopenfilename()
         self.image = Image.open(self.image_path)
@@ -56,9 +62,14 @@ class ImageCropper:
 
     def on_button_move(self, event):
         self.end_x = event.x
-        rect_height = 0.75 * (self.end_x - self.start_x)
-        self.end_y = self.start_y + rect_height
 
+        # Compute new rectangle height based on the aspect ratio
+        if self.aspect_ratio:
+            rect_height = abs(self.end_x - self.start_x) / self.aspect_ratio
+        else:
+            rect_height = 0.75 * abs(self.end_x - self.start_x)  # Existing behavior
+
+        self.end_y = self.start_y + rect_height
         self.canvas.coords(self.rect_id, self.start_x, self.start_y, self.end_x, self.end_y)
 
     def crop_image(self):
@@ -82,6 +93,17 @@ class ImageCropper:
             new_base_name = os.path.basename(base_name)
             new_image_path = os.path.join(cropped_directory, f"{new_base_name}_cropped{ext}")
             self.image.save(new_image_path)
+
+    def set_aspect_ratio(self):
+        # Open a new image
+        new_image_path = filedialog.askopenfilename()
+        if new_image_path:
+            new_image = Image.open(new_image_path)
+
+            # Compute the aspect ratio
+            width, height = new_image.size
+            self.aspect_ratio = width / height
+
 
 
 if __name__ == "__main__":
