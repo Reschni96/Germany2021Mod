@@ -2422,7 +2422,7 @@ function openHeadquarter() {
     slot.classList.add('advisor-slot');
 
     let img = document.createElement('img');
-    img.src = 'https://uuabq.org/wp-content/uploads/2015/03/woman-head-silhouette-png-black-and-white-download-female-silhouette-head-11563010560sqe7wt34hg-293x300.png';
+    img.src = 'https://i.ibb.co/Lxp3QGT/silhouette-cropped.jpg';
     img.style.height = '12em';
     img.style.borderBottom = '2px solid black';
 
@@ -2598,17 +2598,35 @@ function openHeadquarter() {
                 subHeader.innerText = categories[index];
                 coalitionDiv.appendChild(subHeader);
 
-                // Add coalitions
-                coalitions.forEach((coalition, idx) => {
+        coalitions.forEach((coalition, idx) => {
+                    // Create a tooltip container
+                    let tooltipSpan = document.createElement('span');
+                    tooltipSpan.className = 'mytooltip';
+
+                    // Populate the tooltip container with the coalition name
                     let info = document.createTextNode(coalition.name);
-                    let spacer = document.createTextNode(" ");
-                    coalitionDiv.appendChild(info);
+                    tooltipSpan.appendChild(info);
+
+                    // Create the tooltip text
+                    let tooltipText = document.createElement('span');
+                    tooltipText.className = 'mytooltiptext';
+
+                    // Convert candidate IDs (parties) to last names and join them
+                    let candidateNames = coalition.parties.map(findLastName).join(', ');
+                    tooltipText.innerText = `Parties: ${candidateNames}`;
+
+                    // Append tooltip text to the tooltip container
+                    tooltipSpan.appendChild(tooltipText);
+
+                    // Append the tooltip container to the coalitionDiv
+                    coalitionDiv.appendChild(tooltipSpan);
+
                     if (idx !== coalitions.length - 1) {
                         let breakElement = document.createElement('br');
                         coalitionDiv.appendChild(breakElement);
-                        coalitionDiv.appendChild(spacer);
                     }
                 });
+
 
                 // Half spacing between categories
                 let halfBreak = document.createElement('div');
@@ -2851,6 +2869,13 @@ HQStyle.innerHTML = `
     background-position: inherit;
     opacity: 0.5;
   }
+
+  #coalitionDiv .mytooltip{
+      background-color: greenyellow;
+   }
+     #coalitionDiv .mytooltiptext{
+      background-color: lightgreen;
+   }
 `;
 document.head.appendChild(HQStyle);
 
