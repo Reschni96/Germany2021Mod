@@ -1303,6 +1303,150 @@ cyoAdventure = function(a) {
     }
 }
 
+function answerSwapper(pk1, pk2, takeEffects = true) {
+    // Your hardcoded JSON data for answers
+    const answerData = campaignTrail_temp.answers_json;
+
+    // Find the indices of the objects with the specified PKs
+    const index1 = answerData.findIndex(item => item.pk === pk1);
+    const index2 = answerData.findIndex(item => item.pk === pk2);
+
+    // Check if objects with those PKs exist
+    if (index1 === -1 || index2 === -1) {
+        return;
+    }
+
+    // Swap the question values
+    const tempQuestion = answerData[index1].fields.question;
+    answerData[index1].fields.question = answerData[index2].fields.question;
+    answerData[index2].fields.question = tempQuestion;
+
+    // If takeEffects is true, update the other global JSON objects
+    if (takeEffects) {
+        const otherJsons = [
+            campaignTrail_temp.answer_score_global_json,
+            campaignTrail_temp.answer_score_issue_json,
+            campaignTrail_temp.answer_score_state_json
+        ];
+
+        otherJsons.forEach(jsonData => {
+            jsonData.forEach(item => {
+                if (item.fields.answer === pk1) {
+                    item.fields.answer = pk2;
+                }
+            });
+        });
+    }
+}
+
+function applyDrift(candidateId, driftAmount, stateId) {
+  // Loop through each object in the JSON array
+  campaignTrail_temp.candidate_state_multiplier_json.forEach((item) => {
+    // Check if the candidate ID matches the given candidate
+    if (item.fields.candidate === candidateId) {
+      // If stateId is undefined or empty, apply drift to all states for that candidate
+      if (stateId === undefined || stateId.length === 0) {
+        item.fields.state_multiplier += driftAmount;
+        item.fields.state_multiplier = Math.max(0, item.fields.state_multiplier); // Ensure the multiplier never goes below 0
+      } else {
+        // If stateId is an array, loop through it
+        if (Array.isArray(stateId)) {
+          if (stateId.includes(item.fields.state)) {
+            item.fields.state_multiplier += driftAmount;
+            item.fields.state_multiplier = Math.max(0, item.fields.state_multiplier); // Ensure the multiplier never goes below 0
+          }
+        } else {
+          // If stateId is a single value, just check it
+          if (item.fields.state === stateId) {
+            item.fields.state_multiplier += driftAmount;
+            item.fields.state_multiplier = Math.max(0, item.fields.state_multiplier); // Ensure the multiplier never goes below 0
+          }
+        }
+      }
+    }
+  });
+}
+
+function changeGlobalEffect(affectedCandidate, answer, changeAmount) {
+  let found = false;
+  // Loop through each object in the JSON array
+  campaignTrail_temp.answer_score_global_json.forEach((item) => {
+    // Check if the affected candidate and answer fields match the provided values
+    if (item.fields.affected_candidate === affectedCandidate && item.fields.answer === answer) {
+      // Update the global_multiplier
+      item.fields.global_multiplier += changeAmount;
+      found = true;
+    }
+  });
+
+  // If no matching entry was found, create a new one
+  if (!found) {
+    const lastEntry = campaignTrail_temp.answer_score_global_json[campaignTrail_temp.answer_score_global_json.length - 1];
+    const newEntry = JSON.parse(JSON.stringify(lastEntry)); // Clone the last entry
+
+    newEntry.fields.affected_candidate = affectedCandidate;
+    newEntry.fields.answer = answer;
+    newEntry.fields.global_multiplier = changeAmount;  // Overwrite global_multiplier with changeAmount
+
+    campaignTrail_temp.answer_score_global_json.push(newEntry);
+  }
+}
+
+function changeStateEffect(affectedCandidate, answer, state, changeAmount) {
+  let found = false;
+  // Loop through each object in the JSON array
+  campaignTrail_temp.answer_score_state_json.forEach((item) => {
+    // Check if the affected candidate, answer, and state fields match the provided values
+    if (item.fields.affected_candidate === affectedCandidate && item.fields.answer === answer && item.fields.state === state) {
+      // Update the state_multiplier
+      item.fields.state_multiplier += changeAmount;
+      found = true;
+    }
+  });
+
+  // If no matching entry was found, create a new one
+  if (!found) {
+    const lastEntry = campaignTrail_temp.answer_score_state_json[campaignTrail_temp.answer_score_state_json.length - 1];
+    const newEntry = JSON.parse(JSON.stringify(lastEntry)); // Clone the last entry
+
+    newEntry.fields.affected_candidate = affectedCandidate;
+    newEntry.fields.answer = answer;
+    newEntry.fields.state = state;
+    newEntry.fields.state_multiplier = changeAmount;  // Overwrite state_multiplier with changeAmount
+
+    campaignTrail_temp.answer_score_state_json.push(newEntry);
+  }
+}
+
+function changeIssueEffect(answer, issue, changeScore, changeImportance) {
+  let found = false;
+  // Loop through each object in the JSON array
+  campaignTrail_temp.answer_score_issue_json.forEach((item) => {
+    // Check if the answer and issue fields match the provided values
+    if (item.fields.answer === answer && item.fields.issue === issue) {
+      // Update the issue_score, making sure it stays within [-1, 1]
+      item.fields.issue_score = Math.min(Math.max(item.fields.issue_score + changeScore, -1), 1);
+
+      // Update the issue_importance
+      item.fields.issue_importance += changeImportance;
+
+      found = true;
+    }
+  });
+
+  // If no matching entry was found, create a new one
+  if (!found) {
+    const lastEntry = campaignTrail_temp.answer_score_issue_json[campaignTrail_temp.answer_score_issue_json.length - 1];
+    const newEntry = JSON.parse(JSON.stringify(lastEntry)); // Clone the last entry
+
+    newEntry.fields.answer = answer;
+    newEntry.fields.issue = issue;
+    newEntry.fields.issue_score = Math.min(Math.max(changeScore, -1), 1);  // Set issue_score within [-1, 1]
+    newEntry.fields.issue_importance = changeImportance;  // Overwrite issue_importance with changeImportance
+
+    campaignTrail_temp.answer_score_issue_json.push(newEntry);
+  }
+}
 //css stuff here
 
 async function changeChart(processedNodes) {
