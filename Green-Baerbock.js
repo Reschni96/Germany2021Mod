@@ -622,6 +622,28 @@ const YouthMap = {
         4128: 1,
     };
 
+    const SPDTarget = {
+        4010: 1,
+        4022: 1,
+        4025: 1,
+        4034: 1,
+        4035: 1,
+        4036: 1,
+        4043: 1,
+        4048: 1,
+        4516: 1,
+        4517: 1,
+        4060: 1,
+        4523: 1,
+        4071: 1,
+        4073: 1,
+        4074: 1,
+        4076: 1,
+        4082: 1,
+        4086: 1,
+        4120: 1,
+    };
+
 
 // constructs endings based on header and pages
 
@@ -1972,9 +1994,11 @@ cyoAdventure = function(a) {
             advisor_news = true;
         }
 
-        if ([4012].includes(ans)) {
-            advisorBuntenbach.status = "available";
-            advisor_news = true;
+        if ([4012, 4502].includes(ans)) {
+            if (advisorBuntenbach.status === 'locked') {
+                advisorBuntenbach.status = "available";
+                advisor_news = true;
+            }
         }
 
         if ([4015, 4065].includes(ans)) {
@@ -2010,12 +2034,8 @@ cyoAdventure = function(a) {
         if(advisorBayaz.status === 'active'){
             applyDrift(79, 0.001, 3000);
         }
-        if(advisorBuntenbach.status === 'active'){
-            applyDrift(79, 0.0008);
-            applyDrift(78, -0.0008);
-        }
         if(advisorGuenther.status === 'active'){
-            applyDrift(79, 0.001, [3003, 3007, 3012, 3013, 3015]);
+            applyDrift(79, 0.0015, [3003, 3007, 3012, 3013, 3015]);
         }
 
     }
@@ -3736,7 +3756,7 @@ const advisorOezdemir = new Advisor(13, "Cem Özdemir", 'https://i.ibb.co/7g9nqq
 const advisorJarasch = new Advisor(14, "Bettina Jarasch", 'https://i.ibb.co/NxF3xns/jarasch-cropped.jpg', "Her media connections will no doubt be helpful, as well as coordinating with her campaign in Berlin.", "A little help for her is needed to recruit the Green party mayoral candidate from Berlin.", noop, noop, 'locked');
 const advisorBayaz = new Advisor(15, "Danyal Bayaz", "https://i.ibb.co/tPpQ65h/bayaz-cropped.jpg", "Bayaz wants to do two things for you - campaign in Baden-Württemberg and reach out to the FDP for future coalition talks.", "This state minister is an advocate for closer cooperation with the FDP and hopes you feel the same.", () =>coalitions.forEach(coalition => { if ([5, 6, 15].includes(coalition.id)) {coalition.weight *= 1.5;}}),  () =>coalitions.forEach(coalition => { if ([5, 6, 15].includes(coalition.id)) {coalition.weight *= 1/1.5;}}), 'locked');
 const advisorPeters = new Advisor(16,"Anna Peters", 'https://i.ibb.co/4TmSChy/peters-cropped.jpg',  "If you want to turn out the youth vote, who could be better suited than the leader of the Green Party youth organization?", "The leader of the youth wing of your party wants you to show that you're taking the FFF movement seriously.", (affectedCandidate1=79, changeAmount1=0.005, affectedCandidate2=303, changeAmount2=-0.002) => { Object.keys(YouthMap).forEach(key => {      changeGlobalEffect(affectedCandidate1, parseInt(key), changeAmount1); changeGlobalEffect(affectedCandidate2, parseInt(key), changeAmount2);}); }, (affectedCandidate1=79, changeAmount1=-0.005, affectedCandidate2=303, changeAmount2=0.002) => { Object.keys(YouthMap).forEach(key => {      changeGlobalEffect(affectedCandidate1, parseInt(key), changeAmount1); changeGlobalEffect(affectedCandidate2, parseInt(key), changeAmount2);}); },'locked');
-const advisorBuntenbach = new Advisor(17, "Annelie Buntenbach", 'https://i.ibb.co/zFP3zfP/buntebach-cropped.jpg', "The Greens want to become more succesful than the SPD by winning over many of their voters this election - and as union functionary, Buntenbach has some ideas how.", "If you want to win over SPD voters, this union functionary has some ideas how.", noop, noop, 'locked');
+const advisorBuntenbach = new Advisor(17, "Annelie Buntenbach", 'https://i.ibb.co/zFP3zfP/buntebach-cropped.jpg', "The Greens want to become more succesful than the SPD by winning over many of their voters this election - and as union functionary, Buntenbach has some ideas how.", "If you want to win over SPD voters, this union functionary has some ideas how.", (affectedCandidate1=79, changeAmount1=0.004, affectedCandidate2=78, changeAmount2=-0.003) => { Object.keys(YouthMap).forEach(key => {      changeGlobalEffect(affectedCandidate1, parseInt(key), changeAmount1); changeGlobalEffect(affectedCandidate2, parseInt(key), changeAmount2);}); }, (affectedCandidate1=79, changeAmount1=-0.004, affectedCandidate2=78, changeAmount2=0.003) => { Object.keys(YouthMap).forEach(key => {      changeGlobalEffect(affectedCandidate1, parseInt(key), changeAmount1); changeGlobalEffect(affectedCandidate2, parseInt(key), changeAmount2);}); }, 'locked');
 const advisorGuenther = new Advisor(18, "Wolfram Günther", 'https://i.ibb.co/XWc0f73/g-nther-cropped.jpg', "The Greens are used to struggles in East Germany, but Günther wants to do his part for your campaign to change this.", "This East German minister wants you to show that you are serious about appealing to people in this region.", noop, noop, 'locked');
 
 const advisorsList = [
