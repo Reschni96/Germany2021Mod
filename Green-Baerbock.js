@@ -1778,6 +1778,9 @@ for (let i = 0; i < 7; i++) {
     prepolling.push(simulateMA(35, 5));
 }
 
+var errorDegree = 1;
+var factorPolls=1;
+var factorSeats=1;
 cyoAdventure = function(a) {
     ans = campaignTrail_temp.player_answers[campaignTrail_temp.player_answers.length - 1]
     let pop_vote = e.current_results[0];
@@ -1791,11 +1794,11 @@ cyoAdventure = function(a) {
     // Iterate over each party and inject randomness
     for (let i = 0; i < pop_vote.length; i++) {
         const entry = pop_vote[i];
-        let adjustedPvp = entry.pvp * 100 + prepolling[i][campaignTrail_temp.question_number];
+        let adjustedPvp = entry.pvp * 100 + (errorDegree*prepolling[i][campaignTrail_temp.question_number]);
 
         // Introduce systematic error for the party at index 4
         if (i === 4) {
-            adjustedPvp += 1;
+            adjustedPvp += errorDegree*1;
         }
 
         polling[i].push(Math.round(adjustedPvp * 10) / 10);
