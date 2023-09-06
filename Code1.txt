@@ -29,6 +29,7 @@ e.music.shuffleEnabled = false;
 e.music.Volume=0.3;
 e.displayTooltips = true;
 e.realisticPolls = true;
+e.staff_mode = true;
 
 quotes = [`"Wir schaffen das!" - Angela Merkel`, `"Scheitert der Euro, scheitert Europa." - Angela Merkel`, `"Das Internet ist für uns alle Neuland." - Angela Merkel`, `"Die Demokratie ist kein Supermarkt." - Frank-Walther Steinmeier`, `In my homeland Baden-Württemberg we are all sitting in one boat.`, `"Rechts von der CDU/CSU darf es keine demokratisch legitimierte Partei geben" - Franz-Joseph Strauß`, `"Jetzt wächst zusammen, was zusammen gehört" - Willy Brandt`, `Was kümmert mich mein Geschwätz von gestern? - Konrad Adenauer`, `"Wer Visionen hat, sollte zum Arzt gehen" - Helmut Schmidt`, `There will never be a revolution in Germany. The bureaucratic paperwork for it is missing.`, ]
 customquote = quotes[Math.floor((Math.random() * quotes.length))]
@@ -608,7 +609,7 @@ function changeOpponentSelectionDescription() {
 
     <strong>State Visits</strong> are disabled by default as they have less relevance in a popular vote scenario. However, they can be activated for variety and making the game slightly easier.<br>
 
-    The <strong>Realistic polls</strong> toggle allows for either realistic polls with rounding and potential errors or completely accurate polls like in other mods.<br>
+    The <strong>Advisor Mode</strong> allows you to hire and dismiss your campaign advisors during the campaign. They all have different effects and can be found in the headquarter.<br>
 
     The <strong><span class="mytooltip">Tooltip option<span class="mytooltiptext">Look out for words with a light blue background like this and hover them for a tooltip.</span></span> </strong>provides tooltips for key phrases, offering extra explanations - especially beneficial for those not acquainted with German politics.</p>
   `
@@ -691,21 +692,20 @@ function changeOpponentSelectionDescription() {
                 campaignTrail_temp.election_json[0].fields.has_visits = this.checked ? 1 : 0;
             });
 
-            // Add realistic polls checkbox here
-            var realisticPollsForm = document.createElement("form");
-            realisticPollsForm.name = "realistic_polls_selection";
-            var realisticPollsHeader = document.createElement("h3");
-            realisticPollsHeader.textContent = "Realistic Polls";
-            realisticPollsForm.appendChild(realisticPollsHeader);
-            var realisticPollsCheckbox = document.createElement("input");
-            realisticPollsCheckbox.type = "checkbox";
-            realisticPollsCheckbox.id = "realisticPollsCheckbox";
-            realisticPollsCheckbox.checked = e.realisticPolls;
-            realisticPollsForm.appendChild(realisticPollsCheckbox);
-            difficultyDiv.appendChild(realisticPollsForm);
+            var AdvisorForm = document.createElement("form");
+            AdvisorForm.name = "realistic_polls_selection";
+            var AdvisorHeader = document.createElement("h3");
+            AdvisorHeader.textContent = "Advisor Mode";
+            AdvisorForm.appendChild(AdvisorHeader);
+            var AdvisorCheckbox = document.createElement("input");
+            AdvisorCheckbox.type = "checkbox";
+            AdvisorCheckbox.id = "AdvisorCheckbox";
+            AdvisorCheckbox.checked = e.realisticPolls;
+            AdvisorForm.appendChild(AdvisorCheckbox);
+            difficultyDiv.appendChild(AdvisorForm);
 
-            realisticPollsCheckbox.addEventListener("change", function() {
-                e.realisticPolls = this.checked;
+            AdvisorCheckbox.addEventListener("change", function() {
+                e.staff_mode = this.checked;
             });
 
 
@@ -982,7 +982,7 @@ function paginateContent() {
 
     // Ensure we don't re-enter applyColorStyles
     function applyColorStyles() {
-        let wordsToFind = ['Realistic Polls?','Enable state visits?', 'Select coalition difficulty:', 'Please select the election you will run in:', 'This scenario was made by u/Vilvilea.', 'Please select your party:', 'Please select your candidate:', 'How would you like the seats to be allocated?', 'Select campaign difficulty:', 'Enable tooltips?'];
+        let wordsToFind = ['Advisor Mode?','Enable state visits?', 'Select coalition difficulty:', 'Please select the election you will run in:', 'This scenario was made by u/Vilvilea.', 'Please select your party:', 'Please select your candidate:', 'How would you like the seats to be allocated?', 'Select campaign difficulty:', 'Enable tooltips?'];
 
         walkAndReplace(document.body, wordsToFind);
     }
