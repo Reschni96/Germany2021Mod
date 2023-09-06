@@ -1940,7 +1940,7 @@ function Chartbuilder(type) {
                 title: {
                     text: 'Questions'
                 },
-                categories: Array.from({ length: polling[0].length }, (_, index) => index + 1)
+                categories: Array.from({ length: polling[0].length }, (_, index) => index)
 
             },
 
