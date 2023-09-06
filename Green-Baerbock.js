@@ -2574,8 +2574,8 @@ function addHeadquarterButton() {
     refButton.insertAdjacentElement('afterend', newButton);
 }
 
-//campaignTrail_temp.staff_mode = true;
-var dismissalsLeft = 2;
+campaignTrail_temp.staff_mode = true;
+var dismissalsLeft = 5;
 var likeabilityDescription = ["People find you unlikeable, toxic even", "People seem to have their doubts about your competence", "People are carefully intrigued by you", "People see you as energetic and sympathetic "]
 
 function openHeadquarter() {
@@ -2855,7 +2855,7 @@ function openHeadquarter() {
 
     middleCol.appendChild(advisorContainer);
 
-    if (campaignTrail_temp.staff_mode) {
+    if (campaignTrail_temp.staff_mode && dismissalsLeft>0) {
         // Add hire button with margin
         let hireButton = document.createElement('button');
         hireButton.innerText = 'Hire Advisors';
@@ -2875,11 +2875,41 @@ function openHeadquarter() {
     var dismissInfoDiv = document.createElement('div');
     dismissInfoDiv.style.border = '5px solid black';
     dismissInfoDiv.style.borderRadius = '10px';
+    dismissInfoDiv.style.padding = '1em';
     dismissInfoDiv.className = 'happy-box';
-    let dismissInfo = document.createElement('p');
-    dismissInfo.innerText = `You can dismiss advisors ${dismissalsLeft} more times.`;
-    dismissInfoDiv.appendChild(dismissInfo);
+
+    let dismissStatus = document.createElement('span'); // Create a span to hold the dismissal status
+
+    let dismissalsDone = 5 - dismissalsLeft;
+
+    dismissStatus.innerText += "Campaign status: ";
+
+    switch(dismissalsDone) {
+        case 0:
+            dismissStatus.innerText += "Harmonious campaign";
+            break;
+        case 1:
+            dismissStatus.innerText += "United campaign";
+            break;
+        case 2:
+            dismissStatus.innerText += "Somewhat united campaign";
+            break;
+        case 3:
+            dismissStatus.innerText += "Some discord in the campaign";
+            break;
+        case 4:
+            dismissStatus.innerText += "Disunited campaign";
+            break;
+        case 5:
+            dismissStatus.innerText += "Chaotic campaign";
+            break;
+        default:
+            dismissStatus.innerText += "Campaign status unknown";
+    }
+
+    dismissInfoDiv.appendChild(dismissStatus);
     middleCol.appendChild(dismissInfoDiv);
+
 
 
     let predictionWrapperDiv = document.createElement('div');
@@ -3181,7 +3211,7 @@ function openHeadquarter() {
                 likeabilityDescDiv.style.zIndex = '';
                 explanationBox.style.left = (rect3.right - hqRect.left + (2 * 14)) + 'px';
                 explanationBox.style.top = (rect3.top - hqRect.top + (4 * 14)) + 'px';
-                explanationBox.querySelector('p').innerText = "Here, you can view the advisors your campaign has right now. You have up to two slots you can fill. Advisors give different benefits and effect. Some are always unlocked, some can be unlocked throughout the campaign. On the other hand, advisors can also disappear from the potential hire list or quit your campaign if they disagree with your decisions. You can also dismiss them to make space for new advisors - more about that in a moment.";
+                explanationBox.querySelector('p').innerText = "Here, you can view the advisors your campaign has right now. You have up to two slots you can fill. Advisors give different benefits and effect. Some are always unlocked, some can be unlocked throughout the campaign. On the other hand, advisors can also disappear from the potential hire list or quit your campaign if they disagree with your decisions. You can also dismiss them to make space for new advisors - but be aware that once dismissed, an advisor can't be rehired";
                 break;
             case 3:
                 let rect4 = dismissInfoDiv.getBoundingClientRect();
