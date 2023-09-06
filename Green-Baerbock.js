@@ -2667,6 +2667,7 @@ function openHeadquarter() {
             // Show the overlay and change button text
             overlay.style.display = '';
             explanationBox.style.display = '';
+            continueButton.style.display='';
             tutorialButton.innerText = 'Return';
             let rect = tutorialButton.getBoundingClientRect();
             hqRect = hqDiv.getBoundingClientRect();
@@ -2680,11 +2681,13 @@ function openHeadquarter() {
             overlay.style.display = 'none';
             tutorialButton.innerText = 'Tutorial';
             //clear stray z-indexes if there are any
-            patienceDiv.style.zIndex = '';
+            patienceDiv.style.zIndex = '2';
             patienceHeaderDiv.style.zIndex = '';
             likeabilityDescDiv.style.zIndex = '';
             pollingDiv.style.zIndex = '';
             advisorHeaderDiv.style.zIndex = '';
+            moodDiv.style.zIndex = '';
+            coalitionDiv.style.zIndex = '';
             const slots = document.querySelectorAll('.advisor-slot');
 
             slots.forEach((element) => {
@@ -2748,7 +2751,7 @@ function openHeadquarter() {
               element.style.zIndex = '1001';
             });
 
-          patienceDiv.style.zIndex = '';
+          patienceDiv.style.zIndex = '2';
           patienceHeaderDiv.style.zIndex = '';
           likeabilityDescDiv.style.zIndex = '';
           explanationBox.style.left = (rect3.right - hqRect.left + (2 * 14)) + 'px';
@@ -2767,6 +2770,35 @@ function openHeadquarter() {
           explanationBox.style.left = (rect4.left - hqRect.left - (4.5 * 14)) + 'px';
           explanationBox.style.top = (rect4.top - hqRect.top - (12 * 14) ) + 'px';
           explanationBox.querySelector('p').innerText = "This box contains information on the unity of your campaign. Campaign unity is mainly affected by your advisor management - dismissing advisors and having them quit will negatively impact your unity. Your campaign decisions can also influence the unity. Be careful: If your campaign unity becomes too low, you won't be able to hire or dismiss any more advisors! Unity also has a small effect on your polling.";
+          break;
+          case 4:
+          let rect5 = moodDiv.getBoundingClientRect();
+          hqRect = hqDiv.getBoundingClientRect();
+          dismissInfoDiv.style.zIndex = '';
+          moodDiv.style.zIndex = 1001;
+          explanationBox.style.left = (rect5.left - hqRect.left - (4.5 * 14)) + 'px';
+          explanationBox.style.top = (rect5.top - hqRect.top + (12 * 14)) + 'px';
+          explanationBox.querySelector('p').innerText = "The campaign mood is purely cosmetic and for flavor and has no gameplay effects.";
+          break;
+
+          case 5:
+          let rect6 = coalitionDiv.getBoundingClientRect();
+          hqRect = hqDiv.getBoundingClientRect();
+          coalitionDiv.style.zIndex = '1001';
+          moodDiv.style.zIndex = '';
+          explanationBox.style.left = (rect6.right - hqRect.left + (2 * 14)) + 'px';
+          explanationBox.style.top = (rect6.top - hqRect.top + (4 * 14)) + 'px';
+          explanationBox.querySelector('p').innerText = "Finally, in this box, it's displayed which coalition would currently have a majority. \"Likely\" means that the odds of them getting a majority are high, \"shaky\" means that it's close and \"unlikely\" means that it's unlikely, but not impossible. Only coalitions which make sense in the current political climate are displayed - you can change that with your coalition promises. If you want to know what parties are included in a given coalition, just hover it";
+          break;
+
+          case 6:
+          let rect7 = tutorialButton.getBoundingClientRect();
+          hqRect = hqDiv.getBoundingClientRect();
+          continueButton.style.display='none';
+          coalitionDiv.style.zIndex = '';
+          explanationBox.style.left = (rect7.left - hqRect.left - (12.5 * 14)) + 'px';
+          explanationBox.style.top = (rect7.top - hqRect.top - (7 * 14) - rect7.height) + 'px';
+          explanationBox.querySelector('p').innerText = "This concludes the tutorial. Please press return now to return to the game. You can restart the tutorial at any time.";
           break;
       }
 
