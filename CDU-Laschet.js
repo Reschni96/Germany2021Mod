@@ -1570,7 +1570,7 @@ function updatePolling() {
                     var seatData = ""; // Initialize empty string for seat data
                     sortedResults.forEach(function(result) {
                         var candidateDetails = campaignTrail_temp.candidate_json.find(c => c.pk === result.candidate);
-                        var roundedElectoralVotes = Math.round(result.electoral_votes / 5) * 5;
+                        var roundedElectoralVotes = Math.round(result.electoral_votes / (5/factorSeats)) * (5/factorSeats);
                         var name = candidateDetails ? candidateDetails.fields.last_name : 'Unknown';
 
                         seatData += `<b>${name}</b> - ${roundedElectoralVotes}<br>`; // Use <br> for line breaks
@@ -1622,7 +1622,7 @@ function updatePolling() {
                   partyData.sort((a, b) => b.polling - a.polling);
 
                   for (var i = 0; i < partyData.length; i++) {
-                    var roundedPolling = Math.round(partyData[i].polling * 2) / 2;
+                                            var roundedPolling = Math.round(partyData[i].polling *2*factorPolls) / (2*factorPolls);
                     newPollingData += "<b>" + partyData[i].name + "</b> - " + roundedPolling.toFixed(1) + "%<br>";
                   }
 
@@ -2242,7 +2242,6 @@ var currentCoalitions = coalitionTalks(temp.final_overall_results)
 
 
 
-
 function createPollingBarChart(polling) {
     var myChart = Highcharts.chart('myChart', {
         chart: {
@@ -2264,31 +2263,31 @@ function createPollingBarChart(polling) {
         },
         series: [{
             name: 'CDU/CSU',
-            data: [Math.round(polling[0][polling[0].length - 1] * 2) / 2],
+            data: [Math.round(polling[0][polling[0].length - 1] * 2*factorPolls) / (2*factorPolls)],
             color: e.candidate_json[0].fields.color_hex
         }, {
             name: 'SPD',
-            data: [Math.round(polling[1][polling[1].length - 1] * 2) / 2],
+            data: [Math.round(polling[1][polling[1].length - 1] * 2*factorPolls) / (2*factorPolls)],
             color: e.candidate_json[1].fields.color_hex
-        },{
+        }, {
             name: 'Greens',
-            data: [Math.round(polling[2][polling[2].length - 1] * 2) / 2],
+            data: [Math.round(polling[2][polling[2].length - 1] * 2*factorPolls) / (2*factorPolls)],
             color: e.candidate_json[2].fields.color_hex
-        },{
+        }, {
             name: 'FDP',
-            data: [Math.round(polling[3][polling[3].length - 1] * 2) / 2],
+            data: [Math.round(polling[3][polling[3].length - 1] * 2*factorPolls) / (2*factorPolls)],
             color: e.candidate_json[3].fields.color_hex
-        },{
+        }, {
             name: 'Left',
-            data: [Math.round(polling[4][polling[4].length - 1] * 2) / 2],
+            data: [Math.round(polling[4][polling[4].length - 1] * 2*factorPolls) / (2*factorPolls)],
             color: e.candidate_json[4].fields.color_hex
-        },{
+        }, {
             name: 'AfD',
-            data: [Math.round(polling[5][polling[5].length - 1] * 2) / 2],
+            data: [Math.round(polling[5][polling[5].length - 1] * 2*factorPolls) / (2*factorPolls)],
             color: e.candidate_json[5].fields.color_hex
-        },{
+        }, {
             name: 'Others',
-            data: [Math.round(polling[6][polling[6].length - 1] * 2) / 2],
+            data: [Math.round(polling[6][polling[6].length - 1] * 2*factorPolls) / (2*factorPolls)],
             color: e.candidate_json[6].fields.color_hex
         }]
     });
@@ -2348,7 +2347,7 @@ function populateSeatEstimate(final_overall_results, candidate_json) {
 
   final_overall_results.forEach(function(result) {
     var candidateDetails = candidate_json.find(c => c.pk === result.candidate);
-    var roundedElectoralVotes = Math.round(result.electoral_votes / 5) * 5;
+    var roundedElectoralVotes = Math.round(result.electoral_votes / (5/factorSeats)) * (5/factorSeats);
 
     var color = candidateDetails ? candidateDetails.fields.color_hex : "#000";
     var name = candidateDetails ? candidateDetails.fields.last_name : 'Unknown';
