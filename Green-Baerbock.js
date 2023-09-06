@@ -2237,6 +2237,54 @@ function changeIssueEffect(answer, issue, changeScore, changeImportance) {
 
 //css stuff here
 
+campaignTrail_temp.election_json[0].fields.advisor_url = 'https://i.ibb.co/v1jXrBG/gr-ne-cropped.webp';
+
+function modifyVisitContent() {
+  const visitContentDiv = document.getElementById('visit_content');
+
+  if (visitContentDiv && campaignTrail_temp.staff_mode && !visitContentDiv.classList.contains('modified')) {
+    // Find the existing image element
+    const existingImage = visitContentDiv.querySelector('img');
+
+    if (existingImage) {
+      // Find active advisors
+      const activeAdvisors = advisorsList.filter(advisor => advisor.status === 'active');
+
+      if (activeAdvisors.length > 0) {
+        // Create a container for the new images
+        const imgContainer = document.createElement('div');
+        imgContainer.style.display = 'flex';
+        imgContainer.style.justifyContent = 'center';
+        imgContainer.style.alignItems = 'center';
+        imgContainer.style.margin = 'auto';
+
+        activeAdvisors.forEach((advisor, index) => {
+          let img = document.createElement('img');
+          img.src = advisor.picture;
+          img.style.height = '128px';
+
+          // Remove the border based on the position
+          if (activeAdvisors.length > 1) {
+            if (index === 0) {
+              img.style.borderRight = 'none';
+            } else if (index === activeAdvisors.length - 1) {
+              img.style.borderLeft = 'none';
+            }
+          }
+
+          imgContainer.appendChild(img);
+        });
+
+        // Replace the existing image with the new image(s)
+        existingImage.parentNode.replaceChild(imgContainer, existingImage);
+
+        // Mark the div as modified
+        visitContentDiv.classList.add('modified');
+      }
+    }
+  }
+}
+
 async function changeChart(processedNodes) {
     const elementIDs = ["overall_vote_statistics", "state_result_data_summary", "overall_details_container"];
     for (let id of elementIDs) {
@@ -3719,6 +3767,7 @@ async function handleMutations(mutationsList, observer) {
     observerRunning = true;
 
     observer.disconnect();
+    modifyVisitContent();
     removeElectoralVotesZero()
     await changeChart(processedNodes);
     await adjustMcaHeight(processedNodes);
