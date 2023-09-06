@@ -2342,7 +2342,7 @@ function openHeadquarter() {
 
     if (campaignTrail_temp.staff_mode) {
 
-        let advisorHeaderDiv = document.createElement('div');
+        var advisorHeaderDiv = document.createElement('div');
         advisorHeaderDiv.style.border = '5px solid black';
         advisorHeaderDiv.style.borderRadius = '10px';
         advisorHeaderDiv.className = 'happy-box';
@@ -2353,7 +2353,7 @@ function openHeadquarter() {
         advisorHeaderDiv.appendChild(advisorHeader);
         middleCol.appendChild(advisorHeaderDiv);
 
-        let advisorContainer = document.createElement('div');
+        var advisorContainer = document.createElement('div');
         advisorContainer.style.display = 'flex';
         advisorContainer.style.justifyContent = 'center';
 
@@ -2467,7 +2467,7 @@ function openHeadquarter() {
     middleCol.appendChild(hireButton);
 
     // Add dismissal information
-    let dismissInfoDiv = document.createElement('div');
+    var dismissInfoDiv = document.createElement('div');
     dismissInfoDiv.style.border = '5px solid black';
     dismissInfoDiv.style.borderRadius = '10px';
     dismissInfoDiv.className = 'happy-box';
@@ -2684,6 +2684,12 @@ function openHeadquarter() {
             patienceHeaderDiv.style.zIndex = '';
             likeabilityDescDiv.style.zIndex = '';
             pollingDiv.style.zIndex = '';
+            advisorHeaderDiv.style.zIndex = '';
+            const slots = document.querySelectorAll('.advisor-slot');
+
+            slots.forEach((element) => {
+              element.style.zIndex = '';
+            });
         }
     };
 
@@ -2711,9 +2717,12 @@ function openHeadquarter() {
 
     function moveToStep(step) {
 
+      const slots = document.querySelectorAll('.advisor-slot');
+
       switch (step) {
         case 0:
           let rect1 = pollingDiv.getBoundingClientRect();
+          hqRect = hqDiv.getBoundingClientRect();
           pollingDiv.style.zIndex = 1001;
           explanationBox.style.left = (rect1.right - hqRect.left + (2 * 14)) + 'px';
           explanationBox.style.top = (rect1.top - hqRect.top + (4 * 14)) + 'px';
@@ -2721,6 +2730,7 @@ function openHeadquarter() {
           break;
         case 1:
           let rect2 = patienceDiv.getBoundingClientRect();
+          hqRect = hqDiv.getBoundingClientRect();
           pollingDiv.style.zIndex = '';
           patienceDiv.style.zIndex = 1001;
           patienceHeaderDiv.style.zIndex = 1001;
@@ -2730,16 +2740,34 @@ function openHeadquarter() {
           explanationBox.querySelector('p').innerText = "In this area, a specific characteristic that is unique to your character is described - both with the coloured circles and in text. The more circles you have and they closer they are to green, the better. The value can be influenced by choices during the campaign and advisors and will have an influence on your campaign.";
           break;
           case 2:
-          let rect3 = patienceDiv.getBoundingClientRect();
-          pollingDiv.style.zIndex = '';
+          let rect3 = advisorHeaderDiv.getBoundingClientRect();
+          hqRect = hqDiv.getBoundingClientRect();
+          advisorHeaderDiv.style.zIndex = '1001';
+
+            slots.forEach((element) => {
+              element.style.zIndex = '1001';
+            });
+
           patienceDiv.style.zIndex = '';
           patienceHeaderDiv.style.zIndex = '';
           likeabilityDescDiv.style.zIndex = '';
-          explanationBox.style.left = (rect3.left - hqRect.left - (33 * 14)) + 'px';
-          explanationBox.style.top = (rect3.top - hqRect.top - (2 * 14)) + 'px';
-          explanationBox.querySelector('p').innerText = "In this area, a specific characteristic that is unique to your character is described - both with the coloured circles and in text. The more circles you have and they closer they are to green, the better. The value can be influenced by choices during the campaign and advisors and will have an influence on your campaign.";
+          explanationBox.style.left = (rect3.right - hqRect.left + (2 * 14)) + 'px';
+          explanationBox.style.top = (rect3.top - hqRect.top + (4 * 14)) + 'px';
+          explanationBox.querySelector('p').innerText = "Here, you can view the advisors your campaign has right now. You have up to two slots you can fill. Advisors give different benefits and effect. Some are always unlocked, some can be unlocked throughout the campaign. On the other hand, advisors can also disappear from the potential hire list or quit your campaign if they disagree with your decisions. You can also dismiss them to make space for new advisors - more about that in a moment.";
           break;
+          case 3:
+          let rect4 = dismissInfoDiv.getBoundingClientRect();
+          hqRect = hqDiv.getBoundingClientRect();
+          advisorHeaderDiv.style.zIndex = '';
+            slots.forEach((element) => {
+              element.style.zIndex = '';
+            });
 
+          dismissInfoDiv.style.zIndex = '1001';
+          explanationBox.style.left = (rect4.left - hqRect.left - (4.5 * 14)) + 'px';
+          explanationBox.style.top = (rect4.top - hqRect.top - (12 * 14) ) + 'px';
+          explanationBox.querySelector('p').innerText = "This box contains information on the unity of your campaign. Campaign unity is mainly affected by your advisor management - dismissing advisors and having them quit will negatively impact your unity. Your campaign decisions can also influence the unity. Be careful: If your campaign unity becomes too low, you won't be able to hire or dismiss any more advisors! Unity also has a small effect on your polling.";
+          break;
       }
 
       // Update step
