@@ -1393,7 +1393,7 @@ cyoAdventure = function (a) {
 
       // Introduce systematic error for the party at index 4
       if (i === 4) {
-        adjustedPvp += -1;
+        adjustedPvp += 1;
       }
 
       polling[i].push(Math.round(adjustedPvp * 10) / 10);
@@ -2730,13 +2730,13 @@ function openHeadquarter() {
           explanationBox.querySelector('p').innerText = "In this area, a specific characteristic that is unique to your character is described - both with the coloured circles and in text. The more circles you have and they closer they are to green, the better. The value can be influenced by choices during the campaign and advisors and will have an influence on your campaign.";
           break;
           case 2:
-          let rect2 = patienceDiv.getBoundingClientRect();
+          let rect3 = patienceDiv.getBoundingClientRect();
           pollingDiv.style.zIndex = '';
           patienceDiv.style.zIndex = '';
           patienceHeaderDiv.style.zIndex = '';
           likeabilityDescDiv.style.zIndex = '';
-          explanationBox.style.left = (rect2.left - hqRect.left - (33 * 14)) + 'px';
-          explanationBox.style.top = (rect2.top - hqRect.top - (2 * 14)) + 'px';
+          explanationBox.style.left = (rect3.left - hqRect.left - (33 * 14)) + 'px';
+          explanationBox.style.top = (rect3.top - hqRect.top - (2 * 14)) + 'px';
           explanationBox.querySelector('p').innerText = "In this area, a specific characteristic that is unique to your character is described - both with the coloured circles and in text. The more circles you have and they closer they are to green, the better. The value can be influenced by choices during the campaign and advisors and will have an influence on your campaign.";
           break;
 
@@ -2852,9 +2852,9 @@ function showAdvisors() {
             name.style.fontWeight = 'bold';
             name.style.color = 'black';
             name.style.padding='0.2em'
-
             let description = document.createElement('div');
             description.innerText = advisor.description;
+            description.style.margin='2px'
             description.style.color = 'black';
 
             // Wrap the description in another div
