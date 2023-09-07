@@ -2866,6 +2866,19 @@ function openHeadquarter() {
     rightCol.style.width = '30%';
     hqDiv.appendChild(rightCol);
 
+    if (window.innerWidth <= 768) {
+        hqDiv.style.flexDirection = 'column';
+        hqDiv.style.height = 'auto';
+        leftCol.style.width = '100%';
+        leftCol.style.order = '2';
+
+        middleCol.style.width = '100%';
+        middleCol.style.order = '1';
+
+        rightCol.style.width = '100%';
+        rightCol.style.order = '3';
+    }
+
     // Create wrapper div for the header and mood
     let headerWrapper = document.createElement('div');
     headerWrapper.style.display = 'block'; // Stack the divs on top of each other
@@ -3353,7 +3366,11 @@ function openHeadquarter() {
         overlay.remove();
         questions.style.display = '';
     };
-    middleCol.appendChild(backButton);
+    if (window.innerWidth <= 768) {
+    rightCol.appendChild(backButton); // Attach to right column for small screens
+    } else {
+        middleCol.appendChild(backButton); // Attach to middle column for larger screens
+    }
 
     let overlay = document.createElement('div');
     overlay.id = 'tutorialOverlay';
@@ -3412,7 +3429,11 @@ function openHeadquarter() {
         }
     };
 
-    middleCol.appendChild(tutorialButton);
+    if (window.innerWidth <= 768) {
+    rightCol.appendChild(tutorialButton); // Attach to right column for small screens
+    } else {
+        middleCol.appendChild(tutorialButton); // Attach to middle column for larger screens
+    }
 
     let explanationBox = document.createElement('div');
     explanationBox.className = 'explanation-box happy-box';

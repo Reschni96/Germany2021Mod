@@ -1331,11 +1331,13 @@ function paginateContent() {
                   #inner_window_2,
                   #inner_window_3,
                    #inner_window_4,
-                   #headquarter,
                    #advisors{
                     font-size: 1.8em;
                 }
-
+                #headquarter{
+                overflow:auto;
+                font-size:1.5em;
+                }
                 #map_footer{
                     padding-right:10em;
                 }
@@ -1349,7 +1351,9 @@ function paginateContent() {
                     #inner_window_2 button,
                     #inner_window_3 button,
                     #inner_window_4 button,
-                     #game_window button{
+                     #game_window button,
+                      #headquarter button,
+                      #advisorsDiv button{
                         font-size: 1em;
                         line-height: 2em;
                     }
