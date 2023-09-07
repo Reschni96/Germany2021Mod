@@ -3436,10 +3436,14 @@ function openHeadquarter() {
             explanationBox.style.display = '';
             continueButton.style.display = '';
             tutorialButton.innerText = 'Return';
-            let rect = tutorialButton.getBoundingClientRect();
+            rect = tutorialButton.getBoundingClientRect();
             hqRect = hqDiv.getBoundingClientRect();
             explanationBox.style.left = (rect.left - hqRect.left - (12.5 * 14)) + 'px';
             explanationBox.style.top = (rect.top - hqRect.top - (7 * 14) - rect.height) + 'px';
+            if (window.innerWidth <= 768) {
+                explanationBox.style.left = (rect.left - hqRect.left - (18 * 14)) + 'px';
+                explanationBox.style.top = (rect.top - hqRect.top - (13 * 14) - rect.height) + 'px';
+            }
             textContent.innerText = 'Welcome to the tutorial. It will teach you everything there is to know about the campaign headquarter. To exit the tutorial, press the return button. To continue, simply press contine.';
             currentStep = 0;
         } else {
@@ -3455,6 +3459,7 @@ function openHeadquarter() {
             advisorHeaderDiv.style.zIndex = '';
             moodDiv.style.zIndex = '';
             coalitionDiv.style.zIndex = '';
+            dismissInfoDiv.style.zIndex = '';
             const slots = document.querySelectorAll('.advisor-slot');
 
             slots.forEach((element) => {
@@ -3497,25 +3502,36 @@ function openHeadquarter() {
             case 0:
                 let rect1 = pollingDiv.getBoundingClientRect();
                 hqRect = hqDiv.getBoundingClientRect();
+                rect = tutorialButton.getBoundingClientRect();
                 pollingDiv.style.zIndex = 1001;
                 explanationBox.style.left = (rect1.right - hqRect.left + (2 * 14)) + 'px';
                 explanationBox.style.top = (rect1.top - hqRect.top + (4 * 14)) + 'px';
+                if (window.innerWidth <= 768) {
+                    explanationBox.style.left = (rect.left - hqRect.left - (18 * 14)) + 'px';
+                    explanationBox.style.top = (rect1.top - hqRect.top + (36 * 14)) + 'px';
+                }
                 explanationBox.querySelector('p').innerText = "In this box, your current polling is shown. It is identical to the polling that's shown in the map area. With the button, you can switch to a seat estimate. Both the percentages and seats are rounded. Be careful - polls can be inaccurate! A special advisor can help with the accuracy and make the rounding more precise";
                 break;
             case 1:
                 let rect2 = patienceDiv.getBoundingClientRect();
                 hqRect = hqDiv.getBoundingClientRect();
+                rect = tutorialButton.getBoundingClientRect();
                 pollingDiv.style.zIndex = '';
                 patienceDiv.style.zIndex = 1001;
                 patienceHeaderDiv.style.zIndex = 1001;
                 likeabilityDescDiv.style.zIndex = 1001;
                 explanationBox.style.left = (rect2.left - hqRect.left - (33 * 14)) + 'px';
                 explanationBox.style.top = (rect2.top - hqRect.top - (2 * 14)) + 'px';
+                if (window.innerWidth <= 768) {
+                    explanationBox.style.left = (rect.left - hqRect.left - (18 * 14)) + 'px';
+                    explanationBox.style.top = (rect2.top - hqRect.top - (28 * 14)) + 'px';
+                }
                 explanationBox.querySelector('p').innerText = "In this area, a specific characteristic that is unique to your character is described - both with the coloured circles and in text. The more circles you have and they closer they are to green, the better. The value can be influenced by choices during the campaign and advisors and will have an influence on your campaign.";
                 break;
             case 2:
                 let rect3 = advisorHeaderDiv.getBoundingClientRect();
                 hqRect = hqDiv.getBoundingClientRect();
+                rect = tutorialButton.getBoundingClientRect();
                 advisorHeaderDiv.style.zIndex = '1001';
 
                 slots.forEach((element) => {
@@ -3527,6 +3543,10 @@ function openHeadquarter() {
                 likeabilityDescDiv.style.zIndex = '';
                 explanationBox.style.left = (rect3.right - hqRect.left + (2 * 14)) + 'px';
                 explanationBox.style.top = (rect3.top - hqRect.top + (4 * 14)) + 'px';
+                if (window.innerWidth <= 768) {
+                    explanationBox.style.left = (rect.left - hqRect.left - (18 * 14)) + 'px';
+                    explanationBox.style.top = (rect3.top - hqRect.top + (46 * 14)) + 'px';
+                }
                 if(campaignTrail_temp.staff_mode){
                     explanationBox.querySelector('p').innerText = "Here, you can view the advisors your campaign has right now. You have up to two slots you can fill. Advisors give different benefits and effect. Some are always unlocked, some can be unlocked throughout the campaign. On the other hand, advisors can also disappear from the potential hire list or quit your campaign if they disagree with your decisions. You can also dismiss them to make space for new advisors - but be aware that once dismissed, an advisor can't be rehired";
                 }
@@ -3537,6 +3557,7 @@ function openHeadquarter() {
             case 3:
                 let rect4 = dismissInfoDiv.getBoundingClientRect();
                 hqRect = hqDiv.getBoundingClientRect();
+                rect = tutorialButton.getBoundingClientRect();
                 advisorHeaderDiv.style.zIndex = '';
                 slots.forEach((element) => {
                     element.style.zIndex = '';
@@ -3545,6 +3566,10 @@ function openHeadquarter() {
                 dismissInfoDiv.style.zIndex = '1001';
                 explanationBox.style.left = (rect4.left - hqRect.left - (4.5 * 14)) + 'px';
                 explanationBox.style.top = (rect4.top - hqRect.top - (12 * 14)) + 'px';
+                if (window.innerWidth <= 768) {
+                    explanationBox.style.left = (rect.left - hqRect.left - (18 * 14)) + 'px';
+                    explanationBox.style.top = (rect4.top - hqRect.top + (17 * 14)) + 'px';
+                }
                 if(campaignTrail_temp.staff_mode){
                 explanationBox.querySelector('p').innerText = "This box contains information on the unity of your campaign. Campaign unity is mainly affected by your advisor management - dismissing advisors and having them quit will negatively impact your unity. Your campaign decisions can also influence the unity. Be careful: If your campaign unity becomes too low, you won't be able to hire or dismiss any more advisors! Unity also has a small effect on your polling.";
                 }
@@ -3555,30 +3580,45 @@ function openHeadquarter() {
             case 4:
                 let rect5 = moodDiv.getBoundingClientRect();
                 hqRect = hqDiv.getBoundingClientRect();
+                rect = tutorialButton.getBoundingClientRect();
                 dismissInfoDiv.style.zIndex = '';
                 moodDiv.style.zIndex = 1001;
                 explanationBox.style.left = (rect5.left - hqRect.left - (4.5 * 14)) + 'px';
                 explanationBox.style.top = (rect5.top - hqRect.top + (12 * 14)) + 'px';
+                if (window.innerWidth <= 768) {
+                    explanationBox.style.left = (rect.left - hqRect.left - (18 * 14)) + 'px';
+                    explanationBox.style.top = (rect5.top - hqRect.top + (18 * 14)) + 'px';
+                }
                 explanationBox.querySelector('p').innerText = "The campaign mood is purely cosmetic and for flavor and has no gameplay effects.";
                 break;
 
             case 5:
                 let rect6 = coalitionDiv.getBoundingClientRect();
                 hqRect = hqDiv.getBoundingClientRect();
+                rect = tutorialButton.getBoundingClientRect();
                 coalitionDiv.style.zIndex = '1001';
                 moodDiv.style.zIndex = '';
                 explanationBox.style.left = (rect6.right - hqRect.left + (2 * 14)) + 'px';
                 explanationBox.style.top = (rect6.top - hqRect.top + (4 * 14)) + 'px';
+                if (window.innerWidth <= 768) {
+                    explanationBox.style.left = (rect.left - hqRect.left - (18 * 14)) + 'px';
+                    explanationBox.style.top = (rect6.top - hqRect.top + (34 * 14)) + 'px';
+                }
                 explanationBox.querySelector('p').innerText = "Finally, in this box, it's displayed which coalition would currently have a majority. \"Likely\" means that the odds of them getting a majority are high, \"shaky\" means that it's close and \"unlikely\" means that it's unlikely, but not impossible. Only coalitions which make sense in the current political climate are displayed - you can change that with your coalition promises. If you want to know what parties are included in a given coalition, just hover it";
                 break;
 
             case 6:
                 let rect7 = tutorialButton.getBoundingClientRect();
                 hqRect = hqDiv.getBoundingClientRect();
+                rect = tutorialButton.getBoundingClientRect();
                 continueButton.style.display = 'none';
                 coalitionDiv.style.zIndex = '';
                 explanationBox.style.left = (rect7.left - hqRect.left - (12.5 * 14)) + 'px';
                 explanationBox.style.top = (rect7.top - hqRect.top - (7 * 14) - rect7.height) + 'px';
+                if (window.innerWidth <= 768) {
+                explanationBox.style.left = (rect.left - hqRect.left - (18 * 14)) + 'px';
+                explanationBox.style.top = (rect7.top - hqRect.top - (13 * 14) - rect.height) + 'px';
+            }
                 explanationBox.querySelector('p').innerText = "This concludes the tutorial. Please press return now to return to the game. You can restart the tutorial at any time.";
                 break;
         }
