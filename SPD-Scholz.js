@@ -661,7 +661,7 @@ function adjustSeatAllocation(e, candidateIdsToIgnore=[]) {
     e.final_overall_results.forEach(party => {
         if (!candidateIdsToIgnore.includes(party.candidate)) {
             let bonusSeats = getBonusSeats(party, candidateIdsToIgnore);
-            party.electoral_votes -= bonusSeats;
+            party.electoral_votes += bonusSeats;
         }
     });
 
