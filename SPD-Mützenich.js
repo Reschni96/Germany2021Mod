@@ -630,25 +630,39 @@ function adjustSeatAllocation(e, candidateIdsToIgnore=[]) {
             }
         }
     });
+    e.final_overall_results.forEach(party => {
+        if (!candidateIdsToIgnore.includes(party.candidate)) {
+            let bonusSeats = getBonusSeats(party, candidateIdsToIgnore);
+            party.electoral_votes -= bonusSeats;
+        }
+    });
 
-    // Now check the rankings
+
     let voteRanking = [...e.final_overall_results]
         .filter(party => !candidateIdsToIgnore.includes(party.candidate))
         .sort((a, b) => b.popular_votes - a.popular_votes);
 
     let seatRanking = [...e.final_overall_results]
         .filter(party => !candidateIdsToIgnore.includes(party.candidate))
-        .sort((a, b) => (b.electoral_votes - getBonusSeats(b, candidateIdsToIgnore)) - (a.electoral_votes - getBonusSeats(a, candidateIdsToIgnore)));
+        .sort((a, b) => b.electoral_votes - a.electoral_votes);
 
     for (let i = 0; i < voteRanking.length; i++) {
         if (voteRanking[i].candidate !== seatRanking[i].candidate) {
-            // Give additional seats to the party until their seat count is equal
             let voteRankParty = voteRanking[i];
             let seatRankParty = seatRanking[i];
             let extraSeats = seatRankParty.electoral_votes - voteRankParty.electoral_votes;
             voteRankParty.electoral_votes += extraSeats;
         }
     }
+
+
+    e.final_overall_results.forEach(party => {
+        if (!candidateIdsToIgnore.includes(party.candidate)) {
+            let bonusSeats = getBonusSeats(party, candidateIdsToIgnore);
+            party.electoral_votes -= bonusSeats;
+        }
+    });
+
     e.final_overall_results.sort((a, b) => b.electoral_votes - a.electoral_votes || b.popular_votes - a.popular_votes);
 
 }
