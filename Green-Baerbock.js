@@ -2821,7 +2821,6 @@ function addHeadquarterButton() {
     refButton.insertAdjacentElement('afterend', newButton);
 }
 
-campaignTrail_temp.staff_mode = true;
 var dismissalsLeft = 5;
 var likeabilityDescription = ["People find you unlikeable, toxic even", "People seem to have their doubts about your competence", "People are carefully intrigued by you", "People see you as energetic and sympathetic "]
 
