@@ -3051,6 +3051,11 @@ function openHeadquarter() {
             name.style.overflowWrap = 'break-word'; // Breaks the word if necessary
             name.style.maxWidth = '115px';
             name.style.height = '32px';
+
+            if (window.innerWidth <= 768) {
+
+                name.style.height = '64px';
+            }
             imgContainer.appendChild(name);
             slot.appendChild(imgContainer);
 
@@ -3105,6 +3110,10 @@ function openHeadquarter() {
         name.style.overflowWrap = 'break-word'; // Breaks the word if necessary
         name.style.maxWidth = '115px';
         name.style.height = '32px';
+        if (window.innerWidth <= 768) {
+
+                name.style.height = '64px';
+            }
         name.style.color = 'black'
         name.style.padding = '0.5em'
         name.style.fontWeight = 'bold';
@@ -3678,6 +3687,10 @@ function showAdvisors() {
             let descriptionContainer = document.createElement('div');
             descriptionContainer.style.padding = '0.5em'
             descriptionContainer.style.height = '8em'
+            if (window.innerWidth <= 768) {
+                descriptionContainer.style.padding = '0.2em'
+                descriptionContainer.style.height = '12em'
+            }
             descriptionContainer.style.width = '170px'
             descriptionContainer.appendChild(description);
 
