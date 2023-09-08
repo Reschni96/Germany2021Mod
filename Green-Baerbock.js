@@ -2067,6 +2067,11 @@ cyoAdventure = function(a) {
             applyDrift(79, 0.0015, [3003, 3007, 3012, 3013, 3015]);
         }
 
+        //quitting
+        if (ans === 4024) {
+            advisorHabeck.quit();
+        }
+
     }
 
     //Mini-CYOA here
@@ -3859,6 +3864,18 @@ class Advisor {
     dismiss() {
         this.dismissCode();
         this.status = "dismissed";
+    }
+
+    quit() {
+        if (this.status === 'active') {
+            this.dismiss();
+            advisor_news = true;
+            if (dismissalsLeft > 0) {
+                dismissalsLeft--;
+            }
+        } else {
+            this.status = 'dismissed';
+        }
     }
 }
 
