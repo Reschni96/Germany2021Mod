@@ -510,7 +510,7 @@ var HabeckTime = false;
 var ideologyCenter = 0;
 var ideologyLeft = 0;
 var mood = "Optimistic"
-var likeability = 10;
+var likeability = 12;
 var totalSeats = 0;
 var contestedElection = false;
 var closeElection = false;
@@ -1937,8 +1937,12 @@ cyoAdventure = function(a) {
         if ((ideologyLeft - ideologyCenter) > 3) {
             campaignTrail_temp.questions_json[12] = extraQuestions[8];
         }
-        if ((ideologyCenter - ideologyLeft) > 2) {
+        else if ((ideologyCenter - ideologyLeft) > 2) {
             campaignTrail_temp.questions_json[12] = extraQuestions[9];
+        }
+
+        else if (likeability>11){
+            answerSwapper(4509, 4554, false);
         }
     }
 
