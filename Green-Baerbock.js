@@ -2109,18 +2109,23 @@ cyoAdventure = function(a) {
             advisorHabeck.quit();
         }
 
-        if (ans === 4024) {
+        if (ans === 4085) {
             advisorFischer.quit();
         }
 
         if (ans === 4529) {
             advisorRoth.quit();
         }
+        if (ans === 4524) {
+            advisorOezdemir.quit();
+        }
 
         if  ([4538, 4539, 4510, 4011, 4013, 4060].includes(ans)) {
             advisorPeters.quit();
         }
-
+        if  ([4068, 4119].includes(ans)) {
+            advisorDahmen.quit();
+        }
     }
 
     //Mini-CYOA here
