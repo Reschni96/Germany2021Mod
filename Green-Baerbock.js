@@ -520,88 +520,125 @@ var weightsUpdated = false;
 var resetPage = false;
 
 const likeabilityMap = {
-    4500: -1,
-    4503: 1,
-    4002: 1,
-    4004: 1,
-    4006: -1,
-    4007: -1,
-    4009: -1,
-    4011: 1,
-    4012: -1,
-    4013: -1,
-    4014: -2,
-    4015: 1,
-    4018: -1,
-    4019: -1,
-    4504: 1,
-    4507: -1,
-    4021: 1,
-    4022: -1,
-    4024: -2,
-    4025: 2,
-    4027: 1,
-    4028: -2,
-    4029: -3,
-    4030: -1,
-    4031: -1,
-    4033: -2,
-    4034: 1,
-    4509: 1,
-    4039: -3,
-    4040: -4,
-    4041: -5,
-    4042: -2,
-    4045: 1,
-    4048: 1,
-    4050: -1,
-    4051: -1,
-    4052: -1,
-    4053: -3,
-    4054: -2,
-    4515: 1,
-    4518: -1,
-    4055: -3,
-    4056: 1,
-    4057: 2,
-    4061: 1,
-    4522: -1,
-    4063: 1,
-    4065: 1,
-    4068: -3,
-    4070: 1,
-    4524: -1,
-    4526: -1,
-    4071: -2,
-    4072: 1,
-    4073: 1,
-    4075: -2,
-    4077: 1,
-    4098: -5,
-    4099: -4,
-    4100: 1,
-    4101: 1,
-    4103: -1,
-    4104: -2,
-    4105: 2,
-    4106: -1,
-    4107: -2,
-    4109: 1,
-    4110: -3,
-    4111: -1,
-    4112: 1,
-    4116: -5,
-    4118: 1,
-    4122: 1,
-    4131: -3,
-    4132: -1,
-    4536: -3,
-    4537: -1,
-    4538: 1,
-    4539: -1,
-    4540: -1,
-    4133: -2,
-};
+        4500: -1,
+        4503: 1,
+        4002: 1,
+        4004: 1,
+        4006: -1,
+        4007: -1,
+        4009: -1,
+        4011: 1,
+        4012: -1,
+        4013: -1,
+        4014: -2,
+        4015: 1,
+        4018: -1,
+        4019: -1,
+        4504: 1,
+        4507: -1,
+        4021: 1,
+        4022: -1,
+        4024: -2,
+        4025: 2,
+        4027: 1,
+        4028: -2,
+        4029: -3,
+        4030: -1,
+        4031: -1,
+        4033: -2,
+        4034: 1,
+        4509: 1,
+        4039: -3,
+        4040: -4,
+        4041: -5,
+        4042: -2,
+        4045: 1,
+        4048: 1,
+        4050: -1,
+        4051: -1,
+        4052: -1,
+        4053: -3,
+        4054: -2,
+        4515: 1,
+        4518: -1,
+        4055: -3,
+        4056: 1,
+        4057: 2,
+        4061: 1,
+        4522: -1,
+        4063: 1,
+        4065: 1,
+        4068: -3,
+        4070: 1,
+        4524: -1,
+        4526: -1,
+        4071: -2,
+        4072: 1,
+        4073: 1,
+        4075: -2,
+        4077: 1,
+        4100: -5,
+        4101: -4,
+        4102: 1,
+        4103: 1,
+        4105: -1,
+        4106: -2,
+        4107: 2,
+        4108: -1,
+        4109: -2,
+        4111: 1,
+        4112: -3,
+        4113: -1,
+        4114: 1,
+        4118: -5,
+        4120: 1,
+        4124: 1,
+        4133: -3,
+        4134: -1,
+        4536: -3,
+        4537: -1,
+        4538: 1,
+        4539: -1,
+        4540: -1,
+        4133: -2,
+    };
+const MediaMap = {
+        4524: 1,
+        4526: 1,
+        4071: 1,
+        4073: 1,
+        4074: 1,
+        4080: 1,
+        4530: 1,
+        4082: 1,
+        4083: 1,
+        4085: 1,
+        4090: 1,
+        4091: 1,
+        4092: 1,
+        4093: 1,
+        4125: 1,
+        4126: 1,
+        4127: 1,
+        4128: 1,
+        4129: 1,
+        4130: 1,
+        4131: 1,
+        4132: 1,
+        4541: 1,
+        4542: 1,
+        4543: 1,
+        4544: 1,
+        4545: 1,
+        4546: 1,
+        4547: 1,
+        4548: 1,
+        4549: 1,
+        4550: 1,
+        4551: 1,
+        4552: 1,
+        4553: 1,
+    };
 
 const YouthMap = {
         4009: 1,
@@ -644,7 +681,7 @@ const YouthMap = {
         4076: 1,
         4082: 1,
         4086: 1,
-        4120: 1,
+        4122: 1,
     };
 
 
@@ -2070,6 +2107,18 @@ cyoAdventure = function(a) {
         //quitting
         if (ans === 4024) {
             advisorHabeck.quit();
+        }
+
+        if (ans === 4024) {
+            advisorFischer.quit();
+        }
+
+        if (ans === 4529) {
+            advisorRoth.quit();
+        }
+
+        if  ([4538, 4539, 4510, 4011, 4013, 4060].includes(ans)) {
+            advisorPeters.quit();
         }
 
     }
@@ -3894,14 +3943,14 @@ const advisorDahmen = new Advisor(6, "Janosch Dahmen", 'https://i.ibb.co/bBz0mfw
 const advisorTressel = new Advisor(7, "Markus Tressel", 'https://i.ibb.co/DpSfJWJ/tressel-cropped.jpg', "Should you care about what happens in the state of Saarland for some reason, Tressel is your man.", null, noop, noop, 'available');
 const advisorKretschmann = new Advisor(8, "Winfried Kretschmann", 'https://i.ibb.co/mNjwQJT/kretschmann-cropped.jpg', "His popularity in Baden-Württemberg will help you there and behind the scenes, he offered to help you with outreach to the CDU.", "To convince the only Green Minister-President to help, show that you agree with his centrist attitude.", () =>coalitions.forEach(coalition => { if ([1,  3, 5].includes(coalition.id)) {coalition.weight *= 1.5;}}),  () =>coalitions.forEach(coalition => { if ([1, 3, 5].includes(coalition.id)) {coalition.weight *= 1/1.5;}}), 'locked');
 const advisorPiel = new Advisor(9, "Anja Piel", ' https://i.ibb.co/kHRBFnJ/piel-cropped.jpg', "Her knowledge as union functionary will be helpful for economic topics - her connections might help with outreach to the Left in coalition talks", "If you want to hire this union functionary, run a more leftist campaign.", () =>coalitions.forEach(coalition => { if ([12, 14].includes(coalition.id)) {coalition.weight *= 2;}}),  () =>coalitions.forEach(coalition => { if ([12, 14].includes(coalition.id)) {coalition.weight *= 1/2;}}), 'locked');
-const advisorFischer = new Advisor(10, "Joschka Fischer", 'https://i.ibb.co/PcR8vKv/fischer-cropped.jpg', "Despite not being an active politician anymore, Fischer is still popular in Hessen and willing to offer foreign polica advice.", "This former Green Party leader and Foreign Minister wishes for a more hawkish foreign policy.", () => {alert("Sorry, no effects implemented yet for this advisor");this.status = "dismissed";}, noop, 'locked');
+const advisorFischer = new Advisor(10, "Joschka Fischer", 'https://i.ibb.co/PcR8vKv/fischer-cropped.jpg', "Despite not being an active politician anymore, Fischer is still popular in Hessen and willing to offer foreign policy advice.", "This former Green Party leader and Foreign Minister wishes for a more hawkish foreign policy.", () => {alert("Sorry, no effects implemented yet for this advisor");this.status = "dismissed";}, noop, 'locked');
 const advisorHolefleisch = new Advisor(11, "Daniel Holefleisch", 'https://i.ibb.co/RDfkMQ6/holefleisch-cropped.jpg', "Involving your husband in the campaign will certainly make you seem more approachable and likeable.", "Your husband has kept out of the spotlight for now - perhaps there's an opportunity to involve him in the campaign somehow?", ()=>likeability+=4, ()=>()=>likeability=Math.max(0, likeability-4), 'locked');
 const advisorRoth = new Advisor(12, "Claudia Roth", 'https://i.ibb.co/FH6Kk5V/roth-cropped.jpg', "Her experience from decades of being in the political business is valuable, especially on social questions.", "She's a longtime Green politician with a storied career - and wants to help if you don't pivot to the center too much.", () => {alert("Sorry, no effects implemented yet for this advisor");this.status = "dismissed";}, noop, 'locked');
 const advisorOezdemir = new Advisor(13, "Cem Özdemir", 'https://i.ibb.co/7g9nqqM/zdemir-cropped.jpg', "Özdemir wants to campaign for you in Baden-Württemberg and can advice you on his pet issue, drug policy.", "Your predecessor as party leader is willing to help - as long as you don't pivot on refugees.", () => {alert("Sorry, no effects implemented yet for this advisor");this.status = "dismissed";}, noop, 'locked');
-const advisorJarasch = new Advisor(14, "Bettina Jarasch", 'https://i.ibb.co/NxF3xns/jarasch-cropped.jpg', "Her media connections will no doubt be helpful, as well as coordinating with her campaign in Berlin.", "A little help for her is needed to recruit the Green party mayoral candidate from Berlin.", () => {alert("Sorry, no effects implemented yet for this advisor");this.status = "dismissed";}, noop, 'locked');
+const advisorJarasch = new Advisor(14, "Bettina Jarasch", 'https://i.ibb.co/NxF3xns/jarasch-cropped.jpg', "Her media connections will no doubt be helpful, as well as coordinating with her campaign in Berlin.", "A little help for her is needed to recruit the Green party mayoral candidate from Berlin.",  (affectedCandidate1=79, changeAmount1=0.004) => { Object.keys(MediaMap).forEach(key => {changeGlobalEffect(affectedCandidate1, parseInt(key), changeAmount1);}); }, (affectedCandidate1=79, changeAmount1=-0.004) => { Object.keys(MediaMap).forEach(key => { changeGlobalEffect(affectedCandidate1, parseInt(key), changeAmount1); });}, 'locked');
 const advisorBayaz = new Advisor(15, "Danyal Bayaz", "https://i.ibb.co/tPpQ65h/bayaz-cropped.jpg", "Bayaz wants to do two things for you - campaign in Baden-Württemberg and reach out to the FDP for future coalition talks.", "This state minister is an advocate for closer cooperation with the FDP and hopes you feel the same.", () =>coalitions.forEach(coalition => { if ([5, 6, 15].includes(coalition.id)) {coalition.weight *= 1.5;}}),  () =>coalitions.forEach(coalition => { if ([5, 6, 15].includes(coalition.id)) {coalition.weight *= 1/1.5;}}), 'locked');
-const advisorPeters = new Advisor(16,"Anna Peters", 'https://i.ibb.co/4TmSChy/peters-cropped.jpg',  "If you want to turn out the youth vote, who could be better suited than the leader of the Green Party youth organization?", "The leader of the youth wing of your party wants you to show that you're taking the FFF movement seriously.", (affectedCandidate1=79, changeAmount1=0.005, affectedCandidate2=303, changeAmount2=-0.002) => { Object.keys(YouthMap).forEach(key => {      changeGlobalEffect(affectedCandidate1, parseInt(key), changeAmount1); changeGlobalEffect(affectedCandidate2, parseInt(key), changeAmount2);}); }, (affectedCandidate1=79, changeAmount1=-0.005, affectedCandidate2=303, changeAmount2=0.002) => { Object.keys(YouthMap).forEach(key => {      changeGlobalEffect(affectedCandidate1, parseInt(key), changeAmount1); changeGlobalEffect(affectedCandidate2, parseInt(key), changeAmount2);}); },'locked');
-const advisorBuntenbach = new Advisor(17, "Annelie Buntenbach", 'https://i.ibb.co/zFP3zfP/buntebach-cropped.jpg', "The Greens want to become more succesful than the SPD by winning over many of their voters this election - and as union functionary, Buntenbach has some ideas how.", "If you want to win over SPD voters, this union functionary has some ideas how.", (affectedCandidate1=79, changeAmount1=0.004, affectedCandidate2=78, changeAmount2=-0.003) => { Object.keys(YouthMap).forEach(key => {      changeGlobalEffect(affectedCandidate1, parseInt(key), changeAmount1); changeGlobalEffect(affectedCandidate2, parseInt(key), changeAmount2);}); }, (affectedCandidate1=79, changeAmount1=-0.004, affectedCandidate2=78, changeAmount2=0.003) => { Object.keys(YouthMap).forEach(key => {      changeGlobalEffect(affectedCandidate1, parseInt(key), changeAmount1); changeGlobalEffect(affectedCandidate2, parseInt(key), changeAmount2);}); }, 'locked');
+const advisorPeters = new Advisor(16,"Anna Peters", 'https://i.ibb.co/4TmSChy/peters-cropped.jpg',  "If you want to turn out the youth vote, who could be better suited than the leader of the Green Party youth organization?", "The leader of the youth wing of your party wants you to show that you're taking the FFF movement seriously.", (affectedCandidate1=79, changeAmount1=0.006, affectedCandidate2=303, changeAmount2=-0.002) => { Object.keys(YouthMap).forEach(key => {      changeGlobalEffect(affectedCandidate1, parseInt(key), changeAmount1); changeGlobalEffect(affectedCandidate2, parseInt(key), changeAmount2);}); }, (affectedCandidate1=79, changeAmount1=-0.005, affectedCandidate2=303, changeAmount2=0.002) => { Object.keys(YouthMap).forEach(key => {      changeGlobalEffect(affectedCandidate1, parseInt(key), changeAmount1); changeGlobalEffect(affectedCandidate2, parseInt(key), changeAmount2);}); },'locked');
+const advisorBuntenbach = new Advisor(17, "Annelie Buntenbach", 'https://i.ibb.co/zFP3zfP/buntebach-cropped.jpg', "The Greens want to become more succesful than the SPD by winning over many of their voters this election - and as union functionary, Buntenbach has some ideas how.", "If you want to win over SPD voters, this union functionary has some ideas how.", (affectedCandidate1=79, changeAmount1=0.004, affectedCandidate2=78, changeAmount2=-0.003) => { Object.keys(SPDTarget).forEach(key => {changeGlobalEffect(affectedCandidate1, parseInt(key), changeAmount1); changeGlobalEffect(affectedCandidate2, parseInt(key), changeAmount2);}); }, (affectedCandidate1=79, changeAmount1=-0.004, affectedCandidate2=78, changeAmount2=0.003) => { Object.keys(SPDTarget).forEach(key => { changeGlobalEffect(affectedCandidate1, parseInt(key), changeAmount1); changeGlobalEffect(affectedCandidate2, parseInt(key), changeAmount2);}); }, 'locked');
 const advisorGuenther = new Advisor(18, "Wolfram Günther", 'https://i.ibb.co/XWc0f73/g-nther-cropped.jpg', "The Greens are used to struggles in East Germany, but Günther wants to do his part for your campaign to change this.", "This East German minister wants you to show that you are serious about appealing to people in this region.", noop, noop, 'locked');
 
 const advisorsList = [
