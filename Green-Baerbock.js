@@ -510,7 +510,7 @@ var HabeckTime = false;
 var ideologyCenter = 0;
 var ideologyLeft = 0;
 var mood = "Optimistic"
-var likeability = 12;
+var likeability = 11;
 var totalSeats = 0;
 var contestedElection = false;
 var closeElection = false;
@@ -775,6 +775,21 @@ endingPicker = () => {
         addCoalitions();
 
     }
+    if(HabeckTime){
+  if (e.final_overall_results[0].candidate === 79){
+          e.header="<h2>“Habeck saves flailing Green campaign”</h2>"
+          e.pages=[`<p>Wow, how did he even do that?</p>` ]
+          e.image="https://www.bundestag.de/resource/image/225552/3x4/594/792/41c47f0a63894c714cff2ac9fc890afb/2AC076E6C48DE98561C2E0BA18823C1A/kuppel.jpg"
+
+          return construct(0);
+      }
+      else{
+          e.header="<h2>“Habeck not enough to save Green campaign”</h2>"
+          e.pages=[`<p>Oh no :(</p>` ]
+          e.image="https://www.bundestag.de/resource/image/225552/3x4/594/792/41c47f0a63894c714cff2ac9fc890afb/2AC076E6C48DE98561C2E0BA18823C1A/kuppel.jpg"
+            return construct(0);
+      }
+  }
 
     if (!negotiationsDone) {
         ending = endingOneBuilder();
