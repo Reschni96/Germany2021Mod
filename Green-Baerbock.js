@@ -1966,7 +1966,7 @@ cyoAdventure = function(a) {
     }
 
     //polling collapse is stopped if Greens are close enough to the CDU and far enough from the SPD
-    if ([4063, 4064, 4065, 4066].includes(ans)) {
+    if ([4063, 4064, 4065, 4066, 4133].includes(ans)) {
         if (pop_vote[0].pvp - playerPolling < playerPolling - pop_vote[1].pvp) {
             campaignTrail_temp.questions_json[23] = extraQuestions[4];
             campaignTrail_temp.questions_json[25] = extraQuestions[5];
@@ -2069,6 +2069,16 @@ cyoAdventure = function(a) {
     //Mini-CYOA here
     if (ans === 4507) {
         answerSwapper(4094, 4130, false);
+    }
+
+    if (ans === 4024) {
+        answerSwapper(4063, 4133);
+        changeStateEffect(79, 4133, 3004, -0.005);
+        changeStateEffect(79, 4133, 3005, -0.005);
+        changeStateEffect(79, 4133, 3008, -0.01);
+        changeStateEffect(79, 4133, 3014, -0.015);
+        answerSwapper(4095, 4134);
+        changeGlobalEffect(79, 4133, -0.003)
     }
     //coalition weight adjustments here
     if ([4011, 4013, 4042].includes(ans)) {
@@ -3842,14 +3852,14 @@ const noop = () => {};
 const advisorHabeck = new Advisor(1, "Robert Habeck", 'https://i.ibb.co/7XcxJCW/habeck.jpg', "Your go party leader is happy to campaign for you in his homestate Schleswig-Holstein and all of Germany.", null, noop, noop, 'available');
 const advisorKellner = new Advisor(2, "Michael Kellner", 'https://i.ibb.co/xFS5Y0d/kellner-cropped.jpg', 'As general secretary of the party, he will help your campaign and coalition talks to be smoother.', null,  () =>coalitions.forEach(coalition => { if ([1, 3, 4, 5, 6, 12, 14, 15].includes(coalition.id)) {coalition.weight *= 1.2;}}),  () =>coalitions.forEach(coalition => { if ([1, 3, 4, 5, 6, 12, 14, 15].includes(coalition.id)) {coalition.weight *= 1/1.2;}}), 'available');
 const advisorUnmuessig = new Advisor(3, "Barbara Unmüßig", 'https://i.ibb.co/Fq99nQS/unm-ig-cropped.jpg', 'Hiring this political scientist will give you access to top-notch polling.', null, ()=> {factorPolls=5; factorSeats=5; errorDegree=0.3;}, ()=> {factorPolls=1; factorSeats=1; errorDegree=1;}, 'available');
-const advisorScharfschwerdt = new Advisor(4, "Michael Scharfschwerdt", 'https://i.ibb.co/QnvWP4w/scharfschwerdt-cropped.jpg', 'Having Scharfscherdt as your campaign coordinator will let you talk to more voters, helping with your likeability.', null, ()=>likeability+=2, ()=>likeability-=2, 'available');
+const advisorScharfschwerdt = new Advisor(4, "Michael Scharfschwerdt", 'https://i.ibb.co/QnvWP4w/scharfschwerdt-cropped.jpg', 'Having Scharfscherdt as your campaign coordinator will let you talk to more voters, helping with your likeability.', null, ()=>likeability+=2, ()=>likeability=Math.max(0, likeability-2), 'available');
 const advisorLemke = new Advisor(5, "Steffi Lemke", 'https://i.ibb.co/8Y4fT2f/lemke-cropped.png', "If you need some advice on how to deal with environmental topics, she's the right woman to hire.", null, () => {alert("Sorry, no effects implemented yet for this advisor");this.status = "dismissed";}, noop, 'available');
 const advisorDahmen = new Advisor(6, "Janosch Dahmen", 'https://i.ibb.co/bBz0mfw/dahmen-cropped.jpg', "As a doctor, Dahmen will be able to give you some tips on how to deal with COVID in this campaign.", null, () => {alert("Sorry, no effects implemented yet for this advisor");this.status = "dismissed";}, noop, 'available');
 const advisorTressel = new Advisor(7, "Markus Tressel", 'https://i.ibb.co/DpSfJWJ/tressel-cropped.jpg', "Should you care about what happens in the state of Saarland for some reason, Tressel is your man.", null, noop, noop, 'available');
 const advisorKretschmann = new Advisor(8, "Winfried Kretschmann", 'https://i.ibb.co/mNjwQJT/kretschmann-cropped.jpg', "His popularity in Baden-Württemberg will help you there and behind the scenes, he offered to help you with outreach to the CDU.", "To convince the only Green Minister-President to help, show that you agree with his centrist attitude.", () =>coalitions.forEach(coalition => { if ([1,  3, 5].includes(coalition.id)) {coalition.weight *= 1.5;}}),  () =>coalitions.forEach(coalition => { if ([1, 3, 5].includes(coalition.id)) {coalition.weight *= 1/1.5;}}), 'locked');
 const advisorPiel = new Advisor(9, "Anja Piel", ' https://i.ibb.co/kHRBFnJ/piel-cropped.jpg', "Her knowledge as union functionary will be helpful for economic topics - her connections might help with outreach to the Left in coalition talks", "If you want to hire this union functionary, run a more leftist campaign.", () =>coalitions.forEach(coalition => { if ([12, 14].includes(coalition.id)) {coalition.weight *= 2;}}),  () =>coalitions.forEach(coalition => { if ([12, 14].includes(coalition.id)) {coalition.weight *= 1/2;}}), 'locked');
 const advisorFischer = new Advisor(10, "Joschka Fischer", 'https://i.ibb.co/PcR8vKv/fischer-cropped.jpg', "Despite not being an active politician anymore, Fischer is still popular in Hessen and willing to offer foreign polica advice.", "This former Green Party leader and Foreign Minister wishes for a more hawkish foreign policy.", () => {alert("Sorry, no effects implemented yet for this advisor");this.status = "dismissed";}, noop, 'locked');
-const advisorHolefleisch = new Advisor(11, "Daniel Holefleisch", 'https://i.ibb.co/RDfkMQ6/holefleisch-cropped.jpg', "Involving your husband in the campaign will certainly make you seem more approachable and likeable.", "Your husband has kept out of the spotlight for now - perhaps there's an opportunity to involve him in the campaign somehow?", ()=>likeability+=4, ()=>likeability-=4, 'locked');
+const advisorHolefleisch = new Advisor(11, "Daniel Holefleisch", 'https://i.ibb.co/RDfkMQ6/holefleisch-cropped.jpg', "Involving your husband in the campaign will certainly make you seem more approachable and likeable.", "Your husband has kept out of the spotlight for now - perhaps there's an opportunity to involve him in the campaign somehow?", ()=>likeability+=4, ()=>()=>likeability=Math.max(0, likeability-4), 'locked');
 const advisorRoth = new Advisor(12, "Claudia Roth", 'https://i.ibb.co/FH6Kk5V/roth-cropped.jpg', "Her experience from decades of being in the political business is valuable, especially on social questions.", "She's a longtime Green politician with a storied career - and wants to help if you don't pivot to the center too much.", () => {alert("Sorry, no effects implemented yet for this advisor");this.status = "dismissed";}, noop, 'locked');
 const advisorOezdemir = new Advisor(13, "Cem Özdemir", 'https://i.ibb.co/7g9nqqM/zdemir-cropped.jpg', "Özdemir wants to campaign for you in Baden-Württemberg and can advice you on his pet issue, drug policy.", "Your predecessor as party leader is willing to help - as long as you don't pivot on refugees.", () => {alert("Sorry, no effects implemented yet for this advisor");this.status = "dismissed";}, noop, 'locked');
 const advisorJarasch = new Advisor(14, "Bettina Jarasch", 'https://i.ibb.co/NxF3xns/jarasch-cropped.jpg', "Her media connections will no doubt be helpful, as well as coordinating with her campaign in Berlin.", "A little help for her is needed to recruit the Green party mayoral candidate from Berlin.", () => {alert("Sorry, no effects implemented yet for this advisor");this.status = "dismissed";}, noop, 'locked');
