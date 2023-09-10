@@ -2380,14 +2380,43 @@ initialPolls.forEach((entry) => {
   i++;
 });
 var temp = {};
-temp.final_overall_results=[{ candidate: 77, electoral_votes: 224, popular_votes: 28 },
-{ candidate: 78, electoral_votes: 138, popular_votes: 17.3 },
-{ candidate: 79, electoral_votes: 152, popular_votes: 19.1 },
-{ candidate: 303, electoral_votes: 96, popular_votes: 12 },
-{ candidate: 304, electoral_votes: 41, popular_votes: 5.1 },
-{ candidate: 305, electoral_votes: 81, popular_votes: 10.1 },
-{ candidate: 306, electoral_votes: 0, popular_votes: 8.4 }]
-var currentCoalitions = coalitionTalks(temp.final_overall_results)
+temp.final_overall_results = [{
+        candidate: 77,
+        electoral_votes: 224,
+        popular_votes: 28
+    },
+    {
+        candidate: 78,
+        electoral_votes: 138,
+        popular_votes: 17.3
+    },
+    {
+        candidate: 79,
+        electoral_votes: 152,
+        popular_votes: 19.1
+    },
+    {
+        candidate: 303,
+        electoral_votes: 96,
+        popular_votes: 12
+    },
+    {
+        candidate: 304,
+        electoral_votes: 41,
+        popular_votes: 5.1
+    },
+    {
+        candidate: 305,
+        electoral_votes: 81,
+        popular_votes: 10.1
+    },
+    {
+        candidate: 306,
+        electoral_votes: 0,
+        popular_votes: 8.4
+    }
+]
+var currentCoalitions = coalitionTalks(temp.final_overall_results, optionalMode = true)
 
 
 

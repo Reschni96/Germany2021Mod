@@ -66,6 +66,8 @@ campaignTrail_temp.game_start_logging_id = '3662498';
     var SoederTime = false;
     var ideologyCenter = 0;
     var ideologyLeft = 0;
+    var mood = "Optimistic"
+    var likeability = 11;
     var totalSeats = 0;
     var contestedElection = false;
     var closeElection = false;
@@ -1597,6 +1599,1169 @@ function changeIssueEffect(answer, issue, changeScore, changeImportance) {
 }
 //css stuff here
 
+var advisor_news = true;
+
+function addHeadquarterButton() {
+    // Check if the button already exists
+    if (document.getElementById('headquarter_button')) {
+        return;
+    }
+
+    // Find the reference button by its ID
+    const refButton = document.getElementById('view_electoral_map');
+    if (!refButton) {
+        return;
+    }
+
+    // Create a new button element
+    const newButton = document.createElement('button');
+
+    newButton.id = 'headquarter_button';
+
+    newButton.style.marginLeft = '1.5em';
+
+    newButton.innerHTML = advisor_news ? '<strong><span style="color: red;">!</span></strong>  Headquarter' : 'Headquarter';
+
+    // Attach the click event listener
+    newButton.addEventListener('click', openHeadquarter);
+
+    // Insert the new button next to the reference button
+    refButton.insertAdjacentElement('afterend', newButton);
+}
+
+var dismissalsLeft = 5;
+var likeabilityDescription = ["You are constantly stressed and lash out at people.", "People notice you're stressed out", "You're mostly calm and collected", "Wherever you go, people notice your patience"]
+
+function openHeadquarter() {
+
+    advisor_news = false;
+    let questions = document.querySelector(".inner_window_question");
+
+    questions.style.display = 'none';
+
+    const hqButton = document.getElementById('headquarter_button');
+    if (hqButton) {
+        hqButton.remove();
+    }
+
+    // Create and set up the headquarters div
+    let hqDiv = document.createElement('div');
+    hqDiv.id = 'headquarter';
+    hqDiv.style.display = 'flex'; // Set layout to flex to allow columns
+    hqDiv.style.color = 'black';
+    hqDiv.style.backgroundImage = 'url("https://cdn.discordapp.com/attachments/1109846390575730788/1148365022267969556/grunes_wahlplakat.jpg")';
+    hqDiv.style.backgroundSize = 'cover';
+    hqDiv.style.backgroundRepeat = 'no-repeat';
+    hqDiv.style.backgroundColor = 'rgba(255, 255, 255, 0.7)'; // dark green with 60% opacity
+    hqDiv.style.backgroundBlendMode = 'overlay';
+    hqDiv.style.border = '5px solid black';
+    hqDiv.style.borderRadius = '10px';
+    hqDiv.style.boxShadow = '0 0 15px rgba(0,0,0,0.5)';
+    hqDiv.style.height = '650px';
+
+
+    // Create inner divs for columns
+    let leftCol = document.createElement('div');
+    leftCol.style.width = '30%';
+    hqDiv.appendChild(leftCol);
+
+    let middleCol = document.createElement('div');
+    middleCol.style.width = '40%';
+    hqDiv.appendChild(middleCol);
+
+    let rightCol = document.createElement('div');
+    rightCol.style.width = '30%';
+    hqDiv.appendChild(rightCol);
+
+    if (window.innerWidth <= 768) {
+        hqDiv.style.flexDirection = 'column';
+        hqDiv.style.height = 'auto';
+        leftCol.style.width = '100%';
+        leftCol.style.order = '2';
+
+        middleCol.style.width = '100%';
+        middleCol.style.order = '1';
+
+        rightCol.style.width = '100%';
+        rightCol.style.order = '3';
+    }
+
+    // Create wrapper div for the header and mood
+    let headerWrapper = document.createElement('div');
+    headerWrapper.style.display = 'block'; // Stack the divs on top of each other
+    headerWrapper.style.padding = '0'; // No padding
+    headerWrapper.style.marginTop = '6px';
+
+    // Create a div for Campaign header (h1) with specific style
+    let headerDiv = document.createElement('div');
+    headerDiv.className = 'happy-box';
+    headerDiv.style.border = '5px solid black';
+    headerDiv.style.borderRadius = '10px'; // Round all corners
+    headerDiv.style.marginBottom = '0'; // Remove bottom margin to avoid gap
+
+    let header = document.createElement('h1');
+    header.innerText = "Campaign Headquarters";
+    headerDiv.appendChild(header);
+    headerWrapper.appendChild(headerDiv); // Append to wrapper instead
+
+    // Create a div for Mood (h2) with specific style
+    let moodDiv = document.createElement('div');
+    moodDiv.className = 'happy-box';
+    moodDiv.style.border = '5px solid black';
+    moodDiv.style.borderRadius = '0 0 10px 10px'; // Round only bottom corners
+    moodDiv.style.marginTop = '-4px'; // To overlap the bottom border of the headerDiv
+    moodDiv.style.borderTop = '1px solid black'; // Remove the top border
+    moodDiv.style.width = '70%'; // Set width to 70%
+    moodDiv.style.marginLeft = 'auto'; // Centering horizontally
+    moodDiv.style.marginRight = 'auto'; // Centering horizontally
+
+    let displayMood = document.createElement('h2');
+    displayMood.innerText = `Mood: ${mood}`;
+    moodDiv.appendChild(displayMood);
+    headerWrapper.appendChild(moodDiv); // Append to wrapper instead
+
+    // Append the wrapper div to the middle column
+    middleCol.appendChild(headerWrapper);
+
+
+
+    // Create a wrapping div to center everything vertically and horizontally
+    let wrapDiv = document.createElement('div');
+    wrapDiv.style.display = 'flex';
+    wrapDiv.style.flexDirection = 'column';
+    wrapDiv.style.alignItems = 'center';
+    wrapDiv.style.justifyContent = 'center';
+    wrapDiv.style.height = '100%';
+
+    // Create div for Likeability Header and wrap h2 in it
+    let patienceHeaderDiv = document.createElement('div');
+    patienceHeaderDiv.style.margin = '5px';
+    patienceHeaderDiv.style.marginBottom = '0px';
+    patienceHeaderDiv.style.border = '5px solid black';
+    patienceHeaderDiv.className = 'happy-box';
+    patienceHeaderDiv.style.borderRadius = '10px';
+
+
+    let patienceLabel = document.createElement('h2');
+    patienceLabel.innerText = "Robert's Patience";
+    patienceLabel.style.color = 'black';
+    patienceLabel.className = 'happy-box';
+    patienceLabel.style.padding = '1em';
+    patienceLabel.style.textAlign = 'center';
+    patienceHeaderDiv.appendChild(patienceLabel);
+
+    wrapDiv.appendChild(patienceHeaderDiv);
+
+    // Create Likeability Circles Div
+    let patienceDiv = document.createElement('div');
+    patienceDiv.style.display = 'flex';
+    patienceDiv.style.flexDirection = 'column-reverse';
+    patienceDiv.style.alignItems = 'center';
+    patienceDiv.style.height = '15em';
+    patienceDiv.style.width = '5em';
+    patienceDiv.style.border = '1px solid black';
+    patienceDiv.style.borderLeft = '5px solid black';
+    patienceDiv.style.borderRight = '5px solid black';
+    patienceDiv.className = 'happy-box';
+    patienceDiv.style.margin = '5px';
+    patienceDiv.style.marginTop = '-4px';
+    patienceDiv.style.marginBottom = '-4px';
+    patienceDiv.style.zIndex = '2';
+    wrapDiv.appendChild(patienceDiv);
+
+    for (let i = 0; i < 4; i++) {
+        let circle = document.createElement('div');
+        circle.style.width = '3em';
+        circle.style.height = '3em';
+        circle.style.borderRadius = '50%';
+        circle.style.margin = '5px';
+        circle.style.border = '1px solid black'; // Added border
+
+        if (i <= Math.floor(likeability / 5)) {
+            if (i === 0) circle.style.backgroundColor = 'red';
+            else if (i === 1) circle.style.backgroundColor = 'orange';
+            else if (i === 2) circle.style.backgroundColor = 'yellow';
+            else circle.style.backgroundColor = 'green';
+        } else {
+            circle.style.display = 'none';
+        }
+        patienceDiv.appendChild(circle);
+    }
+
+    let likeabilityDescDiv = document.createElement('div');
+    likeabilityDescDiv.innerText = likeabilityDescription[Math.floor(likeability / 5)]; // Updated logic
+    likeabilityDescDiv.style.color = 'black';
+    likeabilityDescDiv.className = 'happy-box';
+    likeabilityDescDiv.style.padding = '1em';
+    likeabilityDescDiv.style.textAlign = 'center';
+    likeabilityDescDiv.style.border = '5px solid black';
+    likeabilityDescDiv.style.borderRadius = '10px'; // More rounded corners
+    likeabilityDescDiv.style.margin = '5px';
+    likeabilityDescDiv.style.marginTop = '0px';
+
+    wrapDiv.appendChild(likeabilityDescDiv);
+
+
+    // Add the wrapDiv to the right column
+    rightCol.appendChild(wrapDiv);
+
+
+
+    var advisorHeaderDiv = document.createElement('div');
+    advisorHeaderDiv.style.border = '5px solid black';
+    advisorHeaderDiv.style.borderRadius = '10px';
+    advisorHeaderDiv.className = 'happy-box';
+    advisorHeaderDiv.style.margin = "20px";
+    advisorHeaderDiv.style.marginBottom = "0px";
+    let advisorHeader = document.createElement('h2');
+    advisorHeader.innerText = "Advisors";
+    advisorHeaderDiv.appendChild(advisorHeader);
+    middleCol.appendChild(advisorHeaderDiv);
+
+    var advisorContainer = document.createElement('div');
+    advisorContainer.style.display = 'flex';
+    advisorContainer.style.justifyContent = 'center';
+
+    let filledSlots = 0;
+
+    advisorsList.forEach(advisor => {
+        if (advisor.status === 'active') {
+            filledSlots++;
+
+            let slot = document.createElement('div');
+            slot.classList.add('advisor-slot');
+
+            let img = document.createElement('img');
+            img.src = advisor.picture;
+            img.style.height = '12em';
+            img.style.borderBottom = '2px solid black';
+
+            let imgContainer = document.createElement('div');
+            imgContainer.style.display = 'flex';
+            imgContainer.style.flexDirection = 'column';
+            imgContainer.style.justifyContent = 'center';
+            imgContainer.style.margin = '10px';
+            imgContainer.style.marginTop = '-5px';
+            imgContainer.style.backgroundColor = 'white';
+            imgContainer.style.border = '4px solid black';
+            imgContainer.style.borderTop = '1px solid black'
+            imgContainer.style.borderRadius = '0 0 10px 10px';
+            imgContainer.style.overflow = 'hidden';
+            imgContainer.appendChild(img);
+
+            let name = document.createElement('div');
+            name.innerText = advisor.name;
+            name.style.color = 'black';
+            name.style.padding = '0.5em';
+            name.style.fontWeight = 'bold';
+            name.style.whiteSpace = 'normal'; // Allows the text to wrap
+            name.style.overflowWrap = 'break-word'; // Breaks the word if necessary
+            name.style.maxWidth = '115px';
+            name.style.height = '32px';
+
+            if (window.innerWidth <= 768) {
+
+                name.style.height = '64px';
+            }
+            imgContainer.appendChild(name);
+            slot.appendChild(imgContainer);
+
+            let dismissBtn = document.createElement('button');
+            dismissBtn.innerText = 'Dismiss';
+            dismissBtn.style.margin = '1em';
+            dismissBtn.style.backgroundColor = 'lightgreen';
+            dismissBtn.style.boxShadow = '0 0 20px 4px rgba(144, 238, 144, 0.9)'; // Stronger light green glow
+
+            if (dismissalsLeft > 0 && campaignTrail_temp.staff_mode) { // Check dismissalsLeft
+                dismissBtn.onclick = function() {
+                    dismissalsLeft += -1;
+                    advisor.dismiss();
+                    hqDiv.remove();
+                    overlay.remove();
+                    openHeadquarter();
+
+                            };
+
+                slot.appendChild(dismissBtn);
+            }
+
+            advisorContainer.appendChild(slot); // Add the slot to the advisorContainer instead of hqDiv
+        }
+    });
+
+    for (let i = filledSlots; i < 2; i++) {
+        let slot = document.createElement('div');
+        slot.classList.add('advisor-slot');
+
+        let img = document.createElement('img');
+        img.src = 'https://i.ibb.co/Lxp3QGT/silhouette-cropped.jpg';
+        img.style.height = '12em';
+        img.style.borderBottom = '2px solid black';
+
+        let imgContainer = document.createElement('div');
+        imgContainer.style.display = 'flex';
+        imgContainer.style.flexDirection = 'column';
+        imgContainer.style.justifyContent = 'center';
+        imgContainer.style.margin = '10px';
+        imgContainer.style.marginTop = '-5px';
+        imgContainer.style.backgroundColor = 'white';
+        imgContainer.style.border = '4px solid black';
+        imgContainer.style.borderTop = '1px solid black'
+        imgContainer.style.borderRadius = '0 0 10px 10px';
+        imgContainer.style.overflow = 'hidden';
+        imgContainer.appendChild(img);
+
+        let name = document.createElement('div');
+        name.innerText = 'Unfilled Advisor Slot';
+        name.style.whiteSpace = 'normal'; // Allows the text to wrap
+        name.style.overflowWrap = 'break-word'; // Breaks the word if necessary
+        name.style.maxWidth = '115px';
+        name.style.height = '32px';
+        if (window.innerWidth <= 768) {
+
+                name.style.height = '64px';
+            }
+        name.style.color = 'black'
+        name.style.padding = '0.5em'
+        name.style.fontWeight = 'bold';
+        name.style.margin = 'auto';
+        imgContainer.appendChild(name);
+
+        slot.appendChild(imgContainer);
+        advisorContainer.appendChild(slot);
+    }
+
+    middleCol.appendChild(advisorContainer);
+
+    if (campaignTrail_temp.staff_mode && dismissalsLeft>0) {
+        // Add hire button with margin
+        let hireButton = document.createElement('button');
+        hireButton.innerText = 'Hire Advisors';
+        hireButton.style.margin = '1em';
+        hireButton.style.backgroundColor = 'lightgreen';
+        hireButton.style.boxShadow = '0 0 20px 4px rgba(144, 238, 144, 0.9)'; // Stronger light green glow
+        hireButton.onclick = showAdvisors;
+        middleCol.appendChild(hireButton);
+    } else {
+        // Create an empty space of 3em height
+        let spacerDiv = document.createElement('div');
+        spacerDiv.style.height = '3em';
+        middleCol.appendChild(spacerDiv);
+    }
+
+    // Add dismissal information
+    var dismissInfoDiv = document.createElement('div');
+    dismissInfoDiv.style.border = '5px solid black';
+    dismissInfoDiv.style.borderRadius = '10px';
+    dismissInfoDiv.style.padding = '1em';
+    dismissInfoDiv.className = 'happy-box';
+
+    let dismissStatus = document.createElement('span'); // Create a span to hold the dismissal status
+
+    let dismissalsDone = 5 - dismissalsLeft;
+
+    dismissStatus.innerText += "Campaign status: ";
+
+    switch(dismissalsDone) {
+        case 0:
+            dismissStatus.innerText += "Harmonious campaign";
+            break;
+        case 1:
+            dismissStatus.innerText += "United campaign";
+            break;
+        case 2:
+            dismissStatus.innerText += "Somewhat united campaign";
+            break;
+        case 3:
+            dismissStatus.innerText += "Some discord in the campaign";
+            break;
+        case 4:
+            dismissStatus.innerText += "Disunited campaign";
+            break;
+        case 5:
+            dismissStatus.innerText += "Chaotic campaign";
+            break;
+        default:
+            dismissStatus.innerText += "Campaign status unknown";
+    }
+
+    dismissInfoDiv.appendChild(dismissStatus);
+    middleCol.appendChild(dismissInfoDiv);
+
+
+
+    let predictionWrapperDiv = document.createElement('div');
+    predictionWrapperDiv.id = 'predictionWrapperDiv';
+    predictionWrapperDiv.style.width = '70%';
+    predictionWrapperDiv.style.margin = 'auto';
+
+    // Create a div to display the polling/seats data
+    let pollingDiv = document.createElement('div');
+    pollingDiv.id = 'pollingDiv';
+    pollingDiv.className = 'happy-box';
+    pollingDiv.style.border = '5px solid black';
+    pollingDiv.style.borderRadius = '10px';
+    pollingDiv.style.padding = '5px';
+    pollingDiv.style.margin = '5px';
+    pollingDiv.style.marginTop = '3em';
+
+    // Add header
+    let PollingHeader = document.createElement('h3');
+    PollingHeader.innerText = 'Current Predictions';
+    PollingHeader.style.fontWeight = 'bold';
+    pollingDiv.appendChild(PollingHeader);
+
+    // Create an inner div for the entries
+    let entryDiv = document.createElement('div');
+    entryDiv.id = 'entryDiv';
+    pollingDiv.appendChild(entryDiv);
+
+    // Create a button to toggle between polling and seats
+    let toggleButton = document.createElement('button');
+    toggleButton.innerText = 'Show Seats';
+    toggleButton.addEventListener('click', toggleInfo);
+    toggleButton.style.backgroundColor = 'lightgreen';
+    pollingDiv.appendChild(toggleButton);
+
+    let pollData = temp.final_overall_results;
+
+    // Flag to know what we're currently displaying
+    let showingPolling = true;
+
+    // Function to find last_name based on pk
+    function findLastName(pk) {
+        let candidate = campaignTrail_temp.candidate_json.find(c => c.pk === pk);
+        return candidate ? candidate.fields.last_name : 'Unknown';
+    }
+
+    function populateDiv() {
+        // Clear the existing info
+        while (entryDiv.firstChild) {
+            entryDiv.removeChild(entryDiv.firstChild);
+        }
+
+        let sortedData = [...pollData];
+
+        if (showingPolling) {
+
+            sortedData.sort((a, b) => b.popular_votes - a.popular_votes);
+        } else {
+
+            sortedData.sort((a, b) => b.electoral_votes - a.electoral_votes);
+        }
+
+        sortedData.forEach((data) => {
+            let lastName = findLastName(data.candidate);
+            let infoValue;
+
+            if (showingPolling) {
+                infoValue = (Math.round(data.popular_votes * 2 * factorPolls) / (2 * factorPolls)).toFixed(1);
+                infoValue += '%';
+            } else {
+                infoValue = Math.round(data.electoral_votes / (5 / factorSeats)) * (5 / factorSeats);
+                infoValue += ' seats';
+            }
+
+            let boldLastName = document.createElement('strong');
+            boldLastName.appendChild(document.createTextNode(`${lastName}: `));
+            entryDiv.appendChild(boldLastName);
+            entryDiv.appendChild(document.createTextNode(`${infoValue}`));
+            entryDiv.appendChild(document.createElement('br'));
+
+            // Add a little space between entries (equivalent to half a <br>)
+            let spacer = document.createElement('div');
+            spacer.style.height = '0.5em';
+            entryDiv.appendChild(spacer);
+        });
+    }
+
+    // Function to toggle between polling and seats
+    function toggleInfo() {
+        showingPolling = !showingPolling;
+        toggleButton.innerText = showingPolling ? 'Show Seats' : 'Show PV';
+        populateDiv();
+    }
+
+    // Initial population and append button
+    populateDiv();
+
+    // Add to the left column
+    predictionWrapperDiv.appendChild(pollingDiv);
+
+    // Create a div to display the coalition data
+    let coalitionDiv = document.createElement('div');
+    coalitionDiv.id = 'coalitionDiv';
+    coalitionDiv.className = 'happy-box';
+    coalitionDiv.style.border = '5px solid black';
+    coalitionDiv.style.borderRadius = '10px';
+    coalitionDiv.style.padding = '5px';
+    coalitionDiv.style.margin = '5px';
+    coalitionDiv.style.marginTop = '1.5em';
+
+    // Add header
+    let coalitionHeader = document.createElement('h3');
+    coalitionHeader.innerText = 'Which coalitions have majorities?';
+    coalitionHeader.style.fontWeight = 'bold';
+    coalitionDiv.appendChild(coalitionHeader);
+
+    // Your data object with three sub-objects
+    let coalitionData = currentCoalitions;
+
+    // Function to populate the coalitionDiv with the correct data
+    function populateCoalitionDiv() {
+        // Define categories
+        let categories = ['Likely', 'Shaky', 'Unlikely'];
+        let keys = ['coalitionsSet1', 'coalitionsSet2', 'coalitionsSet3'];
+
+        keys.forEach((key, index) => {
+            let coalitions = coalitionData[key];
+            if (coalitions && coalitions.length > 0) {
+                // Add subheader
+                let subHeader = document.createElement('h4');
+                subHeader.style.marginTop = '2px';
+                subHeader.style.marginBottom = '2px';
+                subHeader.innerText = categories[index];
+                coalitionDiv.appendChild(subHeader);
+
+                coalitions.forEach((coalition, idx) => {
+                    // Create a tooltip container
+                    let tooltipSpan = document.createElement('span');
+                    tooltipSpan.className = 'mytooltip';
+
+                    // Populate the tooltip container with the coalition name
+                    let info = document.createTextNode(coalition.name);
+                    tooltipSpan.appendChild(info);
+
+                    // Create the tooltip text
+                    let tooltipText = document.createElement('span');
+                    tooltipText.className = 'mytooltiptext';
+
+                    // Convert candidate IDs (parties) to last names and join them
+                    let candidateNames = coalition.parties.map(findLastName).join(', ');
+                    tooltipText.innerText = `Parties: ${candidateNames}`;
+
+                    // Append tooltip text to the tooltip container
+                    tooltipSpan.appendChild(tooltipText);
+
+                    // Append the tooltip container to the coalitionDiv
+                    coalitionDiv.appendChild(tooltipSpan);
+
+                    if (idx !== coalitions.length - 1) {
+                        let breakElement = document.createElement('br');
+                        coalitionDiv.appendChild(breakElement);
+                    }
+                });
+
+
+                // Half spacing between categories
+                let halfBreak = document.createElement('div');
+                halfBreak.style.height = '0.5em';
+                coalitionDiv.appendChild(halfBreak);
+            }
+        });
+    }
+
+    // Initial population
+    populateCoalitionDiv();
+
+    // Add to the left column
+    predictionWrapperDiv.appendChild(coalitionDiv);
+
+    leftCol.appendChild(predictionWrapperDiv);
+
+    // Add back button
+    let backButton = document.createElement('button');
+    backButton.innerText = 'Back';
+    backButton.style.marginTop = '2em';
+    backButton.style.marginBottom = '1em';
+    backButton.style.backgroundColor = 'lightgreen';
+    backButton.style.boxShadow = '0 0 20px 4px rgba(144, 238, 144, 0.9)'; // Stronger light green glow
+    backButton.onclick = function() {
+        // Hide headquarters and show the original content
+        hqDiv.remove();
+        overlay.remove();
+        questions.style.display = '';
+    };
+    if (window.innerWidth <= 768) {
+    rightCol.appendChild(backButton); // Attach to right column for small screens
+    } else {
+        middleCol.appendChild(backButton); // Attach to middle column for larger screens
+    }
+
+    let overlay = document.createElement('div');
+    overlay.id = 'tutorialOverlay';
+    overlay.style.position = 'fixed';
+    overlay.style.top = 0;
+    overlay.style.left = 0;
+    overlay.style.width = '100%';
+    overlay.style.height = '100%';
+    overlay.style.backgroundColor = 'rgba(0,0,0,0.8)'; // Black, semi-transparent
+    overlay.style.zIndex = 999; // Make sure it's below the Tutorial button
+    overlay.style.display = 'none'; // Initially hidden
+    document.body.appendChild(overlay);
+
+    let tutorialButton = document.createElement('button');
+    tutorialButton.innerText = 'Tutorial';
+    tutorialButton.style.marginTop = '2em';
+    tutorialButton.style.marginLeft = '1em';
+    backButton.style.marginBottom = '1em';
+    tutorialButton.style.backgroundColor = 'lightgreen';
+    tutorialButton.style.boxShadow = '0 0 20px 4px rgba(144, 238, 144, 0.9)';
+    tutorialButton.style.position = 'relative';
+    tutorialButton.style.zIndex = 1000; // Above the overlay
+    let hqRect = undefined;
+
+    tutorialButton.onclick = function() {
+        if (overlay.style.display === 'none') {
+            // Show the overlay and change button text
+            overlay.style.display = '';
+            explanationBox.style.display = '';
+            continueButton.style.display = '';
+            tutorialButton.innerText = 'Return';
+            rect = tutorialButton.getBoundingClientRect();
+            hqRect = hqDiv.getBoundingClientRect();
+            explanationBox.style.left = (rect.left - hqRect.left - (12.5 * 14)) + 'px';
+            explanationBox.style.top = (rect.top - hqRect.top - (7 * 14) - rect.height) + 'px';
+            if (window.innerWidth <= 768) {
+                explanationBox.style.left = (rect.left - hqRect.left - (18 * 14)) + 'px';
+                explanationBox.style.top = (rect.top - hqRect.top - (13 * 14) - rect.height) + 'px';
+            }
+            textContent.innerText = 'Welcome to the tutorial. It will teach you everything there is to know about the campaign headquarter. To exit the tutorial, press the return button. To continue, simply press contine.';
+            currentStep = 0;
+        } else {
+            // Hide the overlay and change button text back
+            explanationBox.style.display = 'none';
+            overlay.style.display = 'none';
+            tutorialButton.innerText = 'Tutorial';
+            //clear stray z-indexes if there are any
+            patienceDiv.style.zIndex = '2';
+            patienceHeaderDiv.style.zIndex = '';
+            likeabilityDescDiv.style.zIndex = '';
+            pollingDiv.style.zIndex = '';
+            advisorHeaderDiv.style.zIndex = '';
+            moodDiv.style.zIndex = '';
+            coalitionDiv.style.zIndex = '';
+            dismissInfoDiv.style.zIndex = '';
+            const slots = document.querySelectorAll('.advisor-slot');
+
+            slots.forEach((element) => {
+                element.style.zIndex = '';
+            });
+        }
+    };
+
+    if (window.innerWidth <= 768) {
+    rightCol.appendChild(tutorialButton); // Attach to right column for small screens
+    } else {
+        middleCol.appendChild(tutorialButton); // Attach to middle column for larger screens
+    }
+
+    let explanationBox = document.createElement('div');
+    explanationBox.className = 'explanation-box happy-box';
+    explanationBox.style.position = 'absolute';
+    explanationBox.style.display = 'none';
+
+    // Add text to the box
+    let textContent = document.createElement('p');
+    explanationBox.appendChild(textContent);
+
+    // Add "Continue" button
+    let continueButton = document.createElement('button');
+    continueButton.innerText = 'Continue';
+    continueButton.style.backgroundColor = 'lightgreen';
+    continueButton.onclick = function() {
+        // Do nothing for now
+    };
+    explanationBox.appendChild(continueButton);
+
+    let currentStep = 0;
+
+    function moveToStep(step) {
+
+        const slots = document.querySelectorAll('.advisor-slot');
+
+        switch (step) {
+            case 0:
+                let rect1 = pollingDiv.getBoundingClientRect();
+                hqRect = hqDiv.getBoundingClientRect();
+                rect = tutorialButton.getBoundingClientRect();
+                pollingDiv.style.zIndex = 1001;
+                explanationBox.style.left = (rect1.right - hqRect.left + (2 * 14)) + 'px';
+                explanationBox.style.top = (rect1.top - hqRect.top + (4 * 14)) + 'px';
+                if (window.innerWidth <= 768) {
+                    explanationBox.style.left = (rect.left - hqRect.left - (18 * 14)) + 'px';
+                    explanationBox.style.top = (rect1.top - hqRect.top + (36 * 14)) + 'px';
+                }
+                explanationBox.querySelector('p').innerText = "In this box, your current polling is shown. It is identical to the polling that's shown in the map area. With the button, you can switch to a seat estimate. Both the percentages and seats are rounded. Be careful - polls can be inaccurate! A special advisor can help with the accuracy and make the rounding more precise";
+                break;
+            case 1:
+                let rect2 = patienceDiv.getBoundingClientRect();
+                hqRect = hqDiv.getBoundingClientRect();
+                rect = tutorialButton.getBoundingClientRect();
+                pollingDiv.style.zIndex = '';
+                patienceDiv.style.zIndex = 1001;
+                patienceHeaderDiv.style.zIndex = 1001;
+                likeabilityDescDiv.style.zIndex = 1001;
+                explanationBox.style.left = (rect2.left - hqRect.left - (33 * 14)) + 'px';
+                explanationBox.style.top = (rect2.top - hqRect.top - (2 * 14)) + 'px';
+                if (window.innerWidth <= 768) {
+                    explanationBox.style.left = (rect.left - hqRect.left - (18 * 14)) + 'px';
+                    explanationBox.style.top = (rect2.top - hqRect.top - (28 * 14)) + 'px';
+                }
+                explanationBox.querySelector('p').innerText = "In this area, a specific characteristic that is unique to your character is described - both with the coloured circles and in text. The more circles you have and they closer they are to green, the better. The value can be influenced by choices during the campaign and advisors and will have an influence on your campaign.";
+                break;
+            case 2:
+                let rect3 = advisorHeaderDiv.getBoundingClientRect();
+                hqRect = hqDiv.getBoundingClientRect();
+                rect = tutorialButton.getBoundingClientRect();
+                advisorHeaderDiv.style.zIndex = '1001';
+
+                slots.forEach((element) => {
+                    element.style.zIndex = '1001';
+                });
+
+                patienceDiv.style.zIndex = '2';
+                patienceHeaderDiv.style.zIndex = '';
+                likeabilityDescDiv.style.zIndex = '';
+                explanationBox.style.left = (rect3.right - hqRect.left + (2 * 14)) + 'px';
+                explanationBox.style.top = (rect3.top - hqRect.top + (4 * 14)) + 'px';
+                if (window.innerWidth <= 768) {
+                    explanationBox.style.left = (rect.left - hqRect.left - (18 * 14)) + 'px';
+                    explanationBox.style.top = (rect3.top - hqRect.top + (46 * 14)) + 'px';
+                }
+                if(campaignTrail_temp.staff_mode){
+                    explanationBox.querySelector('p').innerText = "Here, you can view the advisors your campaign has right now. You have up to two slots you can fill. Advisors give different benefits and effect. Some are always unlocked, some can be unlocked throughout the campaign. On the other hand, advisors can also disappear from the potential hire list or quit your campaign if they disagree with your decisions. You can also dismiss them to make space for new advisors - but be aware that once dismissed, an advisor can't be rehired";
+                }
+                 else {
+                    explanationBox.querySelector('p').innerText = "Here you can see your campaign advisors. Since you chose to disable that option, you don't have to worry about them, they are just here for show and will stick with you for the whole campaign.";
+                }
+                break;
+            case 3:
+                let rect4 = dismissInfoDiv.getBoundingClientRect();
+                hqRect = hqDiv.getBoundingClientRect();
+                rect = tutorialButton.getBoundingClientRect();
+                advisorHeaderDiv.style.zIndex = '';
+                slots.forEach((element) => {
+                    element.style.zIndex = '';
+                });
+
+                dismissInfoDiv.style.zIndex = '1001';
+                explanationBox.style.left = (rect4.left - hqRect.left - (4.5 * 14)) + 'px';
+                explanationBox.style.top = (rect4.top - hqRect.top - (12 * 14)) + 'px';
+                if (window.innerWidth <= 768) {
+                    explanationBox.style.left = (rect.left - hqRect.left - (18 * 14)) + 'px';
+                    explanationBox.style.top = (rect4.top - hqRect.top + (17 * 14)) + 'px';
+                }
+                if(campaignTrail_temp.staff_mode){
+                explanationBox.querySelector('p').innerText = "This box contains information on the unity of your campaign. Campaign unity is mainly affected by your advisor management - dismissing advisors and having them quit will negatively impact your unity. Your campaign decisions can also influence the unity. Be careful: If your campaign unity becomes too low, you won't be able to hire or dismiss any more advisors! Unity also has a small effect on your polling.";
+                }
+                else {
+                explanationBox.querySelector('p').innerText = "Campaign unity is a mechanic that's used when playing with active advisor management. In this campaign, it is purely cosmetic and will have no gameplay effect."
+                }
+                break;
+            case 4:
+                let rect5 = moodDiv.getBoundingClientRect();
+                hqRect = hqDiv.getBoundingClientRect();
+                rect = tutorialButton.getBoundingClientRect();
+                dismissInfoDiv.style.zIndex = '';
+                moodDiv.style.zIndex = 1001;
+                explanationBox.style.left = (rect5.left - hqRect.left - (4.5 * 14)) + 'px';
+                explanationBox.style.top = (rect5.top - hqRect.top + (12 * 14)) + 'px';
+                if (window.innerWidth <= 768) {
+                    explanationBox.style.left = (rect.left - hqRect.left - (18 * 14)) + 'px';
+                    explanationBox.style.top = (rect5.top - hqRect.top + (18 * 14)) + 'px';
+                }
+                explanationBox.querySelector('p').innerText = "The campaign mood is purely cosmetic and for flavor and has no gameplay effects.";
+                break;
+
+            case 5:
+                let rect6 = coalitionDiv.getBoundingClientRect();
+                hqRect = hqDiv.getBoundingClientRect();
+                rect = tutorialButton.getBoundingClientRect();
+                coalitionDiv.style.zIndex = '1001';
+                moodDiv.style.zIndex = '';
+                explanationBox.style.left = (rect6.right - hqRect.left + (2 * 14)) + 'px';
+                explanationBox.style.top = (rect6.top - hqRect.top + (4 * 14)) + 'px';
+                if (window.innerWidth <= 768) {
+                    explanationBox.style.left = (rect.left - hqRect.left - (18 * 14)) + 'px';
+                    explanationBox.style.top = (rect6.top - hqRect.top + (34 * 14)) + 'px';
+                }
+                explanationBox.querySelector('p').innerText = "Finally, in this box, it's displayed which coalition would currently have a majority. \"Likely\" means that the odds of them getting a majority are high, \"shaky\" means that it's close and \"unlikely\" means that it's unlikely, but not impossible. Only coalitions which make sense in the current political climate are displayed - you can change that with your coalition promises. If you want to know what parties are included in a given coalition, just hover it";
+                break;
+
+            case 6:
+                let rect7 = tutorialButton.getBoundingClientRect();
+                hqRect = hqDiv.getBoundingClientRect();
+                rect = tutorialButton.getBoundingClientRect();
+                continueButton.style.display = 'none';
+                coalitionDiv.style.zIndex = '';
+                explanationBox.style.left = (rect7.left - hqRect.left - (12.5 * 14)) + 'px';
+                explanationBox.style.top = (rect7.top - hqRect.top - (7 * 14) - rect7.height) + 'px';
+                if (window.innerWidth <= 768) {
+                explanationBox.style.left = (rect.left - hqRect.left - (18 * 14)) + 'px';
+                explanationBox.style.top = (rect7.top - hqRect.top - (13 * 14) - rect.height) + 'px';
+            }
+                explanationBox.querySelector('p').innerText = "This concludes the tutorial. Please press return now to return to the game. You can restart the tutorial at any time.";
+                break;
+        }
+
+        // Update step
+        currentStep++;
+    }
+    // Continue button logic
+    continueButton.onclick = function() {
+        moveToStep(currentStep);
+    };
+
+
+    // Append the box to the body or another container element
+    hqDiv.appendChild(explanationBox);
+
+    // Append the headquarters div to the game window
+    questions.parentNode.insertBefore(hqDiv, questions.nextSibling);
+}
+// Create a <style> element
+const HQStyle = document.createElement('style');
+
+// Add CSS rules for the background image of the body and the happy little boxes
+HQStyle.innerHTML = `
+
+    .explanation-box {
+      z-index: 1010; /* Above the overlay */
+      border: 5px solid black;
+      border-radius: 10px;
+      padding: 1em;
+      width: 25em;
+      height: auto; /* Auto height to fit content */
+    }
+
+  .happy-box {
+    background-image: url('https://cdn.discordapp.com/attachments/1109846390575730788/1148555437839499284/greengradient.png');
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+  }
+  .happy-box:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background-image: inherit;
+    background-size: cover;
+    background-position: inherit;
+    opacity: 0.5;
+  }
+
+  #coalitionDiv .mytooltip{
+      background-color: greenyellow;
+   }
+     #coalitionDiv .mytooltiptext{
+      background-color: lightgreen;
+   }
+`;
+document.head.appendChild(HQStyle);
+
+function showAdvisors() {
+
+    let numberOfHiredAdvisors = advisorsList.filter(a => a.status === 'active').length;
+    const filteredAdvisorsList = advisorsList.filter(advisor => advisor.canBeHired());
+
+
+    // Remove existing HQ div
+    const hq = document.getElementById('headquarter');
+    hq.remove();
+
+    const overlay = document.getElementById('tutorialOverlay');
+    overlay.remove();
+
+    // Create and set up advisorsDiv
+    let advisorsDiv = document.createElement('div');
+    advisorsDiv.id = 'advisors';
+    advisorsDiv.style.boxShadow = '0 0 15px rgba(0,0,0,0.5)';
+    advisorsDiv.style.color = 'black';
+    advisorsDiv.style.backgroundImage = "url('https://cdn.discordapp.com/attachments/1109846390575730788/1148555437839499284/greengradient.png')";
+    advisorsDiv.style.backgroundSize = 'cover';
+
+    // Add header
+    let header = document.createElement('h1');
+    header.innerText = "Hire Advisors";
+    advisorsDiv.appendChild(header);
+
+    let outerDiv = document.createElement('div'); // Create an extra div to wrap all rows
+    outerDiv.style.height = '500px';
+    outerDiv.style.overflow = 'auto'; // Enable scroll when content overflows
+
+    var perRow = 3;
+
+    if (window.matchMedia("(max-width: 768px)").matches) {
+        perRow = 2;
+    }
+
+    filteredAdvisorsList.forEach((advisor, index) => {
+        if (index % perRow === 0) {
+            rowDiv = document.createElement('div');
+            rowDiv.style.display = 'flex';
+            rowDiv.style.justifyContent = 'space-around';
+            outerDiv.appendChild(rowDiv);
+        }
+
+        if (advisor.canBeHired()) {
+            let advisorContainer = document.createElement('div');
+            advisorContainer.style.margin = '1em';
+
+            let img = document.createElement('img');
+            img.src = advisor.picture;
+            img.style.height = '16em';
+            img.style.borderBottom = '2px solid black'; // Give bottom border to the image
+            img.onload = function() {
+                imgContainer.style.width = `${this.width}px`;
+            };
+
+            let name = document.createElement('div');
+            name.innerText = advisor.name;
+            name.style.fontWeight = 'bold';
+            name.style.color = 'black';
+            name.style.padding = '0.2em'
+            let description = document.createElement('div');
+            description.innerText = advisor.description;
+            description.style.margin = '2px'
+            description.style.color = 'black';
+
+            // Wrap the description in another div
+            let descriptionContainer = document.createElement('div');
+            descriptionContainer.style.padding = '0.5em'
+            descriptionContainer.style.height = '8em'
+            if (window.innerWidth <= 768) {
+                descriptionContainer.style.padding = '0.2em'
+                descriptionContainer.style.height = '12em'
+            }
+            descriptionContainer.style.width = '170px'
+            descriptionContainer.appendChild(description);
+
+            // Styling the image container
+            let imgContainer = document.createElement('div');
+            imgContainer.style = `display: flex; flex-direction: column; align-items: center;
+                                   border: 4px solid black; margin: 10px; background-color: white;
+                                   border-radius: 10px; overflow: hidden;`;
+            imgContainer.appendChild(img);
+            imgContainer.appendChild(name);
+            imgContainer.appendChild(descriptionContainer);
+
+            let hireBtn = document.createElement('button');
+            hireBtn.innerText = 'Hire';
+            if (numberOfHiredAdvisors >= 2) {
+                hireBtn.disabled = true;
+            }
+            hireBtn.onclick = function() {
+                advisor.hire();
+                advisorsDiv.remove();
+                openHeadquarter();
+            };
+
+            if (advisor.status === 'locked') {
+                img.style.filter = 'blur(10px)';
+                name.style.filter = 'blur(5px)';
+                description.innerText = advisor.lockedDescription;
+                hireBtn.disabled = true;
+            }
+
+            advisorContainer.appendChild(imgContainer);
+            advisorContainer.appendChild(hireBtn);
+
+            rowDiv.appendChild(advisorContainer);
+        }
+    });
+
+    advisorsDiv.appendChild(outerDiv);
+
+    // Add back button with padding and id
+    let backButton = document.createElement('button');
+    backButton.innerText = 'Back';
+    backButton.style.margin = '1em';
+    backButton.id = 'advisorsBackButton';
+    backButton.onclick = function() {
+        advisorsDiv.remove();
+        openHeadquarter();
+    };
+    advisorsDiv.appendChild(backButton);
+
+    let questions = document.querySelector(".inner_window_question");
+    questions.parentNode.insertBefore(advisorsDiv, questions.nextSibling);
+}
+
+class Advisor {
+    constructor(id, name, picture, description, lockedDescription, hireCode, dismissCode, status) {
+        this.id = id;
+        this.name = name;
+        this.picture = picture;
+        this.description = description;
+        this.lockedDescription = lockedDescription;
+        this.hireCode = hireCode; // function to run when hired
+        this.dismissCode = dismissCode; // function to run when dismissed
+        this.status = status; // "active", "available", "locked", or "dismissed"
+    }
+
+    hire() {
+        this.hireCode();
+        this.status = "active";
+    }
+
+    dismiss() {
+        this.dismissCode();
+        this.status = "dismissed";
+    }
+
+    quit() {
+        if (this.status === 'active') {
+            this.dismiss();
+            advisor_news = true;
+            if (dismissalsLeft > 0) {
+                dismissalsLeft--;
+            }
+        } else {
+            this.status = 'dismissed';
+        }
+    }
+
+
+    unlock() {
+        if (this.status === 'locked') {
+            this.status = 'active'
+        }
+    }
+}
+
+Advisor.prototype.canBeHired = function() {
+    return this.status === 'available' || this.status === 'locked';
+};
+
+const noop = () => {};
+// Advisors defined here
+const advisorHabeck = new Advisor(1, "Robert Habeck", 'https://i.ibb.co/7XcxJCW/habeck.jpg', "Your go party leader is happy to campaign for you in his homestate Schleswig-Holstein and all of Germany.", null, noop, noop, 'available');
+const advisorKellner = new Advisor(2, "Michael Kellner", 'https://i.ibb.co/xFS5Y0d/kellner-cropped.jpg', 'As general secretary of the party, he will help your campaign and coalition talks to be smoother.', null,  () =>coalitions.forEach(coalition => { if ([1, 3, 4, 5, 6, 12, 14, 15].includes(coalition.id)) {coalition.weight *= 1.2;}}),  () =>coalitions.forEach(coalition => { if ([1, 3, 4, 5, 6, 12, 14, 15].includes(coalition.id)) {coalition.weight *= 1/1.2;}}), 'available');
+const advisorUnmuessig = new Advisor(3, "Barbara Unmüßig", 'https://i.ibb.co/Fq99nQS/unm-ig-cropped.jpg', 'Hiring this political scientist will give you access to top-notch polling.', null, ()=> {factorPolls=5; factorSeats=5; errorDegree=0.3;}, ()=> {factorPolls=1; factorSeats=1; errorDegree=1;}, 'available');
+const advisorScharfschwerdt = new Advisor(4, "Michael Scharfschwerdt", 'https://i.ibb.co/QnvWP4w/scharfschwerdt-cropped.jpg', 'Having Scharfscherdt as your campaign coordinator will let you talk to more voters, helping with your likeability.', null, ()=>likeability+=2, ()=>likeability=Math.max(0, likeability-2), 'available');
+const advisorLemke = new Advisor(5, "Steffi Lemke", 'https://i.ibb.co/8Y4fT2f/lemke-cropped.png', "If you need some advice on how to deal with environmental topics, she's the right woman to hire.", null, () => addAdvisorTooltips([4005, 4000], ["Test1 text text text aslkjklj kldjsagkl", "Test2"], 'https://i.ibb.co/8Y4fT2f/lemke-cropped.png'),() => removeAdvisorTooltips([4005, 4000]), 'available');
+const advisorDahmen = new Advisor(6, "Janosch Dahmen", 'https://i.ibb.co/bBz0mfw/dahmen-cropped.jpg', "As a doctor, Dahmen will be able to give you some tips on how to deal with COVID in this campaign.", null, () => {alert("Sorry, no effects implemented yet for this advisor");this.status = "dismissed";}, noop, 'available');
+const advisorTressel = new Advisor(7, "Markus Tressel", 'https://i.ibb.co/DpSfJWJ/tressel-cropped.jpg', "Should you care about what happens in the state of Saarland for some reason, Tressel is your man.", null, noop, noop, 'available');
+const advisorKretschmann = new Advisor(8, "Winfried Kretschmann", 'https://i.ibb.co/mNjwQJT/kretschmann-cropped.jpg', "His popularity in Baden-Württemberg will help you there and behind the scenes, he offered to help you with outreach to the CDU.", "To convince the only Green Minister-President to help, show that you agree with his centrist attitude.", () =>coalitions.forEach(coalition => { if ([1,  3, 5].includes(coalition.id)) {coalition.weight *= 1.5;}}),  () =>coalitions.forEach(coalition => { if ([1, 3, 5].includes(coalition.id)) {coalition.weight *= 1/1.5;}}), 'locked');
+const advisorPiel = new Advisor(9, "Anja Piel", ' https://i.ibb.co/kHRBFnJ/piel-cropped.jpg', "Her knowledge as union functionary will be helpful for economic topics - her connections might help with outreach to the Left in coalition talks", "If you want to hire this union functionary, run a more leftist campaign.", () =>coalitions.forEach(coalition => { if ([12, 14].includes(coalition.id)) {coalition.weight *= 2;}}),  () =>coalitions.forEach(coalition => { if ([12, 14].includes(coalition.id)) {coalition.weight *= 1/2;}}), 'locked');
+const advisorFischer = new Advisor(10, "Joschka Fischer", 'https://i.ibb.co/PcR8vKv/fischer-cropped.jpg', "Despite not being an active politician anymore, Fischer is still popular in Hessen and willing to offer foreign policy advice.", "This former Green Party leader and Foreign Minister wishes for a more hawkish foreign policy.", () => {alert("Sorry, no effects implemented yet for this advisor");this.status = "dismissed";}, noop, 'locked');
+const advisorHolefleisch = new Advisor(11, "Daniel Holefleisch", 'https://i.ibb.co/RDfkMQ6/holefleisch-cropped.jpg', "Involving your husband in the campaign will certainly make you seem more approachable and likeable.", "Your husband has kept out of the spotlight for now - perhaps there's an opportunity to involve him in the campaign somehow?", ()=>likeability+=4, ()=>()=>likeability=Math.max(0, likeability-4), 'locked');
+const advisorRoth = new Advisor(12, "Claudia Roth", 'https://i.ibb.co/FH6Kk5V/roth-cropped.jpg', "Her experience from decades of being in the political business is valuable, especially on social questions.", "She's a longtime Green politician with a storied career - and wants to help if you don't pivot to the center too much.", () => {alert("Sorry, no effects implemented yet for this advisor");this.status = "dismissed";}, noop, 'locked');
+const advisorOezdemir = new Advisor(13, "Cem Özdemir", 'https://i.ibb.co/7g9nqqM/zdemir-cropped.jpg', "Özdemir wants to campaign for you in Baden-Württemberg and can advice you on his pet issue, drug policy.", "Your predecessor as party leader is willing to help - as long as you don't pivot on refugees.", () => {alert("Sorry, no effects implemented yet for this advisor");this.status = "dismissed";}, noop, 'locked');
+const advisorJarasch = new Advisor(14, "Bettina Jarasch", 'https://i.ibb.co/NxF3xns/jarasch-cropped.jpg', "Her media connections will no doubt be helpful, as well as coordinating with her campaign in Berlin.", "A little help for her is needed to recruit the Green party mayoral candidate from Berlin.",  (affectedCandidate1=79, changeAmount1=0.004) => { Object.keys(MediaMap).forEach(key => {changeGlobalEffect(affectedCandidate1, parseInt(key), changeAmount1);}); }, (affectedCandidate1=79, changeAmount1=-0.004) => { Object.keys(MediaMap).forEach(key => { changeGlobalEffect(affectedCandidate1, parseInt(key), changeAmount1); });}, 'locked');
+const advisorBayaz = new Advisor(15, "Danyal Bayaz", "https://i.ibb.co/tPpQ65h/bayaz-cropped.jpg", "Bayaz wants to do two things for you - campaign in Baden-Württemberg and reach out to the FDP for future coalition talks.", "This state minister is an advocate for closer cooperation with the FDP and hopes you feel the same.", () =>coalitions.forEach(coalition => { if ([5, 6, 15].includes(coalition.id)) {coalition.weight *= 1.5;}}),  () =>coalitions.forEach(coalition => { if ([5, 6, 15].includes(coalition.id)) {coalition.weight *= 1/1.5;}}), 'locked');
+const advisorPeters = new Advisor(16,"Anna Peters", 'https://i.ibb.co/4TmSChy/peters-cropped.jpg',  "If you want to turn out the youth vote, who could be better suited than the leader of the Green Party youth organization?", "The leader of the youth wing of your party wants you to show that you're taking the FFF movement seriously.", (affectedCandidate1=79, changeAmount1=0.006, affectedCandidate2=303, changeAmount2=-0.002) => { Object.keys(YouthMap).forEach(key => {      changeGlobalEffect(affectedCandidate1, parseInt(key), changeAmount1); changeGlobalEffect(affectedCandidate2, parseInt(key), changeAmount2);}); }, (affectedCandidate1=79, changeAmount1=-0.005, affectedCandidate2=303, changeAmount2=0.002) => { Object.keys(YouthMap).forEach(key => {      changeGlobalEffect(affectedCandidate1, parseInt(key), changeAmount1); changeGlobalEffect(affectedCandidate2, parseInt(key), changeAmount2);}); },'locked');
+const advisorBuntenbach = new Advisor(17, "Annelie Buntenbach", 'https://i.ibb.co/zFP3zfP/buntebach-cropped.jpg', "The Greens want to become more succesful than the SPD by winning over many of their voters this election - and as union functionary, Buntenbach has some ideas how.", "If you want to win over SPD voters, this union functionary has some ideas how.", (affectedCandidate1=79, changeAmount1=0.004, affectedCandidate2=78, changeAmount2=-0.003) => { Object.keys(SPDTarget).forEach(key => {changeGlobalEffect(affectedCandidate1, parseInt(key), changeAmount1); changeGlobalEffect(affectedCandidate2, parseInt(key), changeAmount2);}); }, (affectedCandidate1=79, changeAmount1=-0.004, affectedCandidate2=78, changeAmount2=0.003) => { Object.keys(SPDTarget).forEach(key => { changeGlobalEffect(affectedCandidate1, parseInt(key), changeAmount1); changeGlobalEffect(affectedCandidate2, parseInt(key), changeAmount2);}); }, 'locked');
+const advisorGuenther = new Advisor(18, "Wolfram Günther", 'https://i.ibb.co/XWc0f73/g-nther-cropped.jpg', "The Greens are used to struggles in East Germany, but Günther wants to do his part for your campaign to change this.", "This East German minister wants you to show that you are serious about appealing to people in this region.", noop, noop, 'locked');
+
+const advisorsList = [
+    advisorHabeck,
+    advisorKellner,
+    advisorUnmuessig,
+    advisorScharfschwerdt,
+    advisorLemke,
+    advisorDahmen,
+    advisorTressel,
+    advisorKretschmann,
+    advisorPiel,
+    advisorFischer,
+    advisorHolefleisch,
+    advisorRoth,
+    advisorOezdemir,
+    advisorJarasch,
+    advisorBayaz,
+    advisorPeters,
+    advisorBuntenbach,
+    advisorGuenther
+];
+
+if (!campaignTrail_temp.staff_mode){
+    advisorKellner.status='active';
+    advisorScharfschwerdt.status='active';
+}
+
+function addAdvisorTooltips(pks, Tooltips, pictureLink) {
+    if (pks.length !== Tooltips.length) {
+        console.error("The lengths of pks and Tooltips arrays should match!");
+        return;
+    }
+
+    for (let i = 0; i < pks.length; i++) {
+        const pk = pks[i];
+        const Tooltip = Tooltips[i];
+
+        let ansIndex = campaignTrail_temp.answers_json.findIndex(item => item.pk === pk);
+
+        // Check if ansIndex is valid
+        if (ansIndex !== -1) {
+            // Save original description if not already saved
+            if (!campaignTrail_temp.answers_json[ansIndex].fields.originalDescription) {
+                campaignTrail_temp.answers_json[ansIndex].fields.originalDescription = campaignTrail_temp.answers_json[ansIndex].fields.description;
+            }
+
+            const tooltipContent = `
+            <span class='mytooltip' style='background-color: lightgreen'>
+                [A]
+                <span class='bubble bubble-bottom-left'>
+                    <div style='display: flex; align-items: center;'>
+                        <img src='${pictureLink}' style='height: 4em;'>
+                        <span style='display: inline-block; margin-left: 3px;'>${Tooltip}</span>
+                    </div>
+                </span>
+            </span>
+            `;
+
+            campaignTrail_temp.answers_json[ansIndex].fields.description = tooltipContent + campaignTrail_temp.answers_json[ansIndex].fields.description;
+        }
+    }
+
+    pks.forEach((pk, index) => {
+        const ansIndex = campaignTrail_temp.answers_json.findIndex(item => item.pk === pk);
+        if (ansIndex !== -1) {
+            setLabelContentByPk(pk, campaignTrail_temp.answers_json[ansIndex].fields.description);
+        }
+    });
+}
+
+
+function removeAdvisorTooltips(pks) {
+    for (let i = 0; i < pks.length; i++) {
+        const pk = pks[i];
+
+        let ansIndex = campaignTrail_temp.answers_json.findIndex(item => item.pk === pk);
+
+        // Check if ansIndex is valid and has originalDescription
+        if (ansIndex !== -1 && campaignTrail_temp.answers_json[ansIndex].fields.originalDescription) {
+            campaignTrail_temp.answers_json[ansIndex].fields.description = campaignTrail_temp.answers_json[ansIndex].fields.originalDescription;
+        }
+    }
+    pks.forEach((pk, index) => {
+    const ansIndex = campaignTrail_temp.answers_json.findIndex(item => item.pk === pk);
+    if (ansIndex !== -1) {
+        setLabelContentByPk(pk, campaignTrail_temp.answers_json[ansIndex].fields.description);
+    }
+});
+
+}
+
+function setLabelContentByPk(pk, newContent) {
+    // Find the input element with the given pk
+    const radioInput = document.querySelector(`input[type="radio"][value="${pk}"]`);
+
+    // If the radio input is found, update the associated label
+    if (radioInput) {
+        const associatedLabel = document.querySelector(`label[for="${radioInput.id}"]`);
+        if (associatedLabel) {
+            associatedLabel.innerHTML = newContent;
+        }
+    }
+}
+
 async function changeChart(processedNodes) {
     const elementIDs = ["overall_vote_statistics", "state_result_data_summary", "overall_details_container"];
     for(let id of elementIDs) {
@@ -2086,6 +3251,8 @@ async function handleMutations(mutationsList, observer) {
         updatePolling();
     }
 
+    addHeadquarterButton()
+
     seatCalculator();
 
     await handleRadioButtons(processedNodes);
@@ -2522,14 +3689,43 @@ initialPolls.forEach((entry) => {
   i++;
 });
 var temp = {};
-temp.final_overall_results=[{ candidate: 77, electoral_votes: 224, popular_votes: 28 },
-{ candidate: 78, electoral_votes: 138, popular_votes: 17.3 },
-{ candidate: 79, electoral_votes: 152, popular_votes: 19.1 },
-{ candidate: 303, electoral_votes: 96, popular_votes: 12 },
-{ candidate: 304, electoral_votes: 41, popular_votes: 5.1 },
-{ candidate: 305, electoral_votes: 81, popular_votes: 10.1 },
-{ candidate: 306, electoral_votes: 0, popular_votes: 8.4 }]
-var currentCoalitions = coalitionTalks(temp.final_overall_results)
+temp.final_overall_results = [{
+        candidate: 77,
+        electoral_votes: 224,
+        popular_votes: 28
+    },
+    {
+        candidate: 78,
+        electoral_votes: 138,
+        popular_votes: 17.3
+    },
+    {
+        candidate: 79,
+        electoral_votes: 152,
+        popular_votes: 19.1
+    },
+    {
+        candidate: 303,
+        electoral_votes: 96,
+        popular_votes: 12
+    },
+    {
+        candidate: 304,
+        electoral_votes: 41,
+        popular_votes: 5.1
+    },
+    {
+        candidate: 305,
+        electoral_votes: 81,
+        popular_votes: 10.1
+    },
+    {
+        candidate: 306,
+        electoral_votes: 0,
+        popular_votes: 8.4
+    }
+]
+var currentCoalitions = coalitionTalks(temp.final_overall_results, optionalMode = true)
 
 
 
