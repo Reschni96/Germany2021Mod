@@ -1322,6 +1322,62 @@ function paginateContent() {
             transition-delay: 0.5s;
         }
 
+.mytooltip:hover .bubble {
+    opacity: 1;
+    transition-delay: 0.5s;
+}
+.bubble {
+    position: absolute;
+    width: 250px;
+    height: 60px;
+    background: #fff;
+    border-radius: 40px;
+    padding: 24px;
+    text-align: center;
+    color: #000;
+    opacity: 0;
+    z-index: 99;
+    bottom: 150%;  /* Shifted up further */
+    left: -60px;  /* Shifted left more */
+    margin-bottom: 10px;
+    border: 1px solid black;
+}
+
+.bubble-bottom-left:before, .bubble-bottom-left:after {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    left: 62px;  /* Adjusted positioning */
+    bottom: -28px;  /* Adjusted positioning */
+}
+
+.bubble-bottom-left:after {
+    border-left: 35px solid black;
+    border-right: 1px solid transparent;
+    border-top: 1px solid transparent;
+    border-bottom: 28px solid transparent;
+}
+
+.bubble-bottom-left:before {
+    border-left: 24px solid #fff;
+    border-right: 12px solid transparent;
+    border-top: 12px solid #fff;
+    border-bottom: 20px solid transparent;
+    left: 63px;  /* Slight adjustment to position over the black triangle */
+    bottom: -27px;  /* Slight adjustment to position over the black triangle */
+    z-index: 100;  /* Make sure this is above the black triangle */
+}
+
+.mytooltip:hover .bubble-bottom-left:before,
+.mytooltip:hover .bubble-bottom-left:after {
+    opacity: 1;
+}
+
+
+
+
+
             @media only screen and (max-width: 768px) {
                  .inner_window_question,
                  #results_container,
