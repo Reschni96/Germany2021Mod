@@ -3950,6 +3950,13 @@ class Advisor {
             this.status = 'dismissed';
         }
     }
+
+
+    unlock() {
+        if (this.status === 'locked') {
+            this.status = 'active'
+        }
+    }
 }
 
 Advisor.prototype.canBeHired = function() {
@@ -3962,7 +3969,7 @@ const advisorHabeck = new Advisor(1, "Robert Habeck", 'https://i.ibb.co/7XcxJCW/
 const advisorKellner = new Advisor(2, "Michael Kellner", 'https://i.ibb.co/xFS5Y0d/kellner-cropped.jpg', 'As general secretary of the party, he will help your campaign and coalition talks to be smoother.', null,  () =>coalitions.forEach(coalition => { if ([1, 3, 4, 5, 6, 12, 14, 15].includes(coalition.id)) {coalition.weight *= 1.2;}}),  () =>coalitions.forEach(coalition => { if ([1, 3, 4, 5, 6, 12, 14, 15].includes(coalition.id)) {coalition.weight *= 1/1.2;}}), 'available');
 const advisorUnmuessig = new Advisor(3, "Barbara Unmüßig", 'https://i.ibb.co/Fq99nQS/unm-ig-cropped.jpg', 'Hiring this political scientist will give you access to top-notch polling.', null, ()=> {factorPolls=5; factorSeats=5; errorDegree=0.3;}, ()=> {factorPolls=1; factorSeats=1; errorDegree=1;}, 'available');
 const advisorScharfschwerdt = new Advisor(4, "Michael Scharfschwerdt", 'https://i.ibb.co/QnvWP4w/scharfschwerdt-cropped.jpg', 'Having Scharfscherdt as your campaign coordinator will let you talk to more voters, helping with your likeability.', null, ()=>likeability+=2, ()=>likeability=Math.max(0, likeability-2), 'available');
-const advisorLemke = new Advisor(5, "Steffi Lemke", 'https://i.ibb.co/8Y4fT2f/lemke-cropped.png', "If you need some advice on how to deal with environmental topics, she's the right woman to hire.", null, () => {alert("Sorry, no effects implemented yet for this advisor");this.status = "dismissed";}, noop, 'available');
+const advisorLemke = new Advisor(5, "Steffi Lemke", 'https://i.ibb.co/8Y4fT2f/lemke-cropped.png', "If you need some advice on how to deal with environmental topics, she's the right woman to hire.", null, () => addAdvisorTooltips([4005, 4000], ["Test1", "Test2"]),() => removeAdvisorTooltips([4005, 4000]), 'available');
 const advisorDahmen = new Advisor(6, "Janosch Dahmen", 'https://i.ibb.co/bBz0mfw/dahmen-cropped.jpg', "As a doctor, Dahmen will be able to give you some tips on how to deal with COVID in this campaign.", null, () => {alert("Sorry, no effects implemented yet for this advisor");this.status = "dismissed";}, noop, 'available');
 const advisorTressel = new Advisor(7, "Markus Tressel", 'https://i.ibb.co/DpSfJWJ/tressel-cropped.jpg', "Should you care about what happens in the state of Saarland for some reason, Tressel is your man.", null, noop, noop, 'available');
 const advisorKretschmann = new Advisor(8, "Winfried Kretschmann", 'https://i.ibb.co/mNjwQJT/kretschmann-cropped.jpg', "His popularity in Baden-Württemberg will help you there and behind the scenes, he offered to help you with outreach to the CDU.", "To convince the only Green Minister-President to help, show that you agree with his centrist attitude.", () =>coalitions.forEach(coalition => { if ([1,  3, 5].includes(coalition.id)) {coalition.weight *= 1.5;}}),  () =>coalitions.forEach(coalition => { if ([1, 3, 5].includes(coalition.id)) {coalition.weight *= 1/1.5;}}), 'locked');
@@ -4002,6 +4009,67 @@ if (!campaignTrail_temp.staff_mode){
     advisorKellner.status='active';
     advisorScharfschwerdt.status='active';
 }
+
+function addAdvisorTooltips(pks, Tooltips) {
+
+    for (let i = 0; i < pks.length; i++) {
+        const pk = pks[i];
+        const Tooltip = Tooltips[i];
+
+        let ansIndex = campaignTrail_temp.answers_json.findIndex(item => item.pk === pk);
+
+        // Check if ansIndex is valid
+        if (ansIndex !== -1) {
+            // Save original description if not already saved
+            if (!campaignTrail_temp.answers_json[ansIndex].fields.originalDescription) {
+                campaignTrail_temp.answers_json[ansIndex].fields.originalDescription = campaignTrail_temp.answers_json[ansIndex].fields.description;
+            }
+
+            campaignTrail_temp.answers_json[ansIndex].fields.description += " <span class='mytooltip' style='background-color: lightgreen'>Advice <span class='mytooltiptext'>" + Tooltip + "</span></span>";
+        }
+    }
+    pks.forEach((pk, index) => {
+    const ansIndex = campaignTrail_temp.answers_json.findIndex(item => item.pk === pk);
+    if (ansIndex !== -1) {
+        setLabelContentByPk(pk, campaignTrail_temp.answers_json[ansIndex].fields.description);
+    }
+});
+
+}
+
+function removeAdvisorTooltips(pks) {
+    for (let i = 0; i < pks.length; i++) {
+        const pk = pks[i];
+
+        let ansIndex = campaignTrail_temp.answers_json.findIndex(item => item.pk === pk);
+
+        // Check if ansIndex is valid and has originalDescription
+        if (ansIndex !== -1 && campaignTrail_temp.answers_json[ansIndex].fields.originalDescription) {
+            campaignTrail_temp.answers_json[ansIndex].fields.description = campaignTrail_temp.answers_json[ansIndex].fields.originalDescription;
+        }
+    }
+    pks.forEach((pk, index) => {
+    const ansIndex = campaignTrail_temp.answers_json.findIndex(item => item.pk === pk);
+    if (ansIndex !== -1) {
+        setLabelContentByPk(pk, campaignTrail_temp.answers_json[ansIndex].fields.description);
+    }
+});
+
+}
+
+function setLabelContentByPk(pk, newContent) {
+    // Find the input element with the given pk
+    const radioInput = document.querySelector(`input[type="radio"][value="${pk}"]`);
+
+    // If the radio input is found, update the associated label
+    if (radioInput) {
+        const associatedLabel = document.querySelector(`label[for="${radioInput.id}"]`);
+        if (associatedLabel) {
+            associatedLabel.innerHTML = newContent;
+        }
+    }
+}
+
 
 
 function removeElectoralVotesZero() {
