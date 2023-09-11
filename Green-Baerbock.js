@@ -1860,7 +1860,6 @@ var factorPolls=1;
 var factorSeats=1;
 
 cyoAdventure = function(a) {
-    console.log(coalitions)
     ans = campaignTrail_temp.player_answers[campaignTrail_temp.player_answers.length - 1]
     let pop_vote = e.current_results[0];
     let playerPolling = (pop_vote.find(p => p.pk === e.candidate_id)).pvp;
@@ -1908,14 +1907,14 @@ cyoAdventure = function(a) {
     if (polling[4][polling[i].length - 1] < 5) {
         currentMisses.push(304)
     }
-    console.log(JSON.parse(JSON.stringify(temp)));
+
     var currentSeats = calculateNationalSeats(temp, currentMisses);
     temp.final_overall_results.forEach(entry => {
         if (currentSeats.hasOwnProperty(entry.candidate)) {
             entry.electoral_votes = currentSeats[entry.candidate];
         }
     });
-    console.log(JSON.parse(JSON.stringify(temp)));
+
     currentCoalitions = coalitionTalks(temp.final_overall_results, optionalMode = true);
 
     //mood
