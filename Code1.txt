@@ -609,7 +609,7 @@ function changeOpponentSelectionDescription() {
 
     <strong>State Visits</strong> are disabled by default as they have less relevance in a popular vote scenario. However, they can be activated for variety and making the game slightly easier.<br>
 
-    The <strong>Advisor Mode</strong> allows you to hire and dismiss your campaign advisors during the campaign. They all have different effects and can be found in the headquarter.<br>
+    The <strong>advisor mode</strong> allows you to hire and dismiss your campaign advisors during the campaign. They all have different effects and can be found in the headquarter.<br>
 
     The <strong><span class="mytooltip">Tooltip option<span class="mytooltiptext">Look out for words with a light blue background like this and hover them for a tooltip.</span></span> </strong>provides tooltips for key phrases, offering extra explanations - especially beneficial for those not acquainted with German politics.</p>
   `
