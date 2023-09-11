@@ -577,24 +577,24 @@ const likeabilityMap = {
         4073: 1,
         4075: -2,
         4077: 1,
-        4100: -5,
-        4101: -4,
-        4102: 1,
-        4103: 1,
-        4105: -1,
-        4106: -2,
-        4107: 2,
-        4108: -1,
-        4109: -2,
-        4111: 1,
-        4112: -3,
-        4113: -1,
-        4114: 1,
-        4118: -5,
+        4129: -5,
+        4130: -4,
+        4098: 1,
+        4099: 1,
+        4101: -1,
+        4102: -2,
+        4103: 2,
+        4104: -1,
+        4105: -2,
+        4107: 1,
+        4108: -3,
+        4109: -1,
+        4110: 1,
+        4114: -5,
+        4116: 1,
         4120: 1,
-        4124: 1,
-        4133: -3,
-        4134: -1,
+        4131: -3,
+        4132: -1,
         4536: -3,
         4537: -1,
         4538: 1,
@@ -617,14 +617,14 @@ const MediaMap = {
         4091: 1,
         4092: 1,
         4093: 1,
+        4121: 1,
+        4122: 1,
+        4123: 1,
+        4124: 1,
         4125: 1,
         4126: 1,
         4127: 1,
         4128: 1,
-        4129: 1,
-        4130: 1,
-        4131: 1,
-        4132: 1,
         4541: 1,
         4542: 1,
         4543: 1,
@@ -639,7 +639,6 @@ const MediaMap = {
         4552: 1,
         4553: 1,
     };
-
 const YouthMap = {
         4009: 1,
         4014: 1,
@@ -662,7 +661,7 @@ const YouthMap = {
         4128: 1,
     };
 
-    const SPDTarget = {
+const SPDTarget = {
         4010: 1,
         4022: 1,
         4025: 1,
@@ -681,7 +680,7 @@ const YouthMap = {
         4076: 1,
         4082: 1,
         4086: 1,
-        4122: 1,
+        4118: 1,
     };
 
 
@@ -2515,11 +2514,6 @@ async function handleRadioButtons(processedNodes) {
                 // Set the value of the div to be the same as the radio button
                 wrapperDiv.value = input.value;
 
-                if (input.value === "4519" && advisorTressel.status === 'active') {
-                    console.log('ok')
-                    wrapperDiv.style.backgroundColor = "lightgreen";
-                }
-
                 // Check for tooltip div
                 let prevSibling = input.previousElementSibling;
                 let tooltipDiv = null;
@@ -3971,18 +3965,18 @@ const advisorUnmuessig = new Advisor(3, "Barbara Unmüßig", 'https://i.ibb.co/F
 const advisorScharfschwerdt = new Advisor(4, "Michael Scharfschwerdt", 'https://i.ibb.co/QnvWP4w/scharfschwerdt-cropped.jpg', 'Having Scharfscherdt as your campaign coordinator will let you talk to more voters, helping with your likeability.', null, ()=>likeability+=2, ()=>likeability=Math.max(0, likeability-2), 'available');
 const advisorLemke = new Advisor(5, "Steffi Lemke", 'https://i.ibb.co/8Y4fT2f/lemke-cropped.png', "If you need some advice on how to deal with environmental topics, she's the right woman to hire.", null, () => addAdvisorTooltips([4005, 4000], ["Test1 text text text aslkjklj kldjsagkl", "Test2"], 'https://i.ibb.co/8Y4fT2f/lemke-cropped.png'),() => removeAdvisorTooltips([4005, 4000]), 'available');
 const advisorDahmen = new Advisor(6, "Janosch Dahmen", 'https://i.ibb.co/bBz0mfw/dahmen-cropped.jpg', "As a doctor, Dahmen will be able to give you some tips on how to deal with COVID in this campaign.", null, () => {alert("Sorry, no effects implemented yet for this advisor");this.status = "dismissed";}, noop, 'available');
-const advisorTressel = new Advisor(7, "Markus Tressel", 'https://i.ibb.co/DpSfJWJ/tressel-cropped.jpg', "Should you care about what happens in the state of Saarland for some reason, Tressel is your man.", null, noop, noop, 'available');
-const advisorKretschmann = new Advisor(8, "Winfried Kretschmann", 'https://i.ibb.co/mNjwQJT/kretschmann-cropped.jpg', "His popularity in Baden-Württemberg will help you there and behind the scenes, he offered to help you with outreach to the CDU.", "To convince the only Green Minister-President to help, show that you agree with his centrist attitude.", () =>coalitions.forEach(coalition => { if ([1,  3, 5].includes(coalition.id)) {coalition.weight *= 1.5;}}),  () =>coalitions.forEach(coalition => { if ([1, 3, 5].includes(coalition.id)) {coalition.weight *= 1/1.5;}}), 'locked');
+const advisorTressel = new Advisor(7, "Markus Tressel", 'https://i.ibb.co/DpSfJWJ/tressel-cropped.jpg', "Should you care about what happens in the state of Saarland for some reason, Tressel is your man.", null, () => addAdvisorTooltips([4519, 4520, 4521, 4522], ["Alright, I know some people. I can help to resolve this matter.", "Don't do this, instead please use my help, we don’t want you to waste your time.","Hey, if we don’t resolve this, the Greens might not make the ballot! It’s a real risk!","I mean sure, this resolves the matter… but we Greens pride ourselves for our parity lists."], 'https://i.ibb.co/DpSfJWJ/tressel-cropped.jpg'),() => removeAdvisorTooltips([4519, 4520, 4521, 4522]), 'available');
+const advisorKretschmann = new Advisor(8, "Winfried Kretschmann", 'https://i.ibb.co/mNjwQJT/kretschmann-cropped.jpg', "His popularity in Baden-Württemberg will help you there and behind the scenes, he offered to help you with outreach to the CDU.", "To convince the only Green Minister-President to help, show that you agree with his centrist attitude.", () =>{coalitions.forEach(coalition => { if ([1,  3, 5].includes(coalition.id)) {coalition.weight *= 1.5;}});addAdvisorTooltips([4064, 4097], ["Schön hier, aber waren Sie schon mal in Baden-Württemberg? I know how to talk to CDU voters!", "I’d be happy to lend you my services in the <i>Ländle</i>! There are enough conservative environmentalists out there!"], 'https://i.ibb.co/mNjwQJT/kretschmann-cropped.jpg')},  () =>{coalitions.forEach(coalition => { if ([1, 3, 5].includes(coalition.id)) {coalition.weight *= 1/1.5;}});removeAdvisorTooltips([4064, 4097])}, 'locked');
 const advisorPiel = new Advisor(9, "Anja Piel", ' https://i.ibb.co/kHRBFnJ/piel-cropped.jpg', "Her knowledge as union functionary will be helpful for economic topics - her connections might help with outreach to the Left in coalition talks", "If you want to hire this union functionary, run a more leftist campaign.", () =>coalitions.forEach(coalition => { if ([12, 14].includes(coalition.id)) {coalition.weight *= 2;}}),  () =>coalitions.forEach(coalition => { if ([12, 14].includes(coalition.id)) {coalition.weight *= 1/2;}}), 'locked');
 const advisorFischer = new Advisor(10, "Joschka Fischer", 'https://i.ibb.co/PcR8vKv/fischer-cropped.jpg', "Despite not being an active politician anymore, Fischer is still popular in Hessen and willing to offer foreign policy advice.", "This former Green Party leader and Foreign Minister wishes for a more hawkish foreign policy.", () => {alert("Sorry, no effects implemented yet for this advisor");this.status = "dismissed";}, noop, 'locked');
 const advisorHolefleisch = new Advisor(11, "Daniel Holefleisch", 'https://i.ibb.co/RDfkMQ6/holefleisch-cropped.jpg', "Involving your husband in the campaign will certainly make you seem more approachable and likeable.", "Your husband has kept out of the spotlight for now - perhaps there's an opportunity to involve him in the campaign somehow?", ()=>likeability+=4, ()=>()=>likeability=Math.max(0, likeability-4), 'locked');
 const advisorRoth = new Advisor(12, "Claudia Roth", 'https://i.ibb.co/FH6Kk5V/roth-cropped.jpg', "Her experience from decades of being in the political business is valuable, especially on social questions.", "She's a longtime Green politician with a storied career - and wants to help if you don't pivot to the center too much.", () => {alert("Sorry, no effects implemented yet for this advisor");this.status = "dismissed";}, noop, 'locked');
 const advisorOezdemir = new Advisor(13, "Cem Özdemir", 'https://i.ibb.co/7g9nqqM/zdemir-cropped.jpg', "Özdemir wants to campaign for you in Baden-Württemberg and can advice you on his pet issue, drug policy.", "Your predecessor as party leader is willing to help - as long as you don't pivot on refugees.", () => {alert("Sorry, no effects implemented yet for this advisor");this.status = "dismissed";}, noop, 'locked');
-const advisorJarasch = new Advisor(14, "Bettina Jarasch", 'https://i.ibb.co/NxF3xns/jarasch-cropped.jpg', "Her media connections will no doubt be helpful, as well as coordinating with her campaign in Berlin.", "A little help for her is needed to recruit the Green party mayoral candidate from Berlin.",  (affectedCandidate1=79, changeAmount1=0.004) => { Object.keys(MediaMap).forEach(key => {changeGlobalEffect(affectedCandidate1, parseInt(key), changeAmount1);}); }, (affectedCandidate1=79, changeAmount1=-0.004) => { Object.keys(MediaMap).forEach(key => { changeGlobalEffect(affectedCandidate1, parseInt(key), changeAmount1); });}, 'locked');
+const advisorJarasch = new Advisor(14, "Bettina Jarasch", 'https://i.ibb.co/NxF3xns/jarasch-cropped.jpg', "Her media connections will no doubt be helpful, as well as coordinating with her campaign in Berlin.", "A little help for her is needed to recruit the Green party mayoral candidate from Berlin.",  (affectedCandidate1=79, changeAmount1=0.004) => { Object.keys(MediaMap).forEach(key => {changeGlobalEffect(affectedCandidate1, parseInt(key), changeAmount1);}); addAdvisorTooltips([4071, 4072, 4073, 4086, 4087, 4088, 4089, 4096, 4117, 4118, 4119, 4120], ["Going on the attack will get you back into the headlines, but at what cost…", "This won’t help to get you back into the horse race!","My media buddies would love to see some action here!","Good idea if you want to consolidate the Left, but he’s a tough nut to crack.","He is, but be careful that you don’t overdo it with the attacks…" ,"Nice idea, but don’t disappear into the background of those two men!", "Well, now you’re just admitting defeat.", "You’ll need another Green in the Bundesrat, and I think I can win this with your help, even though Berlin isn’t that competitive!", "Good idea, the press sees this as a race between you and him.", "The media thinks you’re already the main center-left candidate.", "My media buddies are doubtful that it’ll be enough for Red Green… but if you think so…" , "Talking to the fascists? Really?"], 'https://i.ibb.co/NxF3xns/jarasch-cropped.jpg')}, (affectedCandidate1=79, changeAmount1=-0.004) => { Object.keys(MediaMap).forEach(key => { changeGlobalEffect(affectedCandidate1, parseInt(key), changeAmount1); });removeAdvisorTooltips([4071, 4072, 4073, 4086, 4087, 4088, 4089, 4096, 4117, 4118, 4119, 4120]);}, 'locked');
 const advisorBayaz = new Advisor(15, "Danyal Bayaz", "https://i.ibb.co/tPpQ65h/bayaz-cropped.jpg", "Bayaz wants to do two things for you - campaign in Baden-Württemberg and reach out to the FDP for future coalition talks.", "This state minister is an advocate for closer cooperation with the FDP and hopes you feel the same.", () =>coalitions.forEach(coalition => { if ([5, 6, 15].includes(coalition.id)) {coalition.weight *= 1.5;}}),  () =>coalitions.forEach(coalition => { if ([5, 6, 15].includes(coalition.id)) {coalition.weight *= 1/1.5;}}), 'locked');
-const advisorPeters = new Advisor(16,"Anna Peters", 'https://i.ibb.co/4TmSChy/peters-cropped.jpg',  "If you want to turn out the youth vote, who could be better suited than the leader of the Green Party youth organization?", "The leader of the youth wing of your party wants you to show that you're taking the FFF movement seriously.", (affectedCandidate1=79, changeAmount1=0.006, affectedCandidate2=303, changeAmount2=-0.002) => { Object.keys(YouthMap).forEach(key => {      changeGlobalEffect(affectedCandidate1, parseInt(key), changeAmount1); changeGlobalEffect(affectedCandidate2, parseInt(key), changeAmount2);}); }, (affectedCandidate1=79, changeAmount1=-0.005, affectedCandidate2=303, changeAmount2=0.002) => { Object.keys(YouthMap).forEach(key => {      changeGlobalEffect(affectedCandidate1, parseInt(key), changeAmount1); changeGlobalEffect(affectedCandidate2, parseInt(key), changeAmount2);}); },'locked');
+const advisorPeters = new Advisor(16,"Anna Peters", 'https://i.ibb.co/4TmSChy/peters-cropped.jpg',  "If you want to turn out the youth vote, who could be better suited than the leader of the Green Party youth organization?", "The leader of the youth wing of your party wants you to show that you're taking the FFF movement seriously.", (affectedCandidate1=79, changeAmount1=0.006, affectedCandidate2=303, changeAmount2=-0.002) => { Object.keys(YouthMap).forEach(key => {      changeGlobalEffect(affectedCandidate1, parseInt(key), changeAmount1); changeGlobalEffect(affectedCandidate2, parseInt(key), changeAmount2);}); addAdvisorTooltips([4094], ["Luisa isn’t really active right now, and FFF is party-neutral. She’ll only accept if you’ve proven your steadfast allegiance with Fridays For Future."], 'https://i.ibb.co/4TmSChy/peters-cropped.jpg')}, (affectedCandidate1=79, changeAmount1=-0.005, affectedCandidate2=303, changeAmount2=0.002) => { Object.keys(YouthMap).forEach(key => {      changeGlobalEffect(affectedCandidate1, parseInt(key), changeAmount1); changeGlobalEffect(affectedCandidate2, parseInt(key), changeAmount2);}); removeAdvisorTooltips([4094])},'locked');
 const advisorBuntenbach = new Advisor(17, "Annelie Buntenbach", 'https://i.ibb.co/zFP3zfP/buntebach-cropped.jpg', "The Greens want to become more succesful than the SPD by winning over many of their voters this election - and as union functionary, Buntenbach has some ideas how.", "If you want to win over SPD voters, this union functionary has some ideas how.", (affectedCandidate1=79, changeAmount1=0.004, affectedCandidate2=78, changeAmount2=-0.003) => { Object.keys(SPDTarget).forEach(key => {changeGlobalEffect(affectedCandidate1, parseInt(key), changeAmount1); changeGlobalEffect(affectedCandidate2, parseInt(key), changeAmount2);}); }, (affectedCandidate1=79, changeAmount1=-0.004, affectedCandidate2=78, changeAmount2=0.003) => { Object.keys(SPDTarget).forEach(key => { changeGlobalEffect(affectedCandidate1, parseInt(key), changeAmount1); changeGlobalEffect(affectedCandidate2, parseInt(key), changeAmount2);}); }, 'locked');
-const advisorGuenther = new Advisor(18, "Wolfram Günther", 'https://i.ibb.co/XWc0f73/g-nther-cropped.jpg', "The Greens are used to struggles in East Germany, but Günther wants to do his part for your campaign to change this.", "This East German minister wants you to show that you are serious about appealing to people in this region.", noop, noop, 'locked');
+const advisorGuenther = new Advisor(18, "Wolfram Günther", 'https://i.ibb.co/XWc0f73/g-nther-cropped.jpg', "The Greens are used to struggles in East Germany, but Günther wants to do his part for your campaign to change this.", "This East German minister wants you to show that you are serious about appealing to people in this region.",() =>addAdvisorTooltips([4065,4120], ["I know our potential here is limited, but if not for the election, I believe coming here is important for our national unity.", "Look, I appreciate the effort, but if anyone can talk to the AfD, it’s certainly not us."], 'https://i.ibb.co/XWc0f73/g-nther-cropped.jpg'), () =>removeAdvisorTooltips([4065,4120]), 'locked');
 
 const advisorsList = [
     advisorHabeck,
