@@ -2222,10 +2222,14 @@ function Chartbuilder(type) {
                 title: {
                     text: 'Questions'
                 },
-                categories: Array.from({ length: polling[0].length }, (_, index) => index)
+                labels: {
+                    rotation: 0
+                },
+                categories: Array.from({
+                    length: polling[0].length
+                }, (_, index) => index)
 
             },
-
             legend: {
                 layout: 'vertical',
                 align: 'right',
