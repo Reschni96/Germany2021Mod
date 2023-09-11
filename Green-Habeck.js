@@ -2730,6 +2730,13 @@ if (!campaignTrail_temp.staff_mode){
     advisorScharfschwerdt.status='active';
 }
 
+campaignTrail_temp.answers_json.forEach(answer => {
+    if (!answer.fields.activeHints) {
+        answer.fields.activeHints = [];
+    }
+});
+
+
 function addAdvisorTooltips(pks, Tooltips, pictureLink) {
     if (pks.length !== Tooltips.length) {
         console.error("The lengths of pks and Tooltips arrays should match!");
@@ -2744,24 +2751,35 @@ function addAdvisorTooltips(pks, Tooltips, pictureLink) {
 
         // Check if ansIndex is valid
         if (ansIndex !== -1) {
-            // Save original description if not already saved
+            // Save the original description if not already saved
             if (!campaignTrail_temp.answers_json[ansIndex].fields.originalDescription) {
                 campaignTrail_temp.answers_json[ansIndex].fields.originalDescription = campaignTrail_temp.answers_json[ansIndex].fields.description;
             }
 
-            const tooltipContent = `
-            <span class='mytooltip' style='background-color: lightgreen'>
-                [A]
-                <span class='bubble bubble-bottom-left'>
-                    <div style='display: flex; align-items: center;'>
-                        <img src='${pictureLink}' style='height: 4em;'>
-                        <span style='display: inline-block; margin-left: 3px;'>${Tooltip}</span>
-                    </div>
-                </span>
-            </span>
-            `;
+            // Add the new tooltip with associated picture to the active hints
+            campaignTrail_temp.answers_json[ansIndex].fields.activeHints.push({
+                text: Tooltip,
+                picture: pictureLink // if you later decide to have different pictures for different tooltips, just change this to the corresponding link
+            });
 
-            campaignTrail_temp.answers_json[ansIndex].fields.description = tooltipContent + campaignTrail_temp.answers_json[ansIndex].fields.description;
+            // Rebuild the description from the original description and active hints
+            let rebuiltDescription = campaignTrail_temp.answers_json[ansIndex].fields.originalDescription;
+            campaignTrail_temp.answers_json[ansIndex].fields.activeHints.forEach(hint => {
+                const tooltipContent = `
+                    <span class='mytooltip' style='background-color: lightgreen'>
+                        [A]
+                        <span class='bubble bubble-bottom-left'>
+                            <div style='display: flex; align-items: center;'>
+                                <img src='${hint.picture}' style='height: 4em;'>
+                                <span style='display: inline-block; margin-left: 3px;'>${hint.text}</span>
+                            </div>
+                        </span>
+                    </span>
+                `;
+                rebuiltDescription = tooltipContent + rebuiltDescription;
+            });
+
+            campaignTrail_temp.answers_json[ansIndex].fields.description = rebuiltDescription;
         }
     }
 
@@ -2773,25 +2791,46 @@ function addAdvisorTooltips(pks, Tooltips, pictureLink) {
     });
 }
 
+function removeAdvisorTooltips(pk, Tooltip, pictureLink) {
+    let ansIndex = campaignTrail_temp.answers_json.findIndex(item => item.pk === pk);
 
-function removeAdvisorTooltips(pks) {
-    for (let i = 0; i < pks.length; i++) {
-        const pk = pks[i];
-
-        let ansIndex = campaignTrail_temp.answers_json.findIndex(item => item.pk === pk);
-
-        // Check if ansIndex is valid and has originalDescription
-        if (ansIndex !== -1 && campaignTrail_temp.answers_json[ansIndex].fields.originalDescription) {
-            campaignTrail_temp.answers_json[ansIndex].fields.description = campaignTrail_temp.answers_json[ansIndex].fields.originalDescription;
-        }
+    if (ansIndex === -1) {
+        console.error(`Answer with pk ${pk} not found!`);
+        return;
     }
-    pks.forEach((pk, index) => {
-    const ansIndex = campaignTrail_temp.answers_json.findIndex(item => item.pk === pk);
-    if (ansIndex !== -1) {
-        setLabelContentByPk(pk, campaignTrail_temp.answers_json[ansIndex].fields.description);
-    }
-});
 
+    // Find the index of the tooltip to be removed from active hints
+    const hintIndex = campaignTrail_temp.answers_json[ansIndex].fields.activeHints.findIndex(hint =>
+        hint.text === Tooltip && hint.picture === pictureLink);
+
+    // Remove the tooltip from active hints if found
+    if (hintIndex !== -1) {
+        campaignTrail_temp.answers_json[ansIndex].fields.activeHints.splice(hintIndex, 1);
+    } else {
+        console.warn(`Tooltip not found for pk ${pk}. Skipping removal.`);
+    }
+
+    // Rebuild the description from original description and active hints
+    let rebuiltDescription = campaignTrail_temp.answers_json[ansIndex].fields.originalDescription;
+    campaignTrail_temp.answers_json[ansIndex].fields.activeHints.forEach(hint => {
+        const tooltipContent = `
+            <span class='mytooltip' style='background-color: lightgreen'>
+                [A]
+                <span class='bubble bubble-bottom-left'>
+                    <div style='display: flex; align-items: center;'>
+                        <img src='${hint.picture}' style='height: 4em;'>
+                        <span style='display: inline-block; margin-left: 3px;'>${hint.text}</span>
+                    </div>
+                </span>
+            </span>
+        `;
+        rebuiltDescription = tooltipContent + rebuiltDescription;
+    });
+
+    campaignTrail_temp.answers_json[ansIndex].fields.description = rebuiltDescription;
+
+    // Update the label content for the answer
+    setLabelContentByPk(pk, campaignTrail_temp.answers_json[ansIndex].fields.description);
 }
 
 function setLabelContentByPk(pk, newContent) {
