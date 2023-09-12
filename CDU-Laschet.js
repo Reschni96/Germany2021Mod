@@ -1322,7 +1322,7 @@ cyoAdventure = function(a) {
 }
 
 function answerSwapper(pk1, pk2, takeEffects = true) {
-    // Your hardcoded JSON data for answers
+    // Hardcoded JSON data for answers
     const answerData = campaignTrail_temp.answers_json;
 
     // Find the indices of the objects with the specified PKs
@@ -1334,12 +1334,21 @@ function answerSwapper(pk1, pk2, takeEffects = true) {
         return;
     }
 
-    // Swap the question values
-    const tempQuestion = answerData[index1].fields.question;
-    answerData[index1].fields.question = answerData[index2].fields.question;
-    answerData[index2].fields.question = tempQuestion;
+    // Swap the description values
+    const tempDescription = answerData[index1].fields.description;
+    answerData[index1].fields.description = answerData[index2].fields.description;
+    answerData[index2].fields.description = tempDescription;
 
-    // If takeEffects is true, update the other global JSON objects
+    // Always swap the answer fields in the answer_feedback_json
+    campaignTrail_temp.answer_feedback_json.forEach(item => {
+        if (item.fields.answer === pk1) {
+            item.fields.answer = pk2;
+        } else if (item.fields.answer === pk2) {
+            item.fields.answer = pk1;
+        }
+    });
+
+    // If takeEffects is true, answers swap effects also
     if (takeEffects) {
         const otherJsons = [
             campaignTrail_temp.answer_score_global_json,
@@ -1351,11 +1360,14 @@ function answerSwapper(pk1, pk2, takeEffects = true) {
             jsonData.forEach(item => {
                 if (item.fields.answer === pk1) {
                     item.fields.answer = pk2;
+                } else if (item.fields.answer === pk2) {
+                    item.fields.answer = pk1;
                 }
             });
         });
     }
 }
+
 
 function applyDrift(candidateId, driftAmount, stateId) {
   // Loop through each object in the JSON array

@@ -2149,16 +2149,16 @@ cyoAdventure = function(a) {
 
     //Mini-CYOA here
     if (ans === 4507) {
-        answerSwapper(4094, 4130, false);
+        answerSwapper(4094, 4130, true);
     }
 
     if (ans === 4024) {
-        answerSwapper(4063, 4133);
+        answerSwapper(4063, 4133, false);
         changeStateEffect(79, 4133, 3004, -0.005);
         changeStateEffect(79, 4133, 3005, -0.005);
         changeStateEffect(79, 4133, 3008, -0.01);
         changeStateEffect(79, 4133, 3014, -0.015);
-        answerSwapper(4095, 4134);
+        answerSwapper(4095, 4134, false);
         changeGlobalEffect(79, 4133, -0.003)
     }
     //coalition weight adjustments here
@@ -2263,10 +2263,19 @@ function answerSwapper(pk1, pk2, takeEffects = true) {
         return;
     }
 
-    // Swap the question values
-    const tempQuestion = answerData[index1].fields.question;
-    answerData[index1].fields.question = answerData[index2].fields.question;
-    answerData[index2].fields.question = tempQuestion;
+    // Swap the description values
+    const tempDescription = answerData[index1].fields.description;
+    answerData[index1].fields.description = answerData[index2].fields.description;
+    answerData[index2].fields.description = tempDescription;
+
+    // Always swap the answer fields in the answer_feedback_json
+    campaignTrail_temp.answer_feedback_json.forEach(item => {
+        if (item.fields.answer === pk1) {
+            item.fields.answer = pk2;
+        } else if (item.fields.answer === pk2) {
+            item.fields.answer = pk1;
+        }
+    });
 
     // If takeEffects is true, answers swap effects also
     if (takeEffects) {
@@ -2280,6 +2289,8 @@ function answerSwapper(pk1, pk2, takeEffects = true) {
             jsonData.forEach(item => {
                 if (item.fields.answer === pk1) {
                     item.fields.answer = pk2;
+                } else if (item.fields.answer === pk2) {
+                    item.fields.answer = pk1;
                 }
             });
         });
