@@ -2644,7 +2644,6 @@ function campaignCharting() {
     chartContainer.style.width = "80%";
     chartContainer.style.float = "left";
 
-    console.log(temp.final_overall_results)
     // Show the seat estimate container and populate it
     seatEstimateContainer.style.display = "inline-block";
     populateSeatEstimate(temp.final_overall_results, campaignTrail_temp.candidate_json);
