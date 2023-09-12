@@ -2204,7 +2204,7 @@ function openHeadquarter() {
     }
 
     let likeabilityDescDiv = document.createElement('div');
-    likeabilityDescDiv.innerText = likeabilityDescription[Math.floor(likeability / 5)]; // Updated logic
+    likeabilityDescDiv.innerText = likeabilityDescription[Math.floor(Math.min(likeability,15) / 5)];
     likeabilityDescDiv.style.color = 'black';
     likeabilityDescDiv.className = 'happy-box';
     likeabilityDescDiv.style.padding = '1em';
