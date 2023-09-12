@@ -512,6 +512,7 @@ var ideologyLeft = 0;
 var mood = "Optimistic"
 var likeability = 11;
 var totalSeats = 0;
+var antilock = false;
 var contestedElection = false;
 var closeElection = false;
 var thirdPlace = false;
@@ -2165,6 +2166,102 @@ cyoAdventure = function(a) {
     }
 
     //Mini-CYOA here
+
+    if (ans===4006){
+        antilock=true;
+    }
+    if (campaignTrail_temp.question_number===22 && antilock){
+        if(likeability>10){
+            answerSwapper(4068, 4608, false)
+            answerSwapper(4114, 4608, false)
+            changeGlobalEffect(79, 4068, -0.01)
+            changeGlobalEffect(79, 4114, -0.01)
+        }
+        else{
+            answerSwapper(4068, 4609, false)
+            answerSwapper(4114, 4609, false)
+            changeGlobalEffect(79, 4068, -0.01)
+            changeGlobalEffect(79, 4114, -0.01)
+        }
+    }
+    if ([4068, 4114].includes(ans)&&antilock&&likeability<5){
+        campaignTrail_temp.question_number=34
+        HabeckTime=true;
+    }
+
+    if  (campaignTrail_temp.question_number===29 && campaignTrail_temp.player_answers.includes(4041)){
+        answerSwapper(4085, 4611, false);
+        changeGlobalEffect(79, 4085, -0.02)
+        changeGlobalEffect(77, 4085, 0.008)
+        changeGlobalEffect(78, 4085, 0.012)
+
+    }
+
+
+    else if (campaignTrail_temp.question_number===29 && campaignTrail_temp.player_answers.includes(4018)&& campaignTrail_temp.player_answers.includes(4046)){
+        answerSwapper(4085, 4610, false);
+        changeGlobalEffect(79, 4085, -0.03)
+        changeGlobalEffect(77, 4085, 0.016)
+        changeGlobalEffect(78, 4085, 0.018)
+        changeGlobalEffect(304, 4085, -0.01)
+    }
+
+    if  (campaignTrail_temp.question_number===31 && campaignTrail_temp.player_answers.includes(4041)&& campaignTrail_temp.player_answers.includes(4085)){
+        answerSwapper(4091, 4612, false);
+        changeGlobalEffect(79, 4091, -0.05)
+        changeGlobalEffect(77, 4091, -0.03)
+        changeGlobalEffect(78, 4091, 0.01)
+    }
+    if  (campaignTrail_temp.question_number===31 && campaignTrail_temp.player_answers.includes(4055)){
+        answerSwapper(4121, 4613, false);
+        changeGlobalEffect(79, 4121, -0.03)
+        changeGlobalEffect(77, 4121, -0.01)
+        changeGlobalEffect(78, 4121, 0.02)
+    }
+
+    if  (campaignTrail_temp.question_number===8 && likeability<5){
+        answerSwapper(4042, 4614, false);
+        changeGlobalEffect(79, 4042, -0.02)
+        changeGlobalEffect(77, 4042, 0.01)
+        changeGlobalEffect(78, 4042, 0.01)
+    }
+    if  (campaignTrail_temp.question_number===8 && likeability>14){
+        answerSwapper(4042, 4615, false);
+        changeGlobalEffect(79, 4042, 0.03)
+        changeGlobalEffect(77, 4042, -0.02)
+        changeGlobalEffect(78, 4042, -0.01)
+    }
+
+    if  (campaignTrail_temp.question_number===24 && likeability <5){
+        answerSwapper(4071, 4616, false);
+        changeGlobalEffect(79, 4071, -0.02)
+        changeGlobalEffect(78, 4071, -0.01)
+        changeGlobalEffect(77, 4071, 0.03)
+
+    }
+
+    if  (campaignTrail_temp.question_number===24 && likeability > 14){
+        answerSwapper(4071, 4617, false);
+        changeGlobalEffect(79, 4071, 0.04)
+        changeGlobalEffect(78, 4071, -0.04)
+    }
+
+    if  (campaignTrail_temp.question_number===29 && likeability < 5){
+        answerSwapper(4082, 4618, false);
+        changeGlobalEffect(79, 4082, -0.02)
+        changeGlobalEffect(78, 4082, -0.01)
+        changeGlobalEffect(77, 4082, -0.01)
+        changeGlobalEffect(303, 4082, 0.04)
+    }
+
+    if  (campaignTrail_temp.question_number===29 && likeability > 14){
+        answerSwapper(4082, 4619, false);
+        changeGlobalEffect(79, 4082, 0.02)
+        changeGlobalEffect(78, 4082, -0.01)
+        changeGlobalEffect(77, 4082, -0.01)
+    }
+
+    //Palmer, redo later
     if (ans === 4507) {
         answerSwapper(4094, 4130, true);
     }
