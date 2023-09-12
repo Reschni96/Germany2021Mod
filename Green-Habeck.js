@@ -1767,7 +1767,31 @@ cyoAdventure = function(a) {
     }
 }
 
-function answerSwapper(pk1, pk2, takeEffects = true) {
+function reapplyTooltips(answer) {
+    if (!answer.fields.activeHints || answer.fields.activeHints.length === 0) return;
+
+    let rebuiltDescription = answer.fields.originalDescription || answer.fields.description;
+
+    answer.fields.activeHints.forEach(hint => {
+        const tooltipContent = `
+            <span class='mytooltip' style='background-color: lightgreen'>
+                [A]
+                <span class='bubble bubble-bottom-left'>
+                    <div style='display: flex; align-items: center;'>
+                        <img src='${hint.picture}' style='height: 4em;'>
+                        <span style='display: inline-block; margin-left: 3px;'>${hint.text}</span>
+                    </div>
+                </span>
+            </span>
+        `;
+        rebuiltDescription = tooltipContent + rebuiltDescription;
+    });
+
+    answer.fields.description = rebuiltDescription;
+}
+
+//exchange two existing answers, default also their effects
+function answerSwapper(pk1, pk2, takeEffects = true, considerTooltips = true) {
     // Hardcoded JSON data for answers
     const answerData = campaignTrail_temp.answers_json;
 
@@ -1780,10 +1804,25 @@ function answerSwapper(pk1, pk2, takeEffects = true) {
         return;
     }
 
-    // Swap the description values
-    const tempDescription = answerData[index1].fields.description;
-    answerData[index1].fields.description = answerData[index2].fields.description;
-    answerData[index2].fields.description = tempDescription;
+    // Swap the descriptions and original descriptions if they exist
+    let description1 = answerData[index1].fields.originalDescription || answerData[index1].fields.description;
+    let description2 = answerData[index2].fields.originalDescription || answerData[index2].fields.description;
+
+    // If originalDescription exists, swap those too
+    if (answerData[index1].fields.originalDescription || answerData[index2].fields.originalDescription) {
+        answerData[index1].fields.originalDescription = description2;
+        answerData[index2].fields.originalDescription = description1;
+    }
+
+    // Swap the current descriptions
+    answerData[index1].fields.description = description2;
+    answerData[index2].fields.description = description1;
+
+    if (considerTooltips) {
+        // Reapply the tooltips for each swapped answer
+        reapplyTooltips(answerData[index1]);
+        reapplyTooltips(answerData[index2]);
+    }
 
     // Always swap the answer fields in the answer_feedback_json
     campaignTrail_temp.answer_feedback_json.forEach(item => {
@@ -1813,6 +1852,7 @@ function answerSwapper(pk1, pk2, takeEffects = true) {
         });
     }
 }
+
 
 
 function applyDrift(candidateId, driftAmount, stateId) {
