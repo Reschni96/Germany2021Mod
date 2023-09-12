@@ -2029,7 +2029,7 @@ cyoAdventure = function(a) {
             campaignTrail_temp.questions_json[23] = extraQuestions[4];
             campaignTrail_temp.questions_json[25] = extraQuestions[5];
         }
-        else if (playerPolling-pop_vote[1].pvp>-0.01){
+        else if (playerPolling-pop_vote[1].pvp>-0.005){
                 if (likeability<10){
                       campaignTrail_temp.questions_json[25] = extraQuestions[17];
                 }
