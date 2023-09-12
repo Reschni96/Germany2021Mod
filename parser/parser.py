@@ -4,7 +4,7 @@ question_regex = re.compile(r'^(E?Q)(\d+):\s*')  # Modified regex to match quest
 answer_regex = re.compile(r'.*A(\d+): (.*)')  # Regular expression to match answer lines
 feedback_regex = re.compile(r'F(\d+): (.*)')  # Regular expression to match feedback lines
 
-candidate = 79
+candidate = 78
 pk_questions = 717  # Starting value for pk for questions
 pk_answers = 3999  # Starting value for pk for answers
 pk_feedback = 5000  # Starting value for pk for feedback
@@ -59,7 +59,7 @@ try:
                         pk_eq_answers += 1
 
                 description = answer_match.group(2).strip()
-                description = description.replace('"', '\\"')
+                description = description.replace('"', '\\\\\\"')
                 pk = pk_answers if last_question_type == 'Q' else pk_eq_answers
                 question_pk = pk_questions if last_question_type == 'Q' else pk_eq_questions
                 out_answers.write('{{\\"model\\": \\"campaign_trail.answer\\", \\"pk\\": {}, \\"fields\\": {{\\"question\\": {}, \\"description\\": \\"{}\\"}}}}, '.format(pk, question_pk, description))
