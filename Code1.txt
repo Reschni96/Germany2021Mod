@@ -1328,8 +1328,8 @@ function paginateContent() {
             #map_footer{
                 margin-top: auto !important;
             }
-            #inner_window_4{
-                height: 92%
+            #running_mate_description_window{
+                height: 74%
            }
 
             #overall_details_container{

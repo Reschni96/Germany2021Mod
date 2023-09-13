@@ -3501,7 +3501,7 @@ function seatCalculator() {
 
         // Show the seat estimate container and populate it
         seatEstimateContainer.style.display = "inline-block";
-        populateSeatEstimate(temp.final_overall_results, campaignTrail_temp.candidate_json);
+        populateSeatEstimate(temp.final_overall_results, campaignTrail_temp.candidate_json, currentCoalitions);
 
 
         // Draw the chart
@@ -3632,7 +3632,6 @@ function seatCalculator() {
                 }
             });
             currentCoalitions = coalitionTalks(temp.final_overall_results);
-            console.log(currentCoalitions)
             ElectionNightCharting();
             let digitalClock = document.getElementById("digitalClock");
             let title =  document.getElementsByClassName("highcharts-title")
@@ -5491,9 +5490,9 @@ if (e.realisticPolls) {
 var isChartView = false; // A flag indicating whether the current view is a chart
 
 
-function populateSeatEstimate(final_overall_results, candidate_json) {
+function populateSeatEstimate(final_overall_results, candidate_json, coalitions) {
     var container = document.getElementById("seat_estimate_container");
-    container.innerHTML = '<h2>Current seat estimate</h2>'; // Add the header back
+    container.innerHTML = '<h3>Current seat estimate</h3>'; // Add the header back
 
     final_overall_results.forEach(function(result) {
         var candidateDetails = candidate_json.find(c => c.pk === result.candidate);
@@ -5502,9 +5501,19 @@ function populateSeatEstimate(final_overall_results, candidate_json) {
         var color = candidateDetails ? candidateDetails.fields.color_hex : "#000";
         var name = candidateDetails ? candidateDetails.fields.last_name : 'Unknown';
 
-        var content = `<p><span style="background-color:${color}; width: 15px; height: 15px; display: inline-block;"></span> ${name} - ${roundedElectoralVotes}</p>`;
+        var spacing = coalitions ? "margin: 5px 0;" : "margin: 10px 0;";
+        var content = `<p style="${spacing}"><span style="background-color:${color}; width: 15px; height: 15px; display: inline-block; margin-right: 5px;"></span> ${name} - ${roundedElectoralVotes}</p>`;
         container.innerHTML += content;
     });
+
+    if (coalitions) { // if coalitions are passed
+        container.innerHTML += '<hr style="border-top: 1px solid white; margin: 10px 0;">'; // add horizontal white line
+        container.innerHTML += '<h3>Possible coalitions</h3>';
+        coalitions.forEach(coalition => {
+            container.innerHTML += `<p style="margin: 5px 0;">${coalition.name}</p>`;
+        });
+    }
+
 }
 
 function campaignCharting() {
