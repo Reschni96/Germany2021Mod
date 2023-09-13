@@ -3512,7 +3512,7 @@ function seatCalculator() {
             // Create and style the clock
             let digitalClock = document.createElement('div');
             digitalClock.id = 'digitalClock';
-            digitalClock.innerText = '17:50';
+            digitalClock.innerText = '18:00';
             digitalClock.style.position = 'absolute';
             digitalClock.style.top = '5px';
             digitalClock.style.left = '5px';
@@ -3556,8 +3556,8 @@ function seatCalculator() {
                     setTimeout(updateClock, 1000);
                 }
 
-                // Start the clock with a 3-second delay
-                updateClock();
+                // Start the clock with a 2-second delay
+               setTimeout(updateClock, 2000);
 
                 // Expose the stop function to the global scope
                 window.stopClock = function() {
@@ -3632,6 +3632,18 @@ function seatCalculator() {
             });
 
             ElectionNightCharting();
+            let digitalClock = document.getElementById("digitalClock");
+            let title =  document.getElementsByClassName("highcharts-title")
+            let current_time = digitalClock.innerText
+            if (iteration>0 && iteration<8){
+                const hours = current_time.split(":")[0];
+                const minutes = (parseInt(current_time.split(":")[1]) + Math.floor(Math.random() * 5)).toString().padStart(2, '0');
+                current_time = `${hours}:${minutes}`;
+            }
+            title[0].firstChild.data = "Current Predictions - " + current_time
+            if (iteration===8){
+                title[0].firstChild.data = "Final Predictions - " + current_time
+            }
             for (let i = 0; i < 7; i++) {
                 ElectionNightPolling[i].pop();
             }
