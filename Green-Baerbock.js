@@ -5491,7 +5491,8 @@ function populateSeatEstimate(final_overall_results, candidate_json, coalitions)
         var color = candidateDetails ? candidateDetails.fields.color_hex : "#000";
         var name = candidateDetails ? candidateDetails.fields.last_name : 'Unknown';
 
-        var spacing = coalitions ? "margin: 5px 0;" : "margin: 10px 0;";
+        var spacing = coalitions ? "margin: 5px 0;" : "margin: 20px 0;";
+        console.log(spacing)
         var content = `<p style="${spacing}"><span style="background-color:${color}; width: 15px; height: 15px; display: inline-block; margin-right: 5px;"></span> ${name} - ${roundedElectoralVotes}</p>`;
         container.innerHTML += content;
     });
