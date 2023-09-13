@@ -3387,7 +3387,7 @@ function seatCalculator() {
                         calculateSeats(statePK, missedCandidates);
                     });
 
-        if(campaignTrail_temp.election_json[0].fields.has_visits===1){
+        if(campaignTrail_temp.electionNight){
 
 
         // Normalizing the popular_votes to 100

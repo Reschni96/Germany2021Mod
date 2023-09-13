@@ -1963,11 +1963,289 @@ function seatCalculator() {
             calculateSeats(statePK, missedCandidates);
             });
 
-        });
-        eventListenerAttached = true; // Set the flag to true to prevent attaching the event listener multiple times
-      }
+       if(campaignTrail_temp.electionNight){
+
+
+        // Normalizing the popular_votes to 100
+        function normalizeVotes(votes) {
+          const totalVotes = votes.reduce((acc, obj) => acc + obj.popular_votes, 0);
+          return votes.map(obj => {
+            const normalizedVotes = (obj.popular_votes / totalVotes) * 100;
+            return { ...obj, popular_votes: normalizedVotes };
+          });
+        }
+
+        // Calculate election night with errors
+        function calculateElectionNight(votes) {
+          const largeErrorsInitial = votes.map(() => generateNormalRandom(0, 0.0035));
+          const results = [];
+
+          for (let i = 0; i < 9; i++) {
+            const currentResult = votes.map((obj, index) => {
+              let largeError;
+
+              // Linearly reduce for the first four steps
+              if (i < 4) {
+                largeError = largeErrorsInitial[index] * (1 - (i / 9));
+              }
+              // Reduce by half for the remaining steps
+              else {
+                // 'i - 4' because after 4th step, the 5th step is essentially the 1st step of halving
+                largeError = largeErrorsInitial[index] * (1 - (4 / 9)) / Math.pow(2, i - 4);
+              }
+
+              const smallError = generateNormalRandom(0, 0.00006);
+
+              const adjustedVotes = obj.popular_votes * (1 + largeError + smallError);
+              return { ...obj, popular_votes: adjustedVotes };
+            });
+
+            results.push(normalizeVotes(currentResult));
+          }
+
+          // The final result should be the true result without errors
+          results[8] = normalizeVotes(votes);
+
+          return results;
+        }
+    var round1 = true;
+
+    function ElectionNightCharting() {
+    if(round1){
+        var gameWindow = document.getElementById("game_window");
+        gameWindow.id='not_game_window';
+        gameWindow.style.textAlign='center';
+        var invisibleDiv = document.createElement('div');
+        invisibleDiv.style.display = 'none';
+        invisibleDiv.id='game_window'
+        document.body.appendChild(invisibleDiv);
+        document.addEventListener('click', (event) => {
+           if (event.target.id === 'final_result_button') {
+               invisibleDiv.id=''
+               gameWindow.id='game_window';
+               stopClock();
+               stopImmediate=true;
+               console.log("stopped")
+           }
+        }, true);
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Enter' || event.keyCode === 13) {
+               invisibleDiv.id=''
+               gameWindow.id='game_window';
+               stopClock();
+               stopImmediate=true;
+               console.log("stopped")
+            }
+        }, true);
     }
-  }
+    else{
+        var gameWindow = document.getElementById("not_game_window");
+    }
+    var mainContentArea = document.getElementById("main_content_area");
+    var chartContainer = document.getElementById("chartcontainer");
+
+    // If the chartContainer does not exist, we create it once
+    if (!chartContainer) {
+        chartContainer = document.createElement("div");
+        chartContainer.id = "chartcontainer";
+        chartContainer.style.display = "none"; // hide it initially
+        chartContainer.innerHTML = '<figure class="highcharts-figure"><div id="myChart"></div></figure>';
+        gameWindow.insertBefore(chartContainer, mainContentArea); // Insert before the mainContentArea
+    }
+
+    var seatEstimateContainer = document.getElementById("seat_estimate_container");
+    if (!seatEstimateContainer) {
+        seatEstimateContainer = document.createElement("div");
+        seatEstimateContainer.id = "seat_estimate_container";
+        seatEstimateContainer.style.display = "none";
+        seatEstimateContainer.style.width = "19%";
+        seatEstimateContainer.style.height = "33em";
+        seatEstimateContainer.style.float = "right";
+        seatEstimateContainer.style.backgroundColor = "rgba(255, 255, 255, 0.5)";
+        seatEstimateContainer.style.border = "1px solid white"; // Adding white border
+        gameWindow.insertBefore(seatEstimateContainer, mainContentArea);
+    }
+
+
+        // Hide the main content and show the chart container
+        mainContentArea.style.display = "none";
+        chartContainer.style.display = "block";
+
+        chartContainer.style.display = "inline-block";
+        chartContainer.style.width = "80%";
+        chartContainer.style.float = "left";
+
+        // Show the seat estimate container and populate it
+        seatEstimateContainer.style.display = "inline-block";
+        populateSeatEstimate(temp.final_overall_results, campaignTrail_temp.candidate_json, currentCoalitions);
+
+
+        // Draw the chart
+        createPollingBarChart(ElectionNightPolling);
+
+        if(round1){
+
+        (function() {
+            // Create and style the clock
+            let digitalClock = document.createElement('div');
+            digitalClock.id = 'digitalClock';
+            digitalClock.innerText = '18:00';
+            digitalClock.style.position = 'absolute';
+            digitalClock.style.top = '5px';
+            digitalClock.style.left = '5px';
+            digitalClock.style.zIndex = '2';
+            digitalClock.style.fontSize = '24px';
+            digitalClock.style.backgroundColor = 'darkblue';
+            digitalClock.style.color = 'white';
+            digitalClock.style.padding = '5px';
+            digitalClock.style.borderRadius = '5px';
+
+            let chartContainer = document.getElementById('chartcontainer');
+            chartContainer.style.position = 'relative';
+            chartContainer.appendChild(digitalClock);
+
+                // Clock update function
+                let stop = false;
+                function updateClock() {
+                    if (stop) {
+                        return;
+                    }
+
+                    const clock = document.getElementById('digitalClock');
+                    const timeParts = clock.innerText.split(':');
+                    let hours = parseInt(timeParts[0], 10);
+                    let minutes = parseInt(timeParts[1], 10);
+
+                    minutes += 5;
+                    if (minutes >= 60) {
+                        minutes = 0;
+                        hours += 1;
+                    }
+                    if (hours===24){
+                        hours=0;
+                    }
+
+                    const displayHours = hours.toString().padStart(2, '0');
+                    const displayMinutes = minutes.toString().padStart(2, '0');
+
+                    clock.innerText = `${displayHours}:${displayMinutes}`;
+
+                    setTimeout(updateClock, 1000);
+                }
+
+                // Start the clock with a 2-second delay
+               setTimeout(updateClock, 2000);
+
+                // Expose the stop function to the global scope
+                window.stopClock = function() {
+                    stop = true;
+                }
+            })();
+            round1=false
+        }
+
+    }
+
+        electionNightResults = calculateElectionNight(allVotes);
+        electionResults = electionNightResults.reverse();  // Reverse order for accuracy
+
+        // Transpose the matrix to get results by candidate
+        let transposed = [];
+        for (let i = 0; i < electionResults[0].length; i++) {
+            transposed[i] = electionResults.map(result =>
+                result.sort((a, b) => a.candidate - b.candidate)[i].popular_votes
+            );
+        }
+
+        const ElectionNightPolling = transposed;
+        factorPolls=5;
+        factorSeats=5;
+
+        var stopImmediate = false;
+        let intervalId;
+        let accumulatedDelay = 0;  // This keeps track of how much delay has been processed
+        const checkInterval = 100; // Check every 100 ms
+
+        function checkStopCondition(targetDelay, iteration) {
+            if (stopImmediate) {
+                stopImmediate = false;  // Reset the flag
+                return;  // Exit without calling the main function again
+            }
+
+            accumulatedDelay += checkInterval;
+
+            // If accumulated delay reached the target, call the main function
+            if (accumulatedDelay >= targetDelay) {
+                accumulatedDelay = 0;  // Reset the accumulated delay
+                executeWithDelay(iteration + 1);
+            } else {
+                // Otherwise, check again after a short interval
+                intervalId = setTimeout(() => checkStopCondition(targetDelay, iteration), checkInterval);
+            }
+        }
+
+        function executeWithDelay(iteration) {
+            if (iteration === 9) {
+                return; // Stop execution after 8 iterations
+            }
+            else if (iteration === 8){
+                stopClock();
+            }
+
+            temp.final_overall_results = electionNightResults[8-iteration];
+            temp.final_overall_results[0].electoral_votes = 736;
+
+            var currentMisses = [306];
+            if (ElectionNightPolling[4][8-iteration] < 5) {
+                currentMisses.push(304);
+            }
+
+            var currentSeats = calculateNationalSeats(temp, currentMisses);
+
+            temp.final_overall_results.forEach(entry => {
+                if (currentSeats.hasOwnProperty(entry.candidate)) {
+                    entry.electoral_votes = currentSeats[entry.candidate];
+                }
+            });
+            currentCoalitions = coalitionTalks(temp.final_overall_results);
+            ElectionNightCharting();
+            let digitalClock = document.getElementById("digitalClock");
+            let title =  document.getElementsByClassName("highcharts-title")
+            let current_time = digitalClock.innerText
+            if (iteration>0 && iteration<8){
+                const hours = current_time.split(":")[0];
+                const minutes = (parseInt(current_time.split(":")[1]) + Math.floor(Math.random() * 5)).toString().padStart(2, '0');
+                current_time = `${hours}:${minutes}`;
+            }
+            title[0].firstChild.data = "Current Predictions - " + current_time
+            if (iteration===8){
+                title[0].firstChild.data = "Final Predictions - " + current_time
+            }
+            for (let i = 0; i < 7; i++) {
+                ElectionNightPolling[i].pop();
+            }
+
+
+            const delay = Math.random() * (11000 - 8000) + 5000; // Random delay between 5 and 8 seconds
+            checkStopCondition(delay, iteration);
+        }
+
+        // Function to immediately stop the execution
+        function stopExecution() {
+            clearTimeout(intervalId);  // Clear the short interval
+            stopImmediate = true;      // Signal to stop the function
+        }
+
+        executeWithDelay(0);
+
+
+                }
+
+                });
+                eventListenerAttached = true; // Set the flag to true to prevent attaching the event listener multiple times
+            }
+        }
+    }
 }
 function removeElectoralVotesZero() {
   // Get the div element by its ID
