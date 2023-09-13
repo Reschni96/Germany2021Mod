@@ -3385,8 +3385,8 @@ function seatCalculator() {
                         calculateSeats(statePK, missedCandidates);
                     });
 
-
-        if(campaignTrail_temp.election_json[1].fields.has_visits===0){
+        console.log(campaignTrail_temp.election_json[0].fields.has_visits)
+        if(campaignTrail_temp.election_json[0].fields.has_visits===1){
 
 
         // Normalizing the popular_votes to 100
@@ -3619,7 +3619,7 @@ function seatCalculator() {
             temp.final_overall_results[0].electoral_votes = 736;
 
             var currentMisses = [306];
-            if (ElectionNightPolling[4][ElectionNightPolling.length - 1] < 5) {
+            if (ElectionNightPolling[4][8-iteration] < 5) {
                 currentMisses.push(304);
             }
 
