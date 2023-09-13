@@ -2706,8 +2706,12 @@ temp.final_overall_results = [{
     }
 ]
 var currentCoalitions = coalitionTalks(temp.final_overall_results, optionalMode = true)
-
-
+function addPlus(n) {
+    return (n>0?'+':'') + n;
+}
+function getPartyName(party){
+    return party.split('<br>')[0]
+}
 function createPollingBarChart(polling) {
     var myChart = Highcharts.chart('myChart', {
         chart: {
@@ -2716,63 +2720,46 @@ function createPollingBarChart(polling) {
         title: {
             text: 'Current Predictions'
         },
+        subtitle: {
+        text:'Numbers below column indicate change relative to 2017 election',
+        align: 'center'
+        },
         yAxis: {
             title: {
                 text: 'Percentage'
             }
         },
         xAxis: {
-            categories: ['Party']
+             categories: ['<b>CDU/CSU</b><br>'+addPlus(Math.round((Math.round(polling[0][polling[0].length - 1] * 2*factorPolls) / (2*factorPolls)-32.9)*10)/10) +"%", '<b>SPD</b><br>'+addPlus(Math.round((Math.round(polling[1][polling[0].length - 1] * 2*factorPolls) / (2*factorPolls)-20.5)*10)/10) +"%", '<b>Greens</b><br>'+addPlus(Math.round((Math.round(polling[2][polling[0].length - 1] * 2*factorPolls) / (2*factorPolls)-8.9)*10)/10) +"%", '<b>FDP</b><br>'+addPlus(Math.round((Math.round(polling[3][polling[0].length - 1] * 2*factorPolls) / (2*factorPolls)-10.7)*10)/10) +"%", '<b>Left</b><br>'+addPlus(Math.round((Math.round(polling[4][polling[0].length - 1] * 2*factorPolls) / (2*factorPolls)-9.2)*10)/10) +"%", '<b>AfD</b><br>'+addPlus(Math.round((Math.round(polling[5][polling[0].length - 1] * 2*factorPolls) / (2*factorPolls)-12.6)*10)/10) +"%",'<b>Others</b><br>'+addPlus(Math.round((Math.round(polling[6][polling[0].length - 1] * 2*factorPolls) / (2*factorPolls)-5)*10)/10) +"%"],
         },
         tooltip: {
-            valueSuffix: '%'
+                formatter: function() {
+                    return  getPartyName(this.x) + "<br>" + this.y + '%';
+            }
         },
         series: [{
-            name: 'CDU/CSU',
-            data: [Math.round(polling[0][polling[0].length - 1] * 2*factorPolls) / (2*factorPolls)],
-            color: e.candidate_json[0].fields.color_hex
-        }, {
-            name: 'SPD',
-            data: [Math.round(polling[1][polling[1].length - 1] * 2*factorPolls) / (2*factorPolls)],
-            color: e.candidate_json[1].fields.color_hex
-        }, {
-            name: 'Greens',
-            data: [Math.round(polling[2][polling[2].length - 1] * 2*factorPolls) / (2*factorPolls)],
-            color: e.candidate_json[2].fields.color_hex
-        }, {
-            name: 'FDP',
-            data: [Math.round(polling[3][polling[3].length - 1] * 2*factorPolls) / (2*factorPolls)],
-            color: e.candidate_json[3].fields.color_hex
-        }, {
-            name: 'Left',
-            data: [Math.round(polling[4][polling[4].length - 1] * 2*factorPolls) / (2*factorPolls)],
-            color: e.candidate_json[4].fields.color_hex
-        }, {
-            name: 'AfD',
-            data: [Math.round(polling[5][polling[5].length - 1] * 2*factorPolls) / (2*factorPolls)],
-            color: e.candidate_json[5].fields.color_hex
-        }, {
-            name: 'Others',
-            data: [Math.round(polling[6][polling[6].length - 1] * 2*factorPolls) / (2*factorPolls)],
-            color: e.candidate_json[6].fields.color_hex
-        }]
+            showInLegend: false,
+            data: [Math.round(polling[0][polling[0].length - 1] * 2*factorPolls) / (2*factorPolls), Math.round(polling[1][polling[1].length - 1] * 2*factorPolls) / (2*factorPolls),Math.round(polling[2][polling[2].length - 1] * 2*factorPolls) / (2*factorPolls),Math.round(polling[3][polling[3].length - 1] * 2*factorPolls) / (2*factorPolls),Math.round(polling[4][polling[4].length - 1] * 2*factorPolls) / (2*factorPolls),Math.round(polling[5][polling[5].length - 1] * 2*factorPolls) / (2*factorPolls),Math.round(polling[6][polling[6].length - 1] * 2*factorPolls) / (2*factorPolls)],
+            colorByPoint: true,
+            colors: [e.candidate_json[0].fields.color_hex,e.candidate_json[1].fields.color_hex,e.candidate_json[2].fields.color_hex,e.candidate_json[3].fields.color_hex,e.candidate_json[4].fields.color_hex,e.candidate_json[5].fields.color_hex,e.candidate_json[6].fields.color_hex],
+
+        }, ]
     });
 
-          var div = document.getElementById('chartcontainer');
-      div.style.border = 'medium double';
-      div.style.backgroundColor = 'rgba(255, 255, 255, 0.5)';
-      div.style.borderColor = '#c9c9c9';
+    var div = document.getElementById('chartcontainer');
+    div.style.border = 'medium double';
+    div.style.backgroundColor = 'rgba(255, 255, 255, 0.5)';
+    div.style.borderColor = '#c9c9c9';
 
-      var element = document.querySelector('.highcharts-background');
-      if (element) { // Check if element exists before trying to remove it
-          element.remove();
-      }
+    var element = document.querySelector('.highcharts-background');
+    if (element) { // Check if element exists before trying to remove it
+        element.remove();
+    }
 
-      const container = document.getElementById('chartcontainer');
-      container.style.background ='rgba(255, 255, 255, 0.5)';
+    const container = document.getElementById('chartcontainer');
+    container.style.background = 'rgba(255, 255, 255, 0.5)';
 
 }
-
 var campaignButtonAdded = false;
 function addCampaignChartButton() {
     if (document.getElementById("map_footer") && document.getElementById("resume_questions_button")) {
