@@ -3387,7 +3387,6 @@ function seatCalculator() {
                         calculateSeats(statePK, missedCandidates);
                     });
 
-        console.log(campaignTrail_temp.election_json[0].fields.has_visits)
         if(campaignTrail_temp.election_json[0].fields.has_visits===1){
 
 
@@ -3632,7 +3631,8 @@ function seatCalculator() {
                     entry.electoral_votes = currentSeats[entry.candidate];
                 }
             });
-
+            currentCoalitions = coalitionTalks(temp.final_overall_results);
+            console.log(currentCoalitions)
             ElectionNightCharting();
             let digitalClock = document.getElementById("digitalClock");
             let title =  document.getElementsByClassName("highcharts-title")
@@ -3649,6 +3649,7 @@ function seatCalculator() {
             for (let i = 0; i < 7; i++) {
                 ElectionNightPolling[i].pop();
             }
+
 
             const delay = Math.random() * (11000 - 8000) + 5000; // Random delay between 5 and 8 seconds
             checkStopCondition(delay, iteration);
