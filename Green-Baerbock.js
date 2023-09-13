@@ -2174,10 +2174,10 @@ cyoAdventure = function(a) {
                     campaignTrail_temp.questions_json[25] = extraQuestions[16]
                 }
 
-                changeGlobalEffect(77, 4067, 0.04);
-                changeGlobalEffect(77, 4068, 0.04);
-                changeGlobalEffect(77, 4069, 0.04);
-                changeGlobalEffect(77, 4070, 0.04);
+                changeGlobalEffect(79, 4067, 0.04);
+                changeGlobalEffect(79, 4068, 0.04);
+                changeGlobalEffect(79, 4069, 0.04);
+                changeGlobalEffect(79, 4070, 0.04);
                 changeGlobalEffect(78, 4067, -0.04);
                 changeGlobalEffect(78, 4068, -0.04);
                 changeGlobalEffect(78, 4069, -0.04);
