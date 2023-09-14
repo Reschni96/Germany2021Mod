@@ -262,7 +262,7 @@ const aggressiveMap = {
         4084: 1,
         4114: 1,
     };
-var competence = 0;
+var competence = 13;
 const competenceMap = {
         4006: -1,
         4504: 1,
@@ -1813,7 +1813,7 @@ if (campaignTrail_temp.question_number === 27) {
                   campaignTrail_temp.answers_json.find(item => item.pk === 4537).fields.question = '';
                 campaignTrail_temp.answers_json.find(item => item.pk === 4538).fields.question = '';
                 campaignTrail_temp.answers_json.find(item => item.pk === 4539).fields.question = '';
-                campaignTrail_temp.answers_json.find(item => item.pk === 4546).fields.question = '';
+                campaignTrail_temp.answers_json.find(item => item.pk === 4536).fields.question = '';
             }
 
         e.questions_json.splice(28, 0, selectedQuestion);
@@ -1882,7 +1882,7 @@ if (campaignTrail_temp.question_number === 27) {
 
     //worse option if gap to Greens is too big
     if ([4520, 4521, 4522, 4523].includes(ans)) {
-        if (pop_vote[2].pvp-playerPolling>0.025 ) {
+        if (pop_vote[2].pvp-playerPolling>0.018) {
        campaignTrail_temp.questions_json[24]=extraQuestions[4];
         }
     }
@@ -1907,28 +1907,28 @@ if (campaignTrail_temp.question_number === 27) {
         muetzenich=true;
     }
 
-    if(AntiGroKo>1 &&!firedKeys[1]){
+    if(AntiGroKo>1 &&!firedKeys[1]&&!campaignTrail_temp.player_answers.includes(4025)){
         firedKeys[1] = true;
         answerSwapper(4025, 4132, false);
         changeGlobalEffect(78,4025,-0.025)
         changeGlobalEffect(79,4025,0.01)
         changeGlobalEffect(304,4025,0.03)
     }
-    if(ProGroKo>1 &&!firedKeys[2]){
+    if(ProGroKo>1 &&!firedKeys[2]&&!campaignTrail_temp.player_answers.includes(4104)){
         firedKeys[2] = true;
         answerSwapper(4104, 4133, false);
         changeGlobalEffect(78,4104,-0.025)
         changeGlobalEffect(77,4104,0.02)
         changeGlobalEffect(303,4104,0.005)
     }
-    if(ProGroKo>2 &&!firedKeys[3]){
+    if(ProGroKo>2 &&!firedKeys[3]&&!campaignTrail_temp.player_answers.includes(4076)){
         firedKeys[3] = true;
         answerSwapper(4076, 4134, false);
         changeGlobalEffect(78,4076,0.005)
         changeGlobalEffect(77,4076,0.006)
         changeGlobalEffect(304,4076,-0.006)
     }
-    if(ProGroKo>1 &&!firedKeys[4]){
+    if(ProGroKo>1 &&!firedKeys[4]&&!campaignTrail_temp.player_answers.includes(4106)){
         firedKeys[4] = true;
         answerSwapper(4106, 4135, false);
         changeGlobalEffect(78,4106,-0.04)
@@ -1936,13 +1936,95 @@ if (campaignTrail_temp.question_number === 27) {
         changeGlobalEffect(79,4106,0.01)
         changeGlobalEffect(304,4106,0.02)
     }
-    if(ProGroKo>3 &&!firedKeys[5]){
+    if(ProGroKo>3 &&!firedKeys[5]&&!campaignTrail_temp.player_answers.includes(4115)){
         firedKeys[5] = true;
-        //add keys Q31A1
+        //add keys 4115
         answerSwapper(4115, 4136, false);
         changeGlobalEffect(78,4115,-0.04)
         changeGlobalEffect(77,4115,-0.01)
         changeGlobalEffect(79,4115,0.05)
+    }
+
+    if(aggressive>1 &&!firedKeys[6]&&!campaignTrail_temp.player_answers.includes(4026)){
+        firedKeys[6] = true;
+        answerSwapper(4026, 4137, false);
+        changeGlobalEffect(78,4026,-0.01)
+        changeGlobalEffect(77,4026,0.005)
+        changeGlobalEffect(79,4026,0.005)
+    }
+
+    if(aggressive>1 &&!firedKeys[7]&&!campaignTrail_temp.player_answers.includes(4034)){
+        firedKeys[7] = true;
+        answerSwapper(4034, 4138, false);
+        changeGlobalEffect(78,4034,-0.006)
+    }
+    if(aggressive>3 &&!firedKeys[8]&&!campaignTrail_temp.player_answers.includes(4061)){
+        firedKeys[8] = true;
+        answerSwapper(4061, 4139, false);
+        changeGlobalEffect(78,4061,0.04)
+        changeGlobalEffect(77,4061,-0.02)
+        changeGlobalEffect(79,4061,-0.02)
+    }
+    if(!firedKeys[9]&&!campaignTrail_temp.player_answers.includes(4061)){
+        //CHECK FOR SCHRÖDER!!!
+        firedKeys[9] = true;
+        answerSwapper(4061, 4140, false);
+        changeGlobalEffect(78,4061,0.06)
+        changeGlobalEffect(77,4061,-0.03)
+        changeGlobalEffect(79,4061,-0.03)
+    }
+    if(aggressive>3 &&!firedKeys[10]&&!campaignTrail_temp.player_answers.includes(4072)){
+        firedKeys[10] = true;
+        answerSwapper(4072, 4141, false);
+        changeGlobalEffect(78,4072,0.02)
+        changeGlobalEffect(77,4072,-0.01)
+        changeGlobalEffect(79,4072,-0.01)
+    }
+    if(aggressive>3 &&!firedKeys[11]&&!campaignTrail_temp.player_answers.includes(4113)){
+        firedKeys[11] = true;
+        answerSwapper(4113, 4142, false);
+        changeGlobalEffect(78,4113,-0.02)
+        changeGlobalEffect(77,4113,0.01)
+        changeGlobalEffect(79,4113,0.01)
+        answerSwapper(4114, 4143, false);
+        changeGlobalEffect(78,4114,-0.01)
+        changeGlobalEffect(77,4114,-0.025)
+        changeGlobalEffect(79,4114,-0.025)
+        changeGlobalEffect(304,4114,0.05)
+        changeGlobalEffect(305,4114,0.03)
+    }
+    if(aggressive>4 &&!firedKeys[12]&&!campaignTrail_temp.player_answers.includes(4084)){
+        firedKeys[12] = true;
+        answerSwapper(4084, 4144, false);
+        changeGlobalEffect(78,4084,0.015)
+        changeGlobalEffect(77,4084,-0.015)
+    }
+
+    if(aggressive>4 &&!firedKeys[13]&&!campaignTrail_temp.player_answers.includes(4090)){
+        firedKeys[13] = true;
+        answerSwapper(4090, 4145, false);
+        answerSwapper(4093, 4146, false);
+        changeGlobalEffect(78,4090,-0.05)
+        changeGlobalEffect(77,4090,0.05)
+        changeGlobalEffect(78,4093,-0.04)
+        changeGlobalEffect(77,4093,0.02)
+        changeGlobalEffect(79,4093,0.02)
+        answerSwapper(4115, 4147, false);
+        answerSwapper(4118, 4148, false);
+        changeGlobalEffect(78,4115,-0.042)
+        changeGlobalEffect(79,4115,0.042)
+        changeGlobalEffect(78,4118,-0.04)
+        changeGlobalEffect(77,4118,0.02)
+        changeGlobalEffect(79,4118,0.02)
+        answerSwapper(4122, 4148, false);
+        changeGlobalEffect(78,4122,-0.02)
+        changeGlobalEffect(77,4122,0.01)
+        changeGlobalEffect(79,4122,0.01)
+    }
+    if(aggressive>5 &&!firedKeys[14]&&!campaignTrail_temp.player_answers.includes(4122)&&merkelism<10){
+        firedKeys[14] = true;
+        answerSwapper(4122, 4150, false);
+        changeGlobalEffect(78,4122,-5)
     }
 
     //coalitions
