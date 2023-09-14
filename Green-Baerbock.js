@@ -2429,55 +2429,55 @@ cyoAdventure = function(a) {
         changeGlobalEffect(77, 4082, -0.01)
     }
 
-    if(SQ>3 && !firedKeys[1]){
+    if(SQ>3 && !firedKeys[1]&& !campaignTrail_temp.player_answers.includes(4038)){
         firedKeys[1] = true;
         answerSwapper(4038, 4620, false);
         changeGlobalEffect(79, 4038, -0.01)
         changeGlobalEffect(78, 4038, 0.01)
     }
 
-    if(SQ>6 && !firedKeys[2]){
+    if(SQ>6 && !firedKeys[2]&&!campaignTrail_temp.player_answers.includes(4072)){
         firedKeys[2] = true;
         answerSwapper(4072, 4621, false);
         changeGlobalEffect(79, 4072, -0.02)
         changeGlobalEffect(78, 4072, 0.02)
     }
 
-    if(SQ>6 && !firedKeys[3]){
+    if(SQ>6 && !firedKeys[3]&&!campaignTrail_temp.player_answers.includes(4090)){
         firedKeys[3] = true;
         answerSwapper(4090, 4622, false);
         changeGlobalEffect(79, 4090, -0.04)
         changeGlobalEffect(78, 4090, 0.02)
     }
 
-    if(cyoaChange>3 && !firedKeys[4]){
+    if(cyoaChange>3 && !firedKeys[4]&&!campaignTrail_temp.player_answers.includes(4090)){
         firedKeys[4] = true;
         answerSwapper(4090, 4623, false);
         changeGlobalEffect(79, 4090, 0.01)
         changeGlobalEffect(78, 4090, -0.02)
     }
 
-    if(SQ>6 && !firedKeys[5]){
+    if(SQ>6 && !firedKeys[5]&&!campaignTrail_temp.player_answers.includes(4123)){
         firedKeys[5] = true;
         answerSwapper(4123, 4624, false);
         changeGlobalEffect(79,4123, -0.02)
         changeGlobalEffect(78,4123, 0.02)
     }
 
-    if(cyoaChange>3 && !firedKeys[6]){
+    if(cyoaChange>3 && !firedKeys[6]&&!campaignTrail_temp.player_answers.includes(4123)){
         firedKeys[6] = true;
         answerSwapper(4123, 4625, false);
         changeGlobalEffect(79,4123, 0.02)
         changeGlobalEffect(77,4123, -0.01)
         changeGlobalEffect(78,4123, -0.01)
     }
-    if(SQ>6 && !firedKeys[7]){
+    if(SQ>6 && !firedKeys[7]&&!campaignTrail_temp.player_answers.includes(4125)){
         firedKeys[7] = true;
         answerSwapper(4125, 4626, false);
         changeGlobalEffect(79,4125, -0.02)
         changeGlobalEffect(78,4125, 0.02)
     }
-    if(cyoaChange>3 && !firedKeys[8]){
+    if(cyoaChange>3 && !firedKeys[8]&&!campaignTrail_temp.player_answers.includes(4125)){
         firedKeys[8] = true;
         answerSwapper(4125, 4627, false);
         changeGlobalEffect(79,4125, 0.01)
@@ -2492,14 +2492,14 @@ cyoAdventure = function(a) {
         answerSwapper(4081, 4631, false);
         answerSwapper(4530, 4632, false);
     }
-    if(cyoaLeft>3 && !firedKeys[11]){
+    if(cyoaLeft>3 && !firedKeys[11]&&!campaignTrail_temp.player_answers.includes(4119)){
         firedKeys[11] = true;
         answerSwapper(4119, 4633, false);
         changeGlobalEffect(79,4119, 0.01)
         changeGlobalEffect(304,4119, -0.03)
      }
 
-    if(neolib>2 && !firedKeys[12]){
+    if(neolib>2 && !firedKeys[12]&&!campaignTrail_temp.player_answers.includes(4110)){
         firedKeys[12] = true;
         answerSwapper(4078, 4634, false);
         answerSwapper(4079, 4635, false);
@@ -2510,14 +2510,14 @@ cyoAdventure = function(a) {
         changeGlobalEffect(304,4119, 0.055)
     }
 
-    if(neolib>3 && !firedKeys[13]){
+    if(neolib>3 && !firedKeys[13]&&!campaignTrail_temp.player_answers.includes(4127)){
         firedKeys[13] = true;
         answerSwapper(4127, 4639, false);
         changeGlobalEffect(77,4127, -0.04)
         changeGlobalEffect(78,4127, 0.04)
     }
 
-    if(FFF>20 && !firedKeys[14]){
+    if(FFF>20 && !firedKeys[14]&&!campaignTrail_temp.player_answers.includes(4034)){
         firedKeys[14] = true;
         answerSwapper(4009, 4640, false);
         changeGlobalEffect(79,4009, 0.01)
@@ -2527,7 +2527,7 @@ cyoAdventure = function(a) {
         answerSwapper(4060, 4642, false);
         changeGlobalEffect(79,4060, -0.01)
         }
-    if(FFF>22 && !firedKeys[15]){
+    if(FFF>22 && !firedKeys[15]&&!campaignTrail_temp.player_answers.includes(4061)){
         firedKeys[15] = true;
         answerSwapper(4061, 4643, false);
         changeGlobalEffect(79,4061, 0.015)
@@ -2537,20 +2537,20 @@ cyoAdventure = function(a) {
     }
 
 
-    if(anticlimate>0 && !firedKeys[16]){
+    if(anticlimate>0 && !firedKeys[16]&&!campaignTrail_temp.player_answers.includes(4034)){
         firedKeys[16] = true;
         answerSwapper(4034, 4644, false);
         changeGlobalEffect(79,4034, -0.015)
         changeGlobalEffect(304,4034, 0.04)
     }
-    if(anticlimate>3 && !firedKeys[17]){
+    if(anticlimate>3 && !firedKeys[17]&&!campaignTrail_temp.player_answers.includes(4060)){
         firedKeys[17] = true;
         answerSwapper(4060, 4645, false);
         changeGlobalEffect(79,4060, -0.05)
         changeGlobalEffect(304,4060, 0.08)
     }
 
-    if(anticlimate>4 && !firedKeys[18]){
+    if(anticlimate>4 && !firedKeys[18]&&!campaignTrail_temp.player_answers.includes(4092)){
         firedKeys[18] = true;
         answerSwapper(4092, 4646, false);
         changeGlobalEffect(79,4092, -0.005)
@@ -2564,7 +2564,7 @@ cyoAdventure = function(a) {
         changeGlobalEffect(77,4126, 0.005)
     }
 
-    if(cultureWar>5 && !firedKeys[19]){
+    if(cultureWar>5 && !firedKeys[19]&&!campaignTrail_temp.player_answers.includes(4530)){
         firedKeys[19] = true;
         answerSwapper(4527, 4649, false);
         answerSwapper(4528, 4650, false);
@@ -2577,7 +2577,7 @@ cyoAdventure = function(a) {
         changeGlobalEffect(305,4120, 0.03)
 
     }
-    if(conservative>5 && !firedKeys[20]){
+    if(conservative>5 && !firedKeys[20]&&!campaignTrail_temp.player_answers.includes(4530)){
         firedKeys[20] = true;
         answerSwapper(4527, 4654, false);
         answerSwapper(4528, 4655, false);
@@ -2593,11 +2593,11 @@ cyoAdventure = function(a) {
         changeGlobalEffect(306,4120, 0.06)
 
     }
-    if(conservative>9 && !firedKeys[21]){
+    if(conservative>9 && !firedKeys[21]&&!campaignTrail_temp.player_answers.includes(4094)){
         firedKeys[21] = true;
         answerSwapper(4094, 4130, true);
     }
-    if(conservative>11 && !firedKeys[22]){
+    if(conservative>11 && !firedKeys[22]&&!campaignTrail_temp.player_answers.includes(4094)){
         firedKeys[22] = true;
         answerSwapper(4094, 4659, false);
     }

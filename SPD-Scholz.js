@@ -229,6 +229,155 @@ const merkelismMap = {
         4260: -2,
         4262: 2,
     };
+
+var AntiGroKo = 0;
+const AntiGroKoMap = {
+        4000: 1,
+        4006: 1,
+        4008: 1,
+        4074: 1,
+        4076: 1,
+        4100: 1,
+    };
+var ProGroKo = 0;
+const ProGroKoMap = {
+        4002: 1,
+        4003: 1,
+        4004: 1,
+        4006: 1,
+        4025: 1,
+        4047: 1,
+        4077: 1,
+    };
+var aggressive = 0;
+const aggressiveMap = {
+        4015: 1,
+        4021: 1,
+        4027: 1,
+        4031: 1,
+        4040: 1,
+        4070: 1,
+        4071: 1,
+        4080: 1,
+        4084: 1,
+        4114: 1,
+    };
+var competence = 0;
+const competenceMap = {
+        4006: -1,
+        4504: 1,
+        4505: -1,
+        4506: -1,
+        4507: 1,
+        4013: 1,
+        4015: -1,
+        4021: -1,
+        4022: 1,
+        4023: -1,
+        4030: -1,
+        4034: 1,
+        4039: 1,
+        4042: -1,
+        4045: 1,
+        4047: -1,
+        4049: 1,
+        4050: 1,
+        4058: -1,
+        4063: 1,
+        4065: -1,
+        4066: -1,
+        4067: 1,
+        4069: -1,
+        4523: -1,
+        4073: 1,
+        4078: 1,
+        4085: 1,
+        4104: -1,
+        4106: -1,
+        4113: -1,
+    };
+
+var FisCon = 0;
+const FisConMap = {
+        4505: 1,
+        4018: 1,
+        4023: 1,
+        4512: 1,
+        4039: 1,
+        4044: 1,
+        4047: 1,
+        4056: 1,
+        4102: 1,
+    };
+var AntiCap = 0;
+const AntiCapMap = {
+        4506: 1,
+        4008: 1,
+        4012: 1,
+        4514: 1,
+        4041: 1,
+        4049: 1,
+        4519: 1,
+        4055: 1,
+        4057: 1,
+        4073: 1,
+        4074: 1,
+        4106: 1,
+    };
+var unity = 0;
+const unityMap = {
+        4000: 1,
+        4002: -1,
+        4004: -1,
+        4006: 1,
+        4007: -1,
+        4504: 1,
+        4507: -1,
+        4009: -1,
+        4012: 1,
+        4014: -1,
+        4017: 1,
+        4018: -1,
+        4022: 1,
+        4023: -1,
+        4024: -1,
+        4026: 1,
+        4514: 1,
+        4037: -1,
+        4038: -1,
+        4042: -1,
+        4043: 1,
+        4049: 1,
+        4053: -1,
+        4518: 1,
+        4054: 1,
+        4056: -1,
+        4061: 1,
+        4065: -1,
+        4069: -1,
+        4521: -1,
+        4522: 1,
+        4073: 1,
+        4530: -1,
+        4531: -1,
+        4074: -1,
+        4076: 1,
+        4077: -1,
+        4081: -1,
+        4104: 1,
+        4106: -1,
+        4107: 1,
+    };
+var SocCon = 0;
+const SocConMap = {
+        4511: 1,
+        4024: 1,
+        4042: 1,
+        4065: 1,
+        4069: 1,
+        4521: 1,
+        4530: 1,
+    };
 // constructs endings based on header and pages
 
 const construct = (a = 1) => {
@@ -1594,6 +1743,45 @@ cyoAdventure = function(a) {
         merkelism += merkelismMap[ans];
         merkelism = Math.max(0, merkelism);
     }
+    if (AntiGroKoMap.hasOwnProperty(ans)) {
+        AntiGroKo += AntiGroKoMap[ans];
+        AntiGroKo = Math.max(0, AntiGroKo);
+    }
+    if (ProGroKoMap.hasOwnProperty(ans)) {
+        ProGroKo += ProGroKoMap[ans];
+        ProGroKo = Math.max(0, ProGroKo);
+    }
+
+    if (aggressiveMap.hasOwnProperty(ans)) {
+        aggressive += aggressiveMap[ans];
+        aggressive = Math.max(0, aggressive);
+    }
+
+    if (competenceMap.hasOwnProperty(ans)) {
+        competence += competenceMap[ans];
+        competence = Math.max(0, competence);
+        merkelism += (competenceMap[ans])*0.25;
+        merkelism = Math.max(0, merkelism);
+    }
+    if (FisConMap.hasOwnProperty(ans)) {
+        FisCon += FisConMap[ans];
+        FisCon = Math.max(0, FisCon);
+    }
+
+    if (AntiCapMap.hasOwnProperty(ans)) {
+        AntiCap += AntiCapMap[ans];
+        AntiCap = Math.max(0, AntiCap);
+    }
+
+    if (unityMap.hasOwnProperty(ans)) {
+        unity += unityMap[ans];
+        unity = Math.max(0, unity);
+    }
+
+    if (SocConMap.hasOwnProperty(ans)) {
+        SocCon += SocConMap[ans];
+        SocCon = Math.max(0, SocCon);
+    }
 
 if (campaignTrail_temp.question_number === 27) {
 
@@ -1633,7 +1821,7 @@ if (campaignTrail_temp.question_number === 27) {
     }
     //direction
 
-	if ([4003, 4004, 4098, 4009, 4014, 4018].includes(ans)) {
+	if ([4003, 4004, 4098, 4009, 4014, 4018, 4502, 4511, 4505].includes(ans)) {
 	    moderate++;
 
 	}
@@ -1644,7 +1832,7 @@ if (campaignTrail_temp.question_number === 27) {
 	    }
 	}
 
-    if ([4006, 4100, 4008, 4123, 4012, 4016].includes(ans)) {
+    if ([4006, 4100, 4008, 4123, 4012, 4016, 4500, 4501, 4509, 4510, 4506].includes(ans)) {
 	    leftist++;
 	}
 
@@ -1652,8 +1840,8 @@ if (campaignTrail_temp.question_number === 27) {
        leftist++;
        campaignTrail_temp.questions_json[2]=extraQuestions[0];
     }
-    if ([4020, 4021, 4022, 4023].includes(ans)) {
-	   if(leftist > 0 && moderate > 1){
+    if ([4511, 4510, 4509, 4508].includes(ans)) {
+	   if(leftist - moderate >1){
 	        campaignTrail_temp.questions_json[6]=extraQuestions[1];
 	        coalitions.forEach(coalition => {
           if (coalition.id === 12) {
@@ -1661,7 +1849,7 @@ if (campaignTrail_temp.question_number === 27) {
           }
         });
 	   }
-	   else if (leftist > 1){
+	   else if (leftist - moderate >3){
 	        campaignTrail_temp.questions_json[6]=extraQuestions[2];
 	        coalitions.forEach(coalition => {
           if (coalition.id === 12) {
@@ -1710,15 +1898,54 @@ if (campaignTrail_temp.question_number === 27) {
         answerSwapper(4004, 4128, false);
         answerSwapper(4005, 4129, false);
         answerSwapper(4006, 4130, false);
-        changeGlobalEffect(78,4130,-0.02)
-        changeGlobalEffect(79,4130,0.01)
-        changeGlobalEffect(77,4130,0.01)
+        changeGlobalEffect(78,4006,-0.02)
+        changeGlobalEffect(79,4006,0.01)
+        changeGlobalEffect(77,4006,0.01)
         answerSwapper(4007, 4131, false);
     }
     if ([4004,4007].includes(ans) && campaignTrail_temp.player_answers.includes(4002)){
         muetzenich=true;
     }
 
+    if(AntiGroKo>1 &&!firedKeys[1]){
+        firedKeys[1] = true;
+        answerSwapper(4025, 4132, false);
+        changeGlobalEffect(78,4025,-0.025)
+        changeGlobalEffect(79,4025,0.01)
+        changeGlobalEffect(304,4025,0.03)
+    }
+    if(ProGroKo>1 &&!firedKeys[2]){
+        firedKeys[2] = true;
+        answerSwapper(4104, 4133, false);
+        changeGlobalEffect(78,4104,-0.025)
+        changeGlobalEffect(77,4104,0.02)
+        changeGlobalEffect(303,4104,0.005)
+    }
+    if(ProGroKo>2 &&!firedKeys[3]){
+        firedKeys[3] = true;
+        answerSwapper(4076, 4134, false);
+        changeGlobalEffect(78,4076,0.005)
+        changeGlobalEffect(77,4076,0.006)
+        changeGlobalEffect(304,4076,-0.006)
+    }
+    if(ProGroKo>1 &&!firedKeys[4]){
+        firedKeys[4] = true;
+        answerSwapper(4106, 4135, false);
+        changeGlobalEffect(78,4106,-0.04)
+        changeGlobalEffect(77,4106,0.02)
+        changeGlobalEffect(79,4106,0.01)
+        changeGlobalEffect(304,4106,0.02)
+    }
+    if(ProGroKo>3 &&!firedKeys[5]){
+        firedKeys[5] = true;
+        //add keys Q31A1
+        answerSwapper(4115, 4136, false);
+        changeGlobalEffect(78,4115,-0.04)
+        changeGlobalEffect(77,4115,-0.01)
+        changeGlobalEffect(79,4115,0.05)
+    }
+
+    //coalitions
      if (ans === 4074) {
        coalitions.forEach(coalition => {
           if (coalition.id === 12) {
