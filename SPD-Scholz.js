@@ -3144,6 +3144,17 @@ function populateSeatEstimate(final_overall_results, candidate_json, coalitions)
     var container = document.getElementById("seat_estimate_container");
     container.innerHTML = '<h3>Current seat estimate</h3>'; // Add the header back
 
+    // Sort based on roundedElectoralVotes
+    final_overall_results.sort((a, b) => {
+        const roundedVotesA = Math.round(a.electoral_votes / (5/factorSeats)) * (5/factorSeats);
+        const roundedVotesB = Math.round(b.electoral_votes / (5/factorSeats)) * (5/factorSeats);
+
+        if (roundedVotesA !== roundedVotesB) return roundedVotesB - roundedVotesA;
+
+        // Tiebreaker based on initial order in candidate_json
+        return candidate_json.findIndex(c => c.pk === a.candidate) - candidate_json.findIndex(c => c.pk === b.candidate);
+    });
+
     final_overall_results.forEach(function(result) {
         var candidateDetails = candidate_json.find(c => c.pk === result.candidate);
         var roundedElectoralVotes = Math.round(result.electoral_votes / (5/factorSeats)) * (5/factorSeats);
@@ -3152,7 +3163,6 @@ function populateSeatEstimate(final_overall_results, candidate_json, coalitions)
         var name = candidateDetails ? candidateDetails.fields.last_name : 'Unknown';
 
         var spacing = coalitions ? "margin: 5px 0;" : "margin: 20px 0;";
-        console.log(spacing)
         var content = `<p style="${spacing}"><span style="background-color:${color}; width: 15px; height: 15px; display: inline-block; margin-right: 5px;"></span> ${name} - ${roundedElectoralVotes}</p>`;
         container.innerHTML += content;
     });
