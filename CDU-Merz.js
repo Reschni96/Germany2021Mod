@@ -577,6 +577,7 @@ function calculateNationalSeats(e, candidateIdsToIgnore) {
     let iterationCount = 0;
     const maxIterations = 20;
     while (allocatedSeats !== totalSeats && iterationCount < maxIterations) {
+        allocatedSeats = 0;
         iterationCount++;
         e.final_overall_results.forEach((result, i) => {
             if (candidateIdsToIgnore.includes(result.candidate)) return;

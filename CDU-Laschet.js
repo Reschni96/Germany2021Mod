@@ -562,6 +562,7 @@ calculateSeats = (statePK, candidateIdsToIgnore=[]) => {
 }
 
 function calculateNationalSeats(e, candidateIdsToIgnore) {
+    console.log(JSON.parse(JSON.stringify(e.final_overall_results)))
     let totalPopularVotes = e.final_overall_results.reduce((total, party) => {
         if (!candidateIdsToIgnore.includes(party.candidate)) {
             return total + party.popular_votes;
@@ -579,6 +580,7 @@ function calculateNationalSeats(e, candidateIdsToIgnore) {
     let iterationCount = 0;
     const maxIterations = 20;
     while (allocatedSeats !== totalSeats && iterationCount < maxIterations) {
+        allocatedSeats = 0;
         iterationCount++;
         e.final_overall_results.forEach((result, i) => {
             if (candidateIdsToIgnore.includes(result.candidate)) return;
@@ -593,7 +595,6 @@ function calculateNationalSeats(e, candidateIdsToIgnore) {
             }
             PartyDivisorsSmall[i] = result.popular_votes / (seats + 0.5);
         });
-
         // Not enough seats
         if (allocatedSeats < totalSeats) {
             let sortedDivisors = PartyDivisorsSmall.filter(element => typeof element === 'number').sort((a, b) => b - a);
@@ -629,7 +630,8 @@ function getBonusSeats(party, candidateIdsToIgnore) {
 function adjustSeatAllocation(e, candidateIdsToIgnore=[]) {
     // Compute the national-level allocation first
     let nationalSeats = calculateNationalSeats(e, candidateIdsToIgnore);
-
+    console.log(JSON.parse(JSON.stringify(nationalSeats)))
+    console.log(JSON.parse(JSON.stringify(e.final_overall_results)))
     // For each party, check if they got fewer seats than they should have
     e.final_overall_results.forEach(party => {
         if (!candidateIdsToIgnore.includes(party.candidate)) {
@@ -660,6 +662,8 @@ function adjustSeatAllocation(e, candidateIdsToIgnore=[]) {
         .filter(party => !candidateIdsToIgnore.includes(party.candidate))
         .sort((a, b) => b.electoral_votes - a.electoral_votes);
 
+    console.log(JSON.parse(JSON.stringify(voteRanking)))
+    console.log(JSON.parse(JSON.stringify(seatRanking)))
     for (let i = 0; i < voteRanking.length; i++) {
         if (voteRanking[i].candidate !== seatRanking[i].candidate) {
             let voteRankParty = voteRanking[i];
