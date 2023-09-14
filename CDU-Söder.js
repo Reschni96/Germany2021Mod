@@ -662,6 +662,20 @@ function adjustSeatAllocation(e, candidateIdsToIgnore=[]) {
 
     e.final_overall_results.sort((a, b) => b.electoral_votes - a.electoral_votes || b.popular_votes - a.popular_votes);
 
+        function lockObject(obj) {
+        if (obj && typeof obj === 'object') {
+            Object.keys(obj).forEach(key => {
+                lockObject(obj[key]);  // recursively lock properties of nested objects
+
+                Object.defineProperty(obj, key, {
+                    writable: false,      // cannot change the value
+                    configurable: false  // cannot delete the property or change its configuration
+                });
+            });
+        }
+    }
+    lockObject(campaignTrail_temp.final_overall_results);
+
 }
 
 function coalitionTalks(results, optionalMode = false){
@@ -2013,22 +2027,20 @@ function seatCalculator() {
         invisibleDiv.style.display = 'none';
         invisibleDiv.id='game_window'
         document.body.appendChild(invisibleDiv);
-        document.addEventListener('click', (event) => {
+                document.addEventListener('click', (event) => {
            if (event.target.id === 'final_result_button') {
-               invisibleDiv.id=''
+               if(invisibleDiv){invisibleDiv.remove();}
                gameWindow.id='game_window';
                stopClock();
                stopImmediate=true;
-               console.log("stopped")
            }
         }, true);
         document.addEventListener('keydown', (event) => {
             if (event.key === 'Enter' || event.keyCode === 13) {
-               invisibleDiv.id=''
+               if(invisibleDiv){invisibleDiv.remove();}
                gameWindow.id='game_window';
                stopClock();
                stopImmediate=true;
-               console.log("stopped")
             }
         }, true);
     }
