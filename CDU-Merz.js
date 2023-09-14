@@ -2780,6 +2780,38 @@ function getPartyName(party){
     return party.split('<br>')[0]
 }
 function createPollingBarChart(polling) {
+    // 1. Pair up the categories with the data, colors, and the 2017 percentages
+    let categoriesWithData = [
+        {name: 'CDU/CSU', data: Math.round(polling[0][polling[0].length - 1] * 2*factorPolls) / (2*factorPolls), color: e.candidate_json[0].fields.color_hex, perc2017: 32.9},
+        {name: 'SPD', data: Math.round(polling[1][polling[1].length - 1] * 2*factorPolls) / (2*factorPolls), color: e.candidate_json[1].fields.color_hex, perc2017: 20.5},
+        {name: 'Greens', data: Math.round(polling[2][polling[0].length - 1] * 2*factorPolls) / (2*factorPolls), color: e.candidate_json[2].fields.color_hex, perc2017: 8.9},
+        {name: 'FDP', data: Math.round(polling[3][polling[1].length - 1] * 2*factorPolls) / (2*factorPolls), color: e.candidate_json[3].fields.color_hex, perc2017: 10.7},
+        {name: 'Left', data: Math.round(polling[4][polling[0].length - 1] * 2*factorPolls) / (2*factorPolls), color: e.candidate_json[4].fields.color_hex, perc2017: 9.2},
+        {name: 'AfD', data: Math.round(polling[5][polling[1].length - 1] * 2*factorPolls) / (2*factorPolls), color: e.candidate_json[5].fields.color_hex, perc2017: 12.6}
+    ];
+
+        categoriesWithData.sort((a, b) => b.data - a.data);
+
+    // Extract "Others" category details
+    let others = {
+        name: 'Others',
+        data: Math.round(polling[6][polling[6].length - 1] * 2*factorPolls) / (2*factorPolls),
+        color: e.candidate_json[6].fields.color_hex,
+        perc2017: 5.0
+    };
+
+    // Generate the sorted categories, data, and color arrays
+    let sortedCategories = categoriesWithData.map(item => `<b>${item.name}</b><br>` + item.data + '%');
+    let sortedData = categoriesWithData.map(item => item.data);
+    let sortedColors = categoriesWithData.map(item => item.color);
+
+    // Append the "Others" category at the end
+    sortedCategories.push(`<b>${others.name}</b><br>` + others.data + '%');
+    sortedData.push(others.data);
+    sortedColors.push(others.color);
+
+
+    // Use sortedCategories for xAxis categories, sortedData for series data, and sortedColors for the series colors
     var myChart = Highcharts.chart('myChart', {
         chart: {
             type: 'column'
@@ -2788,8 +2820,8 @@ function createPollingBarChart(polling) {
             text: 'Current Predictions'
         },
         subtitle: {
-        text:'Numbers below column indicate change relative to 2017 election',
-        align: 'center'
+            text: 'Numbers above column indicate change relative to 2017 election',
+            align: 'center'
         },
         yAxis: {
             title: {
@@ -2797,20 +2829,40 @@ function createPollingBarChart(polling) {
             }
         },
         xAxis: {
-             categories: ['<b>CDU/CSU</b><br>'+addPlus(Math.round((Math.round(polling[0][polling[0].length - 1] * 2*factorPolls) / (2*factorPolls)-32.9)*10)/10) +"%", '<b>SPD</b><br>'+addPlus(Math.round((Math.round(polling[1][polling[0].length - 1] * 2*factorPolls) / (2*factorPolls)-20.5)*10)/10) +"%", '<b>Greens</b><br>'+addPlus(Math.round((Math.round(polling[2][polling[0].length - 1] * 2*factorPolls) / (2*factorPolls)-8.9)*10)/10) +"%", '<b>FDP</b><br>'+addPlus(Math.round((Math.round(polling[3][polling[0].length - 1] * 2*factorPolls) / (2*factorPolls)-10.7)*10)/10) +"%", '<b>Left</b><br>'+addPlus(Math.round((Math.round(polling[4][polling[0].length - 1] * 2*factorPolls) / (2*factorPolls)-9.2)*10)/10) +"%", '<b>AfD</b><br>'+addPlus(Math.round((Math.round(polling[5][polling[0].length - 1] * 2*factorPolls) / (2*factorPolls)-12.6)*10)/10) +"%",'<b>Others</b><br>'+addPlus(Math.round((Math.round(polling[6][polling[0].length - 1] * 2*factorPolls) / (2*factorPolls)-5)*10)/10) +"%"],
+             categories: sortedCategories
         },
         tooltip: {
-                formatter: function() {
-                    return  getPartyName(this.x) + "<br>" + this.y + '%';
+            formatter: function() {
+                return getPartyName(this.x) + "<br>" + this.y + '%';
+            }
+        },
+        plotOptions: {
+            series: {
+                pointWidth: 70
             }
         },
         series: [{
+            dataLabels: {
+                enabled: true,
+                formatter: function() {
+                    let changeSince2017;
+                    if (this.point.category.includes("Others")) {  // Handling "Others" separately
+                        changeSince2017 = Math.round((this.y - others.perc2017) * 10) / 10;
+                    } else {
+                        changeSince2017 = Math.round((this.y - categoriesWithData.find(item => `<b>${item.name}</b><br>` + item.data + '%' === this.point.category).perc2017) * 10) / 10;
+                    }
+                    return addPlus(changeSince2017) + '%';
+                },
+                style: {
+                    fontSize: '14px',
+                    fontWeight: 'bold'
+                }
+            },
             showInLegend: false,
-            data: [Math.round(polling[0][polling[0].length - 1] * 2*factorPolls) / (2*factorPolls), Math.round(polling[1][polling[1].length - 1] * 2*factorPolls) / (2*factorPolls),Math.round(polling[2][polling[2].length - 1] * 2*factorPolls) / (2*factorPolls),Math.round(polling[3][polling[3].length - 1] * 2*factorPolls) / (2*factorPolls),Math.round(polling[4][polling[4].length - 1] * 2*factorPolls) / (2*factorPolls),Math.round(polling[5][polling[5].length - 1] * 2*factorPolls) / (2*factorPolls),Math.round(polling[6][polling[6].length - 1] * 2*factorPolls) / (2*factorPolls)],
+            data: sortedData,
             colorByPoint: true,
-            colors: [e.candidate_json[0].fields.color_hex,e.candidate_json[1].fields.color_hex,e.candidate_json[2].fields.color_hex,e.candidate_json[3].fields.color_hex,e.candidate_json[4].fields.color_hex,e.candidate_json[5].fields.color_hex,e.candidate_json[6].fields.color_hex],
-
-        }, ]
+            colors: sortedColors
+        }]
     });
 
     var div = document.getElementById('chartcontainer');
@@ -2827,6 +2879,7 @@ function createPollingBarChart(polling) {
     container.style.background = 'rgba(255, 255, 255, 0.5)';
 
 }
+
 var campaignButtonAdded = false;
 function addCampaignChartButton() {
     if (document.getElementById("map_footer") && document.getElementById("resume_questions_button")) {
