@@ -857,7 +857,23 @@ function endingOneBuilder(){
         }
         else if(playerParty===e.final_overall_results[1]){
 
-            if(e.final_overall_results[0].electoral_votes - playerParty.electoral_votes  < 10){
+            if (playerParty.electoral_votes == e.final_overall_results[0].electoral_votes){
+
+            header = "<h2>“At 10:37pm, this is still too close to call...”</h2>"
+            playerPerformance = "Throughout the night, it remained unclear whether your party or the " + firstParty.fields.last_name + " emerged victorious in the election, with projections indicating a neck-and-neck race. The final result was announced in the morning and was hotly contested. Eventually, it became clear that you and the " + firstParty.fields.last_name + " have won the exact same amount of seats. This unprecedented situation in Germany has sparked intense discussions and competing claims of victory. Both you and " + firstPartyLeader.leaderName + " maintain that you have the strongest mandate to form the next government. The ensuing coalition negotiations are bound to be tumultuous."
+            if(!contestedElection){
+
+                 possibleCoalitions.forEach((coalition) => {
+                  if (coalition.parties.includes(playerParty.candidate) && coalition.parties.includes(firstParty.pk)) {
+                    coalition.weight = 0.001;
+                  }
+                });
+                contestedElection = true;
+
+             }
+             }
+
+            else if(e.final_overall_results[0].electoral_votes - playerParty.electoral_votes  < 10){
 
             header = "<h2>“At 8:51pm, we can't project yet who will win this election...”</h2>"
             playerPerformance = "When the first results come in, it becomes clear that the election is going to be a nail-biter. Unfortunately, as the night progresses, you fall into second place, and ultimately lose the election. The margin of defeat is narrow, but a defeat is a defeat. There is some disappointment, but with the difference in seats between you and the  " + firstParty.fields.last_name + " being razor-thin, the eventual outcome is still uncertain. Both you and " + firstPartyLeader.leaderName + " assert your right to form a government and begin coalition negotiations. It's going to be a tough fight, but don't lose hope just yet."

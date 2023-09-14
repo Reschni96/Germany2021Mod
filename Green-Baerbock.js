@@ -1538,7 +1538,23 @@ function endingOneBuilder() {
     } else {
         if (playerParty === e.final_overall_results[0]) {
 
-            if (playerParty.electoral_votes - e.final_overall_results[1].electoral_votes < 10) {
+            if (playerParty.electoral_votes == e.final_overall_results[0].electoral_votes) {
+
+                header = "<h2>“At 10:37pm, this is still too close to call...”</h2>"
+                playerPerformance = "When the first results come in, it's already clear that this will be a historic night for the Green Party. You have more than doubled its voteshare compared to the last election and might even be on track to become the strongest party in the Bundestag! After a few celebratory, but tense hours, the situation becomes muddy. You and the " + secondParty.fields.last_name + " have won the exact same amount of seats, an unprecedented situation. Both you and " + secondPartyLeader.leaderName + " assert your right to form a government and begin coalition negotiations. It's going to be a tough fight, but you might still become the first Green chancellor."
+                if (!contestedElection) {
+
+                    possibleCoalitions.forEach((coalition) => {
+                        if (coalition.parties.includes(playerParty.candidate) && coalition.parties.includes(secondParty.pk)) {
+                            coalition.weight = 0.001;
+                        }
+                    });
+                    contestedElection = true;
+
+                }
+            }
+
+            else if (playerParty.electoral_votes - e.final_overall_results[1].electoral_votes < 10) {
 
                 header = "<h2>“At 8:51pm, we can't project yet who will win this election...”</h2>"
                 playerPerformance = "When the first results come in, it's already clear that this will be a historic night for the Green Party. You have more than doubled its voteshare compared to the last election and might even be on track to become the strongest party in the Bundestag! After a few celebratory, but tense hours, it becomes clear that you've made history and have lead the Greens to become the strongest party for the first time. However, in response to the tight result, " + secondPartyLeader.leaderName + " has declared that the " + secondParty.fields.last_name + " is also open to leading a government. Nonetheless, you are likely to have an advantage during the coalition talks."

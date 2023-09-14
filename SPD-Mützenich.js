@@ -805,7 +805,24 @@ function endingOneBuilder(){
     else{
         if(playerParty===e.final_overall_results[0]){
 
-             if(playerParty.electoral_votes - e.final_overall_results[1].electoral_votes < 10){
+
+            if (playerParty.electoral_votes == e.final_overall_results[1].electoral_votes){
+
+             header = "<h2>“At 10:37pm, this is still too close to call...”</h2>"
+            playerPerformance = "When the first results come in, it's clear that the election is going to be a nail-biter. That alone is quite a good development, considering your standing in the polls a few months ago. The final results, however, are a bit of a problem: Both you and the " + secondParty.fields.last_name + " have won the exact same amount of seats, and unprecedented situation. Now, " + secondPartyLeader.leaderName + " and you both assert your right to form a government and begin coalition negotiations. It's going to be a tough fight, but you might still rise from Vice Chancellor to Chancellor."
+            if(!contestedElection){
+
+                    possibleCoalitions.forEach((coalition) => {
+                      if (coalition.parties.includes(playerParty.candidate) && coalition.parties.includes(secondParty.pk)) {
+                        coalition.weight = 0.001;
+                      }
+                    });
+                    contestedElection = true;
+
+                 }
+            }
+
+            else  if(playerParty.electoral_votes - e.final_overall_results[1].electoral_votes < 10){
 
             header = "<h2>“At 8:51pm, we can't project yet who will win this election...”</h2>"
             playerPerformance = "When the first results of the night are released, it looks closer than most observers had anticipated. Given your polling in the spring, your party members are already happy with how many votes you won after all. It takes a few hours, but finally, the SPD inches ahead in every forecast and is declared winner of the night, to much celebration by the party. However, in response to the tight result, " + secondPartyLeader.leaderName + " has declared that the " + secondParty.fields.last_name + " is also open to leading a government. Nonetheless, you are likely to have an advantage during the coalition talks."
