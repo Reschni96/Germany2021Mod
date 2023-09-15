@@ -4889,7 +4889,7 @@ let advisorLauterbach = new Advisor(
     'Karl Lauterbach',
     null,
     "Right now, he's one of the most sought after people as a health expert. Beyond that, he has good connections with the Green party",
-    'A popular health expert in your party - if you want him by your side, take Covid seriously.',
+    'A popular health expert in your party - if you want him by your side, take Covid seriously and focus on getting a vaccine out.',
     () => {},
     () => {},
     "locked"
@@ -4899,8 +4899,8 @@ let advisorMiersch = new Advisor(
     10,
     'Matthias Miersch',
     null,
-    null,
-    'Description for Matthias Miersch',
+     'If you need advice on environmental topics - or someone to reach out to the Greens for coalitions talks - Miersch is your man.',
+    'Show that you are willing to do something about climate change to recruit this environmental expert.',
     () => {},
     () => {},
     "locked"
@@ -4908,10 +4908,10 @@ let advisorMiersch = new Advisor(
 
 let advisorNoWaBoEsken = new Advisor(
     11,
-    'NoWaBo & Esken',
+    'Norbert Walther-Borjans & Saskia Esken',
     null,
-    null,
-    'Description for NoWaBo & Esken',
+    "The two party leaders can mobilize additional resources to boost your support. To top that off, Esken is also an expert on digitalization.",
+    'These two politicians come as a duo - and a good relationship with the leadership of the party is needed to get them on board.',
     () => {},
     () => {},
     "locked"
@@ -4921,8 +4921,8 @@ let advisorMützenich = new Advisor(
     12,
     'Rolf Mützenich',
     null,
-    null,
-    'Description for Rolf Mützenich',
+    "Mützenich is an expert on foreign policy and is willing to campaign in North Rhine-Westphalia.",
+    'The leader of the parliamentary group wishes for you to have a good relationship with the party leadership.',
     () => {},
     () => {},
     "locked"
@@ -4932,8 +4932,8 @@ let advisorSchwesig = new Advisor(
     13,
     'Manuela Schwesig',
     null,
-    null,
-    'Description for Manuela Schwesig',
+    "To reach out to East German voters and win them back to the SPD, it would help to recruit the head of state of Mecklenburg-Vorpommern.",
+    'As head of an East German state, this potential advisors wants you to keep diplomatic channels with Russia open.',
     () => {},
     () => {},
     "locked"
@@ -4943,8 +4943,8 @@ let advisorMattheis = new Advisor(
     14,
     'Hilde Mattheis',
     null,
-    null,
-    'Description for Hilde Mattheis',
+    "Targeting traditionally leftist voters and talking to the Left to form a coalition are tasks Mattheis would like to help with.",
+    'Run a more leftist campaign to win over this influential leftis party member.',
     () => {},
     () => {},
     "locked"
@@ -4954,8 +4954,8 @@ let advisorWiese = new Advisor(
     15,
     'Dirk Wiese',
     null,
-    null,
-    'Description for Dirk Wiese',
+    "Coalition talks with both the CDU and FDP would be easier with him on board - and he has some tax policy advice as well.",
+    'A tax expert within the party who would like to work for you if you run a moderate campaign.',
     () => {},
     () => {},
     "locked"
@@ -4965,8 +4965,8 @@ let advisorSchröder = new Advisor(
     16,
     'Gerhard Schröder',
     null,
-    null,
-    'Description for Gerhard Schröder',
+    "If there's someone who know ho to handle natural disasters, it's Gerhard Schröder. He's also still popular in Lower Saxony.",
+    'This former chancellor of Germany needs you to stay moderate and defend him.',
     () => {},
     () => {},
     "locked"
@@ -4976,8 +4976,8 @@ let advisorGeywitz = new Advisor(
     17,
     'Klara Geywitz',
     null,
-    null,
-    'Description for Klara Geywitz',
+    "Geywitz are of expertise is housing policy, and involving someone from East Germany could help your campaign there as well.",
+    'Whoever you chose as partner for leadership could be involved in your campaign if you do well in your run for leadership',
     () => {},
     () => {},
     "locked"
@@ -4987,8 +4987,8 @@ let advisorSchwan = new Advisor(
     18,
     'Gesine Schwan',
     null,
-    null,
-    'Description for Gesine Schwan',
+    "During her long years, Schwan forged many connections in the party and knows how to navigate intra-party questions.",
+    'Whoever you chose as partner for leadership could be involved in your campaign if you do well in your run for leadership',
     () => {},
     () => {},
     "locked"
@@ -4998,8 +4998,8 @@ let advisorMoll = new Advisor(
     19,
     'Claudia Moll',
     null,
-    null,
-    'Description for Claudia Moll',
+    "This former geriatric nurse will certainly have some advice how to handle socio-economic questions.",
+    'Whoever you chose as partner for leadership could be involved in your campaign if you do well in your run for leadership',
     () => {},
     () => {},
     "locked"
@@ -5009,8 +5009,8 @@ let advisorBas = new Advisor(
     20,
     'Bärbel Bas',
     null,
-    null,
-    'Description for Bärbel Bas',
+    "With her good cross-party reputation, Bas would be an asset in coaltion talks.",
+    'Whoever you chose as partner for leadership could be involved in your campaign if you do well in your run for leadership',
     () => {},
     () => {},
     "locked"
@@ -5020,8 +5020,8 @@ let advisorWeil = new Advisor(
     21,
     'Stephan Weil',
     null,
-    null,
-    'Description for Stephan Weil',
+    "Of course, Weil will help you win Lower Saxony, but he also has some tips about looking as competent as the outgoing chancellor.",
+    'Visit him in Lower Saxony to give this SPD head of state a role in your campaign.',
     () => {},
     () => {},
     "locked"
@@ -5035,6 +5035,10 @@ let advisorsList = [
     advisorKlingbeil,
     advisorSchulz,
     advisorBrinkert,
+    advisorGeywitz,
+    advisorSchwan,
+    advisorMoll,
+    advisorBas,
     advisorKühnert,
     advisorLauterbach,
     advisorMiersch,
@@ -5044,10 +5048,6 @@ let advisorsList = [
     advisorMattheis,
     advisorWiese,
     advisorSchröder,
-    advisorGeywitz,
-    advisorSchwan,
-    advisorMoll,
-    advisorBas,
     advisorWeil
 ];
 
