@@ -1942,7 +1942,8 @@ if (campaignTrail_temp.question_number === 27) {
     }
     if(ProGroKo>3 &&!firedKeys[5]&&!campaignTrail_temp.player_answers.includes(4115)){
         firedKeys[5] = true;
-        //add keys 4115
+        firedKeys[15] = true;
+        firedKeys[26] = true;
         answerSwapper(4115, 4136, false);
         changeGlobalEffect(78,4115,-0.04)
         changeGlobalEffect(77,4115,-0.01)
@@ -1964,6 +1965,7 @@ if (campaignTrail_temp.question_number === 27) {
     }
     if(aggressive>3 &&!firedKeys[8]&&!campaignTrail_temp.player_answers.includes(4061)){
         firedKeys[8] = true;
+        firedKeys[66] = true;
         answerSwapper(4061, 4139, false);
         changeGlobalEffect(78,4061,0.04)
         changeGlobalEffect(77,4061,-0.02)
@@ -1972,6 +1974,7 @@ if (campaignTrail_temp.question_number === 27) {
 
     if(aggressive>3 &&!firedKeys[10]&&!campaignTrail_temp.player_answers.includes(4072)){
         firedKeys[10] = true;
+        firedKeys[21] = true;
         answerSwapper(4072, 4141, false);
         changeGlobalEffect(78,4072,0.02)
         changeGlobalEffect(77,4072,-0.01)
@@ -1979,6 +1982,8 @@ if (campaignTrail_temp.question_number === 27) {
     }
     if(aggressive>3 &&!firedKeys[11]&&!campaignTrail_temp.player_answers.includes(4113)){
         firedKeys[11] = true;
+        firedKeys[27] = true;
+        firedKeys[25] = true;
         answerSwapper(4113, 4142, false);
         changeGlobalEffect(78,4113,-0.02)
         changeGlobalEffect(77,4113,0.01)
@@ -2025,6 +2030,7 @@ if (campaignTrail_temp.question_number === 27) {
     }
     if(!firedKeys[15]&&campaignTrail_temp.player_answers.includes(4033)&&(campaignTrail_temp.player_answers.includes(4070) || campaignTrail_temp.player_answers.includes(4111) || campaignTrail_temp.player_answers.includes(4114))){
         firedKeys[15] = true;
+        firedKeys[26] = true;
         answerSwapper(4115, 4151, false);
         changeGlobalEffect(78,4115,-0.03)
         changeGlobalEffect(77,4115,-0.03)
@@ -2032,11 +2038,16 @@ if (campaignTrail_temp.question_number === 27) {
     }
     if(competence<7 &&!firedKeys[16]&&!campaignTrail_temp.player_answers.includes(4082)){
         firedKeys[16] = true;
+        firedKeys[17] = true;
+        firedKeys[75] = true;
+        firedKeys[83] = true;
         answerSwapper(4082, 4152, false);
         changeGlobalEffect(78,4082,-0.015)
     }
      if(competence>19 &&!firedKeys[17]&&!campaignTrail_temp.player_answers.includes(4082)){
         firedKeys[17] = true;
+        firedKeys[75] = true;
+        firedKeys[83] = true;
         answerSwapper(4082, 4153, false);
         changeGlobalEffect(78,4082,0.004)
     }
@@ -2221,6 +2232,7 @@ if (campaignTrail_temp.question_number === 27) {
 
      if(FisCon>5 &&!firedKeys[43]&&!campaignTrail_temp.player_answers.includes(4074)){
         firedKeys[43] = true;
+        firedKeys[82] = true;
         answerSwapper(4074, 4184, false);
         changeGlobalEffect(78,4074,-0.005)
         changeGlobalEffect(77,4074,0.005)
@@ -2232,6 +2244,7 @@ if (campaignTrail_temp.question_number === 27) {
     }
      if(FisCon>5 &&!firedKeys[44]&&!campaignTrail_temp.player_answers.includes(4077)){
         firedKeys[44] = true;
+        firedKeys[81] = true;
         answerSwapper(4077, 4185, false);
         changeGlobalEffect(78,4077,0.005)
         changeGlobalEffect(77,4077,-0.005)
@@ -2244,6 +2257,7 @@ if (campaignTrail_temp.question_number === 27) {
 
      if(AntiCap>6 &&!firedKeys[45]&&!campaignTrail_temp.player_answers.includes(4074)){
         firedKeys[45] = true;
+        firedKeys[82] = true;
         answerSwapper(4074, 4186, false);
         coalitions.forEach(coalition => {
           if (coalition.id === 12) {
@@ -2253,6 +2267,7 @@ if (campaignTrail_temp.question_number === 27) {
     }
      if(AntiCap>6 && !firedKeys[46]&&!campaignTrail_temp.player_answers.includes(4077)){
         firedKeys[46] = true;
+        firedKeys[81] = true;
         answerSwapper(4077, 4187, false);
         changeGlobalEffect(78,4077,-0.01)
         changeGlobalEffect(77,4077, 0.01)
@@ -2271,12 +2286,14 @@ if (campaignTrail_temp.question_number === 27) {
      }
      if(FisCon>5 && !firedKeys[48]&&!campaignTrail_temp.player_answers.includes(4091)&&!campaignTrail_temp.player_answers.includes(4044)){
         firedKeys[48] = true;
+        firedKeys[47] = true;
         answerSwapper(4091, 4189, false);
         changeGlobalEffect(78,4091,-0.01)
         changeGlobalEffect(79,4091,0.01)
      }
      if(AntiCap>6 && !firedKeys[49]&&!campaignTrail_temp.player_answers.includes(4091)){
         firedKeys[49] = true;
+        firedKeys[47] = true;
         answerSwapper(4091, 4190, false);
         changeGlobalEffect(77,4091,0.035)
         changeGlobalEffect(79,4091,-0.03)
@@ -2327,6 +2344,7 @@ if (campaignTrail_temp.question_number === 27) {
      }
      if(ans===4041 && !firedKeys[56]){
         firedKeys[56] = true;
+        firedKeys[80] = true;
         answerSwapper(4064, 4201, false);
         changeGlobalEffect(78,4064, 0.005)
         changeGlobalEffect(79,4064, -0.01)
@@ -2344,6 +2362,7 @@ if (campaignTrail_temp.question_number === 27) {
      }
      if(ans===4042 && !firedKeys[56]){
         firedKeys[56] = true;
+        firedKeys[80] = true;
         answerSwapper(4064, 4201, false);
         changeGlobalEffect(78,4064, 0.005)
         changeGlobalEffect(79,4064, -0.01)
@@ -2354,6 +2373,7 @@ if (campaignTrail_temp.question_number === 27) {
 
       if(ans===4043 && !firedKeys[57]){
         firedKeys[57] = true;
+        firedKeys[80] = true;
         answerSwapper(4064, 4203, false);
         changeGlobalEffect(78,4064, -0.01)
         changeGlobalEffect(305,4064, 0.01)
@@ -2363,6 +2383,9 @@ if (campaignTrail_temp.question_number === 27) {
      }
      if(ans===4064 && !firedKeys[58]&& campaignTrail_temp.player_answers.includes(4042)){
         firedKeys[58] = true;
+        firedKeys[53] = true;
+        firedKeys[78] = true;
+        firedKeys[59] = true;
         answerSwapper(4092, 4205, false);
         changeGlobalEffect(78,4092, 0.01)
         changeGlobalEffect(79,4092, -0.01)
@@ -2371,12 +2394,13 @@ if (campaignTrail_temp.question_number === 27) {
         changeGlobalEffect(77,4116, -0.016)
         changeGlobalEffect(79,4116, -0.016)
         answerSwapper(4117, 4208, false);
-        changeGlobalEffect(78,4116, -0.01)
-        changeGlobalEffect(77,4116, 0.06)
-        changeGlobalEffect(79,4116, -0.05)
+        changeGlobalEffect(78,4117, -0.01)
+        changeGlobalEffect(77,4117, 0.06)
+        changeGlobalEffect(79,4117, -0.05)
      }
      if(ans===4065 && !firedKeys[59]&& campaignTrail_temp.player_answers.includes(4043)){
         firedKeys[59] = true;
+        firedKeys[53] = true;
         answerSwapper(4116, 4209, false);
         changeGlobalEffect(78,4116, -0.02)
         changeGlobalEffect(79,4116, -0.02)
@@ -2477,6 +2501,9 @@ if (campaignTrail_temp.question_number === 27) {
 
         if (merkelism<5&&!firedKeys[68]){
             firedKeys[68] = true;
+            firedKeys[10] = true;
+            firedKeys[21] = true;
+            firedKeys[11] = true;
             answerSwapper(4072, 4226, false);
             changeGlobalEffect(78, 4072, -0.02)
             answerSwapper(4113, 4228, false);
@@ -2485,6 +2512,9 @@ if (campaignTrail_temp.question_number === 27) {
 
         else if (merkelism>15 && !firedKeys[69]){
             firedKeys[69] = true;
+            firedKeys[10] = true;
+            firedKeys[21] = true;
+            firedKeys[11] = true;
             answerSwapper(4072, 4225, false);
             changeGlobalEffect(78, 4072, 0.02)
              changeGlobalEffect(77, 4072, -0.02)
@@ -2543,15 +2573,17 @@ if (campaignTrail_temp.question_number === 27) {
      if(campaignTrail_temp.question_number === 29){
         if (unity >3&&!firedKeys[75]){
             firedKeys[75] = true;
+            firedKeys[83] = true;
             answerSwapper(4082, 4235, false);
             changeGlobalEffect(78, 4082, 0.005)
             changeGlobalEffect(77, 4082, -0.005)
         }
         if (unity >3&&!firedKeys[76]){
             firedKeys[76] = true;
+            firedKeys[12] = true;
             answerSwapper(4084, 4236, false);
-            changeGlobalEffect(78, 4080, 0.005)
-            changeGlobalEffect(77, 4080, -0.005)
+            changeGlobalEffect(78, 4084, 0.005)
+            changeGlobalEffect(77, 4084, -0.005)
         }
        }
      if(campaignTrail_temp.question_number === 33){
@@ -2564,6 +2596,7 @@ if (campaignTrail_temp.question_number === 27) {
      if(campaignTrail_temp.question_number === 30){
         if (unity >3&&!firedKeys[78]){
             firedKeys[78] = true;
+            firedKeys[59] = true;
             answerSwapper(4117, 4238, false);
             changeGlobalEffect(78, 4117, 0.003)
         }
@@ -2602,6 +2635,7 @@ if (campaignTrail_temp.question_number === 27) {
         }
        if (unity <2&&!firedKeys[84]){
             firedKeys[84] = true;
+            firedKeys[12] = true;
             answerSwapper(4084, 4245, false);
             changeGlobalEffect(78, 4084, -0.01)
         }
