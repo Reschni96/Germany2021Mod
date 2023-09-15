@@ -2191,7 +2191,6 @@ cyoAdventure = function(a) {
 
     //polling collapse is stopped if Greens are close enough to the CDU and far enough from the SPD
     if ([4063, 4064, 4065, 4066, 4133].includes(ans)) {
-
         if (pop_vote[0].pvp - playerPolling < playerPolling - pop_vote[1].pvp) {
             campaignTrail_temp.questions_json[23] = extraQuestions[4];
             campaignTrail_temp.questions_json[25] = extraQuestions[5];
