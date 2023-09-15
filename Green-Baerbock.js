@@ -4935,8 +4935,9 @@ async function handleMutations(mutationsList, observer) {
         updatePolling();
     }
 
-    addHeadquarterButton()
-    seatCalculator();
+    addHeadquarterButton()    if(!eventListenerAttached){
+        seatCalculator();
+    }
 
     await handleRadioButtons(processedNodes);
 

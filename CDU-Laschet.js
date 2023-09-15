@@ -2319,8 +2319,9 @@ async function handleMutations(mutationsList, observer) {
     if(e.realisticPolls){
         updatePolling();
     }
-
-    seatCalculator();
+    if(!eventListenerAttached){
+        seatCalculator();
+    }
 
     await handleRadioButtons(processedNodes);
 

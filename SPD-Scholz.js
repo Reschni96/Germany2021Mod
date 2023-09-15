@@ -65,8 +65,8 @@ campaignTrail_temp.game_start_logging_id = '3662498';
     //variable below here only relevant for this specific mod
     var leftist = 0;
     var moderate = 0;
-    var merkelism = 9;
-    var mood = "Pessimistiv"
+    var merkelism = 8;
+    var mood = "Pessimistic"
     var muetzenich = false;
     var wirecardMails = false;
     var totalSeats = 0;
@@ -1864,7 +1864,7 @@ if (campaignTrail_temp.question_number === 27) {
 	   }
 	}
 
-    if ([4101, 4124, 4126, 4011].includes(ans)) {
+    if ([4101, 4124, 4126, 4011, 4128].includes(ans)) {
 	    muetzenich = true;
 	    campaignTrail_temp.question_number=34;
 	}
@@ -1910,6 +1910,7 @@ if (campaignTrail_temp.question_number === 27) {
     }
     if ([4004,4007].includes(ans) && campaignTrail_temp.player_answers.includes(4002)){
         muetzenich=true;
+        campaignTrail_temp.question_number=34;
     }
 
     if(AntiGroKo>1 &&!firedKeys[1]&&!campaignTrail_temp.player_answers.includes(4025)){
@@ -2949,7 +2950,7 @@ function changeIssueEffect(answer, issue, changeScore, changeImportance) {
 //css stuff here
 
 
-campaignTrail_temp.election_json[0].fields.advisor_url = 'https://i.ibb.co/v1jXrBG/gr-ne-cropped.webp';
+campaignTrail_temp.election_json[0].fields.advisor_url = 'https://i.ibb.co/3YFssGg/spd-cropped.jpg';
 
 function modifyVisitContent() {
   const visitContentDiv = document.getElementById('visit_content');
@@ -3999,6 +4000,7 @@ function openHeadquarter() {
             let name = document.createElement('div');
             name.innerText = advisor.name;
             name.style.padding = '0.5em';
+            name.style.color = "black";
             name.style.fontWeight = 'bold';
             name.style.whiteSpace = 'normal'; // Allows the text to wrap
             name.style.overflowWrap = 'break-word'; // Breaks the word if necessary
@@ -4799,7 +4801,7 @@ const noop = () => {};
 let advisorSchmidt = new Advisor(
     1,
     'Wolfgang Schmidt',
-    null,
+    "https://i.ibb.co/hXhZxnS/Schmidt-cropped.jpg",
     "A political ally since your time in Hamburg, he can help with all kinds of tasks around the campaign.",
     'Description for Wolfgang Schmidt',
     () => {},
@@ -4810,7 +4812,7 @@ let advisorSchmidt = new Advisor(
 let advisorBösinger = new Advisor(
     2,
     'Rolf Bösinger',
-    null,
+    "https://i.ibb.co/tZvrcSH/bosinger-cropped.jpg",
     "He's a ministeral secretary under you and wants to help by giving advice on economic questions",
     'Description for Rolf Bösinger',
     () => {},
@@ -4821,7 +4823,7 @@ let advisorBösinger = new Advisor(
 let advisorErnst = new Advisor(
     3,
     'Britta Ernst',
-    null,
+    "https://i.ibb.co/bKFJCLz/ernst-cropped.jpg",
     "Not only is she your wife, but also a state minister in Brandenburg in her own right. During the campaign, she's happy to advice you on education policy",
     null,
     () => {},
@@ -4832,7 +4834,7 @@ let advisorErnst = new Advisor(
 let advisorHebestreit = new Advisor(
     4,
     'Steffen Hebestreit',
-    null,
+    "https://i.ibb.co/7jVnYPM/hebestreit-cropped.jpg",
     "This communication manager will surely be helpful to have on your side should you become embroiled in any scandals.",
     null,
     () => {},
@@ -4843,7 +4845,7 @@ let advisorHebestreit = new Advisor(
 let advisorKlingbeil = new Advisor(
     5,
     'Lars Klingbeil',
-    null,
+    "https://i.ibb.co/N6V8MmL/klingbeil-cropped.jpg",
     "As General Secretary of the SPD, Klingbeil can use his organisational ressources and skills to campaign for you across the country.",
     'Description for Lars Klingbeil',
     () => {},
@@ -4854,7 +4856,7 @@ let advisorKlingbeil = new Advisor(
 let advisorSchulz = new Advisor(
     6,
     'Martin Schulz',
-    null,
+    "https://i.ibb.co/TW25nSV/Schulz-cropped.jpg",
     "The last SPD chancellor nominee has many political connections and offered to use them to get you top-notch polling data.",
     'Description for Martin Schulz',
     () => {},
@@ -4865,7 +4867,7 @@ let advisorSchulz = new Advisor(
 let advisorBrinkert = new Advisor(
     7,
     'Raphael Brinkert',
-    null,
+    "https://i.ibb.co/5BGKnkn/brinkert-cropped.png",
     "Hire this advertising manager if you want to work on your image - people will see you as chancellor material in no time!",
     'Description for Raphael Brinkert',
     () => {},
@@ -4876,7 +4878,7 @@ let advisorBrinkert = new Advisor(
 let advisorKühnert = new Advisor(
     8,
     'Kevin Kühnert',
-    null,
+    "https://i.ibb.co/Vj98jvt/K-hnert-cropped.jpg",
     "Kühnert will help you target voters on the left of the political spectrum - and offered to reach ot to the Left for potential coalition talks.",
     'The former influential former leader of the SPD youth organization wants you to move past the Grand Coalition',
     () => {},
@@ -4887,7 +4889,7 @@ let advisorKühnert = new Advisor(
 let advisorLauterbach = new Advisor(
     9,
     'Karl Lauterbach',
-    null,
+    "https://i.ibb.co/SsLv7fL/lauterbach-cropped.jpg",
     "Right now, he's one of the most sought after people as a health expert. Beyond that, he has good connections with the Green party",
     'A popular health expert in your party - if you want him by your side, take Covid seriously and focus on getting a vaccine out.',
     () => {},
@@ -4898,7 +4900,7 @@ let advisorLauterbach = new Advisor(
 let advisorMiersch = new Advisor(
     10,
     'Matthias Miersch',
-    null,
+    "https://i.ibb.co/pZ3tRgp/miersch-cropped.jpg",
      'If you need advice on environmental topics - or someone to reach out to the Greens for coalitions talks - Miersch is your man.',
     'Show that you are willing to do something about climate change to recruit this environmental expert.',
     () => {},
@@ -4909,7 +4911,7 @@ let advisorMiersch = new Advisor(
 let advisorNoWaBoEsken = new Advisor(
     11,
     'Norbert Walther-Borjans & Saskia Esken',
-    null,
+    "https://i.ibb.co/XWVDtRT/Nowabo-Esken-cropped.jpg",
     "The two party leaders can mobilize additional resources to boost your support. To top that off, Esken is also an expert on digitalization.",
     'These two politicians come as a duo - and a good relationship with the leadership of the party is needed to get them on board.',
     () => {},
@@ -4920,7 +4922,7 @@ let advisorNoWaBoEsken = new Advisor(
 let advisorMützenich = new Advisor(
     12,
     'Rolf Mützenich',
-    null,
+    "https://i.ibb.co/bjhJKXD/m-tzenich-cropped.jpg",
     "Mützenich is an expert on foreign policy and is willing to campaign in North Rhine-Westphalia.",
     'The leader of the parliamentary group wishes for you to have a good relationship with the party leadership.',
     () => {},
@@ -4931,7 +4933,7 @@ let advisorMützenich = new Advisor(
 let advisorSchwesig = new Advisor(
     13,
     'Manuela Schwesig',
-    null,
+    "https://i.ibb.co/prTtbXJ/schwesig-cropped.jpg",
     "To reach out to East German voters and win them back to the SPD, it would help to recruit the head of state of Mecklenburg-Vorpommern.",
     'As head of an East German state, this potential advisors wants you to keep diplomatic channels with Russia open.',
     () => {},
@@ -4942,7 +4944,7 @@ let advisorSchwesig = new Advisor(
 let advisorMattheis = new Advisor(
     14,
     'Hilde Mattheis',
-    null,
+    "https://i.ibb.co/PMJnJ58/Mattheis-cropped.jpg",
     "Targeting traditionally leftist voters and talking to the Left to form a coalition are tasks Mattheis would like to help with.",
     'Run a more leftist campaign to win over this influential leftis party member.',
     () => {},
@@ -4953,7 +4955,7 @@ let advisorMattheis = new Advisor(
 let advisorWiese = new Advisor(
     15,
     'Dirk Wiese',
-    null,
+    "https://i.ibb.co/D72GwgS/wiese-cropped.jpg",
     "Coalition talks with both the CDU and FDP would be easier with him on board - and he has some tax policy advice as well.",
     'A tax expert within the party who would like to work for you if you run a moderate campaign.',
     () => {},
@@ -4964,7 +4966,7 @@ let advisorWiese = new Advisor(
 let advisorSchröder = new Advisor(
     16,
     'Gerhard Schröder',
-    null,
+    "https://i.ibb.co/zfZV5JM/schr-der-cropped.jpg",
     "If there's someone who know ho to handle natural disasters, it's Gerhard Schröder. He's also still popular in Lower Saxony.",
     'This former chancellor of Germany needs you to stay moderate and defend him.',
     () => {},
@@ -4975,7 +4977,7 @@ let advisorSchröder = new Advisor(
 let advisorGeywitz = new Advisor(
     17,
     'Klara Geywitz',
-    null,
+    "https://i.ibb.co/17rcP7C/geywitz-cropped.jpg",
     "Geywitz are of expertise is housing policy, and involving someone from East Germany could help your campaign there as well.",
     'Whoever you chose as partner for leadership could be involved in your campaign if you do well in your run for leadership',
     () => {},
@@ -4986,7 +4988,7 @@ let advisorGeywitz = new Advisor(
 let advisorSchwan = new Advisor(
     18,
     'Gesine Schwan',
-    null,
+    "https://i.ibb.co/bP9H5wv/Schwan-cropped.jpg",
     "During her long years, Schwan forged many connections in the party and knows how to navigate intra-party questions.",
     'Whoever you chose as partner for leadership could be involved in your campaign if you do well in your run for leadership',
     () => {},
@@ -4997,7 +4999,7 @@ let advisorSchwan = new Advisor(
 let advisorMoll = new Advisor(
     19,
     'Claudia Moll',
-    null,
+    "https://i.ibb.co/M9RXcz5/Moll-cropped.jpg",
     "This former geriatric nurse will certainly have some advice how to handle socio-economic questions.",
     'Whoever you chose as partner for leadership could be involved in your campaign if you do well in your run for leadership',
     () => {},
@@ -5008,7 +5010,7 @@ let advisorMoll = new Advisor(
 let advisorBas = new Advisor(
     20,
     'Bärbel Bas',
-    null,
+    "https://i.ibb.co/N1FfmCk/Bas-cropped.jpg",
     "With her good cross-party reputation, Bas would be an asset in coaltion talks.",
     'Whoever you chose as partner for leadership could be involved in your campaign if you do well in your run for leadership',
     () => {},
@@ -5019,7 +5021,7 @@ let advisorBas = new Advisor(
 let advisorWeil = new Advisor(
     21,
     'Stephan Weil',
-    null,
+    "https://i.ibb.co/Wy8Y4Sg/weil-cropped.jpg",
     "Of course, Weil will help you win Lower Saxony, but he also has some tips about looking as competent as the outgoing chancellor.",
     'Visit him in Lower Saxony to give this SPD head of state a role in your campaign.',
     () => {},
@@ -5187,7 +5189,9 @@ async function handleMutations(mutationsList, observer) {
     }
 
     addHeadquarterButton()
-    seatCalculator();
+    if(!eventListenerAttached){
+        seatCalculator();
+    }
 
     await handleRadioButtons(processedNodes);
 
