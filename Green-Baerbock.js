@@ -2592,7 +2592,7 @@ cyoAdventure = function(a) {
         changeGlobalEffect(306,4120, 0.06)
 
     }
-    if(conservative>9 && !firedKeys[21]&&!campaignTrail_temp.player_answers.includes(4094)){
+    if(conservative>6 && !firedKeys[21]&&!campaignTrail_temp.player_answers.includes(4094)){
         firedKeys[21] = true;
         answerSwapper(4094, 4130, true);
     }
