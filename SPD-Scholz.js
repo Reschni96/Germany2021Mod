@@ -1867,6 +1867,71 @@ if (campaignTrail_temp.question_number === 27) {
         });
 	   }
 	}
+        if(campaignTrail_temp.staff_mode){
+        //advisor stuff
+        if ([4006, 4100].includes(ans) &&!campaignTrail_temp.player_answers.includes(4002)&&!campaignTrail_temp.player_answers.includes(4003)) {
+            advisorKühnert.status = "available";
+            advisor_news = true;
+        }
+
+        if (ans===4507) {
+            advisorLauterbach.status = "available";
+            advisor_news = true;
+        }
+
+        if ([4026, 4103, 4104, 4106, 4107].includes(ans) ) {
+            advisorMiersch.unlock();
+        }
+        if ([4008, 4012, 4123].includes(ans) ) {
+            advisorNoWaBoEsken.unlock();
+            advisorMützenich.unlock();
+        }
+        if ([4104, 4106, 4107].includes(ans) ) {
+            advisorMattheis.unlock();
+        }
+        if ([4035, 4036, 4037].includes(ans) ) {
+            advisorSchwesig.unlock();
+        }
+        if ([4102, 4105, 4024, 4025].includes(ans) ) {
+            advisorWiese.unlock();
+        }
+        if ([4036].includes(ans)&&!campaignTrail_temp.player_answers.includes(4106)) {
+            advisorSchröder.unlock();
+        }
+        if([4000,4001].includes(ans)){
+            if(campaignTrail_temp.player_answers.includes(4500)){
+                advisorGeywitz.unlock();
+                advisorSchwan.quit();
+                advisorMoll.quit();
+                advisorBas.quit();
+            }
+            if(campaignTrail_temp.player_answers.includes(4501)){
+                advisorGeywitz.quit();
+                advisorSchwan.unlock();
+                advisorMoll.quit();
+                advisorBas.quit();
+            }
+            if(campaignTrail_temp.player_answers.includes(4502)){
+                advisorGeywitz.quit();
+                advisorSchwan.quit();
+                advisorMoll.unlock();
+                advisorBas.quit();
+            }
+            if(campaignTrail_temp.player_answers.includes(4503)){
+                advisorGeywitz.quit();
+                advisorSchwan.quit();
+                advisorMoll.quit();
+                advisorBas.unlock();
+            }
+            if(ans===4525){
+
+                advisorWeil.unlock();
+            }
+        }
+
+        //global and state advisor effect
+        applyDrift(77, -0.001-((4-dismissalsLeft)*0.0002));
+        }
 
     if ([4101, 4124, 4126, 4011, 4128].includes(ans)) {
 	    muetzenich = true;
@@ -2480,8 +2545,7 @@ if (campaignTrail_temp.question_number === 27) {
 
     if(campaignTrail_temp.question_number === 18){
 
-       if(!firedKeys[9]&&!campaignTrail_temp.player_answers.includes(4061)){
-        //CHECK FOR SCHRÖDER!!!
+       if(!firedKeys[9]&&!campaignTrail_temp.player_answers.includes(4061)&&advisorSchröder==='active'){
         firedKeys[9] = true;
         answerSwapper(4061, 4140, false);
         changeGlobalEffect(78,4061,0.06)
