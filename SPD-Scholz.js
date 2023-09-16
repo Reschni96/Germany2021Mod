@@ -1837,8 +1837,9 @@ if (campaignTrail_temp.question_number === 27) {
 	    }
 	}
 
-    if ([4006, 4100, 4008, 4123, 4012, 4016, 4500, 4501, 4509, 4510, 4506].includes(ans)) {
+    if ([4006, 4100, 4008, 4123, 4012, 4016, 4503, 4501, 4509, 4510, 4506, 4017].includes(ans)) {
 	    leftist++;
+	    if(ans===4016){leftist++}
 	}
 
     if (ans === 4000) {
@@ -1846,19 +1847,22 @@ if (campaignTrail_temp.question_number === 27) {
        campaignTrail_temp.questions_json[2]=extraQuestions[0];
     }
     if ([4511, 4510, 4509, 4508].includes(ans)) {
-	   if(leftist - moderate >1){
-	        campaignTrail_temp.questions_json[6]=extraQuestions[1];
-	        coalitions.forEach(coalition => {
-          if (coalition.id === 12) {
-            coalition.weight += 0.2;
-          }
-        });
-	   }
-	   else if (leftist - moderate >3){
-	        campaignTrail_temp.questions_json[6]=extraQuestions[2];
+    console.log(leftist)
+    console.log(moderate)
+	   if ((leftist - moderate) > 3){
+	        console.log("huh")
+	        campaignTrail_temp.questions_json[9]=extraQuestions[2];
 	        coalitions.forEach(coalition => {
           if (coalition.id === 12) {
             coalition.weight += 0.4;
+          }
+        });
+	   }
+	   else if((leftist - moderate) > 1){
+	        campaignTrail_temp.questions_json[9]=extraQuestions[1];
+	        coalitions.forEach(coalition => {
+          if (coalition.id === 12) {
+            coalition.weight += 0.2;
           }
         });
 	   }
