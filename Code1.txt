@@ -1202,6 +1202,9 @@ function paginateContent() {
               display: flex;
               flex-direction: column;
             }
+            .inner_inner_window h3{
+                padding: 5px;
+            }
               #question_form {
               flex: 1;
               box-sizing: border-box;
