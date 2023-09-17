@@ -2431,7 +2431,7 @@ if (campaignTrail_temp.question_number === 27) {
         answerSwapper(4050, 4199, false);
         changeGlobalEffect(78,4050, 0.015)
      }
-     if(ans===4042 && !firedKeys[56]){
+     if(ans===4041 && !firedKeys[56]){
         firedKeys[56] = true;
         firedKeys[80] = true;
         answerSwapper(4064, 4201, false);
@@ -2442,7 +2442,7 @@ if (campaignTrail_temp.question_number === 27) {
         changeGlobalEffect(78,4065, -0.01)
      }
 
-      if(ans===4043 && !firedKeys[57]){
+      if(ans===4042 && !firedKeys[57]){
         firedKeys[57] = true;
         firedKeys[80] = true;
         answerSwapper(4064, 4203, false);
