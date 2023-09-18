@@ -483,7 +483,7 @@ e.multiple_endings = true;
       }
       else{
           e.header="<h2>“As expected, SPD under Mützenich struggles”</h2>"
-          e.pages=[`<p>As was predicted by most pundits, the SPD and Mützenich have lost the election. With the CDU winning yet again, there is little appetite for another Grand coalition, but who knows - four years ago, one was eventually formed from a similar position. Your private feelings are mixed - you are glad that you aren't the face of this defeat, but can't help but wonder if you hadn't been able to win this.</p><p>In any case, the SPD will probably land in the opposition, so your days as Vice Chancellor and Minister are numbered. Perhaps you'll return to Hamburg, perhaps you'll in Berlin as backbencher and financial expert. When the party is looking for candidates again in 2025, your name might be on the list.</p>` ]
+          e.pages=[`<p>As was predicted by most pundits, the SPD and Mützenich have lost the election. With the CDU winning yet again, there is little appetite for another Grand coalition, but who knows - four years ago, one was eventually formed from a similar position. Your private feelings are mixed - you are glad that you aren't the face of this defeat, but can't help but wonder if you hadn't been able to win this.</p><p>In any case, the SPD will probably land in the opposition, so your days as Vice Chancellor and Minister are numbered. Perhaps you'll return to Hamburg, perhaps you'll in Berlin as backbencher and financial expert. When the party is looking for candidates again in 2025, your name might be on the list.</p>`]
           e.image="https://www.bundestag.de/resource/image/225552/3x4/594/792/41c47f0a63894c714cff2ac9fc890afb/2AC076E6C48DE98561C2E0BA18823C1A/kuppel.jpg"
             return construct(0);
       }
@@ -1510,7 +1510,8 @@ function endingTwoBuilder(){
             }
             else{
 
-            "After eight years of Grand Coalition, the German people were sick and tired of it. And now, what do they get? An even grander coalition, featuring the FDP on top of the CDU/CSU and the SPD, called Germany-Coalition due to the colours of the involved parties. The CDU/CSU kept the chancellorship, the SPD stayed a junior partner and the Green Party has entered the government as well. The left wing of your party groans at the thought of governing another four years with the CDU/CSU, and even lots of moderates agree. At least, quite a few left-of-center provisions have made it into the coalition agreement, though major reforms won't happen. Hopefully, this government will at least bring stability."
+            coalitionText = "After eight years of Grand Coalition, the German people were sick and tired of it. And now, what do they get? An even grander coalition, featuring the FDP on top of the CDU/CSU and the SPD, called Germany-Coalition due to the colours of the involved parties. The CDU/CSU kept the chancellorship, the SPD stayed a junior partner and the Green Party has entered the government as well. The left wing of your party groans at the thought of governing another four years with the CDU/CSU, and even lots of moderates agree. At least, quite a few left-of-center provisions have made it into the coalition agreement, though major reforms won't happen. Hopefully, this government will at least bring stability."
+
              if (midResult){
                     playerFate = emptyCoalitionFate;
              }
@@ -1823,18 +1824,21 @@ if (campaignTrail_temp.question_number === 27) {
     }
     //direction
 
-	if ([4003, 4004, 4098, 4009, 4014, 4018, 4502, 4511, 4505].includes(ans)) {
+	if ([4002, 4003, 4004, 4098, 4009, 4014, 4018, 4502, 4511, 4505].includes(ans)) {
 	    moderate++;
-        if( ans == 4002){moderate++}
+        if( ans === 4002){moderate++}
 	}
     if (ans === 4007 ) {
 	    moderate += 2;
-	    if (moderate>2){
-	    campaignTrail_temp.questions_json[2]=extraQuestions[7];
-	    }
 	    if (campaignTrail_temp.player_answers.includes(4002)){
 	        muetzenich = true;
 	        campaignTrail_temp.question_number=34;
+	    }
+	}
+	if(campaignTrail_temp.question_number===2){
+	    console.log(moderate)
+	    if (moderate>2){
+	        campaignTrail_temp.questions_json[4]=extraQuestions[7];
 	    }
 	}
 
@@ -1937,7 +1941,56 @@ if (campaignTrail_temp.question_number === 27) {
             }
 
         //global and state advisor effect
-        applyDrift(77, -0.001-((4-dismissalsLeft)*0.0002));
+        applyDrift(78, -0.001-((4-dismissalsLeft)*0.0002));
+
+         if(advisorSchmidt.status === 'active'){
+            applyDrift(78, 0.0004);
+            }
+         if(advisorErnst.status === 'active'){
+            applyDrift(78, 0.001, 3003);
+            }
+         if(advisorKlingbeil.status === 'active'){
+            applyDrift(78, 0.0005);
+            applyDrift(78, 0.001, 3008);
+            }
+         if(advisorKühnert.status === 'active'){
+            applyDrift(78, 0.0002);
+            applyDrift(79, -0.0002);
+            applyDrift(78, 0.002, 3002);
+            }
+         if(advisorSchwesig.status === 'active'){
+            applyDrift(78, 0.0015, [3003, 3007, 3012, 3013, 3015])
+            applyDrift(78, 0.001, 3007);
+        }
+        if(advisorGeywitz.status === 'active'){
+            applyDrift(78, 0.0006, [3003, 3007, 3012, 3013, 3015])
+            applyDrift(78, 0.001, 3003);
+        }
+        if(advisorLauterbach.status === 'active'){
+            applyDrift(78, 0.001, 3009);
+            }
+        if(advisorMiersch.status === 'active'){
+            applyDrift(78, 0.001, 3008);
+            }
+        if(advisorNoWaBoEsken.status === 'active'){
+            applyDrift(78, 0.0008);
+            }
+        if(advisorMützenich.status === 'active'){
+            applyDrift(78, 0.001, 3009);
+            }
+        if(advisorSchröder.status === 'active'){
+            applyDrift(78, 0.0015, 3008);
+            applyDrift(78, 0.00015);
+            }
+        if(advisorMoll.status === 'active'){
+            applyDrift(78, 0.001, 3009);
+            }
+       if(advisorBas.status === 'active'){
+            applyDrift(78, 0.0015, 3009);
+            }
+       if(advisorWeil.status === 'active'){
+            applyDrift(78, 0.003, 3008);
+            }
         }
 
     if ([4101, 4124, 4126, 4011, 4128].includes(ans)) {
@@ -2844,7 +2897,7 @@ function reapplyTooltips(answer) {
 
     answer.fields.activeHints.forEach(hint => {
         const tooltipContent = `
-            <span class='mytooltip' style='background-color: red'>
+            <span class='mytooltip' style='background-color: lightgreen'>
                 [A]
                 <span class='bubble bubble-bottom-left'>
                     <div style='display: flex; align-items: center;'>
@@ -4890,8 +4943,8 @@ let advisorSchmidt = new Advisor(
     "https://i.ibb.co/hXhZxnS/Schmidt-cropped.jpg",
     "A political ally since your time in Hamburg, he can help with all kinds of tasks around the campaign.",
     'Description for Wolfgang Schmidt',
-    () => {},
-    () => {},
+     () =>{coalitions.forEach(coalition => { if ([1, 2, 4, 6, 10, 11, 12, 13].includes(coalition.id)) {coalition.weight *= 1.2;}});merkelism+=1;},
+     () =>{coalitions.forEach(coalition => { if ([1, 2, 4, 6, 10, 11, 12, 13].includes(coalition.id)) {coalition.weight *= 1/1.2;}});merkelism=Math.max(0, merkelism-1)},
     "available"
 );
 
@@ -4901,8 +4954,8 @@ let advisorBösinger = new Advisor(
     "https://i.ibb.co/tZvrcSH/bosinger-cropped.jpg",
     "He's a ministeral secretary under you and wants to help by giving advice on economic questions",
     'Description for Rolf Bösinger',
-    () => {},
-    () => {},
+    () => {addAdvisorTooltips([4506, 4505, 4016, 4017, 4018, 4019, 4512, 4513, 4514, 4515, 4049] ,["These are some nice ideas for our platform, but do people want rhetoric instead of action?", "Holding out on relief now would be disastrous for the country.","14€ is too much - you’d even outflank the Left party, and might not be viable economically.","12€ seems like a good number, and almost the entire party seems to agree.","It’s clear that this country needs a higher minimum wage. We could refine our strongest policy area here, this conservatism is unneeded.","Why so cautious? You have the opportunity to define yourself further as a Social Democrat!","This is far too cautious. The problem goes deeper than just that, and pretty much everyone except for the AfD is saying so.","Innovative solution, moderate on the economic axis, progressive on the cultural one.","A classic SPD talking point - this is where we have a leg up on our opponents.","Quite neoliberal. Has its advantages, but don’t get outflanked from our left.","It’s not bad to look at this from a socio-economic standpoint."], 'https://i.ibb.co/tZvrcSH/bosinger-cropped.jpg')},
+    () => removeAdvisorTooltips([4506, 4505, 4016, 4017, 4018, 4019, 4512, 4513, 4514, 4515, 4049], 'https://i.ibb.co/tZvrcSH/bosinger-cropped.jpg'),
     "available"
 );
 
@@ -4912,8 +4965,8 @@ let advisorErnst = new Advisor(
     "https://i.ibb.co/bKFJCLz/ernst-cropped.jpg",
     "Not only is she your wife, but also a state minister in Brandenburg in her own right. During the campaign, she's happy to advice you on education policy",
     null,
-    () => {},
-    () => {},
+    () => {addAdvisorTooltips([4512, 4047, 4528, 4529, 4530, 4531] ,["Family friendly policies are important, but this issue takes more than just pregnant women, Olaf.","The government’s policies on education aren’t particularly popular - you risk opening yourself up to oppositionary attacks.","This is a satisfactory answer that doesn’t derail the campaign.","A good, progressive answer that fires up the cultural left, as it does the cultural right.","Olaf, women have a right over their own bodies, and right now, the situation is <i>not</i> fine as it stands. Don’t make me make you sleep on the couch.","This goes a bit far. Bringing economic interventionism into this might just give the Right too much to fire at."], "https://i.ibb.co/bKFJCLz/ernst-cropped.jpg")},
+    () => removeAdvisorTooltips([4512, 4047, 4528, 4529, 4530, 4531], "https://i.ibb.co/bKFJCLz/ernst-cropped.jpg"),
     "available"
 );
 
@@ -4923,8 +4976,8 @@ let advisorHebestreit = new Advisor(
     "https://i.ibb.co/7jVnYPM/hebestreit-cropped.jpg",
     "This communication manager will surely be helpful to have on your side should you become embroiled in any scandals.",
     null,
-    () => {},
-    () => {},
+   () => {addAdvisorTooltips([4027, 4028, 4029, 4030, 4051, 4052, 4053, 4110, 4065, 4082, 4083, 4084, 4085] ,["If you have your party on your side, making this a partisan issue could minimize harm.","This proactive step will keep the matter from spilling into the public. Just be sure you pull the right strings when the report comes out.","Way to dodge the question - but this does not stop it from getting picked up by the news.","Don’t fall for their bluff, they don’t have anything on you yet!","It’ll pass, as most things do, but this <i>will</i> hurt.","Standing up for yourself won’t allow our opponents to control the narrative.","Firing Kukies <i>now</i> just seems to vindicate your critics and admit wrongdoing.","I like it as little as you do, but someone has to go, if your reputation is to be saved.","As your press secretary, I am going to advise you to <i>not</i> defend the gaffes of your primary opponent.","Okay, this is problematic. This is a serious situation, snarkiness won’t help.","Okay, this is problematic. You’re going to have to say something, Olaf. They’re gonna bring it up in the debates anyhow.","Okay, this is problematic. Maybe throwing the CDU and their shady tactics into the dirt with you is your last resort…","Okay, this is problematic. This is going to hurt you no matter what, but maybe your usual composure can minimize the damage…"], "https://i.ibb.co/7jVnYPM/hebestreit-cropped.jpg")},
+    () => removeAdvisorTooltips([4027, 4028, 4029, 4030, 4051, 4052, 4053, 4110, 4065, 4082, 4083, 4084, 4085], "https://i.ibb.co/7jVnYPM/hebestreit-cropped.jpg"),
     "available"
 );
 
@@ -4934,8 +4987,8 @@ let advisorKlingbeil = new Advisor(
     "https://i.ibb.co/N6V8MmL/klingbeil-cropped.jpg",
     "As General Secretary of the SPD, Klingbeil can use his organisational ressources and skills to campaign for you across the country.",
     'Description for Lars Klingbeil',
-    () => {},
-    () => {},
+       () => {addAdvisorTooltips([4008, 4009, 4010, 4011, 4123, 4124, 4125, 4126] ,[ "Very much in tune with what leadership thinks, but be wary of our moderate wing.", "Seems that like this is acceptable to Saskia and Norbert, and you get some centrist leeway out of it.", "That’s very much true - who else, if not you? Maybe pragmatism instead of ideology is a good hedge.", "Olaf, you lost the leadership race. You don’t have the political capital to be able to afford such grandstanding.","Very much in tune with what leadership thinks, but be wary of our moderate wing.","After your outspoken support of the GroKo, this just might not cut it, Olaf.", "That’s very much true - who else, if not you? Maybe pragmatism instead of ideology is a good hedge.", "Olaf, you lost the leadership race. You don’t have the political capital to be able to afford such grandstanding."], "https://i.ibb.co/N6V8MmL/klingbeil-cropped.jpg")},
+    () => removeAdvisorTooltips([4008, 4009, 4010, 4011, 4123, 4124, 4125, 4126], "https://i.ibb.co/N6V8MmL/klingbeil-cropped.jpg"),
     "available"
 );
 
@@ -4945,8 +4998,8 @@ let advisorSchulz = new Advisor(
     "https://i.ibb.co/TW25nSV/Schulz-cropped.jpg",
     "The last SPD chancellor nominee has many political connections and offered to use them to get you top-notch polling data.",
     'Description for Martin Schulz',
-    () => {},
-    () => {},
+    ()=> {factorPolls=5; factorSeats=5; errorDegree=0.3;},
+    ()=> {factorPolls=1; factorSeats=1; errorDegree=1;},
     "available"
 );
 
@@ -4956,8 +5009,8 @@ let advisorBrinkert = new Advisor(
     "https://i.ibb.co/5BGKnkn/brinkert-cropped.png",
     "Hire this advertising manager if you want to work on your image - people will see you as chancellor material in no time!",
     'Description for Raphael Brinkert',
-    () => {},
-    () => {},
+    () => {merkelism+=3},
+    () => {merkelism=Math.max(0, merkelism-3)},
     "available"
 );
 
@@ -4966,9 +5019,9 @@ let advisorKühnert = new Advisor(
     'Kevin Kühnert',
     "https://i.ibb.co/Vj98jvt/K-hnert-cropped.jpg",
     "Kühnert will help you target voters on the left of the political spectrum - and offered to reach ot to the Left for potential coalition talks.",
-    'The former influential former leader of the SPD youth organization wants you to move past the Grand Coalition',
-    () => {},
-    () => {},
+    'The influential former leader of the SPD youth organization wants you to move past the Grand Coalition',
+    () => {coalitions.forEach(coalition => { if ([12, 13].includes(coalition.id)) {coalition.weight *= 1.3;}})},
+     () =>{coalitions.forEach(coalition => { if ([12, 13].includes(coalition.id)) {coalition.weight *= 1/1.3;}})},
     "locked"
 );
 
@@ -4978,8 +5031,8 @@ let advisorLauterbach = new Advisor(
     "https://i.ibb.co/SsLv7fL/lauterbach-cropped.jpg",
     "Right now, he's one of the most sought after people as a health expert. Beyond that, he has good connections with the Green party",
     'A popular health expert in your party - if you want him by your side, take Covid seriously and focus on getting a vaccine out.',
-    () => {},
-    () => {},
+    () => {coalitions.forEach(coalition => { if ([1, 4, 6].includes(coalition.id)) {coalition.weight *= 1.4;}}); addAdvisorTooltips([4020, 4021, 4022, 4023, 4047, 4066, 4067, 4068, 4069] ,["We should be more careful, the experts agree that opening up now could jeopardize our entire progress so far!" ,"The bridge lockdown is a bad idea. Who is going to believe us if we promise that it’ll ‘only take two weeks’? Laschet has the wrong idea, and we don’t have to be afraid to call him out.","Good idea - the cultural sector and gig economy is really suffering under these unfortunately necessary measures. Makes you seem competent.","Cutting off relief now will only make you seem stingy. Absolutely the wrong move for everyone who’s struggling.","The government’s school policies during Corona weren’t that popular, it might be better to go another avenue.","No offense, but the wording here is absolutely unfortunate. Calling people ‘guinea pigs’ isn’t…","We’re on a good path, but science supports these worthwhile reforms.","The data does not support the proportionality of a vaccine mandate yet. Maybe we can still do this without one.","Olaf, this is absolutely counter productive to the vaccination campaign! Don’t tell me that you’re one of those anti-science-guys!"], "https://i.ibb.co/SsLv7fL/lauterbach-cropped.jpg")},
+     () =>{coalitions.forEach(coalition => { if ([1, 4, 6].includes(coalition.id)) {coalition.weight *= 1/1.4;}});removeAdvisorTooltips([4020, 4021, 4022, 4023, 4047, 4066, 4067, 4068, 4069], "https://i.ibb.co/SsLv7fL/lauterbach-cropped.jpg")},
     "locked"
 );
 
@@ -4989,8 +5042,8 @@ let advisorMiersch = new Advisor(
     "https://i.ibb.co/pZ3tRgp/miersch-cropped.jpg",
      'If you need advice on environmental topics - or someone to reach out to the Greens for coalitions talks - Miersch is your man.',
     'Show that you are willing to do something about climate change to recruit this environmental expert.',
-    () => {},
-    () => {},
+    () => {coalitions.forEach(coalition => { if ([1, 4, 6].includes(coalition.id)) {coalition.weight *= 1.4;}}); addAdvisorTooltips([4039, 4040, 4041, 4042, 4062, 4063, 4064, 4065] ,["Quickly passing a new law shows that you’re proactive, even though the Union will wash it down quite a bit, as usual.","Let’s press our advantage, our record is bound to sting the CDU.","This could show that we’re serious about the environment, but my guess is this proposal will be rejected by our coalition partner.","The German people want something passed <i>now</i>, and so does the planet.","Our environmental platform is a good compromise for this country, but the Greens are sure to outflank us here.","You know… maybe not breaching forward with climate rhetoric here is suitable for a candidate like you. Rise above the pack, stay on message, seem stately.","A reasonable pivot that answers the call of this time.","Olaf, no! Don’t agree with such an asinine statement! Laschet might as well hire you as his press secretary!"], "https://i.ibb.co/pZ3tRgp/miersch-cropped.jpg")},
+     () =>{coalitions.forEach(coalition => { if ([1, 4, 6].includes(coalition.id)) {coalition.weight *= 1/1.4;}});removeAdvisorTooltips([4039, 4040, 4041, 4042, 4062, 4063, 4064, 4065], "https://i.ibb.co/pZ3tRgp/miersch-cropped.jpg")},
     "locked"
 );
 
@@ -5000,8 +5053,8 @@ let advisorNoWaBoEsken = new Advisor(
     "https://i.ibb.co/XWVDtRT/Nowabo-Esken-cropped.jpg",
     "The two party leaders can mobilize additional resources to boost your support. To top that off, Esken is also an expert on digitalization.",
     'These two politicians come as a duo - and a good relationship with the leadership of the party is needed to get them on board.',
-    () => {},
-    () => {},
+       () => {addAdvisorTooltips([4047, 4048, 4049, 4050] ,["Our schools desperately need more means to advance digitalization, but you risk tying yourself to the unpopular GroKo here.","Germany really needs to pick up the pace with its digital infrastructure, and everyone knows it.","It’s not bad too look at this from a socio-economic standpoint, but this is a pretty pointed appeal.","Business will like this, but it’s a pretty cold take."], "https://i.ibb.co/XWVDtRT/Nowabo-Esken-cropped.jpg")},
+    () => removeAdvisorTooltips([4047, 4048, 4049, 4050], "https://i.ibb.co/XWVDtRT/Nowabo-Esken-cropped.jpg"),
     "locked"
 );
 
@@ -5009,10 +5062,10 @@ let advisorMützenich = new Advisor(
     12,
     'Rolf Mützenich',
     "https://i.ibb.co/bjhJKXD/m-tzenich-cropped.jpg",
-    "Mützenich is an expert on foreign policy and is willing to campaign in North Rhine-Westphalia.",
+    "Parliamentary group leader Mützenich is an expert on foreign policy and is willing to campaign in North Rhine-Westphalia.",
     'The leader of the parliamentary group wishes for you to have a good relationship with the party leadership.',
-    () => {},
-    () => {},
+       () => {addAdvisorTooltips([4035, 4036, 4037, 4038, 4078, 4079, 4080, 4081] ,["Good hedge. You <i>will</i> offend someone if you comment on Gerhard.","I’m fully with you, but the Greens outflanking us on Foreign Policy might have unprecedented consequences.","Ambitious, but Putin is not exactly popular in Germany, for a reason.","Criticizing Gerhard so openly could be controversial, and hedging on Nord-Stream 2 will offend Minister-President Manuela Schwesig.","Good idea, there’s certainly an opening for this policy right now.","What a mess… this matter does not paint a good light on the government, but this says at least something.","This does differentiate you from the CDU and aligns you with the cultural left, if that’s what you want.","This is a valid point to bring up against the CDU, but if the government’s in a rut, it’s mostly the opposition that profits. Maybe that doesn’t matter if you think this is a duel.","Associating yourself with the Minister of Interior, Horst Seehofer, is a dangerous matter. This answer sounds quite dismissive of refugees."], "https://i.ibb.co/bjhJKXD/m-tzenich-cropped.jpg")},
+    () => removeAdvisorTooltips([4035, 4036, 4037, 4038, 4078, 4079, 4080, 4081], "https://i.ibb.co/bjhJKXD/m-tzenich-cropped.jpg"),
     "locked"
 );
 
@@ -5033,8 +5086,8 @@ let advisorMattheis = new Advisor(
     "https://i.ibb.co/PMJnJ58/Mattheis-cropped.jpg",
     "Targeting traditionally leftist voters and talking to the Left to form a coalition are tasks Mattheis would like to help with.",
     'Run a more leftist campaign to win over this influential leftist party member.',
-    () => {},
-    () => {},
+    () => {coalitions.forEach(coalition => { if ([12, 13].includes(coalition.id)) {coalition.weight *= 1.4;}})},
+     () =>{coalitions.forEach(coalition => { if ([12, 13].includes(coalition.id)) {coalition.weight *= 1/1.4;}})},
     "locked"
 );
 
@@ -5044,8 +5097,8 @@ let advisorWiese = new Advisor(
     "https://i.ibb.co/D72GwgS/wiese-cropped.jpg",
     "Coalition talks with both the CDU and FDP would be easier with him on board - and he has some tax policy advice as well.",
     'A tax expert within the party who would like to work for you if you run a moderate campaign.',
-    () => {},
-    () => {},
+    () => {coalitions.forEach(coalition => { if ([1, 2, 6, 10].includes(coalition.id)) {coalition.weight *= 1.5;}}); addAdvisorTooltips([4043, 4044, 4045, 4046] ,["If there’s a way to show off your credentials, it’s with this popular answer.","This could improve purchasing power, but expect attacks from your left. They want real reforms, like higher taxes on the rich.","A groundbreaking proposal, if you’re one to pay attention to this stuff.","This is vaguely in line with what most of our party calls for. Flexing our keynesian muscles will sharpen our profile on the left."], "https://i.ibb.co/D72GwgS/wiese-cropped.jpg")},
+     () =>{coalitions.forEach(coalition => { if ([1,2, 6,10].includes(coalition.id)) {coalition.weight *= 1/1.5;}}); removeAdvisorTooltips([4043, 4044, 4045, 4046], "https://i.ibb.co/D72GwgS/wiese-cropped.jpg")},
     "locked"
 );
 
@@ -5054,9 +5107,9 @@ let advisorSchröder = new Advisor(
     'Gerhard Schröder',
     "https://i.ibb.co/zfZV5JM/schr-der-cropped.jpg",
     "If there's someone who know ho to handle natural disasters, it's Gerhard Schröder. He's also still popular in Lower Saxony.",
-    'This former chancellor of Germany needs you to stay moderate and defend him.',
-    () => {},
-    () => {},
+    'This former chancellor of Germany needs you to stay away from socialism and defend him.',
+       () => {addAdvisorTooltips([4058, 4059, 4060, 4061] ,["These buffons will surely hurt themselves on their own, but there’s no reason to be timid!","Authenticity is certainly something the German’s value, Olaf. By the way, get me another bottle of beer, or I’ll go on strike.","This can be your big break! These two idiots are certain to stumble over each other, and you’ll stick out like the savior of the day.","Hahaha, it’s 2002 all over again! Come on, let’s go together, and I’ll teach you a thing or two about playing catch-up."], "https://i.ibb.co/zfZV5JM/schr-der-cropped.jpg")},
+    () => removeAdvisorTooltips([4058, 4059, 4060, 4061], "https://i.ibb.co/zfZV5JM/schr-der-cropped.jpg"),
     "locked"
 );
 
@@ -5066,8 +5119,8 @@ let advisorGeywitz = new Advisor(
     "https://i.ibb.co/17rcP7C/geywitz-cropped.jpg",
     "Geywitz are of expertise is housing policy, and involving someone from East Germany could help your campaign there as well.",
     'Whoever you chose as partner for leadership could be involved in your campaign if you do well in your run for leadership',
-    () => {},
-    () => {},
+       () => {addAdvisorTooltips([4516, 4517, 4518, 4519] ,["In light of the situation, this seems quite cautious to me.","This seems like a realistic plan to deal with the crisis, even if the Greens are going further.","It may seem quite radical, but younger voters and urban areas will appreciate it.","Woah, ease it up - talking about reappropriations takes it a bit far, don’t you think? This’ll give them ample opportunity to paint us as scary socialists."], "https://i.ibb.co/17rcP7C/geywitz-cropped.jpg")},
+    () => removeAdvisorTooltips([4516, 4517, 4518, 4519], "https://i.ibb.co/17rcP7C/geywitz-cropped.jpg"),
     "locked"
 );
 
@@ -5077,8 +5130,8 @@ let advisorSchwan = new Advisor(
     "https://i.ibb.co/bP9H5wv/Schwan-cropped.jpg",
     "During her long years, Schwan forged many connections in the party and knows how to navigate intra-party questions.",
     'Whoever you chose as partner for leadership could be involved in your campaign if you do well in your run for leadership',
-    () => {},
-    () => {},
+       () => {addAdvisorTooltips([4008, 4009, 4010, 4011, 4105, 4106, 4107] ,["I think this is a wise stance, and Saskia and Norbert will like it, just be wary that short-term, it might cause some upheaval..","While I don’t like the centrist tone you’re putting up, it seems like this is still acceptable to Saskia and Norbert.","That’s very much true - who else, if not you? Maybe pragmatism instead of ideology is a good hedge.","Olaf, we lost the leadership race. You don’t have the political capital to be able to afford such grandstanding.","You’ve already changed your image once, Olaf. Going back now would just emulate the failures we’ve experienced in the past.","Tone it down a bit. Some of us are socialists, but not everyone. Don’t give the CDU any opening for redbaiting!","Projecting strength and confidence is the key for people to take the SPD seriously again!"], "https://i.ibb.co/bP9H5wv/Schwan-cropped.jpg"); unity+=2},
+    () => {removeAdvisorTooltips([4516, 4517, 4518, 4519], "https://i.ibb.co/bP9H5wv/Schwan-cropped.jpg"); unity += -2},
     "locked"
 );
 
@@ -5088,8 +5141,8 @@ let advisorMoll = new Advisor(
     "https://i.ibb.co/M9RXcz5/Moll-cropped.jpg",
     "This former geriatric nurse will certainly have some advice how to handle socio-economic questions.",
     'Whoever you chose as partner for leadership could be involved in your campaign if you do well in your run for leadership',
-    () => {},
-    () => {},
+       () => {addAdvisorTooltips([4506, 4505, 4016, 4017, 4018, 4019, 4513, 4514, 4515, 4516, 4054, 4055, 4056, 4057], ["These are some nice ideas. I know firsthand how little our caregivers earn, I’ve been one! Question is, can you actually do something about that right now?","Holding out on relief now would be disastrous for the country.","14€ is too much - you’d even outflank the Left party, and might not be viable economically.","12€ seems like a good number, and almost the entire party seems to agree.","It’s clear that this country needs a higher minimum wage. We could refine our strongest policy area here, this conservatism is unneeded.","Why so cautious? You have the opportunity to define yourself further as a Social Democrat!","This is far too cautious. The problem goes deeper than just that, and pretty much everyone except for the AfD is saying so.","Innovative solution, moderate on the economic axis, progressive on the cultural one.","A classic SPD talking point - this is where we have a leg up on our opponents.","Quite neoliberal. Has its advantages, but don’t get outflanked from our left.","It’s time to move on from Hartz IV. This proposal seems to be a good and viable set of reforms to do just that.","That’s a pretty big number… it will certainly reignite the economic debate. We have competency in this field, but the right will be fired up about ‘entitlements’.", "Olaf, as much as you might think different, our party base won’t go along with Hartz IV any longer.","A UBI is certainly an innovative proposal, but I think there’s a few more debates to be had about this one."], "https://i.ibb.co/M9RXcz5/Moll-cropped.jpg")},
+    () => removeAdvisorTooltips([4506, 4505, 4016, 4017, 4018, 4019, 4513, 4514, 4515, 4516, 4054, 4055, 4056, 4057], "https://i.ibb.co/M9RXcz5/Moll-cropped.jpg"),
     "locked"
 );
 
@@ -5099,8 +5152,8 @@ let advisorBas = new Advisor(
     "https://i.ibb.co/N1FfmCk/Bas-cropped.jpg",
     "With her good cross-party reputation, Bas would be an asset in coaltion talks.",
     'Whoever you chose as partner for leadership could be involved in your campaign if you do well in your run for leadership',
-    () => {},
-    () => {},
+    () => {coalitions.forEach(coalition => { if ([1, 2, 4, 6, 10, 11, 12, 13].includes(coalition.id)) {coalition.weight *= 1.3;}})},
+     () =>{coalitions.forEach(coalition => { if ([1, 2, 4, 6, 10, 11, 12, 13].includes(coalition.id)) {coalition.weight *= 1/1.3;}})},
     "locked"
 );
 
@@ -5110,8 +5163,8 @@ let advisorWeil = new Advisor(
     "https://i.ibb.co/Wy8Y4Sg/weil-cropped.jpg",
     "Of course, Weil will help you win Lower Saxony, but he also has some tips about looking as competent as the outgoing chancellor.",
     'Visit him in Lower Saxony to give this SPD head of state a role in your campaign.',
-    () => {},
-    () => {},
+    () => {merkelism+=2},
+    () => {merkelism=Math.max(0, merkelism-2)},
     "locked"
 );
 
@@ -5180,7 +5233,7 @@ function addAdvisorTooltips(pks, Tooltips, pictureLink) {
             let rebuiltDescription = campaignTrail_temp.answers_json[ansIndex].fields.originalDescription;
             campaignTrail_temp.answers_json[ansIndex].fields.activeHints.forEach(hint => {
                 const tooltipContent = `
-                    <span class='mytooltip' style='background-color: red'>
+                    <span class='mytooltip' style='background-color: lightgreen'>
                         [A]
                         <span class='bubble bubble-bottom-left'>
                             <div style='display: flex; align-items: center;'>
@@ -5222,7 +5275,7 @@ function removeAdvisorTooltips(pks, pictureLink) {
         let rebuiltDescription = campaignTrail_temp.answers_json[ansIndex].fields.originalDescription;
         campaignTrail_temp.answers_json[ansIndex].fields.activeHints.forEach(hint => {
             const tooltipContent = `
-                <span class='mytooltip' style='background-color: red'>
+                <span class='mytooltip' style='background-color: lightgreen'>
                     [A]
                     <span class='bubble bubble-bottom-left'>
                         <div style='display: flex; align-items: center;'>
