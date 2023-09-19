@@ -5165,15 +5165,16 @@ function Chartbuilder(type) {
             }
         });
         document.querySelector('.highcharts-legend.highcharts-no-tooltip').remove();
-    } else if (type === "bar") {
+    }
+else if (type==="bar"){
 
         var totalPopularVote = 0;
 
         //calculate total popular vote
 
-        e.final_overall_results.forEach((result, i) => {
+         e.final_overall_results.forEach((result, i)   => {
             totalPopularVote += e.final_overall_results[i].popular_votes;
-        });
+           });
 
         var myChart = Highcharts.chart('myChart', {
             chart: {
@@ -5197,48 +5198,145 @@ function Chartbuilder(type) {
 
             series: [{
                 name: 'CDU/CSU',
-                data: [Math.round(((e.final_overall_results.find((r) => r.candidate === 77).popular_votes / totalPopularVote) - 0.329) * 1000) / 10],
+                data: [Math.round(((e.final_overall_results.find((r) => r.candidate === 77).popular_votes/totalPopularVote)-0.329)*1000)/10],
                 color: e.candidate_json[0].fields.color_hex
             }, {
                 name: 'SPD',
-                data: [Math.round(((e.final_overall_results.find((r) => r.candidate === 78).popular_votes / totalPopularVote) - 0.205) * 1000) / 10],
+                data: [Math.round(((e.final_overall_results.find((r) => r.candidate === 78).popular_votes/totalPopularVote)-0.205)*1000)/10],
                 color: e.candidate_json[1].fields.color_hex
-            }, {
+            },{
                 name: 'Greens',
-                data: [Math.round(((e.final_overall_results.find((r) => r.candidate === 79).popular_votes / totalPopularVote) - 0.089) * 1000) / 10],
+                data: [Math.round(((e.final_overall_results.find((r) => r.candidate === 79).popular_votes/totalPopularVote)-0.089)*1000)/10],
                 color: e.candidate_json[2].fields.color_hex
-            }, {
+            },{
                 name: 'FDP',
-                data: [Math.round(((e.final_overall_results.find((r) => r.candidate === 303).popular_votes / totalPopularVote) - 0.107) * 1000) / 10],
+                data: [Math.round(((e.final_overall_results.find((r) => r.candidate === 303).popular_votes/totalPopularVote)-0.107)*1000)/10],
                 color: e.candidate_json[3].fields.color_hex
-            }, {
+            },{
                 name: 'Left',
-                data: [Math.round(((e.final_overall_results.find((r) => r.candidate === 304).popular_votes / totalPopularVote) - 0.092) * 1000) / 10],
+                data: [Math.round(((e.final_overall_results.find((r) => r.candidate === 304).popular_votes/totalPopularVote)-0.092)*1000)/10],
                 color: e.candidate_json[4].fields.color_hex
-            }, {
+            },{
                 name: 'AfD',
-                data: [Math.round(((e.final_overall_results.find((r) => r.candidate === 305).popular_votes / totalPopularVote) - 0.126) * 1000) / 10],
+                data: [Math.round(((e.final_overall_results.find((r) => r.candidate === 305).popular_votes/totalPopularVote)-0.126)*1000)/10],
                 color: e.candidate_json[5].fields.color_hex
-            }, {
+            },{
                 name: 'Others',
-                data: [Math.round(((e.final_overall_results.find((r) => r.candidate === 306).popular_votes / totalPopularVote) - 0.05) * 1000) / 10],
+                data: [Math.round(((e.final_overall_results.find((r) => r.candidate === 306).popular_votes/totalPopularVote)-0.05)*1000)/10],
                 color: e.candidate_json[6].fields.color_hex
             }]
         });
-    }
+        }
 
-    var div = document.getElementById('chartcontainer');
-    div.style.border = 'medium double';
-    div.style.backgroundColor = 'rgba(255, 255, 255, 0.5)';
-    div.style.borderColor = '#c9c9c9';
+        else if (type==="bar2"){
 
-    var element = document.querySelector('.highcharts-background');
-    if (element) { // Check if element exists before trying to remove it
-        element.remove();
-    }
+        var totalPopularVote = 0;
 
-    const container = document.getElementById('chartcontainer');
-    container.style.background = 'rgba(255, 255, 255, 0.5)';
+        //calculate total popular vote
+
+         e.final_overall_results.forEach((result, i)   => {
+            totalPopularVote += e.final_overall_results[i].popular_votes;
+           });
+
+            let categoriesWithData = [
+        {name: 'CDU/CSU', data: Math.round(((e.final_overall_results.find((r) => r.candidate === 77).popular_votes/totalPopularVote))*1000)/10, color: e.candidate_json[0].fields.color_hex, perc2017: 32.9},
+        {name: 'SPD', data: Math.round(((e.final_overall_results.find((r) => r.candidate === 78).popular_votes/totalPopularVote))*1000)/10, color: e.candidate_json[1].fields.color_hex, perc2017: 20.5},
+        {name: 'Greens', data: Math.round(((e.final_overall_results.find((r) => r.candidate === 79).popular_votes/totalPopularVote))*1000)/10, color: e.candidate_json[2].fields.color_hex, perc2017: 8.9},
+        {name: 'FDP', data: Math.round(((e.final_overall_results.find((r) => r.candidate === 303).popular_votes/totalPopularVote))*1000)/10, color: e.candidate_json[3].fields.color_hex, perc2017: 10.7},
+        {name: 'Left', data: Math.round(((e.final_overall_results.find((r) => r.candidate === 304).popular_votes/totalPopularVote))*1000)/10, color: e.candidate_json[4].fields.color_hex, perc2017: 9.2},
+        {name: 'AfD', data: Math.round(((e.final_overall_results.find((r) => r.candidate === 305).popular_votes/totalPopularVote))*1000)/10, color: e.candidate_json[5].fields.color_hex, perc2017: 12.6}
+    ];
+
+        categoriesWithData.sort((a, b) => b.data - a.data);
+        console.log(categoriesWithData)
+
+    // Extract "Others" category details
+    let others = {
+        name: 'Others',
+        data: Math.round(((e.final_overall_results.find((r) => r.candidate === 306).popular_votes/totalPopularVote))*1000)/10,
+        color: e.candidate_json[6].fields.color_hex,
+        perc2017: 5.0
+    };
+
+    // Generate the sorted categories, data, and color arrays
+    let sortedCategories = categoriesWithData.map(item => `<b>${item.name}</b><br>` + item.data + '%');
+    let sortedData = categoriesWithData.map(item => item.data);
+    let sortedColors = categoriesWithData.map(item => item.color);
+
+    // Append the "Others" category at the end
+    sortedCategories.push(`<b>${others.name}</b><br>` + others.data + '%');
+    sortedData.push(others.data);
+    sortedColors.push(others.color);
+
+    // Use sortedCategories for xAxis categories, sortedData for series data, and sortedColors for the series colors
+    var myChart = Highcharts.chart('myChart', {
+        chart: {
+            type: 'column'
+        },
+        title: {
+            text: 'Final results'
+        },
+        subtitle: {
+            text: 'Numbers above column indicate change relative to 2017 election',
+            align: 'center'
+        },
+        yAxis: {
+            title: {
+                text: 'Percentage'
+            }
+        },
+        xAxis: {
+             categories: sortedCategories
+        },
+        tooltip: {
+            formatter: function() {
+                return getPartyName(this.x) + "<br>" + this.y + '%';
+            }
+        },
+        plotOptions: {
+            series: {
+                pointWidth: 70
+            }
+        },
+        series: [{
+            dataLabels: {
+                enabled: true,
+                formatter: function() {
+                    let changeSince2017;
+                    if (this.point.category.includes("Others")) {  // Handling "Others" separately
+                        changeSince2017 = Math.round((this.y - others.perc2017) * 10) / 10;
+                    } else {
+                        changeSince2017 = Math.round((this.y - categoriesWithData.find(item => `<b>${item.name}</b><br>` + item.data + '%' === this.point.category).perc2017) * 10) / 10;
+                    }
+                    return addPlus(changeSince2017) + '%';
+                },
+                style: {
+                    fontSize: '14px',
+                    fontWeight: 'bold'
+                }
+            },
+            showInLegend: false,
+            data: sortedData,
+            colorByPoint: true,
+            colors: sortedColors
+        }]
+    });
+
+
+        }
+
+      var div = document.getElementById('chartcontainer');
+      div.style.border = 'medium double';
+      div.style.backgroundColor = 'rgba(255, 255, 255, 0.5)';
+      div.style.borderColor = '#c9c9c9';
+
+      var element = document.querySelector('.highcharts-background');
+      if (element) { // Check if element exists before trying to remove it
+          element.remove();
+      }
+
+      const container = document.getElementById('chartcontainer');
+      container.style.background ='rgba(255, 255, 255, 0.5)';
 };
 
 var buttonAdded = false
@@ -5372,7 +5470,7 @@ function loadScript(url, callback) {
     document.head.appendChild(script);
 }
 
-var charts = ["bar", "seats"]
+var charts = ["bar2", "bar", "seats"]
 
 const buttonobserver = new MutationObserver(addMyButton);
 buttonobserver.observe(document.documentElement, {
