@@ -1402,7 +1402,7 @@ function paginateContent() {
 
         .mytooltip .mytooltiptext {
             width: 240px;  /* Adjust as needed */
-            background-color: #b0b0b0;
+            background-color: lightblue;
             color: black;
             text-align: center;
             border-radius: 6px;
