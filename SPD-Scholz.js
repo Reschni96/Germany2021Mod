@@ -1754,6 +1754,22 @@ cyoAdventure = function(a) {
 
     currentCoalitions = coalitionTalks(temp.final_overall_results, optionalMode = true);
 
+    //mood
+
+     if (playerPolling < 0.14) {
+        mood = "Miserable"
+    } else if (campaignTrail_temp.question_number < 10) {
+        mood = "Pessimistic"
+    } else if (playerPolling < 0.18) {
+        mood = "Resigned"
+    } else if (playerPolling < 0.21) {
+        mood = "Hopeful"
+    } else if (playerPolling < 0.24) {
+        mood = "Optimistic"
+    } else {
+        mood = "Euphoric"
+    }
+
     //merkelism
 
     if (merkelismMap.hasOwnProperty(ans)) {
