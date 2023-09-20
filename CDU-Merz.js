@@ -3193,6 +3193,16 @@ var pictureDict = {
     31: "https://i.ibb.co/SPfvcv5/vierkampf-cropped.jpg",
     32: "https://i.ibb.co/NmpkszL/Merz-wahlkampf-cropped.webp"
 };
+function preloadImages(pictureDict) {
+    for (var key in pictureDict) {
+        var img = new Image();
+        img.src = pictureDict[key];
+    }
+}
+
+preloadImages(pictureDict);
+
+
 if(e.displayTooltips){
     tooltipList.sort((a, b) => b.searchString.length - a.searchString.length);
 

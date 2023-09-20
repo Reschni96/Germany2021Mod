@@ -6260,6 +6260,15 @@ var pictureDict = {
     34: "https://i.ibb.co/z8X8h3s/scholz-rally-cropped.jpg"
 };
 
+function preloadImages(pictureDict) {
+    for (var key in pictureDict) {
+        var img = new Image();
+        img.src = pictureDict[key];
+    }
+}
+
+preloadImages(pictureDict);
+
 
 if(e.displayTooltips){
     tooltipList.sort((a, b) => b.searchString.length - a.searchString.length);

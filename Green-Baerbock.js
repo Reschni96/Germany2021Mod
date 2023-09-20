@@ -5833,7 +5833,17 @@ var pictureDict = {
     34: "https://i.ibb.co/vsz2M8z/baerbock-rally-cropped.jpg"
 };
 
-if (e.displayTooltips) {
+function preloadImages(pictureDict) {
+    for (var key in pictureDict) {
+        var img = new Image();
+        img.src = pictureDict[key];
+    }
+}
+
+preloadImages(pictureDict);
+
+
+if(e.displayTooltips){
     tooltipList.sort((a, b) => b.searchString.length - a.searchString.length);
 
     // First pass: Mark for tooltips
