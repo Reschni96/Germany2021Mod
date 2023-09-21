@@ -4448,7 +4448,7 @@ function openHeadquarter() {
                     explanationBox.style.top = (rect3.top - hqRect.top + (46 * 14)) + 'px';
                 }
                 if(campaignTrail_temp.staff_mode){
-                    explanationBox.querySelector('p').innerText = "Here, you can view the advisors your campaign has right now. You have up to two slots you can fill. Advisors give different benefits and effect. Some are always unlocked, some can be unlocked throughout the campaign. On the other hand, advisors can also disappear from the potential hire list or quit your campaign if they disagree with your decisions. You can also dismiss them to make space for new advisors - but be aware that once dismissed, an advisor can't be rehired";
+                    explanationBox.querySelector('p').innerText = "Here, you can view the advisors your campaign has right now. You have up to two slots you can fill. Advisors give different benefits and effect. Some are always unlocked, some can be unlocked throughout the campaign. On the other hand, advisors can also disappear from the potential hire list or quit your campaign if they disagree with your decisions. You can also dismiss them to make space for new advisors - this can be very worthwhile if you unlock new advisors during the campaign.";
                 }
                  else {
                     explanationBox.querySelector('p').innerText = "Here you can see your campaign advisors. Since you chose to disable that option, you don't have to worry about them, they are just here for show and will stick with you for the whole campaign.";
@@ -4471,7 +4471,7 @@ function openHeadquarter() {
                     explanationBox.style.top = (rect4.top - hqRect.top + (17 * 14)) + 'px';
                 }
                 if(campaignTrail_temp.staff_mode){
-                explanationBox.querySelector('p').innerText = "This box contains information on the unity of your campaign. Campaign unity is mainly affected by your advisor management - dismissing advisors and having them quit will negatively impact your unity. Your campaign decisions can also influence the unity. Be careful: If your campaign unity becomes too low, you won't be able to hire or dismiss any more advisors! Unity also has a small effect on your polling.";
+                explanationBox.querySelector('p').innerText = "This box contains information on the unity of your campaign. Campaign unity is mainly affected by your advisor management - dismissing advisors and having them quit will negatively impact your unity. Unity only has a very minor effect on polling, so don't be afraid to shuffle your advisors every now and then! You can have around five different advisors each campaign before things become to chaotic and you can't dismiss or hire any more advisors.";
                 }
                 else {
                 explanationBox.querySelector('p').innerText = "Campaign unity is a mechanic that's used when playing with active advisor management. In this campaign, it is purely cosmetic and will have no gameplay effect."
