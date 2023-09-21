@@ -1416,7 +1416,7 @@ function endingTwoBuilder(){
 
       case 3:
       header = "<h2>“A modern coalition for modern times?”</h2>"
-      if(coalitionLeader === 79){
+      if(coalitionLeader.party === 79){
             coalitionText = "Black-Green has been the up-and-coming coalition for a long time in the states, so no one is surprised when it finally happened on a federal level. In a bit of a twist, it's the Baden-Württemberg variation, with the Green Party being stronger than the CDU/CSU. After some tough, but surprisingly smooth negotiations, the two parties forged a coalition agreement. People are hopeful that they've combined the best of both worlds and can get more done than the last eight years of the Grand Coalition - it's the job of the SPD to show them why social democrats are still needed in government."
             if (badResult){
 
@@ -1448,7 +1448,7 @@ function endingTwoBuilder(){
       case 4:
           header = "<h2>“After 16 years, Red-Green makes a comeback”</h2>"
 
-        if(coalitionLeader === 79){
+        if(coalitionLeader.party === 79){
         coalitionText = "Perhaps it is no big surprise that this coalition formed, with the amount of things you and the SPD have in common. However, Red-Green having a majority on the federal level is something that just seemed mathematically impossible a few years ago, a relic of a simpler party systems. This is a major triumph for the center-left part of the party spectrum, even though it's a bit bittersweet with the Green Party leading the coalition instead of you. The coalition talks have been a breeze, with you and the Greens in agreement about most things. Let's hope governing will be just as easy!"
              if (badResult){
                 playerFate = emptyCoalitionFate;
@@ -1483,7 +1483,7 @@ function endingTwoBuilder(){
           case 6:
           header = "<h2>“Conceptually and mathematically difficult to imagine”</h2>"
 
-          if(coalitionLeader === 79){
+          if(coalitionLeader.party === 79){
             coalitionText = "Conceptually and mathematically difficult to imagine - these were the words Christian Lindner, leader of the FDP used when asked about the traffic light coalition consisting of the SPD, Greens and FDP before the election. With enough imagination - and after tough negotiations - you managed to form it anyway. The SPD is a bit dissatisfied about losing the chancellorship to "+ coalitionLeader.leaderName + ", but is otherwhise happy to govern without the CDU/CSU. The coalition agreement has the imprint of all three parties, though your base isn't happy with all the concessions you had to get the FDP on board. Hopefully, you can combine the best parts of all parties to lead the country in a more modern direction."
             if (badResult){
                 playerFate = emptyCoalitionFate;
@@ -1527,7 +1527,7 @@ function endingTwoBuilder(){
         case 10:
         header = "<h2>“An even grander coalition”</h2>"
 
-        if(coalitionLeader === 78){
+        if(coalitionLeader.party === 78){
 
             coalitionText = "After eight years of Grand Coalition, the German people were sick and tired of it. And now, what do they get? An even grander coalition, featuring the FDP on top of the CDU/CSU and the SPD, called Germany-Coalition due to the colours of the involved parties. This time, the CDU/CSU has been relegated to junior partner though and the SPD is leading the coalition. While you got the chancellorship and some social democratic policies in the coalition agreement, overall, there were lots and lots of compromises and no one is all that happy with this. Hopefully, this government will at least bring stability."
               playerFate = chancellorFateDown;
