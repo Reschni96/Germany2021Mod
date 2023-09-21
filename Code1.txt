@@ -1264,9 +1264,16 @@ function paginateContent() {
             }
 
             .radio-option:hover label {
-                font-size: 0.92em;
-                font-weight: 700;
-                margin-bottom: .1em;
+                  text-shadow:
+                    0px 0px 1px #000
+            }
+
+            #question_form label:hover {
+            font-size: inherit !important;
+            font-weight: inherit !important;
+            margin-bottom: inherit !important;
+              text-shadow:
+                0px 0px 1px #000
             }
 
             .radio-option label {
@@ -1402,6 +1409,7 @@ function paginateContent() {
 
         .mytooltip .mytooltiptext {
             width: 240px;  /* Adjust as needed */
+             text-shadow: none;
             background-color: lightblue;
             color: black;
             text-align: center;
@@ -1439,6 +1447,7 @@ function paginateContent() {
 }
 .bubble {
     position: absolute;
+     text-shadow: none;
     width: 250px;
     background: #fff;
     border-radius: 40px;
