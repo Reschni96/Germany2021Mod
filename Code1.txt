@@ -15,6 +15,7 @@ e=campaignTrail_temp;
 HistName=["Replace Me"];
 e.collect_results = true;
 $("#game_window")[0].style.backgroundImage = "url(https://i.imgur.com/9nFY6eE.jpg)";
+backgroundGameWindow =  "url(https://i.imgur.com/9nFY6eE.jpg)"
 nct_stuff.themes[nct_stuff.selectedTheme].coloring_title = "#070785"
 nct_stuff.themes[nct_stuff.selectedTheme].coloring_window = "#031299"
 document.getElementsByClassName("game_header")[0].style.backgroundColor = nct_stuff.themes[nct_stuff.selectedTheme].coloring_title
@@ -523,12 +524,14 @@ if (!element) {
             return array;
         }
 
-
+headerImage = '';
     function updateHeader() {
       var gameHeader = document.getElementsByClassName("game_header")[0];
 
       if (gameHeader.getAttribute("id") !== "modifiedHeader") {
         gameHeader.innerHTML = corrr;
+        gameHeader.style.backgroundImage = headerImage;
+        gameHeader.style.backgroundSize = "cover";
         gameHeader.style.backgroundColor = nct_stuff.themes[nct_stuff.selectedTheme].coloring_title;
         gameHeader.setAttribute("id", "modifiedHeader");
         gameHeader.style.height="6.5em";
