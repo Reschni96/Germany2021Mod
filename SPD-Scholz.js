@@ -2100,7 +2100,7 @@ if (campaignTrail_temp.question_number === 27) {
         changeGlobalEffect(77,4006,0.01)
         answerSwapper(4007, 4131, false);
     }
-    if ([4004,4007].includes(ans) && campaignTrail_temp.player_answers.includes(4002)){
+    if ([4004,4006, 4007].includes(ans) && campaignTrail_temp.player_answers.includes(4002)){
         muetzenich=true;
     }
 
