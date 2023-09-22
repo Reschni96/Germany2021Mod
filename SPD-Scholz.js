@@ -1806,6 +1806,7 @@ cyoAdventure = function(a) {
         merkelism += (competenceMap[ans])*0.25;
         merkelism = Math.max(0, merkelism);
     }
+    console.log(merkelism)
     if (FisConMap.hasOwnProperty(ans)) {
         FisCon += FisConMap[ans];
         FisCon = Math.max(0, FisCon);
@@ -1829,7 +1830,9 @@ cyoAdventure = function(a) {
 if (campaignTrail_temp.question_number === 27) {
 
         let selectedQuestion = extraQuestions[8];
-
+            console.log(merkelism)
+            merkelism=Math.floor(merkelism);
+            console.log(merkelism)
             if (merkelism > 14) {
                   campaignTrail_temp.answers_json.find(item => item.pk === 4537).fields.question = '';
                 campaignTrail_temp.answers_json.find(item => item.pk === 4538).fields.question = '';
@@ -1891,9 +1894,19 @@ if (campaignTrail_temp.question_number === 27) {
        campaignTrail_temp.questions_json[2]=extraQuestions[0];
     }
     if ([4511, 4510, 4509, 4508].includes(ans)) {
-    console.log(leftist)
-    console.log(moderate)
+
 	   if ((leftist - moderate) > 3){
+	        $("#game_window")[0].style.backgroundImage = "url(https://cdn.discordapp.com/attachments/1131296206908301423/1154739431631233115/SPDPLUnten.png)";
+            $("#game_window")[0].style.backgroundSize = "cover";
+            $(".game_header")[0].style.backgroundImage = "url(https://media.discordapp.net/attachments/1131296206908301423/1154739431857721394/SPDPLOben.png)";
+            $(".game_header")[0].style.backgroundSize = "cover";
+            headerImage = "url(https://media.discordapp.net/attachments/1131296206908301423/1154739431857721394/SPDPLOben.png)";
+            $(".container")[0].style.backgroundImage = "url(https://cdn.discordapp.com/attachments/1131296206908301423/1154739432109391912/SPDPLSeiten.png)";
+            $(".container")[0].style.backgroundSize = "cover";
+            $("#trackSel")[0].style.backgroundImage = "url(https://cdn.discordapp.com/attachments/1131296206908301423/1154739431631233115/SPDPLUnten.png)";
+            $("#trackSel")[0].style.backgroundSize = "cover";
+            $("#timeTracker")[0].style.backgroundImage = "url(https://cdn.discordapp.com/attachments/1131296206908301423/1154739431631233115/SPDPLUnten.png)";
+            $("#timeTracker")[0].style.backgroundSize = "cover";
 	        campaignTrail_temp.questions_json[9]=extraQuestions[2];
 	        coalitions.forEach(coalition => {
           if (coalition.id === 12) {
@@ -1903,6 +1916,18 @@ if (campaignTrail_temp.question_number === 27) {
 	   }
 	   else if((leftist - moderate) > 1){
 	        campaignTrail_temp.questions_json[9]=extraQuestions[1];
+	        $("#game_window")[0].style.backgroundImage = "url(https://cdn.discordapp.com/attachments/1131296206908301423/1154739811756810281/SPD_Netzwerk_Unten.png)";
+            $("#game_window")[0].style.backgroundSize = "cover";
+            $(".game_header")[0].style.backgroundImage = "url(https://cdn.discordapp.com/attachments/1131296206908301423/1154739812050423838/SPD_Netzwerk_Oben.png)";
+            $(".game_header")[0].style.backgroundSize = "cover";
+            headerImage = "url(https://cdn.discordapp.com/attachments/1131296206908301423/1154739812050423838/SPD_Netzwerk_Oben.png)";
+            $(".container")[0].style.backgroundImage = "url(https://cdn.discordapp.com/attachments/1131296206908301423/1154739812381769799/SPD_Netzwerk_Seiten.png)";
+            $(".container")[0].style.backgroundSize = "cover";
+            $("#trackSel")[0].style.backgroundImage = "url(https://cdn.discordapp.com/attachments/1131296206908301423/1154739811756810281/SPD_Netzwerk_Unten.png)";
+            $("#trackSel")[0].style.backgroundSize = "cover";
+            $("#timeTracker")[0].style.backgroundImage = "url(https://cdn.discordapp.com/attachments/1131296206908301423/1154739811756810281/SPD_Netzwerk_Unten.png)";
+            $("#timeTracker")[0].style.backgroundSize = "cover";
+
 	        coalitions.forEach(coalition => {
           if (coalition.id === 12) {
             coalition.weight += 0.2;
@@ -6328,10 +6353,14 @@ if(e.displayTooltips){
 
 campaignTrail_temp.global_parameter_json[0].fields.question_count = 35;
 
-$("#game_window")[0].style.backgroundImage = "url(https://media.discordapp.net/attachments/1131296206908301423/1154739811756810281/SPD_Netzwerk_Unten.png)";
+$("#game_window")[0].style.backgroundImage = "url(https://media.discordapp.net/attachments/1131296206908301423/1154739558525718548/SPDSeeheimerUnten.png)";
 $("#game_window")[0].style.backgroundSize = "cover";
-$(".game_header")[0].style.backgroundImage = "url(https://media.discordapp.net/attachments/1131296206908301423/1154739812050423838/SPD_Netzwerk_Oben.png)";
+$(".game_header")[0].style.backgroundImage = "url(https://media.discordapp.net/attachments/1131296206908301423/1154739558806728865/SPDSeeheimerOben.png)";
 $(".game_header")[0].style.backgroundSize = "cover";
-headerImage = "url(https://media.discordapp.net/attachments/1131296206908301423/1154739812050423838/SPD_Netzwerk_Oben.png)";
-$(".container")[0].style.backgroundImage = "url(https://media.discordapp.net/attachments/1131296206908301423/1154739812381769799/SPD_Netzwerk_Seiten.png)";
+headerImage = "url(https://media.discordapp.net/attachments/1131296206908301423/1154739558806728865/SPDSeeheimerOben.png)";
+$(".container")[0].style.backgroundImage = "url(https://media.discordapp.net/attachments/1131296206908301423/1154739559091945492/SPDSeeheimerSeiten.png)";
 $(".container")[0].style.backgroundSize = "cover";
+$("#trackSel")[0].style.backgroundImage = "url(https://media.discordapp.net/attachments/1131296206908301423/1154739558525718548/SPDSeeheimerUnten.png)";
+$("#trackSel")[0].style.backgroundSize = "cover";
+$("#timeTracker")[0].style.backgroundImage = "url(https://media.discordapp.net/attachments/1131296206908301423/1154739558525718548/SPDSeeheimerUnten.png)";
+$("#timeTracker")[0].style.backgroundSize = "cover";
