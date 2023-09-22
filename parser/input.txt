@@ -1,29 +1,343 @@
-Q999:  Early in the campaign, it looked like you were the woman that could beat Laschet and  deliver a new era not just for The Greens, but also Germany. Now, the situation looks a bit more muddled - you’re still strong, but with Scholz surging, all three major candidates seem to have a realistic shot now. What’s your strategy to rise above the pack?
-A1: Despite the SPD catching up, our main opponent in this race is still Laschet and the CDU. I’ll attack him on his gaffes, while emphasizing our moderation - the Greens represent the new center in this country, ready to govern responsibly for every German.
-F1: Laschet is already polling historically bad for the CDU. He’s likely already reached his floor - and just by virtue of your party identity, it might be impossible for you to crack it any further. Instead, Scholz uses your strategy to slowly flank you rhetorically from the left: this could help him consolidate traditionally Social Democratic voters.
-A2: Up until now, I was more focused on Laschet - with Scholz’s newfound strength, it’s time to change horses. By emphasizing our progressive policies and commitment to a change in Germany’s political consensus, I’ll win back the center-left to our cause.
-F2: In and of itself, this doesn’t seem like a bad strategy. That said, due to earlier moderations of yours, this is seen as a politically advantageous pivot, and called out by the media as such. You might recapture some of your base, but be careful you’re not souring on the average voter.
-A3: We’ve held our own in this race for a long time. Now, we just have to get across the finish line! Every vote counts, and with a renewed focus on rallies, media visibility and ad campaigns, we’ll pull ahead of the pack.
-F3: Focusing on turnout helps your numbers without opening yourself up to counterattacks. It remains to be seen though if this will be enough to net you first place, but flooring the gas pedal seems like a solid way to move forward. Maybe the upcoming debates can conclude this tense race.
-A4: Both Scholz and Laschet are old, white men, involved with the GroKo - both stand for the continuation of the status quo. I will heavily lean into my age and gender to present myself as the modern option for change in this country. Only a Green chancellery can reform what needs to be reformed.
-F4: While change does lie in the air, the German voters have proven to look kindly on the safe and steady hand of experienced politicians. You do provide a credible option for young people and minorities - but to win this race, you’ll likely have to expand beyond them. Scholz especially seems more favorable to swing voters.
+Q1:
+A2: I am against a vaccination mandate - in a free society, there is a right to become ill. We have to think about the consequences of untested vaccines. Furthermore, we shouldn’t underestimate alternative medicine, and we should support people’s freedom to choose homeopathic medicine instead.
+F2: There is a tiny fragment of society - the “natural medicine” crowd - that forms a swing voter block between Greens and AfD. After your earlier stance on Covid, SPD and CDU bat no eye to suspect a closeness between the Greens and the <i>Querdenker</i>-movement. Of course, your party immediately rebukes this, but they also sharply criticize you for such a misstep. Tread lightly.
 
-Q999A2 wenn Linke Richtungsfrage
-A2: With Scholz’s newfound strength, we need to hone in on his voter base. By emphasizing our progressive policies and commitment to a change in Germany’s political consensus, I’ll win back the center-left to our cause.
-F2: As people’s trust in the SPD’s genuineness has faltered ever since the Agenda 2010, the Greens have finally positioned themselves as the definitive alternative for the left. Although taken by Scholz’s gravitas, a lot of younger Social Democrats take a second look at your candidacy - don’t let them down in the final stages of this race.
+PACIFIST
+Q22A4 wenn Q12A4 und Q5A3
+A4: We're seeing now that nation building hasn't worked. We need a new foreign policy strategy. We’ve been against this war in Afghanistan from the start - as Europeans, we should be more independent from the Americans and not involve ourselves in imperialist wars.
+F4: Over the course of this campaign, you’ve seemingly tried to resummon the pacifist spirit the Greens were founded in. It starts to pay off with a few Leftists - but both CDU and SPD don’t hesitate to obliterate you over this blatant lie, as well as your “naiveté”. A call from Annalena follows: She just had to can a message from the Russian ambassador. You’re playing a dangerous game, and privately, she suspects it might be better if you lose.
 
-Q999A3 wenn Likeability >14
-A3: We’ve held our own in this race for a long time. Now, we just have to get across the finish line! Every vote counts, and with a renewed focus on rallies, media visibility and ad campaigns, we’ll pull ahead of the pack.
-F3: Focusing on turnout helps your numbers without opening yourself up to counterattacks. Your good favorability numbers pay off, as your rallies become large media events, outnumbering the attendants of your two opponents. Perhaps this wasn’t such a bad idea!
+HAWKISH
+Q22A4 wenn Q5A2
+A4: We're seeing now that nation building hasn't worked. We need a new foreign policy strategy. We’ve been against this war in Afghanistan from the start - as Europeans, we should be more independent from the Americans and not involve ourselves in imperialist wars.
+F4: The Green Party voted for the Afghanistan mission and was even part of the government in 2001. Usually, you’re known to be more hawkish - has Die Linke convinced you? Either way, your statement is promptly attacked from all sides as both unproductive and factually false.
 
-Q999A3 wenn Likeability <6
-A3: We’ve held our own in this race for a long time. Now, we just have to get across the finish line! Every vote counts, and with a renewed focus on rallies, media visibility and ad campaigns, we’ll pull ahead of the pack.
-F3: Your new focus isn’t bad, but as attacks from Laschet, and even a few sideswipes from Scholz’s camp follow, your passivity does little to redefine the race. Instead, the ascendant SPD and a reorganized CDU campaign largely take over the headlines, in what seems to become another duel between the two giants.
+PIVOTS
+Q16A4 wenn 8 von Q2A1, Q5A3, Q5A4, EQ2A1, EQ2A4, Q6A4, Q8A2, Q9A4, Q10A4, Q11A4, EQ3MitteA3, EQ3LinksA3, EQ3RechtsA3, Q13A3, EQ4A1, EQ4A4, Q14A1, EQ5A4, Q15A4
+A4: Of course, we need to do more against climate change. I’m happy that Söder is coming around, but I want to remind people: Bavaria, also an affected state, constantly imports dirty energy.  The reason is that Markus Söder refuses to build up other renewable energies aside from solar. He might be good at talking about climate change, but he lacks believability.
+F4: It’s a bit cynical to attack your political opponent so shortly after a disaster, but stunting Söders perception as a climate activist is important. Pointing to his record makes him antsy, and you end up in a bruising exchange. It’s unclear who really stands to gain…
+(spoiler: its scholz)
 
-Q999A4 wenn Likeability >14
-A4: Both Scholz and Laschet are old, white men, involved with the GroKo - both stand for the continuation of the status quo. I will heavily lean into my age and gender to present myself as the modern option for change in this country. Only a Green chancellery can reform what needs to be reformed.
-F4: With you as a popular figurehead of this new movement, you seem to drive the political discourse forward. While there’s a significant part of the population voting on competence instead of rabble-rousing, your message seems genuinely inspiring in contrast to your drab opponents.
+Q19A1 wenn 10 von Q2A1, Q5A3, Q5A4, EQ2A1, EQ2A4, Q6A4, Q8A2, Q9A4, Q10A4, Q11A4, EQ3MitteA3, EQ3LinksA3, EQ3RechtsA3, Q13A3, EQ4A1, EQ4A4, Q14A1, EQ5A4, Q15A4, EQ6A4, Q17A2, EQ7A1
+A1: With the Social Democrats demotivated as they are, we can set our sights onto Söder. I’m gonna emphasize how on climate action, he is all talk and no bite, as well as showing off our commitment to lead a sensible government.
+F1: Scholz has pretty much been neglected by the media for weeks, while Söder is still quite popular: stunting this sentiment is key to winning this race. Nonetheless, considering the pivots you’ve taken, you’re missing an opportunity to attack him on his biggest weakness: opportunism.
 
-Q999A4 wenn Likeability <6
-A4: Both Scholz and Laschet are old, white men, involved with the GroKo - both stand for the continuation of the status quo. I will heavily lean into my age and gender to present myself as the modern option for change in this country. Only a Green chancellery can reform what needs to be reformed.
-F4: Unfortunately, while many people want change, the gravitas of your opponents wins out. To be blunt, many people just don’t trust you to lead this country, ever since your likeability numbers have dropped into toxicity.
+Q32A1 wenn 12 von Q2A1, Q5A3, Q5A4, EQ2A1, EQ2A4, Q6A4, Q8A2, Q9A4, Q10A4, Q11A4, EQ3MitteA3, EQ3LinksA3, EQ3RechtsA3, Q13A3, EQ4A1, EQ4A4, Q14A1, EQ5A4, Q15A4, EQ6A4, Q17A2, EQ7A1, Q20A4, EQ9A3, EQ9A4, Q22A4
+A1: Markus Söder knows how to score cheap political points. What we need in Germany is moral decency! He sidesteps conflicts, he solves them through the backroom, and does not possess the responsibility to act beyond his own self interests. We need a chancellor with a strong moral compass who isn’t afraid to make politically unpopular decisions.
+F1: The issue is, people still see Söder as authentic in this regard - he claims his positions merely evolve when new information comes along. This quality is one that he seems to share with Merkel, who had her own heel turns over the years. Even worse - Söder points out several discrepancies of your own - delivering a slam dunk that reflects in polling.
+
+STATUS QUO
+Q11A4 wenn Q1A1, Q3A4, EQ2A1, Q9A4, nicht EQ1A4 [Status Quo]
+A4: The system needs some minor adjustments - we can look into gradually raising the amount of money and lessen sanctions. However, we have to be careful that it doesn’t become excessive - people shouldn’t be invited to infinitely put up the heating, because we’re paying for it. They should have incentives to be careful about their energy consumption.
+F4: “Minor adjustments” is quickly becoming what you’re known for. Over the course of this campaign, you have espoused a gradual reformism - this has appeal to centrists, but others, even inside the SPD in this case, advocate for much more change. Already, the narrative of the race has changed in favor of the Social Democrats.
+
+Q19A2 wenn 6 von Q1A1, Q3A4, EQ2A1, Q9A4, Q11A4, Q21A2, EQ3MitteA3, EQ3RechtsA2, Q13A3. [status quo]
+A2:  It’s a good sign for us that the SPD is down in polls - but they’re still a formidable voting block. Their voters should be easiest to win over - let’s target them specifically by emphasizing our socio-economic program and consolidate the center-left around us.
+F2: This would be a prudent choice - if your centrist course hasn’t already refocused your campaign around conservative conservationists, swing voters between Söder and you. In the wake of your pivots, the Social Democrats have revived their leftist-reformist profile - drawing a clear contrast to you. Few of them are receptive towards your advances now.
+
+Q24A1 wenn 6 von Q1A1, Q3A4, EQ2A1, Q9A4, Q11A4, Q21A2, EQ3MitteA3, EQ3RechtsA2, Q13A3. [status quo]
+A1: As vice chancellor of the Grand coalition, Scholz epitomizes continuation. The SPD in government has become tired and drained from ideas for the future. Olaf Scholz wants to prolong the habits of the Merkel Era, to depoliticize politics. The Greens stand for a change in our political culture instead.
+F1: Despite you competing for the same voters, Scholz didn’t expect an attack from you - however, your own policies veer more conservative than several of his. As Söder embodies the Status Quo by default, in a twist of fate, the incumbent Vice Chancellor manages to envelop himself in a mantle of progressivism - the Social Democrats have outmaneuvered you, it seems.
+
+Q24A1 wenn 4 von EQ1A4, Q3A3, Q11A3, Q12A2, EQ3MitteA1, EQ3LinksA1, Q21A1, Q21A3 [change]
+A1: As vice chancellor of the Grand coalition, Scholz epitomizes continuation. The SPD in government has become tired and drained from ideas for the future. Olaf Scholz wants to prolong the habits of the Merkel Era, to depoliticize politics. The Greens stand for a change in our political culture instead.
+F1: Despite you competing for the same voters, Scholz didn’t expect an attack from you - and with your targeted message, he seems like old news in the shadow of you and Söder. The Vice Chancellor disappears into the background, while you and the Bavarian Minister-President debate about the topic of tomorrow - with you getting the best grades from viewers.
+
+Q27A3 wenn 6 von Q1A1, Q3A4, EQ2A1, Q9A4, Q11A4, Q21A2, EQ3MitteA3, EQ3RechtsA2, Q13A3. [Status Quo]
+A3: For the last 16 years, this country has suffered under the failings of the CSU. Markus Söder is emblematic of his party and their governing style. Missing concepts, no answers given; “back to normality“ of past times instead of looking forward. The Greens stand for change and a politics that goes beyond the Status Quo of Seehofer and Scheuer.
+F3: While you do embody a new type of political brand for people, the timid policy proposals and constrained reformism you espoused over the course of this campaign muddles this message. While you are vague and untargeted, Söder points to his real government record, tying the debate with a surprisingly eloquent Scholz.
+
+Q27A3 wenn 4 von EQ1A4, Q3A3, Q10A3, EQ3MitteA1, Q21A1, Q26A1 [change]
+A3:For the last 16 years, this country has suffered under the failings of the CSU. Markus Söder is emblematic of his party and their governing style. Missing concepts, no answers given; “back to normality“ of past times instead of looking forward. The Greens stand for change and a politics that goes beyond the Status Quo of Seehofer and Scheuer.
+F3: If anyone can make this attack, it’s you, with your energetic campaign. Söder rejects your allegations, but as you point out the contradictions between his record and his rhetoric, your pitch for real change resonates. At the end of this ordeal, your strong performance might give you the final surge you need to seal the deal for a Green chancellorship!
+
+Q28A1 wenn 6 von Q1A1, Q3A4, EQ2A1, Q9A4, Q11A4, Q21A2, EQ3MitteA3, EQ3RechtsA2, Q13A3. [Status Quo]
+A1: The CDU/CSU has been in government for 16 years, the SPD for 8. A “back to normality” isn’t a desirable outcome - The Greens are designing politics beyond the Status Quo, we aren’t just administrators of standstill. If you vote for a Green chancellorship, you know things will change: we’ll give our society back its confidence and ability to act.
+F1: Your pitch is muddled by the timid policies you’ve cautiously espoused, and the moderate demeanor you’ve surrounded yourself with. It just doesn’t suit you. Instead, the aggressive tone of Söder and Scholz’ unwavering gravitas dominate the media cycle. People are disappointed by your faltering campaign - and Green cadres wonder if Annalena might’ve been the better choice after all.
+
+Q28A1 wenn 4 von EQ1A4, Q3A3, Q10A3, EQ3MitteA1, Q21A1, Q26A1 [change]
+A1: The CDU/CSU has been in government for 16 years, the SPD for 8. A “back to normality” isn’t a desirable outcome - The Greens are designing politics beyond the Status Quo, we aren’t just administrators of standstill. If you vote for a Green chancellorship, you know things will change: we’ll give our society back its confidence and ability to act.
+F1: An energized, reasonable and confident pitch! You’ve been consistent in your message for change, and people respond decently to your ideas of a new political landscape. As you and Söder duke it out, Scholz, as the candidate of the Status Quo, can’t intervene. Your eloquence and pointedness gets the better of the Bavarian - and you stand victorious, as polls crown you the clear winner of the Triell.
+
+ANTICAP
+Q21 wenn 3 von Q1A4, EQ3LinksA2, EQ5A4, Q20A2
+A2: While we of course disavow any cooperation with the AfD, The Left has failed to quell doubts about their ability to govern. They would have to prove, in a particular way, that they are ready, by embracing NATO and the industrial core of this republic. The political task of our time is not in inciting a revolution, but to renew the foundations of trust.
+F2: With this strong statement, you’re driving a harsher lane than Scholz, effectively silencing Laschet's attacks on you. This is kind of strange, considering you’ve handled openly anticapitalist talking points - you also disappoint many younger voters and left-wingers previously hopeful that you <i>were</i> the revolutionary they’re looking for.
+A3: In our political landscape, we can't keep thinking in binary bloques of Black-Yellow and Red-Green. That political world of the cold war is over, for now. We have to look at different majorities, consisting of three parties – a leftist alliance might be one option for us. If Die Linke proves that they are ready to take responsibility,
+F3: This plays right into Laschet's criticisms of you, and no matter how you spin it, it frightens moderates fearful of the SED successor-party. Die Linke has given you clear signs of sympathy for entering a government under you - if you can convince the SPD to give this country a restart, Germany might be headed into a decade of unwavering leftism.
+A4: This is a historic moment in our society and in our country; we need a restart in Germany’s governmental politics. The FDP is closer to us than many might think: we are both advocating for change. Together, we can drive a hard bargain against the old parties of the Grand Coalition.
+F4: You’ve taken a liking to the “Pasta-connection” of 2019, it seems. Political observers are baffled - how is your economic policy ever to be compatible with the FDP? Lindner is quick to disavow your advances, preferring Söder as a coalition partner. You might need some new friends…
+
+EQ8A4 wenn 3 von Q1A4, EQ3LinksA2, EQ5A4, Q20A2, Q21A3, nicht Q21A2
+A4: We need to immediately strike § 218 and $ 219 - instead, the right to free, simple and accessible abortions has to be guaranteed; state-built hospitals should be required to perform the procedure. Furthermore, with contraceptives ensuring the right for self-determination, they should be fully covered by insurance.
+F4: Apparently, you have abandoned your “pragmatic idealism” for an “unwavering idealism”. Your repeated anticapitalist talking points are popular with the cultural left, but the moderates even inside your own party start to get weary that your positions are untenable in the German political landscape. Söder has already started painting you as a “Red Green”.
+
+
+Q19A3 wenn 4 von Q1A4, EQ3LinksA2, EQ3LinksA1, EQ5A4, EQ8A4, Q5A3, Q12A4
+A3: It looks like Die Linke might struggle to reach the 5%-hurdle. I am clearly the best option for a leftist government - by pressing on this issue, we could keep them out of government and simplify finding a majority. Maybe it’ll even be enough for Green-Red!
+F3: With your unabashed leftism, and Die Linke unable to define itself as a dominant political force, you might knock them out of the Bundestag for good, the first time in twenty years. If you play your cards right and they don’t win a third direct mandate, you could really simplify the creation of a political majority.
+
+NEOLIB
+Q21 wenn 5 von Q3A4, Q5A2, EQ2A2, Q11A4, EQ4A4, EQ4A1, EQ5A1, Q20A4
+A2: While we of course disavow any cooperation with the AfD, I also can not imagine a good working relationship with Die Linke. I want to see an administration that takes responsibility in the world - if we don’t share common ground on foreign policy, there is no basis for a government.
+F2: With this strong statement, you’re driving a harsher lane than Scholz, effectively silencing Laschet's attacks on you. This is certain to gather further points among moderates, for many of whom this question was a hold-up to supporting you. Considering you’ve built on somewhat of a neoliberal policy outlook, The Left doesn’t want to deal with you anyways.
+A3: Equating Die Linke with the far right AfD, as the CDU does, is wildly dangerous. The best path to real change in our government lies in a cooperation of the three leftist parties: such an arrangement has worked in several states already, so I’m certain we can find compromises on contentious topics.
+F3: This plays right into Söders criticisms of you, and no matter how you spin it, it frightens moderates fearful of the SED successor-party. This is particularly baffling to political observants, given how your policy platform differs vastly from their democratic socialism. Maybe this defense can endear you to them?
+A4: This is a historic moment in our society and in our country; we need a restart in Germany’s governmental politics. The FDP is closer to us than many might think: we are both advocating for change. Together, we can drive a hard bargain against the old parties of the Grand Coalition.
+F4: You’ve taken a liking to the “Pasta-connection” of 2019, it seems. The FDP is quite curious about you, and as several young liberal and Green MP’s have already started informal coalition talks, a Jamaica- or Traffic Light coalition lies in the air. Hopefully with you at the helm!
+
+Q19A3 wenn 4 von Q3A4, Q5A2, EQ2A2, Q11A4, EQ4A4, EQ4A1, EQ5A1,
+A3: It looks like Die Linke might struggle to reach the 5%-hurdle. I am clearly the best option for a leftist government - by pressing on this issue, we could keep them out of government and simplify finding a majority. Maybe it’ll even be enough for Green-Red!
+F3: A lot of the core voters of Die Linke are unabashed socialists, and with your neoliberal streak, few are convinced to abandon their political home in your favor. It seems a three-party-coalition is unavoidable, for the first time in German history…
+
+Q28A3 wenn 5 von Q3A4, Q5A2, EQ2A2, Q11A4, EQ4A4, EQ4A1, EQ5A1, Q20A4, Q21A4
+A3: Climate change is a social question. We have a growing inequality in this country that is threatening social peace and our prosperity. We need to change the system and take big corporations to task, with reforms to the debt ceiling and our tax system, as well as concepts to involve low earners in monetary earnings from higher CO²-prices.
+F3: You seem to want to change up your image - but as you are pivoting towards welfare, Scholz unexpectedly starts to tie you into his criticism. The SPD has flanked you from the left over the course of this campaign, and riffing on the theme of “Respect”, it’s him who profits from this area of policy the most. Viewers seem to think he won the Triell.
+
+FRIDAYS FOR FUTURE
+Q3A2 wenn Q1A4, EQ1A2, Q2A4
+A2: We need a livable future for our country. We need the whole arsenal of politics, not just a higher price for Co², to fulfill this gigantic transformatory task of stopping climate change. We have to become completely climate neutral over the next 20 years. If we protect the climate, we're protecting ourselves: and I am running to do just that.
+F2:  In your first pitch, you’re bringing the discussion right back to The Greens core topic: climate change. Is it enough to win? As countless environmental organizations proclaim their loyalty to you, you are the unopposed flagbearer of the climate movement going into the 2020’s. “Germany. Everything is possible”.
+
+Q9A4 wenn EQ1A2 und Q2A4
+A4: No environmental protection will hurt us. After the price for CO2 went into effect at the beginning of the year, gas prices have risen by 6 cents per liter already - we should work within that constraint. The key here is more infrastructure for electrical cars, and the import of renewable energy to fuel them.
+F4: The interviewer is positively surprised by your moderacy, as electrical car infrastructure  is even supported by the CDU/CSU. However, your friends in Fridays For Future warn you: should you keep this up, they are going to run their own lists in selective places. Maybe, if you can triangulate, this stance can still mollify centrists without aggravating the youth too much.
+
+Q16A2 wenn EQ1A2 und Q2A4
+A2: Above all, the rescue of people's lives is most important. Afterwards, these regions have to get help, quickly and unbureaucratically. This catastrophe is not only the reason for climate change, there are different factors at play here - what we need to do is reform our flood protection programs.
+F2: Some are happy about your lack of grandstanding, while others, especially the Fridays For Future movement, are irritated about your dodge. Even Söder comes out with an earlier date for the exit from coal, ironically outflanking you on this issue, as even your allies critically note. You seem to lose credibility on your own area of expertise…
+
+Q16A3 wenn EQ1A2, Q2A4 und 4 von Q1A4, Q3A2, Q4A3, Q6A1, Q9A3, Q13A4, EQ3LinksA1, nicht Q15A1
+A3: The increase of extreme weather events shows that the climate is getting warmer. Everything will get more extreme. Not just in the interest of coming generations, but on our own, we finally need to act on climate change. This is about a fundamental change in our course.
+F3: With vigor, heart and passion, you stand tall as a hopeful for the entire environmentalist movement. Flanked by a competent policy regime that outshines Söder’s tip-toeing, viewers are reminded of the 2018/2019 climate summers and the warnings pertaining to catastrophes like this one. Perhaps you can refocus that spirit to the ballot box?
+
+ANTIKLIMA
+Q9A4 wenn Q6A4, nicht EQ1A2 o. Q2A4, nur eines von Q1A4, Q3A2, Q4A3
+A4: No environmental protection will hurt us. After the price for CO2 went into effect at the beginning of the year, gas prices have risen by 6 cents per liter already - we should work within that constraint. The key here is more infrastructure for electrical cars, and the import of renewable energy to fuel them.
+F4: The interviewer is positively surprised by your moderacy, as electrical car infrastructure  is even supported by the CDU/CSU. Unfortunately, this is the last straw for the youth movements like Friday’s For Future - so called “Climate Lists” pop up in one state after the other, flanking you from the left on the environment and even registering in a few polls. They are sure to be a thorn in your side…
+
+Q16A2 wenn 4 von Q6A2, Q9A4, Q13A3, Q15A1, EQ3RechtsA2, nicht EQ1A2 und Q2A4
+A2: Above all, the rescue of people's lives is most important. Afterwards, these regions have to get help, quickly and unbureaucratically. This catastrophe is not only the reason for climate change, there are different factors at play here - what we need to do is reform our flood protection programs.
+F2: One time after the other, you seem to dodge an opportunity to take a strong stance on the environment. This runs counter to what people want from the Greens - Söder makes hay with the voters, as even he isn’t shying away from pivoting to the climate. Meanwhile, Climate Lists and the Animal Protection Party might flank you from the left, if you keep this up.
+
+Q24A3 wenn 5 von Q6A4, Q9A4, Q13A3, Q15A1, EQ3RechtsA2, Q16A2, Q17A2
+A3: His rhetoric on climate change may be well-meaning, but it’s a diversion from the unambitious program of the SPD. They don’t have concepts like we do talking about the social consequences of climate change and have often been slow on climate policy, particularly with the exit from coal. Scholz’s stance on climate action is dishonest.
+F3: Leftist infighting, a classic - and in the ensuing debate, Scholz gets the best of you.  Through your timid policy stances on climate over the course of this campaign, you just don’t have a lot of ammunition to criticize him. Söder outmaneuvers you easily, and even some ardent leftists have to accept that his policy stances sometimes seem more sensible than yours.
+
+Q27A2 wenn 5 von Q6A4, Q9A4, Q13A3, Q15A1, EQ3RechtsA2, Q16A2, Q17A2
+A2: On climate change, Markus Söder's record is dishonest. His goals might be sensible - but his measures are unsubstantial. He talks about energy transitions, but doesn't force the build-up of renewable energy. He is for nuclear energy, but woe me waste is stored in Bavaria. Tree-hugging and putting up bee hives does not equate to environmentalism - Söders pretensions clash with reality.
+F2: You take the fight directly to Söder - but you are badly prepared, it seems. On one policy after the other, he seems to best and even selectively outflank you with his environmentalism. While the left flank of your party is probably long gone to minor lists, the Bavarian Minister-President comes out of the Triell decisively vindicated and strengthened with moderates of all stripes.
+
+Q28A2 wenn 5 von Q6A4, Q9A4, Q13A3, Q15A1, EQ3RechtsA2, Q16A2, Q17A2
+A2: The situation is serious. We need more engagement with climate change, no politics of hold-up. If we wait any further, it will be expensive - not just environmentally, but also in our wealth and our freedom. The only way forward is ambitious climate action, with renewable energy, a higher price on CO² and technology investments.
+F2: This is the classic answer for a Green, but unfortunately, through the number of pivots you’ve made over the course of this campaign, the message gets muddled. Söder is stoked about this, and takes you to task over many contradictions and moderations you have embarked upon - hypocritical as it may be, he gets to paint you as an opportunist, and the viewers crown him the Triell’s winner after the debate.
+
+CULTURE WAR
+EQ8 wenn 5 von: EQ1A1, Q1A1, Q4A3, EQ2A3, Q6A3, Q7A2, Q8A2, Q9A3, Q10A4, Q14A3, Q14A4, EQ6A1, Q18A1, Q18A3, EQ7A4, Q20A2, Q14altA1, Q14altA2
+A1: While §218 is a settled compromise from our societal discussions, we are for striking the §219a ad ban: women who are deciding on an abortion need unrestricted access to information. We also need to train more doctors and prevent pressure from abortion opponents in front of clinics.
+F1: Cautious, but realistic and solution-oriented. Feminism is one of the core tenets of Green politics, and your answer satisfies most advocates. The uncontroversial nature of this answer keeps the issue out of the limelight - to the chagrin of a few activists, who expected more from you.
+A2: We want to strike $218, 219 and 219a from the books completely. Pregnancy issues are not part of criminal law - abortion is a medical service that has to be managed as part of regular health care. The stigma has to be broken, and the supply of doctors offering abortion has to be increased.
+F2: As you stand tall on social issues, you drag the Culture Wars into this race. The Greens are firmly embedded within the feminist movement, and as a few CSU and AfD politicians start to hit on your course, you get to define yourself as the definitive option for social progressives.
+A3: The current situation is fine as is. Unborn life does have a right to be protected. Furthermore, the ad ban has already been loosened two years ago, to provide better access to information for affected women and legal certainty for doctors and hospitals, if an abortion is necessary.
+F3: This is a gigantic pivot to the Right, making the headline news. After all, the Greens were born from the New Social Movements of the 60’s and 70’s - feminism is a core tenet of Green politics! The entire political spectrum is irritated about this blunder, as the matter of your spat with Annalena about the chancellor candidacy makes the rounds once more.
+A4: We need to immediately strike § 218 and $ 219 - instead, the right to free, simple and accessible abortions has to be guaranteed; state-built hospitals should be required to perform the procedure. Furthermore, with contraceptives ensuring the right for self-determination, they should be fully covered by insurance.
+F4: Another strong answer that fans the flames of a Culture War in Germany. Politicians from the Union and AfD don’t hesitate to criticize you, and despite expectations, societal issues become increasingly salient. That’s good for you and the AfD, standing at opposite sides of this conflict.
+
+
+Q19A4 wenn 4 von: EQ1A1, Q1A1, Q4A3, EQ2A3, Q6A3, Q7A2, Q8A2, Q9A3, Q10A4, Q14A3, Q14A4, EQ6A1, Q18A1, Q18A3, EQ7A4, Q14altA1, Q14altA2
+A4: They might be a bit weaker than they were four years ago, but the amount of votes the AfD is projected to receive is still way too high. It should be every democratic party’s duty to keep the nationalists out of parliament. Let’s show off their misgivings.
+F4: Well, with your steadfast stance on the progressive side of the Culture Wars, the only thing you achieve is even more posturing, while the AfD consolidates its base in opposition to you. That said, supercharging the Far Right as a spoiler against the Union might be cunning… as though it were from Söders very own playbook.
+
+CONSERVATIVE
+EQ8 wenn 5 von Q1A3, Q4A2, Q7A1, EQ2A4, EQ4A1, Q14A1, EQ5A1, EQ6A4, Q18A2, EQ7A2, Q21A2, Q14altA4
+A1: While §218 is a settled compromise from our societal discussions, we are for striking the §219a ad ban: women who are deciding on an abortion need unrestricted access to information. We also need to train more doctors and prevent pressure from abortion opponents in front of clinics.
+F1: People noticed that you took a dubiously conservative turn in your rhetoric after the nomination, with core voters from the Greens like feminists, sexual minorities and antifascists unnerved about their male chancellor candidate. Maybe this can mollify them - but don’t count on it, as even Annalena increasingly shuns the media…
+A2: We want to strike $218, 219 and 219a from the books completely. Pregnancy issues are not part of criminal law - abortion is a medical service that has to be managed as part of regular health care. The stigma has to be broken, and the supply of doctors offering abortion has to be increased.
+F2: People noticed that immediately after your nomination, you took a dubiously conservative turn in your rhetoric, with core voters from the Greens like feminists, sexual minorities and antifascists unnerved. That said, this option proves that you still have some social progressivism left within you - Annalena agrees to talk it over with some of these feminist groups.
+A3: The current situation is fine as is. Unborn life does have a right to be protected. Furthermore, the ad ban has already been loosened two years ago, to provide better access to information for affected women and legal certainty for doctors and hospitals, if an abortion is necessary.
+F3: People noticed that you took a dubiously conservative turn in your rhetoric after the nomination, with core voters from the Greens like feminists, sexual minorities and antifascists wildly unnerved. This statement is now the last straw - as Annalena gives you a call, the internal cadres of the Greens are seemingly couping you from your position. A few days of spatting around follow, as the numbers sink ans sink. You’re eventually booted from the top of the ticket, but not even she can save this wreck.
+A4: We need to immediately strike § 218 and $ 219 - instead, the right to free, simple and accessible abortions has to be guaranteed; state-built hospitals should be required to perform the procedure. Furthermore, with contraceptives ensuring the right for self-determination, they should be fully covered by insurance.
+F4: People noticed that you took an unexpectedly conservative turn in your rhetoric, with core voters from the Greens like feminists, sexual minorities and antifascists unnerved - but, what a twist! On this issue, you’re left of almost every other major party! No one’s really sure what you’re trying to achieve here, except confuse the voters. Expect a deep, dark drop in the polls.
+
+
+Q25A1 wenn EQ2A4 und 10 von Q1A3, Q4A2, Q7A1, EQ2A4, EQ4A1, Q14A1, EQ5A1, EQ6A4, Q18A2, EQ7A2, Q21A2, Q14altA4, EQ8A3, Q21A2
+A1: Okay, hear me out. This campaign needs a wildcard. This whole time, the Greens are always portrayed as “woke” or something. We could really turn some heads if we show that we’re serious about my pivot on refugees, and there’s only one person in our party who could do that: Boris Palmer.
+F1: Robert, that’s, that’s a joke… right? …no? Alright shit, Michael, it’s too late to swap in Baerbock now, just give him the appearance and we’ll try to bury it. What, the media already got wind of it? Oh god… okay, Robert, play it off as “reconciliation” and “talking with everyone”, okay? Those media people will rip you a new one… this truly is “Germany. Everything is possible”.
+
+Q25A1 wenn EQ2A4 und 12 von Q1A3, Q4A2, Q7A1, EQ2A4, EQ4A1, Q14A1, EQ5A1, EQ6A4, Q18A2, EQ7A2, Q21A2, Q14altA4, EQ8A3, Q21A2
+A1: It’s important that all wings of our party stay united and motivated to vote. Let’s campaign with Friedrich Merz to show that I’m taking people like him and his positions seriously - the Greens have a clear profile, and I’m proud to stand with him for our values!
+F5: Merz competently rallies your rural conservative base and excites them for another victory. You show some backbone and confidence to your party. Now, it’s time now to huddle down in your home in Potsdam, and hope that you can accomplish your goal of “Ready, because you are”.
+
+Q31A4 wenn 6 von Q1A3, Q4A2, Q7A1, EQ2A4, EQ4A1, Q14A1, EQ5A1, EQ6A4, Q18A2, EQ7A2, EQ9A4
+A4: They might be a bit weaker than they were four years ago, but the amount of votes the AfD is projected to receive is still way too high. It should be every democratic party’s duty to keep the nationalists out of parliament. Let’s show off their misgivings.
+F4: People were already guessing that with the large rightwards pivots on cultural issues you’ve made over the last few months, you were trying to fish in rightwards waters. Surprisingly, a small chunk of voters for whom “Climate Protection is Homeland protection” is receptive to that take. Apart from them though, you’ve almost certainly lost big parts of your traditional base to the SPD, the Left and the Animal Protection Party.
+
+PATIENCE CYOA
+Q7 wenn Patience <10
+A1: This was a decision we made together, Annalena and I agreed that I would be the more electable candidate. Besides, it’s kinda sexist on its own to say that she should have gotten the nomination just because she’s a woman.
+F1: You’re not helping yourself with these kinds of comments. Annalena is popular in the party, and the chatter about the gender question doesn’t stop: this might undercut the enthusiasm from some female voters. Not just that - recently, you’ve seemingly been a bit antsy and nervous. Is everything alright, Robert?
+A2: I recognize that we have a problem with not enough women being in the highest positions of power. That’s why I promise that as chancellor, half of my cabinet will consist of women, and we will look at extensive measures to advance the equality of all genders in Germany.
+F2: You sidestep addressing the allegations directly, instead answering with a strong policy promise. Your base is soothed and you do regain credibility with feminists, but it seems a tad cheeky for some middle-of-the-road voters. No matter, you stand by your opinion.
+A3: Annalena and I are co-party leaders and she will play a crucial part in this campaign. I want to campaign more frequently on her side, with her being our main voice on foreign policy and similar matters.
+F3: Annalena is happy to cooperate, and your base is happy at seeing the ‘dynamic duo’ in action, quelling any dissent from her fans. However, there is significant concern why a chancellor candidate is already delegating matters of policy, on such a crucial topic nonetheless - are you really up to task for the top job in Germany?
+A4: It’s important that we stay united as a party if we want to win this election, and we can’t keep lingering on questions of personalities, as the Union so often does. Annalena Baerbock and I agreed that I should be the candidate, but she will of course have a bright political future in this country, for example with a prominent spot in my cabinet.
+F4: This comes across as somewhat defensive, but it does the trick. Your party agrees that winning this election is more important than petty squabbling - meanwhile Annalena would be stoked to take over the Foreign Ministry or the Ministry of the Environment, although she seems a bit sulky.
+
+Q17 wenn Patience >15
+A1: This was a decision we made together, Annalena and I agreed that I would be the more electable candidate. Besides, it’s kinda sexist on its own to say that she should have gotten the nomination just because she’s a woman.
+F1: Maybe some centrists will like this, but your party is unnerved. Annalena isn’t satisfied, and the chatter about the gender question doesn’t stop. This might undercut the enthusiasm from some female voters, seeing as how after 16 years of Angela Merkel, the chancellor will almost certainly be succeeded by a man.
+A2: I recognize that we have a problem with not enough women being in the highest positions of power. That’s why I promise that as chancellor, half of my cabinet will consist of women, and we will look at extensive measures to advance the equality of all genders in Germany.
+F2: You sidestep addressing the allegations directly, instead elegantly pivoting to your policies. Any criticism from your ranks ceases, as the Media praises the unified nomination process of your party in contrast to the Union.
+A3: Annalena and I are co-party leaders and she will play a crucial part in this campaign. I want to campaign more frequently on her side, with her being our main voice on foreign policy and similar matters.
+F3: Annalena is happy to cooperate, and your base is happy at seeing the ‘dynamic duo’ in action, quelling any dissent from her fans. There are a few doubters who wonder how appropriate it is that a chancellor candidate is already delegating matters of policy, but overall, the matter disappears from the headlines.
+A4: It’s important that we stay united as a party if we want to win this election, and we can’t keep lingering on questions of personalities, as the Union so often does. Annalena Baerbock and I agreed that I should be the candidate, but she will of course have a bright political future in this country, for example with a prominent spot in my cabinet.
+F4: This comes across as somewhat defensive, but it does the trick. Your party agrees that winning this election is more important than petty squabbling - meanwhile Annalena would be stoked to take over the Foreign Ministry or the Ministry of the Environment.
+
+Q8A2 wenn Patience <10
+A2: What I really meant to say was, that it’s unhealthy for Bavaria to be governed by the CSU alone and how Thuringia is under attack from antidemocratic forces on the right. It’s disgusting how certain political actors are now using my personal decisions to further their political aims.
+F2: Look, you might have a point, but your pivot to attacks seems a bit petty and desperate. It immediately peaks the interest of Markus Söder, who hits on your comments about his CSU in at the next opportunity, to raucous applause by his base. There are concerns about how touchy you are recently - maybe take a small step back.
+
+Q10A2 wenn Patience <5
+A2: When I was minister in Schleswig-Holstein, I talked with everyone, even with people who would never vote Green. We should listen more, what stories are there in our society, what kind of experiences move the people? That’s where we have to connect.
+F2: Your authentic attempts at campaigning mean well, but at several points, you’re met with skeptics - be it antivax activists, right-wing trolls or even a few hardline environmentalists. The media notes that even though you’re eager to engage, these encounters tear at your patience. They really are grasping at straws these days… but that’s how it goes.
+
+Q10A2 wenn Patience <10
+A2: When I was minister in Schleswig-Holstein, I talked with everyone, even with people who would never vote Green. We should listen more, what stories are there in our society, what kind of experiences move the people? That’s where we have to connect.
+F2: Your authentic approach wins you the hearts of many people you talk to. A few aren’t convinced, they tell you openly - but at least, you’ve tried. While you’re engaging in some hefty arguments here and there, showing genuine interest intrigues a few people outside the usual Green social circles.
+
+Q10A2 wenn Patience >15
+A2: When I was minister in Schleswig-Holstein, I talked with everyone, even with people who would never vote Green. We should listen more, what stories are there in our society, what kind of experiences move the people? That’s where we have to connect.
+F2: Your authentic approach wins you the hearts of many people you talk to. Of course, you can only connect with a small number of voters personally - but this approachable and sympathetic style becomes a trademark of your political brand. In some corners, you’re almost treated like a folk hero - Söder must be seething at your grinning face.
+
+EQ3MitteA2 wenn Patience <6
+A2: I think the people are tired of politics-as-usual, especially after 16 years of Merkel. I will run on an optimistic take - “Germany can do so much more”. Let’s stand by our stances and campaign on the issues without getting intimidated - ignore the mudslinging, and trust in our sympathy levels.
+F2: Germans certainly haven’t been too keen on egregious mudslinging in the past. Your principled stance gains some early praise - but for some, you seem a bit tone-deaf. As issues about your social media usage and a few minor matters come up, you’re thoroughly brought through the wringer, regardless of your optimism…
+
+EQ3MitteA2 wenn Patience >14
+A2: I think the people are tired of politics-as-usual, especially after 16 years of Merkel. I will run on an optimistic take - “Germany can do so much more”. Let’s stand by our stances and campaign on the issues without getting intimidated - ignore the mudslinging, and trust in our sympathy levels.
+F2: Germans certainly haven’t been too keen on egregious mudslinging in the past. Your principled stance gains noticeable praise - as Söder puts on the velvet gloves in hopes of a Black-Green coalition  and Scholz is reserved as always, the public is hopeful about a clean, issue-focused campaign. This is good for turnout.
+
+
+Q14 wenn Patience >15
+A1: I know it’s kinda harsh, but I’m gonna talk to Annalena about this - she can’t drag this campaign down with these issues. For the rest of the campaign, I hope she’ll take a step back into the background.
+F1: She sees herself as the victim of unfair attacks, and is deflated that you’d go along with this. She retreats from the frontlines after you put your foot down, and even though she herself might be offended, your party stands fully behind you. The matter mostly disappears from the headlines.
+A2: Annalena Baerbock has already admitted that these were mistakes, and of course they were regrettable. However, now that everything is in order, we shouldn’t be distracted from more important topics. We need to talk about the policies!
+F2: Even some yellow-journalists have to admit, this matter is grasping at straws. Söder doesn’t touch the matter with a 5ft stick, Scholz even outright defends her - the campaign goes on without any fuss.
+A3: These allegations are unfair and part of a right-wing smear campaign against the Green Party in general. I will fight back and defend Annalena whenever I’m asked about this.
+F3: Annalena is grateful that you’re sticking up for her, as the party unifies around you. Feminists are happy that you’re standing up for her, energizing the base - just be wary, people don’t want to see an extended spat developing.
+A4: The CDU/CSU was involved in a massive scandal with many of their MPs selling overpriced medical masks. Scholz of the SPD oversaw the disastrous Wirecard collapse and was involved in corrupt cum-ex banking deals. Compared to that, Baerbock’s missteps are insignificant.
+F4: You have a point, as several journalists admit, but this aggressive approach leads to plenty of accusations being thrown around all sides, dragging down your favorability numbers a tad as well. Populists on both sides of the aisle salivate at the mudslinging.
+
+Q14 wenn Patience <10
+A1: I know it’s kinda harsh, but I’m gonna talk to Annalena about this - she can’t drag this campaign down with these issues. For the rest of the campaign, I hope she’ll take a step back into the background.
+F1: For better or for worse, the public notices her disappearance from the trail. Annalena is distraught that you’re not lifting one finger to defend her, and the women in the party seem concerned. For the next few weeks, the mood at most party meetings is very subdued.
+A2: Annalena Baerbock has already admitted that these were mistakes, and of course they were regrettable. However, now that everything is in order, we shouldn’t be distracted from more important topics. We need to talk about the policies!
+F2: Since she is not the chancellor candidate, her problems fail to dominate the front pages for too long. Although your party’s momentum is still stunted a bit, the campaign mostly moves on.
+A3: These allegations are unfair and part of a right-wing smear campaign against the Green Party in general. I will fight back and defend Annalena whenever I’m asked about this.
+F3: Annalena is grateful that you’re sticking up for her, as the party unifies around her. However, the repeated back-and-forth focusses the news cycle on her story for a while, taking away the spotlight from your own successes. Your numbers see a noticeable drop, unfortunately.
+A4: The CDU/CSU was involved in a massive scandal with many of their MPs selling overpriced medical masks. Scholz of the SPD oversaw the disastrous Wirecard collapse and was involved in corrupt cum-ex banking deals. Compared to that, Baerbock’s missteps are insignificant.
+F4: It’s true that Annalena’s scandals are much less serious than the ones you mentioned, but this aggressive approach leads to several accusations being thrown around, dragging down everyone’s favorability numbers. Populists on both sides of the aisle salivate at the mudslinging.
+
+Q14 wenn Patience <5
+A1: I know it’s kinda harsh, but I’m gonna talk to Annalena about this - she can’t drag this campaign down with these issues. For the rest of the campaign, I hope she’ll take a step back into the background.
+F1: While at first she retreats from the frontlines, she can’t help but publicly defend herself in an interview. The matter does not go away - and as your attempts at keeping her silent leak to the press, your party gets deflated. Criticism from all sides follows - conservatives won’t let her scandals go, while progressives are outraged about your refusal to stand up for your collegue.
+A2: Annalena Baerbock has already admitted that these were mistakes, and of course they were regrettable. However, now that everything is in order, we shouldn’t be distracted from more important topics. We need to talk about the policies!
+F2: Since she is not the chancellor candidate, her problems fail to dominate the front pages for too long. Although your party’s momentum is still stunted a bit, the campaign mostly moves on.
+A3: These allegations are unfair and part of a right-wing smear campaign against the Green Party in general. I will fight back and defend Annalena whenever I’m asked about this.
+F3: Annalena is grateful that you’re sticking up for her, as the party unifies around her. That said, Söder smells weakness - he doesn’t let up in his attacks, tying her failure to report extraparliamentary earnings to a wider trend in the Greens. Is it all hogwash? Maybe. Does it work? Unfortunately, yes.
+A4: The CDU/CSU was involved in a massive scandal with many of their MPs selling overpriced medical masks. Scholz of the SPD oversaw the disastrous Wirecard collapse and was involved in corrupt cum-ex banking deals. Compared to that, Baerbock’s missteps are insignificant.
+F4: It’s true that Annalena’s scandals are much less serious than the ones you mentioned, but your outburst just fans the flames even more. Some people go as far as to claim you have a bad temper. Your likeability drops aside her’s, even though your opponents catch flak as well.
+
+Q14alt wenn Likeability <5
+A1: So what? Patriotism is a dead concept of the 20th century. We do not have use for it nowadays. We need to think internationally, and finally throw off the shackles of nationalism in Germany, especially in light of what the AfD is saying these days.
+F1: Why are you throwing oil on this fire? Your comments were taken out of context from a book where you explicitly <i>espoused</i> a leftist patriotism! You’re accused of not even knowing your own literature, while the right-wing rumor mill starts to extend into the mainstream - expect a significant drop in the polls.
+A2: This passage is from a book about “leftist patriotism” I wrote eleven years ago, and every serious politician knows that it’s abhorrently taken out of context. I don’t want to throw this comment back into the spotlight, let them say whatever they want.
+F2: Unfortunately, while serious journalists refrain from picking the matter up, the yellow press is not as forgiving. Their readership, mostly center-right to right-wing, proclaims you another symbol of elitism - and it’s not long until it’s picked up at pubs and village festivals.
+A3: I apologize, these sentences are definitely misleading as to my real position. Today, I wouldn’t write it like that.
+F3: It’s a bit bleeding heart to apologize for an out-of-context quote from 11 years ago, and your opponents continue using it as a line of attack. The right-wing fearmonger machine doesn’t stop churning, and you seem overwhelmed by their assassinations of your character.
+A4: These comments are taken wildly out of context, as anyone would see when looking at the actual passage. I have since come to see how we need to adopt a “leftist patriotism”, to positively relate to our society. Flag and anthem are not courtesy of the right wing populists, leftist parties also have to care about a sense of unity and home.
+F4: You really double down on clarifying this quote it seems. Your push for a new, liberal-progressive type of patriotism seems a bit eccentric, although the broader public seems satisfied with your answer. Of course, the yellow press doesn’t stop pushing out lies, but that’s nothing a few libel suits can’t fix.
+
+Q14alt wenn Likeability <10
+A1: So what? Patriotism is a dead concept of the 20th century. We do not have use for it nowadays. We need to think internationally, and finally throw off the shackles of nationalism in Germany, especially in light of what the AfD is saying these days.
+F1: Why are you throwing oil on this fire? Your comments were taken out of context from a book where you explicitly <i>espoused</i> a leftist patriotism! You’re accused of not even knowing your own literature, while the right-wing rumor mill starts to extend into the mainstream - expect a significant drop in the polls.
+A2: This passage is from a book about “leftist patriotism” I wrote eleven years ago, and every serious politician knows that it’s abhorrently taken out of context. I don’t want to throw this comment back into the spotlight, let them say whatever they want.
+F2: While most serious journalists don’t touch the matter with a 5m stick, the yellow press keeps alluding to the scandals here and there, as do several politicians. With low-propensity voters, this could hurt your reputation…
+A3: I apologize, these sentences are definitely misleading as to my real position. Today, I wouldn’t write it like that.
+F3: It’s a bit bleeding heart to apologize for an out-of-context quote from 11 years ago, and your opponents continue using it as a line of attack. Furthermore, boulevard journalists keep pressing… their insistence grinds your gears.
+A4: These comments are taken wildly out of context, as anyone would see when looking at the actual passage. I have since come to see how we need to adopt a “leftist patriotism”, to positively relate to our society. Flag and anthem are not courtesy of the right wing populists, leftist parties also have to care about a sense of unity and home.
+F4: You really double down on clarifying this quote it seems. Your push for a new, liberal-progressive type of patriotism seems a bit eccentric, although the broader public seems satisfied with your answer. The attacks mostly cease, and the campaign moves on.
+
+Q14alt wenn Likeability >15
+A1: So what? Patriotism is a dead concept of the 20th century. We do not have use for it nowadays. We need to think internationally, and finally throw off the shackles of nationalism in Germany, especially in light of what the AfD is saying these days.
+F1: It might not be a prudent idea to play into the cards of these critics… your original comments were taken out of context from a book, where you explicitly <i>espoused</i> a new form of patriotism. That said, such a pivot isn’t unheard of from the cultural left, and the progressive firewall might stave off the worst attacks…
+A2: This passage is from a book about “leftist patriotism” I wrote eleven years ago, and every serious politician knows that it’s abhorrently taken out of context. I don’t want to throw this comment back into the spotlight, let them say whatever they want.
+F2: Most journalists know this quote doesn’t amount to anything and stay clear. As several politicians continue to use it despite its misleading nature, a few op-eds come to your defense, embarrassing your opposition. Still, be wary that you don’t lose control of the narrative…
+A3: I apologize, these sentences are definitely misleading as to my real position. Today, I wouldn’t write it like that.
+F3: A few journalists are irritated why you’d hand waive the matter like that. You know these quotes are taken out of context, so why are you dodging the topic? In the end, few talk about the matter, but some believe you’ve missed an opportunity.
+A4: These comments are taken wildly out of context, as anyone would see when looking at the actual passage. I have since come to see how we need to adopt a “leftist patriotism”, to positively relate to our society. Flag and anthem are not courtesy of the right wing populists, leftist parties also have to care about a sense of unity and home.
+F4: A brilliant counter to a hogwash matter. Your push for a new, liberal-progressive type of patriotism gets renewed attention and is quite well received in the center of German society. You elegantly twisted the matter around, as Söder is forced to take his attack dogs on a leash, while your reinterpretation of Green ideology carefully proliferates.
+
+Q15A2 wenn Patience <10
+A2: This is absolutely horrible. I will travel to some of the affected regions, yes. However, I don’t want to abuse this situation for press coverage, I want to show restraint and talk in a more intimate setting to the affected.
+F2: Your lowdown talks with the locals make you tear up and stumble around, frustrated - unfortunately, a paparazzo gets a shot, and certain press outlets immediately start to question your emotionality. Söder is quite a bit more bombastic in contrast - he gets the entire press corps to photograph him in rubber boots, dominating the headlines.
+
+Q15A4 wenn Patience <5
+A4: Of course, I want to travel there, talk to affected people and show myself as a man of action. We need to listen to the people and help out with the cleanup - when disaster strikes, a chancellor should be there for the people.
+F4: While the pictures in and of themselves are good - many question the appropriateness of such political grandstanding in the wake of this disaster. Your poll numbers nationally and the affected regions drop - while for some reason, Söder gets away with doing the same thing. You don’t know what his recipe is, but your attempts of emulation fall frustratingly flat. Damn it…
+(patience -6)
+
+Q15A4 wenn Patience <10
+A4: Of course, I want to travel there, talk to affected people and show myself as a man of action. We need to listen to the people and help out with the cleanup - when disaster strikes, a chancellor should be there for the people.
+F4: Your frontal push for the media narrative clashes with Söder’s attempts to keep the attention on him. During the course of this <i>Schwanzvergleich</i>, people are starting to get tired of the machismo - much more stately and appropriate seems Olaf Scholz, sidelined up until now. His visit to NRW gets a lot of favorable coverage, as people seem to take a second look at the SPD…
+(patience -5)
+
+Q15A4 wenn Patience >15
+A4: Of course, I want to travel there, talk to affected people and show myself as a man of action. We need to listen to the people and help out with the cleanup - when disaster strikes, a chancellor should be there for the people.
+F4: You have a good way with people and your folksy nature and stormproof northern accent play right into your reputation of a “Macher”. Söder is annoyed at being outshone. Your emulation of his machismo pays dues with the average German - triangulating between caring father and political strongman might crack open a whole new base of supporters.
+
+EQ6A2 wenn Patience <5
+A2: We need to resolve this quickly. Let’s invest some resources for a re-vote, to get Jeanne Dillschneider the top spot.
+F2: You personally travel to the Saarland in support of Dillschneider. Unfortunately, the re-vote doesn’t change the result. In a confusing matter, the Electoral Commission rejects the list - not only are the Greens now missing on the Saarland ballot, but the matter gets some national attention, sowing doubts on your political capital. Drat…
+
+A3: There are certainly more pressing matters than some power plays in the small Saarland. Let them deal with it on their own, I want to concentrate on the national campaign.
+F3: The Green Party of the Saarland holds a re-vote, excluding several delegates from Ulrichs district Saarlouis, so Dillschneider wins. Unfortunately, the electoral commission rules this procedure undemocratic and rejects their list - not only are the Greens now missing on the Saarland ballot, but negative headlines about your party follow. Verdammt nochmal…
+
+EQ6A2 wenn Patience >15
+A1: We need to resolve this quickly. Let’s invest some resources for a re-vote, to get Jeanne Dillschneider the top spot.
+F1: You personally travel to the Saarland in support of Dillschneider. It takes some convincing to the delegates from Ulrich’s district Saarlouis, but in the end, a list with her at the top is approved after all. While you’ve wasted two days of campaigning, the unity of your party and a showcase of your diplomatic skills makes for some fleeting positive remarks in the public.
+
+A2: We need to resolve this quickly. Let’s invest some resources for a re-vote, to get Jeanne Dillschneider the top spot.
+F2: You personally travel to the Saarland in support of Dillschneider. It takes some convincing to the delegates from Ulrich’s district Saarlouis, but in a narrow vote, a list with her at the top is approved and sent to the electoral commission. This whole ordeal took valuable time from your calendar, but you might have averted a crisis here.
+(Greens on the ballot!)
+
+Q1:Well, good riddance. In the end, Annalena’s network was stronger than yours - as the calls for her to become the candidate grow louder and louder, you have no choice but to step aside. Maybe it’s for the best, as the media reacts positively to the announcement. This is the most painful moment of your career - how do you plan to act in the coming months?
+
+A1: If the party rejects me this candidly, I have no mandate to lead it. After giving Annalena my most earnest congratulations and making a strong pitch for her campaign, I am going to resign and go back to writing in my home. I miss my wife, I miss the boys - I think politics just might not be for me.
+F1: Well, nobody stops you, but why? This comes out of the blue for everyone. You seem like a <i>beleidigte Leberwurst</i> after such a minor defeat. You ignore the ensuing press chaos, as Annalena needs to deal with a major crisis, in which your old post gets inherited by Omid Nouripour at the next convention. It doesn’t concern you anymore - time to write another children’s book. “Ready, because you are”.
+
+A2: Well, I know Annalena’s just as much a capable candidate. No matter - what counts is a Green chancellorship. I will do everything I can to ensure that Annalena becomes chancellor. That said, I don’t want to outshine her - let me embark on The Campaign Trail along the North Sea coast, while she will be the center of attention.
+F2: Despite the rumors, the dynamic duo shows itself united over the course of the campaign. The media applauds the party unity of The Greens in contrast to the chaotic CDU. Nonetheless, as Annalena gets into trouble, a few demand you to take over the campaign. You waive them away, but her polling numbers falter. Hopefully, enough voters are still “Ready, because you are”.
+
+A3: That’s just how it goes in politics. I don’t want to squander this opportunity - we have, at this unique point in time, the chance to enact real change. As Annalena will try to win the chancellery, I am going to support her in every way I can. I’m going to embark on my own speaking tours, in order to brush up the image of our party towards the voters we need to win.
+F3: Do you not trust your co-party leader? People seem to think you’re running your own campaign for chancellor. The party does not like you outshining their candidate - and in fact, the ensuing “Habeck-envy” among your newest fans seems to hurt Annalena more than it helps her. Bitter, she tries to visibly match your energy: She’s “Ready, because you are”.
+
+A4: Okay, I will be graceful about this. Instead of making any fuzz that could hurt our chances, I’m going to take a backseat. Of course, I will only have the best words available for Annalena, but I’m going to offer to take care of party-internal matters, first and foremost. My role will be as co-party leader, not as a backup candidate or anything.
+F4: Annalena would rather have you on the trail for her campaign: “Ready, because you are”, but as she listens to a few advisors about the way you conducted yourself towards her, she quickly accepts. You are sidelined for the rest of the campaign, and while some sympathize with your candor, if you don’t get a cabinet spot, your career is sure to be over. At least you manage an intra-party dispute in the Saarland.
+
+
+Habeck lässt Baerbock den Vortritt
+
+Q1:What makes a man strong is to step back from his privilege and let other perspectives be heard, for the good of the country. You’ve proven yourself a strong man, Robert. As you hand her the candidacy, the press corps gives a good reception to Annalena’s announcement speech, where you got to introduce her. Now, the only question remains - what’s going to happen over the next few months?
+
+A1: Truth to be told, I let her have the candidacy because I plan to quit politics. After giving Annalena my most earnest congratulations and making a strong pitch for her campaign, I am going to resign and go back to writing in my home. I miss my wife, I miss the boys - I think politics just might not be for me.
+F1: A somber farewell. This comes out of the blue for everyone. The rumours start going as to why you’re resigning, but you ignore the ensuing press chaos. Your old post gets inherited by Omid Nouripour at the next convention, but your absence in Annalena’s campaign is noted. It doesn’t concern you anymore - time to write another children’s book. “Ready, because you are”.
+
+A2: Well, I know Annalena’s just as much of a capable candidate. No matter - what counts is a Green chancellorship. I will do everything I can to ensure that Annalena becomes chancellor. That said, I don’t want to outshine her - let me embark on The Campaign Trail along the North Sea coast, while she will be the center of attention.
+F2: The dynamic duo shows itself united over the course of the campaign. The media applauds the party unity of The Greens in contrast to the chaotic CDU. Nonetheless, as Annalena gets into trouble, a few demand you to take over the campaign. You waive them away, but her polling numbers falter. Hopefully, enough voters are still “Ready, because you are”.
+
+A3: That’s just how it goes in politics. I don’t want to squander this opportunity - we have, at this unique point in time, the chance to enact real change. As Annalena will try to win the chancellery, I am going to support her in every way I can. I’m going to embark on my own speaking tours, in order to brush up the image of our party towards the voters we need to win.
+F3: Do you not trust your co-party leader? Despite your united rollout, you keep the attention on yourself, rather than Annelena. The party does not like you outshining their candidate - and in fact, the ensuing “Habeck-envy” among your newest fans seems to hurt Annalena more than it helps her. She takes it as a challenge to become more visible: “Ready, because you are”.
+
+A4: Okay, I will be graceful about this. Instead of making any fuzz that could hurt our chances, I’m going to take a backseat. Of course, I will only have the best words available for Annalena, but I’m going to offer to take care of party-internal matters, first and foremost. My role will be as co-party leader, not as a backup candidate or anything.
+F4: Annalena would rather have you on the trail for her campaign, but as she’s grateful for your humbleness, she grants you this wish. You manage to competently unite the campaign, manage a list-dispute in the Saarland and keep out of the headlines - sure to gain a cabinet spot, if Annalena wins. <i>If</i> she wins. She’s certainly “Ready, because you are”.

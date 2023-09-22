@@ -1264,16 +1264,15 @@ function paginateContent() {
             }
 
             .radio-option:hover label {
-                  text-shadow:
-                    0px 0px 1px #000
+                font-size: .927em;
+                font-weight: 700;
+                margin-bottom: .1em
             }
 
             #question_form label:hover {
-            font-size: inherit !important;
-            font-weight: inherit !important;
-            margin-bottom: inherit !important;
-              text-shadow:
-                0px 0px 1px #000
+                font-size: .927em;
+                font-weight: 700;
+                margin-bottom: .1em
             }
 
             .radio-option label {
