@@ -110,6 +110,7 @@ if (!element) {
             // Get the audio element
             var audio = document.getElementById("campaigntrailmusic");
             timeTracker = document.createElement("div");
+            timeTracker.id ='timeTracker'
             timeTracker.style = `
       text-align:left;
       border-style:solid;

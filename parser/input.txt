@@ -1,54 +1,9 @@
-Q1:
-A2: I am against a vaccination mandate - in a free society, there is a right to become ill. We have to think about the consequences of untested vaccines. Furthermore, we shouldn’t underestimate alternative medicine, and we should support people’s freedom to choose homeopathic medicine instead.
-F2: There is a tiny fragment of society - the “natural medicine” crowd - that forms a swing voter block between Greens and AfD. After your earlier stance on Covid, SPD and CDU bat no eye to suspect a closeness between the Greens and the <i>Querdenker</i>-movement. Of course, your party immediately rebukes this, but they also sharply criticize you for such a misstep. Tread lightly.
-
-PACIFIST
-Q22A4 wenn Q12A4 und Q5A3
-A4: We're seeing now that nation building hasn't worked. We need a new foreign policy strategy. We’ve been against this war in Afghanistan from the start - as Europeans, we should be more independent from the Americans and not involve ourselves in imperialist wars.
-F4: Over the course of this campaign, you’ve seemingly tried to resummon the pacifist spirit the Greens were founded in. It starts to pay off with a few Leftists - but both CDU and SPD don’t hesitate to obliterate you over this blatant lie, as well as your “naiveté”. A call from Annalena follows: She just had to can a message from the Russian ambassador. You’re playing a dangerous game, and privately, she suspects it might be better if you lose.
-
-HAWKISH
-Q22A4 wenn Q5A2
-A4: We're seeing now that nation building hasn't worked. We need a new foreign policy strategy. We’ve been against this war in Afghanistan from the start - as Europeans, we should be more independent from the Americans and not involve ourselves in imperialist wars.
-F4: The Green Party voted for the Afghanistan mission and was even part of the government in 2001. Usually, you’re known to be more hawkish - has Die Linke convinced you? Either way, your statement is promptly attacked from all sides as both unproductive and factually false.
-
-PIVOTS
-Q16A4 wenn 8 von Q2A1, Q5A3, Q5A4, EQ2A1, EQ2A4, Q6A4, Q8A2, Q9A4, Q10A4, Q11A4, EQ3MitteA3, EQ3LinksA3, EQ3RechtsA3, Q13A3, EQ4A1, EQ4A4, Q14A1, EQ5A4, Q15A4
-A4: Of course, we need to do more against climate change. I’m happy that Söder is coming around, but I want to remind people: Bavaria, also an affected state, constantly imports dirty energy.  The reason is that Markus Söder refuses to build up other renewable energies aside from solar. He might be good at talking about climate change, but he lacks believability.
-F4: It’s a bit cynical to attack your political opponent so shortly after a disaster, but stunting Söders perception as a climate activist is important. Pointing to his record makes him antsy, and you end up in a bruising exchange. It’s unclear who really stands to gain…
-(spoiler: its scholz)
-
-Q19A1 wenn 10 von Q2A1, Q5A3, Q5A4, EQ2A1, EQ2A4, Q6A4, Q8A2, Q9A4, Q10A4, Q11A4, EQ3MitteA3, EQ3LinksA3, EQ3RechtsA3, Q13A3, EQ4A1, EQ4A4, Q14A1, EQ5A4, Q15A4, EQ6A4, Q17A2, EQ7A1
-A1: With the Social Democrats demotivated as they are, we can set our sights onto Söder. I’m gonna emphasize how on climate action, he is all talk and no bite, as well as showing off our commitment to lead a sensible government.
-F1: Scholz has pretty much been neglected by the media for weeks, while Söder is still quite popular: stunting this sentiment is key to winning this race. Nonetheless, considering the pivots you’ve taken, you’re missing an opportunity to attack him on his biggest weakness: opportunism.
-
-Q32A1 wenn 12 von Q2A1, Q5A3, Q5A4, EQ2A1, EQ2A4, Q6A4, Q8A2, Q9A4, Q10A4, Q11A4, EQ3MitteA3, EQ3LinksA3, EQ3RechtsA3, Q13A3, EQ4A1, EQ4A4, Q14A1, EQ5A4, Q15A4, EQ6A4, Q17A2, EQ7A1, Q20A4, EQ9A3, EQ9A4, Q22A4
-A1: Markus Söder knows how to score cheap political points. What we need in Germany is moral decency! He sidesteps conflicts, he solves them through the backroom, and does not possess the responsibility to act beyond his own self interests. We need a chancellor with a strong moral compass who isn’t afraid to make politically unpopular decisions.
-F1: The issue is, people still see Söder as authentic in this regard - he claims his positions merely evolve when new information comes along. This quality is one that he seems to share with Merkel, who had her own heel turns over the years. Even worse - Söder points out several discrepancies of your own - delivering a slam dunk that reflects in polling.
-
-STATUS QUO
-Q11A4 wenn Q1A1, Q3A4, EQ2A1, Q9A4, nicht EQ1A4 [Status Quo]
-A4: The system needs some minor adjustments - we can look into gradually raising the amount of money and lessen sanctions. However, we have to be careful that it doesn’t become excessive - people shouldn’t be invited to infinitely put up the heating, because we’re paying for it. They should have incentives to be careful about their energy consumption.
-F4: “Minor adjustments” is quickly becoming what you’re known for. Over the course of this campaign, you have espoused a gradual reformism - this has appeal to centrists, but others, even inside the SPD in this case, advocate for much more change. Already, the narrative of the race has changed in favor of the Social Democrats.
-
-Q19A2 wenn 6 von Q1A1, Q3A4, EQ2A1, Q9A4, Q11A4, Q21A2, EQ3MitteA3, EQ3RechtsA2, Q13A3. [status quo]
-A2:  It’s a good sign for us that the SPD is down in polls - but they’re still a formidable voting block. Their voters should be easiest to win over - let’s target them specifically by emphasizing our socio-economic program and consolidate the center-left around us.
-F2: This would be a prudent choice - if your centrist course hasn’t already refocused your campaign around conservative conservationists, swing voters between Söder and you. In the wake of your pivots, the Social Democrats have revived their leftist-reformist profile - drawing a clear contrast to you. Few of them are receptive towards your advances now.
-
-Q24A1 wenn 6 von Q1A1, Q3A4, EQ2A1, Q9A4, Q11A4, Q21A2, EQ3MitteA3, EQ3RechtsA2, Q13A3. [status quo]
-A1: As vice chancellor of the Grand coalition, Scholz epitomizes continuation. The SPD in government has become tired and drained from ideas for the future. Olaf Scholz wants to prolong the habits of the Merkel Era, to depoliticize politics. The Greens stand for a change in our political culture instead.
-F1: Despite you competing for the same voters, Scholz didn’t expect an attack from you - however, your own policies veer more conservative than several of his. As Söder embodies the Status Quo by default, in a twist of fate, the incumbent Vice Chancellor manages to envelop himself in a mantle of progressivism - the Social Democrats have outmaneuvered you, it seems.
-
-Q24A1 wenn 4 von EQ1A4, Q3A3, Q11A3, Q12A2, EQ3MitteA1, EQ3LinksA1, Q21A1, Q21A3 [change]
-A1: As vice chancellor of the Grand coalition, Scholz epitomizes continuation. The SPD in government has become tired and drained from ideas for the future. Olaf Scholz wants to prolong the habits of the Merkel Era, to depoliticize politics. The Greens stand for a change in our political culture instead.
-F1: Despite you competing for the same voters, Scholz didn’t expect an attack from you - and with your targeted message, he seems like old news in the shadow of you and Söder. The Vice Chancellor disappears into the background, while you and the Bavarian Minister-President debate about the topic of tomorrow - with you getting the best grades from viewers.
-
-Q27A3 wenn 6 von Q1A1, Q3A4, EQ2A1, Q9A4, Q11A4, Q21A2, EQ3MitteA3, EQ3RechtsA2, Q13A3. [Status Quo]
+Q27: A3 wenn 6 von Q1A1, Q3A4, EQ2A1, Q9A4, Q11A4, Q21A2, EQ3MitteA3, EQ3RechtsA2, Q13A3. [Status Quo]
 A3: For the last 16 years, this country has suffered under the failings of the CSU. Markus Söder is emblematic of his party and their governing style. Missing concepts, no answers given; “back to normality“ of past times instead of looking forward. The Greens stand for change and a politics that goes beyond the Status Quo of Seehofer and Scheuer.
 F3: While you do embody a new type of political brand for people, the timid policy proposals and constrained reformism you espoused over the course of this campaign muddles this message. While you are vague and untargeted, Söder points to his real government record, tying the debate with a surprisingly eloquent Scholz.
 
 Q27A3 wenn 4 von EQ1A4, Q3A3, Q10A3, EQ3MitteA1, Q21A1, Q26A1 [change]
-A3:For the last 16 years, this country has suffered under the failings of the CSU. Markus Söder is emblematic of his party and their governing style. Missing concepts, no answers given; “back to normality“ of past times instead of looking forward. The Greens stand for change and a politics that goes beyond the Status Quo of Seehofer and Scheuer.
+A3: For the last 16 years, this country has suffered under the failings of the CSU. Markus Söder is emblematic of his party and their governing style. Missing concepts, no answers given; “back to normality“ of past times instead of looking forward. The Greens stand for change and a politics that goes beyond the Status Quo of Seehofer and Scheuer.
 F3: If anyone can make this attack, it’s you, with your energetic campaign. Söder rejects your allegations, but as you point out the contradictions between his record and his rhetoric, your pitch for real change resonates. At the end of this ordeal, your strong performance might give you the final surge you need to seal the deal for a Green chancellorship!
 
 Q28A1 wenn 6 von Q1A1, Q3A4, EQ2A1, Q9A4, Q11A4, Q21A2, EQ3MitteA3, EQ3RechtsA2, Q13A3. [Status Quo]
@@ -146,7 +101,7 @@ F4: Another strong answer that fans the flames of a Culture War in Germany. Poli
 
 Q19A4 wenn 4 von: EQ1A1, Q1A1, Q4A3, EQ2A3, Q6A3, Q7A2, Q8A2, Q9A3, Q10A4, Q14A3, Q14A4, EQ6A1, Q18A1, Q18A3, EQ7A4, Q14altA1, Q14altA2
 A4: They might be a bit weaker than they were four years ago, but the amount of votes the AfD is projected to receive is still way too high. It should be every democratic party’s duty to keep the nationalists out of parliament. Let’s show off their misgivings.
-F4: Well, with your steadfast stance on the progressive side of the Culture Wars, the only thing you achieve is even more posturing, while the AfD consolidates its base in opposition to you. That said, supercharging the Far Right as a spoiler against the Union might be cunning… as though it were from Söders very own playbook.
+F4: Well, with your steadfast stance on the progressive side of the Culture Wars, the only thing you achieve is even more posturing, while the AfD consolidates its base in opposition to you. That said, supercharging the Far Right as a spoiler against the Union might be cunning… as though it were from Söder’s very own playbook.
 
 CONSERVATIVE
 EQ8 wenn 5 von Q1A3, Q4A2, Q7A1, EQ2A4, EQ4A1, Q14A1, EQ5A1, EQ6A4, Q18A2, EQ7A2, Q21A2, Q14altA4
@@ -311,7 +266,7 @@ A2: We need to resolve this quickly. Let’s invest some resources for a re-vote
 F2: You personally travel to the Saarland in support of Dillschneider. It takes some convincing to the delegates from Ulrich’s district Saarlouis, but in a narrow vote, a list with her at the top is approved and sent to the electoral commission. This whole ordeal took valuable time from your calendar, but you might have averted a crisis here.
 (Greens on the ballot!)
 
-Q1:Well, good riddance. In the end, Annalena’s network was stronger than yours - as the calls for her to become the candidate grow louder and louder, you have no choice but to step aside. Maybe it’s for the best, as the media reacts positively to the announcement. This is the most painful moment of your career - how do you plan to act in the coming months?
+Q1: Well, good riddance. In the end, Annalena’s network was stronger than yours - as the calls for her to become the candidate grow louder and louder, you have no choice but to step aside. Maybe it’s for the best, as the media reacts positively to the announcement. This is the most painful moment of your career - how do you plan to act in the coming months?
 
 A1: If the party rejects me this candidly, I have no mandate to lead it. After giving Annalena my most earnest congratulations and making a strong pitch for her campaign, I am going to resign and go back to writing in my home. I miss my wife, I miss the boys - I think politics just might not be for me.
 F1: Well, nobody stops you, but why? This comes out of the blue for everyone. You seem like a <i>beleidigte Leberwurst</i> after such a minor defeat. You ignore the ensuing press chaos, as Annalena needs to deal with a major crisis, in which your old post gets inherited by Omid Nouripour at the next convention. It doesn’t concern you anymore - time to write another children’s book. “Ready, because you are”.
@@ -328,7 +283,7 @@ F4: Annalena would rather have you on the trail for her campaign: “Ready, beca
 
 Habeck lässt Baerbock den Vortritt
 
-Q1:What makes a man strong is to step back from his privilege and let other perspectives be heard, for the good of the country. You’ve proven yourself a strong man, Robert. As you hand her the candidacy, the press corps gives a good reception to Annalena’s announcement speech, where you got to introduce her. Now, the only question remains - what’s going to happen over the next few months?
+Q1: What makes a man strong is to step back from his privilege and let other perspectives be heard, for the good of the country. You’ve proven yourself a strong man, Robert. As you hand her the candidacy, the press corps gives a good reception to Annalena’s announcement speech, where you got to introduce her. Now, the only question remains - what’s going to happen over the next few months?
 
 A1: Truth to be told, I let her have the candidacy because I plan to quit politics. After giving Annalena my most earnest congratulations and making a strong pitch for her campaign, I am going to resign and go back to writing in my home. I miss my wife, I miss the boys - I think politics just might not be for me.
 F1: A somber farewell. This comes out of the blue for everyone. The rumours start going as to why you’re resigning, but you ignore the ensuing press chaos. Your old post gets inherited by Omid Nouripour at the next convention, but your absence in Annalena’s campaign is noted. It doesn’t concern you anymore - time to write another children’s book. “Ready, because you are”.
@@ -341,3 +296,4 @@ F3: Do you not trust your co-party leader? Despite your united rollout, you keep
 
 A4: Okay, I will be graceful about this. Instead of making any fuzz that could hurt our chances, I’m going to take a backseat. Of course, I will only have the best words available for Annalena, but I’m going to offer to take care of party-internal matters, first and foremost. My role will be as co-party leader, not as a backup candidate or anything.
 F4: Annalena would rather have you on the trail for her campaign, but as she’s grateful for your humbleness, she grants you this wish. You manage to competently unite the campaign, manage a list-dispute in the Saarland and keep out of the headlines - sure to gain a cabinet spot, if Annalena wins. <i>If</i> she wins. She’s certainly “Ready, because you are”.
+

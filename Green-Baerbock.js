@@ -2318,7 +2318,7 @@ cyoAdventure = function(a) {
 
 
         //global and state advisor effect
-        applyDrift(79, -0.001-((4-dismissalsLeft)*0.0002));
+        applyDrift(79, -0.0008-((4-dismissalsLeft)*0.0001));
         if(advisorHabeck.status === 'active'){
             applyDrift(79, 0.002, 3014);
             applyDrift(79, 0.0006);
@@ -2622,12 +2622,12 @@ cyoAdventure = function(a) {
         answerSwapper(4527, 4654, false);
         answerSwapper(4528, 4655, false);
         answerSwapper(4529, 4656, false);
-        changeGlobalEffect(77,4529, -0.03)
+        changeGlobalEffect(79,4529, -0.03)
         changeGlobalEffect(78,4529, 0.03)
         answerSwapper(4530, 4657, false);
         changeGlobalEffect(79,4530, -0.04)
         answerSwapper(4120, 4660, false);
-        changeGlobalEffect(77,4120, -0.09)
+        changeGlobalEffect(79,4120, -0.09)
         changeGlobalEffect(305,4120, -0.01)
         changeGlobalEffect(78,4120, 0.04)
         changeGlobalEffect(304,4120, 0.03)
@@ -2642,8 +2642,6 @@ cyoAdventure = function(a) {
         firedKeys[22] = true;
         answerSwapper(4094, 4659, false);
     }
-
-
 
 
     if (ans === 4024) {

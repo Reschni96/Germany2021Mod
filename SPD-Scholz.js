@@ -1932,7 +1932,7 @@ if (campaignTrail_temp.question_number === 27) {
         if ([4104, 4106, 4107].includes(ans) ) {
             advisorMattheis.unlock();
         }
-        if ([4035, 4036, 4037].includes(ans) ) {
+        if ([4036, 4037].includes(ans) ) {
             advisorSchwesig.unlock();
         }
         if ([4102, 4105, 4024, 4025].includes(ans) ) {
@@ -1994,7 +1994,7 @@ if (campaignTrail_temp.question_number === 27) {
         }
 
         //global and state advisor effect
-        applyDrift(78, -0.001-((4-dismissalsLeft)*0.0002));
+        applyDrift(78, -0.0008-((4-dismissalsLeft)*0.0001));
 
          if(advisorSchmidt.status === 'active'){
             applyDrift(78, 0.0004);
@@ -2003,7 +2003,7 @@ if (campaignTrail_temp.question_number === 27) {
             applyDrift(78, 0.001, 3003);
             }
          if(advisorKlingbeil.status === 'active'){
-            applyDrift(78, 0.0005);
+            applyDrift(78, 0.0006);
             applyDrift(78, 0.001, 3008);
             }
          if(advisorKühnert.status === 'active'){
@@ -4311,22 +4311,22 @@ function openHeadquarter() {
 
     switch(dismissalsDone) {
         case 0:
-            dismissStatus.innerText += "Harmonious campaign";
+            dismissStatus.innerHTML += "Harmonious campaign (Bonus)<br> " + dismissalsLeft + " Advisor changes possible";
             break;
         case 1:
-            dismissStatus.innerText += "United campaign";
+            dismissStatus.innerHTML += "United campaign (Bonus)<br> " + dismissalsLeft + " Advisor changes possible";
             break;
         case 2:
-            dismissStatus.innerText += "Somewhat united campaign";
+            dismissStatus.innerHTML += "Somewhat united campaign (Neutral)<br> " + dismissalsLeft + " Advisor changes possible";
             break;
         case 3:
-            dismissStatus.innerText += "Some discord in the campaign";
+            dismissStatus.innerHTML += "Somewhat disunited campaign (Neutral)<br> " + dismissalsLeft + " Advisor changes possible";
             break;
         case 4:
-            dismissStatus.innerText += "Disunited campaign";
+            dismissStatus.innerHTML += "Disunited campaign (Malus)<br> Warning: no Hiring possible after next dismissal";
             break;
         case 5:
-            dismissStatus.innerText += "Chaotic campaign";
+            dismissStatus.innerHTML += "Chaoticcampaign (Malus)<br> Warning: no Hiring possible";
             break;
         default:
             dismissStatus.innerText += "Campaign status unknown";
