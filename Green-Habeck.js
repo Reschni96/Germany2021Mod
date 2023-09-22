@@ -1731,7 +1731,8 @@ cyoAdventure = function(a) {
 
 
         //global and state advisor effect
-        applyDrift(79, -0.0008-((4-dismissalsLeft)*0.0001));
+let result = applyDrift(79, -0.0008 + (dismissalsLeft >= 4 ? 0.0002 : (dismissalsLeft > 1 ? 0 : -0.0002)));
+
         if(advisorBaerbock.status === 'active'){
             applyDrift(79, 0.001, 3003);
             applyDrift(79, 0.001, 3008);
