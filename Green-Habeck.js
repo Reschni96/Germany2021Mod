@@ -90,6 +90,7 @@ campaignTrail_temp.game_start_logging_id = '3662498';
     var sneaky = false;
     var weightsUpdated = false;
     var resetPage = false;
+    const firedKeys = {};
 
     const likeabilityMap = {
         4500: -2,
@@ -206,6 +207,36 @@ const SPDTarget = {
         4075: 1,
         4077: 1,
         4083: 1,
+    };
+
+var pivot = 0;
+const pivotMap = {
+        4000: 1,
+        4018: 1,
+        4019: 1,
+        4504: 1,
+        4507: 1,
+        4023: 1,
+        4029: 1,
+        4034: 1,
+        4038: 1,
+        4042: 1,
+        4510: 1,
+        4049: 1,
+        4511: 1,
+        4514: 1,
+        4051: 1,
+        4515: 1,
+        4518: 1,
+        4522: 1,
+        4523: 1,
+        4524: 1,
+        4078: 1,
+        4529: 1,
+        4530: 1,
+        4086: 1,
+        4537: 1,
+        4540: 1,
     };
 var statusquo = 0;
 const statusquoMap = {
@@ -1542,7 +1573,7 @@ var polling = [];
 var prepolling = [];
 for (let i = 0; i < 7; i++) {
   polling.push([]);
-  prepolling.push(simulateMA(33,5));
+  prepolling.push(simulateMA(35,5));
 }
 var errorDegree = 1;
 var factorPolls=1;
@@ -1757,6 +1788,9 @@ cyoAdventure = function(a) {
         likeability += likeabilityMap[ans];
         likeability = Math.max(0, likeability);
     }
+    if (pivotMap.hasOwnProperty(ans)) {
+        pivot += pivotMap[ans];
+     }
         if (statusquoMap.hasOwnProperty(ans)) {
         statusquo += statusquoMap[ans];
      }
@@ -1855,6 +1889,46 @@ cyoAdventure = function(a) {
         changeStateEffect(79, 4117, 3013, 0.025);
         changeStateEffect(79, 4117, 3015, 0.025);
     }
+
+    if (ans===4006){
+        answerSwapper(4068, 4600, false);
+        changeGlobalEffect(79, 4068, -0.01);
+    }
+
+    if (campaignTrail_temp.question_number===29 && campaignTrail_temp.player_answers.includes(4018)&& campaignTrail_temp.player_answers.includes(4046)){
+        answerSwapper(4086, 4601, false);
+        changeGlobalEffect(79, 4086, -0.03)
+        changeGlobalEffect(77, 4086, 0.016)
+        changeGlobalEffect(78, 4086, 0.018)
+        changeGlobalEffect(304, 4086, -0.01)
+    }
+    if  (campaignTrail_temp.question_number===29 && campaignTrail_temp.player_answers.includes(4017)){
+        answerSwapper(4086, 4602, false);
+        changeGlobalEffect(79, 4086, -0.02)
+        changeGlobalEffect(77, 4086, 0.008)
+        changeGlobalEffect(78, 4086, 0.012)
+    }
+
+    if(pivot>5 && !firedKeys[1]&& !campaignTrail_temp.player_answers.includes(4062)){
+        firedKeys[1] = true;
+        answerSwapper(4062, 4603, false);
+        changeGlobalEffect(79, 4062, -0.025)
+        changeGlobalEffect(77, 4062, -0.015)
+         changeGlobalEffect(78, 4062, 0.04)
+    }
+    if(pivot>7 && !firedKeys[2]&& !campaignTrail_temp.player_answers.includes(4071)){
+        firedKeys[2] = true;
+        answerSwapper(4071, 4604, false);
+        changeGlobalEffect(79, 4071, -0.02)
+        changeGlobalEffect(77, 4071, 0.02)
+    }
+    if(pivot>8 && !firedKeys[3]&& !campaignTrail_temp.player_answers.includes(4071)){
+        firedKeys[3] = true;
+        answerSwapper(4103, 4605, false);
+        changeGlobalEffect(79, 4103, -0.02)
+        changeGlobalEffect(77, 4103, 0.02)
+    }
+
 
     //coalition weight adjustments here
     if ([4011, 4013, 4042].includes(ans)) {

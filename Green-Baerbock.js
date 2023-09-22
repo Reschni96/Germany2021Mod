@@ -2397,7 +2397,7 @@ cyoAdventure = function(a) {
         HabeckTime=true;
     }
 
-    if  (campaignTrail_temp.question_number===29 && campaignTrail_temp.player_answers.includes(4041)){
+    if  (campaignTrail_temp.question_number===29 && campaignTrail_temp.player_answers.includes(4017)){
         answerSwapper(4085, 4611, false);
         changeGlobalEffect(79, 4085, -0.02)
         changeGlobalEffect(77, 4085, 0.008)
