@@ -156,7 +156,7 @@ F4: You’re quite popular as Minister-President, and it does help to remind peo
 [+0.02, +0.01 in NRW]
 
 EQ7 wenn EQ6A3 bubatz legal
-A2: We want to strike $218, and 219 from the books completely. Pregnancy issues are not part of criminal law - abortion is a medical service that has to be managed as part of regular health care. The stigma has to be broken, and the supply of doctors offering abortion has to be increased.
+A2: We want to strike §218, and 219 from the books completely. Pregnancy issues are not part of criminal law - abortion is a medical service that has to be managed as part of regular health care. The stigma has to be broken, and the supply of doctors offering abortion has to be increased.
 F2: There have been certain CDU politicians advocating against §218 all the way back in the ‘90s, people like Rita Süssmuth. They, however, have been repeatedly repudiated. You publicly have to elaborate your stance as a “third way” and reiterate personal moral objections - but your repeated attempts at moving the party leftwards socially has left many colleagues behind, and they’re not afraid to tell you.
 [-0.005, stärkerer Issuescore, -0.011 für FDP, -0.01 für Grüne, -0.01 in Bayern, -0.005 in Baden-Württemberg, -0.002 in Sachsen, Rheinland-Pfalz und Hessen]
 A4: The right to life does not stand to disposition. The unborn child has a right to live, and we stand vehemently against efforts to trivialize or encourage abortions from the state. Instead, adoption procedures should be simplified - while doctors who do not report abortions have to incur noticeable sanctions.
@@ -164,7 +164,7 @@ F4: Moral issues really weren’t at the forefront of this campaign, but your st
 [-0.002, AfD -0.002, SPD +0.005, schwächere issue scores]
 
 EQ7 wenn EQ6A4 bubatz illegal
-A2: We want to strike $218, and 219 from the books completely. Pregnancy issues are not part of criminal law - abortion is a medical service that has to be managed as part of regular health care. The stigma has to be broken, and the supply of doctors offering abortion has to be increased.
+A2: We want to strike §218, and 219 from the books completely. Pregnancy issues are not part of criminal law - abortion is a medical service that has to be managed as part of regular health care. The stigma has to be broken, and the supply of doctors offering abortion has to be increased.
 F2: There have been certain CDU politicians advocating against §218 all the way back in the ‘90s, people like Rita Süssmuth. They, however, have been repeatedly repudiated - and the same now happens to you. After you publicly have to elaborate your stance as a “third way” and reiterate personal moral objections, you’re in an awkward spotlight. At least the CSU defends you, avoiding an unwanted intra-party quarrel.
 [-0.005, +0.01 in Bayern, AfD +0.003]
 A4: The right to life does not stand to disposition. The unborn child has a right to live, and we stand vehemently against efforts to trivialize or encourage abortions from the state. Instead, adoption procedures should be simplified - while doctors who do not report abortions have to incur noticeable sanctions.
