@@ -288,7 +288,7 @@ F3: You certainly rally up your base - but as your own reputation on competency 
 STATESMANSHIP
 Statesman >15
 
-Over the course of this campaign, you have stood steadfast, like a rock in the waves, in support of Angela Merkel and her 16 year long chancellorship. You’ve essentially run as Merkel’s successor, but you’ve also carved out an identity for yourself, exuding competency, authenticity and integrity. At the end of this race, several conservative op-eds point you out as the single most capable man to safeguard Germany’s prosperity, and it resonates with swing voters.
+EQ99: Over the course of this campaign, you have stood steadfast, like a rock in the waves, in support of Angela Merkel and her 16 year long chancellorship. You’ve essentially run as Merkel’s successor, but you’ve also carved out an identity for yourself, exuding competency, authenticity and integrity. At the end of this race, several conservative op-eds point you out as the single most capable man to safeguard Germany’s prosperity, and it resonates with swing voters.
 A1: We have to speak clearly, but not polarize. We have to integrate, keeping our society together, bringing different people together. That's hard work; one has to do a lot of listening, also listening to uncomfortable things. But at the end of the day, we have to seek compromise, to find solutions that the people demand from us. That's what I mean, when I say, 'let's keep it up'!
 F1: While others stand for radical change, you are the epitome of a statesman, a fixpoint for stability. There’s still a good chunk of voters who like Merkel’s Germany - Merkel herself even goes as far as to proclaim in an interview: “I don’t see any differences between Armin Laschet and myself”. Not a bad thing, considering her approval rating of 70%.
 [+0.025, SPD -0.02, Grüne -0.005, AfD +0.002, climate: maintain, Meckpom +0.015]
@@ -296,7 +296,7 @@ F1: While others stand for radical change, you are the epitome of a statesman, a
 
 
 Statesman 10-15
-Over the course of this campaign, it was always your goal to rise above the pack, to be a beacon of stability and authenticity, just as your father, a miner, has taught you. Particularly your claim to Merkel’s succession was to be the lane you wanted to ride on. Unfortunately, numerous scandals and gaffes have plagued you over recent months, tainting that image a bit. What do you want to do to change that?
+EQ99: Over the course of this campaign, it was always your goal to rise above the pack, to be a beacon of stability and authenticity, just as your father, a miner, has taught you. Particularly your claim to Merkel’s succession was to be the lane you wanted to ride on. Unfortunately, numerous scandals and gaffes have plagued you over recent months, tainting that image a bit. What do you want to do to change that?
 
 A1: Let’s do a whole image-change. We need to move on from Merkel, to bring a decade of modernization to Germany, and deliver the promises of change our opponents can only talk about.
 F1: Unfortunately, this pivot comes far too late, far too little, and is credible to few people. The media talks about your desperate attempts to move the conversation from your image, and the consensus is irritation about why you’re fleeing from your greatest strength: regality.
