@@ -4367,22 +4367,22 @@ function openHeadquarter() {
 
     switch(dismissalsDone) {
         case 0:
-            dismissStatus.innerHTML += "Harmonious campaign (Bonus)<br> " + dismissalsLeft + " Advisor changes possible";
+            dismissStatus.innerHTML += "Harmonious campaign (Bonus)<br> " + (dismissalsLeft-1) + " Advisor changes possible";
             break;
         case 1:
-            dismissStatus.innerHTML += "United campaign (Bonus)<br> " + dismissalsLeft + " Advisor changes possible";
+            dismissStatus.innerHTML += "United campaign (Bonus)<br> " + (dismissalsLeft-1) + " Advisor changes possible";
             break;
         case 2:
-            dismissStatus.innerHTML += "Somewhat united campaign (Neutral)<br> " + dismissalsLeft + " Advisor changes possible";
+            dismissStatus.innerHTML += "Somewhat united campaign (Neutral)<br> " + (dismissalsLeft-1) + " Advisor changes possible";
             break;
         case 3:
-            dismissStatus.innerHTML += "Somewhat disunited campaign (Neutral)<br> " + dismissalsLeft + " Advisor changes possible";
+            dismissStatus.innerHTML += "Somewhat disunited campaign (Neutral)<br> " + (dismissalsLeft-1) + " Advisor changes possible";
             break;
         case 4:
             dismissStatus.innerHTML += "Disunited campaign (Malus)<br> Warning: no Hiring possible after next dismissal";
             break;
         case 5:
-            dismissStatus.innerHTML += "Chaoticcampaign (Malus)<br> Warning: no Hiring possible";
+            dismissStatus.innerHTML += "Chaotic campaign (Malus)<br> Warning: no Hiring possible";
             break;
         default:
             dismissStatus.innerText += "Campaign status unknown";
