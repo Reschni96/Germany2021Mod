@@ -1256,6 +1256,9 @@ cyoAdventure = function(a) {
        }
     }
 
+    //mini-CYOA
+
+
      if (ans === 4537) {
        coalitions.forEach(coalition => {
           if ([1, 2, 3, 5, 10].includes(coalition.id)) {
