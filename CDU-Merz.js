@@ -1994,6 +1994,7 @@ function seatCalculator() {
             calculateSeats(statePK, missedCandidates);
             });
 
+ $("#game_window")[0].style.backgroundImage = "url(https://i.imgur.com/9nFY6eE.jpg)";
        if(campaignTrail_temp.electionNight){
 
 
@@ -2050,7 +2051,7 @@ function seatCalculator() {
         invisibleDiv.style.display = 'none';
         invisibleDiv.id='game_window'
         document.body.appendChild(invisibleDiv);
-        document.addEventListener('click', (event) => {
+                document.addEventListener('click', (event) => {
            if (event.target.id === 'final_result_button') {
                if(invisibleDiv){invisibleDiv.remove();}
                gameWindow.id='game_window';
@@ -2239,17 +2240,41 @@ function seatCalculator() {
             currentCoalitions = coalitionTalks(temp.final_overall_results);
             ElectionNightCharting();
             let digitalClock = document.getElementById("digitalClock");
-            let title =  document.getElementsByClassName("highcharts-title")
-            let current_time = digitalClock.innerText
-            if (iteration>0 && iteration<8){
+            let title = document.getElementsByClassName("highcharts-title");
+            let current_time = digitalClock.innerText;
+
+            function getPercentageCounted(iteration) {
+                // For the first iteration, return 0%
+                if (iteration === 0) {
+                    return "0%";
+                }
+                // For the last iteration, return 99.8%
+                else if (iteration === 8) {
+                    return "99.8%";
+                } else {
+                    // Calculate expected percentage
+                    let expectedPercentage = (iteration / 8) * 100;
+                    // Add randomness
+                    let variance = 5; // example variance value, adjust as needed
+                    let randomOffset = generateNormalRandom(0, variance);
+                    let actualPercentage = expectedPercentage + randomOffset;
+                    // Make sure percentage is within [0, 100]
+                    actualPercentage = Math.min(100, Math.max(0, actualPercentage));
+                    return actualPercentage.toFixed(1) + "%";
+                }
+            }
+
+            if (iteration === 0) {
+                title[0].firstChild.data = "Exit Polls - " + current_time + " - " + getPercentageCounted(iteration) + " of votes counted";
+            } else if (iteration > 0 && iteration < 8) {
                 const hours = current_time.split(":")[0];
                 const minutes = (parseInt(current_time.split(":")[1]) + Math.floor(Math.random() * 5)).toString().padStart(2, '0');
                 current_time = `${hours}:${minutes}`;
+                title[0].firstChild.data = "Current Predictions - " + current_time + " - " + getPercentageCounted(iteration) + " of votes counted";
+            } else if (iteration === 8) {
+                title[0].firstChild.data = "Final Predictions - " + current_time + " - " + getPercentageCounted(iteration) + " of votes counted";
             }
-            title[0].firstChild.data = "Current Predictions - " + current_time
-            if (iteration===8){
-                title[0].firstChild.data = "Final Predictions - " + current_time
-            }
+
             for (let i = 0; i < 7; i++) {
                 ElectionNightPolling[i].pop();
             }
