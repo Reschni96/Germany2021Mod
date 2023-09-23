@@ -2122,6 +2122,17 @@ cyoAdventure = function(a) {
         }
         else if ((ideologyCenter - ideologyLeft) > 2) {
             campaignTrail_temp.questions_json[12] = extraQuestions[9];
+            $("#game_window")[0].style.backgroundImage = "urlhttps://cdn.discordapp.com/attachments/1131296206908301423/1154739963754205214/GruneRealoUnten.png)";
+            $("#game_window")[0].style.backgroundSize = "cover";
+            $(".game_header")[0].style.backgroundImage = "url(https://cdn.discordapp.com/attachments/1131296206908301423/1154739964102328400/GruneRealoOben.png)";
+            $(".game_header")[0].style.backgroundSize = "cover";
+            headerImage = "url(https://cdn.discordapp.com/attachments/1131296206908301423/1154739964102328400/GruneRealoOben.png)";
+            $(".container")[0].style.backgroundImage = "url(https://cdn.discordapp.com/attachments/1131296206908301423/1154739964475609178/GruneRealoSeiten.png)";
+            $(".container")[0].style.backgroundSize = "cover";
+            $("#trackSel")[0].style.backgroundImage = "url(https://cdn.discordapp.com/attachments/1131296206908301423/1154739963754205214/GruneRealoUnten.png)";
+            $("#trackSel")[0].style.backgroundSize = "cover";
+            $("#timeTracker")[0].style.backgroundImage = "url(https://cdn.discordapp.com/attachments/1131296206908301423/1154739963754205214/GruneRealoUnten.png)";
+            $("#timeTracker")[0].style.backgroundSize = "cover";
         }
 
         else if (likeability>11){
