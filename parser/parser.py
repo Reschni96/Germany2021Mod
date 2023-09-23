@@ -4,10 +4,10 @@ question_regex = re.compile(r'^(E?Q)(\d+):\s*')  # Modified regex to match quest
 answer_regex = re.compile(r'.*A(\d+): (.*)')  # Regular expression to match answer lines
 feedback_regex = re.compile(r'F(\d+): (.*)')  # Regular expression to match feedback lines
 
-candidate = 79
-pk_questions = 823  # Starting value for pk for questions
-pk_answers = 4610  # Starting value for pk for answers
-pk_feedback = 5610  # Starting value for pk for feedback
+candidate = 77
+pk_questions = 820  # Starting value for pk for questions
+pk_answers = 4600  # Starting value for pk for answers
+pk_feedback = 5600  # Starting value for pk for feedback
 
 pk_eq_questions = 800  # Starting value for pk for EQ type questions
 pk_eq_answers = 4500  # Starting value for pk for EQ type answers
