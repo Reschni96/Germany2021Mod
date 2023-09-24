@@ -1591,6 +1591,28 @@ cyoAdventure = function(a) {
         changeGlobalEffect(79, 4515, -0.005)
         changeGlobalEffect(78, 4515, -0.003)
     }
+    if(campaignTrail_temp.question_number===20 && statesman<5){
+        answerSwapper(4058,4707, false)
+        changeGlobalEffect(77, 4058, -0.005)
+        changeGlobalEffect(303, 4058, -0.005)
+        changeStateEffect(77, 4058, 3009, -0.01)
+        answerSwapper(4059,4708, false)
+        changeGlobalEffect(77, 4059, -0.015)
+        changeStateEffect(77, 4059, 3009, -0.01)
+    }
+    else if(campaignTrail_temp.question_number===20 && statesman<10){
+        answerSwapper(4059,4709, false)
+        changeGlobalEffect(77, 4059, -0.005)
+        changeStateEffect(77, 4059, 3009, -0.005)
+    }
+    else if(campaignTrail_temp.question_number===20 && statesman>14){
+        answerSwapper(4058,4710, false)
+        changeGlobalEffect(77, 4058, 0.01)
+        changeGlobalEffect(303, 4058, 0.005)
+        answerSwapper(4059,4711, false)
+        changeGlobalEffect(77, 4059, 0.012)
+        changeStateEffect(77, 4059, 3009, 0.005)
+    }
 
     //mini-CYOA
     if(ans===4503){
