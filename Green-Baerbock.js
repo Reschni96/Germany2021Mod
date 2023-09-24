@@ -5923,50 +5923,65 @@ preloadImages(pictureDict);
 
 
 if(e.displayTooltips){
-    tooltipList.sort((a, b) => b.searchString.length - a.searchString.length);
+    function getTooltips(str) {
+    let matches = [];
 
-    // First pass: Mark for tooltips
-    function markForTooltips(str) {
-        tooltipList.forEach(({
-            searchString
-        }) => {
-            let regex = new RegExp(`\\b(${searchString})\\b`, 'g');
-            str = str.replace(regex, `<span class='mytooltip'>$1</span>`);
-        });
-        return str;
-    }
-
-    // Second pass: Add tooltips
-    function addTooltips(str) {
-        tooltipList.forEach(({
-            searchString,
-            explanationText
-        }) => {
-            let regex = new RegExp(`<span class='mytooltip'>(${searchString})</span>`, 'g');
-            str = str.replace(regex, `<span class='mytooltip'>$1<span class='mytooltiptext'>${explanationText}</span></span>`);
-        });
-        return str;
-    }
-
-    function applyTooltipsToObject(obj) {
-        // First pass: mark for tooltips
-        for (let key in obj) {
-            if (typeof obj[key] === 'string') {
-                obj[key] = markForTooltips(obj[key]);
-            } else if (typeof obj[key] === 'object') {
-                applyTooltipsToObject(obj[key]); // Recursive call
-            }
+    tooltipList.forEach((tooltip, index) => {
+        let regex = new RegExp(`\\b(${tooltip.searchString})\\b`, 'g');
+        let match;
+        while ((match = regex.exec(str)) !== null) {
+            matches.push({
+                start: match.index,
+                end: match.index + match[0].length,
+                tooltipIndex: index
+            });
         }
+    });
 
-        // Second pass: add tooltips
-        for (let key in obj) {
-            if (typeof obj[key] === 'string') {
-                obj[key] = addTooltips(obj[key]);
-            }
+    // Sort by starting position; if two start at the same position, longer match comes first
+    matches.sort((a, b) => a.start - b.start || b.end - b.start - (a.end - a.start));
+
+    // Filter out overlaps
+    for (let i = 0; i < matches.length - 1; ) {
+        if (matches[i + 1].start < matches[i].end) {
+            matches.splice(i + 1, 1); // Remove the next match since it overlaps
+        } else {
+            i++; // Move to next match
         }
     }
 
-    applyTooltipsToObject(campaignTrail_temp);
+    return matches;
+}
+
+function applyTooltips(str) {
+    const matches = getTooltips(str);
+    let result = '';
+    let lastIndex = 0;
+
+    matches.forEach(match => {
+        const tooltip = tooltipList[match.tooltipIndex];
+        result += str.slice(lastIndex, match.start);
+        result += `<span class='mytooltip'>${tooltip.searchString}<span class='mytooltiptext'>${tooltip.explanationText}</span></span>`;
+        lastIndex = match.end;
+    });
+
+    result += str.slice(lastIndex); // Add the remainder of the original string
+    return result;
+}
+
+function applyTooltipsToObject(obj) {
+    for (let key in obj) {
+        if (typeof obj[key] === 'string') {
+            obj[key] = applyTooltips(obj[key]);
+        } else if (typeof obj[key] === 'object') {
+            applyTooltipsToObject(obj[key]); // Recursive call
+        }
+    }
+}
+
+applyTooltipsToObject(campaignTrail_temp);
+
+
 }
 
 campaignTrail_temp.global_parameter_json[0].fields.question_count = 35;
