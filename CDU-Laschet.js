@@ -3052,7 +3052,6 @@ function openHeadquarter() {
     hqDiv.style.borderRadius = '10px';
     hqDiv.style.boxShadow = '0 0 15px rgba(0,0,0,0.5)';
     hqDiv.style.height = '650px';
-    hqDiv.style.color = 'white';
 
 
     // Create inner divs for columns
@@ -3172,7 +3171,7 @@ function openHeadquarter() {
         circle.style.border = '1px solid black'; // Added border
 
         if (i <= Math.floor(statesman / 5)) {
-            if (i === 0) circle.style.backgroundColor = 'darkred';
+            if (i === 0) circle.style.backgroundColor = 'red';
             else if (i === 1) circle.style.backgroundColor = 'orange';
             else if (i === 2) circle.style.backgroundColor = 'yellow';
             else circle.style.backgroundColor = 'green';
@@ -3217,71 +3216,83 @@ function openHeadquarter() {
 
     let filledSlots = 0;
 
-    advisorsList.forEach(advisor => {
-        if (advisor.status === 'active') {
-            filledSlots++;
+advisorsList.forEach(advisor => {
+    if (advisor.status === 'active') {
+        filledSlots++;
 
-            let slot = document.createElement('div');
-            slot.classList.add('advisor-slot');
+        let slot = document.createElement('div');
+        slot.classList.add('advisor-slot');
 
-            let img = document.createElement('img');
-            img.src = advisor.picture;
-            img.style.height = '12em';
-            img.style.borderBottom = '2px solid black';
+        // Image creation
+        let img = document.createElement('img');
+        img.src = advisor.picture;
+        img.style.height = '12em';
+        img.style.borderBottom = '2px solid black';
 
-            let imgContainer = document.createElement('div');
-            imgContainer.style.display = 'flex';
-            imgContainer.style.flexDirection = 'column';
-            imgContainer.style.justifyContent = 'center';
-            imgContainer.style.margin = '10px';
-            imgContainer.style.marginTop = '-5px';
-            imgContainer.style.backgroundColor = 'white';
-            imgContainer.style.border = '4px solid black';
-            imgContainer.style.borderTop = '1px solid black'
-            imgContainer.style.borderRadius = '0 0 10px 10px';
-            imgContainer.style.overflow = 'hidden';
-            imgContainer.appendChild(img);
+        // Image Wrapper (which will hold the image and the tooltip)
+        let imgWrapper = document.createElement('div');
+        imgWrapper.classList.add('mytooltip');
+        imgWrapper.appendChild(img);
 
-            let name = document.createElement('div');
-            name.innerText = advisor.name;
-            name.style.padding = '0.5em';
-            name.style.color = "black";
-            name.style.fontWeight = 'bold';
-            name.style.whiteSpace = 'normal'; // Allows the text to wrap
-            name.style.overflowWrap = 'break-word'; // Breaks the word if necessary
-            name.style.maxWidth = '115px';
-            name.style.height = '32px';
+        // Create the tooltip for the description
+        let descriptionDiv = document.createElement('div');
+        descriptionDiv.innerText = advisor.description;
+        descriptionDiv.classList.add('mytooltiptext');
+        imgWrapper.style.backgroundColor = 'white';
+        imgWrapper.appendChild(descriptionDiv);
 
-            if (window.innerWidth <= 768) {
+        // Image container styling and appending
+        let imgContainer = document.createElement('div');
+        imgContainer.style.display = 'flex';
+        imgContainer.style.flexDirection = 'column';
+        imgContainer.style.justifyContent = 'center';
+        imgContainer.style.margin = '10px';
+        imgContainer.style.marginTop = '-5px';
+        imgContainer.style.backgroundColor = 'white';
+        imgContainer.style.border = '4px solid black';
+        imgContainer.style.borderTop = '1px solid black';
+        imgContainer.style.borderRadius = '0 0 10px 10px';
+        imgContainer.style.overflow = 'visible';
+        imgContainer.appendChild(imgWrapper); // Now append imgWrapper instead of img directly
 
-                name.style.height = '64px';
-            }
-            imgContainer.appendChild(name);
-            slot.appendChild(imgContainer);
+        let name = document.createElement('div');
+        name.innerText = advisor.name;
+        name.style.padding = '0.5em';
+        name.style.color = "black";
+        name.style.fontWeight = 'bold';
+        name.style.whiteSpace = 'normal';
+        name.style.overflowWrap = 'break-word';
+        name.style.maxWidth = '115px';
+        name.style.height = '32px';
 
-            let dismissBtn = document.createElement('button');
-            dismissBtn.innerText = 'Dismiss';
-            dismissBtn.style.margin = '1em';
-            dismissBtn.style.backgroundColor = 'red';
-            dismissBtn.style.color = "white"
-            dismissBtn.style.boxShadow = '0 0 20px 4px rgba(120, 0, 0, 0.9)';; // Stronger light green glow
-
-            if (dismissalsLeft > 0 && campaignTrail_temp.staff_mode) { // Check dismissalsLeft
-                dismissBtn.onclick = function() {
-                    dismissalsLeft += -1;
-                    advisor.dismiss();
-                    hqDiv.remove();
-                    overlay.remove();
-                    openHeadquarter();
-
-                            };
-
-                slot.appendChild(dismissBtn);
-            }
-
-            advisorContainer.appendChild(slot); // Add the slot to the advisorContainer instead of hqDiv
+        if (window.innerWidth <= 768) {
+            name.style.height = '64px';
         }
-    });
+        imgContainer.appendChild(name);
+        slot.appendChild(imgContainer);
+
+        let dismissBtn = document.createElement('button');
+        dismissBtn.innerText = 'Dismiss';
+        dismissBtn.style.margin = '1em';
+        dismissBtn.style.backgroundColor = 'red';
+        dismissBtn.style.color = "white";
+        dismissBtn.style.boxShadow = '0 0 20px 4px rgba(120, 0, 0, 0.9)';
+
+        if (dismissalsLeft > 0 && campaignTrail_temp.staff_mode) {
+            dismissBtn.onclick = function() {
+                dismissalsLeft -= 1;
+                advisor.dismiss();
+                hqDiv.remove();
+                overlay.remove();
+                openHeadquarter();
+            };
+
+            slot.appendChild(dismissBtn);
+        }
+
+        advisorContainer.appendChild(slot);
+    }
+});
 
     for (let i = filledSlots; i < 2; i++) {
         let slot = document.createElement('div');
@@ -3835,7 +3846,7 @@ HQStyle.innerHTML = `
     }
 
   .happy-box {
-    background-image: url('https://media.discordapp.net/attachments/1109846390575730788/1152285958998343680/Rot.png?width=883&height=662');
+    background-image: url('https://cdn.discordapp.com/attachments/1109846390575730788/1148559668969480193/cdugradient.png');
     background-size: cover;
     background-position: center center;
     position: relative;
@@ -3860,7 +3871,7 @@ HQStyle.innerHTML = `
   #coalitionDiv .mytooltip{
       background-color: darkred;
    }
-     #coalitionDiv .mytooltiptext{
+     #headquarter .mytooltiptext{
       background-color: lightcoral;
    }
 `;
@@ -3883,8 +3894,8 @@ function showAdvisors() {
     let advisorsDiv = document.createElement('div');
     advisorsDiv.id = 'advisors';
     advisorsDiv.style.boxShadow = '0 0 15px rgba(0,0,0,0.5)';
-    advisorsDiv.style.color = 'white';
-    advisorsDiv.style.backgroundImage = "url('https://media.discordapp.net/attachments/1109846390575730788/1152285958998343680/Rot.png?width=883&height=662')";
+    advisorsDiv.style.color = 'black';
+    advisorsDiv.style.backgroundImage = "url('https://cdn.discordapp.com/attachments/1109846390575730788/1148559668969480193/cdugradient.png')";
     advisorsDiv.style.backgroundSize = 'cover';
 
     // Add header

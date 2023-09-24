@@ -4013,70 +4013,84 @@ function openHeadquarter() {
 
     let filledSlots = 0;
 
-    advisorsList.forEach(advisor => {
-        if (advisor.status === 'active') {
-            filledSlots++;
+   advisorsList.forEach(advisor => {
+    if (advisor.status === 'active') {
+        filledSlots++;
 
-            let slot = document.createElement('div');
-            slot.classList.add('advisor-slot');
+        let slot = document.createElement('div');
+        slot.classList.add('advisor-slot');
 
-            let img = document.createElement('img');
-            img.src = advisor.picture;
-            img.style.height = '12em';
-            img.style.borderBottom = '2px solid black';
+        // Image creation
+        let img = document.createElement('img');
+        img.src = advisor.picture;
+        img.style.height = '12em';
+        img.style.borderBottom = '2px solid black';
 
-            let imgContainer = document.createElement('div');
-            imgContainer.style.display = 'flex';
-            imgContainer.style.flexDirection = 'column';
-            imgContainer.style.justifyContent = 'center';
-            imgContainer.style.margin = '10px';
-            imgContainer.style.marginTop = '-5px';
-            imgContainer.style.backgroundColor = 'white';
-            imgContainer.style.border = '4px solid black';
-            imgContainer.style.borderTop = '1px solid black'
-            imgContainer.style.borderRadius = '0 0 10px 10px';
-            imgContainer.style.overflow = 'hidden';
-            imgContainer.appendChild(img);
+        // Image Wrapper (which will hold the image and the tooltip)
+        let imgWrapper = document.createElement('div');
+        imgWrapper.classList.add('mytooltip');
+        imgWrapper.appendChild(img);
 
-            let name = document.createElement('div');
-            name.innerText = advisor.name;
-            name.style.color = 'black';
-            name.style.padding = '0.5em';
-            name.style.fontWeight = 'bold';
-            name.style.whiteSpace = 'normal'; // Allows the text to wrap
-            name.style.overflowWrap = 'break-word'; // Breaks the word if necessary
-            name.style.maxWidth = '115px';
-            name.style.height = '32px';
+        // Create the tooltip for the description
+        let descriptionDiv = document.createElement('div');
+        descriptionDiv.innerText = advisor.description;
+        descriptionDiv.classList.add('mytooltiptext');
+        imgWrapper.style.backgroundColor = 'white';
+        imgWrapper.appendChild(descriptionDiv);
 
-            if (window.innerWidth <= 768) {
+        // Image container styling and appending
+        let imgContainer = document.createElement('div');
+        imgContainer.style.display = 'flex';
+        imgContainer.style.flexDirection = 'column';
+        imgContainer.style.justifyContent = 'center';
+        imgContainer.style.margin = '10px';
+        imgContainer.style.marginTop = '-5px';
+        imgContainer.style.backgroundColor = 'white';
+        imgContainer.style.border = '4px solid black';
+        imgContainer.style.borderTop = '1px solid black';
+        imgContainer.style.borderRadius = '0 0 10px 10px';
+        imgContainer.style.overflow = 'visible';
+        imgContainer.appendChild(imgWrapper); // Now append imgWrapper instead of img directly
 
-                name.style.height = '64px';
-            }
-            imgContainer.appendChild(name);
-            slot.appendChild(imgContainer);
+        let name = document.createElement('div');
+        name.innerText = advisor.name;
+        name.style.padding = '0.5em';
+        name.style.color = "black";
+        name.style.fontWeight = 'bold';
+        name.style.whiteSpace = 'normal';
+        name.style.overflowWrap = 'break-word';
+        name.style.maxWidth = '115px';
+        name.style.height = '32px';
 
-            let dismissBtn = document.createElement('button');
-            dismissBtn.innerText = 'Dismiss';
-            dismissBtn.style.margin = '1em';
-            dismissBtn.style.backgroundColor = 'lightgreen';
-            dismissBtn.style.boxShadow = '0 0 20px 4px rgba(144, 238, 144, 0.9)'; // Stronger light green glow
-
-            if (dismissalsLeft > 0 && campaignTrail_temp.staff_mode) { // Check dismissalsLeft
-                dismissBtn.onclick = function() {
-                    dismissalsLeft += -1;
-                    advisor.dismiss();
-                    hqDiv.remove();
-                    overlay.remove();
-                    openHeadquarter();
-
-                            };
-
-                slot.appendChild(dismissBtn);
-            }
-
-            advisorContainer.appendChild(slot); // Add the slot to the advisorContainer instead of hqDiv
+        if (window.innerWidth <= 768) {
+            name.style.height = '64px';
         }
-    });
+        imgContainer.appendChild(name);
+        slot.appendChild(imgContainer);
+
+        let dismissBtn = document.createElement('button');
+        dismissBtn.innerText = 'Dismiss';
+        dismissBtn.style.margin = '1em';
+        dismissBtn.style.backgroundColor = 'lightgreen';
+        dismissBtn.style.boxShadow = '0 0 20px 4px rgba(144, 238, 144, 0.9)';
+        dismissBtn.style.color = "white";
+
+
+        if (dismissalsLeft > 0 && campaignTrail_temp.staff_mode) {
+            dismissBtn.onclick = function() {
+                dismissalsLeft -= 1;
+                advisor.dismiss();
+                hqDiv.remove();
+                overlay.remove();
+                openHeadquarter();
+            };
+
+            slot.appendChild(dismissBtn);
+        }
+
+        advisorContainer.appendChild(slot);
+    }
+});
 
     for (let i = filledSlots; i < 2; i++) {
         let slot = document.createElement('div');
@@ -4647,7 +4661,7 @@ HQStyle.innerHTML = `
   #coalitionDiv .mytooltip{
       background-color: greenyellow;
    }
-     #coalitionDiv .mytooltiptext{
+     #headquarter .mytooltiptext{
       background-color: lightgreen;
    }
 `;
