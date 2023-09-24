@@ -1,7 +1,7 @@
 e = campaignTrail_temp;
 campaignTrail_temp.questions_json = JSON.parse("[{\"model\": \"campaign_trail.question\", \"pk\": 717, \"fields\": {\"priority\": 1, \"description\": \"January 2021: The CDU is in a state of upheaval following Merkel's announcement of retirement. <br>Annegret Kramp-Karrenbauer was her handpicked successor, but after she faltered, the party is looking for a new leader. After passing up a bid in the former contest in 2018, you feel like now is the time to strike - how do you want to convince the delegates to vote for you instead of Friedrich Merz or Norbert Röttgen?\", \"likelihood\": 1.0}}, {\"model\": \"campaign_trail.question\", \"pk\": 718, \"fields\": {\"priority\": 1, \"description\": \"Congratulations, you are now the 12th party leader of the Christian Democratic Union! You are not the official chancellor candidate of the Union of CDU and CSU yet, but hopefully, that will just be a formality. In your acceptance speech at the convention, what will be your emphasis?\", \"likelihood\": 1.0}}, {\"model\": \"campaign_trail.question\", \"pk\": 719, \"fields\": {\"priority\": 1, \"description\": \"March 2021: COVID-19 has shaped the lives of people in Germany and across the world for the past years. Now that the winter is over, a lot of people are demanding an end to the harsh lockdowns. As Minister-President of North Rhine-Westphalia, you could chart a new course for your government. What is your stance on this?\", \"likelihood\": 1.0}}, {\"model\": \"campaign_trail.question\", \"pk\": 720, \"fields\": {\"priority\": 1, \"description\": \"You’ve been invited to a talk show to talk about tax policy and the “Black Zero”, which mandates a balanced budget. The left and left-of-centre seek more investments, paid for by taxing the rich, while the FDP seeks widespread tax reductions. How do you want to frame the position of your party?\", \"likelihood\": 1.0}}, {\"model\": \"campaign_trail.question\", \"pk\": 721, \"fields\": {\"priority\": 1, \"description\": \"Shook to your core, you read the headline of the 11/2021 issue of<i> Der Spiegel</i>: <br>” <i>‘Schwarzer Filz’ - Mask deals, venality, failure in crisis: the deep fall of the Union. </i> “<br>They reveal how several CDU/CSU MPs are implicated as part of a corrupt scheme to sell overpriced medical masks to government organizations, in order to profit from the crisis. Journalists run in your door, asking for a comment on the first crisis of your party leadership.\", \"likelihood\": 1.0}}, {\"model\": \"campaign_trail.question\", \"pk\": 722, \"fields\": {\"priority\": 1, \"description\": \"April 2021: Minister of Finance and current Vice Chancellor Olaf Scholz has been declared chancellor candidate by the SPD last year already and there are rumors the Green party is about to nominate either Annalena Baerbock or Robert Habeck soon. Do you want to formally declare your candidacy before they do?\", \"likelihood\": 1.0}}, {\"model\": \"campaign_trail.question\", \"pk\": 723, \"fields\": {\"priority\": 1, \"description\": \"Söders ambitions were always clear, but this is shaping out to be a blatant confrontation. <br>You and Söder both want to become the chancellor candidate for the Union of CDU/CSU. You have some bully pulpit at your side - although polling shows Söder to be more popular than you. How do you want to decide this contest?\", \"likelihood\": 1.0}}, {\"model\": \"campaign_trail.question\", \"pk\": 724, \"fields\": {\"priority\": 1, \"description\": \"Wow, that was a close one! First, let’s take a breath. <br>Now, you have finally jumped the last hurdle and formally became the chancellor candidate of the CDU/CSU. Congratulations! What talking point do you want to hit on at the press conference?\", \"likelihood\": 1.0}}, {\"model\": \"campaign_trail.question\", \"pk\": 725, \"fields\": {\"priority\": 1, \"description\": \"The Green party has, for the first time in its history, nominated a chancellor candidate, Annalena Baerbock. In a development few would have expected four years ago, she appears to be your main contender, even polling ahead of you sometimes, while Olaf Scholz of the SPD is far behind in third place. What’s your strategy regarding your two opponents?\", \"likelihood\": 1.0}}, {\"model\": \"campaign_trail.question\", \"pk\": 726, \"fields\": {\"priority\": 1, \"description\": \"Michael Kretschmer, your party colleague and Minister-President of Saxony, has recently traveled to Moscow and has been criticized for that visit. What’s your stance on current policies regarding Germany’s relationship with Russia and Putin?\", \"likelihood\": 1.0}}, {\"model\": \"campaign_trail.question\", \"pk\": 801, \"fields\": {\"priority\": 1, \"description\": \"You’re invited to a talk show about immigration and refugees. Although tempers have cooled a bit since 2015, the discussion around Merkel's decision to welcome the refugees 6 years ago is still relevant - particularly for the AfD, who got driven into parliament on this issue in 2017. Germany is still a popular destination for many foreigners seeking a better life, yet the nation does not seem prepared for this. What stance do you take in this debate?\", \"likelihood\": 1.0}}, {\"model\": \"campaign_trail.question\", \"pk\": 727, \"fields\": {\"priority\": 1, \"description\": \"May 2021: A bombshell has rocked the Grand Coalition: the Federal Constitutional Court just ruled the Climate Protection Act unconstitutional and demands the government do more to lower emissions. Berlin has already gone to work on making the law stricter. What is your opinion on this issue?\", \"likelihood\": 1.0}}, {\"model\": \"campaign_trail.question\", \"pk\": 802, \"fields\": {\"priority\": 1, \"description\": \"Up until now, your campaign has been dominated by a very centrist attitude, tilting center-left even. To many, this seems evocative of Angela Merkel, but some party cadres, particularly around Friedrich Merz, are worried about their core values. In an internal meeting, you’re asked frankly: do you plan to keep this up?\", \"likelihood\": 1.0}}, {\"model\": \"campaign_trail.question\", \"pk\": 728, \"fields\": {\"priority\": 1, \"description\": \"More and more people are receiving a Covid vaccine, though not everyone has been granted access yet. Older people are starting to get the shot, while some who are younger are frustrated to wait. Do you have a comment on how to move forward with the vaccination campaign?\", \"likelihood\": 1.0}}, {\"model\": \"campaign_trail.question\", \"pk\": 729, \"fields\": {\"priority\": 1, \"description\": \"You have been invited to give a speech about German foreign and defence policy. Members of the Bundeswehr stand in the crowd: they eagerly listen to what direction you want Germany to take on the world stage. Which talking points do you emphasize?\", \"likelihood\": 1.0}}, {\"model\": \"campaign_trail.question\", \"pk\": 803, \"fields\": {\"priority\": 1, \"description\": \"One topic of many discussions is the ongoing change in age demographics, particularly its impact on the pension system. Currently, 67 is the legislated retirement age for people born after 1964, after which your earned pension is gradually given to you from a pension fund that the current workforce pays into. However, due to Germany's low birth rates, the system is thought to be unsustainable. How do you want to address this problem?\", \"likelihood\": 1.0}}, {\"model\": \"campaign_trail.question\", \"pk\": 730, \"fields\": {\"priority\": 1, \"description\": \"June 2021: Things look to be on somewhat of an upswing. Baerbock seems to falter to some negative headllines, and on top, the CDU was the big winner at the provincial elections in Saxony-Anhalt, with Minister-President Reiner Haselhoff’s popularity being credited. What’s your reaction to this information?\", \"likelihood\": 1.0}}, {\"model\": \"campaign_trail.question\", \"pk\": 804, \"fields\": {\"priority\": 1, \"description\": \"With the campaign developing, Annelena Baerbock has caught criticism from the media. She’s dealing with numerous scandals: allegations of plagiarism in her book, an inconsistent CV, as well as failing to report extraparliamentary earnings on time. With her seemingly being your main opponent, how do you want to capitalize on this?\", \"likelihood\": 1.0}}, {\"model\": \"campaign_trail.question\", \"pk\": 731, \"fields\": {\"priority\": 1, \"description\": \"Digitalization is an important topic in this election, with Germany often perceived as surprisingly archaic in comparison to its neighbors, frequently seen on the tail end of statistics. With all parties unveiling plans to rectify this, what focus do you want to lay?\", \"likelihood\": 1.0}}, {\"model\": \"campaign_trail.question\", \"pk\": 820, \"fields\": {\"priority\": 1, \"description\": \"The Alternative für Deutschland has grown rapidly since its founding in 2013. Originally a eurosceptic party, they were swept into parliament four years ago as a reaction to 2015, concurrent with nationalist backlashes all over Europe. Many people are toxic towards the new party, earnestly comparing them to the Nazi-movement, but others, especially East Germans, feel drawn to them nonetheless. As the Union’s candidate, how do you plan to win them back?\", \"likelihood\": 1.0, \"question_number\": \"66\"}}, {\"model\": \"campaign_trail.question\", \"pk\": 805, \"fields\": {\"priority\": 1, \"description\": \"One salient issue is the topic of pensions, particularly in light of Germany's changing demographics. Currently, pensions are distributed from a fund financed by the current working populace. However, because the number of retirees seems to grow faster than the workforce, the system is thought to be unsustainable. How do you want to address this problem?\", \"likelihood\": 1.0}}, {\"model\": \"campaign_trail.question\", \"pk\": 732, \"fields\": {\"priority\": 1, \"description\": \"July 2021: Catastrophe hits. The meteorological low-pressure area <i>Bernd</i> has hit Central Europe and made several rivers burst over their banks. Disastrous rain and floods are affecting large areas of Germany. The state you govern, North Rhine-Westphalia, is among the most affected - you are asked to comment.\", \"likelihood\": 1.0}}, {\"model\": \"campaign_trail.question\", \"pk\": 733, \"fields\": {\"priority\": 1, \"description\": \"Post-flood cleanup operations are going on as the full devastation of the flooding becomes clear: 220 fatalities, 186 of those in Germany, the deadliest flood since 1962.<br>Among the mourning, your advisors want you to position yourself as a man of action.\", \"likelihood\": 1.0}}, {\"model\": \"campaign_trail.question\", \"pk\": 734, \"fields\": {\"priority\": 1, \"description\": \"Climate change is a much-discussed topic again after the floods - it seems dire warnings of extreme weather events are starting to come true. In the wake of this, you have been asked if this had an impact on your stance on how to best combat climate change.\", \"likelihood\": 1.0}}, {\"model\": \"campaign_trail.question\", \"pk\": 735, \"fields\": {\"priority\": 1, \"description\": \"After early successes, the vaccination campaign has become sluggish in recent weeks. Most vulnerable groups have been taken care of, but some vaccine-critical or lethargic people have been on the holdout for their shot. Some media figures are now going as far as to demand making the vaccine mandatory. What do you think of this?\", \"likelihood\": 1.0}}, {\"model\": \"campaign_trail.question\", \"pk\": 736, \"fields\": {\"priority\": 1, \"description\": \"August 2021: The SPD under Olaf Scholz has been surging in the polls, drawing votes from both you and the Green Party. There are still many undecided voters too, though: your advisors want to produce a good and impactful ad to hopefully sway some people in the home stretch of this campaign. What input do you give them?\", \"likelihood\": 1.0}}, {\"model\": \"campaign_trail.question\", \"pk\": 806, \"fields\": {\"priority\": 1, \"description\": \"A bit of a minor issue, but one that has gripped the imagination of many young voters is the topic of cannabis. Currently, it is a controlled substance, and illegal to produce, distribute or own. In light of worldwide movements to decriminalize or even legalize it: <i>Wann Bubatz legal</i>?\", \"likelihood\": 1.0}}, {\"model\": \"campaign_trail.question\", \"pk\": 737, \"fields\": {\"priority\": 1, \"description\": \"There are 7 parties poised to enter parliament, and none has ever won an absolute majority since Adenauer in 1957. As such, it is basically guaranteed that there will be a coalition government after the elections. You are asked ad-nauseam - who would you enter a coalition with?\", \"likelihood\": 1.0}}, {\"model\": \"campaign_trail.question\", \"pk\": 807, \"fields\": {\"priority\": 1, \"description\": \"A defining social issue is the question of abortion. Currently, criminal law §218 disallows abortions generally, but decriminalizes them in case of rape, or if the pregnancy is under 12 weeks old. Additionally, §219a establishes an “ad ban” for doctors offering abortions. You’re asked for your stance on this controversial topic.\", \"likelihood\": 1.0}}, {\"model\": \"campaign_trail.question\", \"pk\": 738, \"fields\": {\"priority\": 1, \"description\": \"September 2021: Pictures of the disastrous retreat of NATO troops from Afghanistan go around the globe. Many loyal locals are left behind, as the Taliban are poised to make a comeback. The government is sharply criticized for its botched evacuation - what stance do you want to take?\", \"likelihood\": 1.0}}, {\"model\": \"campaign_trail.question\", \"pk\": 739, \"fields\": {\"priority\": 1, \"description\": \"September 2021: TV debates are a relatively recent phenomenon in Germany, only being consistent since 2002. Now, for the first time in German history, there will be a three-way debate, a so-called “Triell”. You, Olaf Scholz and Annalena Baerbock are all invited. What is going to be your strategy?\", \"likelihood\": 1.0}}, {\"model\": \"campaign_trail.question\", \"pk\": 740, \"fields\": {\"priority\": 1, \"description\": \"During the Triell, you decided to focus on Olaf Scholz, vice chancellor and candidate of the SPD. There are plenty of avenues to attack him and stun his momentum - which talking points do you emphasize?\", \"likelihood\": 1.0}},{\"model\": \"campaign_trail.question\", \"pk\": 808, \"fields\": {\"priority\": 1, \"description\": \"Along with the <i> Triell </i>, another TV debate is commonly held among surrogates of the smaller parties; the so-called <i>Vierkampf</i>. While the Greens have seemingly eclipsed the other Bundestag parties, it’s Janine Wissler of Die Linke, Christian Lindner of the FDP, Alice Weidel of the AfD and Alexander Dobrindt of the CSU, the smaller sister of the Union, debating about the issues of the day.\", \"likelihood\": 1.0}}, {\"model\": \"campaign_trail.question\", \"pk\": 743, \"fields\": {\"priority\": 1, \"description\": \"The 26th of September is almost here. Finally, this historically important campaign is coming to an end. Hopefully, though, 16 good years of CDU governance won’t! In your final lap for this year, you have a chance to get some support from a political ally. Who do you want to campaign with?\", \"likelihood\": 1.0}}]");
 extraQuestions = JSON.parse("[{\"model\": \"campaign_trail.question\", \"pk\": 741, \"fields\": {\"priority\": 1, \"description\": \"During the Triell, you decided to focus on Annalena Baerbock, chancellor candidate of the Greens. Earlier scandals have already hurt her campaign, and you may now deliver the coup de grace. What do you want to emphasize?\", \"likelihood\": 1.0}}, {\"model\": \"campaign_trail.question\", \"pk\": 742, \"fields\": {\"priority\": 1, \"description\": \"During the Triell, you decided to take the high road, and focus on making your case to the German people without mudslinging. There are many policies in the CDU/CSU programs, and you can employ different strategies of presenting yourself to the audience. How do you want to do that?\", \"likelihood\": 1.0}}, {\"model\": \"campaign_trail.question\", \"pk\": 809, \"fields\": {\"priority\": 1, \"description\": \"Up until now, your campaign has embraced a classically moderate-conservative Christian Democracy, mostly following the center-right party doctrine. Some advisors want you to pivot further left towards the median voter, while others want you to take the AfD’s wind out of their sails. In an internal meeting, you’re asked frankly: do you plan to keep this up?\", \"likelihood\": 1.0}}, {\"model\": \"campaign_trail.question\", \"pk\": 810, \"fields\": {\"priority\": 1, \"description\": \"Up until now, your campaign has been met with a noticeable hardline-conservative tone,  seemingly wanting to take the party rightwards, somewhat evocative of the CDU pre-Merkel. In an internal meeting, you’re asked frankly: do you plan to keep this up?\", \"likelihood\": 1.0}}, {\"model\": \"campaign_trail.question\", \"pk\": 851, \"fields\": {\"priority\": 1, \"description\": \"Over the course of this campaign, you have stood steadfast, like a rock in the waves, in support of Angela Merkel and her 16 year long chancellorship. You’ve essentially run as Merkel’s successor, but you’ve also carved out an identity for yourself, exuding competency, authenticity and integrity. At the end of this race, several conservative op-eds point you out as the single most capable man to safeguard Germany’s prosperity, and it resonates with swing voters.\", \"likelihood\": 1.0, \"question_number\": \"99\"}}, {\"model\": \"campaign_trail.question\", \"pk\": 852, \"fields\": {\"priority\": 1, \"description\": \"Over the course of this campaign, it was always your goal to rise above the pack, to be a beacon of stability and authenticity, just as your father, a miner, has taught you. Particularly your claim to Merkel’s succession was to be the lane you wanted to ride on. Unfortunately, numerous scandals and gaffes have plagued you over recent months, tainting that image a bit. What do you want to do to change that?\", \"likelihood\": 1.0, \"question_number\": \"99\"}}]");
-campaignTrail_temp.answers_json = JSON.parse("[{\"model\": \"campaign_trail.answer\", \"pk\": 4000, \"fields\": {\"question\": 717, \"description\": \"I am the Minister-President of North Rhine-Westphalia, the most populous state in Germany. The CDU is the party of competence - and none of my opponents has held a political office in the last few years. I will bring my expertise in modern governance to the national level.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4001, \"fields\": {\"question\": 717, \"description\": \"Out of the three candidates nominated, I am the only one who has actually won an election and in a former SPD-stronghold nonetheless, in a strong black-yellow coalition. It is crucial that we win the Bundestagswahl this fall, and I am the right man to do it!\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4002, \"fields\": {\"question\": 717, \"description\": \"I am more conservative than Röttgen and more liberal than Merz. By positioning myself between those two, I can split them apart and draw votes from whoever is knocked out on the first ballot - I’ll then win the second ballot by default.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4003, \"fields\": {\"question\": 717, \"description\": \"The party officials are largely behind me. They should push for me behind closed doors to make sure I win this contest. I will already focus on convincing swing voters for the election.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4004, \"fields\": {\"question\": 718, \"description\": \"I want to continue the legacy of the Merkel-era as much as possible. Her sixteen years of chancellorship were outstanding, and I promise to continue on that course.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4005, \"fields\": {\"question\": 718, \"description\": \"The CDU is the party for the middle of society. I will continue moving the party into the future, with a moderate and pragmatic course on the issues of the day.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4006, \"fields\": {\"question\": 718, \"description\": \"The strong showing of Merz has shown that the right wing of the party has too often been ignored by Merkel. Under my leadership, we will bring the party back on a more conservative path.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4007, \"fields\": {\"question\": 718, \"description\": \"While I will praise Merkel for her outstanding career, we need to acknowledge the challenges of the 21st century: particularly climate change. It is important that we don’t leave this topic to other parties, but present solutions of our own, that go beyond what we are doing now.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4008, \"fields\": {\"question\": 719, \"description\": \"While the lockdowns were the right thing to do, now that the winter is over and we have started to vaccinate people, it is time to return to normalcy. North Rhine-Westphalia will open up quickly.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4009, \"fields\": {\"question\": 719, \"description\": \"The situation is still very volatile and it is better to be cautious than reckless. We should keep the lockdowns for the foreseeable future, and only open up on strict criteria.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4010, \"fields\": {\"question\": 719, \"description\": \"While I’m all for opening up, we should keep an eye on the number of infected people and have a bridge lockdown during Easter if the case numbers become too high.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4011, \"fields\": {\"question\": 719, \"description\": \"This is a decision that the federal government and the states have to make together. I will wait and see what this process achieves and go with the majority opinion.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4012, \"fields\": {\"question\": 720, \"description\": \"Under no circumstances will we raise taxes, but we don’t want to dramatically lower them. We will phase out the extra tax of the Soli and try to reduce the burden on small and medium-income earners while always keeping the budget balanced, in keeping with the “Black Zero”.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4013, \"fields\": {\"question\": 720, \"description\": \"The Covid crisis has left a massive hole in our budget that we have to plug somehow. We have to be measured, but a tax increase will likely be unavoidable to avoid harsh debts that can hurt our economy even further.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4014, \"fields\": {\"question\": 720, \"description\": \"Taxes for private households should stay where they are or even be lowered by phasing out the Soli. More importantly, corporate taxes should be lowered to unleash the full economic potential of this country. As little State as necessary, as much market as possible.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4015, \"fields\": {\"question\": 720, \"description\": \"To stimulate the economy after the Covid crisis, taxes have to be lowered across the board for both private households and corporations. We also have to streamline tax bureaucracy, and consider new solutions, in the form of flat tax proposals for example.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4016, \"fields\": {\"question\": 721, \"description\": \"I was as shocked as everyone else when I found out about this! The parliamentary immunity of these MPs should promptly be removed so they can be properly investigated. Corruption has no place in the CDU/CSU!\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4017, \"fields\": {\"question\": 721, \"description\": \"Let’s wait and see how this develops. I’ll issue a brief statement that we want to wait until it’s clear what actually happened.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4018, \"fields\": {\"question\": 721, \"description\": \"This is nothing but a political hit job by a left-wing magazine in an election year. I’m sure further investigations will prove the innocence of these MPs.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4019, \"fields\": {\"question\": 721, \"description\": \"Let us be pragmatic. Two of our MPs may have indeed shown low moral inhibitions, but we shouldn’t judge the whole party based on the actions of two people. We support this investigation as much as anyone else, these are individual black sheep.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4020, \"fields\": {\"question\": 722, \"description\": \"This seems like a good time to declare my candidacy, yes. Though before I declare, I will make a courtesy call to Markus Söder, the party leader of our sister party, the CSU, to make sure he won’t oppose me.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4021, \"fields\": {\"question\": 722, \"description\": \"Yes, I will inform the upper party echelons and formally announce this during a press conference in my home state. There is no time to lose! It’s time for the campaign to get going.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4022, \"fields\": {\"question\": 722, \"description\": \"You know, it might be better to wait this out a bit longer - just biding our time and consolidating our party influence. I can declare after whatever announcement the Green party makes to get them out of the limelight.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4023, \"fields\": {\"question\": 723, \"description\": \"It wasn’t an easy decision. I thought about this long and hard, but I want to retract my candidacy. Söder is a competent man, has better polling numbers, many of our party members support him and I’m quite happy here serving as Minister-President of North Rhine-Westphalia.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4024, \"fields\": {\"question\": 723, \"description\": \"Let’s call every big name in the party, curry every favour, maybe we can even get Merkel herself to weigh in. I can’t have this decided by vote and risk being humiliated, I want this decided by the party elites now.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4025, \"fields\": {\"question\": 723, \"description\": \"The party parliamentary group of CDU and CSU shall vote on this. I’m confident they will pick me over Söder - his support primarily comes from Bavaria and I have the traditional prerogative as leader of the bigger party.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4026, \"fields\": {\"question\": 723, \"description\": \"The party parliamentary group of CDU and CSU shall vote on this. I’m confident they will pick me over Söder - his support primarily comes from Bavaria and I have the traditional prerogative as leader of the bigger party.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4027, \"fields\": {\"question\": 724, \"description\": \"First and foremost, I want to thank Markus Söder for accepting this outcome. We have to be united as a party to win this fall. Apart from that, I will hit my usual talking points, about stability, pragmatism, praising Merkel and acting on our values.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4028, \"fields\": {\"question\": 724, \"description\": \"This closer-than-expected contest has convinced me that I need to move my position and change my attitude on some topics. I’ll focus on how dealing with the pandemic and not opening up too quickly is of critical importance, how we need strong leadership in these trying times and new ideas to move forward, to build on Angela Merkel's successes.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4029, \"fields\": {\"question\": 724, \"description\": \"I will give a largely non-political speech. We need to focus on the importance of cohesion and trust in our society, to come together as one in the wake of this crisis, not letting our different views divide us, and the values of honest work. I want to bring up the anecdote about my father, who was a miner. A statesman is what we need right now.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4030, \"fields\": {\"question\": 724, \"description\": \"The success of the AfD showed us that this country is in dire need of change and a new direction, away from the Status Quo. I will promise to modernize Germany while letting our conservative values guide us in this progress. A new Germany, responsible and sensible.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4031, \"fields\": {\"question\": 725, \"description\": \"The Green party is always surging a few months before elections and comes crashing down in time, just like in 2011 after Fukushima. I’m not too worried - we should still focus more on competing with the SPD, our traditional opponent.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4032, \"fields\": {\"question\": 725, \"description\": \"I will take this development very seriously, clearly the demand is there to take the climate more seriously. Let’s unveil some of our own environmental policies to stop their momentum and defuse some of their criticisms.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4033, \"fields\": {\"question\": 725, \"description\": \"Off the record, it’s not the worst thing that these two parties compete for centre-left votes. This makes the path to first place a lot easier. Let’s focus somewhat on the Greens as our main contender in that regard, and just attack them moderately where we can.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4034, \"fields\": {\"question\": 725, \"description\": \"Actually, this is a bit ridiculous and reminds me of the publicity stunt the FDP pulled in 2002 when they nominated Guido Westerwelle as chancellor candidate. Let’s mock them for their hubris and don’t refer to Baerbock as a legitimate chancellor candidate.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4035, \"fields\": {\"question\": 726, \"description\": \"It is important that we don’t demonize Putin and keep our dialogue open. I’m critical of many things the Russian leadership has done, but overall, we should strive to cooperate with them, as we do on the Nord-Stream 2 pipeline.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4036, \"fields\": {\"question\": 726, \"description\": \"I’ve been more lenient in the past, but enough is enough. I will join in with the criticism against Kretschmer and call for a tougher stance towards Putin. Maybe we should only open the Nord-Stream 2 pipeline if we get some concessions from Russia.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4037, \"fields\": {\"question\": 726, \"description\": \"Kretschmer is completely right, we have to talk more with Russia, not less. I’m all in favor of more dialogue and stronger economic ties with Russia. Besides, it’s not like the USA has never done anything wrong.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4038, \"fields\": {\"question\": 726, \"description\": \"This whole thing is overblown, this trip was mostly for cultural exchange. I don’t have much to say about this. We stand on our commitment to Nato.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4501, \"fields\": {\"question\": 801, \"description\": \"I supported Merkel's decision at the time, we needed to take those people in to prevent a humanitarian catastrophe at the Austrian-Hungarian border. Today though, we need to be more mindful of European border security. To that end, we want to strengthen the EU border enforcement agency Frontex.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4502, \"fields\": {\"question\": 801, \"description\": \"There’s no way around it - Germany is an immigration country. We need a comprehensive overhaul of our immigration laws - we don’t have a good system in place to attract qualified immigrants, who could be advantageous to our economy and demographic situation.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4503, \"fields\": {\"question\": 801, \"description\": \"Merkel was absolutely right to take in these people. We’re saying: Refugees Welcome! As a western country partially responsible for colonialism, we have a responsibility for humanitarian aid, including initiatives to rescue capsized refugee boats in the mediterranean.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4504, \"fields\": {\"question\": 801, \"description\": \"On this issue, Merkel has erred - her rhetoric was dangerous in provoking even more refugees and immigrants to come here. We simply can’t take everyone. We need more border security in the EU and faster deportation processes to avoid another disaster - 2015 can’t repeat itself.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4039, \"fields\": {\"question\": 727, \"description\": \"This was a bad decision by the court. The Climate Protection Act already went far enough and I’m not in favor of hurting the economy with a stricter climate policy. We need to look out for our workers and industry, fear is not the answer.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4040, \"fields\": {\"question\": 727, \"description\": \"It is important that we quickly implement the new law. I’m especially in favour of a price for CO<sub>2</sub> that is formed by market forces. We have to make sure that everyone can keep affording their energy bills, though, and we need to use this opportunity to create new jobs.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4041, \"fields\": {\"question\": 727, \"description\": \"We have to become carbon neutral long before 2050. I’m sure the government under Merkel will come up with a sensible solution, which I will continue as chancellor.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4042, \"fields\": {\"question\": 727, \"description\": \"With the decision by the court, we now have a great opportunity for an ambitious new Climate Protection Act. I advocate for Germany to be carbon neutral by 2040 and to accelerate the transition to renewable energies. We simply can’t wait anymore.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4505, \"fields\": {\"question\": 802, \"description\": \"Yes, I do. Angela Merkel is a highly esteemed stateswoman and one of the best chancellors this country ever had - although to modernize our party, we have to recalibrate our course on climate change and protecting our social safety net. The CDU is an innovative party of the 21st century, and I will not let myself get intimidated by right-wing demagogues.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4506, \"fields\": {\"question\": 802, \"description\": \"I do not think in ideological categories, I’m simply standing for what I think is good for Germany. The CDU is the party of good governance - not radicalism, both leftist or rightist.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4507, \"fields\": {\"question\": 802, \"description\": \"I wanted to begin this campaign by bringing us all together - now we can try to tilt the discourse rightwards, taking Merkel supporters with us while framing our conservative positions as more reasonable.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4043, \"fields\": {\"question\": 728, \"description\": \"We need to open up quickly for vaccinated people. A return to normalcy has never been so close, and we all had more than enough of lockdowns - not every measure might still be proportionate. Vaccinated people have less risk and thus should receive more benefits.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4044, \"fields\": {\"question\": 728, \"description\": \"We are currently in a very critical phase of the pandemic, a phase in which cohesion could easily be endangered. Vaccinated people should be exempt from some restrictions, but let’s not go overboard. We need to move forward together and be patient until science tells us that it’s safe.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4045, \"fields\": {\"question\": 728, \"description\": \"It’s important that as many people as possible get vaccinated as quickly as possible so we can overcome this crisis, but that’s not what’s happening. Maybe we should question the prioritization system we have right now.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4046, \"fields\": {\"question\": 728, \"description\": \"The vaccine seems helpful now, but we haven’t had a chance to study its side effects yet. We should be mindful of our bodily health and not be too quick in our judgment - I advocate for a slowdown of the vaccination campaign until we have more information.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4047, \"fields\": {\"question\": 729, \"description\": \"For years and years, we have consistently missed the NATO aim to spend 2% of our gross domestic product on defense. I strongly reaffirm our commitment to NATO and this goal! The West has to be united against potential threats.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4048, \"fields\": {\"question\": 729, \"description\": \"While I strongly reaffirm our support of a united Alliance and strong defense, I specifically want to call out Annalena Baerbock. She lacks a clear commitment to NATO, which is not appropriate for a chancellor.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4049, \"fields\": {\"question\": 729, \"description\": \"I want to praise the work we’ve done so far and believe we are in a good spot. While I strongly reaffirm my commitment to NATO, we don’t need to spend more on defense than we do right now; we need to combat waste first and foremost.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4050, \"fields\": {\"question\": 729, \"description\": \"NATO is a relic of the cold war. We should stay a member for now, but we should also try to find avenues for cooperating with other nations, keep reaffirming our neutrality, and open up new dialogues with Russia or China.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4508, \"fields\": {\"question\": 803, \"description\": \"The heart of this problem lies in Germany's low birth rates. We need to further encourage the founding of families, with benefits for married and childbearing couples. Family-friendly policies will strengthen our social cohesion and collective values and invest in our future.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4509, \"fields\": {\"question\": 803, \"description\": \"A sustainable answer to keep our social support net afloat lies in immigration. We are an attractive place in Europe for many seeking a safe and economically secure future, and we should finally implement a real immigration law, for example with a Canada-style point-system.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4510, \"fields\": {\"question\": 803, \"description\": \"It's clear that the current system is unsafe. We should build on our public pension system, reform the Riester-system, and refrain from raising the pension age any further than 67! We also need to introduce a higher state-provided minimum pension to fight old-age poverty.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4511, \"fields\": {\"question\": 803, \"description\": \"We need to overhaul the bureaucratic costs of the system and listen to the decisions of the advisory councils. The mix of public, occupational and private pension systems contributes to safe pension levels, particularly occupational and private provisions should be strengthened. We can also look at Swedish-style stock-based pension funds.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4051, \"fields\": {\"question\": 730, \"description\": \"I want to congratulate Haseloff for his strong performance. It shows that the citizens still trust the CDU to be the best governing party, and we want to emulate his strategy on a national scale.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4052, \"fields\": {\"question\": 730, \"description\": \"Haseloff performed very well, but I want to emphasize that the AfD lost votes. When we keep appealing and listening to all people, without prejudice, we can win them back for the democratic parties.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4053, \"fields\": {\"question\": 730, \"description\": \"This was a very strong performance. To show my gratitude, I will make an extra trip to Saxony-Anhalt and campaign with him for some nice pictures.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4512, \"fields\": {\"question\": 804, \"description\": \"We should definitely hit her on these topics. This is unprofessional behavior that should not happen in the chancellery. These concerns about her integrity have to be addressed.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4513, \"fields\": {\"question\": 804, \"description\": \"Not only that - did you notice how she used the N-Word in that interview, and had to be censored out? Such mistakes of communication are unacceptable for a chancellor, and the problematic nature of this faux pas should sheds doubt on her character.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4514, \"fields\": {\"question\": 804, \"description\": \"People can make their own decisions about this, what I want to talk about is substance. Her policies are expensive for the middle class and ineffective, and she knows it. She talks - I act.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4515, \"fields\": {\"question\": 804, \"description\": \"People aren’t clamoring for my comments here, they will be judged on their own. I want to stay positive and talk about the successes I will bring to Germany.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4054, \"fields\": {\"question\": 731, \"description\": \"The pandemic has shown how ill-prepared our schools are. We need to continue improving digital infrastructure in education, through more training, technical assets and a national educational platform. That is what the CDU/CSU has worked on, and will continue doing.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4055, \"fields\": {\"question\": 731, \"description\": \"Actually, we don’t have much to gain by talking about this topic - many voters see us as responsible for the current situation. Let’s downplay it as much as we can and focus on issues where we are seen as more competent, like matters of security or debt.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4056, \"fields\": {\"question\": 731, \"description\": \"We definitely need to modernize the digital infrastructure of Germany, especially in the public sector. Administrative matters have to be more accessible to citizens, we need to digitize all internal processes and cut down on bureaucracy.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4057, \"fields\": {\"question\": 731, \"description\": \"Digitalization is a key issue - we need a digital transformation offensive. I want to especially emphasize that we will accomplish a nationwide 5G mobile network by 2025 and provide 15 billion Euros for Gigabit-networks. To that end, we will also establish a Ministry of Digital Innovation and Transformation.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4516, \"fields\": {\"question\": 805, \"description\": \"We need to alleviate the housing market by building more. We need to build more than 100.000 housing units, using tax benefits. We should also provide funding to revitalize our cities and villages, advertise rural spaces and reduce the real estate transfer tax - every family should be able to own a home.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4517, \"fields\": {\"question\": 805, \"description\": \"We need to emphasize the creation of more social housing, built by modern standards available for those who need it most. For families, we can make buying empty buildings in the countryside easier for young people, as we do in NRW. Furthermore, we need to fight land speculation and close tax loopholes.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4518, \"fields\": {\"question\": 805, \"description\": \"The situation is tense. It’s clear that action is needed in the form of rent controls. A sharper, unlimited federal rent control program should be introduced. In places where the situation is very problematic, we stand for a so-called ‘rent moratorium’, where rent would only be able to increase with the inflation rate.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4519, \"fields\": {\"question\": 805, \"description\": \"We are vehemently against programs like rent controls. Social housing projects have failed to improve the situation - instead we need to support low income renters through housing subsidies. Regulations have to be cut back, we need slimmer bureaucracies and faster approval processes so that the market can sort itself out.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4058, \"fields\": {\"question\": 732, \"description\": \"The most important thing we can do right now is help the affected regions with their crisis management. They need help now, quickly and unbureaucratically. I’m promising swift support.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4059, \"fields\": {\"question\": 732, \"description\": \"I want to especially praise local teams and local reactions. Some areas already had crisis teams ready when the sun was still shining and no one knew what would happen. We will follow up and provide a better crisis responses in the future.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4060, \"fields\": {\"question\": 732, \"description\": \"First, we need to quickly and diligently help the affected regions with the cleanup operations. After that, we have to guarantee financial emergency aid for affected people, unequivocally.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4061, \"fields\": {\"question\": 732, \"description\": \"I want to honor the victims, but also address the cause of all this: climate change. Extreme weather events are unfortunately going to become more common -  we need to act decisively and swiftly now to keep global warming below 1.5°C so that we can prevent these disasters.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4062, \"fields\": {\"question\": 733, \"description\": \"Actually, I don’t want to be seen as performative. The cleanup operations can be left to professionals, I will keep coordinating the crisis efforts from the state chancellery so that everything goes smoothly - that’s the best I can do for the victims.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4063, \"fields\": {\"question\": 733, \"description\": \"I want to get out there, yes. I have to look at the carnage myself, at least for a day or two. NRW is among the most affected states after all. Let’s try to keep my visits below the radar though, so we don’t generate too much media buzz - that could be seen as opportunistic. Maybe some interviews with local newspapers and radio stations.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4064, \"fields\": {\"question\": 733, \"description\": \"What a great idea! We should get out there and visit some affected towns - our President Frank-Walter Steinmeier will be here in a few days, so let’s try to get some shared pictures with our head of state. Catch some of his gravitas.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4065, \"fields\": {\"question\": 733, \"description\": \"What a great idea! We should get out there and visit some affected towns - our President Frank-Walter Steinmeier will be here in a few days, so let’s try to get some shared pictures with our head of state. Catch some of his gravitas.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4066, \"fields\": {\"question\": 734, \"description\": \"The floods have shown that we need to be much more ambitious than before. One of the worst offenders is our energy production: we need to stop using coal for energy generation by 2030 and seek out new innovative technologies to keep energy affordable.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4067, \"fields\": {\"question\": 734, \"description\": \"Climate change is coming, whether we want it or not. The most important thing we can do is mitigate its worst effects to prevent catastrophes like this from doing too much damage - we need better crisis responses. Climate action is necessary, as long as it doesn't stifle our economy and freedom of living.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4068, \"fields\": {\"question\": 734, \"description\": \"Germany is no stranger to floods. I’m sorry, but just because today is a day like this, you don't just change your politics. The question of climate change is an international one, we can’t trivialize it like this.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4069, \"fields\": {\"question\": 734, \"description\": \"We clearly need to pick up the pace on climate action. But if you look back, it’s the environmentalist movement who concentrated on the wrong issue; for 20 years they’ve fought to end nuclear energy, instead of coal. Germany now exits nuclear as pretty much the only country, our focus is misguided.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4070, \"fields\": {\"question\": 735, \"description\": \"Compulsion is the wrong way to go about this, and probably unconstitutional. Instead, we need to convince people of the dangers of not being vaccinated and to continue our information campaign as we are now.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4071, \"fields\": {\"question\": 735, \"description\": \"While I wouldn’t go that far, as we might run into legal issues, we should give people more incentives to get vaccinated. One solution might be to open up certain establishments from the lockdown, but only for vaccinated and recovered people.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4072, \"fields\": {\"question\": 735, \"description\": \"Covid is basically over, the case numbers are very low. One has to be honest and ask: Do we even need such an expensive program? Vaccines are good to have, but we should focus on opening up and treating Covid as the non-problem it has become.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4073, \"fields\": {\"question\": 735, \"description\": \"This might be a good idea. The country needs to move on, we need to do everything we can to finally make Covid history. At some point, we need to have the conversation about mandatory vaccines, and fine those that refuse to get one.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4074, \"fields\": {\"question\": 736, \"description\": \"We have to modernize my image. Let’s incorporate some biographical elements, like that my father was a miner, and show pictures of how I closed the last mine in North Rhine-Westphalia. Then talk about tackling climate change together and how we need to promote tolerance.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4075, \"fields\": {\"question\": 736, \"description\": \"Covid is still on the mind of most people. Let’s focus on my response to this crisis, show me in a lab coat or something. With a strong vaccination campaign, we will continue Merkel's course and bring normalcy back!\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4076, \"fields\": {\"question\": 736, \"description\": \"It’s best to play it safe. My motto is “Making Germany Together” - I want a spot about how I’m bringing different people together and how our country needs solidarity in this crisis. Let’s show the diversity in our supporters and promise that we will bounce back stronger than before.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4077, \"fields\": {\"question\": 736, \"description\": \"I’ve been governing North Rhine-Westphalia successfully since 2017. I want to talk about my home, show my successes here and promise to bring them to Germany, as a <i>Landesvater</i>. Give off an air of trustworthiness - let’s even invoke chancellor Merkel’s“You know me.”-quip from 2013.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4520, \"fields\": {\"question\": 806, \"description\": \"Cannabis is a societal reality, like alcohol. We should start to take steps towards a regulated distribution to adults, accompanied by addiction prevention measures. The possession of small amounts shouldn’t be prosecuted anymore.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4521, \"fields\": {\"question\": 806, \"description\": \"We are against the legalization of illegal drugs. The risks for the individual and society are too great - instead, we should work towards addiction prevention, as well as early and suitable sanctions, that incentivise taking counseling and therapy. We do acknowledge the medical usage of Cannabis, however.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4522, \"fields\": {\"question\": 806, \"description\": \"Legalize it! We are for permitting the controlled distribution of Cannabis, through regulated sales in licenced shops. We do need projects to prevent drug abuse and youth protection though, financed through consumption taxes, as well as a legal framework around marihuana usage.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4523, \"fields\": {\"question\": 806, \"description\": \"Not at all: we need to further pursue drug users and lower the amount of cannabis that is legally prosecuted. Our goal is a drug free society. Look at the Netherlands, they have decriminalized the possession of just 5 grams, with fatal consequences - that won’t happen to our children.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4078, \"fields\": {\"question\": 737, \"description\": \"We will talk with all democratic parties - the SPD, the Greens and the FDP. However, I want to needle the leftist parties for not ruling out a coalition with the extremist Left. They are fringe populists, unfit to govern.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4079, \"fields\": {\"question\": 737, \"description\": \"We rule out coalitions with the extremes. Normally we would talk with everyone in the center, but it’s clear how a continuation of the Grand Coalition of the last 8 years would not have a public mandate. We need to find a different governing majority.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4080, \"fields\": {\"question\": 737, \"description\": \"The last few years have shown how we can not ignore the 10-15% of the populace voting for the AfD. This country needs change and new solutions. I think a Bahamas coalition with the AfD and the FDP could work - Austria showed us how the right wing can govern harmonically.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4081, \"fields\": {\"question\": 737, \"description\": \"My favorite coalition would be Black-Yellow, like the one I’m leading in North Rhine-Westphalia now. The FDP is a reliable partner, and we could get some really good policies done together.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4524, \"fields\": {\"question\": 807, \"description\": \"While §218 is a settled compromise from our societal discussions, we are for striking the §219a ad ban: women who are deciding on an abortion need unrestricted access to information. We also need to train more doctors and prevent pressure from abortion opponents in front of clinics.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4525, \"fields\": {\"question\": 807, \"description\": \"We want to strike §218, 219 and 219a from the books completely. Pregnancy issues are not part of criminal law - abortion is a medical service that has to be managed as part of regular health care. The stigma has to be broken, and the supply of doctors offering abortion has to be increased.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4526, \"fields\": {\"question\": 807, \"description\": \"The current situation is fine as is. Unborn life does have a right to be protected. Furthermore, the ad ban has already been loosened two years ago, to provide better access to information for affected women and legal certainty for doctors and hospitals, if an abortion is necessary.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4527, \"fields\": {\"question\": 807, \"description\": \"The right to life does not stand to disposition. The unborn child has a right to live, and we stand vehemently against efforts to trivialize or encourage abortions from the state. Instead, adoption procedures should be simplified - while doctors who do not report abortions have to incur noticeable sanctions.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4082, \"fields\": {\"question\": 738, \"description\": \"This is the biggest debacle for NATO since its founding, but also a miscalculation on the part of the government. We need a relentless analysis of what went wrong. I also need to criticize the USA’s role in this, the mandate for our troops still went until 2022, but we can’t hold it down alone.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4083, \"fields\": {\"question\": 738, \"description\": \"It’s a disgrace how so many good people would now have to live under civil strife and a possible Taliban takeover. We need to take in more refugees from Afghanistan, especially people who cooperated with the German troops. We owe it to them, after their generous help!\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4084, \"fields\": {\"question\": 738, \"description\": \"Foreign Minister Heiko Maas of the SPD is clearly to blame for our part in this crisis, and has to take political responsibility. He should have started the evacuations much earlier, and there should be direct repercussions for his position.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4085, \"fields\": {\"question\": 738, \"description\": \"Okay, uh… one thing’s clear, we can’t have a repeat of the refugee crisis in 2015. Let’s tell them, we are watching the situation closely, but we concur with Interior Minister Horst Seehofer that criminal refugees still have to be sent back to Afghanistan, with a zero-tolerance policy.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4086, \"fields\": {\"question\": 739, \"description\": \"Olaf Scholz has been surging a lot in the polls recently and privately, I worry that he will not stop. We compete for a lot of voters with his wannabe-Merkel attitude - it seems foolish to do anything but attack him on his many weaknesses.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4087, \"fields\": {\"question\": 739, \"description\": \"Baerbock has been struggling lately, but the Greens are still a strong party with a vulnerable candidate, and some voters we could pick up. Let’s focus on her.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4088, \"fields\": {\"question\": 739, \"description\": \"I will leave petty attacks to my opponents and focus more on policy. I’m certain the German people will appreciate hearing concrete solutions to their problems more than attacks. This isn’t America.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4089, \"fields\": {\"question\": 739, \"description\": \"Actually, I don’t want two left-wing politicians to gang up on me. This format is not up to the times and I can guarantee, time will not be allotted fairly to the only centrist party at the table. Thus, I must decline this invitation.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4090, \"fields\": {\"question\": 740, \"description\": \"He likes to present himself as a moderate, but he hasn’t completely ruled out a coalition with the extremist Left party. Can voters really trust him not to form a coalition with populist demagogues after the election?\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4091, \"fields\": {\"question\": 740, \"description\": \"Let’s hit him on his scandals as finance minister. Under his watch, Wirecard collapsed due to fraudulent dealings and lots of people lost their money. We need to poke attention to the police raid on a government office belonging to his ministry - he refuses to take responsibility.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4092, \"fields\": {\"question\": 740, \"description\": \"Scholz likes to pretend he’s a moderate, but the program of his party is ideological and leftwing, with unrealistic promises regarding pensions and the minimum wage. It shows that the SPD as a whole is unfit to govern, and a symbol of past days.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4093, \"fields\": {\"question\": 740, \"description\": \"Actually, I’ve changed my mind. The mudslinging isn’t worth it - after giving my usual critiques I’ll just wing it and rely on my instincts as a statesman to rise above the pack.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4094, \"fields\": {\"question\": 741, \"description\": \"She’s had problems with plagiarism in her book, and she inflated her CV. These might seem like minor things, but can she really be trusted to govern this country, if she fails at these minor tasks?\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4095, \"fields\": {\"question\": 741, \"description\": \"Everyone on this stage agrees that something has to be done about climate change, but what Mrs Baerbock and her party want can’t be the solution! We need to involve everyone, protect livelihoods and emphasize innovation, instead of blanket bans, as Mrs. Baerbock advocates.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4096, \"fields\": {\"question\": 741, \"description\": \"I’ll attack her for her willingness to govern with the radical Left party. Moderates should be frightened by this prospect, there should be a firewall against Radicals of all stripes, and entertaining a coalition with the Left, as the Greens do repeatedly is irresponsible.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4097, \"fields\": {\"question\": 741, \"description\": \"Actually, I’ve changed my mind. The mudslinging isn’t worth it - I’ll just broadly criticize Baerbock for her incompetence and then just wing it, relying on my instincts as a statesman to rise above the pack.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4098, \"fields\": {\"question\": 742, \"description\": \"I want to present myself as a candidate for pragmatic solutions to climate change. We clearly have to take action: What we need is room for market innovation and international cooperation. I’m proud of the path Germany is on in this regard - we don’t need strict bans.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4099, \"fields\": {\"question\": 742, \"description\": \"With two left-leaning politicians debating with me, I will present myself as the voice of reason. We have tax and social security plans that are actually affordable and generally promise sensible governance. The CDU is the party of the healthy centre - of competency and fiscal responsibility.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4100, \"fields\": {\"question\": 742, \"description\": \"You know me. I’m a known quantity from North Rhine-Westphalia, where I’ve governed with prudence and caution - just like Chancellor Merkel. I’m the candidate who stands for a continuation of the Merkel era - with me, Germany will stay on its successful path.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4101, \"fields\": {\"question\": 742, \"description\": \"Actually, screw this! I know they won’t hold back, so I won’t either. We have enough ammunition to show Baerbocks and Scholz’ incompetence, and I shouldn’t be afraid to use it. That way, I can sharpen my profile and show myself as the most competent candidate.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4528, \"fields\": {\"question\": 808, \"description\": \"Let's hope Mr. Dobrindt makes a good impression for the Union cause.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4529, \"fields\": {\"question\": 808, \"description\": \"Let's hope Mr. Dobrindt makes a good impression for the Union cause.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4530, \"fields\": {\"question\": 808, \"description\": \"Let's hope Mr. Dobrindt makes a good impression for the Union cause.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4531, \"fields\": {\"question\": 808, \"description\": \"Let's hope Mr. Dobrindt makes a good impression for the Union cause.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4102, \"fields\": {\"question\": 743, \"description\": \"It’s important that all wings of our party stay united and motivated to vote. Let’s campaign with Friedrich Merz to show that I’m taking people like him and his positions seriously - the CDU has a clear profile, and I’m proud to stand with him for our values!\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4103, \"fields\": {\"question\": 743, \"description\": \"Who else but Chancellor Angela Merkel could be the right person? She is a figure larger than life, a great icon who has won the last four elections, and I want to show people that I’m the one to continue her legacy.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4104, \"fields\": {\"question\": 743, \"description\": \"No matter what happens, we have to make sure the right-wing demagogues do not increase their vote shares. I’m worried about the AfD taking first place in some East German states, and direct mandates could go to them: I need to campaign broadly in the New States, with local colleagues like Haselhof and Kretschmer.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4105, \"fields\": {\"question\": 743, \"description\": \"Markus Söder and I didn’t always have the warmest relationship, but there is a reason he gave me such a scare - the man has charisma. Let’s campaign with him in Bavaria and show some unity between the CDU and CSU.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4532, \"fields\": {\"question\": 809, \"description\": \"I stand by my moderate credentials, I am a proud Christian Democrat. However, we are competing with two left-wing alternatives- in order to win a strong mandate, we need to pivot leftwards, toward the center.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4533, \"fields\": {\"question\": 809, \"description\": \"The CDU is the party of the center. We have done a great job at governing over the last 16 years, and while we need to move into the future, our future is a Christian-Democratic one. I stand by my course.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4534, \"fields\": {\"question\": 809, \"description\": \"Merz has tapped into a surprisingly large voter potential in 2018: Merkel-sceptic conservatives. The chancellor has become popular with voters of the other parties - for us, some of her policies are a bit more controversial. On these issues, we definitely need to move rightwards - to provide for a real alternative to the Greens and SPD.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4535, \"fields\": {\"question\": 810, \"description\": \"I stand for what I think is right, but it’s become clear to me we need to defuse ourselves. Let’s reconcile with the more leftwards elements of the party - so that they won’t defect to the Liberals, or even our opponents.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4536, \"fields\": {\"question\": 810, \"description\": \"Yes. I stand for what I believe is right in this country, and it’s clear how we need a change in attitude in Germany to stay competitive. Our standing in the world is decreasing, and we need to work towards improving our country to be the best it can be, because we are patriots.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4537, \"fields\": {\"question\": 810, \"description\": \"Look - chancellor Merkel is a competent woman who I respect. But the fact of the matter is, her policies have tilted leftwards, both socially and economically. What our country needs in the post-Merkel era are policies more in line with conservative doctrines - the AfD’s success has shown that. If anything, we need to come back to our roots and move this country to the right.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4538, \"fields\": {\"question\": 730, \"description\": \"While the results in Saxony-Anhalt are definitely praiseworthy, me and my surrogates should focus on Baerbock’s scandals. We’re running a national campaign - and directly dealing with our opponent might be better than lingering on state elections.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4600, \"fields\": {\"question\": 820, \"description\": \"The AfD found its success primarily on the back of our parties veering leftwards under Merkel. By taking their concerns seriously and pivoting back rightward on social and economical issues, we can position ourselves as the only electable conservative option for the right wing.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4601, \"fields\": {\"question\": 820, \"description\": \"It’s a populist movement. Who voted for Hitler? Right, the jobless. These people feel like the system has failed them personally, so they turn away from it. By producing good policies, creating jobs and furthering our prosperity we can restore the trust in the economic and individual potential of Germany, and thus, relegitimize our system.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4602, \"fields\": {\"question\": 820, \"description\": \"Helmut Kohl was a great man, but privately, we have to admit, the reunification of Germany has failed in many parts. We need a new culture of respect towards East Germany, to show presence and listen to them, to get more East German politicians into the limelight. That way, we’ll take the AfD’s base right from under their feet.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4603, \"fields\": {\"question\": 820, \"description\": \"This semi-fascist party likes to complain, but they have no answers themselves. We need to vehemently denounce their xenophobic, even antisemitic tendencies, while showing off just how hollow their program is. We won’t stoop down to their level and compromise our values. They don’t want to do politics, they want to destroy democracy.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4604, \"fields\": {\"question\": 821, \"description\": \"It’s a disgrace how so many good people would now have to live under civil strife and a possible Taliban takeover. We need to take in more refugees from Afghanistan, especially people who cooperated with the German troops. We owe it to them, after their generous help!\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4605, \"fields\": {\"question\": 821, \"description\": \"Okay, uh… one thing’s clear, we can’t have a repeat of the refugee crisis in 2015. Let’s tell them, we are watching the situation closely, but we concur with Interior Minister Horst Seehofer that criminal refugees still have to be sent back to Afghanistan, with a zero-tolerance policy.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4606, \"fields\": {\"question\": 821, \"description\": \"It’s a disgrace how so many good people would now have to live under civil strife and a possible Taliban takeover. We need to take in more refugees from Afghanistan, especially people who cooperated with the German troops. We owe it to them, after their generous help!\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4607, \"fields\": {\"question\": 821, \"description\": \"Okay, uh… one thing’s clear, we can’t have a repeat of the refugee crisis in 2015. Let’s tell them, we are watching the situation closely, but we concur with Interior Minister Horst Seehofer that criminal refugees still have to be sent back to Afghanistan, with a zero-tolerance policy.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4608, \"fields\": {\"question\": 821, \"description\": \"We need to open up quickly for vaccinated people. A return to normalcy has never been so close, and we all had more than enough of lockdowns - not every measure might still be proportionate. Vaccinated people have less risk and thus should receive more benefits.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4609, \"fields\": {\"question\": 821, \"description\": \"It's clear that the current system is unsafe. We should build on our public pension system, reform the Riester-system, and refrain from raising the pension age any further than 67! We also need to introduce a higher state-provided minimum pension to fight old-age poverty.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4610, \"fields\": {\"question\": 821, \"description\": \"It's clear that the current system is unsafe. We should build on our public pension system, reform the Riester-system, and refrain from raising the pension age any further than 67! We also need to introduce a higher state-provided minimum pension to fight old-age poverty.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4611, \"fields\": {\"question\": 821, \"description\": \"We need to emphasize the creation of more social housing, built by modern standards, available for those who need it most. For families, we can make buying empty buildings in the countryside easier for young people, as we do in NRW. Furthermore, we need to fight land speculation and close tax loopholes.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4612, \"fields\": {\"question\": 821, \"description\": \"We need to emphasize the creation of more social housing, built by modern standards, available for those who need it most. For families, we can make buying empty buildings in the countryside easier for young people, as we do in NRW. Furthermore, we need to fight land speculation and close tax loopholes.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4613, \"fields\": {\"question\": 821, \"description\": \"First and foremost, I want to thank Markus Söder for accepting this outcome. We have to be united as a party to win this fall. Apart from that, I will hit my usual talking points, about stability, pragmatism, praising Merkel and acting on our values.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4614, \"fields\": {\"question\": 821, \"description\": \"First and foremost, I want to thank Markus Söder for accepting this outcome. We have to be united as a party to win this fall. Apart from that, I will hit my usual talking points, about stability, pragmatism, praising Merkel and acting on our values.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4615, \"fields\": {\"question\": 821, \"description\": \"This closer-than-expected contest has convinced me that I need to change my attitude on some topics. I’ll focus on how a harsh line on the pandemic and on climate change is of critical importance, how we need strong leadership in these trying times and new ideas to move forward, to build on Angela Merkel's successes.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4616, \"fields\": {\"question\": 821, \"description\": \"NATO is a relic of the cold war. We should stay a member for now, but we should also try to find avenues for cooperating with other nations, keep reaffirming our neutrality, and open up new dialogues with Russia or China, as I did with my visit to Moscow last year.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4617, \"fields\": {\"question\": 821, \"description\": \"For years and years, we have consistently missed the NATO aim to spend 2% of our gross domestic product on defense. I strongly reaffirm our commitment to NATO and this goal! The West has to be united against potential threats.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4618, \"fields\": {\"question\": 821, \"description\": \"While I strongly reaffirm our support of a united Alliance and strong defense, I specifically want to call out Annalena Baerbock. She lacks a clear commitment to NATO, which is not appropriate for a chancellor.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4619, \"fields\": {\"question\": 821, \"description\": \"I want to praise the work we’ve done so far and believe we are in a good spot. While I strongly reaffirm my commitment to NATO, we don’t need to spend more on defense than we do right now; we need to combat waste first and foremost.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4620, \"fields\": {\"question\": 821, \"description\": \"NATO is a relic of the cold war. We should stay a member for now, but we should also try to find avenues for cooperating with other nations, keep reaffirming our neutrality, and open up new dialogues with Russia or China, as I did with my visit to Moscow last year.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4621, \"fields\": {\"question\": 821, \"description\": \"We should definitely hit her on these topics. This is unprofessional behavior that should not happen in the chancellery. These concerns about her integrity have to be addressed.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4622, \"fields\": {\"question\": 821, \"description\": \"Not only that - did you notice how she used the N-Word in that interview, and had to be censored out? Such mistakes of communication are unacceptable for a chancellor, and the problematic nature of this faux pas should shed doubt on her character.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4623, \"fields\": {\"question\": 821, \"description\": \"People aren’t clamoring for my comments here, they will be judged on their own. I want to stay positive and talk about the successes I will bring to Germany - but my surrogates can keep attacking her.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4624, \"fields\": {\"question\": 821, \"description\": \"People aren’t clamoring for my comments here, they will be judged on their own. I want to stay positive and talk about the successes I will bring to Germany - but my surrogates can keep attacking her.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4625, \"fields\": {\"question\": 821, \"description\": \"I want to honor the victims, but also address the cause of all this: climate change. Extreme weather events are unfortunately going to become more common -  we need to act decisively and swiftly now to keep global warming below 1.5°C so that we can prevent these disasters.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4626, \"fields\": {\"question\": 821, \"description\": \"I want to honor the victims, but also address the cause of all this: climate change. Extreme weather events are unfortunately going to become more common -  we need to act decisively and swiftly now to keep global warming below 1.5°C so that we can prevent these disasters.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4627, \"fields\": {\"question\": 821, \"description\": \"The floods have shown that we need to be much more ambitious than before. One of the worst offenders is our energy production: we need to stop using coal for energy generation by 2030 and seek out new innovative technologies to keep energy affordable.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4628, \"fields\": {\"question\": 821, \"description\": \"Climate change is coming, whether we want it or not. The most important thing we can do is mitigate its worst effects to prevent catastrophes like this from doing too much damage - we need better crisis responses. Climate action is necessary, as long as it doesn't stifle our economy and freedom of living.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4629, \"fields\": {\"question\": 821, \"description\": \"Germany is no stranger to floods. I’m sorry, but just because today is a day like this, you don't just change your politics. The question of climate change is an international one, we can’t trivialize it like this.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4630, \"fields\": {\"question\": 821, \"description\": \"The floods have shown that we need to be much more ambitious than before. One of the worst offenders is our energy production: we need to stop using coal for energy generation by 2030 and seek out new innovative technologies to keep energy affordable.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4631, \"fields\": {\"question\": 821, \"description\": \"Germany is no stranger to floods. I’m sorry, but just because today is a day like this, you don't just change your politics. The question of climate change is an international one, we can’t trivialize it like this.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4632, \"fields\": {\"question\": 821, \"description\": \"Covid is basically over, the case numbers are very low. One has to be honest and ask: Do we even need such an expensive program? Vaccines are good to have, but we should focus on opening up and treating Covid as the non-problem it has become.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4633, \"fields\": {\"question\": 821, \"description\": \"This might be a good idea. The country needs to move on, we need to do everything we can to finally make Covid history. At some point, we need to have the conversation about mandatory vaccines, and fine those that refuse to get one..\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4634, \"fields\": {\"question\": 821, \"description\": \"Covid is still on the mind of most people. Let’s focus on my response to this crisis, show me in a lab coat or something. With a strong vaccination campaign, we will continue Merkel's course and bring normalcy back!\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4635, \"fields\": {\"question\": 821, \"description\": \"Covid is still on the mind of most people. Let’s focus on my response to this crisis, show me in a lab coat or something. With a strong vaccination campaign, we will continue Merkel's course and bring normalcy back!\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4636, \"fields\": {\"question\": 821, \"description\": \"I’ve been governing North Rhine-Westphalia successfully since 2017. I want to talk about my home, show my successes here and promise to bring them to Germany, as a <i>Landesvater</i>. Give off an air of trustworthiness - let’s even invoke Angela Merkel’s “You know me.”-quip from 2013.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4637, \"fields\": {\"question\": 821, \"description\": \"We want to strike §218, and 219 from the books completely. Pregnancy issues are not part of criminal law - abortion is a medical service that has to be managed as part of regular health care. The stigma has to be broken, and the supply of doctors offering abortion has to be increased.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4638, \"fields\": {\"question\": 821, \"description\": \"The right to life does not stand to disposition. The unborn child has a right to live, and we stand vehemently against efforts to trivialize or encourage abortions from the state. Instead, adoption procedures should be simplified - while doctors who do not report abortions have to incur noticeable sanctions.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4639, \"fields\": {\"question\": 821, \"description\": \"We want to strike §218, and 219 from the books completely. Pregnancy issues are not part of criminal law - abortion is a medical service that has to be managed as part of regular health care. The stigma has to be broken, and the supply of doctors offering abortion has to be increased.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4640, \"fields\": {\"question\": 821, \"description\": \"The right to life does not stand to disposition. The unborn child has a right to live, and we stand vehemently against efforts to trivialize or encourage abortions from the state. Instead, adoption procedures should be simplified - while doctors who do not report abortions have to incur noticeable sanctions.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4641, \"fields\": {\"question\": 821, \"description\": \"The last few years have shown how we can not ignore the 10-15% of the populace voting for the AfD. This country needs change and new solutions. I think a Bahamas coalition with the AfD and the FDP could work - our neighbor Austria showed us how the right wing can govern harmonically.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4642, \"fields\": {\"question\": 821, \"description\": \"The last few years have shown how we can not ignore the 10-15% of the populace voting for the AfD. This country needs change and new solutions. I think a Bahamas coalition with the AfD and the FDP could work - our neighbor Austria showed us how the right wing can govern harmonically.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4643, \"fields\": {\"question\": 821, \"description\": \"This is the biggest debacle for NATO since its founding. We need a relentless analysis of what went wrong, but I also need to criticize the USA’s role in this, the mandate for our troops still went until 2022, but we can’t hold it down alone. The way things are going, we need to reevaluate our stance towards the alliance.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4644, \"fields\": {\"question\": 821, \"description\": \"Olaf Scholz, despite his position, shows a lot of potential. We compete for a lot of voters with his wannabe-Merkel attitude - we need to stop a potential surge before it happens by attacking him on his many weaknesses.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4645, \"fields\": {\"question\": 821, \"description\": \"Baerbock is my main competitor in this race. The Greens are an unexpectedly strong party with a vulnerable candidate - to make this count, we need to shed doubt on her as a candidate. Let’s focus on that.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4646, \"fields\": {\"question\": 821, \"description\": \"Baerbock is my main competitor in this race. The Greens are an unexpectedly strong party with a vulnerable candidate - to make this count, we need to shed doubt on her as a candidate. Let’s focus on that.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4647, \"fields\": {\"question\": 821, \"description\": \"Baerbock has been struggling lately, but the Greens are still a strong party with a vulnerable candidate, and some voters we could pick up. Let’s focus on her.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4648, \"fields\": {\"question\": 821, \"description\": \"He likes to present himself as a moderate, but he hasn’t completely ruled out a coalition with the extremist Left party. Can voters really trust him not to form a coalition with populist demagogues after the election?\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4649, \"fields\": {\"question\": 821, \"description\": \"Scholz likes to pretend he’s a moderate, but the program of his party is ideological and leftwing, with unrealistic promises regarding pensions and the minimum wage. It shows that the SPD as a whole is unfit to govern, and a symbol of past days.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4650, \"fields\": {\"question\": 821, \"description\": \"Everyone on this stage agrees that something has to be done about climate change, but what Mrs Baerbock and her party want can’t be the solution! We need to involve everyone, protect livelihoods and emphasize innovation, instead of blanket bans, as Mrs. Baerbock advocates.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4651, \"fields\": {\"question\": 821, \"description\": \"I’ll attack her for her willingness to govern with the radical Left party. Moderates should be frightened by this prospect, there should be a firewall against political radicals, and entertaining a coalition with Die Linke, as the Greens do repeatedly, is irresponsible.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4652, \"fields\": {\"question\": 821, \"description\": \"I want to present myself as a candidate for pragmatic solutions to climate change. We clearly have to take action: What we need is room for market innovation and international cooperation. I’m proud of the path Germany is on in this regard - we don’t need strict bans.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4653, \"fields\": {\"question\": 821, \"description\": \"With two left-leaning politicians debating with me, I will present myself as the voice of reason. We have tax and social security plans that are actually affordable and generally promise sensible governance. The CDU is the party of the healthy center - of competency and fiscal responsibility.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4654, \"fields\": {\"question\": 821, \"description\": \"With two left-leaning politicians debating with me, I will present myself as the voice of reason. We have tax and social security plans that are actually affordable and generally promise sensible governance. The CDU is the party of the healthy center - of competency and fiscal responsibility.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4655, \"fields\": {\"question\": 821, \"description\": \"You know me. I’m a known quantity from North Rhine-Westphalia, where I’ve governed with prudence and caution - just like Chancellor Merkel. I’m the candidate who stands for a continuation of the Merkel era - with me, Germany will stay on its successful path.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4656, \"fields\": {\"question\": 821, \"description\": \"Who else but Chancellor Angela Merkel could be the right person? She is a figure larger than life, an electoral juggernaut who has won the last four contests, and I want to show people that I’m the one to build on her legacy.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4657, \"fields\": {\"question\": 821, \"description\": \"No matter what happens, we have to make sure the right-wing demagogues do not increase their vote shares. I’m worried about the AfD taking first place in some East German states, and direct mandates could go to them: I need to campaign broadly in the New States, with local colleagues like Haseloff and Kretschmer.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4658, \"fields\": {\"question\": 821, \"description\": \"It’s important that all wings of our party stay united and motivated to vote. Let’s campaign with Friedrich Merz to show that I’m taking people like him and his positions seriously - the CDU has a clear profile, and I’m proud to stand with him for our values!\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4659, \"fields\": {\"question\": 821, \"description\": \"It’s important that all wings of our party stay united and motivated to vote. Let’s campaign with Friedrich Merz to show that I’m taking people like him and his positions seriously - the CDU has a clear profile, and I’m proud to stand with him for our values!\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4660, \"fields\": {\"question\": 821, \"description\": \"Who else but Chancellor Angela Merkel could be the right person? She is a figure larger than life, an electoral juggernaut who has won the last four contests, and I want to show people that I’m the one to build on her legacy.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4661, \"fields\": {\"question\": 821, \"description\": \"Markus Söder and I didn’t always have the warmest relationship, but there is a reason he gave me such a scare - the man has charisma. Let’s campaign with him in Bavaria and show some unity between the CDU and CSU.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4662, \"fields\": {\"question\": 821, \"description\": \"Markus Söder and I didn’t always have the warmest relationship, but there is a reason he gave me such a scare - the man has charisma. Let’s campaign with him in Bavaria and show some unity between the CDU and CSU.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4663, \"fields\": {\"question\": 821, \"description\": \"People can make their own decisions about this, what I want to talk about is substance. Her policies are expensive for the middle class and ineffective, and she does not have the necessary experience to be chancellor. She talks - I act.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4664, \"fields\": {\"question\": 821, \"description\": \"People can make their own decisions about this, what I want to talk about is substance. Her policies are expensive for the middle class and ineffective, and she does not have the necessary experience to be chancellor. She talks - I act.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4665, \"fields\": {\"question\": 851, \"description\": \"We have to speak clearly, but not polarize. We have to integrate, keeping our society together, bringing different people together. That's hard work; one has to do a lot of listening, also listening to uncomfortable things. But at the end of the day, we have to seek compromise, to find solutions that the people demand from us. That's what I mean, when I say, 'let's keep it up'!\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4666, \"fields\": {\"question\": 853, \"description\": \"Let’s do a whole image-change. We need to move on from Merkel, to bring a decade of modernization to Germany, and deliver the promises of change our opponents can only talk about.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4667, \"fields\": {\"question\": 853, \"description\": \"Let’s do a whole image-change. We need to move on from Merkel, to bring a decade of modernization to Germany, and deliver the promises of change our opponents can only talk about.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4668, \"fields\": {\"question\": 853, \"description\": \"Let’s do a whole image-change. We need to move on from Merkel, to bring a decade of modernization to Germany, and deliver the promises of change our opponents can only talk about.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4669, \"fields\": {\"question\": 853, \"description\": \"Let’s do another round of ads about my family history, like how my father was a miner, and my personality. We can give more interviews to highlight my patience, my authenticity and my fatherly demeanor.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4670, \"fields\": {\"question\": 853, \"description\": \"The role of a statesman is to rise above the pack, and let the voters decide. I am going to project strength going into election day, together, we will win this thing, regardless of the naysayers!\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4671, \"fields\": {\"question\": 853, \"description\": \"The role of a statesman is to rise above the pack, and let the voters decide. I am going to project strength going into election day, together, we will win this thing, regardless of the naysayers!\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4672, \"fields\": {\"question\": 853, \"description\": \"I want to be Merkel's successor, and the chancellor carries a lot of goodwill with voters. There’s one option for us here - she has to publicly vow for us in her next Bundestag speech.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4673, \"fields\": {\"question\": 853, \"description\": \"I want to be Merkel's successor, and the chancellor carries a lot of goodwill with voters. There’s one option for us here - she has to publicly vow for us in her next Bundestag speech.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4674, \"fields\": {\"question\": 853, \"description\": \"Let’s do a whole image-change. We need to move on from Merkel, to bring a decade of modernization to Germany, and deliver the promises of change our opponents can only talk about.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4675, \"fields\": {\"question\": 853, \"description\": \"Let’s do a whole image-change. We need to move on from Merkel, to bring a decade of modernization to Germany, and deliver the promises of change our opponents can only talk about.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4676, \"fields\": {\"question\": 853, \"description\": \"Let’s do a whole image-change. We need to move on from Merkel, to bring a decade of modernization to Germany, and deliver the promises of change our opponents can only talk about.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4677, \"fields\": {\"question\": 853, \"description\": \"Let’s do another round of ads about my family history, like how my father was a miner, and my personality. We can give more interviews to highlight my patience, my authenticity and my fatherly demeanor.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4678, \"fields\": {\"question\": 853, \"description\": \"The role of a statesman is to rise above the pack, and let the voters decide. I am going to project strength going into election day, together, we will win this thing, regardless of the naysayers!\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4679, \"fields\": {\"question\": 853, \"description\": \"The role of a statesman is to rise above the pack, and let the voters decide. I am going to project strength going into election day, together, we will win this thing, regardless of the naysayers!\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4680, \"fields\": {\"question\": 853, \"description\": \"I want to be Merkel's successor, and the chancellor carries a lot of goodwill with voters. There’s one option for us here - she has to publicly vow for us in her next Bundestag speech.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4681, \"fields\": {\"question\": 853, \"description\": \"I want to be Merkel's successor, and the chancellor carries a lot of goodwill with voters. There’s one option for us here - she has to publicly vow for us in her next Bundestag speech.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4682, \"fields\": {\"question\": 853, \"description\": \"Let’s do a whole image-change. We need to move on from Merkel, to bring a decade of modernization to Germany, and deliver the promises of change our opponents can only talk about.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4683, \"fields\": {\"question\": 853, \"description\": \"Let’s do a whole image-change. We need to move on from Merkel, to bring a decade of modernization to Germany, and deliver the promises of change our opponents can only talk about.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4684, \"fields\": {\"question\": 853, \"description\": \"Let’s do a whole image-change. We need to move on from Merkel, to bring a decade of modernization to Germany, and deliver the promises of change our opponents can only talk about.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4685, \"fields\": {\"question\": 853, \"description\": \"Let’s do another round of ads about my family history, like how my father was a miner, and my personality. We can give more interviews to highlight my patience, my authenticity and my fatherly demeanor.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4686, \"fields\": {\"question\": 853, \"description\": \"The role of a statesman is to rise above the pack, and let the voters decide. I am going to project strength going into election day, together, we will win this thing, regardless of the naysayers!\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4687, \"fields\": {\"question\": 853, \"description\": \"The role of a statesman is to rise above the pack, and let the voters decide. I am going to project strength going into election day, together, we will win this thing, regardless of the naysayers!\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4688, \"fields\": {\"question\": 853, \"description\": \"I want to be Merkel's successor, and the chancellor carries a lot of goodwill with voters. There’s one option for us here - she has to publicly vow for us in her next Bundestag speech.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4689, \"fields\": {\"question\": 853, \"description\": \"I want to be Merkel's successor, and the chancellor carries a lot of goodwill with voters. There’s one option for us here - she has to publicly vow for us in her next Bundestag speech.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4690, \"fields\": {\"question\": 853, \"description\": \"I will give a largely non-political speech. We need to focus on the importance of cohesion and trust in our society, to come together as one in the wake of this crisis, not letting our different views divide us, and the values of honest work. I want to bring up the anecdote about my father, who was a miner. A statesman is what we need right now.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4691, \"fields\": {\"question\": 853, \"description\": \"I will give a largely non-political speech. We need to focus on the importance of cohesion and trust in our society, to come together as one in the wake of this crisis, not letting our different views divide us, and the values of honest work. I want to bring up the anecdote about my father, who was a miner. A statesman is what we need right now.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4692, \"fields\": {\"question\": 853, \"description\": \"The success of the AfD showed us that this country is in dire need of change and a new direction, away from the Status Quo. I will promise to modernize Germany while letting our conservative values guide us in this progress. A new Germany, responsible and sensible.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4693, \"fields\": {\"question\": 853, \"description\": \"I will take this development very seriously, clearly the demand is there to take the climate more seriously. Let’s unveil some of our own environmental policies to stop their momentum and defuse some of their criticisms.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4694, \"fields\": {\"question\": 853, \"description\": \"Off the record, it’s not the worst thing that these two parties compete for center-left votes. This makes the path to first place a lot easier. Let’s focus somewhat on the Greens as our main contender in that regard, and just attack them moderately where we can.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4695, \"fields\": {\"question\": 853, \"description\": \"I will take this development very seriously, clearly the demand is there to take the climate more seriously. Let’s unveil some of our own environmental policies to stop their momentum and defuse some of their criticisms.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4696, \"fields\": {\"question\": 853, \"description\": \"Off the record, it’s not the worst thing that these two parties compete for center-left votes. This makes the path to first place a lot easier. Let’s focus somewhat on the Greens as our main contender in that regard, and just attack them moderately where we can.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4697, \"fields\": {\"question\": 853, \"description\": \"It is important that we don’t demonize Putin and keep our dialogue open. I’m critical of many things the Russian leadership has done, but overall, we should strive to cooperate with them, as we do on the Nord-Stream 2 pipeline.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4698, \"fields\": {\"question\": 853, \"description\": \"I’ve been more lenient in the past, but enough is enough. I will join in with the criticism against Kretschmer and call for a tougher stance towards Putin. Maybe we should only open the Nord-Stream 2 pipeline if we get some concessions from Russia.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4699, \"fields\": {\"question\": 853, \"description\": \"It is important that we don’t demonize Putin and keep our dialogue open. I’m critical of many things the Russian leadership has done, but overall, we should strive to cooperate with them, as we do on the Nord-Stream 2 pipeline.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4700, \"fields\": {\"question\": 853, \"description\": \"I’ve been more lenient in the past, but enough is enough. I will join in with the criticism against Kretschmer and call for a tougher stance towards Putin. Maybe we should only open the Nord-Stream 2 pipeline if we get some concessions from Russia.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4701, \"fields\": {\"question\": 853, \"description\": \"I want to congratulate Haseloff for his strong performance. It shows that the citizens still trust the CDU to be the best governing party, and we want to emulate his strategy on a national scale.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4702, \"fields\": {\"question\": 853, \"description\": \"I want to congratulate Haseloff for his strong performance. It shows that the citizens still trust the CDU to be the best governing party, and we want to emulate his strategy on a national scale.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4703, \"fields\": {\"question\": 853, \"description\": \"I want to congratulate Haseloff for his strong performance. It shows that the citizens still trust the CDU to be the best governing party, and we want to emulate his strategy on a national scale.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4704, \"fields\": {\"question\": 853, \"description\": \"We should definitely hit her on these topics. This is unprofessional behavior that should not happen in the chancellery. These concerns about her integrity have to be addressed.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4705, \"fields\": {\"question\": 853, \"description\": \"We should definitely hit her on these topics. This is unprofessional behavior that should not happen in the chancellery. These concerns about her integrity have to be addressed.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4706, \"fields\": {\"question\": 853, \"description\": \"People aren’t clamoring for my comments here, they will be judged on their own. I want to stay positive and talk about the successes I will bring to Germany.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4707, \"fields\": {\"question\": 853, \"description\": \"The most important thing we can do right now is help the affected regions with their crisis management. They need help now, quickly and unbureaucratically. I’m promising swift support.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4708, \"fields\": {\"question\": 853, \"description\": \"I want to especially praise local teams and local reactions. Some areas already had crisis teams ready when the sun was still shining and no one knew what would happen. We will follow up and provide better crisis responses in the future.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4709, \"fields\": {\"question\": 853, \"description\": \"I want to especially praise local teams and local reactions. Some areas already had crisis teams ready when the sun was still shining and no one knew what would happen. We will follow up and provide better crisis responses in the future.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4710, \"fields\": {\"question\": 853, \"description\": \"The most important thing we can do right now is help the affected regions with their crisis management. They need help now, quickly and unbureaucratically. I’m promising swift support.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4711, \"fields\": {\"question\": 853, \"description\": \"I want to especially praise local teams and local reactions. Some areas already had crisis teams ready when the sun was still shining and no one knew what would happen. We will follow up and provide better crisis responses in the future.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4712, \"fields\": {\"question\": 853, \"description\": \"Actually, I don’t want to be seen as performative. The cleanup operations can be left to professionals, I will keep coordinating the crisis efforts from the state chancellery so that everything goes smoothly - that’s the best I can do for the victims.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4713, \"fields\": {\"question\": 853, \"description\": \"Actually, I don’t want to be seen as performative. The cleanup operations can be left to professionals, I will keep coordinating the crisis efforts from the state chancellery so that everything goes smoothly - that’s the best I can do for the victims.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4714, \"fields\": {\"question\": 853, \"description\": \"Actually, I don’t want to be seen as performative. The cleanup operations can be left to professionals, I will keep coordinating the crisis efforts from the state chancellery so that everything goes smoothly - that’s the best I can do for the victims.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4715, \"fields\": {\"question\": 853, \"description\": \"What a great idea! We should get out there and visit some affected towns - our President Frank-Walter Steinmeier will be here in a few days, so let’s try to get some shared pictures with our head of state. Catch some of his gravitas.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4716, \"fields\": {\"question\": 853, \"description\": \"Climate change is coming, whether we want it or not. The most important thing we can do is mitigate its worst effects to prevent catastrophes like this from doing too much damage - we need better crisis responses. Climate action is necessary, as long as it doesn't stifle our economy and freedom of living.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4717, \"fields\": {\"question\": 853, \"description\": \"Climate change is coming, whether we want it or not. The most important thing we can do is mitigate its worst effects to prevent catastrophes like this from doing too much damage - we need better crisis responses. Climate action is necessary, as long as it doesn't stifle our economy and freedom of living.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4718, \"fields\": {\"question\": 853, \"description\": \"We have to modernize my image. Let’s incorporate some biographical elements, like that my father was a miner, and show pictures of how I closed the last mine in North Rhine-Westphalia. Then talk about tackling climate change together and how we need to promote tolerance.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4719, \"fields\": {\"question\": 853, \"description\": \"It’s best to play it safe. My motto is “Making Germany Together” - I want a spot about how I’m bringing different people together and how our country needs solidarity in this crisis. Let’s show the diversity in our supporters and promise that we will bounce back stronger than before.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4720, \"fields\": {\"question\": 853, \"description\": \"Actually, I’ve changed my mind. The mudslinging isn’t worth it - after giving my usual critiques I’ll just wing it and rely on my instincts as a statesman to rise above the pack.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4721, \"fields\": {\"question\": 853, \"description\": \"Actually, I’ve changed my mind. The mudslinging isn’t worth it - I’ll just broadly criticize Baerbock for her incompetence and then just wing it, relying on my instincts as a statesman to rise above the pack.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4722, \"fields\": {\"question\": 853, \"description\": \"She’s had problems with plagiarism in her book, and she inflated her CV. These might seem like minor things, but in light of her lack of experience: can she really be trusted to govern this country, if she fails at these minor tasks?\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4723, \"fields\": {\"question\": 853, \"description\": \"She’s had problems with plagiarism in her book, and she inflated her CV. These might seem like minor things, but in light of her lack of experience: can she really be trusted to govern this country, if she fails at these minor tasks?\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4724, \"fields\": {\"question\": 853, \"description\": \"She’s had problems with plagiarism in her book, and she inflated her CV. These might seem like minor things, but in light of her lack of experience: can she really be trusted to govern this country, if she fails at these minor tasks?\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4725, \"fields\": {\"question\": 853, \"description\": \"You know me. I’m a known quantity from North Rhine-Westphalia, where I’ve governed with prudence and caution - just like Chancellor Merkel. I’m the candidate who stands for a continuation of the Merkel era - with me, Germany will stay on its successful path.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4726, \"fields\": {\"question\": 853, \"description\": \"You know me. I’m a known quantity from North Rhine-Westphalia, where I’ve governed with prudence and caution - just like Chancellor Merkel. I’m the candidate who stands for a continuation of the Merkel era - with me, Germany will stay on its successful path.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4727, \"fields\": {\"question\": 853, \"description\": \"You know me. I’m a known quantity from North Rhine-Westphalia, where I’ve governed with prudence and caution - just like Chancellor Merkel. I’m the candidate who stands for a continuation of the Merkel era - with me, Germany will stay on its successful path.\"}}]");
+campaignTrail_temp.answers_json = JSON.parse("[{\"model\": \"campaign_trail.answer\", \"pk\": 4000, \"fields\": {\"question\": 717, \"description\": \"I am the Minister-President of North Rhine-Westphalia, the most populous state in Germany. The CDU is the party of competence - and none of my opponents has held a political office in the last few years. I will bring my expertise in modern governance to the national level.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4001, \"fields\": {\"question\": 717, \"description\": \"Out of the three candidates nominated, I am the only one who has actually won an election and in a former SPD-stronghold nonetheless, in a strong black-yellow coalition. It is crucial that we win the Bundestagswahl this fall, and I am the right man to do it!\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4002, \"fields\": {\"question\": 717, \"description\": \"I am more conservative than Röttgen and more liberal than Merz. By positioning myself between those two, I can split them apart and draw votes from whoever is knocked out on the first ballot - I’ll then win the second ballot by default.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4003, \"fields\": {\"question\": 717, \"description\": \"The party officials are largely behind me. They should push for me behind closed doors to make sure I win this contest. I will already focus on convincing swing voters for the election.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4004, \"fields\": {\"question\": 718, \"description\": \"I want to continue the legacy of the Merkel-era as much as possible. Her sixteen years of chancellorship were outstanding, and I promise to continue on that course.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4005, \"fields\": {\"question\": 718, \"description\": \"The CDU is the party for the middle of society. I will continue moving the party into the future, with a moderate and pragmatic course on the issues of the day.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4006, \"fields\": {\"question\": 718, \"description\": \"The strong showing of Merz has shown that the right wing of the party has too often been ignored by Merkel. Under my leadership, we will bring the party back on a more conservative path.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4007, \"fields\": {\"question\": 718, \"description\": \"While I will praise Merkel for her outstanding career, we need to acknowledge the challenges of the 21st century: particularly climate change. It is important that we don’t leave this topic to other parties, but present solutions of our own, that go beyond what we are doing now.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4008, \"fields\": {\"question\": 719, \"description\": \"While the lockdowns were the right thing to do, now that the winter is over and we have started to vaccinate people, it is time to return to normalcy. North Rhine-Westphalia will open up quickly.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4009, \"fields\": {\"question\": 719, \"description\": \"The situation is still very volatile and it is better to be cautious than reckless. We should keep the lockdowns for the foreseeable future, and only open up on strict criteria.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4010, \"fields\": {\"question\": 719, \"description\": \"While I’m all for opening up, we should keep an eye on the number of infected people and have a bridge lockdown during Easter if the case numbers become too high.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4011, \"fields\": {\"question\": 719, \"description\": \"This is a decision that the federal government and the states have to make together. I will wait and see what this process achieves and go with the majority opinion.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4012, \"fields\": {\"question\": 720, \"description\": \"Under no circumstances will we raise taxes, but we don’t want to dramatically lower them. We will phase out the extra tax of the Soli and try to reduce the burden on small and medium-income earners while always keeping the budget balanced, in keeping with the “Black Zero”.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4013, \"fields\": {\"question\": 720, \"description\": \"The Covid crisis has left a massive hole in our budget that we have to plug somehow. We have to be measured, but a tax increase will likely be unavoidable to avoid harsh debts that can hurt our economy even further.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4014, \"fields\": {\"question\": 720, \"description\": \"Taxes for private households should stay where they are or even be lowered by phasing out the Soli. More importantly, corporate taxes should be lowered to unleash the full economic potential of this country. As little State as necessary, as much market as possible.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4015, \"fields\": {\"question\": 720, \"description\": \"To stimulate the economy after the Covid crisis, taxes have to be lowered across the board for both private households and corporations. We also have to streamline tax bureaucracy, and consider new solutions, in the form of flat tax proposals for example.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4016, \"fields\": {\"question\": 721, \"description\": \"I was as shocked as everyone else when I found out about this! The parliamentary immunity of these MPs should promptly be removed so they can be properly investigated. Corruption has no place in the CDU/CSU!\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4017, \"fields\": {\"question\": 721, \"description\": \"Let’s wait and see how this develops. I’ll issue a brief statement that we want to wait until it’s clear what actually happened.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4018, \"fields\": {\"question\": 721, \"description\": \"This is nothing but a political hit job by a left-wing magazine in an election year. I’m sure further investigations will prove the innocence of these MPs.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4019, \"fields\": {\"question\": 721, \"description\": \"Let us be pragmatic. Two of our MPs may have indeed shown low moral inhibitions, but we shouldn’t judge the whole party based on the actions of two people. We support this investigation as much as anyone else, these are individual black sheep.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4020, \"fields\": {\"question\": 722, \"description\": \"This seems like a good time to declare my candidacy, yes. Though before I declare, I will make a courtesy call to Markus Söder, the party leader of our sister party, the CSU, to make sure he won’t oppose me.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4021, \"fields\": {\"question\": 722, \"description\": \"Yes, I will inform the upper party echelons and formally announce this during a press conference in my home state. There is no time to lose! It’s time for the campaign to get going.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4022, \"fields\": {\"question\": 722, \"description\": \"You know, it might be better to wait this out a bit longer - just biding our time and consolidating our party influence. I can declare after whatever announcement the Green party makes to get them out of the limelight.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4023, \"fields\": {\"question\": 723, \"description\": \"It wasn’t an easy decision. I thought about this long and hard, but I want to retract my candidacy. Söder is a competent man, has better polling numbers, many of our party members support him and I’m quite happy here serving as Minister-President of North Rhine-Westphalia.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4024, \"fields\": {\"question\": 723, \"description\": \"Let’s call every big name in the party, curry every favour, maybe we can even get Merkel herself to weigh in. I can’t have this decided by vote and risk being humiliated, I want this decided by the party elites now.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4025, \"fields\": {\"question\": 723, \"description\": \"The party parliamentary group of CDU and CSU shall vote on this. I’m confident they will pick me over Söder - his support primarily comes from Bavaria and I have the traditional prerogative as leader of the bigger party.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4026, \"fields\": {\"question\": 723, \"description\": \"The party parliamentary group of CDU and CSU shall vote on this. I’m confident they will pick me over Söder - his support primarily comes from Bavaria and I have the traditional prerogative as leader of the bigger party.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4027, \"fields\": {\"question\": 724, \"description\": \"First and foremost, I want to thank Markus Söder for accepting this outcome. We have to be united as a party to win this fall. Apart from that, I will hit my usual talking points, about stability, pragmatism, praising Merkel and acting on our values.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4028, \"fields\": {\"question\": 724, \"description\": \"This closer-than-expected contest has convinced me that I need to move my position and change my attitude on some topics. I’ll focus on how dealing with the pandemic and not opening up too quickly is of critical importance, how we need strong leadership in these trying times and new ideas to move forward, to build on Angela Merkel's successes.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4029, \"fields\": {\"question\": 724, \"description\": \"I will give a largely non-political speech. We need to focus on the importance of cohesion and trust in our society, to come together as one in the wake of this crisis, not letting our different views divide us, and the values of honest work. I want to bring up the anecdote about my father, who was a miner. A statesman is what we need right now.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4030, \"fields\": {\"question\": 724, \"description\": \"The success of the AfD showed us that this country is in dire need of change and a new direction, away from the Status Quo. I will promise to modernize Germany while letting our conservative values guide us in this progress. A new Germany, responsible and sensible.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4031, \"fields\": {\"question\": 725, \"description\": \"The Green party is always surging a few months before elections and comes crashing down in time, just like in 2011 after Fukushima. I’m not too worried - we should still focus more on competing with the SPD, our traditional opponent.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4032, \"fields\": {\"question\": 725, \"description\": \"I will take this development very seriously, clearly the demand is there to take the climate more seriously. Let’s unveil some of our own environmental policies to stop their momentum and defuse some of their criticisms.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4033, \"fields\": {\"question\": 725, \"description\": \"Off the record, it’s not the worst thing that these two parties compete for centre-left votes. This makes the path to first place a lot easier. Let’s focus somewhat on the Greens as our main contender in that regard, and just attack them moderately where we can.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4034, \"fields\": {\"question\": 725, \"description\": \"Actually, this is a bit ridiculous and reminds me of the publicity stunt the FDP pulled in 2002 when they nominated Guido Westerwelle as chancellor candidate. Let’s mock them for their hubris and don’t refer to Baerbock as a legitimate chancellor candidate.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4035, \"fields\": {\"question\": 726, \"description\": \"It is important that we don’t demonize Putin and keep our dialogue open. I’m critical of many things the Russian leadership has done, but overall, we should strive to cooperate with them, as we do on the Nord-Stream 2 pipeline.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4036, \"fields\": {\"question\": 726, \"description\": \"I’ve been more lenient in the past, but enough is enough. I will join in with the criticism against Kretschmer and call for a tougher stance towards Putin. Maybe we should only open the Nord-Stream 2 pipeline if we get some concessions from Russia.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4037, \"fields\": {\"question\": 726, \"description\": \"Kretschmer is completely right, we have to talk more with Russia, not less. I’m all in favor of more dialogue and stronger economic ties with Russia. Besides, it’s not like the USA has never done anything wrong.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4038, \"fields\": {\"question\": 726, \"description\": \"This whole thing is overblown, this trip was mostly for cultural exchange. I don’t have much to say about this. We stand on our commitment to Nato.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4501, \"fields\": {\"question\": 801, \"description\": \"I supported Merkel's decision at the time, we needed to take those people in to prevent a humanitarian catastrophe at the Austrian-Hungarian border. Today though, we need to be more mindful of European border security. To that end, we want to strengthen the EU border enforcement agency Frontex.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4502, \"fields\": {\"question\": 801, \"description\": \"There’s no way around it - Germany is an immigration country. We need a comprehensive overhaul of our immigration laws - we don’t have a good system in place to attract qualified immigrants, who could be advantageous to our economy and demographic situation.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4503, \"fields\": {\"question\": 801, \"description\": \"Merkel was absolutely right to take in these people. We’re saying: Refugees Welcome! As a western country partially responsible for colonialism, we have a responsibility for humanitarian aid, including initiatives to rescue capsized refugee boats in the mediterranean.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4504, \"fields\": {\"question\": 801, \"description\": \"On this issue, Merkel has erred - her rhetoric was dangerous in provoking even more refugees and immigrants to come here. We simply can’t take everyone. We need more border security in the EU and faster deportation processes to avoid another disaster - 2015 can’t repeat itself.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4039, \"fields\": {\"question\": 727, \"description\": \"This was a bad decision by the court. The Climate Protection Act already went far enough and I’m not in favor of hurting the economy with a stricter climate policy. We need to look out for our workers and industry, fear is not the answer.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4040, \"fields\": {\"question\": 727, \"description\": \"It is important that we quickly implement the new law. I’m especially in favour of a price for CO<sub>2</sub> that is formed by market forces. We have to make sure that everyone can keep affording their energy bills, though, and we need to use this opportunity to create new jobs.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4041, \"fields\": {\"question\": 727, \"description\": \"We have to become carbon neutral long before 2050. I’m sure the government under Merkel will come up with a sensible solution, which I will continue as chancellor.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4042, \"fields\": {\"question\": 727, \"description\": \"With the decision by the court, we now have a great opportunity for an ambitious new Climate Protection Act. I advocate for Germany to be carbon neutral by 2040 and to accelerate the transition to renewable energies. We simply can’t wait anymore.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4505, \"fields\": {\"question\": 802, \"description\": \"Yes, I do. Angela Merkel is a highly esteemed stateswoman and one of the best chancellors this country ever had - although to modernize our party, we have to recalibrate our course on climate change and protecting our social safety net. The CDU is an innovative party of the 21st century, and I will not let myself get intimidated by right-wing demagogues.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4506, \"fields\": {\"question\": 802, \"description\": \"I do not think in ideological categories, I’m simply standing for what I think is good for Germany. The CDU is the party of good governance - not radicalism, both leftist or rightist.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4507, \"fields\": {\"question\": 802, \"description\": \"I wanted to begin this campaign by bringing us all together - now we can try to tilt the discourse rightwards, taking Merkel supporters with us while framing our conservative positions as more reasonable.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4043, \"fields\": {\"question\": 728, \"description\": \"We need to open up quickly for vaccinated people. A return to normalcy has never been so close, and we all had more than enough of lockdowns - not every measure might still be proportionate. Vaccinated people have less risk and thus should receive more benefits.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4044, \"fields\": {\"question\": 728, \"description\": \"We are currently in a very critical phase of the pandemic, a phase in which cohesion could easily be endangered. Vaccinated people should be exempt from some restrictions, but let’s not go overboard. We need to move forward together and be patient until science tells us that it’s safe.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4045, \"fields\": {\"question\": 728, \"description\": \"It’s important that as many people as possible get vaccinated as quickly as possible so we can overcome this crisis, but that’s not what’s happening. Maybe we should question the prioritization system we have right now.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4046, \"fields\": {\"question\": 728, \"description\": \"The vaccine seems helpful now, but we haven’t had a chance to study its side effects yet. We should be mindful of our bodily health and not be too quick in our judgment - I advocate for a slowdown of the vaccination campaign until we have more information.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4047, \"fields\": {\"question\": 729, \"description\": \"For years and years, we have consistently missed the NATO aim to spend 2% of our gross domestic product on defense. I strongly reaffirm our commitment to NATO and this goal! The West has to be united against potential threats.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4048, \"fields\": {\"question\": 729, \"description\": \"While I strongly reaffirm our support of a united Alliance and strong defense, I specifically want to call out Annalena Baerbock. She lacks a clear commitment to NATO, which is not appropriate for a chancellor.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4049, \"fields\": {\"question\": 729, \"description\": \"I want to praise the work we’ve done so far and believe we are in a good spot. While I strongly reaffirm my commitment to NATO, we don’t need to spend more on defense than we do right now; we need to combat waste first and foremost.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4050, \"fields\": {\"question\": 729, \"description\": \"NATO is a relic of the cold war. We should stay a member for now, but we should also try to find avenues for cooperating with other nations, keep reaffirming our neutrality, and open up new dialogues with Russia or China.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4508, \"fields\": {\"question\": 803, \"description\": \"The heart of this problem lies in Germany's low birth rates. We need to further encourage the founding of families, with benefits for married and childbearing couples. Family-friendly policies will strengthen our social cohesion and collective values and invest in our future.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4509, \"fields\": {\"question\": 803, \"description\": \"A sustainable answer to keep our social support net afloat lies in immigration. We are an attractive place in Europe for many seeking a safe and economically secure future, and we should finally implement a real immigration law, for example with a Canada-style point-system.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4510, \"fields\": {\"question\": 803, \"description\": \"It's clear that the current system is unsafe. We should build on our public pension system, reform the Riester-system, and refrain from raising the pension age any further than 67! We also need to introduce a higher state-provided minimum pension to fight old-age poverty.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4511, \"fields\": {\"question\": 803, \"description\": \"We need to overhaul the bureaucratic costs of the system and listen to the decisions of the advisory councils. The mix of public, occupational and private pension systems contributes to safe pension levels, particularly occupational and private provisions should be strengthened. We can also look at Swedish-style stock-based pension funds.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4051, \"fields\": {\"question\": 730, \"description\": \"I want to congratulate Haseloff for his strong performance. It shows that the citizens still trust the CDU to be the best governing party, and we want to emulate his strategy on a national scale.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4052, \"fields\": {\"question\": 730, \"description\": \"Haseloff performed very well, but I want to emphasize that the AfD lost votes. When we keep appealing and listening to all people, without prejudice, we can win them back for the democratic parties.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4053, \"fields\": {\"question\": 730, \"description\": \"This was a very strong performance. To show my gratitude, I will make an extra trip to Saxony-Anhalt and campaign with him for some nice pictures.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4512, \"fields\": {\"question\": 804, \"description\": \"We should definitely hit her on these topics. This is unprofessional behavior that should not happen in the chancellery. These concerns about her integrity have to be addressed.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4513, \"fields\": {\"question\": 804, \"description\": \"Not only that - did you notice how she used the N-Word in that interview, and had to be censored out? Such mistakes of communication are unacceptable for a chancellor, and the problematic nature of this faux pas should sheds doubt on her character.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4514, \"fields\": {\"question\": 804, \"description\": \"People can make their own decisions about this, what I want to talk about is substance. Her policies are expensive for the middle class and ineffective, and she knows it. She talks - I act.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4515, \"fields\": {\"question\": 804, \"description\": \"People aren’t clamoring for my comments here, they will be judged on their own. I want to stay positive and talk about the successes I will bring to Germany.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4054, \"fields\": {\"question\": 731, \"description\": \"The pandemic has shown how ill-prepared our schools are. We need to continue improving digital infrastructure in education, through more training, technical assets and a national educational platform. That is what the CDU/CSU has worked on, and will continue doing.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4055, \"fields\": {\"question\": 731, \"description\": \"Actually, we don’t have much to gain by talking about this topic - many voters see us as responsible for the current situation. Let’s downplay it as much as we can and focus on issues where we are seen as more competent, like matters of security or debt.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4056, \"fields\": {\"question\": 731, \"description\": \"We definitely need to modernize the digital infrastructure of Germany, especially in the public sector. Administrative matters have to be more accessible to citizens, we need to digitize all internal processes and cut down on bureaucracy.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4057, \"fields\": {\"question\": 731, \"description\": \"Digitalization is a key issue - we need a digital transformation offensive. I want to especially emphasize that we will accomplish a nationwide 5G mobile network by 2025 and provide 15 billion Euros for Gigabit-networks. To that end, we will also establish a Ministry of Digital Innovation and Transformation.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4516, \"fields\": {\"question\": 805, \"description\": \"We need to alleviate the housing market by building more. We need to build more than 100.000 housing units, using tax benefits. We should also provide funding to revitalize our cities and villages, advertise rural spaces and reduce the real estate transfer tax - every family should be able to own a home.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4517, \"fields\": {\"question\": 805, \"description\": \"We need to emphasize the creation of more social housing, built by modern standards available for those who need it most. For families, we can make buying empty buildings in the countryside easier for young people, as we do in NRW. Furthermore, we need to fight land speculation and close tax loopholes.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4518, \"fields\": {\"question\": 805, \"description\": \"The situation is tense. It’s clear that action is needed in the form of rent controls. A sharper, unlimited federal rent control program should be introduced. In places where the situation is very problematic, we stand for a so-called ‘rent moratorium’, where rent would only be able to increase with the inflation rate.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4519, \"fields\": {\"question\": 805, \"description\": \"We are vehemently against programs like rent controls. Social housing projects have failed to improve the situation - instead we need to support low income renters through housing subsidies. Regulations have to be cut back, we need slimmer bureaucracies and faster approval processes so that the market can sort itself out.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4058, \"fields\": {\"question\": 732, \"description\": \"The most important thing we can do right now is help the affected regions with their crisis management. They need help now, quickly and unbureaucratically. I’m promising swift support.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4059, \"fields\": {\"question\": 732, \"description\": \"I want to especially praise local teams and local reactions. Some areas already had crisis teams ready when the sun was still shining and no one knew what would happen. We will follow up and provide a better crisis responses in the future.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4060, \"fields\": {\"question\": 732, \"description\": \"First, we need to quickly and diligently help the affected regions with the cleanup operations. After that, we have to guarantee financial emergency aid for affected people, unequivocally.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4061, \"fields\": {\"question\": 732, \"description\": \"I want to honor the victims, but also address the cause of all this: climate change. Extreme weather events are unfortunately going to become more common -  we need to act decisively and swiftly now to keep global warming below 1.5°C so that we can prevent these disasters.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4062, \"fields\": {\"question\": 733, \"description\": \"Actually, I don’t want to be seen as performative. The cleanup operations can be left to professionals, I will keep coordinating the crisis efforts from the state chancellery so that everything goes smoothly - that’s the best I can do for the victims.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4063, \"fields\": {\"question\": 733, \"description\": \"I want to get out there, yes. I have to look at the carnage myself, at least for a day or two. NRW is among the most affected states after all. Let’s try to keep my visits below the radar though, so we don’t generate too much media buzz - that could be seen as opportunistic. Maybe some interviews with local newspapers and radio stations.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4064, \"fields\": {\"question\": 733, \"description\": \"What a great idea! We should get out there and visit some affected towns - our President Frank-Walter Steinmeier will be here in a few days, so let’s try to get some shared pictures with our head of state. Catch some of his gravitas.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4065, \"fields\": {\"question\": 733, \"description\": \"What a great idea! We should get out there and visit some affected towns - our President Frank-Walter Steinmeier will be here in a few days, so let’s try to get some shared pictures with our head of state. Catch some of his gravitas.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4066, \"fields\": {\"question\": 734, \"description\": \"The floods have shown that we need to be much more ambitious than before. One of the worst offenders is our energy production: we need to stop using coal for energy generation by 2030 and seek out new innovative technologies to keep energy affordable.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4067, \"fields\": {\"question\": 734, \"description\": \"Climate change is coming, whether we want it or not. The most important thing we can do is mitigate its worst effects to prevent catastrophes like this from doing too much damage - we need better crisis responses. Climate action is necessary, as long as it doesn't stifle our economy and freedom of living.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4068, \"fields\": {\"question\": 734, \"description\": \"Germany is no stranger to floods. I’m sorry, but just because today is a day like this, you don't just change your politics. The question of climate change is an international one, we can’t trivialize it like this.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4069, \"fields\": {\"question\": 734, \"description\": \"We clearly need to pick up the pace on climate action. But if you look back, it’s the environmentalist movement who concentrated on the wrong issue; for 20 years they’ve fought to end nuclear energy, instead of coal. Germany now exits nuclear as pretty much the only country, our focus is misguided.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4070, \"fields\": {\"question\": 735, \"description\": \"Compulsion is the wrong way to go about this, and probably unconstitutional. Instead, we need to convince people of the dangers of not being vaccinated and to continue our information campaign as we are now.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4071, \"fields\": {\"question\": 735, \"description\": \"While I wouldn’t go that far, as we might run into legal issues, we should give people more incentives to get vaccinated. One solution might be to open up certain establishments from the lockdown, but only for vaccinated and recovered people.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4072, \"fields\": {\"question\": 735, \"description\": \"Covid is basically over, the case numbers are very low. One has to be honest and ask: Do we even need such an expensive program? Vaccines are good to have, but we should focus on opening up and treating Covid as the non-problem it has become.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4073, \"fields\": {\"question\": 735, \"description\": \"This might be a good idea. The country needs to move on, we need to do everything we can to finally make Covid history. At some point, we need to have the conversation about mandatory vaccines, and fine those that refuse to get one.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4074, \"fields\": {\"question\": 736, \"description\": \"We have to modernize my image. Let’s incorporate some biographical elements, like that my father was a miner, and show pictures of how I closed the last mine in North Rhine-Westphalia. Then talk about tackling climate change together and how we need to promote tolerance.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4075, \"fields\": {\"question\": 736, \"description\": \"Covid is still on the mind of most people. Let’s focus on my response to this crisis, show me in a lab coat or something. With a strong vaccination campaign, we will continue Merkel's course and bring normalcy back!\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4076, \"fields\": {\"question\": 736, \"description\": \"It’s best to play it safe. My motto is “Making Germany Together” - I want a spot about how I’m bringing different people together and how our country needs solidarity in this crisis. Let’s show the diversity in our supporters and promise that we will bounce back stronger than before.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4077, \"fields\": {\"question\": 736, \"description\": \"I’ve been governing North Rhine-Westphalia successfully since 2017. I want to talk about my home, show my successes here and promise to bring them to Germany, as a <i>Landesvater</i>. Give off an air of trustworthiness - let’s even invoke chancellor Merkel’s“You know me.”-quip from 2013.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4520, \"fields\": {\"question\": 806, \"description\": \"Cannabis is a societal reality, like alcohol. We should start to take steps towards a regulated distribution to adults, accompanied by addiction prevention measures. The possession of small amounts shouldn’t be prosecuted anymore.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4521, \"fields\": {\"question\": 806, \"description\": \"We are against the legalization of illegal drugs. The risks for the individual and society are too great - instead, we should work towards addiction prevention, as well as early and suitable sanctions, that incentivise taking counseling and therapy. We do acknowledge the medical usage of Cannabis, however.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4522, \"fields\": {\"question\": 806, \"description\": \"Legalize it! We are for permitting the controlled distribution of Cannabis, through regulated sales in licenced shops. We do need projects to prevent drug abuse and youth protection though, financed through consumption taxes, as well as a legal framework around marihuana usage.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4523, \"fields\": {\"question\": 806, \"description\": \"Not at all: we need to further pursue drug users and lower the amount of cannabis that is legally prosecuted. Our goal is a drug free society. Look at the Netherlands, they have decriminalized the possession of just 5 grams, with fatal consequences - that won’t happen to our children.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4078, \"fields\": {\"question\": 737, \"description\": \"We will talk with all democratic parties - the SPD, the Greens and the FDP. However, I want to needle the leftist parties for not ruling out a coalition with the extremist Left. They are fringe populists, unfit to govern.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4079, \"fields\": {\"question\": 737, \"description\": \"We rule out coalitions with the extremes. Normally we would talk with everyone in the center, but it’s clear how a continuation of the Grand Coalition of the last 8 years would not have a public mandate. We need to find a different governing majority.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4080, \"fields\": {\"question\": 737, \"description\": \"The last few years have shown how we can not ignore the 10-15% of the populace voting for the AfD. This country needs change and new solutions. I think a Bahamas coalition with the AfD and the FDP could work - Austria showed us how the right wing can govern harmonically.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4081, \"fields\": {\"question\": 737, \"description\": \"My favorite coalition would be Black-Yellow, like the one I’m leading in North Rhine-Westphalia now. The FDP is a reliable partner, and we could get some really good policies done together.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4524, \"fields\": {\"question\": 807, \"description\": \"While §218 is a settled compromise from our societal discussions, we are for striking the §219a ad ban: women who are deciding on an abortion need unrestricted access to information. We also need to train more doctors and prevent pressure from abortion opponents in front of clinics.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4525, \"fields\": {\"question\": 807, \"description\": \"We want to strike §218, 219 and 219a from the books completely. Pregnancy issues are not part of criminal law - abortion is a medical service that has to be managed as part of regular health care. The stigma has to be broken, and the supply of doctors offering abortion has to be increased.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4526, \"fields\": {\"question\": 807, \"description\": \"The current situation is fine as is. Unborn life does have a right to be protected. Furthermore, the ad ban has already been loosened two years ago, to provide better access to information for affected women and legal certainty for doctors and hospitals, if an abortion is necessary.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4527, \"fields\": {\"question\": 807, \"description\": \"The right to life does not stand to disposition. The unborn child has a right to live, and we stand vehemently against efforts to trivialize or encourage abortions from the state. Instead, adoption procedures should be simplified - while doctors who do not report abortions have to incur noticeable sanctions.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4082, \"fields\": {\"question\": 738, \"description\": \"This is the biggest debacle for NATO since its founding, but also a miscalculation on the part of the government. We need a relentless analysis of what went wrong. I also need to criticize the USA’s role in this, the mandate for our troops still went until 2022, but we can’t hold it down alone.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4083, \"fields\": {\"question\": 738, \"description\": \"It’s a disgrace how so many good people would now have to live under civil strife and a possible Taliban takeover. We need to take in more refugees from Afghanistan, especially people who cooperated with the German troops. We owe it to them, after their generous help!\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4084, \"fields\": {\"question\": 738, \"description\": \"Foreign Minister Heiko Maas of the SPD is clearly to blame for our part in this crisis, and has to take political responsibility. He should have started the evacuations much earlier, and there should be direct repercussions for his position.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4085, \"fields\": {\"question\": 738, \"description\": \"Okay, uh… one thing’s clear, we can’t have a repeat of the refugee crisis in 2015. Let’s tell them, we are watching the situation closely, but we concur with Interior Minister Horst Seehofer that criminal refugees still have to be sent back to Afghanistan, with a zero-tolerance policy.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4086, \"fields\": {\"question\": 739, \"description\": \"Olaf Scholz has been surging a lot in the polls recently and privately, I worry that he will not stop. We compete for a lot of voters with his wannabe-Merkel attitude - it seems foolish to do anything but attack him on his many weaknesses.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4087, \"fields\": {\"question\": 739, \"description\": \"Baerbock has been struggling lately, but the Greens are still a strong party with a vulnerable candidate, and some voters we could pick up. Let’s focus on her.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4088, \"fields\": {\"question\": 739, \"description\": \"I will leave petty attacks to my opponents and focus more on policy. I’m certain the German people will appreciate hearing concrete solutions to their problems more than attacks. This isn’t America.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4089, \"fields\": {\"question\": 739, \"description\": \"Actually, I don’t want two left-wing politicians to gang up on me. This format is not up to the times and I can guarantee, time will not be allotted fairly to the only centrist party at the table. Thus, I must decline this invitation.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4090, \"fields\": {\"question\": 740, \"description\": \"He likes to present himself as a moderate, but he hasn’t completely ruled out a coalition with the extremist Left party. Can voters really trust him not to form a coalition with populist demagogues after the election?\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4091, \"fields\": {\"question\": 740, \"description\": \"Let’s hit him on his scandals as finance minister. Under his watch, Wirecard collapsed due to fraudulent dealings and lots of people lost their money. We need to poke attention to the police raid on a government office belonging to his ministry - he refuses to take responsibility.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4092, \"fields\": {\"question\": 740, \"description\": \"Scholz likes to pretend he’s a moderate, but the program of his party is ideological and leftwing, with unrealistic promises regarding pensions and the minimum wage. It shows that the SPD as a whole is unfit to govern, and a symbol of past days.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4093, \"fields\": {\"question\": 740, \"description\": \"Actually, I’ve changed my mind. The mudslinging isn’t worth it - after giving my usual critiques I’ll just wing it and rely on my instincts as a statesman to rise above the pack.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4094, \"fields\": {\"question\": 741, \"description\": \"She’s had problems with plagiarism in her book, and she inflated her CV. These might seem like minor things, but in light of her lack of experience: can she really be trusted to govern this country, if she fails at these minor tasks?\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4095, \"fields\": {\"question\": 741, \"description\": \"Everyone on this stage agrees that something has to be done about climate change, but what Mrs Baerbock and her party want can’t be the solution! We need to involve everyone, protect livelihoods and emphasize innovation, instead of blanket bans, as Mrs. Baerbock advocates.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4096, \"fields\": {\"question\": 741, \"description\": \"I’ll attack her for her willingness to govern with the radical Left party. Moderates should be frightened by this prospect, there should be a firewall against Radicals of all stripes, and entertaining a coalition with the Left, as the Greens do repeatedly is irresponsible.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4097, \"fields\": {\"question\": 741, \"description\": \"Actually, I’ve changed my mind. The mudslinging isn’t worth it - I’ll just broadly criticize Baerbock for her incompetence and then just wing it, relying on my instincts as a statesman to rise above the pack.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4098, \"fields\": {\"question\": 742, \"description\": \"I want to present myself as a candidate for pragmatic solutions to climate change. We clearly have to take action: What we need is room for market innovation and international cooperation. I’m proud of the path Germany is on in this regard - we don’t need strict bans.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4099, \"fields\": {\"question\": 742, \"description\": \"With two left-leaning politicians debating with me, I will present myself as the voice of reason. We have tax and social security plans that are actually affordable and generally promise sensible governance. The CDU is the party of the healthy centre - of competency and fiscal responsibility.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4100, \"fields\": {\"question\": 742, \"description\": \"You know me. I’m a known quantity from North Rhine-Westphalia, where I’ve governed with prudence and caution - just like Chancellor Merkel. I’m the candidate who stands for a continuation of the Merkel era - with me, Germany will stay on its successful path.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4101, \"fields\": {\"question\": 742, \"description\": \"Actually, screw this! I know they won’t hold back, so I won’t either. We have enough ammunition to show Baerbocks and Scholz’ incompetence, and I shouldn’t be afraid to use it. That way, I can sharpen my profile and show myself as the most competent candidate.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4528, \"fields\": {\"question\": 808, \"description\": \"Let's hope Mr. Dobrindt makes a good impression for the Union cause.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4529, \"fields\": {\"question\": 808, \"description\": \"Let's hope Mr. Dobrindt makes a good impression for the Union cause.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4530, \"fields\": {\"question\": 808, \"description\": \"Let's hope Mr. Dobrindt makes a good impression for the Union cause.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4531, \"fields\": {\"question\": 808, \"description\": \"Let's hope Mr. Dobrindt makes a good impression for the Union cause.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4102, \"fields\": {\"question\": 743, \"description\": \"It’s important that all wings of our party stay united and motivated to vote. Let’s campaign with Friedrich Merz to show that I’m taking people like him and his positions seriously - the CDU has a clear profile, and I’m proud to stand with him for our values!\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4103, \"fields\": {\"question\": 743, \"description\": \"Who else but Chancellor Angela Merkel could be the right person? She is a figure larger than life, a great icon who has won the last four elections, and I want to show people that I’m the one to continue her legacy.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4104, \"fields\": {\"question\": 743, \"description\": \"No matter what happens, we have to make sure the right-wing demagogues do not increase their vote shares. I’m worried about the AfD taking first place in some East German states, and direct mandates could go to them: I need to campaign broadly in the New States, with local colleagues like Haselhof and Kretschmer.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4105, \"fields\": {\"question\": 743, \"description\": \"Markus Söder and I didn’t always have the warmest relationship, but there is a reason he gave me such a scare - the man has charisma. Let’s campaign with him in Bavaria and show some unity between the CDU and CSU.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4532, \"fields\": {\"question\": 809, \"description\": \"I stand by my moderate credentials, I am a proud Christian Democrat. However, we are competing with two left-wing alternatives- in order to win a strong mandate, we need to pivot leftwards, toward the center.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4533, \"fields\": {\"question\": 809, \"description\": \"The CDU is the party of the center. We have done a great job at governing over the last 16 years, and while we need to move into the future, our future is a Christian-Democratic one. I stand by my course.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4534, \"fields\": {\"question\": 809, \"description\": \"Merz has tapped into a surprisingly large voter potential in 2018: Merkel-sceptic conservatives. The chancellor has become popular with voters of the other parties - for us, some of her policies are a bit more controversial. On these issues, we definitely need to move rightwards - to provide for a real alternative to the Greens and SPD.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4535, \"fields\": {\"question\": 810, \"description\": \"I stand for what I think is right, but it’s become clear to me we need to defuse ourselves. Let’s reconcile with the more leftwards elements of the party - so that they won’t defect to the Liberals, or even our opponents.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4536, \"fields\": {\"question\": 810, \"description\": \"Yes. I stand for what I believe is right in this country, and it’s clear how we need a change in attitude in Germany to stay competitive. Our standing in the world is decreasing, and we need to work towards improving our country to be the best it can be, because we are patriots.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4537, \"fields\": {\"question\": 810, \"description\": \"Look - chancellor Merkel is a competent woman who I respect. But the fact of the matter is, her policies have tilted leftwards, both socially and economically. What our country needs in the post-Merkel era are policies more in line with conservative doctrines - the AfD’s success has shown that. If anything, we need to come back to our roots and move this country to the right.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4538, \"fields\": {\"question\": 730, \"description\": \"While the results in Saxony-Anhalt are definitely praiseworthy, me and my surrogates should focus on Baerbock’s scandals. We’re running a national campaign - and directly dealing with our opponent might be better than lingering on state elections.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4600, \"fields\": {\"question\": 820, \"description\": \"The AfD found its success primarily on the back of our parties veering leftwards under Merkel. By taking their concerns seriously and pivoting back rightward on social and economical issues, we can position ourselves as the only electable conservative option for the right wing.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4601, \"fields\": {\"question\": 820, \"description\": \"It’s a populist movement. Who voted for Hitler? Right, the jobless. These people feel like the system has failed them personally, so they turn away from it. By producing good policies, creating jobs and furthering our prosperity we can restore the trust in the economic and individual potential of Germany, and thus, relegitimize our system.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4602, \"fields\": {\"question\": 820, \"description\": \"Helmut Kohl was a great man, but privately, we have to admit, the reunification of Germany has failed in many parts. We need a new culture of respect towards East Germany, to show presence and listen to them, to get more East German politicians into the limelight. That way, we’ll take the AfD’s base right from under their feet.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4603, \"fields\": {\"question\": 820, \"description\": \"This semi-fascist party likes to complain, but they have no answers themselves. We need to vehemently denounce their xenophobic, even antisemitic tendencies, while showing off just how hollow their program is. We won’t stoop down to their level and compromise our values. They don’t want to do politics, they want to destroy democracy.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4604, \"fields\": {\"question\": 821, \"description\": \"It’s a disgrace how so many good people would now have to live under civil strife and a possible Taliban takeover. We need to take in more refugees from Afghanistan, especially people who cooperated with the German troops. We owe it to them, after their generous help!\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4605, \"fields\": {\"question\": 821, \"description\": \"Okay, uh… one thing’s clear, we can’t have a repeat of the refugee crisis in 2015. Let’s tell them, we are watching the situation closely, but we concur with Interior Minister Horst Seehofer that criminal refugees still have to be sent back to Afghanistan, with a zero-tolerance policy.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4606, \"fields\": {\"question\": 821, \"description\": \"It’s a disgrace how so many good people would now have to live under civil strife and a possible Taliban takeover. We need to take in more refugees from Afghanistan, especially people who cooperated with the German troops. We owe it to them, after their generous help!\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4607, \"fields\": {\"question\": 821, \"description\": \"Okay, uh… one thing’s clear, we can’t have a repeat of the refugee crisis in 2015. Let’s tell them, we are watching the situation closely, but we concur with Interior Minister Horst Seehofer that criminal refugees still have to be sent back to Afghanistan, with a zero-tolerance policy.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4608, \"fields\": {\"question\": 821, \"description\": \"We need to open up quickly for vaccinated people. A return to normalcy has never been so close, and we all had more than enough of lockdowns - not every measure might still be proportionate. Vaccinated people have less risk and thus should receive more benefits.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4609, \"fields\": {\"question\": 821, \"description\": \"It's clear that the current system is unsafe. We should build on our public pension system, reform the Riester-system, and refrain from raising the pension age any further than 67! We also need to introduce a higher state-provided minimum pension to fight old-age poverty.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4610, \"fields\": {\"question\": 821, \"description\": \"It's clear that the current system is unsafe. We should build on our public pension system, reform the Riester-system, and refrain from raising the pension age any further than 67! We also need to introduce a higher state-provided minimum pension to fight old-age poverty.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4611, \"fields\": {\"question\": 821, \"description\": \"We need to emphasize the creation of more social housing, built by modern standards, available for those who need it most. For families, we can make buying empty buildings in the countryside easier for young people, as we do in NRW. Furthermore, we need to fight land speculation and close tax loopholes.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4612, \"fields\": {\"question\": 821, \"description\": \"We need to emphasize the creation of more social housing, built by modern standards, available for those who need it most. For families, we can make buying empty buildings in the countryside easier for young people, as we do in NRW. Furthermore, we need to fight land speculation and close tax loopholes.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4613, \"fields\": {\"question\": 821, \"description\": \"First and foremost, I want to thank Markus Söder for accepting this outcome. We have to be united as a party to win this fall. Apart from that, I will hit my usual talking points, about stability, pragmatism, praising Merkel and acting on our values.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4614, \"fields\": {\"question\": 821, \"description\": \"First and foremost, I want to thank Markus Söder for accepting this outcome. We have to be united as a party to win this fall. Apart from that, I will hit my usual talking points, about stability, pragmatism, praising Merkel and acting on our values.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4615, \"fields\": {\"question\": 821, \"description\": \"This closer-than-expected contest has convinced me that I need to change my attitude on some topics. I’ll focus on how a harsh line on the pandemic and on climate change is of critical importance, how we need strong leadership in these trying times and new ideas to move forward, to build on Angela Merkel's successes.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4616, \"fields\": {\"question\": 821, \"description\": \"NATO is a relic of the cold war. We should stay a member for now, but we should also try to find avenues for cooperating with other nations, keep reaffirming our neutrality, and open up new dialogues with Russia or China, as I did with my visit to Moscow last year.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4617, \"fields\": {\"question\": 821, \"description\": \"For years and years, we have consistently missed the NATO aim to spend 2% of our gross domestic product on defense. I strongly reaffirm our commitment to NATO and this goal! The West has to be united against potential threats.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4618, \"fields\": {\"question\": 821, \"description\": \"While I strongly reaffirm our support of a united Alliance and strong defense, I specifically want to call out Annalena Baerbock. She lacks a clear commitment to NATO, which is not appropriate for a chancellor.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4619, \"fields\": {\"question\": 821, \"description\": \"I want to praise the work we’ve done so far and believe we are in a good spot. While I strongly reaffirm my commitment to NATO, we don’t need to spend more on defense than we do right now; we need to combat waste first and foremost.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4620, \"fields\": {\"question\": 821, \"description\": \"NATO is a relic of the cold war. We should stay a member for now, but we should also try to find avenues for cooperating with other nations, keep reaffirming our neutrality, and open up new dialogues with Russia or China, as I did with my visit to Moscow last year.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4621, \"fields\": {\"question\": 821, \"description\": \"We should definitely hit her on these topics. This is unprofessional behavior that should not happen in the chancellery. These concerns about her integrity have to be addressed.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4622, \"fields\": {\"question\": 821, \"description\": \"Not only that - did you notice how she used the N-Word in that interview, and had to be censored out? Such mistakes of communication are unacceptable for a chancellor, and the problematic nature of this faux pas should shed doubt on her character.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4623, \"fields\": {\"question\": 821, \"description\": \"People aren’t clamoring for my comments here, they will be judged on their own. I want to stay positive and talk about the successes I will bring to Germany - but my surrogates can keep attacking her.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4624, \"fields\": {\"question\": 821, \"description\": \"People aren’t clamoring for my comments here, they will be judged on their own. I want to stay positive and talk about the successes I will bring to Germany - but my surrogates can keep attacking her.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4625, \"fields\": {\"question\": 821, \"description\": \"I want to honor the victims, but also address the cause of all this: climate change. Extreme weather events are unfortunately going to become more common -  we need to act decisively and swiftly now to keep global warming below 1.5°C so that we can prevent these disasters.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4626, \"fields\": {\"question\": 821, \"description\": \"I want to honor the victims, but also address the cause of all this: climate change. Extreme weather events are unfortunately going to become more common -  we need to act decisively and swiftly now to keep global warming below 1.5°C so that we can prevent these disasters.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4627, \"fields\": {\"question\": 821, \"description\": \"The floods have shown that we need to be much more ambitious than before. One of the worst offenders is our energy production: we need to stop using coal for energy generation by 2030 and seek out new innovative technologies to keep energy affordable.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4628, \"fields\": {\"question\": 821, \"description\": \"Climate change is coming, whether we want it or not. The most important thing we can do is mitigate its worst effects to prevent catastrophes like this from doing too much damage - we need better crisis responses. Climate action is necessary, as long as it doesn't stifle our economy and freedom of living.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4629, \"fields\": {\"question\": 821, \"description\": \"Germany is no stranger to floods. I’m sorry, but just because today is a day like this, you don't just change your politics. The question of climate change is an international one, we can’t trivialize it like this.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4630, \"fields\": {\"question\": 821, \"description\": \"The floods have shown that we need to be much more ambitious than before. One of the worst offenders is our energy production: we need to stop using coal for energy generation by 2030 and seek out new innovative technologies to keep energy affordable.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4631, \"fields\": {\"question\": 821, \"description\": \"Germany is no stranger to floods. I’m sorry, but just because today is a day like this, you don't just change your politics. The question of climate change is an international one, we can’t trivialize it like this.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4632, \"fields\": {\"question\": 821, \"description\": \"Covid is basically over, the case numbers are very low. One has to be honest and ask: Do we even need such an expensive program? Vaccines are good to have, but we should focus on opening up and treating Covid as the non-problem it has become.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4633, \"fields\": {\"question\": 821, \"description\": \"This might be a good idea. The country needs to move on, we need to do everything we can to finally make Covid history. At some point, we need to have the conversation about mandatory vaccines, and fine those that refuse to get one..\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4634, \"fields\": {\"question\": 821, \"description\": \"Covid is still on the mind of most people. Let’s focus on my response to this crisis, show me in a lab coat or something. With a strong vaccination campaign, we will continue Merkel's course and bring normalcy back!\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4635, \"fields\": {\"question\": 821, \"description\": \"Covid is still on the mind of most people. Let’s focus on my response to this crisis, show me in a lab coat or something. With a strong vaccination campaign, we will continue Merkel's course and bring normalcy back!\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4636, \"fields\": {\"question\": 821, \"description\": \"I’ve been governing North Rhine-Westphalia successfully since 2017. I want to talk about my home, show my successes here and promise to bring them to Germany, as a <i>Landesvater</i>. Give off an air of trustworthiness - let’s even invoke Angela Merkel’s “You know me.”-quip from 2013.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4637, \"fields\": {\"question\": 821, \"description\": \"We want to strike §218, and 219 from the books completely. Pregnancy issues are not part of criminal law - abortion is a medical service that has to be managed as part of regular health care. The stigma has to be broken, and the supply of doctors offering abortion has to be increased.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4638, \"fields\": {\"question\": 821, \"description\": \"The right to life does not stand to disposition. The unborn child has a right to live, and we stand vehemently against efforts to trivialize or encourage abortions from the state. Instead, adoption procedures should be simplified - while doctors who do not report abortions have to incur noticeable sanctions.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4639, \"fields\": {\"question\": 821, \"description\": \"We want to strike §218, and 219 from the books completely. Pregnancy issues are not part of criminal law - abortion is a medical service that has to be managed as part of regular health care. The stigma has to be broken, and the supply of doctors offering abortion has to be increased.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4640, \"fields\": {\"question\": 821, \"description\": \"The right to life does not stand to disposition. The unborn child has a right to live, and we stand vehemently against efforts to trivialize or encourage abortions from the state. Instead, adoption procedures should be simplified - while doctors who do not report abortions have to incur noticeable sanctions.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4641, \"fields\": {\"question\": 821, \"description\": \"The last few years have shown how we can not ignore the 10-15% of the populace voting for the AfD. This country needs change and new solutions. I think a Bahamas coalition with the AfD and the FDP could work - our neighbor Austria showed us how the right wing can govern harmonically.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4642, \"fields\": {\"question\": 821, \"description\": \"The last few years have shown how we can not ignore the 10-15% of the populace voting for the AfD. This country needs change and new solutions. I think a Bahamas coalition with the AfD and the FDP could work - our neighbor Austria showed us how the right wing can govern harmonically.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4643, \"fields\": {\"question\": 821, \"description\": \"This is the biggest debacle for NATO since its founding. We need a relentless analysis of what went wrong, but I also need to criticize the USA’s role in this, the mandate for our troops still went until 2022, but we can’t hold it down alone. The way things are going, we need to reevaluate our stance towards the alliance.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4644, \"fields\": {\"question\": 821, \"description\": \"Olaf Scholz, despite his position, shows a lot of potential. We compete for a lot of voters with his wannabe-Merkel attitude - we need to stop a potential surge before it happens by attacking him on his many weaknesses.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4645, \"fields\": {\"question\": 821, \"description\": \"Baerbock is my main competitor in this race. The Greens are an unexpectedly strong party with a vulnerable candidate - to make this count, we need to shed doubt on her as a candidate. Let’s focus on that.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4646, \"fields\": {\"question\": 821, \"description\": \"Baerbock is my main competitor in this race. The Greens are an unexpectedly strong party with a vulnerable candidate - to make this count, we need to shed doubt on her as a candidate. Let’s focus on that.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4647, \"fields\": {\"question\": 821, \"description\": \"Baerbock has been struggling lately, but the Greens are still a strong party with a vulnerable candidate, and some voters we could pick up. Let’s focus on her.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4648, \"fields\": {\"question\": 821, \"description\": \"He likes to present himself as a moderate, but he hasn’t completely ruled out a coalition with the extremist Left party. Can voters really trust him not to form a coalition with populist demagogues after the election?\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4649, \"fields\": {\"question\": 821, \"description\": \"Scholz likes to pretend he’s a moderate, but the program of his party is ideological and leftwing, with unrealistic promises regarding pensions and the minimum wage. It shows that the SPD as a whole is unfit to govern, and a symbol of past days.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4650, \"fields\": {\"question\": 821, \"description\": \"Everyone on this stage agrees that something has to be done about climate change, but what Mrs Baerbock and her party want can’t be the solution! We need to involve everyone, protect livelihoods and emphasize innovation, instead of blanket bans, as Mrs. Baerbock advocates.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4651, \"fields\": {\"question\": 821, \"description\": \"I’ll attack her for her willingness to govern with the radical Left party. Moderates should be frightened by this prospect, there should be a firewall against political radicals, and entertaining a coalition with Die Linke, as the Greens do repeatedly, is irresponsible.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4652, \"fields\": {\"question\": 821, \"description\": \"I want to present myself as a candidate for pragmatic solutions to climate change. We clearly have to take action: What we need is room for market innovation and international cooperation. I’m proud of the path Germany is on in this regard - we don’t need strict bans.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4653, \"fields\": {\"question\": 821, \"description\": \"With two left-leaning politicians debating with me, I will present myself as the voice of reason. We have tax and social security plans that are actually affordable and generally promise sensible governance. The CDU is the party of the healthy center - of competency and fiscal responsibility.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4654, \"fields\": {\"question\": 821, \"description\": \"With two left-leaning politicians debating with me, I will present myself as the voice of reason. We have tax and social security plans that are actually affordable and generally promise sensible governance. The CDU is the party of the healthy center - of competency and fiscal responsibility.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4655, \"fields\": {\"question\": 821, \"description\": \"You know me. I’m a known quantity from North Rhine-Westphalia, where I’ve governed with prudence and caution - just like Chancellor Merkel. I’m the candidate who stands for a continuation of the Merkel era - with me, Germany will stay on its successful path.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4656, \"fields\": {\"question\": 821, \"description\": \"Who else but Chancellor Angela Merkel could be the right person? She is a figure larger than life, an electoral juggernaut who has won the last four contests, and I want to show people that I’m the one to build on her legacy.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4657, \"fields\": {\"question\": 821, \"description\": \"No matter what happens, we have to make sure the right-wing demagogues do not increase their vote shares. I’m worried about the AfD taking first place in some East German states, and direct mandates could go to them: I need to campaign broadly in the New States, with local colleagues like Haseloff and Kretschmer.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4658, \"fields\": {\"question\": 821, \"description\": \"It’s important that all wings of our party stay united and motivated to vote. Let’s campaign with Friedrich Merz to show that I’m taking people like him and his positions seriously - the CDU has a clear profile, and I’m proud to stand with him for our values!\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4659, \"fields\": {\"question\": 821, \"description\": \"It’s important that all wings of our party stay united and motivated to vote. Let’s campaign with Friedrich Merz to show that I’m taking people like him and his positions seriously - the CDU has a clear profile, and I’m proud to stand with him for our values!\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4660, \"fields\": {\"question\": 821, \"description\": \"Who else but Chancellor Angela Merkel could be the right person? She is a figure larger than life, an electoral juggernaut who has won the last four contests, and I want to show people that I’m the one to build on her legacy.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4661, \"fields\": {\"question\": 821, \"description\": \"Markus Söder and I didn’t always have the warmest relationship, but there is a reason he gave me such a scare - the man has charisma. Let’s campaign with him in Bavaria and show some unity between the CDU and CSU.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4662, \"fields\": {\"question\": 821, \"description\": \"Markus Söder and I didn’t always have the warmest relationship, but there is a reason he gave me such a scare - the man has charisma. Let’s campaign with him in Bavaria and show some unity between the CDU and CSU.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4663, \"fields\": {\"question\": 821, \"description\": \"People can make their own decisions about this, what I want to talk about is substance. Her policies are expensive for the middle class and ineffective, and she does not have the necessary experience to be chancellor. She talks - I act.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4664, \"fields\": {\"question\": 821, \"description\": \"People can make their own decisions about this, what I want to talk about is substance. Her policies are expensive for the middle class and ineffective, and she does not have the necessary experience to be chancellor. She talks - I act.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4665, \"fields\": {\"question\": 851, \"description\": \"We have to speak clearly, but not polarize. We have to integrate, keeping our society together, bringing different people together. That's hard work; one has to do a lot of listening, also listening to uncomfortable things. But at the end of the day, we have to seek compromise, to find solutions that the people demand from us. That's what I mean, when I say, 'let's keep it up'!\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4666, \"fields\": {\"question\": 853, \"description\": \"Let’s do a whole image-change. We need to move on from Merkel, to bring a decade of modernization to Germany, and deliver the promises of change our opponents can only talk about.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4667, \"fields\": {\"question\": 853, \"description\": \"Let’s do a whole image-change. We need to move on from Merkel, to bring a decade of modernization to Germany, and deliver the promises of change our opponents can only talk about.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4668, \"fields\": {\"question\": 853, \"description\": \"Let’s do a whole image-change. We need to move on from Merkel, to bring a decade of modernization to Germany, and deliver the promises of change our opponents can only talk about.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4669, \"fields\": {\"question\": 853, \"description\": \"Let’s do another round of ads about my family history, like how my father was a miner, and my personality. We can give more interviews to highlight my patience, my authenticity and my fatherly demeanor.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4670, \"fields\": {\"question\": 853, \"description\": \"The role of a statesman is to rise above the pack, and let the voters decide. I am going to project strength going into election day, together, we will win this thing, regardless of the naysayers!\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4671, \"fields\": {\"question\": 853, \"description\": \"The role of a statesman is to rise above the pack, and let the voters decide. I am going to project strength going into election day, together, we will win this thing, regardless of the naysayers!\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4672, \"fields\": {\"question\": 853, \"description\": \"I want to be Merkel's successor, and the chancellor carries a lot of goodwill with voters. There’s one option for us here - she has to publicly vow for us in her next Bundestag speech.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4673, \"fields\": {\"question\": 853, \"description\": \"I want to be Merkel's successor, and the chancellor carries a lot of goodwill with voters. There’s one option for us here - she has to publicly vow for us in her next Bundestag speech.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4674, \"fields\": {\"question\": 853, \"description\": \"Let’s do a whole image-change. We need to move on from Merkel, to bring a decade of modernization to Germany, and deliver the promises of change our opponents can only talk about.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4675, \"fields\": {\"question\": 853, \"description\": \"Let’s do a whole image-change. We need to move on from Merkel, to bring a decade of modernization to Germany, and deliver the promises of change our opponents can only talk about.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4676, \"fields\": {\"question\": 853, \"description\": \"Let’s do a whole image-change. We need to move on from Merkel, to bring a decade of modernization to Germany, and deliver the promises of change our opponents can only talk about.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4677, \"fields\": {\"question\": 853, \"description\": \"Let’s do another round of ads about my family history, like how my father was a miner, and my personality. We can give more interviews to highlight my patience, my authenticity and my fatherly demeanor.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4678, \"fields\": {\"question\": 853, \"description\": \"The role of a statesman is to rise above the pack, and let the voters decide. I am going to project strength going into election day, together, we will win this thing, regardless of the naysayers!\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4679, \"fields\": {\"question\": 853, \"description\": \"The role of a statesman is to rise above the pack, and let the voters decide. I am going to project strength going into election day, together, we will win this thing, regardless of the naysayers!\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4680, \"fields\": {\"question\": 853, \"description\": \"I want to be Merkel's successor, and the chancellor carries a lot of goodwill with voters. There’s one option for us here - she has to publicly vow for us in her next Bundestag speech.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4681, \"fields\": {\"question\": 853, \"description\": \"I want to be Merkel's successor, and the chancellor carries a lot of goodwill with voters. There’s one option for us here - she has to publicly vow for us in her next Bundestag speech.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4682, \"fields\": {\"question\": 853, \"description\": \"Let’s do a whole image-change. We need to move on from Merkel, to bring a decade of modernization to Germany, and deliver the promises of change our opponents can only talk about.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4683, \"fields\": {\"question\": 853, \"description\": \"Let’s do a whole image-change. We need to move on from Merkel, to bring a decade of modernization to Germany, and deliver the promises of change our opponents can only talk about.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4684, \"fields\": {\"question\": 853, \"description\": \"Let’s do a whole image-change. We need to move on from Merkel, to bring a decade of modernization to Germany, and deliver the promises of change our opponents can only talk about.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4685, \"fields\": {\"question\": 853, \"description\": \"Let’s do another round of ads about my family history, like how my father was a miner, and my personality. We can give more interviews to highlight my patience, my authenticity and my fatherly demeanor.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4686, \"fields\": {\"question\": 853, \"description\": \"The role of a statesman is to rise above the pack, and let the voters decide. I am going to project strength going into election day, together, we will win this thing, regardless of the naysayers!\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4687, \"fields\": {\"question\": 853, \"description\": \"The role of a statesman is to rise above the pack, and let the voters decide. I am going to project strength going into election day, together, we will win this thing, regardless of the naysayers!\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4688, \"fields\": {\"question\": 853, \"description\": \"I want to be Merkel's successor, and the chancellor carries a lot of goodwill with voters. There’s one option for us here - she has to publicly vow for us in her next Bundestag speech.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4689, \"fields\": {\"question\": 853, \"description\": \"I want to be Merkel's successor, and the chancellor carries a lot of goodwill with voters. There’s one option for us here - she has to publicly vow for us in her next Bundestag speech.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4690, \"fields\": {\"question\": 853, \"description\": \"I will give a largely non-political speech. We need to focus on the importance of cohesion and trust in our society, to come together as one in the wake of this crisis, not letting our different views divide us, and the values of honest work. I want to bring up the anecdote about my father, who was a miner. A statesman is what we need right now.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4691, \"fields\": {\"question\": 853, \"description\": \"I will give a largely non-political speech. We need to focus on the importance of cohesion and trust in our society, to come together as one in the wake of this crisis, not letting our different views divide us, and the values of honest work. I want to bring up the anecdote about my father, who was a miner. A statesman is what we need right now.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4692, \"fields\": {\"question\": 853, \"description\": \"The success of the AfD showed us that this country is in dire need of change and a new direction, away from the Status Quo. I will promise to modernize Germany while letting our conservative values guide us in this progress. A new Germany, responsible and sensible.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4693, \"fields\": {\"question\": 853, \"description\": \"I will take this development very seriously, clearly the demand is there to take the climate more seriously. Let’s unveil some of our own environmental policies to stop their momentum and defuse some of their criticisms.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4694, \"fields\": {\"question\": 853, \"description\": \"Off the record, it’s not the worst thing that these two parties compete for center-left votes. This makes the path to first place a lot easier. Let’s focus somewhat on the Greens as our main contender in that regard, and just attack them moderately where we can.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4695, \"fields\": {\"question\": 853, \"description\": \"I will take this development very seriously, clearly the demand is there to take the climate more seriously. Let’s unveil some of our own environmental policies to stop their momentum and defuse some of their criticisms.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4696, \"fields\": {\"question\": 853, \"description\": \"Off the record, it’s not the worst thing that these two parties compete for center-left votes. This makes the path to first place a lot easier. Let’s focus somewhat on the Greens as our main contender in that regard, and just attack them moderately where we can.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4697, \"fields\": {\"question\": 853, \"description\": \"It is important that we don’t demonize Putin and keep our dialogue open. I’m critical of many things the Russian leadership has done, but overall, we should strive to cooperate with them, as we do on the Nord-Stream 2 pipeline.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4698, \"fields\": {\"question\": 853, \"description\": \"I’ve been more lenient in the past, but enough is enough. I will join in with the criticism against Kretschmer and call for a tougher stance towards Putin. Maybe we should only open the Nord-Stream 2 pipeline if we get some concessions from Russia.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4699, \"fields\": {\"question\": 853, \"description\": \"It is important that we don’t demonize Putin and keep our dialogue open. I’m critical of many things the Russian leadership has done, but overall, we should strive to cooperate with them, as we do on the Nord-Stream 2 pipeline.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4700, \"fields\": {\"question\": 853, \"description\": \"I’ve been more lenient in the past, but enough is enough. I will join in with the criticism against Kretschmer and call for a tougher stance towards Putin. Maybe we should only open the Nord-Stream 2 pipeline if we get some concessions from Russia.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4701, \"fields\": {\"question\": 853, \"description\": \"I want to congratulate Haseloff for his strong performance. It shows that the citizens still trust the CDU to be the best governing party, and we want to emulate his strategy on a national scale.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4702, \"fields\": {\"question\": 853, \"description\": \"I want to congratulate Haseloff for his strong performance. It shows that the citizens still trust the CDU to be the best governing party, and we want to emulate his strategy on a national scale.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4703, \"fields\": {\"question\": 853, \"description\": \"I want to congratulate Haseloff for his strong performance. It shows that the citizens still trust the CDU to be the best governing party, and we want to emulate his strategy on a national scale.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4704, \"fields\": {\"question\": 853, \"description\": \"We should definitely hit her on these topics. This is unprofessional behavior that should not happen in the chancellery. These concerns about her integrity have to be addressed.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4705, \"fields\": {\"question\": 853, \"description\": \"We should definitely hit her on these topics. This is unprofessional behavior that should not happen in the chancellery. These concerns about her integrity have to be addressed.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4706, \"fields\": {\"question\": 853, \"description\": \"People aren’t clamoring for my comments here, they will be judged on their own. I want to stay positive and talk about the successes I will bring to Germany.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4707, \"fields\": {\"question\": 853, \"description\": \"The most important thing we can do right now is help the affected regions with their crisis management. They need help now, quickly and unbureaucratically. I’m promising swift support.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4708, \"fields\": {\"question\": 853, \"description\": \"I want to especially praise local teams and local reactions. Some areas already had crisis teams ready when the sun was still shining and no one knew what would happen. We will follow up and provide better crisis responses in the future.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4709, \"fields\": {\"question\": 853, \"description\": \"I want to especially praise local teams and local reactions. Some areas already had crisis teams ready when the sun was still shining and no one knew what would happen. We will follow up and provide better crisis responses in the future.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4710, \"fields\": {\"question\": 853, \"description\": \"The most important thing we can do right now is help the affected regions with their crisis management. They need help now, quickly and unbureaucratically. I’m promising swift support.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4711, \"fields\": {\"question\": 853, \"description\": \"I want to especially praise local teams and local reactions. Some areas already had crisis teams ready when the sun was still shining and no one knew what would happen. We will follow up and provide better crisis responses in the future.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4712, \"fields\": {\"question\": 853, \"description\": \"Actually, I don’t want to be seen as performative. The cleanup operations can be left to professionals, I will keep coordinating the crisis efforts from the state chancellery so that everything goes smoothly - that’s the best I can do for the victims.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4713, \"fields\": {\"question\": 853, \"description\": \"Actually, I don’t want to be seen as performative. The cleanup operations can be left to professionals, I will keep coordinating the crisis efforts from the state chancellery so that everything goes smoothly - that’s the best I can do for the victims.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4714, \"fields\": {\"question\": 853, \"description\": \"Actually, I don’t want to be seen as performative. The cleanup operations can be left to professionals, I will keep coordinating the crisis efforts from the state chancellery so that everything goes smoothly - that’s the best I can do for the victims.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4715, \"fields\": {\"question\": 853, \"description\": \"What a great idea! We should get out there and visit some affected towns - our President Frank-Walter Steinmeier will be here in a few days, so let’s try to get some shared pictures with our head of state. Catch some of his gravitas.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4716, \"fields\": {\"question\": 853, \"description\": \"Climate change is coming, whether we want it or not. The most important thing we can do is mitigate its worst effects to prevent catastrophes like this from doing too much damage - we need better crisis responses. Climate action is necessary, as long as it doesn't stifle our economy and freedom of living.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4717, \"fields\": {\"question\": 853, \"description\": \"Climate change is coming, whether we want it or not. The most important thing we can do is mitigate its worst effects to prevent catastrophes like this from doing too much damage - we need better crisis responses. Climate action is necessary, as long as it doesn't stifle our economy and freedom of living.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4718, \"fields\": {\"question\": 853, \"description\": \"We have to modernize my image. Let’s incorporate some biographical elements, like that my father was a miner, and show pictures of how I closed the last mine in North Rhine-Westphalia. Then talk about tackling climate change together and how we need to promote tolerance.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4719, \"fields\": {\"question\": 853, \"description\": \"It’s best to play it safe. My motto is “Making Germany Together” - I want a spot about how I’m bringing different people together and how our country needs solidarity in this crisis. Let’s show the diversity in our supporters and promise that we will bounce back stronger than before.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4720, \"fields\": {\"question\": 853, \"description\": \"Actually, I’ve changed my mind. The mudslinging isn’t worth it - after giving my usual critiques I’ll just wing it and rely on my instincts as a statesman to rise above the pack.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4721, \"fields\": {\"question\": 853, \"description\": \"Actually, I’ve changed my mind. The mudslinging isn’t worth it - I’ll just broadly criticize Baerbock for her incompetence and then just wing it, relying on my instincts as a statesman to rise above the pack.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4722, \"fields\": {\"question\": 853, \"description\": \"She’s had problems with plagiarism in her book, and she inflated her CV. These might seem like minor things, but in light of her lack of experience: can she really be trusted to govern this country, if she fails at these minor tasks?\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4723, \"fields\": {\"question\": 853, \"description\": \"She’s had problems with plagiarism in her book, and she inflated her CV. These might seem like minor things, but in light of her lack of experience: can she really be trusted to govern this country, if she fails at these minor tasks?\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4724, \"fields\": {\"question\": 853, \"description\": \"She’s had problems with plagiarism in her book, and she inflated her CV. These might seem like minor things, but in light of her lack of experience: can she really be trusted to govern this country, if she fails at these minor tasks?\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4725, \"fields\": {\"question\": 853, \"description\": \"You know me. I’m a known quantity from North Rhine-Westphalia, where I’ve governed with prudence and caution - just like Chancellor Merkel. I’m the candidate who stands for a continuation of the Merkel era - with me, Germany will stay on its successful path.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4726, \"fields\": {\"question\": 853, \"description\": \"You know me. I’m a known quantity from North Rhine-Westphalia, where I’ve governed with prudence and caution - just like Chancellor Merkel. I’m the candidate who stands for a continuation of the Merkel era - with me, Germany will stay on its successful path.\"}}, {\"model\": \"campaign_trail.answer\", \"pk\": 4727, \"fields\": {\"question\": 853, \"description\": \"You know me. I’m a known quantity from North Rhine-Westphalia, where I’ve governed with prudence and caution - just like Chancellor Merkel. I’m the candidate who stands for a continuation of the Merkel era - with me, Germany will stay on its successful path.\"}}]");
 campaignTrail_temp.states_json = JSON.parse("[{\"model\": \"campaign_trail.state\", \"pk\": 3000, \"fields\": {\"name\": \"Baden-Württemberg\", \"abbr\": \"Baden_Württemberg\", \"electoral_votes\": 0, \"popular_votes\": 5997317, \"poll_closing_time\": 0, \"winner_take_all_flg\": 1, \"election\": 9}}, {\"model\": \"campaign_trail.state\", \"pk\": 3001, \"fields\": {\"name\": \"Bavaria\", \"abbr\": \"Bavaria\", \"electoral_votes\": 0, \"popular_votes\": 7608980 	, \"poll_closing_time\": 0, \"winner_take_all_flg\": 1, \"election\": 9}}, {\"model\": \"campaign_trail.state\", \"pk\": 3002, \"fields\": {\"name\": \"Berlin\", \"abbr\": \"Berlin\", \"electoral_votes\": 0, \"popular_votes\": 1856903, \"poll_closing_time\": 100, \"winner_take_all_flg\": 1, \"election\": 9}}, {\"model\": \"campaign_trail.state\", \"pk\": 3003, \"fields\": {\"name\": \"Brandenburg\", \"abbr\": \"Brandenburg\", \"electoral_votes\": 0, \"popular_votes\": 1549464, \"poll_closing_time\": 0, \"winner_take_all_flg\": 1, \"election\": 9}}, {\"model\": \"campaign_trail.state\", \"pk\": 3004, \"fields\": {\"name\": \"Bremen\", \"abbr\": \"Bremen\", \"electoral_votes\": 0, \"popular_votes\": 330431 , \"poll_closing_time\": 0, \"winner_take_all_flg\": 1, \"election\": 9}}, {\"model\": \"campaign_trail.state\", \"pk\": 3005, \"fields\": {\"name\": \"Hamburg\", \"abbr\": \"Hamburg\", \"electoral_votes\": 0, \"popular_votes\": 1011044 , \"poll_closing_time\": 0, \"winner_take_all_flg\": 1, \"election\": 9}}, {\"model\": \"campaign_trail.state\", \"pk\": 3006, \"fields\": {\"name\": \"Hessen\", \"abbr\": \"Hessen\", \"electoral_votes\": 0, \"popular_votes\": 3340639 , \"poll_closing_time\": 0, \"winner_take_all_flg\": 1, \"election\": 9}}, {\"model\": \"campaign_trail.state\", \"pk\": 3007, \"fields\": {\"name\": \"Mecklenburg-Vorpommern\", \"abbr\": \"Mecklenburg_Vorpommern\", \"electoral_votes\": 0, \"popular_votes\": 935040, \"poll_closing_time\": 0, \"winner_take_all_flg\": 1, \"election\": 9}}, {\"model\": \"campaign_trail.state\", \"pk\": 3008, \"fields\": {\"name\": \"Lower Saxony\", \"abbr\": \"Lower_Saxony\", \"electoral_votes\": 0, \"popular_votes\": 4563142 , \"poll_closing_time\": 0, \"winner_take_all_flg\": 1, \"election\": 9}}, {\"model\": \"campaign_trail.state\", \"pk\": 3009, \"fields\": {\"name\": \"North Rhine-Westphalia\", \"abbr\": \"North_Rhine_Westphalia\", \"electoral_votes\": 0, \"popular_votes\": 9960984 , \"poll_closing_time\": 50, \"winner_take_all_flg\": 1, \"election\": 9}}, {\"model\": \"campaign_trail.state\", \"pk\": 3010, \"fields\": {\"name\": \"Rhineland-Palatine\", \"abbr\": \"Rhineland_Palatine\", \"electoral_votes\": 0, \"popular_votes\": 2357021, \"poll_closing_time\": 0, \"winner_take_all_flg\": 1, \"election\": 9}}, {\"model\": \"campaign_trail.state\", \"pk\": 3011, \"fields\": {\"name\": \"Saarland\", \"abbr\": \"Saarland\", \"electoral_votes\": 0, \"popular_votes\": 583963 	, \"poll_closing_time\": 0, \"winner_take_all_flg\": 1, \"election\": 9}}, {\"model\": \"campaign_trail.state\", \"pk\": 3012, \"fields\": {\"name\": \"Saxony\", \"abbr\": \"Saxony\", \"electoral_votes\": 0, \"popular_votes\": 2488954 , \"poll_closing_time\": 0, \"winner_take_all_flg\": 1, \"election\": 9}}, {\"model\": \"campaign_trail.state\", \"pk\": 3013, \"fields\": {\"name\": \"Saxony-Anhalt\", \"abbr\": \"Saxony_Anhalt\", \"electoral_votes\": 0, \"popular_votes\": 2488954 , \"poll_closing_time\": 0, \"winner_take_all_flg\": 1, \"election\": 9}}, {\"model\": \"campaign_trail.state\", \"pk\": 3014, \"fields\": {\"name\": \"Schleswig-Holstein\", \"abbr\": \"Schleswig_Holstein\", \"electoral_votes\": 0, \"popular_votes\": 1776145 	, \"poll_closing_time\": 0, \"winner_take_all_flg\": 1, \"election\": 9}}, {\"model\": \"campaign_trail.state\", \"pk\": 3015, \"fields\": {\"name\": \"Thuringia\", \"abbr\": \"Thuringia\", \"electoral_votes\": 0, \"popular_votes\": 1279720 , \"poll_closing_time\": 0, \"winner_take_all_flg\": 1, \"election\": 9}}]");
 campaignTrail_temp.issues_json = JSON.parse("[{\"model\": \"campaign_trail.issue\", \"pk\": 57, \"fields\": {\"name\": \"Pandemic Policy Stance\", \"description\": \"'\", \"stance_1\": \"For strict restrictions\", \"stance_desc_1\": \"'\", \"stance_2\": \"For restrictions\", \"stance_desc_2\": \"'\", \"stance_3\": \"For Restrictions\", \"stance_desc_3\": \"'\", \"stance_4\": \"For some restrictions\", \"stance_desc_4\": \"'\", \"stance_5\": \"For small restrictions\", \"stance_desc_5\": \"'\", \"stance_6\": \"Against restrictions\", \"stance_desc_6\": \"'\", \"stance_7\": \"Strongly against restrictions\", \"stance_desc_7\": \"'\", \"election\": 9}}, {\"model\": \"campaign_trail.issue\", \"pk\": 58, \"fields\": {\"name\": \"Climate Change\", \"description\": \"'\", \"stance_1\": \"Do more\", \"stance_desc_1\": \"'\", \"stance_2\": \"Do more\", \"stance_desc_2\": \"'\", \"stance_3\": \"Do a bit more\", \"stance_desc_3\": \"'\", \"stance_4\": \"Do a bit more\", \"stance_desc_4\": \"'\", \"stance_5\": \"Maintain efforts\", \"stance_desc_5\": \"'\", \"stance_6\": \"Do a bit less\", \"stance_desc_6\": \"'\", \"stance_7\": \"Do less\", \"stance_desc_7\": \"'\", \"election\": 9}}, {\"model\": \"campaign_trail.issue\", \"pk\": 59, \"fields\": {\"name\": \"Foreign Policy\", \"description\": \"'\", \"stance_1\": \"Strongly Pro NATO\", \"stance_desc_1\": \"'\", \"stance_2\": \"Pro NATO\", \"stance_desc_2\": \"'\", \"stance_3\": \"Pro NATO\", \"stance_desc_3\": \"'\", \"stance_4\": \"Somewhat Pro Nato\", \"stance_desc_4\": \"'\", \"stance_5\": \"Ambivalent\", \"stance_desc_5\": \"'\", \"stance_6\": \"Ambivalent\", \"stance_desc_6\": \"'\", \"stance_7\": \"Somewhat Pro Russia\", \"stance_desc_7\": \"'\", \"election\": 9}}, {\"model\": \"campaign_trail.issue\", \"pk\": 60, \"fields\": {\"name\": \"Economy\", \"description\": \"'\", \"stance_1\": \"Rich\", \"stance_desc_1\": \"'\", \"stance_2\": \"Rich\", \"stance_desc_2\": \"'\", \"stance_3\": \"Average\", \"stance_desc_3\": \"'\", \"stance_4\": \"Average\", \"stance_desc_4\": \"'\", \"stance_5\": \"Average\", \"stance_desc_5\": \"'\", \"stance_6\": \"Poor\", \"stance_desc_6\": \"'\", \"stance_7\": \"Poor\", \"stance_desc_7\": \"'\", \"election\": 9}}, {\"model\": \"campaign_trail.issue\", \"pk\": 61, \"fields\": {\"name\": \"Urbanization\", \"description\": \"'\", \"stance_1\": \"City-State\", \"stance_desc_1\": \"'\", \"stance_2\": \"Urban\", \"stance_desc_2\": \"'\", \"stance_3\": \"Somewhat Urban\", \"stance_desc_3\": \"'\", \"stance_4\": \"Mixed\", \"stance_desc_4\": \"'\", \"stance_5\": \"Mixed\", \"stance_desc_5\": \"'\", \"stance_6\": \"Somewhat Rural\", \"stance_desc_6\": \"'\", \"stance_7\": \"Very Rural\", \"stance_desc_7\": \"'\", \"election\": 9}}]");
 if (e.displayTooltips){
@@ -79,6 +79,7 @@ campaignTrail_temp.game_start_logging_id = '3662498';
     var resigned = false;
     var ideologyCenter = 0;
     var ideologyRight = 0;
+    var mood = "confident";
     var statesman = 7;
     var totalSeats = 0;
     var contestedElection = false;
@@ -1428,6 +1429,7 @@ cyoAdventure = function(a) {
         pivotRight += pivotRightMap[ans];
     }
 
+    console.log(statesman)
     if(campaignTrail_temp.question_number===28){
                 let selectedQuestion = extraQuestions[5];
 
@@ -1613,6 +1615,89 @@ cyoAdventure = function(a) {
         changeGlobalEffect(77, 4059, 0.012)
         changeStateEffect(77, 4059, 3009, 0.005)
     }
+    if (campaignTrail_temp.question_number===21 && statesman<5){
+        answerSwapper(4062,4712, false)
+        changeGlobalEffect(77, 4062, -0.03)
+        changeStateEffect(78, 4062, 3009, 0.02)
+    }
+
+
+    else if (campaignTrail_temp.question_number===21 && statesman<10){
+        answerSwapper(4062,4713, false)
+        changeGlobalEffect(77, 4062, -0.015)
+        changeStateEffect(78, 4062, 3009, 0.01)
+        changeStateEffect(77, 4062, 3001, 0.01)
+    }
+    else if (campaignTrail_temp.question_number===21 && statesman>14){
+        answerSwapper(4062,4714, false)
+        changeGlobalEffect(77, 4062, 0.02)
+        changeGlobalEffect(78, 4062, -0.01)
+        answerSwapper(4065,4715, false)
+        changeGlobalEffect(77, 4065, 0.03)
+        changeGlobalEffect(78, 4065, -0.02)
+    }
+    if (campaignTrail_temp.question_number===22 && statesman<7){
+        answerSwapper(4067,4716, false)
+        changeGlobalEffect(77, 4067, -0.03)
+        changeGlobalEffect(78, 4067, 0.04)
+        changeGlobalEffect(79, 4067, -0.01)
+    }
+    else if (campaignTrail_temp.question_number===22 && statesman>15){
+        answerSwapper(4067,4717, false)
+        changeGlobalEffect(77, 4067, 0.015)
+        changeGlobalEffect(78, 4067, -0.01)
+        changeGlobalEffect(303, 4067, -0.01)
+    }
+    if (campaignTrail_temp.question_number===24 && statesman>15){
+        answerSwapper(4074, 4718, false)
+        changeGlobalEffect(77, 4074, 0.03)
+        changeGlobalEffect(78, 4074, -0.03)
+        changeGlobalEffect(305, 4074, 0.01)
+    }
+    else if (campaignTrail_temp.question_number===24 && statesman<5){
+        answerSwapper(4076, 4719, false)
+        changeGlobalEffect(77, 4076, -0.02)
+        changeGlobalEffect(78, 4076, 0.01)
+    }
+
+    if (campaignTrail_temp.question_number===31 && statesman>18){
+        answerSwapper(4093, 4720, false)
+        changeGlobalEffect(77, 4093, 0.05)
+        changeGlobalEffect(78, 4093, -0.01)
+        changeGlobalEffect(79, 4093, -0.04)
+        answerSwapper(4097, 4721, false)
+        changeGlobalEffect(77, 4097, 0.05)
+        changeGlobalEffect(78, 4097, -0.01)
+        changeGlobalEffect(79, 4097, -0.04)
+    }
+    if (campaignTrail_temp.question_number===31 && statesman<5){
+        answerSwapper(4094, 4722, false)
+        changeGlobalEffect(77, 4094, -0.04)
+        changeGlobalEffect(79, 4094, 0.04)
+        answerSwapper(4100, 4725, false)
+        changeGlobalEffect(77, 4100, -0.01)
+        changeGlobalEffect(79, 4100, 0.01)
+    }
+    else if (campaignTrail_temp.question_number===31 && statesman<10){
+        answerSwapper(4094, 4723, false)
+        changeGlobalEffect(77, 4094, -0.005)
+        changeGlobalEffect(78, 4094, 0.005)
+        answerSwapper(4100, 4726, false)
+        changeGlobalEffect(77, 4100, -0.005)
+        changeGlobalEffect(79, 4100, 0.005)
+    }
+    else if (campaignTrail_temp.question_number===31 && statesman>14){
+        answerSwapper(4094, 4724, false)
+        changeGlobalEffect(77, 4094, 0.005)
+        changeGlobalEffect(78, 4094, -0.005)
+    }
+
+    if (campaignTrail_temp.question_number===31 && statesman>14&&!firedKeys[2]){
+        answerSwapper(4100, 4727, false)
+        changeGlobalEffect(77, 4100, 0.04)
+        changeGlobalEffect(79, 4100, -0.04)
+    }
+
 
     //mini-CYOA
     if(ans===4503){
@@ -1770,7 +1855,8 @@ cyoAdventure = function(a) {
         changeGlobalEffect(77,4075, -0.03)
         changeGlobalEffect(78,4075, 0.03)
     }
-    if(ans===4065&&campaignTrail_temp.player_answers.includes(4000)&&!campaignTrail_temp.player_answers.includes(4008)){
+    if(ans===4065&&campaignTrail_temp.player_answers.includes(4000)&&!campaignTrail_temp.player_answers.includes(4008)&&!firedKeys[2]){
+        firedKeys[2]=true;
         answerSwapper(4077,4636, false)
         changeGlobalEffect(77,4077, 0.008)
         changeStateEffect(77, 4077, 3009, 0.02)
@@ -2905,6 +2991,1430 @@ function removeElectoralVotesZero() {
   }
 }
 
+
+
+var advisor_news = true;
+
+function addHeadquarterButton() {
+    // Check if the button already exists
+    if (document.getElementById('headquarter_button')) {
+        return;
+    }
+
+    // Find the reference button by its ID
+    const refButton = document.getElementById('view_electoral_map');
+    if (!refButton) {
+        return;
+    }
+
+    // Create a new button element
+    const newButton = document.createElement('button');
+
+    newButton.id = 'headquarter_button';
+
+    newButton.style.marginLeft = '1.5em';
+
+    newButton.innerHTML = advisor_news ? '<strong><span style="color: red;">!</span></strong>  Headquarter' : 'Headquarter';
+
+    // Attach the click event listener
+    newButton.addEventListener('click', openHeadquarter);
+
+    // Insert the new button next to the reference button
+    refButton.insertAdjacentElement('afterend', newButton);
+}
+
+var dismissalsLeft = 5;
+var statesmanDescription = ["You're a gaffe-prone political lightweight", "People are worried about your lacking political gravitas", "Overall, you're seen as competent statesman", "People see you as true statesman and Landesvater"]
+
+function openHeadquarter() {
+
+    advisor_news = false;
+    let questions = document.querySelector(".inner_window_question");
+
+    questions.style.display = 'none';
+
+    const hqButton = document.getElementById('headquarter_button');
+    if (hqButton) {
+        hqButton.remove();
+    }
+
+    // Create and set up the headquarters div
+    let hqDiv = document.createElement('div');
+    hqDiv.id = 'headquarter';
+    hqDiv.style.display = 'flex'; // Set layout to flex to allow columns
+    hqDiv.style.color = 'black';
+    hqDiv.style.backgroundImage = 'url("https://app.handelsblatt.com/images/spd-stellt-kampagne-scholz-packt-das-an-vor/27483890/2-formatOriginal.jpg")';
+    hqDiv.style.backgroundSize = 'cover';
+    hqDiv.style.backgroundRepeat = 'no-repeat';
+    hqDiv.style.backgroundColor = 'rgba(255, 255, 255, 0.7)'; // dark green with 60% opacity
+    hqDiv.style.backgroundBlendMode = 'overlay';
+    hqDiv.style.border = '5px solid black';
+    hqDiv.style.borderRadius = '10px';
+    hqDiv.style.boxShadow = '0 0 15px rgba(0,0,0,0.5)';
+    hqDiv.style.height = '650px';
+    hqDiv.style.color = 'white';
+
+
+    // Create inner divs for columns
+    let leftCol = document.createElement('div');
+    leftCol.style.width = '30%';
+    hqDiv.appendChild(leftCol);
+
+    let middleCol = document.createElement('div');
+    middleCol.style.width = '40%';
+    hqDiv.appendChild(middleCol);
+
+    let rightCol = document.createElement('div');
+    rightCol.style.width = '30%';
+    hqDiv.appendChild(rightCol);
+
+    if (window.innerWidth <= 768) {
+        hqDiv.style.flexDirection = 'column';
+        hqDiv.style.height = 'auto';
+        leftCol.style.width = '100%';
+        leftCol.style.order = '2';
+
+        middleCol.style.width = '100%';
+        middleCol.style.order = '1';
+
+        rightCol.style.width = '100%';
+        rightCol.style.order = '3';
+    }
+
+    // Create wrapper div for the header and mood
+    let headerWrapper = document.createElement('div');
+    headerWrapper.style.display = 'block'; // Stack the divs on top of each other
+    headerWrapper.style.padding = '0'; // No padding
+    headerWrapper.style.marginTop = '6px';
+
+    // Create a div for Campaign header (h1) with specific style
+    let headerDiv = document.createElement('div');
+    headerDiv.className = 'happy-box';
+    headerDiv.style.border = '5px solid black';
+    headerDiv.style.borderRadius = '10px'; // Round all corners
+    headerDiv.style.marginBottom = '0'; // Remove bottom margin to avoid gap
+
+    let header = document.createElement('h1');
+    header.innerText = "Campaign Headquarters";
+    headerDiv.appendChild(header);
+    headerWrapper.appendChild(headerDiv); // Append to wrapper instead
+
+    // Create a div for Mood (h2) with specific style
+    let moodDiv = document.createElement('div');
+    moodDiv.className = 'happy-box';
+    moodDiv.style.border = '5px solid black';
+    moodDiv.style.borderRadius = '0 0 10px 10px'; // Round only bottom corners
+    moodDiv.style.marginTop = '-4px'; // To overlap the bottom border of the headerDiv
+    moodDiv.style.borderTop = '1px solid black'; // Remove the top border
+    moodDiv.style.width = '70%'; // Set width to 70%
+    moodDiv.style.marginLeft = 'auto'; // Centering horizontally
+    moodDiv.style.marginRight = 'auto'; // Centering horizontally
+
+    let displayMood = document.createElement('h2');
+    displayMood.innerText = `Mood: ${mood}`;
+    moodDiv.appendChild(displayMood);
+    headerWrapper.appendChild(moodDiv); // Append to wrapper instead
+
+    // Append the wrapper div to the middle column
+    middleCol.appendChild(headerWrapper);
+
+
+
+    // Create a wrapping div to center everything vertically and horizontally
+    let wrapDiv = document.createElement('div');
+    wrapDiv.style.display = 'flex';
+    wrapDiv.style.flexDirection = 'column';
+    wrapDiv.style.alignItems = 'center';
+    wrapDiv.style.justifyContent = 'center';
+    wrapDiv.style.height = '100%';
+
+    // Create div for Likeability Header and wrap h2 in it
+    let patienceHeaderDiv = document.createElement('div');
+    patienceHeaderDiv.style.margin = '5px';
+    patienceHeaderDiv.style.marginBottom = '0px';
+    patienceHeaderDiv.style.border = '5px solid black';
+    patienceHeaderDiv.className = 'happy-box';
+    patienceHeaderDiv.style.borderRadius = '10px';
+
+
+    let patienceLabel = document.createElement('h2');
+    patienceLabel.innerText = "Armin's Statesmanship";
+    patienceLabel.className = 'happy-box';
+    patienceLabel.style.padding = '1em';
+    patienceLabel.style.textAlign = 'center';
+    patienceHeaderDiv.appendChild(patienceLabel);
+
+    wrapDiv.appendChild(patienceHeaderDiv);
+
+    // Create Likeability Circles Div
+    let patienceDiv = document.createElement('div');
+    patienceDiv.style.display = 'flex';
+    patienceDiv.style.flexDirection = 'column-reverse';
+    patienceDiv.style.alignItems = 'center';
+    patienceDiv.style.height = '15em';
+    patienceDiv.style.width = '5em';
+    patienceDiv.style.border = '1px solid black';
+    patienceDiv.style.borderLeft = '5px solid black';
+    patienceDiv.style.borderRight = '5px solid black';
+    patienceDiv.className = 'happy-box';
+    patienceDiv.style.margin = '5px';
+    patienceDiv.style.marginTop = '-4px';
+    patienceDiv.style.marginBottom = '-4px';
+    patienceDiv.style.zIndex = '2';
+    wrapDiv.appendChild(patienceDiv);
+
+    for (let i = 0; i < 4; i++) {
+        let circle = document.createElement('div');
+        circle.style.width = '3em';
+        circle.style.height = '3em';
+        circle.style.borderRadius = '50%';
+        circle.style.margin = '5px';
+        circle.style.border = '1px solid black'; // Added border
+
+        if (i <= Math.floor(statesman / 5)) {
+            if (i === 0) circle.style.backgroundColor = 'darkred';
+            else if (i === 1) circle.style.backgroundColor = 'orange';
+            else if (i === 2) circle.style.backgroundColor = 'yellow';
+            else circle.style.backgroundColor = 'green';
+        } else {
+            circle.style.display = 'none';
+        }
+        patienceDiv.appendChild(circle);
+    }
+
+    let likeabilityDescDiv = document.createElement('div');
+    likeabilityDescDiv.innerText = statesmanDescription[Math.floor(Math.min(statesman,15) / 5)]; // Updated logic
+    likeabilityDescDiv.className = 'happy-box';
+    likeabilityDescDiv.style.padding = '1em';
+    likeabilityDescDiv.style.textAlign = 'center';
+    likeabilityDescDiv.style.border = '5px solid black';
+    likeabilityDescDiv.style.borderRadius = '10px'; // More rounded corners
+    likeabilityDescDiv.style.margin = '5px';
+    likeabilityDescDiv.style.marginTop = '0px';
+
+    wrapDiv.appendChild(likeabilityDescDiv);
+
+
+    // Add the wrapDiv to the right column
+    rightCol.appendChild(wrapDiv);
+
+
+
+    var advisorHeaderDiv = document.createElement('div');
+    advisorHeaderDiv.style.border = '5px solid black';
+    advisorHeaderDiv.style.borderRadius = '10px';
+    advisorHeaderDiv.className = 'happy-box';
+    advisorHeaderDiv.style.margin = "20px";
+    advisorHeaderDiv.style.marginBottom = "0px";
+    let advisorHeader = document.createElement('h2');
+    advisorHeader.innerText = "Advisors";
+    advisorHeaderDiv.appendChild(advisorHeader);
+    middleCol.appendChild(advisorHeaderDiv);
+
+    var advisorContainer = document.createElement('div');
+    advisorContainer.style.display = 'flex';
+    advisorContainer.style.justifyContent = 'center';
+
+    let filledSlots = 0;
+
+    advisorsList.forEach(advisor => {
+        if (advisor.status === 'active') {
+            filledSlots++;
+
+            let slot = document.createElement('div');
+            slot.classList.add('advisor-slot');
+
+            let img = document.createElement('img');
+            img.src = advisor.picture;
+            img.style.height = '12em';
+            img.style.borderBottom = '2px solid black';
+
+            let imgContainer = document.createElement('div');
+            imgContainer.style.display = 'flex';
+            imgContainer.style.flexDirection = 'column';
+            imgContainer.style.justifyContent = 'center';
+            imgContainer.style.margin = '10px';
+            imgContainer.style.marginTop = '-5px';
+            imgContainer.style.backgroundColor = 'white';
+            imgContainer.style.border = '4px solid black';
+            imgContainer.style.borderTop = '1px solid black'
+            imgContainer.style.borderRadius = '0 0 10px 10px';
+            imgContainer.style.overflow = 'hidden';
+            imgContainer.appendChild(img);
+
+            let name = document.createElement('div');
+            name.innerText = advisor.name;
+            name.style.padding = '0.5em';
+            name.style.color = "black";
+            name.style.fontWeight = 'bold';
+            name.style.whiteSpace = 'normal'; // Allows the text to wrap
+            name.style.overflowWrap = 'break-word'; // Breaks the word if necessary
+            name.style.maxWidth = '115px';
+            name.style.height = '32px';
+
+            if (window.innerWidth <= 768) {
+
+                name.style.height = '64px';
+            }
+            imgContainer.appendChild(name);
+            slot.appendChild(imgContainer);
+
+            let dismissBtn = document.createElement('button');
+            dismissBtn.innerText = 'Dismiss';
+            dismissBtn.style.margin = '1em';
+            dismissBtn.style.backgroundColor = 'red';
+            dismissBtn.style.color = "white"
+            dismissBtn.style.boxShadow = '0 0 20px 4px rgba(120, 0, 0, 0.9)';; // Stronger light green glow
+
+            if (dismissalsLeft > 0 && campaignTrail_temp.staff_mode) { // Check dismissalsLeft
+                dismissBtn.onclick = function() {
+                    dismissalsLeft += -1;
+                    advisor.dismiss();
+                    hqDiv.remove();
+                    overlay.remove();
+                    openHeadquarter();
+
+                            };
+
+                slot.appendChild(dismissBtn);
+            }
+
+            advisorContainer.appendChild(slot); // Add the slot to the advisorContainer instead of hqDiv
+        }
+    });
+
+    for (let i = filledSlots; i < 2; i++) {
+        let slot = document.createElement('div');
+        slot.classList.add('advisor-slot');
+
+        let img = document.createElement('img');
+        img.src = 'https://i.ibb.co/Lxp3QGT/silhouette-cropped.jpg';
+        img.style.height = '12em';
+        img.style.borderBottom = '2px solid black';
+
+        let imgContainer = document.createElement('div');
+        imgContainer.style.display = 'flex';
+        imgContainer.style.flexDirection = 'column';
+        imgContainer.style.justifyContent = 'center';
+        imgContainer.style.margin = '10px';
+        imgContainer.style.marginTop = '-5px';
+        imgContainer.style.backgroundColor = 'white';
+        imgContainer.style.border = '4px solid black';
+        imgContainer.style.borderTop = '1px solid black'
+        imgContainer.style.borderRadius = '0 0 10px 10px';
+        imgContainer.style.overflow = 'hidden';
+        imgContainer.appendChild(img);
+
+        let name = document.createElement('div');
+        name.innerText = 'Unfilled Advisor Slot';
+        name.style.whiteSpace = 'normal'; // Allows the text to wrap
+        name.style.overflowWrap = 'break-word'; // Breaks the word if necessary
+        name.style.maxWidth = '115px';
+        name.style.height = '32px';
+        if (window.innerWidth <= 768) {
+
+                name.style.height = '64px';
+            }
+        name.style.color = 'black'
+        name.style.padding = '0.5em'
+        name.style.fontWeight = 'bold';
+        name.style.margin = 'auto';
+        imgContainer.appendChild(name);
+
+        slot.appendChild(imgContainer);
+        advisorContainer.appendChild(slot);
+    }
+
+    middleCol.appendChild(advisorContainer);
+
+    if (campaignTrail_temp.staff_mode && dismissalsLeft>0) {
+        // Add hire button with margin
+        let hireButton = document.createElement('button');
+        hireButton.innerText = 'Hire Advisors';
+        hireButton.style.margin = '1em';
+        hireButton.style.backgroundColor = 'red';
+        hireButton.style.color = "white"
+        hireButton.style.boxShadow = '0 0 20px 4px rgba(120, 0, 0, 0.9)';; // Stronger light green glow
+        hireButton.onclick = showAdvisors;
+        middleCol.appendChild(hireButton);
+    } else {
+        // Create an empty space of 3em height
+        let spacerDiv = document.createElement('div');
+        spacerDiv.style.height = '3em';
+        middleCol.appendChild(spacerDiv);
+    }
+
+    // Add dismissal information
+    var dismissInfoDiv = document.createElement('div');
+    dismissInfoDiv.style.border = '5px solid black';
+    dismissInfoDiv.style.borderRadius = '10px';
+    dismissInfoDiv.style.padding = '1em';
+    dismissInfoDiv.className = 'happy-box';
+
+    let dismissStatus = document.createElement('span'); // Create a span to hold the dismissal status
+
+    let dismissalsDone = 5 - dismissalsLeft;
+
+    dismissStatus.innerText += "Campaign status: ";
+
+    switch(dismissalsDone) {
+        case 0:
+            dismissStatus.innerHTML += "Harmonious campaign (Bonus)<br> " + (dismissalsLeft-1) + " Advisor changes possible";
+            break;
+        case 1:
+            dismissStatus.innerHTML += "United campaign (Bonus)<br> " + (dismissalsLeft-1) + " Advisor changes possible";
+            break;
+        case 2:
+            dismissStatus.innerHTML += "Somewhat united campaign (Neutral)<br> " + (dismissalsLeft-1) + " Advisor changes possible";
+            break;
+        case 3:
+            dismissStatus.innerHTML += "Somewhat disunited campaign (Neutral)<br> " + (dismissalsLeft-1) + " Advisor changes possible";
+            break;
+        case 4:
+            dismissStatus.innerHTML += "Disunited campaign (Malus)<br> Warning: no Hiring possible after next dismissal";
+            break;
+        case 5:
+            dismissStatus.innerHTML += "Chaotic campaign (Malus)<br> Warning: no Hiring possible";
+            break;
+        default:
+            dismissStatus.innerText += "Campaign status unknown";
+    }
+
+    dismissInfoDiv.appendChild(dismissStatus);
+    middleCol.appendChild(dismissInfoDiv);
+
+
+
+    let predictionWrapperDiv = document.createElement('div');
+    predictionWrapperDiv.id = 'predictionWrapperDiv';
+    predictionWrapperDiv.style.width = '70%';
+    predictionWrapperDiv.style.margin = 'auto';
+
+    // Create a div to display the polling/seats data
+    let pollingDiv = document.createElement('div');
+    pollingDiv.id = 'pollingDiv';
+    pollingDiv.className = 'happy-box';
+    pollingDiv.style.border = '5px solid black';
+    pollingDiv.style.borderRadius = '10px';
+    pollingDiv.style.padding = '5px';
+    pollingDiv.style.margin = '5px';
+    pollingDiv.style.marginTop = '3em';
+
+    // Add header
+    let PollingHeader = document.createElement('h3');
+    PollingHeader.innerText = 'Current Predictions';
+    PollingHeader.style.fontWeight = 'bold';
+    pollingDiv.appendChild(PollingHeader);
+
+    // Create an inner div for the entries
+    let entryDiv = document.createElement('div');
+    entryDiv.id = 'entryDiv';
+    pollingDiv.appendChild(entryDiv);
+
+    // Create a button to toggle between polling and seats
+    let toggleButton = document.createElement('button');
+    toggleButton.innerText = 'Show Seats';
+    toggleButton.addEventListener('click', toggleInfo);
+    toggleButton.style.backgroundColor = 'red';
+    toggleButton.style.color = "white"
+    pollingDiv.appendChild(toggleButton);
+
+    let pollData = temp.final_overall_results;
+
+    // Flag to know what we're currently displaying
+    let showingPolling = true;
+
+    // Function to find last_name based on pk
+    function findLastName(pk) {
+        let candidate = campaignTrail_temp.candidate_json.find(c => c.pk === pk);
+        return candidate ? candidate.fields.last_name : 'Unknown';
+    }
+
+    function populateDiv() {
+        // Clear the existing info
+        while (entryDiv.firstChild) {
+            entryDiv.removeChild(entryDiv.firstChild);
+        }
+
+        let sortedData = [...pollData];
+
+        if (showingPolling) {
+
+            sortedData.sort((a, b) => b.popular_votes - a.popular_votes);
+        } else {
+
+            sortedData.sort((a, b) => b.electoral_votes - a.electoral_votes);
+        }
+
+        sortedData.forEach((data) => {
+            let lastName = findLastName(data.candidate);
+            let infoValue;
+
+            if (showingPolling) {
+                infoValue = (Math.round(data.popular_votes * 2 * factorPolls) / (2 * factorPolls)).toFixed(1);
+                infoValue += '%';
+            } else {
+                infoValue = Math.round(data.electoral_votes / (5 / factorSeats)) * (5 / factorSeats);
+                infoValue += ' seats';
+            }
+
+            let boldLastName = document.createElement('strong');
+            boldLastName.appendChild(document.createTextNode(`${lastName}: `));
+            entryDiv.appendChild(boldLastName);
+            entryDiv.appendChild(document.createTextNode(`${infoValue}`));
+            entryDiv.appendChild(document.createElement('br'));
+
+            // Add a little space between entries (equivalent to half a <br>)
+            let spacer = document.createElement('div');
+            spacer.style.height = '0.5em';
+            entryDiv.appendChild(spacer);
+        });
+    }
+
+    // Function to toggle between polling and seats
+    function toggleInfo() {
+        showingPolling = !showingPolling;
+        toggleButton.innerText = showingPolling ? 'Show Seats' : 'Show PV';
+        populateDiv();
+    }
+
+    // Initial population and append button
+    populateDiv();
+
+    // Add to the left column
+    predictionWrapperDiv.appendChild(pollingDiv);
+
+    // Create a div to display the coalition data
+    let coalitionDiv = document.createElement('div');
+    coalitionDiv.id = 'coalitionDiv';
+    coalitionDiv.className = 'happy-box';
+    coalitionDiv.style.border = '5px solid black';
+    coalitionDiv.style.borderRadius = '10px';
+    coalitionDiv.style.padding = '5px';
+    coalitionDiv.style.margin = '5px';
+    coalitionDiv.style.marginTop = '1.5em';
+
+    // Add header
+    let coalitionHeader = document.createElement('h3');
+    coalitionHeader.innerText = 'Which coalitions have majorities?';
+    coalitionHeader.style.fontWeight = 'bold';
+    coalitionDiv.appendChild(coalitionHeader);
+
+    // Your data object with three sub-objects
+    let coalitionData = currentCoalitions;
+
+    // Function to populate the coalitionDiv with the correct data
+    function populateCoalitionDiv() {
+        // Define categories
+        let categories = ['Likely', 'Shaky', 'Unlikely'];
+        let keys = ['coalitionsSet1', 'coalitionsSet2', 'coalitionsSet3'];
+
+        keys.forEach((key, index) => {
+            let coalitions = coalitionData[key];
+            if (coalitions && coalitions.length > 0) {
+                // Add subheader
+                let subHeader = document.createElement('h4');
+                subHeader.style.marginTop = '2px';
+                subHeader.style.marginBottom = '2px';
+                subHeader.innerText = categories[index];
+                coalitionDiv.appendChild(subHeader);
+
+                coalitions.forEach((coalition, idx) => {
+                    // Create a tooltip container
+                    let tooltipSpan = document.createElement('span');
+                    tooltipSpan.className = 'mytooltip';
+
+                    // Populate the tooltip container with the coalition name
+                    let info = document.createTextNode(coalition.name);
+                    tooltipSpan.appendChild(info);
+
+                    // Create the tooltip text
+                    let tooltipText = document.createElement('span');
+                    tooltipText.className = 'mytooltiptext';
+
+                    // Convert candidate IDs (parties) to last names and join them
+                    let candidateNames = coalition.parties.map(findLastName).join(', ');
+                    tooltipText.innerText = `Parties: ${candidateNames}`;
+
+                    // Append tooltip text to the tooltip container
+                    tooltipSpan.appendChild(tooltipText);
+
+                    // Append the tooltip container to the coalitionDiv
+                    coalitionDiv.appendChild(tooltipSpan);
+
+                    if (idx !== coalitions.length - 1) {
+                        let breakElement = document.createElement('br');
+                        coalitionDiv.appendChild(breakElement);
+                    }
+                });
+
+
+                // Half spacing between categories
+                let halfBreak = document.createElement('div');
+                halfBreak.style.height = '0.5em';
+                coalitionDiv.appendChild(halfBreak);
+            }
+        });
+    }
+
+    // Initial population
+    populateCoalitionDiv();
+
+    // Add to the left column
+    predictionWrapperDiv.appendChild(coalitionDiv);
+
+    leftCol.appendChild(predictionWrapperDiv);
+
+    // Add back button
+    let backButton = document.createElement('button');
+    backButton.innerText = 'Back';
+    backButton.style.marginTop = '2em';
+    backButton.style.marginBottom = '1em';
+    backButton.style.backgroundColor = 'red';
+    backButton.style.color = "white"
+    backButton.style.boxShadow = '0 0 20px 4px rgba(120, 0, 0, 0.9)';; // Stronger light green glow
+    backButton.onclick = function() {
+        // Hide headquarters and show the original content
+        hqDiv.remove();
+        overlay.remove();
+        questions.style.display = '';
+    };
+    if (window.innerWidth <= 768) {
+    rightCol.appendChild(backButton); // Attach to right column for small screens
+    } else {
+        middleCol.appendChild(backButton); // Attach to middle column for larger screens
+    }
+
+    let overlay = document.createElement('div');
+    overlay.id = 'tutorialOverlay';
+    overlay.style.position = 'fixed';
+    overlay.style.top = 0;
+    overlay.style.left = 0;
+    overlay.style.width = '100%';
+    overlay.style.height = '100%';
+    overlay.style.backgroundColor = 'rgba(0,0,0,0.8)'; // Black, semi-transparent
+    overlay.style.zIndex = 999; // Make sure it's below the Tutorial button
+    overlay.style.display = 'none'; // Initially hidden
+    document.body.appendChild(overlay);
+
+    let tutorialButton = document.createElement('button');
+    tutorialButton.innerText = 'Tutorial';
+    tutorialButton.style.marginTop = '2em';
+    tutorialButton.style.marginLeft = '1em';
+    backButton.style.marginBottom = '1em';
+    tutorialButton.style.backgroundColor = 'red';
+    tutorialButton.style.color = "white"
+    tutorialButton.style.boxShadow = '0 0 20px 4px rgba(120, 0, 0, 0.9)';;
+    tutorialButton.style.position = 'relative';
+    tutorialButton.style.zIndex = 1000; // Above the overlay
+    let hqRect = undefined;
+
+    tutorialButton.onclick = function() {
+        if (overlay.style.display === 'none') {
+            // Show the overlay and change button text
+            overlay.style.display = '';
+            explanationBox.style.display = '';
+            continueButton.style.display = '';
+            continueButton.style.color = "white"
+            tutorialButton.innerText = 'Return';
+            rect = tutorialButton.getBoundingClientRect();
+            hqRect = hqDiv.getBoundingClientRect();
+            explanationBox.style.left = (rect.left - hqRect.left - (12.5 * 14)) + 'px';
+            explanationBox.style.top = (rect.top - hqRect.top - (7 * 14) - rect.height) + 'px';
+            if (window.innerWidth <= 768) {
+                explanationBox.style.left = (rect.left - hqRect.left - (18 * 14)) + 'px';
+                explanationBox.style.top = (rect.top - hqRect.top - (13 * 14) - rect.height) + 'px';
+            }
+            textContent.innerText = 'Welcome to the tutorial. It will teach you everything there is to know about the campaign headquarter. To exit the tutorial, press the return button. To continue, simply press contine.';
+            currentStep = 0;
+        } else {
+            // Hide the overlay and change button text back
+            explanationBox.style.display = 'none';
+            overlay.style.display = 'none';
+            tutorialButton.innerText = 'Tutorial';
+            //clear stray z-indexes if there are any
+            patienceDiv.style.zIndex = '2';
+            patienceHeaderDiv.style.zIndex = '';
+            likeabilityDescDiv.style.zIndex = '';
+            pollingDiv.style.zIndex = '';
+            advisorHeaderDiv.style.zIndex = '';
+            moodDiv.style.zIndex = '';
+            coalitionDiv.style.zIndex = '';
+            dismissInfoDiv.style.zIndex = '';
+            const slots = document.querySelectorAll('.advisor-slot');
+
+            slots.forEach((element) => {
+                element.style.zIndex = '';
+            });
+        }
+    };
+
+    if (window.innerWidth <= 768) {
+    rightCol.appendChild(tutorialButton); // Attach to right column for small screens
+    } else {
+        middleCol.appendChild(tutorialButton); // Attach to middle column for larger screens
+    }
+
+    let explanationBox = document.createElement('div');
+    explanationBox.className = 'explanation-box happy-box';
+    explanationBox.style.position = 'absolute';
+    explanationBox.style.display = 'none';
+
+    // Add text to the box
+    let textContent = document.createElement('p');
+    explanationBox.appendChild(textContent);
+
+    // Add "Continue" button
+    let continueButton = document.createElement('button');
+    continueButton.innerText = 'Continue';
+    continueButton.style.backgroundColor = 'red';
+    continueButton.onclick = function() {
+        // Do nothing for now
+    };
+    explanationBox.appendChild(continueButton);
+
+    let currentStep = 0;
+
+    function moveToStep(step) {
+
+        const slots = document.querySelectorAll('.advisor-slot');
+
+        switch (step) {
+            case 0:
+                let rect1 = pollingDiv.getBoundingClientRect();
+                hqRect = hqDiv.getBoundingClientRect();
+                rect = tutorialButton.getBoundingClientRect();
+                pollingDiv.style.zIndex = 1001;
+                explanationBox.style.left = (rect1.right - hqRect.left + (2 * 14)) + 'px';
+                explanationBox.style.top = (rect1.top - hqRect.top + (4 * 14)) + 'px';
+                if (window.innerWidth <= 768) {
+                    explanationBox.style.left = (rect.left - hqRect.left - (18 * 14)) + 'px';
+                    explanationBox.style.top = (rect1.top - hqRect.top + (36 * 14)) + 'px';
+                }
+                explanationBox.querySelector('p').innerText = "In this box, your current polling is shown. It is identical to the polling that's shown in the map area. With the button, you can switch to a seat estimate. Both the percentages and seats are rounded. Be careful - polls can be inaccurate! A special advisor can help with the accuracy and make the rounding more precise";
+                break;
+            case 1:
+                let rect2 = patienceDiv.getBoundingClientRect();
+                hqRect = hqDiv.getBoundingClientRect();
+                rect = tutorialButton.getBoundingClientRect();
+                pollingDiv.style.zIndex = '';
+                patienceDiv.style.zIndex = 1001;
+                patienceHeaderDiv.style.zIndex = 1001;
+                likeabilityDescDiv.style.zIndex = 1001;
+                explanationBox.style.left = (rect2.left - hqRect.left - (33 * 14)) + 'px';
+                explanationBox.style.top = (rect2.top - hqRect.top - (2 * 14)) + 'px';
+                if (window.innerWidth <= 768) {
+                    explanationBox.style.left = (rect.left - hqRect.left - (18 * 14)) + 'px';
+                    explanationBox.style.top = (rect2.top - hqRect.top - (28 * 14)) + 'px';
+                }
+                explanationBox.querySelector('p').innerText = "In this area, a specific characteristic that is unique to your character is described - both with the coloured circles and in text. The more circles you have and they closer they are to green, the better. The value can be influenced by choices during the campaign and advisors and will have an influence on your campaign.";
+                break;
+            case 2:
+                let rect3 = advisorHeaderDiv.getBoundingClientRect();
+                hqRect = hqDiv.getBoundingClientRect();
+                rect = tutorialButton.getBoundingClientRect();
+                advisorHeaderDiv.style.zIndex = '1001';
+
+                slots.forEach((element) => {
+                    element.style.zIndex = '1001';
+                });
+
+                patienceDiv.style.zIndex = '2';
+                patienceHeaderDiv.style.zIndex = '';
+                likeabilityDescDiv.style.zIndex = '';
+                explanationBox.style.left = (rect3.right - hqRect.left + (2 * 14)) + 'px';
+                explanationBox.style.top = (rect3.top - hqRect.top + (4 * 14)) + 'px';
+                if (window.innerWidth <= 768) {
+                    explanationBox.style.left = (rect.left - hqRect.left - (18 * 14)) + 'px';
+                    explanationBox.style.top = (rect3.top - hqRect.top + (46 * 14)) + 'px';
+                }
+                if(campaignTrail_temp.staff_mode){
+                    explanationBox.querySelector('p').innerText = "Here, you can view the advisors your campaign has right now. You have up to two slots you can fill. Advisors give different benefits and effect. Some are always unlocked, some can be unlocked throughout the campaign. On the other hand, advisors can also disappear from the potential hire list or quit your campaign if they disagree with your decisions. You can also dismiss them to make space for new advisors - this can be very worthwhile if you unlock new advisors during the campaign.";
+                }
+                 else {
+                    explanationBox.querySelector('p').innerText = "Here you can see your campaign advisors. Since you chose to disable that option, you don't have to worry about them, they are just here for show and will stick with you for the whole campaign.";
+                }
+                break;
+            case 3:
+                let rect4 = dismissInfoDiv.getBoundingClientRect();
+                hqRect = hqDiv.getBoundingClientRect();
+                rect = tutorialButton.getBoundingClientRect();
+                advisorHeaderDiv.style.zIndex = '';
+                slots.forEach((element) => {
+                    element.style.zIndex = '';
+                });
+
+                dismissInfoDiv.style.zIndex = '1001';
+                explanationBox.style.left = (rect4.left - hqRect.left - (4.5 * 14)) + 'px';
+                explanationBox.style.top = (rect4.top - hqRect.top - (12 * 14)) + 'px';
+                if (window.innerWidth <= 768) {
+                    explanationBox.style.left = (rect.left - hqRect.left - (18 * 14)) + 'px';
+                    explanationBox.style.top = (rect4.top - hqRect.top + (17 * 14)) + 'px';
+                }
+                if(campaignTrail_temp.staff_mode){
+                              explanationBox.querySelector('p').innerText = "This box contains information on the unity of your campaign. Campaign unity is mainly affected by your advisor management - dismissing advisors and having them quit will negatively impact your unity. Unity only has a very minor effect on polling, so don't be afraid to shuffle your advisors every now and then! You can have around five different advisors each campaign before things become to chaotic and you can't dismiss or hire any more advisors.";
+                }
+                else {
+                explanationBox.querySelector('p').innerText = "Campaign unity is a mechanic that's used when playing with active advisor management. In this campaign, it is purely cosmetic and will have no gameplay effect."
+                }
+                break;
+            case 4:
+                let rect5 = moodDiv.getBoundingClientRect();
+                hqRect = hqDiv.getBoundingClientRect();
+                rect = tutorialButton.getBoundingClientRect();
+                dismissInfoDiv.style.zIndex = '';
+                moodDiv.style.zIndex = 1001;
+                explanationBox.style.left = (rect5.left - hqRect.left - (4.5 * 14)) + 'px';
+                explanationBox.style.top = (rect5.top - hqRect.top + (12 * 14)) + 'px';
+                if (window.innerWidth <= 768) {
+                    explanationBox.style.left = (rect.left - hqRect.left - (18 * 14)) + 'px';
+                    explanationBox.style.top = (rect5.top - hqRect.top + (18 * 14)) + 'px';
+                }
+                explanationBox.querySelector('p').innerText = "The campaign mood is purely cosmetic and for flavor and has no gameplay effects.";
+                break;
+
+            case 5:
+                let rect6 = coalitionDiv.getBoundingClientRect();
+                hqRect = hqDiv.getBoundingClientRect();
+                rect = tutorialButton.getBoundingClientRect();
+                coalitionDiv.style.zIndex = '1001';
+                moodDiv.style.zIndex = '';
+                explanationBox.style.left = (rect6.right - hqRect.left + (2 * 14)) + 'px';
+                explanationBox.style.top = (rect6.top - hqRect.top + (4 * 14)) + 'px';
+                if (window.innerWidth <= 768) {
+                    explanationBox.style.left = (rect.left - hqRect.left - (18 * 14)) + 'px';
+                    explanationBox.style.top = (rect6.top - hqRect.top + (34 * 14)) + 'px';
+                }
+                explanationBox.querySelector('p').innerText = "Finally, in this box, it's displayed which coalition would currently have a majority. \"Likely\" means that the odds of them getting a majority are high, \"shaky\" means that it's close and \"unlikely\" means that it's unlikely, but not impossible. Only coalitions which make sense in the current political climate are displayed - you can change that with your coalition promises. If you want to know what parties are included in a given coalition, just hover it";
+                break;
+
+            case 6:
+                let rect7 = tutorialButton.getBoundingClientRect();
+                hqRect = hqDiv.getBoundingClientRect();
+                rect = tutorialButton.getBoundingClientRect();
+                continueButton.style.display = 'none';
+                coalitionDiv.style.zIndex = '';
+                explanationBox.style.left = (rect7.left - hqRect.left - (12.5 * 14)) + 'px';
+                explanationBox.style.top = (rect7.top - hqRect.top - (7 * 14) - rect7.height) + 'px';
+                if (window.innerWidth <= 768) {
+                explanationBox.style.left = (rect.left - hqRect.left - (18 * 14)) + 'px';
+                explanationBox.style.top = (rect7.top - hqRect.top - (13 * 14) - rect.height) + 'px';
+            }
+                explanationBox.querySelector('p').innerText = "This concludes the tutorial. Please press return now to return to the game. You can restart the tutorial at any time.";
+                break;
+        }
+
+        // Update step
+        currentStep++;
+    }
+    // Continue button logic
+    continueButton.onclick = function() {
+        moveToStep(currentStep);
+    };
+
+
+    // Append the box to the body or another container element
+    hqDiv.appendChild(explanationBox);
+
+    // Append the headquarters div to the game window
+    questions.parentNode.insertBefore(hqDiv, questions.nextSibling);
+}
+// Create a <style> element
+const HQStyle = document.createElement('style');
+
+// Add CSS rules for the background image of the body and the happy little boxes
+HQStyle.innerHTML = `
+
+    .explanation-box {
+      z-index: 1010; /* Above the overlay */
+      border: 5px solid black;
+      border-radius: 10px;
+      padding: 1em;
+      width: 25em;
+      height: auto; /* Auto height to fit content */
+    }
+
+  .happy-box {
+    background-image: url('https://media.discordapp.net/attachments/1109846390575730788/1152285958998343680/Rot.png?width=883&height=662');
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+  }
+  .happy-box:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background-image: inherit;
+    background-size: cover;
+    background-position: inherit;
+    opacity: 0.5;
+  }
+    #headquarter .button{
+        color: white
+    }
+
+  #coalitionDiv .mytooltip{
+      background-color: darkred;
+   }
+     #coalitionDiv .mytooltiptext{
+      background-color: lightcoral;
+   }
+`;
+document.head.appendChild(HQStyle);
+
+function showAdvisors() {
+
+    let numberOfHiredAdvisors = advisorsList.filter(a => a.status === 'active').length;
+    const filteredAdvisorsList = advisorsList.filter(advisor => advisor.canBeHired());
+
+
+    // Remove existing HQ div
+    const hq = document.getElementById('headquarter');
+    hq.remove();
+
+    const overlay = document.getElementById('tutorialOverlay');
+    overlay.remove();
+
+    // Create and set up advisorsDiv
+    let advisorsDiv = document.createElement('div');
+    advisorsDiv.id = 'advisors';
+    advisorsDiv.style.boxShadow = '0 0 15px rgba(0,0,0,0.5)';
+    advisorsDiv.style.color = 'white';
+    advisorsDiv.style.backgroundImage = "url('https://media.discordapp.net/attachments/1109846390575730788/1152285958998343680/Rot.png?width=883&height=662')";
+    advisorsDiv.style.backgroundSize = 'cover';
+
+    // Add header
+    let header = document.createElement('h1');
+    header.innerText = "Hire Advisors";
+    advisorsDiv.appendChild(header);
+
+    let outerDiv = document.createElement('div'); // Create an extra div to wrap all rows
+    outerDiv.style.height = '500px';
+    outerDiv.style.overflow = 'auto'; // Enable scroll when content overflows
+
+    var perRow = 3;
+
+    if (window.matchMedia("(max-width: 768px)").matches) {
+        perRow = 2;
+    }
+
+    filteredAdvisorsList.forEach((advisor, index) => {
+        if (index % perRow === 0) {
+            rowDiv = document.createElement('div');
+            rowDiv.style.display = 'flex';
+            rowDiv.style.justifyContent = 'space-around';
+            outerDiv.appendChild(rowDiv);
+        }
+
+        if (advisor.canBeHired()) {
+            let advisorContainer = document.createElement('div');
+            advisorContainer.style.margin = '1em';
+
+            let img = document.createElement('img');
+            img.src = advisor.picture;
+            img.style.height = '16em';
+            img.style.borderBottom = '2px solid black'; // Give bottom border to the image
+            img.onload = function() {
+                imgContainer.style.width = `${this.width}px`;
+            };
+
+            let name = document.createElement('div');
+            name.innerText = advisor.name;
+            name.style.fontWeight = 'bold';
+            name.style.color = 'black';
+            name.style.padding = '0.2em'
+            let description = document.createElement('div');
+            description.innerText = advisor.description;
+            description.style.margin = '2px'
+            description.style.color = 'black';
+
+            // Wrap the description in another div
+            let descriptionContainer = document.createElement('div');
+            descriptionContainer.style.padding = '0.5em'
+            descriptionContainer.style.height = '8em'
+            if (window.innerWidth <= 768) {
+                descriptionContainer.style.padding = '0.2em'
+                descriptionContainer.style.height = '12em'
+            }
+            descriptionContainer.style.width = '170px'
+            descriptionContainer.appendChild(description);
+
+            // Styling the image container
+            let imgContainer = document.createElement('div');
+            imgContainer.style = `display: flex; flex-direction: column; align-items: center;
+                                   border: 4px solid black; margin: 10px; background-color: white;
+                                   border-radius: 10px; overflow: hidden;`;
+            imgContainer.appendChild(img);
+            imgContainer.appendChild(name);
+            imgContainer.appendChild(descriptionContainer);
+
+            let hireBtn = document.createElement('button');
+            hireBtn.innerText = 'Hire';
+            if (numberOfHiredAdvisors >= 2) {
+                hireBtn.disabled = true;
+            }
+            hireBtn.onclick = function() {
+                advisor.hire();
+                advisorsDiv.remove();
+                openHeadquarter();
+            };
+
+            if (advisor.status === 'locked') {
+                img.style.filter = 'blur(10px)';
+                name.style.filter = 'blur(5px)';
+                description.innerText = advisor.lockedDescription;
+                hireBtn.disabled = true;
+            }
+
+            advisorContainer.appendChild(imgContainer);
+            advisorContainer.appendChild(hireBtn);
+
+            rowDiv.appendChild(advisorContainer);
+        }
+    });
+
+    advisorsDiv.appendChild(outerDiv);
+
+    // Add back button with padding and id
+    let backButton = document.createElement('button');
+    backButton.innerText = 'Back';
+    backButton.style.margin = '1em';
+    backButton.id = 'advisorsBackButton';
+    backButton.onclick = function() {
+        advisorsDiv.remove();
+        openHeadquarter();
+    };
+    advisorsDiv.appendChild(backButton);
+
+    let questions = document.querySelector(".inner_window_question");
+    questions.parentNode.insertBefore(advisorsDiv, questions.nextSibling);
+}
+
+class Advisor {
+    constructor(id, name, picture, description, lockedDescription, hireCode, dismissCode, status) {
+        this.id = id;
+        this.name = name;
+        this.picture = picture;
+        this.description = description;
+        this.lockedDescription = lockedDescription;
+        this.hireCode = hireCode; // function to run when hired
+        this.dismissCode = dismissCode; // function to run when dismissed
+        this.status = status; // "active", "available", "locked", or "dismissed"
+    }
+
+    hire() {
+        this.hireCode();
+        this.status = "active";
+    }
+
+    dismiss() {
+        this.dismissCode();
+        this.status = "dismissed";
+    }
+
+    quit() {
+        if (this.status === 'active') {
+            this.dismiss();
+            advisor_news = true;
+            if (dismissalsLeft > 0) {
+                dismissalsLeft--;
+            }
+        } else {
+            this.status = 'dismissed';
+        }
+    }
+
+
+    unlock() {
+        if (this.status === 'locked') {
+            this.status = 'available';
+            advisor_news=true;
+        }
+    }
+}
+
+Advisor.prototype.canBeHired = function() {
+    return this.status === 'available' || this.status === 'locked';
+};
+
+const noop = () => {};
+// Advisors defined here
+let advisorSchmidt = new Advisor(
+    1,
+    'Wolfgang Schmidt',
+    "https://i.ibb.co/hXhZxnS/Schmidt-cropped.jpg",
+    "A political ally since your time in Hamburg, he can help with all kinds of tasks around the campaign.",
+    'Description for Wolfgang Schmidt',
+     () =>{coalitions.forEach(coalition => { if ([1, 2, 4, 6, 10, 11, 12, 13].includes(coalition.id)) {coalition.weight *= 1.2;}});merkelism+=1;},
+     () =>{coalitions.forEach(coalition => { if ([1, 2, 4, 6, 10, 11, 12, 13].includes(coalition.id)) {coalition.weight *= 1/1.2;}});merkelism=Math.max(0, merkelism-1)},
+    "available"
+);
+
+let advisorBösinger = new Advisor(
+    2,
+    'Rolf Bösinger',
+    "https://i.ibb.co/tZvrcSH/bosinger-cropped.jpg",
+    "He's a ministeral secretary under you and wants to help by giving advice on economic questions",
+    'Description for Rolf Bösinger',
+    () => {addAdvisorTooltips([4506, 4505, 4016, 4017, 4018, 4019, 4512, 4513, 4514, 4515, 4049] ,["These are some nice ideas for our platform, but do people want rhetoric instead of action?", "Holding out on relief now would be disastrous for the country.","14€ is too much - you’d even outflank the Left party, and might not be viable economically.","12€ seems like a good number, and almost the entire party seems to agree.","It’s clear that this country needs a higher minimum wage. We could refine our strongest policy area here, this conservatism is unneeded.","Why so cautious? You have the opportunity to define yourself further as a Social Democrat!","This is far too cautious. The problem goes deeper than just that, and pretty much everyone except for the AfD is saying so.","Innovative solution, moderate on the economic axis, progressive on the cultural one.","A classic SPD talking point - this is where we have a leg up on our opponents.","Quite neoliberal. Has its advantages, but don’t get outflanked from our left.","It’s not bad to look at this from a socio-economic standpoint."], 'https://i.ibb.co/tZvrcSH/bosinger-cropped.jpg')},
+    () => removeAdvisorTooltips([4506, 4505, 4016, 4017, 4018, 4019, 4512, 4513, 4514, 4515, 4049], 'https://i.ibb.co/tZvrcSH/bosinger-cropped.jpg'),
+    "available"
+);
+
+let advisorErnst = new Advisor(
+    3,
+    'Britta Ernst',
+    "https://i.ibb.co/bKFJCLz/ernst-cropped.jpg",
+    "Not only is she your wife, but also a state minister in Brandenburg in her own right. During the campaign, she's happy to advice you on education policy",
+    null,
+    () => {addAdvisorTooltips([4512, 4047, 4528, 4529, 4530, 4531] ,["Family friendly policies are important, but this issue takes more than just pregnant women, Olaf.","The government’s policies on education aren’t particularly popular - you risk opening yourself up to oppositionary attacks.","This is a satisfactory answer that doesn’t derail the campaign.","A good, progressive answer that fires up the cultural left, as it does the cultural right.","Olaf, women have a right over their own bodies, and right now, the situation is <i>not</i> fine as it stands. Don’t make me make you sleep on the couch.","This goes a bit far. Bringing economic interventionism into this might just give the Right too much to fire at."], "https://i.ibb.co/bKFJCLz/ernst-cropped.jpg")},
+    () => removeAdvisorTooltips([4512, 4047, 4528, 4529, 4530, 4531], "https://i.ibb.co/bKFJCLz/ernst-cropped.jpg"),
+    "available"
+);
+
+let advisorHebestreit = new Advisor(
+    4,
+    'Steffen Hebestreit',
+    "https://i.ibb.co/7jVnYPM/hebestreit-cropped.jpg",
+    "This communication manager will surely be helpful to have on your side should you become embroiled in any scandals.",
+    null,
+   () => {addAdvisorTooltips([4027, 4028, 4029, 4030, 4051, 4052, 4053, 4110, 4065, 4082, 4083, 4084, 4085] ,["If you have your party on your side, making this a partisan issue could minimize harm.","This proactive step will keep the matter from spilling into the public. Just be sure you pull the right strings when the report comes out.","Way to dodge the question - but this does not stop it from getting picked up by the news.","Don’t fall for their bluff, they don’t have anything on you yet!","It’ll pass, as most things do, but this <i>will</i> hurt.","Standing up for yourself won’t allow our opponents to control the narrative.","Firing Kukies <i>now</i> just seems to vindicate your critics and admit wrongdoing.","I like it as little as you do, but someone has to go, if your reputation is to be saved.","As your press secretary, I am going to advise you to <i>not</i> defend the gaffes of your primary opponent.","Okay, this is problematic. This is a serious situation, snarkiness won’t help.","Okay, this is problematic. You’re going to have to say something, Olaf. They’re gonna bring it up in the debates anyhow.","Okay, this is problematic. Maybe throwing the CDU and their shady tactics into the dirt with you is your last resort…","Okay, this is problematic. This is going to hurt you no matter what, but maybe your usual composure can minimize the damage…"], "https://i.ibb.co/7jVnYPM/hebestreit-cropped.jpg")},
+    () => removeAdvisorTooltips([4027, 4028, 4029, 4030, 4051, 4052, 4053, 4110, 4065, 4082, 4083, 4084, 4085], "https://i.ibb.co/7jVnYPM/hebestreit-cropped.jpg"),
+    "available"
+);
+
+let advisorKlingbeil = new Advisor(
+    5,
+    'Lars Klingbeil',
+    "https://i.ibb.co/N6V8MmL/klingbeil-cropped.jpg",
+    "As General Secretary of the SPD, Klingbeil can use his organisational ressources and skills to campaign for you across the country.",
+    'Description for Lars Klingbeil',
+       () => {addAdvisorTooltips([4008, 4009, 4010, 4011, 4123, 4124, 4125, 4126] ,[ "Very much in tune with what leadership thinks, but be wary of our moderate wing.", "Seems that like this is acceptable to Saskia and Norbert, and you get some centrist leeway out of it.", "That’s very much true - who else, if not you? Maybe pragmatism instead of ideology is a good hedge.", "Olaf, you lost the leadership race. You don’t have the political capital to be able to afford such grandstanding.","Very much in tune with what leadership thinks, but be wary of our moderate wing.","After your outspoken support of the GroKo, this just might not cut it, Olaf.", "That’s very much true - who else, if not you? Maybe pragmatism instead of ideology is a good hedge.", "Olaf, you lost the leadership race. You don’t have the political capital to be able to afford such grandstanding."], "https://i.ibb.co/N6V8MmL/klingbeil-cropped.jpg")},
+    () => removeAdvisorTooltips([4008, 4009, 4010, 4011, 4123, 4124, 4125, 4126], "https://i.ibb.co/N6V8MmL/klingbeil-cropped.jpg"),
+    "available"
+);
+
+let advisorSchulz = new Advisor(
+    6,
+    'Martin Schulz',
+    "https://i.ibb.co/TW25nSV/Schulz-cropped.jpg",
+    "The last SPD chancellor nominee has many political connections and offered to use them to get you top-notch polling data.",
+    'Description for Martin Schulz',
+    ()=> {factorPolls=5; factorSeats=5; errorDegree=0.3;},
+    ()=> {factorPolls=1; factorSeats=1; errorDegree=1;},
+    "available"
+);
+
+let advisorBrinkert = new Advisor(
+    7,
+    'Raphael Brinkert',
+    "https://i.ibb.co/5BGKnkn/brinkert-cropped.png",
+    "Hire this advertising manager if you want to work on your image - people will see you as chancellor material in no time!",
+    'Description for Raphael Brinkert',
+    () => {merkelism+=3},
+    () => {merkelism=Math.max(0, merkelism-3)},
+    "available"
+);
+
+let advisorKühnert = new Advisor(
+    8,
+    'Kevin Kühnert',
+    "https://i.ibb.co/Vj98jvt/K-hnert-cropped.jpg",
+    "Kühnert will help you target voters on the left of the political spectrum - and offered to reach ot to the Left for potential coalition talks.",
+    'The influential former leader of the SPD youth organization wants you to move past the Grand Coalition',
+    () => {coalitions.forEach(coalition => { if ([12, 13].includes(coalition.id)) {coalition.weight *= 1.3;}})},
+     () =>{coalitions.forEach(coalition => { if ([12, 13].includes(coalition.id)) {coalition.weight *= 1/1.3;}})},
+    "locked"
+);
+
+let advisorLauterbach = new Advisor(
+    9,
+    'Karl Lauterbach',
+    "https://i.ibb.co/SsLv7fL/lauterbach-cropped.jpg",
+    "Right now, he's one of the most sought after people as a health expert. Beyond that, he has good connections with the Green party",
+    'A popular health expert in your party - if you want him by your side, take Covid seriously and focus on getting a vaccine out.',
+    () => {coalitions.forEach(coalition => { if ([1, 4, 6].includes(coalition.id)) {coalition.weight *= 1.4;}}); addAdvisorTooltips([4020, 4021, 4022, 4023, 4047, 4066, 4067, 4068, 4069] ,["We should be more careful, the experts agree that opening up now could jeopardize our entire progress so far!" ,"The bridge lockdown is a bad idea. Who is going to believe us if we promise that it’ll ‘only take two weeks’? Laschet has the wrong idea, and we don’t have to be afraid to call him out.","Good idea - the cultural sector and gig economy is really suffering under these unfortunately necessary measures. Makes you seem competent.","Cutting off relief now will only make you seem stingy. Absolutely the wrong move for everyone who’s struggling.","The government’s school policies during Corona weren’t that popular, it might be better to go another avenue.","No offense, but the wording here is absolutely unfortunate. Calling people ‘guinea pigs’ isn’t…","We’re on a good path, but science supports these worthwhile reforms.","The data does not support the proportionality of a vaccine mandate yet. Maybe we can still do this without one.","Olaf, this is absolutely counter productive to the vaccination campaign! Don’t tell me that you’re one of those anti-science-guys!"], "https://i.ibb.co/SsLv7fL/lauterbach-cropped.jpg")},
+     () =>{coalitions.forEach(coalition => { if ([1, 4, 6].includes(coalition.id)) {coalition.weight *= 1/1.4;}});removeAdvisorTooltips([4020, 4021, 4022, 4023, 4047, 4066, 4067, 4068, 4069], "https://i.ibb.co/SsLv7fL/lauterbach-cropped.jpg")},
+    "locked"
+);
+
+let advisorMiersch = new Advisor(
+    10,
+    'Matthias Miersch',
+    "https://i.ibb.co/pZ3tRgp/miersch-cropped.jpg",
+     'If you need advice on environmental topics - or someone to reach out to the Greens for coalitions talks - Miersch is your man.',
+    'Show that you are willing to do something about climate change to recruit this environmental expert.',
+    () => {coalitions.forEach(coalition => { if ([1, 4, 6].includes(coalition.id)) {coalition.weight *= 1.4;}}); addAdvisorTooltips([4039, 4040, 4041, 4042, 4062, 4063, 4064, 4065] ,["Quickly passing a new law shows that you’re proactive, even though the Union will wash it down quite a bit, as usual.","Let’s press our advantage, our record is bound to sting the CDU.","This could show that we’re serious about the environment, but my guess is this proposal will be rejected by our coalition partner.","The German people want something passed <i>now</i>, and so does the planet.","Our environmental platform is a good compromise for this country, but the Greens are sure to outflank us here.","You know… maybe not breaching forward with climate rhetoric here is suitable for a candidate like you. Rise above the pack, stay on message, seem stately.","A reasonable pivot that answers the call of this time.","Olaf, no! Don’t agree with such an asinine statement! Laschet might as well hire you as his press secretary!"], "https://i.ibb.co/pZ3tRgp/miersch-cropped.jpg")},
+     () =>{coalitions.forEach(coalition => { if ([1, 4, 6].includes(coalition.id)) {coalition.weight *= 1/1.4;}});removeAdvisorTooltips([4039, 4040, 4041, 4042, 4062, 4063, 4064, 4065], "https://i.ibb.co/pZ3tRgp/miersch-cropped.jpg")},
+    "locked"
+);
+
+let advisorNoWaBoEsken = new Advisor(
+    11,
+    'NoWaBo & Saskia Esken',
+    "https://i.ibb.co/XWVDtRT/Nowabo-Esken-cropped.jpg",
+    "The two party leaders can mobilize additional resources to boost your support. To top that off, Esken is also an expert on digitalization.",
+    'These two politicians come as a duo - and a good relationship with the leadership of the party is needed to get them on board.',
+       () => {addAdvisorTooltips([4047, 4048, 4049, 4050] ,["Our schools desperately need more means to advance digitalization, but you risk tying yourself to the unpopular GroKo here.","Germany really needs to pick up the pace with its digital infrastructure, and everyone knows it.","It’s not bad too look at this from a socio-economic standpoint, but this is a pretty pointed appeal.","Business will like this, but it’s a pretty cold take."], "https://i.ibb.co/XWVDtRT/Nowabo-Esken-cropped.jpg")},
+    () => removeAdvisorTooltips([4047, 4048, 4049, 4050], "https://i.ibb.co/XWVDtRT/Nowabo-Esken-cropped.jpg"),
+    "locked"
+);
+
+let advisorMützenich = new Advisor(
+    12,
+    'Rolf Mützenich',
+    "https://i.ibb.co/bjhJKXD/m-tzenich-cropped.jpg",
+    "Parliamentary group leader Mützenich is an expert on foreign policy and is willing to campaign in North Rhine-Westphalia.",
+    'The leader of the parliamentary group wishes for you to have a good relationship with the party leadership.',
+       () => {addAdvisorTooltips([4035, 4036, 4037, 4038, 4078, 4079, 4080, 4081] ,["Good hedge. You <i>will</i> offend someone if you comment on Gerhard.","I’m fully with you, but the Greens outflanking us on Foreign Policy might have unprecedented consequences.","Ambitious, but Putin is not exactly popular in Germany, for a reason.","Criticizing Gerhard so openly could be controversial, and hedging on Nord-Stream 2 will offend Minister-President Manuela Schwesig.","Good idea, there’s certainly an opening for this policy right now.","What a mess… this matter does not paint a good light on the government, but this says at least something.","This does differentiate you from the CDU and aligns you with the cultural left, if that’s what you want.","This is a valid point to bring up against the CDU, but if the government’s in a rut, it’s mostly the opposition that profits. Maybe that doesn’t matter if you think this is a duel.","Associating yourself with the Minister of Interior, Horst Seehofer, is a dangerous matter. This answer sounds quite dismissive of refugees."], "https://i.ibb.co/bjhJKXD/m-tzenich-cropped.jpg")},
+    () => removeAdvisorTooltips([4035, 4036, 4037, 4038, 4078, 4079, 4080, 4081], "https://i.ibb.co/bjhJKXD/m-tzenich-cropped.jpg"),
+    "locked"
+);
+
+let advisorSchwesig = new Advisor(
+    13,
+    'Manuela Schwesig',
+    "https://i.ibb.co/prTtbXJ/schwesig-cropped.jpg",
+    "To reach out to East German voters and win them back to the SPD, it would help to recruit the head of state of Mecklenburg-Vorpommern.",
+    'As head of an East German state, this potential advisors wants you to keep diplomatic channels with Russia open.',
+    () => {},
+    () => {},
+    "locked"
+);
+
+let advisorMattheis = new Advisor(
+    14,
+    'Hilde Mattheis',
+    "https://i.ibb.co/PMJnJ58/Mattheis-cropped.jpg",
+    "Targeting traditionally leftist voters and talking to the Left to form a coalition are tasks Mattheis would like to help with.",
+    'Run a more leftist campaign to win over this influential leftist party member.',
+    (affectedCandidate1=78, changeAmount1=0.004, affectedCandidate2=304, changeAmount2=-0.006) => { Object.keys(MattheisMap).forEach(key => {changeGlobalEffect(affectedCandidate1, parseInt(key), changeAmount1); changeGlobalEffect(affectedCandidate2, parseInt(key), changeAmount2);});coalitions.forEach(coalition => { if ([12, 13].includes(coalition.id)) {coalition.weight *= 1.4;}});},
+     (affectedCandidate1=78, changeAmount1=-0.004, affectedCandidate2=304, changeAmount2=0.006) => { Object.keys(MattheisMap).forEach(key => {changeGlobalEffect(affectedCandidate1, parseInt(key), changeAmount1); changeGlobalEffect(affectedCandidate2, parseInt(key), changeAmount2);});coalitions.forEach(coalition => { if ([12, 13].includes(coalition.id)) {coalition.weight *= 1/1.4;}});},
+    "locked"
+);
+
+let advisorWiese = new Advisor(
+    15,
+    'Dirk Wiese',
+    "https://i.ibb.co/D72GwgS/wiese-cropped.jpg",
+    "Coalition talks with both the CDU and FDP would be easier with him on board - and he has some tax policy advice as well.",
+    'A tax expert within the party who would like to work for you if you run a moderate campaign.',
+    () => {coalitions.forEach(coalition => { if ([1, 2, 6, 10].includes(coalition.id)) {coalition.weight *= 1.5;}}); addAdvisorTooltips([4043, 4044, 4045, 4046] ,["If there’s a way to show off your credentials, it’s with this popular answer.","This could improve purchasing power, but expect attacks from your left. They want real reforms, like higher taxes on the rich.","A groundbreaking proposal, if you’re one to pay attention to this stuff.","This is vaguely in line with what most of our party calls for. Flexing our keynesian muscles will sharpen our profile on the left."], "https://i.ibb.co/D72GwgS/wiese-cropped.jpg")},
+     () =>{coalitions.forEach(coalition => { if ([1,2, 6,10].includes(coalition.id)) {coalition.weight *= 1/1.5;}}); removeAdvisorTooltips([4043, 4044, 4045, 4046], "https://i.ibb.co/D72GwgS/wiese-cropped.jpg")},
+    "locked"
+);
+
+let advisorSchröder = new Advisor(
+    16,
+    'Gerhard Schröder',
+    "https://i.ibb.co/zfZV5JM/schr-der-cropped.jpg",
+    "If there's someone who know ho to handle natural disasters, it's Gerhard Schröder. He's also still popular in Lower Saxony.",
+    'This former chancellor of Germany needs you to stay away from socialism and defend him.',
+       () => {addAdvisorTooltips([4058, 4059, 4060, 4061] ,["These buffons will surely hurt themselves on their own, but there’s no reason to be timid!","Authenticity is certainly something the German’s value, Olaf. By the way, get me another bottle of beer, or I’ll go on strike.","This can be your big break! These two idiots are certain to stumble over each other, and you’ll stick out like the savior of the day.","Hahaha, it’s 2002 all over again! Come on, let’s go together, and I’ll teach you a thing or two about playing catch-up."], "https://i.ibb.co/zfZV5JM/schr-der-cropped.jpg")},
+    () => removeAdvisorTooltips([4058, 4059, 4060, 4061], "https://i.ibb.co/zfZV5JM/schr-der-cropped.jpg"),
+    "locked"
+);
+
+let advisorGeywitz = new Advisor(
+    17,
+    'Klara Geywitz',
+    "https://i.ibb.co/17rcP7C/geywitz-cropped.jpg",
+    "Geywitz are of expertise is housing policy, and involving someone from East Germany could help your campaign there as well.",
+    'Whoever you chose as partner for leadership could be involved in your campaign if you do well in your run for leadership',
+       () => {addAdvisorTooltips([4516, 4517, 4518, 4519] ,["In light of the situation, this seems quite cautious to me.","This seems like a realistic plan to deal with the crisis, even if the Greens are going further.","It may seem quite radical, but younger voters and urban areas will appreciate it.","Woah, ease it up - talking about reappropriations takes it a bit far, don’t you think? This’ll give them ample opportunity to paint us as scary socialists."], "https://i.ibb.co/17rcP7C/geywitz-cropped.jpg")},
+    () => removeAdvisorTooltips([4516, 4517, 4518, 4519], "https://i.ibb.co/17rcP7C/geywitz-cropped.jpg"),
+    "locked"
+);
+
+let advisorSchwan = new Advisor(
+    18,
+    'Gesine Schwan',
+    "https://i.ibb.co/bP9H5wv/Schwan-cropped.jpg",
+    "During her long years, Schwan forged many connections in the party and knows how to navigate intra-party questions.",
+    'Whoever you chose as partner for leadership could be involved in your campaign if you do well in your run for leadership',
+       () => {addAdvisorTooltips([4008, 4009, 4010, 4011, 4105, 4106, 4107] ,["I think this is a wise stance, and Saskia and Norbert will like it, just be wary that short-term, it might cause some upheaval..","While I don’t like the centrist tone you’re putting up, it seems like this is still acceptable to Saskia and Norbert.","That’s very much true - who else, if not you? Maybe pragmatism instead of ideology is a good hedge.","Olaf, we lost the leadership race. You don’t have the political capital to be able to afford such grandstanding.","You’ve already changed your image once, Olaf. Going back now would just emulate the failures we’ve experienced in the past.","Tone it down a bit. Some of us are socialists, but not everyone. Don’t give the CDU any opening for redbaiting!","Projecting strength and confidence is the key for people to take the SPD seriously again!"], "https://i.ibb.co/bP9H5wv/Schwan-cropped.jpg"); unity+=2},
+    () => {removeAdvisorTooltips([4516, 4517, 4518, 4519], "https://i.ibb.co/bP9H5wv/Schwan-cropped.jpg"); unity += -2},
+    "locked"
+);
+
+let advisorMoll = new Advisor(
+    19,
+    'Claudia Moll',
+    "https://i.ibb.co/M9RXcz5/Moll-cropped.jpg",
+    "This former geriatric nurse will certainly have some advice how to handle socio-economic questions.",
+    'Whoever you chose as partner for leadership could be involved in your campaign if you do well in your run for leadership',
+       () => {addAdvisorTooltips([4506, 4505, 4016, 4017, 4018, 4019, 4513, 4514, 4515, 4516, 4054, 4055, 4056, 4057], ["These are some nice ideas. I know firsthand how little our caregivers earn, I’ve been one! Question is, can you actually do something about that right now?","Holding out on relief now would be disastrous for the country.","14€ is too much - you’d even outflank the Left party, and might not be viable economically.","12€ seems like a good number, and almost the entire party seems to agree.","It’s clear that this country needs a higher minimum wage. We could refine our strongest policy area here, this conservatism is unneeded.","Why so cautious? You have the opportunity to define yourself further as a Social Democrat!","This is far too cautious. The problem goes deeper than just that, and pretty much everyone except for the AfD is saying so.","Innovative solution, moderate on the economic axis, progressive on the cultural one.","A classic SPD talking point - this is where we have a leg up on our opponents.","Quite neoliberal. Has its advantages, but don’t get outflanked from our left.","It’s time to move on from Hartz IV. This proposal seems to be a good and viable set of reforms to do just that.","That’s a pretty big number… it will certainly reignite the economic debate. We have competency in this field, but the right will be fired up about ‘entitlements’.", "Olaf, as much as you might think different, our party base won’t go along with Hartz IV any longer.","A UBI is certainly an innovative proposal, but I think there’s a few more debates to be had about this one."], "https://i.ibb.co/M9RXcz5/Moll-cropped.jpg")},
+    () => removeAdvisorTooltips([4506, 4505, 4016, 4017, 4018, 4019, 4513, 4514, 4515, 4516, 4054, 4055, 4056, 4057], "https://i.ibb.co/M9RXcz5/Moll-cropped.jpg"),
+    "locked"
+);
+
+let advisorBas = new Advisor(
+    20,
+    'Bärbel Bas',
+    "https://i.ibb.co/N1FfmCk/Bas-cropped.jpg",
+    "With her good cross-party reputation, Bas would be an asset in coaltion talks.",
+    'Whoever you chose as partner for leadership could be involved in your campaign if you do well in your run for leadership',
+    () => {coalitions.forEach(coalition => { if ([1, 2, 4, 6, 10, 11, 12, 13].includes(coalition.id)) {coalition.weight *= 1.3;}})},
+     () =>{coalitions.forEach(coalition => { if ([1, 2, 4, 6, 10, 11, 12, 13].includes(coalition.id)) {coalition.weight *= 1/1.3;}})},
+    "locked"
+);
+
+let advisorWeil = new Advisor(
+    21,
+    'Stephan Weil',
+    "https://i.ibb.co/Wy8Y4Sg/weil-cropped.jpg",
+    "Of course, Weil will help you win Lower Saxony, but he also has some tips about looking as competent as the outgoing chancellor.",
+    'Visit him in Lower Saxony to give this SPD head of state a role in your campaign.',
+    () => {merkelism+=2},
+    () => {merkelism=Math.max(0, merkelism-2)},
+    "locked"
+);
+
+let advisorsList = [
+    advisorSchmidt,
+    advisorBösinger,
+    advisorErnst,
+    advisorHebestreit,
+    advisorKlingbeil,
+    advisorSchulz,
+    advisorBrinkert,
+    advisorGeywitz,
+    advisorSchwan,
+    advisorMoll,
+    advisorBas,
+    advisorKühnert,
+    advisorLauterbach,
+    advisorMiersch,
+    advisorNoWaBoEsken,
+    advisorMützenich,
+    advisorSchwesig,
+    advisorMattheis,
+    advisorWiese,
+    advisorSchröder,
+    advisorWeil
+];
+
+if (!campaignTrail_temp.staff_mode){
+    advisorSchmidt.status = "active";
+    advisorKlingbeil.status= "acvtive"
+}
+
+campaignTrail_temp.answers_json.forEach(answer => {
+    if (!answer.fields.activeHints) {
+        answer.fields.activeHints = [];
+    }
+});
+
+
+function addAdvisorTooltips(pks, Tooltips, pictureLink) {
+    if (pks.length !== Tooltips.length) {
+        console.error("The lengths of pks and Tooltips arrays should match!");
+        return;
+    }
+
+    for (let i = 0; i < pks.length; i++) {
+        const pk = pks[i];
+        const Tooltip = Tooltips[i];
+
+        let ansIndex = campaignTrail_temp.answers_json.findIndex(item => item.pk === pk);
+
+        // Check if ansIndex is valid
+        if (ansIndex !== -1) {
+            // Save the original description if not already saved
+            if (!campaignTrail_temp.answers_json[ansIndex].fields.originalDescription) {
+                campaignTrail_temp.answers_json[ansIndex].fields.originalDescription = campaignTrail_temp.answers_json[ansIndex].fields.description;
+            }
+
+            // Add the new tooltip with associated picture to the active hints
+            campaignTrail_temp.answers_json[ansIndex].fields.activeHints.push({
+                text: Tooltip,
+                picture: pictureLink // if you later decide to have different pictures for different tooltips, just change this to the corresponding link
+            });
+
+            // Rebuild the description from the original description and active hints
+            let rebuiltDescription = campaignTrail_temp.answers_json[ansIndex].fields.originalDescription;
+            campaignTrail_temp.answers_json[ansIndex].fields.activeHints.forEach(hint => {
+                const tooltipContent = `
+                    <span class='mytooltip' style='background-color: lightgreen'>
+                        [A]
+                        <span class='bubble bubble-bottom-left'>
+                            <div style='display: flex; align-items: center;'>
+                                <img src='${hint.picture}' style='height: 4em;'>
+                                <span style='display: inline-block; margin-left: 3px;'>${hint.text}</span>
+                            </div>
+                        </span>
+                    </span>
+                `;
+                rebuiltDescription = tooltipContent + rebuiltDescription;
+            });
+
+            campaignTrail_temp.answers_json[ansIndex].fields.description = rebuiltDescription;
+        }
+    }
+
+    pks.forEach((pk, index) => {
+        const ansIndex = campaignTrail_temp.answers_json.findIndex(item => item.pk === pk);
+        if (ansIndex !== -1) {
+            setLabelContentByPk(pk, campaignTrail_temp.answers_json[ansIndex].fields.description);
+        }
+    });
+}
+
+function removeAdvisorTooltips(pks, pictureLink) {
+    pks.forEach(pk => {
+        let ansIndex = campaignTrail_temp.answers_json.findIndex(item => item.pk === pk);
+
+        if (ansIndex === -1) {
+            console.error(`Answer with pk ${pk} not found!`);
+            return;
+        }
+
+        // Filter out the hints that match the given pictureLink
+        campaignTrail_temp.answers_json[ansIndex].fields.activeHints = campaignTrail_temp.answers_json[ansIndex].fields.activeHints.filter(hint =>
+            hint.picture !== pictureLink);
+
+        // Rebuild the description from the original description and the remaining active hints
+        let rebuiltDescription = campaignTrail_temp.answers_json[ansIndex].fields.originalDescription;
+        campaignTrail_temp.answers_json[ansIndex].fields.activeHints.forEach(hint => {
+            const tooltipContent = `
+                <span class='mytooltip' style='background-color: lightgreen'>
+                    [A]
+                    <span class='bubble bubble-bottom-left'>
+                        <div style='display: flex; align-items: center;'>
+                            <img src='${hint.picture}' style='height: 4em;'>
+                            <span style='display: inline-block; margin-left: 3px;'>${hint.text}</span>
+                        </div>
+                    </span>
+                </span>
+            `;
+            rebuiltDescription = tooltipContent + rebuiltDescription;
+        });
+
+        campaignTrail_temp.answers_json[ansIndex].fields.description = rebuiltDescription;
+
+        // Update the label content for the answer
+        setLabelContentByPk(pk, campaignTrail_temp.answers_json[ansIndex].fields.description);
+    });
+}
+
+
+function setLabelContentByPk(pk, newContent) {
+    // Find the input element with the given pk
+    const radioInput = document.querySelector(`input[type="radio"][value="${pk}"]`);
+
+    // If the radio input is found, update the associated label
+    if (radioInput) {
+        const associatedLabel = document.querySelector(`label[for="${radioInput.id}"]`);
+        if (associatedLabel) {
+            associatedLabel.innerHTML = newContent;
+        }
+    }
+}
+
 // This function becomes a simple list of calls to other functions
 async function handleMutations(mutationsList, observer) {
     if (observerRunning) return;
@@ -2920,6 +4430,8 @@ async function handleMutations(mutationsList, observer) {
     if(e.realisticPolls){
         updatePolling();
     }
+
+    addHeadquarterButton()
     if(!eventListenerAttached){
         seatCalculator();
     }
