@@ -82,7 +82,7 @@ campaignTrail_temp.game_start_logging_id = '3662498';
     var ideologyCenter = 1;
     var ideologyLeft = 0;
     var mood = "Optimistic"
-    var likeability = 17;
+    var likeability = 18;
     var annaLenaHappy = false;
     var annaLenaNetwork = false;
     var resigned = false;
@@ -117,7 +117,7 @@ campaignTrail_temp.game_start_logging_id = '3662498';
         4024: -3,
         4025: -2,
         4027: -1,
-        4028: 1,
+        4028: 2,
         4029: -2,
         4031: 1,
         4032: -1,
@@ -127,7 +127,7 @@ campaignTrail_temp.game_start_logging_id = '3662498';
         4038: -1,
         4040: -1,
         4042: -1,
-        4509: 1,
+        4509: 2,
         4043: -1,
         4046: -1,
         4049: -1,
@@ -1707,7 +1707,7 @@ cyoAdventure = function(a) {
             advisor_news = true;
         }
 
-        if ([4006, 4505, 4049, 4081].includes(ans)) {
+        if ([4006, 4505, 4049, 4082].includes(ans)) {
             advisorBayaz.unlock();
             advisor_news = true;
         }
@@ -1767,8 +1767,12 @@ let result = applyDrift(79, -0.0008 + (dismissalsLeft >= 4 ? 0.0002 : (dismissal
 
         //quitting
 
-        if (ans === 4085) {
+        if (ans === 4086) {
             advisorFischer.quit();
+        }
+
+        if (likeability<9) {
+            advisorvonNotz.quit();
         }
 
         if (ans === 4529) {
@@ -1781,7 +1785,7 @@ let result = applyDrift(79, -0.0008 + (dismissalsLeft >= 4 ? 0.0002 : (dismissal
         if  ([4538, 4539, 4510, 4011, 4013, 4060].includes(ans)) {
             advisorPeters.quit();
         }
-        if  ([4068, 4114].includes(ans)) {
+        if  ([4068].includes(ans)) {
             advisorDahmen.quit();
         }
     }
@@ -3672,7 +3676,7 @@ Advisor.prototype.canBeHired = function() {
 
 const noop = () => {};
 // Advisors defined here
-const advisorBaerbock = new Advisor(1, "Annalena Baerbock", 'https://i.ibb.co/7XcxJCW/habeck.jpg', "Your co-party leader is happy to campaign for you in her homestate Brandenburg and all of Germany.", null, noop, noop, 'available');
+const advisorBaerbock = new Advisor(1, "Annalena Baerbock", 'https://i.ibb.co/MP0P2yQ/Baerbock.jpg', "Your co-party leader is happy to campaign for you in her home state Brandenburg and all of Germany.", 'If the party chooses you as nominee, your co-party leader will surely support you.', noop, noop, 'available');
 const advisorKellner = new Advisor(2, "Michael Kellner", 'https://i.ibb.co/xFS5Y0d/kellner-cropped.jpg', 'As general secretary of the party, he will help your campaign and coalition talks to be smoother.', null,  () =>coalitions.forEach(coalition => { if ([1, 3, 4, 5, 6, 12, 14, 15].includes(coalition.id)) {coalition.weight *= 1.2;}}),  () =>coalitions.forEach(coalition => { if ([1, 3, 4, 5, 6, 12, 14, 15].includes(coalition.id)) {coalition.weight *= 1/1.2;}}), 'available');
 const advisorUnmuessig = new Advisor(3, "Barbara Unmüßig", 'https://i.ibb.co/Fq99nQS/unm-ig-cropped.jpg', 'Hiring this political scientist will give you access to top-notch polling.', null, ()=> {factorPolls=5; factorSeats=5; errorDegree=0.3;}, ()=> {factorPolls=1; factorSeats=1; errorDegree=1;}, 'available');
 const advisorTrittin = new Advisor(4, "Jürgen Trittin", 'https://i.ibb.co/HYHW75n/trittin-cropped.jpg', 'A very experienced Green politician who is popular in Lower Saxony and knows a thing or two about becoming the lead candidate.', null, noop, noop, 'available');
@@ -3692,7 +3696,6 @@ const advisorBuntenbach = new Advisor(17, "Annelie Buntenbach", 'https://i.ibb.c
 const advisorGuenther = new Advisor(18, "Wolfram Günther", 'https://i.ibb.co/XWc0f73/g-nther-cropped.jpg', "The Greens are used to struggles in East Germany, but Günther wants to do his part for your campaign to change this.", "This East German minister wants you to show that you are serious about appealing to people in this region.", noop, noop, 'locked');
 
 const advisorsList = [
-    advisorBaerbock,
     advisorKellner,
     advisorUnmuessig,
     advisorTrittin,
@@ -3701,6 +3704,7 @@ const advisorsList = [
     advisorDahmen,
     advisorTressel,
     advisorvonNotz,
+    advisorBaerbock,
     advisorKretschmann,
     advisorPiel,
     advisorFischer,
@@ -5480,11 +5484,11 @@ var pictureDict = {
     7: "https://i.ibb.co/7vS3Hbq/Fl-chtlinge-1-cropped.webp",
     8: "https://i.ibb.co/88rRdZL/habeck-speech-3-cropped.jpg",
     9: "https://i.ibb.co/prctck9/baerbock-habeck-2-cropped.jpg",
-    10: "https://i.ibb.co/N2Jkmns/habeck-angry-cropped.jpg",
-    11: "https://i.ibb.co/SQ9kkGs/gas-prices-cropped.jpg",
-    12: "https://i.ibb.co/XbFQj4S/habeck-talk-1-cropped.jpg",
-    13: "https://i.ibb.co/JcW97sX/habeck-speech-2-cropped.jpg",
-    14: "https://i.ibb.co/MNLjBz2/Digitalization-cropped.jpg",
+    10: "https://i.ibb.co/SQ9kkGs/gas-prices-cropped.jpg",
+    11: "https://i.ibb.co/XbFQj4S/habeck-talk-1-cropped.jpg",
+    12: "https://i.ibb.co/JcW97sX/habeck-speech-2-cropped.jpg",
+    13: "https://i.ibb.co/MNLjBz2/Digitalization-cropped.jpg",
+    14: "https://i.ibb.co/N2Jkmns/habeck-angry-cropped.jpg",
     15: "https://i.ibb.co/xXyNGrM/autobahn-cropped.webp",
     16: "https://i.ibb.co/xSD3Bfd/habeck-talk-3-cropped.jpg",
     17: "https://i.ibb.co/N2Jkmns/habeck-angry-cropped.jpg",
