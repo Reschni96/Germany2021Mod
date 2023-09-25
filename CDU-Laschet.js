@@ -3043,14 +3043,14 @@ function openHeadquarter() {
     hqDiv.id = 'headquarter';
     hqDiv.style.display = 'flex'; // Set layout to flex to allow columns
     hqDiv.style.color = 'black';
-    hqDiv.style.backgroundImage = 'url("https://app.handelsblatt.com/images/spd-stellt-kampagne-scholz-packt-das-an-vor/27483890/2-formatOriginal.jpg")';
+    hqDiv.style.backgroundImage = 'url("https://images.noz-mhn.de/img/20887902/crop/cbase_4_3-w1200/799476600/587657391/wahlkampf-2021---wahlplakate-cdu-plakat---armin-laschet-foto-osnapix-wahlkampf-2021---wahlplakate--election-campaign.jpg")';
     hqDiv.style.backgroundSize = 'cover';
     hqDiv.style.backgroundRepeat = 'no-repeat';
     hqDiv.style.backgroundColor = 'rgba(255, 255, 255, 0.7)'; // dark green with 60% opacity
     hqDiv.style.backgroundBlendMode = 'overlay';
     hqDiv.style.border = '5px solid black';
     hqDiv.style.borderRadius = '10px';
-    hqDiv.style.boxShadow = '0 0 15px rgba(0,0,0,0.5)';
+    hqDiv.style.boxShadow = '0 0 20px 4px rgba(128, 128, 128, 0.9)';
     hqDiv.style.height = '650px';
 
 
@@ -3274,9 +3274,9 @@ advisorsList.forEach(advisor => {
         let dismissBtn = document.createElement('button');
         dismissBtn.innerText = 'Dismiss';
         dismissBtn.style.margin = '1em';
-        dismissBtn.style.backgroundColor = 'red';
+        dismissBtn.style.backgroundColor = 'grey';
         dismissBtn.style.color = "white";
-        dismissBtn.style.boxShadow = '0 0 20px 4px rgba(120, 0, 0, 0.9)';
+        dismissBtn.style.boxShadow = '0 0 20px 4px rgba(128, 128, 128, 0.9)';
 
         if (dismissalsLeft > 0 && campaignTrail_temp.staff_mode) {
             dismissBtn.onclick = function() {
@@ -3343,9 +3343,9 @@ advisorsList.forEach(advisor => {
         let hireButton = document.createElement('button');
         hireButton.innerText = 'Hire Advisors';
         hireButton.style.margin = '1em';
-        hireButton.style.backgroundColor = 'red';
+        hireButton.style.backgroundColor = 'grey';
         hireButton.style.color = "white"
-        hireButton.style.boxShadow = '0 0 20px 4px rgba(120, 0, 0, 0.9)';; // Stronger light green glow
+        hireButton.style.boxShadow = '0 0 20px 4px rgba(128, 128, 128, 0.9)'; // Stronger light green glow
         hireButton.onclick = showAdvisors;
         middleCol.appendChild(hireButton);
     } else {
@@ -3426,7 +3426,7 @@ advisorsList.forEach(advisor => {
     let toggleButton = document.createElement('button');
     toggleButton.innerText = 'Show Seats';
     toggleButton.addEventListener('click', toggleInfo);
-    toggleButton.style.backgroundColor = 'red';
+    toggleButton.style.backgroundColor = 'grey';
     toggleButton.style.color = "white"
     pollingDiv.appendChild(toggleButton);
 
@@ -3581,9 +3581,9 @@ advisorsList.forEach(advisor => {
     backButton.innerText = 'Back';
     backButton.style.marginTop = '2em';
     backButton.style.marginBottom = '1em';
-    backButton.style.backgroundColor = 'red';
+    backButton.style.backgroundColor = 'grey';
     backButton.style.color = "white"
-    backButton.style.boxShadow = '0 0 20px 4px rgba(120, 0, 0, 0.9)';; // Stronger light green glow
+    backButton.style.boxShadow = '0 0 20px 4px rgba(128, 128, 128, 0.9)'; // Stronger light green glow
     backButton.onclick = function() {
         // Hide headquarters and show the original content
         hqDiv.remove();
@@ -3613,9 +3613,9 @@ advisorsList.forEach(advisor => {
     tutorialButton.style.marginTop = '2em';
     tutorialButton.style.marginLeft = '1em';
     backButton.style.marginBottom = '1em';
-    tutorialButton.style.backgroundColor = 'red';
+    tutorialButton.style.backgroundColor = 'grey';
     tutorialButton.style.color = "white"
-    tutorialButton.style.boxShadow = '0 0 20px 4px rgba(120, 0, 0, 0.9)';;
+    tutorialButton.style.boxShadow = '0 0 20px 4px rgba(128, 128, 128, 0.9)';
     tutorialButton.style.position = 'relative';
     tutorialButton.style.zIndex = 1000; // Above the overlay
     let hqRect = undefined;
@@ -3678,7 +3678,7 @@ advisorsList.forEach(advisor => {
     // Add "Continue" button
     let continueButton = document.createElement('button');
     continueButton.innerText = 'Continue';
-    continueButton.style.backgroundColor = 'red';
+    continueButton.style.backgroundColor = 'grey';
     continueButton.onclick = function() {
         // Do nothing for now
     };
@@ -3869,10 +3869,10 @@ HQStyle.innerHTML = `
     }
 
   #coalitionDiv .mytooltip{
-      background-color: darkred;
+      background-color: lightgray;
    }
      #headquarter .mytooltiptext{
-      background-color: lightcoral;
+      background-color: gray;
    }
 `;
 document.head.appendChild(HQStyle);
@@ -3893,7 +3893,7 @@ function showAdvisors() {
     // Create and set up advisorsDiv
     let advisorsDiv = document.createElement('div');
     advisorsDiv.id = 'advisors';
-    advisorsDiv.style.boxShadow = '0 0 15px rgba(0,0,0,0.5)';
+    advisorsDiv.style.boxShadow = '0 0 20px 4px rgba(128, 128, 128, 0.9)';
     advisorsDiv.style.color = 'black';
     advisorsDiv.style.backgroundImage = "url('https://cdn.discordapp.com/attachments/1109846390575730788/1148559668969480193/cdugradient.png')";
     advisorsDiv.style.backgroundSize = 'cover';
