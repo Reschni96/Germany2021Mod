@@ -5339,12 +5339,13 @@ function getTooltips(str) {
     let matches = [];
 
     tooltipList.forEach((tooltip, index) => {
-        let regex = new RegExp(`\\b(${tooltip.searchString})\\b`, 'g');
+        // Adjust the regex to match searchString potentially surrounded by “ and followed by optional punctuation
+        let regex = new RegExp(`\\b(?:“)?(${tooltip.searchString})(?:”)?([.,;!?]?)\\b`, 'g');
         let match;
         while ((match = regex.exec(str)) !== null) {
             matches.push({
-                start: match.index,
-                end: match.index + match[0].length,
+                start: match.index + (match[0].startsWith('“') ? 1 : 0), // Adjust for potential starting “
+                end: match.index + match[0].length - (match[0].endsWith('”') ? 1 : 0) - (match[2] ? 1 : 0), // Adjust for potential ending ” and punctuation
                 tooltipIndex: index
             });
         }
@@ -5364,7 +5365,6 @@ function getTooltips(str) {
 
     return matches;
 }
-
 function applyTooltips(str) {
     const matches = getTooltips(str);
     let result = '';
