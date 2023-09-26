@@ -80,6 +80,7 @@ campaignTrail_temp.game_start_logging_id = '3662498';
     var opportunism = 8;
     var laschetMean = 0;
     var mood = "Confident"
+    var resigned = false;
     var totalSeats = 0;
     var contestedElection = false;
     var closeElection = false;
@@ -177,16 +178,33 @@ e.multiple_endings = true;
   }
 
   if(LaschetTime){
+
       if (e.final_overall_results[0].candidate === 77){
+          if(resigned){
+  	        var fate = "<p>Meanwhile, you’ve returned to your hometown of Nürnberg in Franconia. Occasionally, you're working as a political commentator, but mostly, you've moved on from this business. When the election night happens, you switch it off after half an hour to watch another movie.</p>"
+
+  	    }
+  	    else{
+  	        var fate = "<p>Meanwhile, you’ve stayed on as party leader of the CSU and Bavarian Minister-President, a position you are expected to defend in 2023. Either way, your chances of ever becoming chancellor appear to be slim, if you don’t have another ace up your sleeve…</p>"
+
+  	    }
           e.header="<h2>“The CDU/CSU and Armin Laschet are the winners of this night”</h2>"
-          e.pages=[`<p>Following his victory in the CDU leadership challenge and subsequent triumph over you in the vote for the CDU/CSU's chancellor candidate, Laschet has once again emerged victorious. He has won the federal election and is expected to form a government. When you see him celebrate on election night, and give a regal statement with a camera-worthy smile, behind it all, you can’t help but feel bitter. If that buffoon was able to win the election, you would have won too! If only you got the nomination! During his nine-month leadership tenure, Laschet has steered the CDU in a more moderate direction, and his chancellorship will probably be broadly similar to Merkel's.</p><p>Meanwhile, you’ve stayed on as party leader of the CSU and Bavarian Minister-President, a position you are expected to defend in 2023. Either way, your chances of ever becoming chancellor appear to be slim, if you don’t have another ace up your sleeve…</p>` ]
+          e.pages=[`<p>Following his victory in the CDU leadership challenge and subsequent triumph over you in the vote for the CDU/CSU's chancellor candidate, Laschet has once again emerged victorious. He has won the federal election and is expected to form a government. When you see him celebrate on election night, and give a regal statement with a camera-worthy smile, behind it all, you can’t help but feel bitter. If that buffoon was able to win the election, you would have won too! If only you got the nomination! During his nine-month leadership tenure, Laschet has steered the CDU in a more moderate direction, and his chancellorship will probably be broadly similar to Merkel's.</p>${fate}` ]
           e.image="https://www.bundestag.de/resource/image/225552/3x4/594/792/41c47f0a63894c714cff2ac9fc890afb/2AC076E6C48DE98561C2E0BA18823C1A/kuppel.jpg"
 
           return construct(0);
       }
       else{
+         if(resigned){
+  	        var fate = "<p>Meanwhile, you’ve returned to your hometown of Nürnberg in Franconia. Occasionally, you're working as a political commentator, but mostly, you've moved on from this business. When the election night happens, you briefly wonder if you would have fared any better, but then switch it off after half an hour to watch another movie.</p>"
+
+  	    }
+  	    else{
+  	        var fate = "<p>Nonetheless, you’re still party leader of the CSU and Bavarian Minister-President, a position you are expected to defend in 2023. While the bumbling idiot Friedrich Merz becomes new party chair of the CDU, you’re already consolidating your forces for another go in 2025… the time seems ripe for a CSU candidacy.</p>"
+
+  	    }
           e.header="<h2>“A bitter night for Laschet and the CDU/CSU”</h2>"
-          e.pages=[`<p>Following his victory in the CDU leadership challenge and subsequent triumph over you in the vote for the CDU/CSU, this is a heavy blow for Armin Laschet. His campaign had some troubled moments and now his political future is unclear after this defeat. While he may try to form a government, Scholz of the SPD definitely has the initiative. For the colleagues who stood by you all this time, it’s clear - this was a winnable election, and if only the party had chosen you, you certainly would have triumphed!</p><p>Nonetheless, you’re still party leader of the CSU and Bavarian Minister-President, a position you are expected to defend in 2023. While the bumbling idiot Friedrich Merz becomes new party chair of the CDU, you’re already consolidating your forces for another go in 2025… the time seems ripe for a CSU candidacy.</p>` ]
+          e.pages=[`<p>Following his victory in the CDU leadership challenge and subsequent triumph over you in the vote for the CDU/CSU, this is a heavy blow for Armin Laschet. His campaign had some troubled moments and now his political future is unclear after this defeat. While he may try to form a government, Scholz of the SPD definitely has the initiative. For the colleagues who stood by you all this time, it’s clear - this was a winnable election, and if only the party had chosen you, you certainly would have triumphed!</p>${fate}` ]
           e.image="https://www.bundestag.de/resource/image/225552/3x4/594/792/41c47f0a63894c714cff2ac9fc890afb/2AC076E6C48DE98561C2E0BA18823C1A/kuppel.jpg"
             return construct(0);
       }
