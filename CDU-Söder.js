@@ -85,6 +85,7 @@ campaignTrail_temp.game_start_logging_id = '3662498';
     var closeElection = false;
     var weightsUpdated = false;
     var resetPage = false;
+    const firedKeys = {};
 
 // constructs endings based on header and pages
 
@@ -1320,11 +1321,17 @@ cyoAdventure = function(a) {
     if (question_number===6&&laschetMean>2){
         answerSwapper(4027,4623, false)
         changeGlobalEffect(77,4027, -0.01)
+        answerSwapper(4105, 4660, false)
+        changeGlobalEffect(77,4105, -0.008)
+        changeStateEffect(77, 4105, 3009, -0.01);
     }
     if (question_number===6&&laschetMean<-1){
         answerSwapper(4027,4624, false)
         changeGlobalEffect(77,4027, 0.005)
         changeStateEffect(77, 4027, 3009, 0.015);
+        answerSwapper(4105, 4661, false)
+        changeGlobalEffect(77,4105, 0.005)
+        changeStateEffect(77, 4105, 3009, 0.005);
 
     }
 
@@ -1354,7 +1361,13 @@ cyoAdventure = function(a) {
         answerSwapper(4067,4635, false)
         changeGlobalEffect(77,4066, -0.005)
         changeGlobalEffect(77,4067, 0.005)
-
+        answerSwapper(4092,4652, false)
+        changeGlobalEffect(77,4092, -0.05)
+        changeGlobalEffect(78,4092, 0.01)
+        changeGlobalEffect(79,4092, 0.04)
+        answerSwapper(4098,4653, false)
+        changeGlobalEffect(77,4098, -0.03)
+        changeGlobalEffect(79,4098, 0.03)
     }
 
     if (ans===4066 && campaignTrail_temp.player_answers.includes(4039)){
@@ -1452,7 +1465,14 @@ cyoAdventure = function(a) {
     if([4536, 4537].includes(ans)){
         answerSwapper(4080,4646, false)
         changeGlobalEffect(77,4080, 0.01)
+        answerSwapper(4099,4654, false)
+        changeGlobalEffect(77,4099, -0.01)
+        changeGlobalEffect(78,4099, 0.01)
+        answerSwapper(4103,4659, false)
+        changeGlobalEffect(77,4103, -0.02)
+        changeStateEffect(77, 4103, 3001, 0.01);
     }
+
      if (ans===4080 && campaignTrail_temp.player_answers.includes(4536)){
         opportunism-=3;
     }
@@ -1478,8 +1498,28 @@ cyoAdventure = function(a) {
         changeGlobalEffect(77,4082, -0.05)
         changeGlobalEffect(78,4082, 0.04)
         changeGlobalEffect(79,4082, 0.02)
+        answerSwapper(4103,4656, false)
+        changeGlobalEffect(77,4103, -0.03)
+        changeStateEffect(77, 4103, 3001, 0.01);
+        answerSwapper(4104, 4657, false)
+        answerSwapper(4105, 4658, false)
+        changeGlobalEffect(77,4105, -0.012)
+        changeStateEffect(77, 4105, 3001, 0.01);
+        changeStateEffect(77, 4105, 3009, -0.02);
     }
 
+    if(ans===4080 &&(campaignTrail_temp.player_answers.includes(4536)||(campaignTrail_temp.player_answers.includes(4537))){
+        answerSwapper(4099,4655, false)
+        changeGlobalEffect(77,4099, -0.005)
+        changeGlobalEffect(79,4099, 0.005)
+    }
+
+    if ([4510, 4517, 4518].includes(ans)&&campaignTrail_temp.player_answers.includes(4013)&&!firedKeys[1]){
+        firedKeys[1]=true;
+        answerSwapper(4092,4651, false)
+        changeGlobalEffect(77,4092, -0.01)
+        changeGlobalEffect(78,4092, 0.01)
+    }
 
     currentCoalitions = coalitionTalks(temp.final_overall_results, optionalMode = true);
 
