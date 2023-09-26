@@ -1318,14 +1318,14 @@ cyoAdventure = function(a) {
         changeGlobalEffect(78,4517, -0.005)
         changeGlobalEffect(303,4517, 0.01)
     }
-    if (question_number===6&&laschetMean>2){
+    if (campaignTrail_temp.question_number===6&&laschetMean>2){
         answerSwapper(4027,4623, false)
         changeGlobalEffect(77,4027, -0.01)
         answerSwapper(4105, 4660, false)
         changeGlobalEffect(77,4105, -0.008)
         changeStateEffect(77, 4105, 3009, -0.01);
     }
-    if (question_number===6&&laschetMean<-1){
+    if (campaignTrail_temp.question_number===6&&laschetMean<-1){
         answerSwapper(4027,4624, false)
         changeGlobalEffect(77,4027, 0.005)
         changeStateEffect(77, 4027, 3009, 0.015);
@@ -1508,7 +1508,7 @@ cyoAdventure = function(a) {
         changeStateEffect(77, 4105, 3009, -0.02);
     }
 
-    if(ans===4080 &&(campaignTrail_temp.player_answers.includes(4536)||(campaignTrail_temp.player_answers.includes(4537))){
+    if(ans===4080 &&(campaignTrail_temp.player_answers.includes(4536)||(campaignTrail_temp.player_answers.includes(4537)))){
         answerSwapper(4099,4655, false)
         changeGlobalEffect(77,4099, -0.005)
         changeGlobalEffect(79,4099, 0.005)
@@ -1539,9 +1539,35 @@ cyoAdventure = function(a) {
     if ([4039, 4040, 4041, 4042].includes(ans)) {
        if ((ideologyRight-ideologyCenter) > 2) {
             campaignTrail_temp.questions_json[12]=extraQuestions[5];
+            $("#game_window")[0].style.backgroundImage = "url(https://media.discordapp.net/attachments/1131296206908301423/1154740485982797865/CSURechtsUnten.png)";
+            $("#game_window")[0].style.backgroundSize = "cover";
+            $(".game_header")[0].style.backgroundImage = "url(https://media.discordapp.net/attachments/1131296206908301423/1154740486318333973/CSURechtsOben.png)";
+            $(".game_header")[0].style.backgroundSize = "cover";
+            headerImage = "url(https://media.discordapp.net/attachments/1131296206908301423/1154740486318333973/CSURechtsOben.png)";
+            $(".container")[0].style.backgroundImage = "url(https://media.discordapp.net/attachments/1131296206908301423/1154740486616141904/CSURechtsSeiten.png)";
+            $(".container")[0].style.backgroundSize = "cover";
+            $("#trackSel")[0].style.backgroundImage = "url(https://media.discordapp.net/attachments/1131296206908301423/1154740485982797865/CSURechtsUnten.png)";
+            $("#trackSel")[0].style.backgroundSize = "cover";
+            $("#timeTracker")[0].style.backgroundImage = "url(https://media.discordapp.net/attachments/1131296206908301423/1154740485982797865/CSURechtsUnten.png)";
+            $("#timeTracker")[0].style.backgroundSize = "cover";
        }
         else if ((ideologyRight-ideologyCenter) > -2) {
             campaignTrail_temp.questions_json[12]=extraQuestions[4];
+
+       }
+       else{
+           $("#game_window")[0].style.backgroundImage = "url(https://media.discordapp.net/attachments/1131296206908301423/1154740291933323324/CSUCentristUnten.png)";
+            $("#game_window")[0].style.backgroundSize = "cover";
+            $(".game_header")[0].style.backgroundImage = "url(https://cdn.discordapp.com/attachments/1131296206908301423/1154740292335972493/CSUCentristOben.png)";
+            $(".game_header")[0].style.backgroundSize = "cover";
+            headerImage = "url(https://cdn.discordapp.com/attachments/1131296206908301423/1154740292335972493/CSUCentristOben.png)";
+            $(".container")[0].style.backgroundImage = "url(https://cdn.discordapp.com/attachments/1131296206908301423/1154740292612800562/CSUCentristSeite.png)";
+            $(".container")[0].style.backgroundSize = "cover";
+            $("#trackSel")[0].style.backgroundImage = "url(https://media.discordapp.net/attachments/1131296206908301423/1154740291933323324/CSUCentristUnten.png)";
+            $("#trackSel")[0].style.backgroundSize = "cover";
+            $("#timeTracker")[0].style.backgroundImage = "url(https://media.discordapp.net/attachments/1131296206908301423/1154740291933323324/CSUCentristUnten.png)";
+            $("#timeTracker")[0].style.backgroundSize = "cover";
+
        }
     }
 
@@ -3577,3 +3603,15 @@ function applyTooltipsToObject(obj) {
 applyTooltipsToObject(campaignTrail_temp);
 
 }
+
+$("#game_window")[0].style.backgroundImage = "url(https://media.discordapp.net/attachments/1131296206908301423/1154740369246924810/CSUMixUnten.png)";
+$("#game_window")[0].style.backgroundSize = "cover";
+$(".game_header")[0].style.backgroundImage = "url(https://media.discordapp.net/attachments/1131296206908301423/1154740369746034688/CSUMixOben.png)";
+$(".game_header")[0].style.backgroundSize = "cover";
+headerImage = "url(https://media.discordapp.net/attachments/1131296206908301423/1154740369746034688/CSUMixOben.png)";
+$(".container")[0].style.backgroundImage = "url(https://media.discordapp.net/attachments/1131296206908301423/1154740370077388871/CSUMixSeite.png)";
+$(".container")[0].style.backgroundSize = "cover";
+$("#trackSel")[0].style.backgroundImage = "url(https://media.discordapp.net/attachments/1131296206908301423/1154740369246924810/CSUMixUnten.png)";
+$("#trackSel")[0].style.backgroundSize = "cover";
+$("#timeTracker")[0].style.backgroundImage = "url(https://media.discordapp.net/attachments/1131296206908301423/1154740369246924810/CSUMixUnten.png)";
+$("#timeTracker")[0].style.backgroundSize = "cover";

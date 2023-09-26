@@ -1897,7 +1897,7 @@ let result = applyDrift(79, -0.0008 + (dismissalsLeft >= 4 ? 0.0002 : (dismissal
         }
         else if ((ideologyCenter - ideologyLeft) > 2) {
             campaignTrail_temp.questions_json[12] = extraQuestions[4];
-            $("#game_window")[0].style.backgroundImage = "urlhttps://cdn.discordapp.com/attachments/1131296206908301423/1154739963754205214/GruneRealoUnten.png)";
+            $("#game_window")[0].style.backgroundImage = "url(https://cdn.discordapp.com/attachments/1131296206908301423/1154739963754205214/GruneRealoUnten.png)";
             $("#game_window")[0].style.backgroundSize = "cover";
             $(".game_header")[0].style.backgroundImage = "url(https://cdn.discordapp.com/attachments/1131296206908301423/1154739964102328400/GruneRealoOben.png)";
             $(".game_header")[0].style.backgroundSize = "cover";
