@@ -3084,7 +3084,7 @@ function addHeadquarterButton() {
 }
 
 var dismissalsLeft = 5;
-var statesmanDescription = ["You're a gaffe-prone political lightweight", "People are worried about your lacking political gravitas", "Overall, you're seen as competent statesman", "People see you as true statesman and Landesvater"]
+var statesmanDescription = ["You're not a clown, you're the entire circus.", "People find you... aloof, at times.", "Experience forms a good part of your appeal.", "You're worthy of the highest goverment office in the land."]
 
 function openHeadquarter() {
 
@@ -3197,7 +3197,11 @@ function openHeadquarter() {
 
 
     let patienceLabel = document.createElement('h2');
-    patienceLabel.innerText = "Armin's Statesmanship";
+    patienceLabel.innerHTML = "<span class='mytooltip'>Armin's Statesmanship<span class='mytooltiptext'>For you, politics is a regal and dignified business. Unfortunately, your own demeanor isn't always seen as such. If you want to win this election, you have to show that you're up to the dignified business of governance, while avoiding any gaffes.</span></span>";
+    if (campaignTrail_temp.bigshot_mode){
+        patienceLabel.innerHTML = "<span class='mytooltip'>Armin's Statesmanship<span class='mytooltiptext'>For you, politics is a regal and dignified business. Unfortunately, your own demeanor isn't always seen as such. If you want to win this election, you have to show that you're up to the dignified business of governance, while avoiding any gaffes.<br>Current Statesmanship:"+statesman+"</span></span>";
+
+    }
     patienceLabel.className = 'happy-box';
     patienceLabel.style.padding = '1em';
     patienceLabel.style.textAlign = 'center';
@@ -3928,7 +3932,7 @@ HQStyle.innerHTML = `
         color: white
     }
 
-  #coalitionDiv .mytooltip{
+ #headquarter  .mytooltip{
       background-color: lightgray;
    }
      #headquarter .mytooltiptext{

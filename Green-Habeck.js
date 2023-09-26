@@ -2664,7 +2664,7 @@ function addHeadquarterButton() {
 }
 
 var dismissalsLeft = 5;
-var likeabilityDescription = ["You are constantly stressed and lash out at people.", "People notice you're stressed out", "You're mostly calm and collected", "Wherever you go, people notice your patience"]
+var likeabilityDescription = ["You're completely exhausted, in danger of lashing out.", "This whole thing stresses you out.", "Politics is a harsh business, you've seen.", "You're known for your kind and attentive demeanor."]
 
 function openHeadquarter() {
 
@@ -2777,7 +2777,11 @@ function openHeadquarter() {
 
 
     let patienceLabel = document.createElement('h2');
-    patienceLabel.innerText = "Robert's Patience";
+        patienceLabel.innerHTML = "<span class='mytooltip'>Robert's Patience<span class='mytooltiptext'>You have experience in the political business, but nonetheless, you're also passionate. You have a hard time hiding your emotions - don't stress yourself out too much on the campaign trail and don't say too many things you don't really believe in, or the press will take note.</span></span>";
+    if (campaignTrail_temp.bigshot_mode){
+        patienceLabel.innerHTML = "<span class='mytooltip'>Robert's Patience<span class='mytooltiptext'>You have experience in the political business, but nonetheless, you're also passionate. You have a hard time hiding your emotions - don't stress yourself out too much on the campaign trail and don't say too many things you don't really believe in, or the press will take note.<br>Current Patience:"+likeability+"</span></span>";
+
+    }
     patienceLabel.style.color = 'black';
     patienceLabel.className = 'happy-box';
     patienceLabel.style.padding = '1em';
@@ -3502,7 +3506,7 @@ HQStyle.innerHTML = `
     opacity: 0.5;
   }
 
-  #coalitionDiv .mytooltip{
+ #headquarter  .mytooltip{
       background-color: greenyellow;
    }
      #headquarter .mytooltiptext{

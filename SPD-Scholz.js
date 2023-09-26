@@ -4031,7 +4031,7 @@ function addHeadquarterButton() {
 }
 
 var dismissalsLeft = 5;
-var merkelismDescription = ["You can't hold a candle to the chancellor", "Some people see similarities between you and Merkel", "You're frequently compared to Merkel", "People see you as Merkel's natural succesor"]
+var merkelismDescription = ["Your political brand is quite different from Merkel.", "You seem stately and patient.", "You're frequently compared to the chancellor.", "You're the second coming of Angela Merkel."]
 
 function openHeadquarter() {
 
@@ -4145,7 +4145,11 @@ function openHeadquarter() {
 
 
     let patienceLabel = document.createElement('h2');
-    patienceLabel.innerText = "Olaf's Merkelism";
+    patienceLabel.innerHTML = "<span class='mytooltip'>Olaf's Merkelism<span class='mytooltiptext'>While there seems to be a certain wind of change in the country, the chancellor herself has high approval ratings. Your demeanor has sometimes been compared to that of your boss - maybe emulating her style of composure and patience can open up new opportunities...</span></span>";
+    if (campaignTrail_temp.bigshot_mode){
+        patienceLabel.innerHTML = "<span class='mytooltip'>Olaf's Merkelism<span class='mytooltiptext'>While there seems to be a certain wind of change in the country, the chancellor herself has high approval ratings. Your demeanor has sometimes been compared to that of your boss - maybe emulating her style of composure and patience can open up new opportunities...<br>Current Merkelism:"+merkelism+"</span></span>";
+
+    }
     patienceLabel.className = 'happy-box';
     patienceLabel.style.padding = '1em';
     patienceLabel.style.textAlign = 'center';
@@ -4876,7 +4880,7 @@ HQStyle.innerHTML = `
         color: white
     }
 
-  #coalitionDiv .mytooltip{
+ #headquarter  .mytooltip{
       background-color: darkred;
    }
      #headquarter .mytooltiptext{

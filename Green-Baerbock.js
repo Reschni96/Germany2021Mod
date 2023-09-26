@@ -3819,7 +3819,7 @@ function addHeadquarterButton() {
 }
 
 var dismissalsLeft = 5;
-var likeabilityDescription = ["People find you unlikeable, toxic even", "People seem to have their doubts about your competence", "People are carefully intrigued by you", "People see you as energetic and sympathetic "]
+var likeabilityDescription = ["You seem clumsy and unreliable to the public.", "You're a pretty polarizing figure.", "People are curious about you as a political newcomer.", "You're a sympathetic and refreshing new face."]
 
 function openHeadquarter() {
 
@@ -3932,7 +3932,11 @@ function openHeadquarter() {
 
 
     let patienceLabel = document.createElement('h2');
-    patienceLabel.innerText = "Annalena's Likeability";
+    patienceLabel.innerHTML = "<span class='mytooltip'>Annalena's Likeability<span class='mytooltiptext'>Likeability denotes your personal image and favorability with the German people. As a woman, this seems to be a particularly relevant factor for you, unfortunately...</span></span>";
+    if (campaignTrail_temp.bigshot_mode){
+        patienceLabel.innerHTML = "<span class='mytooltip'>Annalena's Likeability<span class='mytooltiptext'>Likeability denotes your personal image and favorability with the German people. As a woman, this seems to be a particularly relevant factor for you, unfortunately...<br>Current Likeability:"+likeability+"</span></span>";
+
+    }
     patienceLabel.style.color = 'black';
     patienceLabel.className = 'happy-box';
     patienceLabel.style.padding = '1em';
@@ -4658,7 +4662,7 @@ HQStyle.innerHTML = `
     opacity: 0.5;
   }
 
-  #coalitionDiv .mytooltip{
+ #headquarter  .mytooltip{
       background-color: greenyellow;
    }
      #headquarter .mytooltiptext{
