@@ -5606,7 +5606,7 @@ campaignTrail_temp.global_parameter_json[0].fields.question_count = 35;
 
 $("#game_window")[0].style.backgroundImage = "url(https://cdn.discordapp.com/attachments/1131296206908301423/1154740026542927922/GruneMixUnten.png)";
 $("#game_window")[0].style.backgroundSize = "cover";
-$(".game_header")[0].style.backgroundImage = "urlhttps://cdn.discordapp.com/attachments/1131296206908301423/1154740026861690890/GruneMixOben.png)";
+$(".game_header")[0].style.backgroundImage = "url(https://cdn.discordapp.com/attachments/1131296206908301423/1154740026861690890/GruneMixOben.png)";
 $(".game_header")[0].style.backgroundSize = "cover";
 headerImage = "url(https://cdn.discordapp.com/attachments/1131296206908301423/1154740026861690890/GruneMixOben.png)";
 $(".container")[0].style.backgroundImage = "url(https://cdn.discordapp.com/attachments/1131296206908301423/1154740027100778586/GruneMixSeiten.png)";

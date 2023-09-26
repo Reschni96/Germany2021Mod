@@ -1404,11 +1404,35 @@ cyoAdventure = function(a) {
            answerSwapper(4099 ,4653)
            changeGlobalEffect(77, 4099, -0.01)
            changeGlobalEffect(78, 4099, 0.01)
+           $("#game_window")[0].style.backgroundImage = "url(https://media.discordapp.net/attachments/1131296206908301423/1154740854892810330/CDURechtsUnten.png)";
+            $("#game_window")[0].style.backgroundSize = "cover";
+            $(".game_header")[0].style.backgroundImage = "url(https://media.discordapp.net/attachments/1131296206908301423/1154740855404511333/CDURechtsOben.png)";
+            $(".game_header")[0].style.backgroundSize = "cover";
+            headerImage = "url(https://media.discordapp.net/attachments/1131296206908301423/1154740855404511333/CDURechtsOben.png)";
+            $(".container")[0].style.backgroundImage = "url(https://media.discordapp.net/attachments/1131296206908301423/1154740855685525504/CDURechtsSeite_.png)";
+            $(".container")[0].style.backgroundSize = "cover";
+            $("#trackSel")[0].style.backgroundImage = "url(https://media.discordapp.net/attachments/1131296206908301423/1154740854892810330/CDURechtsUnten.png)";
+            $("#trackSel")[0].style.backgroundSize = "cover";
+            $("#timeTracker")[0].style.backgroundImage = "url(https://media.discordapp.net/attachments/1131296206908301423/1154740854892810330/CDURechtsUnten.png)";
+            $("#timeTracker")[0].style.backgroundSize = "cover";
+
        }
         else if ((ideologyRight-ideologyCenter) > -3) {
             campaignTrail_temp.questions_json[12]=extraQuestions[2];
+
        }
        else{
+             $("#game_window")[0].style.backgroundImage = "url(https://media.discordapp.net/attachments/1131296206908301423/1154740646972764220/CDUCentristUnten.png)";
+            $("#game_window")[0].style.backgroundSize = "cover";
+            $(".game_header")[0].style.backgroundImage = "url(https://media.discordapp.net/attachments/1131296206908301423/1154740647316701255/CDUCentristoben.png)";
+            $(".game_header")[0].style.backgroundSize = "cover";
+            headerImage = "url(https://media.discordapp.net/attachments/1131296206908301423/1154740647316701255/CDUCentristoben.png)";
+            $(".container")[0].style.backgroundImage = "url(https://media.discordapp.net/attachments/1131296206908301423/1154740647706767420/CDUCentristSeite.png)";
+            $(".container")[0].style.backgroundSize = "cover";
+            $("#trackSel")[0].style.backgroundImage = "url(https://media.discordapp.net/attachments/1131296206908301423/1154740646972764220/CDUCentristUnten.png)";
+            $("#trackSel")[0].style.backgroundSize = "cover";
+            $("#timeTracker")[0].style.backgroundImage = "url(https://media.discordapp.net/attachments/1131296206908301423/1154740646972764220/CDUCentristUnten.png)";
+            $("#timeTracker")[0].style.backgroundSize = "cover";
            answerSwapper(4080 ,4641)
            changeGlobalEffect(77, 4080, -0.02)
            changeGlobalEffect(79, 4080, 0.01)
@@ -5396,3 +5420,14 @@ applyTooltipsToObject(campaignTrail_temp);
 }
 campaignTrail_temp.global_parameter_json[0].fields.question_count = 35;
 
+$("#game_window")[0].style.backgroundImage = "url(https://cdn.discordapp.com/attachments/1131296206908301423/1154740751083782254/CDUMixUnten.png)";
+$("#game_window")[0].style.backgroundSize = "cover";
+$(".game_header")[0].style.backgroundImage = "url(https://media.discordapp.net/attachments/1131296206908301423/1154740751402537010/CDUMixOben.png)";
+$(".game_header")[0].style.backgroundSize = "cover";
+headerImage = "url(https://media.discordapp.net/attachments/1131296206908301423/1154740751402537010/CDUMixOben.png)";
+$(".container")[0].style.backgroundImage = "url(https://media.discordapp.net/attachments/1131296206908301423/1154740751616454726/CDUMixSeite.png)";
+$(".container")[0].style.backgroundSize = "cover";
+$("#trackSel")[0].style.backgroundImage = "url(https://cdn.discordapp.com/attachments/1131296206908301423/1154740751083782254/CDUMixUnten.png)";
+$("#trackSel")[0].style.backgroundSize = "cover";
+$("#timeTracker")[0].style.backgroundImage = "url(https://cdn.discordapp.com/attachments/1131296206908301423/1154740751083782254/CDUMixUnten.png)";
+$("#timeTracker")[0].style.backgroundSize = "cover";
