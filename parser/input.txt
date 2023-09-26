@@ -8,577 +8,474 @@ F3: With many visits in the “new States” and a renewed focus on your East Ge
 A4: This semi-fascist party likes to complain, but they have no answers themselves. We need to vehemently denounce their xenophobic, even antisemitic tendencies, while showing off just how hollow their program is. We won’t stoop down to their level and compromise our values. They don’t want to do politics, they want to destroy democracy.
 F4: The moral high ground, indeed. While it keeps the AfD from expanding further into your base, and upholds your unwavering firewall against the Right, attacking them doesn’t really convince any of their current voters. They know about the hollowness of their policies, they’re just too frustrated to care. In fact, the Far Right just seems to be more energized.
 
-A2: It’s a disgrace how so many good people would now have to live under civil strife and a possible Taliban takeover. We need to take in more refugees from Afghanistan, especially people who cooperated with the German troops. We owe it to them, after their generous help!
-F2: You keep unwavering in your support of refugees. Your party isn’t fully on board, especially Horst Seehofer, who refuses to make statements in support of you. The AfD salivates at rural voters who are frightened of your love for asylum seekers - but you are respected in more culturally progressive circles.
-[+0.003 für CDU, -0.002 für Grüne]
-A4: Okay, uh… one thing’s clear, we can’t have a repeat of the refugee crisis in 2015. Let’s tell them, we are watching the situation closely, but we concur with Interior Minister Horst Seehofer that criminal refugees still have to be sent back to Afghanistan, with a zero-tolerance policy.
-F4: After your positive statements about refugees earlier in the campaign, this type of statement is just not credible. Progressives perceive you as ice-cold and opportunistic in the wake of a coming Taliban takeover, while conservatives are doubtful about your sincerity. Not a good look for you.
-[-0.002 für CDU, +0.002 für AfD]
+OPPORTUNISMUSFRAGE
+
+Q1: You’ve always been known for your particular style of populism. While admirers are calling it pragmatic, critics are calling it self serving, unprincipled and cynical. During your career in Bavaria, you certainly knew how to play the power game, but now, on the big stage, the matter has become somewhat of an issue, with some viewing you as somewhat of a greasy salesman.
+
+Wenn Opportunismus über 15:
+A1: <i>May 2012</i>: “Islam has also become a part of Bavaria”. </br><i>April 2018</i>: “Islam does not contribute to the identity and culture of our country”.
+F1: Any way the wind blows - and that wind smells like the stinky whiff of unprincipled politicians. You seem to have overdone it with your gambles: your formerly sympathetic image has transformed to that of a ruthless brute, wrestling its way to Berlin. People are starting to have enough of you playing with their democracy as if it was a dollhouse.
+
+Wenn Opportunismus zwischen 10 und 15:
+A1: <i>December 2020</i>: “I think Black-Green has a lot of appeal, because both political forces are looking at the big questions of our time.”</br><i>Februrary 2021</i>: “Bavaria is a green country without Greens in office. And I think it can stay that way.”
+F1: People unfortunately seem to catch on to your constant vacillations. Especially when talking about your fellow political players, you seem to dish out compliments and criticism how it pleases you. Some are calling you a “smarter Trump” - but given how unpopular the former American president is in Germany, it’s not a badge of honor.
+
+Wenn Opportunismus zwischen 5 und 10:
+A1: <i>June 2010</i>: “If you take the climate seriously, you know, we need nuclear power:” </br><i>May 2011</i>: “I am happy [about the exit from nuclear], because it was my proposal and that of my party.”
+F1: People are still giving you the benefit of the doubt about your oftentimes contradicting statements and constantly developing opinions - but you aren’t immune to being criticized on your flip flops. On some issues it’s understandable (even Merkel changed her mind about nuclear), but Habeck and Scholz manage to look more trustworthy than you, overall.
+
+Wenn Opportunismus unter 5:
+Q1: You’ve always been known for your particular style of populism. Not too long ago, you were known to be a cunning opportunist: however, over the course of the campaign, journalists have instead noticed a personal, but pretty consistent ideology behind your style of politics. It’s not just them - polls show that people actually regard you as trustworthy and sympathetic, particularly because of your wittiness.
+
+A1: All of life is a big compromise, starting with marriage, ending with politics. (<i>December 2020</i>)
+F1: Lucky you - containing your predatory instincts as a politician seems to have paid dividends. For centrists, you certainly have a lot of appeal - providing you with the electoral coalition that rewarded Merkel with 4 victories before.
+A2: You know what the best thing about Berlin is? The way back to Bavaria. (<i>December 2018</i>)
+F2: Lucky you - containing your predatory instincts as a politician seems to have paid dividends. The love of your home, Bavaria, doesn’t just make you seem principled and warm, it’s also reciprocated. The Free State is certainly fired up for a chancellor from their ranks.
+A3: If you know the “Lord of the Rings” saga, where would the AfD be? They’d feel right at home in Mordor. That’s where they’d belong. (<i>February 2021</i>)
+F3: Lucky you - containing your predatory instincts as a politician seems to have paid dividends. Even though you were accused of electorally fishing on the far right in the past, your steadfast stance against the AfD really seems credible recently. This lessens the opposition from the cultural left, which could be crucial for casting a broad net.
+A4: Endangered species are exempt from hunting season until they have recovered, that’s why I won’t mention the SPD. (<i>September 2018</i>)
+F4: Lucky you - containing your predatory instincts as a politician seems to have paid dividends. You and Robert Habeck dominate the political landscape - it’s a battle of the folksy, fatherly statesmen. Olaf Scholz, with his comparatively boring demeanor, seldom gets to interject - which could open up a new voter block of Social Democratic centrists for you.
+
+
+MINI CYOA
+Q404:
+Q22 falls EQ1 A3 (pro refugee before):
+A2: A2: It’s a disgrace how so many good people would now have to live under civil strife and a possible Taliban takeover. We at least have to take in those who cooperated with our troops - we owe it to them for their service. We should also further support the UN refugee agency financially.
+F2: You keep unwavering in your pivot on refugees. Your party isn’t fully on board, especially your former mentor Horst Seehofer, who gives you an angry call. The AfD salivates at rural voters frightened of your newfound love for asylum seekers - but you keep building rapport with more culturally cosmopolitanist people. Maybe an overture for Black-Green?
+[+0.003 für CDU, -0.002 für Grüne, Opportunismus -1]
+A4: We can’t have a repeat of the refugee crisis of 2015. We need to take in some refugees, yes, but more clearly, we need to accept that there have to be upper limits and contingents for immigration  – we can not save the whole world. We need to massively limit the fallout of this situation by securing our borders.
+F4: After your surprisingly positive statements about refugees earlier in the campaign, your backtrack is quickly noted by the media and viewed as tasteless in the wake of a coming Taliban takeover. Seehofer and his cohorts are happy that you’re still on their side, but this bout of media attention opens you up to blistering attacks, even from the center.
+[-0.001 für CDU, +0.002 für AfD, Opportunismus +3]
 
 Q22 falls EQ1 A4 (anti refugee before):
 A2: It’s a disgrace how so many good people would now have to live under civil strife and a possible Taliban takeover. We need to take in more refugees from Afghanistan, especially people who cooperated with the German troops. We owe it to them, after their generous help!
-F2: Your sentiment is appreciated by some, but after you toughened up on refugees earlier in the campaign, this is a bit of a flip-flop. Minister of the Interior Horst Seehofer is disappointed by your pivot and lets the public know. The cultural left meanwhile isn’t particularly convinced that you’re for real.
-[-0.004 im Effekt]
-A4: Okay, uh… one thing’s clear, we can’t have a repeat of the refugee crisis in 2015. Let’s tell them, we are watching the situation closely, but we concur with Interior Minister Horst Seehofer that criminal refugees still have to be sent back to Afghanistan, with a zero-tolerance policy.
-F4: You’re consistent in your newfound hard line on refugees. It does give you some credibility with the right wing of your party and some AfD voters. However, being a trailblazer for the Cultural Right doesn’t just do you favors, it also amps up the opposition to your candidacy from the left, which might complicate coalition talks.
-[-0.004 für AfD, +0.002 für Grüne, stärkerer Issuescore]
+F2: Your sentiment is appreciated by some, but after your traditional hard line on refugees, this flip-flop seems a bit comical. Horst Seehofer gives you a confused call about your pivot.The cultural left smells your overtures from miles away, and aren’t convinced.
+[-0.005 im Effekt, Opportunismus +2]
+A4: We can’t have a repeat of the refugee crisis of 2015. We need to take in some refugees, yes, but more clearly, we need to accept that there have to be upper limits and contingents for immigration  – we can not save the whole world. We need to massively limit the fallout of this situation by securing our borders.
+F4: You’re consistent in your hard line on refugees. It catches on with some AfD voters - you really do seem to take their concerns seriously. However, being a trailblazer for the Cultural Right doesn’t just do you favors, it also amps up the opposition to your candidacy from the left, which might complicate coalition talks.
+[-0.005 für AfD, +0.002 für Grüne, stärkerer Issuescore, Opportunismus -2]
+
+EQ3A2 wenn EQ1A4 (antirefugee)
+A2: A sustainable answer to keep our social support net afloat lies in immigration. We are an attractive place in Europe for many seeking a safe and economically secure future, and we should finally implement a real immigration law, for example with a Canada-style point-system.
+F2: This answer seems innovative - but in light of your refugee-skeptic stance, this doesn’t come off very genuine. Your base is worried about economic refugees and integration policies straining the social and fiscal health of the nation, and aren’t stoked about this pivot. Safe to say, the AfD immediately starts churning its fear mongering social media machine.
+[-0.01, FDP +0.005, AfD +0.01 Opportunismus +1]
+
+EQ3A2 wenn EQ1A3 (pro refugee)
+A2: A sustainable answer to keep our social support net afloat lies in immigration. We are an attractive place in Europe for many seeking a safe and economically secure future, and we should finally implement a real immigration law, for example with a Canada-style point-system.
+F2: It seems you have discovered multiculturalism for yourself, after your pivots on refugees earlier. Keep in mind, your base is worried about economic refugees and integration policies straining the social and fiscal health of the nation, and this alarms them vehemently. Safe to say, the AfD immediately starts churning its fear mongering social media machine.
+[+0.003, Grüne -0.003, FDP -0.005, Opportunismus -1]
+
 
 ___
 
+Q8A3 wenn Q3A1
+
 Q12 wenn Q3A1 (opened up before)
 A1: We need to open up quickly for vaccinated people. A return to normalcy has never been so close, and we all had more than enough of lockdowns - not every measure might still be proportionate. Vaccinated people have less risk and thus should receive more benefits.
-F1: You keep gambling that people are tired of Covid, with a comparatively lax stance. It hasn’t helped you before - and although your proposal isn’t unpopular, the majority of people who haven’t had a chance to get vaccinated yet aren’t thrilled - mostly younger voters. Some also think this might cause a wedge in society, with a certain air of segregation.
-[issuescore stärker, +0.001 mehr, Grüne +0.005, FDP -0.01, AfD -0.001]
+F1: Even though you’ve been a hardliner in the past, you’ve since changed your mind, it seems. Your stance isn’t unpopular, but the majority of people who haven’t had a chance to get vaccinated yet aren’t thrilled - mostly younger voters. Some also think this might cause a wedge in society, with a certain air of segregation.
+[issuescore stärker, +0.002 mehr, Opportunismus -1]
+A2: In Bavaria, we are deciding to be on the safe side, consciously. Of course, freedom will only be possible through vaccinations - but I’m particularly worried about these mutations. Opening up too quickly here can be a dangerous combination. Instead, we need to broadly spend more money to buy more from several vaccine producers.
+F2: First you were a hardliner, then you called for openings, now you’re cautious again. While the proposal is popular, voters notice you’ve corrected yourself once more. Others, especially from within FDP and AfD, gripe about ongoing lockdowns - I guess you can’t always make everyone happy. This should definitely keep Covid under control though.
+[-0.005 im Effekt, Opportunismus +3]
 
-EQ3 wenn Q4A1 (schwarze null)
+EQ3 wenn Q4A1 / Q4A2 (schwarze null)
 A3: It's clear that the current system is unsafe. We should build on our public pension system, reform the Riester-system, and refrain from raising the pension age any further than 67! We also need to introduce a higher state-provided minimum pension to fight old-age poverty.
-F3: Surprisingly leftist! Although the Social Market Economy is a CDU invention, your answer is taken as an indirect critique of Merkel. Some of your colleagues are concerned: are these proposals tenable under the ‘Schwarze Null’? You better have a plan ready to finance this…
-[Staatsmann Minus, -0.005 im Effekt, Issuescore: poor]
+F3: Surprisingly leftist! Although the Christian-Social Union is traditionally more economically left-wing than its big sister, your indirect critiques of Merkel rankle some of your colleagues, particularly on your plans to finance this. Are these plans tenable under the ‘Black Zero’? You better have a plan ready… hopefully this can fortify your older base.
+[Opportunismus +1, -0.003 im Effekt, Issuescore: poor]
 
 EQ3 wenn Q4A2 (Steuererhöhung)
 A3: It's clear that the current system is unsafe. We should build on our public pension system, reform the Riester-system, and refrain from raising the pension age any further than 67! We also need to introduce a higher state-provided minimum pension to fight old-age poverty.
-F3: Surprisingly leftist! Although the Social Market Economy is a CDU invention, your answer is taken as an indirect critique of Merkel. Some of your colleagues are worried at your economic pivots, especially in conjunction with your promise to raise taxes. Perhaps this can establish you as an independent thinker?
-[-0.004, SPD -0.01, FDP +0.02 stärkere issue scores]
+F3: Surprisingly leftist! Although the Christian-Social Union is traditionally more economically left-wing than its big sister, your indirect critiques of Merkel rankle some of your colleagues, particularly on your plans to finance this through tax raises. Although maybe these promises can fortify your older base and make unexpected inroads.
+[+0.003, stärkere issue scores, Opportunismus -2]
 
 
-EQ5 wenn Q4A1 (schwarze Null)
-A2: We need to emphasize the creation of more social housing, built by modern standards, available for those who need it most. For families, we can make buying empty buildings in the countryside easier for young people, as we do in NRW. Furthermore, we need to fight land speculation and close tax loopholes.
-F2: A bit unorthodox for a Christian-Democrat to take such a regulatory approach - you break with current doctrines, but in a way that could be advantageous to you. Many agree something has to be done, urban and suburban voters might like this pivot. Is it possible to introduce them under the ‘Schwarze Null’ though? Wolfgang Schäuble is worried..
-[-0.002, verliert Schäuble als Advisor]
+EQ5 wenn Q4A1 / Q4A2 (schwarze Null)
+A2: We need to emphasize the creation of more social housing, built by modern standards, available for those who need it most. For families, we can make buying empty buildings in the countryside easier for young people, as they do in NRW. Furthermore, we need to fight land speculation and close tax loopholes.
+F2: A bit unorthodox for the Union candidate to take such a regulatory approach - but the CSU is traditionally leftwards of the CDU on economics. Many agree something has to be done, and urban and suburban voters appreciate your solutions. Is it possible to introduce them under the ‘Black Zero’ though? Well, you’ll deal with it later.
+[-0.003, opportunismus +1]
 
 EQ5 wenn Q4A2 (Steuererhöhung)
-A2: We need to emphasize the creation of more social housing, built by modern standards, available for those who need it most. For families, we can make buying empty buildings in the countryside easier for young people, as we do in NRW. Furthermore, we need to fight land speculation and close tax loopholes.
-F2: A bit unorthodox for a Christian-Democrat to take such a regulatory approach - you break with current doctrines, but in a way that could be advantageous to you. Many agree something has to be done, urban and suburban voters might like this pivot. Hopefully your strong promises can offset the unpopularity of the tax raises needed to finance this.
-[-0.002, -0.005 SPD, +0.01 FDP, Staatsmann Plus, stärkere issue scores]
+A2: We need to emphasize the creation of more social housing, built by modern standards, available for those who need it most. For families, we can make buying empty buildings in the countryside easier for young people, as they do in NRW. Furthermore, we need to fight land speculation and close tax loopholes.
+F2: A bit unorthodox for the Union candidate to take such a regulatory approach - but the CSU is traditionally leftwards of the CDU on economics. Many agree something has to be done, and urban and suburban voters appreciate your solutions. Hopefully your strong promises can offset the unpopularity of the tax raises needed to finance this.
+[+0.001, stärkere issue scores, Opportunismus -2]
 
-Q8 wenn Q6A1 (Söder Bescheid gesagt) und nicht Q7A2 (Elitenentscheidung)
-A1: First and foremost, I want to thank Markus Söder for accepting this outcome. We have to be united as a party to win this fall. Apart from that, I will hit my usual talking points, about stability, pragmatism, praising Merkel and acting on our values.
-F1: Party unity is always necessary, and Söder appreciates the gesture, vowing to help you win this race. Your speech comes to no surprise and doesn’t rock the boat, but it serves as a good rallying cry for anyone who might vote for the Christian Democrats.
-[+0.002, +0.005 in Bayern]
+Q8A1, wenn man vorher Laschet antagonisiert hat
+(Negativ: Q1A3, Q2A4, Q5A2, Q6A2)
+A1: First and foremost, I want to thank Armin Laschet for this fair competition. I want to plead for a united Union, to continue our successful governance of Germany. Apart from that, I will hit my usual talking points.
+F1: Party unity is always a good thing - but after you dragged Laschet through the mud in your bid to become chancellor, it sounds a bit as if you’re taunting him. He publicly agrees to support your candidacy, but you might have to mend your relationship further for him to start campaigning for you.
+[-0.01, -0.015 in NRW, Laschet noch weiter negativ, +0.0005 in Bayern, Opportunismus +1]
 
-Q8 wenn Q6A2 (Söder nicht Bescheid gesagt) und Q7A2 (Elitenentscheidung)
-A1: First and foremost, I want to thank Markus Söder for accepting this outcome. We have to be united as a party to win this fall. Apart from that, I will hit my usual talking points, about stability, pragmatism, praising Merkel and acting on our values.
-F1: Party unity is always necessary, especially since Söder seems visible deflated by your way of handling the situation, although, after your shoutout, he speaks out in support of you. Your speech comes to no surprise and doesn’t rock the boat, but it serves as a good rallying cry for anyone who might vote for the Christian Democrats.
-[-0.001, -0.003 in Bayern]
-A2: This closer-than-expected contest has convinced me that I need to change my attitude on some topics. I’ll focus on how a harsh line on the pandemic and on climate change is of critical importance, how we need strong leadership in these trying times and new ideas to move forward, to build on Angela Merkel's successes.
-F2: Trying to capitalize on the winds of change, are we? It’s obvious to onlookers that you’re trying to take a page from Markus Söder’s playbook, but he did seem to hit a nerve. Let’s hope emulating him reaps you similar poll numbers - even though the man himself isn’t particularly thrilled about your candidacy.
-[-0.003, -0.008 in Bayern]
+Q8A1, wenn man Laschet freundlich war
+A1: First and foremost, I want to thank Armin Laschet for this fair competition. I want to plead for a united Union, to continue our successful governance of Germany. Apart from that, I will hit my usual talking points.
+F1: Party unity is always a good thing, and both the CDU as a whole and the important state party in North Rhine-Westphalia like hearing this. Laschet quickly buries your differences and issues a strong endorsement, while stumping for you in his valuable home state.
+[+0.005, +0.01 in NRW, Laschet noch weiter positiv., Opportunismus -1]
 
+Q11A3 wenn Q8A4
+A3: We have to become carbon neutral long before 2050. I’m sure the government under Merkel will come up with a sensible solution, which I will continue as chancellor.
+F3: A fairly vague answer. You once again tie yourself to Merkel, which hopefully offsets the flak you get for your passivity- the SPD takes this decision as a vindication for its lobbying for stronger climate protections within the coalition.
+[+0.002, Opportunismus -1]
+
+EQ9A3 wenn Q8A4
+A3: Look - chancellor Merkel is a competent woman who I respect. But the fact of the matter is, her policies have tilted leftwards, both socially and economically. What our country needs in the post-Merkel era are policies more in line with conservative doctrines - the AfD’s success has shown that. If anything, we need to come back to our roots and move this country to the right.
+F3: Your biting ideological stance as well as your outright Merkel critiques leak out to the press and dominate the headlines for a few days - this isn’t just bad for party unity, it also directly contradicts your pledge to follow in Merkel’s footsteps! Shrewdly, Habeck and Scholz find conveniently reconciliatory words with the chancellor over the next few days, and your opportunism stands naked for all to see.
+[-0.02, Opportunismus +2]
+
+
+EQ2A1 wenn Q11A1
+A1: Yes, I do. Accepting the scientific consensus on climate change and advocating for modern policies is what makes Bavaria so successful - to modernize the whole Union, we have to recalibrate our attitude towards climate action and protecting our social safety net. The CDU/CSU are innovative parties of the 21st century, and I will not let myself get intimidated by right-wing demagogues.
+F1: Your course so far has been praised, and is part of the reason you even are chancellor candidate. Potential SPD voters and even rural Greens would take a second look at you - if not for your comments on the climate protection act. Your rightwards pivot on climate makes this statement sound incredibly dubious.
+[-0.03, Grüne +0.02, SPD +0.01, AfD -0.002, Opportunismus +2]
+
+
+Q17, wenn Q10A2 und Laschet antagonisiert - kollegen mögen dich nicht
+A3: Of course, I want to get out there! But we’re running a national campaign, I want to visit other states as well and show off the competency of my CDU colleagues. Maybe some meetings with Kretschmer in Saxony, Bouffier in Hesse, and especially with my former opponent Laschet in NRW, to mend fences and show that we’re a united front.
+F3: Fair enough, but the visits are a bit awkward, after you’ve criticized both Laschet and Kretschmer. Not only that -  when President Frank-Walter Steinmeier hold a press conference in NRW, Laschet is caught boyishly laughing at some unheard joke. <i>Laschet’s Lacher</i> embarrassingly dominates the headlines for the next few days. At least you’re not in the picture.
+[-0.003, -0.005 in NRW und Sachsen, Opportunismus +1]
 
 Q13 wenn Q10A2: Kretschmer als zu russlandfreundlich kritisiert
 A4: NATO is a relic of the cold war. We should stay a member for now, but we should also try to find avenues for cooperating with other nations, keep reaffirming our neutrality, and open up new dialogues with Russia or China, as I did with my visit to Moscow last year.
 F4: The crowd is silent, some cough in embarrassment. Everyone is horrified, especially your party colleagues. Annegret Kramp-Karrenbauer in her position of Minister of Defence openly disagrees with your statement. Confusion makes the rounds - didn’t you criticize Kretschmer for his Russia visit before? What exactly is your stance on foreign policy?
-[-0.03, Staatsmann Minus 2]
+[-0.004, Opportunismus +3]
 
-Q13 wenn Q10A3: ProRussia
+Q13 wenn Q10A3 ProPutin
 A1: For years and years, we have consistently missed the NATO aim to spend 2% of our gross domestic product on defense. I strongly reaffirm our commitment to NATO and this goal! The West has to be united against potential threats.
-F1: The audience cheers you on, as spending more on defense is always popular in more conservative circles. Not every potential voter is convinced of this, though - the anxiety about war runs deep in Germany’s collective memory. Maybe this commitment can offset the effects of your earlier gaffe about Russia.
-[-0.004, schwächerer issue score]
-A2: While I strongly reaffirm our support of a united Alliance and strong defense, I specifically want to call out Annalena Baerbock. She lacks a clear commitment to NATO, which is not appropriate for a chancellor.
-F2: With how strong the Green Party has been in the polls lately, hitting on them seems like a good strategy. This is a usual attack against them, but even though they seem to move right on defense, it still seems to hit the spot after some of Baerbocks statements on the 2%-goal - although it should be said that you’ve criticized the USA as well, earlier this year.
-[-0.006 für CDU, +0.005 für Grüne]
-A3: I want to praise the work we’ve done so far and believe we are in a good spot. While I strongly reaffirm my commitment to NATO, we don’t need to spend more on defense than we do right now; we need to combat waste first and foremost.
-F3: This does little to differentiate you from other parties and is softer on defense than the usual position of your party. It does give you some minor wiggle room on fiscal and foreign policy - be sure to make use of it after the election. Some colleagues remain unnerved about your dovishness.
-[-0.005, -0.005 für Grüne, +0.01 für AfD]
+F1: The audience cheers you on, as spending more on defense is always popular in more conservative circles. Not every potential voter is convinced of this, though - the anxiety about war runs deep in Germany’s collective memory. Maybe this can offset the effects from your Moscow visit.
+[+0.003, schwächerer issue score, Opportunismus +2]
 A4: NATO is a relic of the cold war. We should stay a member for now, but we should also try to find avenues for cooperating with other nations, keep reaffirming our neutrality, and open up new dialogues with Russia or China, as I did with my visit to Moscow last year.
-F4: The crowd is silent, some cough in embarrassment. Everyone is horrified, especially in light of your criticism of the USA before. Annegret Kramp-Karrenbauer in her position of Minister of Defence openly disagrees with you. Your foreign policy even attracts outside attention, as the West fears losing Germany to its adversaries, if you become chancellor.
-[-0.03, stärkerer issue score, Staatsmann Minus]
+F4: The crowd is silent, some cough in embarrassment. Everyone is horrified, especially in light of your vigorous defense of Putin before. Annegret Kramp-Karrenbauer in her position of Minister of Defence openly disagrees with you. Your foreign policy even attracts outside attention, as the West fears losing Germany to its adversaries, if you become chancellor.
+[-0.015, stärkerer issue score, Opportunismus -2]
 
-wenn zwei von: Q5A1, Q10A2 (kretschmer kritisiert) und Söder antagonisiert (Q6A2 & Q7A2, nicht Q8A1)
-
-EQ4 wenn Q9A4 und Q14A4 (Baerbock sexismus)
-A1: We should definitely hit her on these topics. This is unprofessional behavior that should not happen in the chancellery. These concerns about her integrity have to be addressed.
-F1: The plethora of scandals she encounters certainly works to her disadvantage - but your repeated attacks against her have raised controversy as well. Are you treating her fairly? As it comes out that you’ve plagiarized passages in a book of yours yourself, Olaf Scholz is recently seen more often with his signature “smurfy grin”.
-[-0.008, Grüne +0.004, SPD +0.006]
-A2: Not only that - did you notice how she used the N-Word in that interview, and had to be censored out? Such mistakes of communication are unacceptable for a chancellor, and the problematic nature of this faux pas should shed doubt on her character.
-F2:  You’re vastly overreaching here. She was criticized for this, but not only did she apologize before the interview came out, it’s clear she said it in an antiracist context. To most people in Germany, this isn’t a big deal, and your repeated attempts at smearing Baerbock’s character seem desperate and mean.
-[-0.01, +0.01 für Grüne, +0.003 für SPD]
-A4: People aren’t clamoring for my comments here, they will be judged on their own. I want to stay positive and talk about the successes I will bring to Germany - but my surrogates can keep attacking her.
-F4: Maybe it’s better to lie low for a while after your disparaging comments on her announcement. Your surrogates, especially the CSU, are certainly doing their part - Baerbocks favorability slips, but some call out what they perceive to be unfair treatment and double standards in regards to these attacks.
-[-0.001, -0.004 in Bayern, +0.002 für Grüne, +0.004 für Grüne in Bayern. In der normalen Antwort vielleicht Statesman Plus, hier nicht]
-
-EQ4 wenn Q14A4 (Baerbock attackieren)
-A4: People aren’t clamoring for my comments here, they will be judged on their own. I want to stay positive and talk about the successes I will bring to Germany - but my surrogates can keep attacking her.
-F4: Your surrogates, especially the CSU, are certainly doing their part. Meanwhile, you avert any negative headlines and stay out of the limelight while Baerbocks favorability slips on its own - not a bad move on your part.
-[+0.003, -0.007 für Grüne. -0.01 für Grüne in Bayern. In der normalen Antwort vielleicht Statesman Plus, hier nicht]
+Q20 wenn Q10A2 und Laschet antagonisiert - kollegen mögen dich nicht
+A3: Andi really screwed this up - we have to drop him. I’ll publicly criticize him for his incompetence and make it clear there will be no political post for him in my government. When being asked if he should resign, we’ll defer to the parliamentary investigation committee.
+F3: The opposition has long called on you to drop your support - and finally came through to you, it seems. Scheuer has to resign. Maybe cutting your losses is worth it to win the election. Internally though, your party is wary about how fast you are to drop your colleagues if they’re in the way: First Laschet, then Kretschmer, now Scheuer…
+[-0.01, Opportunismus +4]
 
 Q16 wenn Q11A1 (anti-umwelt)
-A4: I want to honor the victims, but also address the cause of all this: climate change. Extreme weather events are unfortunately going to become more common -  we need to act decisively and swiftly now to keep global warming below 1.5°C so that we can prevent these disasters.
-F4: The scientific community agrees - it’s good to not let the Green Party be the only ones who connect this to climate change, but this is an argument they have made for years. Your statement comes off as particularly strange in light of your comments about the court decision on the Climate Protection Act.
-[-0.003, +0.003 für Grüne, schwächerer Issue Score, Staatsmann Minus]
-
-Q16 wenn Q9A2 und Q11A4 (Umweltschutz)
-A4: I want to honor the victims, but also address the cause of all this: climate change. Extreme weather events are unfortunately going to become more common -  we need to act decisively and swiftly now to keep global warming below 1.5°C so that we can prevent these disasters.
-F4: The scientific community agrees - it’s good to not let the Green Party be the only ones who connect this to climate change, but this is an argument they have made for years. That said, the media notes how, apparently, you’re serious with your ambitious stance on climate action, which gives you further credibility as an environmentalist.
-[+0.015, -0.003 für Grüne, Staatsmann, leicht stärkerer issue score]
+A4: Extreme weather events are unfortunately going to become more common due to climate change. We have to do a lot more than we are doing now. This might be expensive, but the costs of doing nothing are much, much higher.
+F4: The scientific community agrees - it’s good to not let the Green Party be the only ones who connect this to climate change, but this is an argument they have made for years. Your statement is particularly strange in light of your comments about the Climate Protection Act before, but maybe pivoting back to the environment can restore your environmentalist image.
+[-0.003, +0.003 für Grüne, schwächerer Issue Score, Opportunismus +1]
 
 Q18 wenn Q11A1 und NICHT Q16A4 (anti-umwelt)
 A1: The floods have shown that we need to be much more ambitious than before. One of the worst offenders is our energy production: we need to stop using coal for energy generation by 2030 and seek out new innovative technologies to keep energy affordable.
-F1: This comes as sort of a bombshell statement - the GroKo has stood for an exit from coal by just 2038 before. NRW, a big producer of coal, as well as other regions, are unhappy - and your earlier comments on the Climate Protection Act have aged like milk. At least this might restore some goodwill with potential Green voters.
-[-0.002, Grüne +0.001, Staatsmann Minus]
-
+F1: A few months ago, this would have been a notable, but not unexpected answer by you. Your earlier comments on the Climate Protection Act have aged like milk though. Coal-producing regions aren’t happy about your changed course, and some economical organizations usually associated with your party tentatively criticize your ambitious plans.
+[-0.004, Opportunismus +2]
 A2: Climate change is coming, whether we want it or not. The most important thing we can do is mitigate its worst effects to prevent catastrophes like this from doing too much damage - we need better crisis responses. Climate action is necessary, as long as it doesn't stifle our economy and freedom of living.
-F2: You won’t win over Green voters with nuances and reactionism, but your traditional base, who doesn’t want to see their way of life upended, is happy. You show yourself as a conservative, not a conservationist.
-[+0.003, krasserer issue score richtung antiklima]
-A3: Germany is no stranger to floods. I’m sorry, but just because today is a day like this, you don't just change your politics. The question of climate change is an international one, we can’t trivialize it like this.
-F3: Social media ensues in a shitstorm over this statement, and many voters see your attitude as tone-deaf and passive. You were handed a good opportunity for a pivot or a strong statement to make up for your comments around the Climate Protection Act, and you squandered it with deflections.
-[-0.005, +0.003 für Grüne, Staatsmann Minus!]
+F2: You continue to pivot rightwards on climate change - perhaps you fear your conservative base might abandon you? Coal-producing regions are happy, and certain colleagues are as well - most polls show that the Germans liked your old ambitious stance, but maybe you know something the pollsters don’t?
+[+0.003, krasserer issue score richtung antiklima, Opportunismus -1]
 
-Q18 wenn Q9A2 und Q11A4
+Q18 wenn 3 von: Q8A3, Q9A2, Q11A2/Q11A4, EQ2A1
 A1: The floods have shown that we need to be much more ambitious than before. One of the worst offenders is our energy production: we need to stop using coal for energy generation by 2030 and seek out new innovative technologies to keep energy affordable.
-F1: Some saw the pivot coming, but it’s media-effective nonetheless -  the GroKo has stood for an exit from coal by just 2038 before. NRW, a big producer of coal, as well as other regions, are unhappy - but potential Green voters are giving you another look, and even Baerbock seems positively surprised that you came around.
-[+0.01, -0.015 für Grüne, +0.02 für AfD, leichtere Koalitionsverhandlungen mit Grünen]
-A3: Germany is no stranger to floods. I’m sorry, but just because today is a day like this, you don't just change your politics. The question of climate change is an international one, we can’t trivialize it like this.
-F3: Social media ensues in a shitstorm over this statement, and many voters see your attitude as tone-deaf and passive. You were handed a good opportunity to follow up on your new environmentalist streak, and you squandered it with deflections.
-[-0.006, +0.004 für Grüne, Staatsmann Minus!]
+F1: This is consistent with what you’ve repeatedly emphasized, and your leftwards drift on climate change has made you look prophetic. While coal-producing regions are skeptical, and some economical organizations usually associated with your party tentatively criticize your ambitious plans, this statement goes over quite well with the public.
+[+0.005, Grüne -0.01, AfD +0.005 Opportunismus -4]
 
 Q19 wenn Q12A4 (Antivax)
 A3: Covid is basically over, the case numbers are very low. One has to be honest and ask: Do we even need such an expensive program? Vaccines are good to have, but we should focus on opening up and treating Covid as the non-problem it has become.
-F3: You weren’t kidding - you really seem to be on the <i> Querdenker</i>-train, or at least adjacent. This is a gigantic gaffe - you’ll have to do some damage control, be it an apology or changing the topic. Antivax sentiment just isn’t popular in Germany.
-[-0.04, -0.03 für AfD, -0.02 für Others, stärkerer Issuescore, Staatsmann Minus Zwei]
-A4: This might be a good idea. The country needs to move on, we need to do everything we can to finally make Covid history. At some point, we need to have the conversation about mandatory vaccines, and fine those that refuse to get one..
-F4: You’ve been skeptical about vaccines before, and now you want to make them mandatory? Maybe you’re a sadist, or you’ve just seen the light and overcorrected. Nonetheless, you’re a bit ahead of your time here. During all this, the SPD continues its unlikely surge that began during the floods, in a shake-up for the ages.
-[+0.005, +0.01 für AfD, +0.02 für Others]
+F3: You weren’t kidding - you really seem to be on the <i> Querdenker</i>-train, or at least adjacent. Your Vice Minister President Hubert Aiwanger strongly praises your backbone. For anyone else though, this is a gigantic gaffe - you’ll have to do some damage control, be it an apology or changing the topic.
+[-0.03, -0.01 AfD, -0.01 Others, stärkerer Issuescore, Opportunismus -2]
+A4: We need a vaccine mandate, as soon as possible. A partial mandate is not enough - Germany is the Covid problem child of Germany. At the end of the day, we have to have a long term strategy, and that heavily involves vaccinations.
+F4: You’ve been skeptical about vaccines before, and now you want to make them mandatory? Maybe you’re a sadist, or you’ve just seen the light and overcorrected. Nonetheless, some question if a vaccine mandate is even legal constitutionally. You take steps to regain the image of a strong Covid-fighter, but will voters buy it?
+[+0.005, +0.01 Others, +0.005 AfD, Opportunismus +3]
 
-Q20 wenn Q12A4 und nicht Q19A4
-A2: Covid is still on the mind of most people. Let’s focus on my response to this crisis, show me in a lab coat or something. With a strong vaccination campaign, we will continue Merkel's course and bring normalcy back!
-F2: What a strange avenue to take, after you’ve criticized the vaccine earlier. Maybe this is supposed to be an apology? Either way, you’re mocked for this pivot - can’t make it right for anyone, it seems. Meanwhile, most voters have given the SPD another look.
-[-0.01, +0.01 Others, +0.005 AfD]
+Q19A4 wenn Q12A2 und Q3A2
+A4: We need a vaccine mandate, as soon as possible. A partial mandate is not enough - Germany is the Covid problem child of Germany. At the end of the day, we have to have a long term strategy, and that heavily involves vaccinations.
+F4: You’re known as a consistent hardliner against covid and somewhat of a collectivist - you’re pushing the envelope, and while some follow, others question if such a move is even legal constitutionally. Fact of the matter is, as of now, your proposal does not have a popular majority - but taking such a stance might convince people that you’re genuine.
+[+0.005, Opportunismus -3]
 
-Q20 wenn Q12A4 und Q19A3
-A2: Covid is still on the mind of most people. Let’s focus on my response to this crisis, show me in a lab coat or something. With a strong vaccination campaign, we will continue Merkel's course and bring normalcy back!
-F2: I’m sorry, what? You’ve openly flirted with the <i>Querdenker</i>-movement at several points, and now you’re promising to continue Merkels course? This absurd flip-flop is mocked by everyone, be it your political opponents, the <i>Heute-Show</i>, or even your colleagues behind closed doors. Meanwhile, most voters have given the SPD another look.
-[-0.04, +0.005 Others, +0.0025 AfD, Staatsmann -2]
-
-Q20 wenn Q1A1 und Q17A4, nicht Q3A1
-A4: I’ve been governing North Rhine-Westphalia successfully since 2017. I want to talk about my home, show my successes here and promise to bring them to Germany, as a <i>Landesvater</i>. Give off an air of trustworthiness - let’s even invoke Angela Merkel’s “You know me.”-quip from 2013.
-F4: You’re quite popular as Minister-President, and it does help to remind people of that. People are taken by you showing yourself at home and at work, as the numerous successes from your tenure make the rounds - not a bad spot. Meanwhile though, most voters have given the SPD another look.
-[+0.02, +0.01 in NRW]
+Q19A2 wenn Q12A1 und Q3A1
+A2: While I wouldn’t go that far, as we might run into legal issues, we should give people more incentives to get vaccinated. One solution might be to open up certain establishments from the lockdown, but only for vaccinated and recovered people.
+F2: This statement follows a general trend of you promising lax stances on lockdowns, ever since the beginning of this year. This time, it’s received quite well overall and might actually make vaccinations more attractive. Skeptics still feel alienated - better hope they’ll return from the fringes soon.
+[+0.005, Opportunismus -3]
 
 EQ7 wenn EQ6A3 bubatz legal
-A2: We want to strike §218, and 219 from the books completely. Pregnancy issues are not part of criminal law - abortion is a medical service that has to be managed as part of regular health care. The stigma has to be broken, and the supply of doctors offering abortion has to be increased.
+A2: We want to strike $218, and 219 from the books completely. Pregnancy issues are not part of criminal law - abortion is a medical service that has to be managed as part of regular health care. The stigma has to be broken, and the supply of doctors offering abortion has to be increased.
 F2: There have been certain CDU politicians advocating against §218 all the way back in the ‘90s, people like Rita Süssmuth. They, however, have been repeatedly repudiated. You publicly have to elaborate your stance as a “third way” and reiterate personal moral objections - but your repeated attempts at moving the party leftwards socially has left many colleagues behind, and they’re not afraid to tell you.
-[-0.005, stärkerer Issuescore, -0.011 für FDP, -0.01 für Grüne, -0.01 in Bayern, -0.005 in Baden-Württemberg, -0.002 in Sachsen, Rheinland-Pfalz und Hessen]
+[-0.005, stärkerer Issuescore, -0.011 für FDP, -0.006 für Grüne, -0.01 in Bayern, -0.005 in Baden-Württemberg, -0.002 in Sachsen, Rheinland-Pfalz und Hessen, Opportunismus -3]
 A4: The right to life does not stand to disposition. The unborn child has a right to live, and we stand vehemently against efforts to trivialize or encourage abortions from the state. Instead, adoption procedures should be simplified - while doctors who do not report abortions have to incur noticeable sanctions.
-F4: Moral issues really weren’t at the forefront of this campaign, but your strong answer has piqued some interest in the political landscape. With your progressive take on drug policy, this is especially surprising - you’re an unpredictable man, Mr. Laschet.
-[-0.002, AfD -0.002, SPD +0.005, schwächere issue scores]
+F4: Moral issues really weren’t at the forefront of this campaign, but your strong answer has piqued some interest in the political landscape. Your language seems surprisingly harsh, especially in the light of your progressive stance on drug policy. Women’s groups denounce you, while others smell another opportunistic pivot to quell dissent from your party.
+[+0.002, AfD -0.002, schwächere issue scores, Opportunismus +1]
 
 EQ7 wenn EQ6A4 bubatz illegal
-A2: We want to strike §218, and 219 from the books completely. Pregnancy issues are not part of criminal law - abortion is a medical service that has to be managed as part of regular health care. The stigma has to be broken, and the supply of doctors offering abortion has to be increased.
-F2: There have been certain CDU politicians advocating against §218 all the way back in the ‘90s, people like Rita Süssmuth. They, however, have been repeatedly repudiated - and the same now happens to you. After you publicly have to elaborate your stance as a “third way” and reiterate personal moral objections, you’re in an awkward spotlight. At least the CSU defends you, avoiding an unwanted intra-party quarrel.
-[-0.005, +0.01 in Bayern, AfD +0.003]
+A2: We want to strike $218, and 219 from the books completely. Pregnancy issues are not part of criminal law - abortion is a medical service that has to be managed as part of regular health care. The stigma has to be broken, and the supply of doctors offering abortion has to be increased.
+F2: There have been certain CDU politicians advocating against §218 all the way back in the ‘90s, people like Rita Süssmuth. They, however, have been repeatedly repudiated - and the same now happens to you. After you publicly have to elaborate your stance as a “third way” and reiterate personal moral objections, you’re in an awkward spotlight, and a significant crisis in your own state government ensues.
+[-0.005, Opportunismus +2]
 A4: The right to life does not stand to disposition. The unborn child has a right to live, and we stand vehemently against efforts to trivialize or encourage abortions from the state. Instead, adoption procedures should be simplified - while doctors who do not report abortions have to incur noticeable sanctions.
-F4: Moral issues really weren’t at the forefront of this campaign, but your hard line has taken the attention of the political landscape. While it riles up your base, particularly hardcore christians and AfD-adjacent conservatives, you might bleed support among the youth and women. They’ll probably prefer Baerbock anyways, but you’re still gambling quite high here…
-[AfD -0.02, Grüne +0.015, SPD +0.005, FDP +0.005, CDU +0.01 in Bayern, +0.005 in Baden-Württemberg, +0.002 in Sachsen, Rheinland-Pfalz und Hessen, stärkere Issue scores]
+F4: Moral issues really weren’t at the forefront of this campaign, but your hard line has taken the attention of the political landscape. While it riles up your base, particularly hardcore christians and AfD-adjacent conservatives, you might bleed support among the youth and women. They’ll probably prefer Habeck anyways, but you’re still gambling quite high here…
+[AfD -0.01, Grüne +0.01, SPD +0.005, FDP +0.005, CDU +0.01 in Bayern, +0.005 in Baden-Württemberg, +0.002 in Sachsen, Rheinland-Pfalz und Hessen, stärkere Issue scores, Opportunismus -3]
 
 Q21 wenn vorher Linke Richtungsfrage
 A3: The last few years have shown how we can not ignore the 10-15% of the populace voting for the AfD. This country needs change and new solutions. I think a Bahamas coalition with the AfD and the FDP could work - our neighbor Austria showed us how the right wing can govern harmonically.
 F3: This takes almost everyone by surprise, and not in a good way - the firewall against the right has been broken down. Your stance is poison to most voters, SPD and Greens rule you out as chancellor in return, and even the FDP might be a hard sell now. The AfD is tempted by the prospect of power, but you’ve been openly hostile to them in the past.
-[-0.02, FDP +0.01]
+[-0.02, Opportunismus +4]
 
 Q21 wenn vorher rechte Richtungsfrage
 A3: The last few years have shown how we can not ignore the 10-15% of the populace voting for the AfD. This country needs change and new solutions. I think a Bahamas coalition with the AfD and the FDP could work - our neighbor Austria showed us how the right wing can govern harmonically.
-F3: Some people guessed it when you turned sharply to the right at the start of this campaign - the firewall against the right has been broken down. Your stance is poison to most voters, SPD and Greens rule you out as chancellor in return, and even the FDP might be a hard sell now. The AfD is tempted by the prospect of power - but they’ll drive a hard bargain.
-[AfD -0.01, Grüne +0.01]
+F3: Some people guessed it when you turned sharply to the right at the start of this campaign - the firewall against the Far Right has been broken down. Your stance is poison to most voters, SPD and Greens rule you out as chancellor in return, and even the FDP might be a hard sell now. The AfD is tempted by the prospect of power - but they’ll drive a hard bargain.
+[AfD -0.01, Grüne +0.005, SPD +0.005, Opportunismus -3]
 
 Q22 wenn Q10A3 & Q13A4 - AntiNato
-A1: This is the biggest debacle for NATO since its founding. We need a relentless analysis of what went wrong, but I also need to criticize the USA’s role in this, the mandate for our troops still went until 2022, but we can’t hold it down alone. The way things are going, we need to reevaluate our stance towards the alliance.
+A1: Afghanistan is the biggest blowback for the West since Vietnam. The USA has the main responsibility here, that’s where the decision for this retreat was made. We need to reevaluate our relationship with NATO in its current form.
 F1: The USA’s retreat was the deciding factor in this situation, but your repeated Anti-Nato rhetoric is concerning to almost anyone. You reiterate that it’s about reforming the alliance, not abolishing it - but those nuances fall under the rug in the incoming fire. Almost everyone else is attacking you over this.
-[-0.03, SPD +0.005, Grüne +0.005, FDP +0.03, Linke -0.003, AfD -0.01, anti-nato foreign policy]
+[-0.03, SPD +0.015, FDP +0.03, Linke -0.003, anti-nato foreign policy, Opportunismus -2]
 
-Q23 wenn Baerbock vor Scholz
-A1: Olaf Scholz, despite his position, shows a lot of potential. We compete for a lot of voters with his wannabe-Merkel attitude - we need to stop a potential surge before it happens by attacking him on his many weaknesses.
-F1: Despite not catching any significant momentum, Scholz’s favorability eclipses both of you, so this seems like a prudent choice. Your advisors get out the oppo-research, now it’s up to you to keep the SPD at its historic low.
-A2: Baerbock is my main competitor in this race. The Greens are an unexpectedly strong party with a vulnerable candidate - to make this count, we need to shed doubt on her as a candidate. Let’s focus on that.
-F2: If there’s anyone who could snatch away your chancellorship, it’s surely her right now. Your advisors get out the oppo-research - Let’s hope you can make it count.
+Q22 wenn Q10A3 & A13A4 & Q20A2 - Isolationistisch
+A1: Afghanistan is the biggest blowback for the West since Vietnam. The USA has the main responsibility here, that’s where the decision for this retreat was made,but the EU is just as speechless - in the future, we should be more careful about foreign engagements and concentrate on ourselves.
+F1: Isolationism is against almost everything the CDU stands for. The last time a major party has parroted neutrality was the SPD in the 50’s, while your party has traditionally championed European and Western integration. Safe to say, your eccentric stance falls under heavy criticism.
+[-0.04, SPD +0.02, FDP +0.04, AfD -0.01, Linke -0.005, anti-nato foreign policy, Opportunismus -3]
 
-Q23 wenn Baerbock vor Scholz und Q9A4, Q14A4 und nicht EQ4A4
-A2: Baerbock is my main competitor in this race. The Greens are an unexpectedly strong party with a vulnerable candidate - to make this count, we need to shed doubt on her as a candidate. Let’s focus on that.
-F2: You have repeatedly tried to take her down, but it seems the Greens have more staying power than initially assumed. If there’s anyone who could snatch away your chancellorship, it’s surely her right now. Your advisors get out the oppo-research - Let’s hope you can make it count.
-
-Q23 wenn Q9A4, Q14A4 und nicht EQ4A4
-A2: Baerbock has been struggling lately, but the Greens are still a strong party with a vulnerable candidate, and some voters we could pick up. Let’s focus on her.
-F2: Her numbers keep slipping, but the Greens are still a formidable force. To a degree, that’s your doing - your repeated attacks on her character have dragged her down, so maybe going all in is what it needs to finish the job. Your advisors get out the oppo-research - Let’s hope you can make it count.
+Q23 wenn EQ4A4 Habeck positiv
+A2: Habeck is a strong candidate, and my main opponent for the chancellorship. But he isn’t invulnerable - and with the right tone, we could sweep some of his voters right from under his feet. Time to take the velvet gloves off - let’s focus on him.
+F2: Four years ago, few would have expected a minor party like the Greens having a serious shot at the chancellorship. You have averted attacking Habeck so far - but maybe at the end of this campaign, casting doubt on his person can give you the final edge. Your advisors get out the oppo-research - Let’s hope you can make it count.
 
 Q24 wenn Q21A3 Bahamas
-A1: He likes to present himself as a moderate, but he hasn’t completely ruled out a coalition with the extremist Left party. Can voters really trust him not to form a coalition with populist demagogues after the election?
-F1: This might be a weak point for Scholz - but when you publicly entertained a coalition with the AfD, you abandoned any moral high ground you’d have. He and Baerbock vehemently criticize you on empowering fascists and win the debate by a landslide, in what proves to be a humiliating affair for you.
+A1: He likes to present himself as a moderate, but he hasn’t completely ruled out a coalition with the extremist Left party. Can voters really trust him not to form this coalition after the election?
+F1: This might be a weak point for Scholz - but when you publicly entertained a coalition with the AfD, you abandoned any moral high ground you’d have. He and Habeck vehemently criticize you on empowering fascists and win the debate by a landslide, in what proves to be a humiliating affair for you.
 [Insgesamt: -0.05, Grüne +0.018, SPD +0.025, FDP +0.03, AfD +0.002, Linke -0.005]
 
 Q24 wenn Q4A2 Steuererhöhung & EQ3A3 o. EQ5A2 o. EQ5A3 - wirtschaftlich links
 A3: Scholz likes to pretend he’s a moderate, but the program of his party is ideological and leftwing, with unrealistic promises regarding pensions and the minimum wage. It shows that the SPD as a whole is unfit to govern, and a symbol of past days.
-F3: You might have had an opening there, but not only is Scholz still Merkel’s Vice Chancellor, the moderators point out how your own policy ideas don’t differ that much from your opponents. While Baerbock seems a bit invisible, Scholz quips that you’ve either converted to Social Democracy or finally accepted the “economic realities of the 21st century”. Knock-Out.
+F3: You might have had an opening there, but not only is Scholz still Merkel’s Vice Chancellor, the moderators point out how your own policy ideas don’t differ that much from your opponents. While Habeck keeps mostly to himself, Scholz quips that you’ve either converted to Social Democracy or finally accepted the “economic realities of the 21st century”. Knock-Out.
 [Insgesamt: -0.03, SPD +0.03, Grüne +0.015, FDP +0.02, Linke -0.003]
 
 Q25 wenn Q11A1 & NICHT Q18A1 oder Q16A4
-A2: Everyone on this stage agrees that something has to be done about climate change, but what Mrs Baerbock and her party want can’t be the solution! We need to involve everyone, protect livelihoods and emphasize innovation, instead of blanket bans, as Mrs. Baerbock advocates.
-F2: This devolves into a heated back and forth between the two of you on climate policy. Baerbock has a leg up on the details, and although it’s true that policies like tempo limits are controversial, your record over the course of the campaign is thoroughly eviscerated by her. Observers praise her strong and passionate defense of environmentalism, while you seem out of touch.
-[Insgesamt: -0.035, Grüne +0.03, SPD +0.01 FDP -0.005, AfD -0.004]
-
-Q25 wenn Q21A3 Bahamas
-A3: I’ll attack her for her willingness to govern with the radical Left party. Moderates should be frightened by this prospect, there should be a firewall against political radicals, and entertaining a coalition with Die Linke, as the Greens do repeatedly, is irresponsible.
-F3: But<i>you’ve</i> broken down exactly that firewall - and in comparison to a Bahamas coalition, Red-Red-Green seems increasingly sensible to people. Baerbock and Scholz pile it up on you over your flirtations with the Right, completely humiliating you on live television.
-[Insgesamt: -0.05, Grüne +0.025, SPD +0.018, FDP +0.03, AfD +0.002, Linke +0.005]
+A2: Everyone on this stage agrees that something has to be done about climate change, but what Mr Habeck and his party want can’t be the solution! Don’t get it wrong: you have to be affluent to vote Green. I am worried that Germany would lose jobs and fall behind under a chancellor Habeck - the CDU/CSU is the true party of the environment.
+F2: You gamble that you can win this election on the Greens very own turf. However, your credibility on climate action has gone down since your nomination - Habeck hits on your shortsightedness concerning the Climate Protection Act and your record in Bavaria. He bests you in a decisive victory, for what seems to be a major setback for your image.
+[Insgesamt: -0.032, Grüne +0.028, SPD +0.01 FDP -0.005, AfD -0.004]
 
 Q26 wenn Q11A1 & NICHT Q18A1 oder Q16A4
-A1: I want to present myself as a candidate for pragmatic solutions to climate change. We clearly have to take action: What we need is room for market innovation and international cooperation. I’m proud of the path Germany is on in this regard - we don’t need strict bans.
-F1: Baerbock criticizes you sharply, and you are drawn into back-and-forths on her turf after all. She provides some blistering critiques, while some of your points are even negatively noted by fact checkers afterwards. She really comes into her own talking about your stance on the Climate Protection Act, where Scholz concurs. Polls show them on top, with you in dead last.
-[Insgesamt: -0.03, Grüne +0.025, SPD +0.025, FDP -0.005, AfD -0.004]
+A1: The CSU is the party of climate action - we founded the first environmental protection Ministry in all of Germany, in 1970. We need a new push in talking climate, moving away from coal and towards regenerative energy with a concrete plan of action - I have the economic competence to lead us through this crisis without tempo limits or flight bans.
+F1: Habeck criticizes you sharply on the details of your policies, and while you do have more executive experience than him, your ambition on climate change seems to have faltered since the start of this campaign. He gets in some good attacks, Scholz doesn’t even register - the Greens end up on top in most polls.
+[Insgesamt: -0.028, Grüne +0.025, SPD +0.005, FDP -0.005, AfD -0.004]
 
 Q26 wenn vorher Rechts Richtungsfrage
-A2: With two left-leaning politicians debating with me, I will present myself as the voice of reason. We have tax and social security plans that are actually affordable and generally promise sensible governance. The CDU is the party of the healthy center - of competency and fiscal responsibility.
-F2: The debate devolves into ideological mudslinging, with your conservative outlook harshly criticized by both of your opponents. You do have some avenues on fiscal responsibility, but overall, people see you as arguably more radical. Overall, Scholz actually manages to seem the more credible and competent centrist in his performance.
-[Insgesamt: -0.015, +0.02 SPD, +0.005 Grüne, -0.002 AfD, more conservative issue scores]
+A2: With two left-leaning politicians debating with me, I will present myself as the voice of reason. We’re not in an ideological bubble - politics need to take care of the political center. We need a strong state when talking about security, and a liberal and worldly state when talking about the people’s quality of life. This is the compass to the future.
+F2: The debate devolves into ideological mudslinging, with your conservative outlook harshly criticized by both opponents. Especially  their arguments about the CSU’s costly proposals of the past, like the Maut, are hard for you to refute. It seems, change is in the air - overall, Scholz manages to seem the most competent in his performance.
+[-0.01, +0.01 SPD, +0.005 Grüne, -0.002 AfD, more conservative issue scores]
 
 Q26 wenn vorher Rechts Richtugnsfrage & Q21A3 Bahamas
-A2: With two left-leaning politicians debating with me, I will present myself as the voice of reason. We have tax and social security plans that are actually affordable and generally promise sensible governance. The CDU is the party of the healthy center - of competency and fiscal responsibility.
-F2: The debate devolves into ideological mudslinging, with your conservative outlook harshly criticized by both of your opponents. You do have some avenues on fiscal responsibility, but overall, people see you as arguably more radical, especially in light of your overtures to the AfD. Overall, Scholz actually manages to seem the more credible and competent centrist in his performance.
-[Insgesamt -0.045, +0.025 SPD, +0.007 Grüne, -0.01 AfD, more conservative issue scores]
-
-Q26 wenn Q1A1, Q17A4 und Q20A4, nicht Q3A1  (NRW emphasized)
-A3: You know me. I’m a known quantity from North Rhine-Westphalia, where I’ve governed with prudence and caution - just like Chancellor Merkel. I’m the candidate who stands for a continuation of the Merkel era - with me, Germany will stay on its successful path.
-F3: Merkel is popular, as are you in NRW. After 16 years of conservative governance, the country seems ready for some change and fresh air - although you do make a good case for yourself, Scholz actually embodies change with a Merkel-esque persona. The public seems unable to decide who they like more - certainly not Baerbock, who lacks executive experience.
-[Insgesamt CDU +0.015, SPD +0.015, Grüne -0.015, CDU in NRW +0.005]
+A2: With two left-leaning politicians debating with me, I will present myself as the voice of reason. We’re not in an ideological bubble - politics need to take care of the political center. We need a strong state when talking about security, and a liberal and worldly state when talking about the people’s quality of life. This is the compass to the future.
+F2: The debate devolves into ideological mudslinging, with your conservative outlook harshly criticized by both opponents. Especially in light of your overtures to the AfD, you seem out of touch to most viewers. It seems, change is in the air - overall, Scholz manages to seem the most competent in his performance.
+[-0.015, +0.012 SPD, +0.007 Grüne, -0.01 AfD, more conservative issue scores]
 
 Q27 wenn Bahamas
 A2: Who else but Chancellor Angela Merkel could be the right person? She is a figure larger than life, an electoral juggernaut who has won the last four contests, and I want to show people that I’m the one to build on her legacy.
-F2: The outgoing chancellor herself is still popular, but with your overtures to the AfD, you’ve alienated her from her candidacy. While she keeps silent publicly, you’re instead falling back on a rally with other CDU Minister-Presidents, like Kretschmer and Söder. For you, it’s time to huddle down in your home in Aachen, and hope that you can accomplish your goal of “Making Germany Together”.
-[-0.012, +0.005 in NRW, Bavaria and Sachsen, -0.005 AfD]
-
+F2: The outgoing chancellor herself is still popular, but with your overtures to the AfD, you’ve alienated her from her candidacy. While she keeps silent publicly, you’re instead falling back on a rally with CSU colleagues like Alexander Dobrindt and Horst Seehofer. Now, it’s time to return home to Nürnberg, and hope that your pitch to the voters wins out; “So Germany Stays Stable”.
+[-0.012, +0.02 in Bavaria, -0.005 AfD]
 A3: No matter what happens, we have to make sure the right-wing demagogues do not increase their vote shares. I’m worried about the AfD taking first place in some East German states, and direct mandates could go to them: I need to campaign broadly in the New States, with local colleagues like Haseloff and Kretschmer.
 F3: With your acceptance of the AfD in Germany’s party system, you could turn the heads of their voters. Your eastern colleagues were among your earliest supporters and while they’ve raised an eyebrow or two about your course, they’re happy for the help. Now, it’s time to return home to Nürnberg, and hope that your pitch to the voters wins out; “So Germany Stays Stable”.
 [-0.005, AfD -0.01 im Osten, CDU +0.01 im Osten.]
-
-Q27 wenn EQ2 Links A1
-A1: It’s important that all wings of our party stay united and motivated to vote. Let’s campaign with Friedrich Merz to show that I’m taking people like him and his positions seriously - the CDU has a clear profile, and I’m proud to stand with him for our values!
-F1: Merz is still disappointed about the direction you’re taking the party in, and isn’t excited about campaigning with you. Instead, you choose to appear with fellow Minister-Presidents Volker Bouffier and Daniel Günther. Now, it’s time now to huddle down in your home in Aachen, and hope that you can accomplish your goal of “Making Germany Together”.
-[-0.013, +0.005 in Hessen und Schleswig-Holstein, centrist issue scores]
-
-Q27 wenn EQ2 Links A2
-A1: It’s important that all wings of our party stay united and motivated to vote. Let’s campaign with Friedrich Merz to show that I’m taking people like him and his positions seriously - the CDU has a clear profile, and I’m proud to stand with him for our values!
-F1: Merz agrees to appear with you, but he’s not motivated enough to go all out for you. At least you’re reconciling with the right wing of the party - which is crucial to keep your base intact. Now, it’s time now to huddle down in your home in Aachen, and hope that you can accomplish your goal of “Making Germany Together”.
-[-0.01, softer issue scores]
+A4: Armin Laschet, party leader of the CDU and my past rival, could help me mobilize voters in North Rhine-Westphalia, the most populous state. I want to bury the hatchet and show how the Union is united to win this election once again!
+F4: Laschet was already a bit sulky about you upstaging him, but with your embrace of the AfD, you’ve turned him off, and he declines to appear with you. You’re instead falling back on a rally with CSU colleagues like Alexander Dobrindt and Horst Seehofer. Now, it’s time to return home to Nürnberg, and hope that your pitch to the voters wins out; “So Germany Stays Stable”.
+[-0.012, +0.02 in Bavaria, -0.005 AfD]
 
 Q27 wenn in Rechter Richtungsfrage EQ9A3
 A2: Who else but Chancellor Angela Merkel could be the right person? She is a figure larger than life, an electoral juggernaut who has won the last four contests, and I want to show people that I’m the one to build on her legacy.
-F2: She is still popular, and appearing with her could give some credence to you being the rightful heir of her politics - however, her schedule conflicts with yours, and she ‘has to refuse’. Instead, you’re appearing with other CDU Minister-Presidents, like Tobias Hans and Volker Bouffier.  Now, it’s time now to return to your home of Nürnberg, and hope that your pitch to the voters wins out; “So Germany Stays Stable”.
-[-0.008, +0.005 in NRW, Bavaria and Sachsen, -0.005 AfD]
+F2: She is still popular, and appearing with her could give some credence to you being the rightful heir of this era - however, her schedule conflicts with yours, and she ‘has to refuse’. Instead, you’re appearing with your CSU colleagues.  Now, it’s time now to return to your home of Nürnberg, and hope that your pitch to the voters wins out; “So Germany Stays Stable”.
+[-0.01, +0.02 in Bavaria, -0.005 AfD]
+
+Q27 wenn Laschet antagonisiert
+A4: Armin Laschet, party leader of the CDU and my past rival, could help me mobilize voters in North Rhine-Westphalia, the most populous state. I want to bury the hatchet and show how the Union is united to win this election once again!
+F4: Laschet is a bit of a hot potato, given his past gaffes. He’s still pissed off about the way you upstaged him, and it shows in his appearance with you. It’s a bit embarrassing, but alas,, it’s time now to return to your home of Nürnberg, and hope that your pitch to the voters wins out; “So Germany Stays Stable”.
+[-0.005, -0.01 in NRW]
+
+Q27 wenn Laschet freundlich
+A4: Armin Laschet, party leader of the CDU and my past rival, could help me mobilize voters in North Rhine-Westphalia, the most populous state. I want to bury the hatchet and show how the Union is united to win this election once again!
+F4: Laschet is a bit of a hot potato, given his past gaffes - but he’s happy about uniting the Union alongside you, campaigning vigorously with you in Cologne, Düsseldorf and Aachen. Now, it’s time now to return to your home of Nürnberg, and hope that your pitch to the voters wins out; “So Germany Stays Stable”.
+[+0.005, +0.02 in NRW]
+
+Opportunism CYOA
 
-Q27 wenn Söder antagonisiert
-A4: Markus Söder and I didn’t always have the warmest relationship, but there is a reason he gave me such a scare - the man has charisma. Let’s campaign with him in Bavaria and show some unity between the CDU and CSU.
-F4: Unfortunately, while he is publicly in support of you, he cites “schedule difficulties” for your planned rally. Instead, you’ll have to make due with a rally at home, featuring Winfried Kretschmer and Volker Bouffier. For you, it’s time now to huddle down in your home in Aachen, and hope that you can accomplish your goal of “Making Germany Together”.
-[-0.01, +0.005 in NRW, Sachsen und Hessen, -0.01 in Bayern]
+Q5 wenn Opportunism unter 5:
+A1: I’m as shocked and outraged as everyone else when this came to light. There will be new rules for members of my party that they have to make all earnings public, to prevent something like this from happening again.
+F1: While the CDU/CSU as a whole is hurt by this scandal, you do try to mitigate its worst effects. It turns out the CSU is deeply involved, but your proactive steps reinforce your personal popularity.
+A2: Let’s wait and see how this develops. I’ll issue a brief statement that we want to wait until it’s clear what actually happened. Luckily, it seems like the CDU is in more trouble than the CSU, so maybe I can use this to paint me as a more competent party leader.
+F2: More and more corrupt dealings come to light, but it’s mostly Laschet who is crushed under their weight. The CSU seems to be deeply involved, and your numbers sag a bit - but by keeping yourself in the background, your CDU colleague falls faster, just as planned.
+A4: We have to deflect from this as much as possible. I will make it clear that I have zero tolerance for corruption, but I will refrain from any incendiary statements. I don’t want to get associated with this personally.
+F4: In time, the scandal becomes too big to downplay. The Union as a whole suffers a serious crisis in confidence. At least your personal popularity stays largely intact - but this is still your party we’re talking about, and people will only be able to vote for you through them.
 
-Q27 wenn Söder freundlich
-A4: Markus Söder and I didn’t always have the warmest relationship, but there is a reason he gave me such a scare - the man has charisma. Let’s campaign with him in Bavaria and show some unity between the CDU and CSU.
-F4: You’ve finally buried the hatchet. Söder is popular and stoked to campaign with you in his home state, privately once more assuring you of his loyalty. He sends you home with a hearty invitation for the Oktoberfest next month - hopefully as a guest of honor in victory! For you, it’s time now to huddle down in your home in Aachen, and hope that you can accomplish your goal of “Making Germany Together”.
-[+0.005, +0.01 in Bayern]
-
-EQ4A3 wenn kompetent (6 von: Q1A1, Q3A2, Q5A1, Q7A4, Q10A1, Q11A2, EQ2MittteA2, Q12A2)
-A3: People can make their own decisions about this, what I want to talk about is substance. Her policies are expensive for the middle class and ineffective, and she does not have the necessary experience to be chancellor. She talks - I act.
-F3: This works to rally up the base and makes a good pitch for your party - as your approval ratings in NRW soar, this might be the correct avenue of attack. As people notice Baerbocks misgivings, her popularity enters a downward spiral.
-[+0.015, SPD -0.007, Grüne -0.003, FDP -0.005]
-
-EQ4A3 wenn inkompetent (4 von: Q3A1, Q3A3, Q4A4, Q5A3, Q6A3, Q9A4, Q11A1, Q12A4, Q13A4)
-A3: People can make their own decisions about this, what I want to talk about is substance. Her policies are expensive for the middle class and ineffective, and she does not have the necessary experience to be chancellor. She talks - I act.
-F3: You certainly rally up your base - but as your own reputation on competency is lacking, it’s unclear if the voters will buy this line of attack. Diverting the attention away from Baerbocks scandals towards matters of governance might be risky in light of your record… Either way, her numbers still drop.
-[-0.015, Grüne +0.015]
-
-
-STATESMANSHIP
-Statesman >15
-
-EQ99: Over the course of this campaign, you have stood steadfast, like a rock in the waves, in support of Angela Merkel and her 16 year long chancellorship. You’ve essentially run as Merkel’s successor, but you’ve also carved out an identity for yourself, exuding competency, authenticity and integrity. At the end of this race, several conservative op-eds point you out as the single most capable man to safeguard Germany’s prosperity, and it resonates with swing voters.
-A1: We have to speak clearly, but not polarize. We have to integrate, keeping our society together, bringing different people together. That's hard work; one has to do a lot of listening, also listening to uncomfortable things. But at the end of the day, we have to seek compromise, to find solutions that the people demand from us. That's what I mean, when I say, 'let's keep it up'!
-F1: While others stand for radical change, you are the epitome of a statesman, a fixpoint for stability. There’s still a good chunk of voters who like Merkel’s Germany - Merkel herself even goes as far as to proclaim in an interview: “I don’t see any differences between Armin Laschet and myself”. Not a bad thing, considering her approval rating of 70%.
-[+0.025, SPD -0.02, Grüne -0.005, AfD +0.002, climate: maintain, Meckpom +0.015]
-
-
-
-Statesman 10-15
-EQ99: Over the course of this campaign, it was always your goal to rise above the pack, to be a beacon of stability and authenticity, just as your father, a miner, has taught you. Particularly your claim to Merkel’s succession was to be the lane you wanted to ride on. Unfortunately, numerous scandals and gaffes have plagued you over recent months, tainting that image a bit. What do you want to do to change that?
-
-A1: Let’s do a whole image-change. We need to move on from Merkel, to bring a decade of modernization to Germany, and deliver the promises of change our opponents can only talk about.
-F1: Unfortunately, this pivot comes far too late, far too little, and is credible to few people. The media talks about your desperate attempts to move the conversation from your image, and the consensus is irritation about why you’re fleeing from your greatest strength: regality.
-[-0.012]
-
-Wenn Linke Richtungsfrage und 4 von: EQ3A3, EQ5A3, Q18A1, EQ6A1, EQ6A3, EQ7A1, EQ7A2
-A1: Let’s do a whole image-change. We need to move on from Merkel, to bring a decade of modernization to Germany, and deliver the promises of change our opponents can only talk about.
-F1: A few people detect some talking points from your former opponents Norbert Röttgen and Markus Söder, and even a partial Olaf Scholz-imitation. You have to go all-in if you want to win this race left of center - but unfortunately, your right wing seems deflated to the point of doubting their allegiance to you.
-[-0.005, Grüne -0.006, SPD -0.006, Left issue scores]
-
-Wenn Rechte Richtungsfrage und 4 von: EQ3A1, EQ5A4, Q18A2, Q18A3, EQ6A4, Q21A3, EQ7A4
-A1: Let’s do a whole image-change. We need to move on from Merkel, to bring a decade of modernization to Germany, and deliver the promises of change our opponents can only talk about.
-F1: You’ve clearly pivoted to the right in this campaign, taking pages out of the playbooks from Friedrich Merz, or Horst Seehofer. While the party base is definitely hyped up, especially the CSU, it gives your opponents just all the more fodder to attack you. But maybe the country actually likes conservative policies more than the polls suggest?
-[-0.005, AfD -0.007, FDP -0.003, Right issue scores]
-
-A2: Let’s do another round of ads about my family history, like how my father was a miner, and my personality. We can give more interviews to highlight my patience, my authenticity and my fatherly demeanor.
-F2: While people are starting to roll their eyes at “my father was a miner”, your attempts to level with the German people are still perceived alright. That said, the interviewers can’t let up with asking you about these gaffes… this is not what you had in mind.
-[-0.01]
-
-Wenn unter 24%:
-A3: The role of a statesman is to rise above the pack, and let the voters decide. I am going to project strength going into election day, together, we will win this thing, regardless of the naysayers!
-F3: Thing is, your party wants you to win - and the poll numbers are a bit shaky on that. While not throwing oil on the fire has its advantages, ignoring your weaknesses could prove decisive on the margins.
-[-0.012]
-
-Wenn über 24%:
-A3: The role of a statesman is to rise above the pack, and let the voters decide. I am going to project strength going into election day, together, we will win this thing, regardless of the naysayers!
-F3: Considering the polling, you’re doing decently well for yourself, even if you might not rival Merkel herself. Projecting strength could be a good option, especially since you’ve dealt with these gaffes in a mostly acceptable manner.
-[+0.008]
-
-A4: I want to be Merkel's successor, and the chancellor carries a lot of goodwill with voters. There’s one option for us here - she has to publicly vow for us in her next Bundestag speech.
-F4: She agrees, and makes a strong pitch for you in what proves to be her last speech in the parliament. That said, you’re still perceived as somewhere between boring and inelegant to some, and an endorsement by the chancellor doesn’t change that. At least there’s no question now about who really embodies the Merkel-spirit.
-[+0.003, SPD -0.008, Meckpom +0.002]
-
-Wenn Bahamas:
-A4: I want to be Merkel's successor, and the chancellor carries a lot of goodwill with voters. There’s one option for us here - she has to publicly vow for us in her next Bundestag speech.
-F4: Unfortunately, the chancellor declines, not wanting to taint her legacy by campaigning for someone who broke down the firewall against the Right. Bad luck Armin, we’ll have to deal with it without her. Hopefully the press doesn’t get wind of this…
-[-0.015, Meckpom -0.002]
-
-
-Statesman 5-10
-A1: Let’s do a whole image-change. We need to move on from Merkel, to bring a decade of modernization to Germany, and deliver the promises of change our opponents can only talk about.
-F1: Unfortunately, this pivot is incredibly incredulous and confusing to many people. The press is confused about your desperate attempts to change your image to that of a firebrand. Consensus is that you’re simply too cringe for that. Sorry Armin…
-[-0.026]
-
-Wenn Linke Richtungsfrage und 4 von: EQ3A3, EQ5A3, Q18A1, EQ6A1, EQ6A3, EQ7A1, EQ7A2
-A1: Let’s do a whole image-change. We need to move on from Merkel, to bring a decade of modernization to Germany, and deliver the promises of change our opponents can only talk about.
-F1: A few people detect some talking points from your former opponents Norbert Röttgen and Markus Söder, and even a partial Olaf Scholz-imitation. The leftist pivot is clear - some people hear you, but unfortunately, your right wing seems deflated to the point of doubting their allegiance to you.
-[-0.022, Greens -0.005, SPD -0.005, Linke issue scores]
-
-Wenn Rechte Richtungsfrage und 4 von: EQ3A1, EQ5A4, Q18A2, Q18A3, EQ6A4, Q21A3, EQ7A4
-A1: Let’s do a whole image-change. We need to move on from Merkel, to bring a decade of modernization to Germany, and deliver the promises of change our opponents can only talk about.
-F1: You’ve clearly pivoted to the right in this campaign, taking pages out of the playbooks from Friedrich Merz, or Horst Seehofer. Some parts of your base consider you their hero, but others are unnerved at your presentation. Your opponents have all the more fodder to attack you, and they’re not shy to use it.
-[-0.022, AfD -0.007, FDP -0.003, Rechte issue scores]
-
-A2: Let’s do another round of ads about my family history, like how my father was a miner, and my personality. We can give more interviews to highlight my patience, my authenticity and my fatherly demeanor.
-F2: People are starting to roll their eyes at “my father was a miner”. Your interviews get few attention, and to some you seem… well, a bit unintellectual. The campaign’s gaffes just continue haunting you all the more… this is not what you had in mind.
-[-0.032]
-
-Wenn unter 24%:
-A3: The role of a statesman is to rise above the pack, and let the voters decide. I am going to project strength going into election day, together, we will win this thing, regardless of the naysayers!
-F3: Thing is, your party wants you to win - and the poll numbers are a bit shaky on that. Outright ignoring the haters seems a bit foolish to them - but maybe your regal demeanor can change some of this narrative on its own. Sometimes it’s best to just let things come as they may.
-[-0.028]
-
-Wenn über 24%:
-
-A3: The role of a statesman is to rise above the pack, and let the voters decide. I am going to project strength going into election day, together, we will win this thing, regardless of the naysayers!
-F3: Considering the polling, you’re doing decently well for yourself, despite the gaffes. It might be a good idea to ignore the naysayers and keep going as normal - that is what a true statesman does, after all. Your gaffes do still proliferate in the media, but maybe people on the fence will take a second look at you, before dropping off their ballots.
-[-0.015]
-
-A4: I want to be Merkel's successor, and the chancellor carries a lot of goodwill with voters. There’s one option for us here - she has to publicly vow for us in her next Bundestag speech.
-F4: She agrees, and issues a clear endorsement for you in what proves to be her last speech in the parliament. Members of all other parties groan at this blatantly partisan rhetoric - and the media takes pity on her, having to abandon her high standing at the end of her career to bail you out of your predicament.
-[-0.02, SPD -0.003, +0.002 in Meckpom]
-Wenn Bahamas:
-A4: I want to be Merkel's successor, and the chancellor carries a lot of goodwill with voters. There’s one option for us here - she has to publicly vow for us in her next Bundestag speech.
-F4: Unfortunately, the chancellor declines, not wanting to taint her legacy by campaigning for someone who broke down the firewall against the Right. Bad luck Armin, we’ll have to deal with it without her. Unfortunately, the press issues some reports on your rift…
-[-0.036, -0.002 in Meckpom]
-
-Statesman <5
-A1: Let’s do a whole image-change. We need to move on from Merkel, to bring a decade of modernization to Germany, and deliver the promises of change our opponents can only talk about.
-F1: Unfortunately, this pivot is incredibly incredulous and confusing to many people. Even your own party is irritated about why you’re suddenly distancing yourself. This has the potential to derail your entire campaign: Cringe, Armin. <i>Cringe.</i>
-[-0.042]
-
-Wenn Linke Richtungsfrage und 4 von: EQ3A3, EQ5A3, Q18A1, EQ6A1, EQ6A3, EQ7A1, EQ7A2
-A1: Let’s do a whole image-change. We need to move on from Merkel, to bring a decade of modernization to Germany, and deliver the promises of change our opponents can only talk about.
-F1: A few people detect some talking points from your former opponents Norbert Röttgen and Markus Söder, and even a partial Olaf Scholz-imitation. It’s clear that you’re trying to pander to voters of your opponents - but few are taking you as a viable alternative over Scholz and Baerbock, who are perceived as much more competent. A right wing rebellion is already brewing.
-[-0.032, Grüne -0.004, SPD -0.004, AfD +0.01, Linke issue scores]
-
-Wenn Rechte Richtungsfrage und 4 von: EQ3A1, EQ5A4, Q18A2, Q18A3, EQ6A4, Q21A3, EQ7A4
-A1: Let’s do a whole image-change. We need to move on from Merkel, to bring a decade of modernization to Germany, and deliver the promises of change our opponents can only talk about.
-F1: You’ve clearly pivoted to the right in this campaign, taking pages out of the playbooks from Friedrich Merz, or Horst Seehofer. Combined with your other gaffes, this just fires up attacks about you from not just opponents, but also left-leaning press outlets. Even the party centrists are starting to doubt your competence…
-[-0.032, AfD -0.006, FDP -0.002, SPD +0.01, Rechte issue scores]
-
-A2: Let’s do another round of ads about my family history, like how my father was a miner, and my personality. We can give more interviews to highlight my patience, my authenticity and my fatherly demeanor.
-F2: Ugh, the whole “my father was a miner”- thing again? Your repeated talking points seem stilted and inauthentic and satire shows are having a blast. Not only that - allegations that you’ve randomly handed out grades in your time as a professor have come up, giving you another unfortunate nickname: “Würfelarmin”, or “Dice-Armin”.
-[-0.036]
-
-Wenn unter 24%:
-A3: The role of a statesman is to rise above the pack, and let the voters decide. I am going to project strength going into election day, together, we will win this thing, regardless of the naysayers!
-F3: This just won’t cut it. Your polling is abysmal compared not just to Merkel, but all other CDU candidates in history. The numerous gaffes of yours are partially to blame for this - the party certainly is pissed off. It leaks out into the press that several colleagues privately wish Söder would come in and rescue them.
-[-0.039]
-
-Wenn über 24%:
-
-A3: The role of a statesman is to rise above the pack, and let the voters decide. I am going to project strength going into election day, together, we will win this thing, regardless of the naysayers!
-F3: Well, you are polling decently well, despite the gaffes… maybe you’re just immune to the media onslaught, or you’ve done some magic with your image. That said, your party is still unnerved, and harbors real concerns about your competency. You’re sure to receive some oversight once you’re working in the chancellery.
-[-0.025]
-
-A4: I want to be Merkel's successor, and the chancellor carries a lot of goodwill with voters. There’s one option for us here - she has to publicly vow for us in her next Bundestag speech.
-F4: Unfortunately, as much as she respects you personally, she declines. She doesn’t want to taint her legacy with a party-political plea in her last parliamentary debate. Of course, press outlets immediately speculate that it’s more so due to your clownish behavior on <i>The Campaign Trail…</i> Sorry Armin. It’s nothing personal, I’m sure.
-[-0.04, -0.002 in Meckpom]
-
-Wenn Bahamas:
-A4: I want to be Merkel's successor, and the chancellor carries a lot of goodwill with voters. There’s one option for us here - she has to publicly vow for us in her next Bundestag speech.
-F4: Unfortunately, the chancellor declines, not wanting to taint her legacy by campaigning for someone who broke down the firewall against the Right. Bad luck Armin, we’ll have to deal with it without her. Unfortunately, your image change from a “regal statesman” to a “fascist enabler” becomes yet another narrative in the press…
-[-0.05, AfD -0.003, SPD +0.003, -0.002 in Meckpom]
-
-Andere Statesman CYOA
-
-Wenn Statesman unter 6:
-A3: I will give a largely non-political speech. We need to focus on the importance of cohesion and trust in our society, to come together as one in the wake of this crisis, not letting our different views divide us, and the values of honest work. I want to bring up the anecdote about my father, who was a miner. A statesman is what we need right now.
-F3: Although your intentions are admirable, your record up until now doesn’t really reflect the reality of the situation. Anyone could have given this speech, but in light of your current image, the public doesn’t really see a statesman within you. But, a done deal’s a done deal - you’re what they get as the Union’s candidate.
-
-Wenn Statesman über 15
-A3: I will give a largely non-political speech. We need to focus on the importance of cohesion and trust in our society, to come together as one in the wake of this crisis, not letting our different views divide us, and the values of honest work. I want to bring up the anecdote about my father, who was a miner. A statesman is what we need right now.
-F3: A bit meandering, but admirable sentiments in these difficult times. Anyone could have given this speech, but casting a broad net is what the Union wants. With your unifying demeanor, your announcement gets good reviews, supplying you with a sorely needed polling bounce.
-[+0.02, SPD -0.005]
-A4: The success of the AfD showed us that this country is in dire need of change and a new direction, away from the Status Quo. I will promise to modernize Germany while letting our conservative values guide us in this progress. A new Germany, responsible and sensible.
-F4: You’re right, many people demand change. The CDU has been in government for almost 16 years now, and while you’ve been expected to follow in Merkel’s footsteps, maybe combining your appeal as a statesman with this attitude could reenergize the despondent right.
-[+0.02, AfD -0.01, SPD -0.005]
-
-Q9 wenn Statesman <10
-A2: I will take this development very seriously, clearly the demand is there to take the climate more seriously. Let’s unveil some of our own environmental policies to stop their momentum and defuse some of their criticisms.
-F2: By and large, voters trust the Green party more on these issues, and this seems like a clear pivot to grab at their voter base. Söder can pull this off, but with you, it seems a bit incredulous. You’re also running the risk of pissing off your climate-skeptical rural base.
-[-0.02, Grüne +0.005, AfD +0.005, SPD +0.005]
-A3: Off the record, it’s not the worst thing that these two parties compete for center-left votes. This makes the path to first place a lot easier. Let’s focus somewhat on the Greens as our main contender in that regard, and just attack them moderately where we can.
-F3: The thing is, the situation for the Union is more dire than ever before. A win through plurality is still a win, but you’re poised to achieve the worst result of the CDU in history. Your colleagues demand a more impressive mandate than this - hopefully you can deliver.
-[-0.003, -0.01 in Bayern, Campaign enthusiasm runter for flavor]
-
-Q9 wenn Statesman >15
-A2: I will take this development very seriously, clearly the demand is there to take the climate more seriously. Let’s unveil some of our own environmental policies to stop their momentum and defuse some of their criticisms.
-F2: This seems like an appropriate move, applauded by many. You seem to follow Söders tactic of modernizing the Union’s image on conservationism - just beware of your climate-suspicious rural base. They still need a reason to vote for you over radical alternatives.
-[+0.006, Grüne -0.01, Others -0.005]
-A3: Off the record, it’s not the worst thing that these two parties compete for center-left votes. This makes the path to first place a lot easier. Let’s focus somewhat on the Greens as our main contender in that regard, and just attack them moderately where we can.
-F3: Your attacks are expected, but not ineffective - making a play for the center of the country doesn’t seem bad. By keeping conservatives and Merkel-approvers together, you can come up on top by default. You will probably need the Greens or the SPD in your coalition though.
-[+0.01, Grüne -0.005, SPD -0.01]
-
-Q10 wenn Statesman <5:
-A1: It is important that we don’t demonize Putin and keep our dialogue open. I’m critical of many things the Russian leadership has done, but overall, we should strive to cooperate with them, as we do on the Nord-Stream 2 pipeline.
-F1: This sentiment is popular especially in East Germany. Seeing as how the CDU is traditionally more hawkish, there seems to be a paradigm shift - although people doubt you have the political acumen to deal with Putin, patronizingly calling you a <i>Putinversteher</i>...
-[-0.005]
-A2: I’ve been more lenient in the past, but enough is enough. I will join in with the criticism against Kretschmer and call for a tougher stance towards Putin. Maybe we should only open the Nord-Stream 2 pipeline if we get some concessions from Russia.
-F2: Considering your past statements, this is a bit of a flip-flop and might be perceived as conflict-happy. Kretschmer picks a small fight with you, and as Söder also had a trip to Russia, some take this as a slight towards him. That said, this is an appropriate red line to many - hopefully the intra-party spat doesn’t overshadow this…
-[-0.005, -0.005 in Bayern]
-
-Q10 wenn Statesman >15
-A1: It is important that we don’t demonize Putin and keep our dialogue open. I’m critical of many things the Russian leadership has done, but overall, we should strive to cooperate with them, as we do on the Nord-Stream 2 pipeline.
-F1: Some call you a <i>Putinversteher</i>, although in East Germany, this sentiment is popular. Seeing as how the CDU is traditionally more hawkish, some perceive a certain paradigm shift. Hopefully you can negotiate a lasting peace in Europe, especially in light of Eastern European fears towards Russian aggression…
-[+0.003, +0.005 in Meckpom, +0.001 im restlichen Osten]
-A2: I’ve been more lenient in the past, but enough is enough. I will join in with the criticism against Kretschmer and call for a tougher stance towards Putin. Maybe we should only open the Nord-Stream 2 pipeline if we get some concessions from Russia.
-F2: Considering your past statements, this is a bit of a flip-flop, but raising your voice on this issue might position you as a strong leader. You have cast your dies very clearly in favor of a strict transatlanticism. Polish politicians praise you on social media - let’s hope you can unite the rest of Europe as chancellor on this topic.
-[+0.005]
-
-Q14A1 wenn Statesman <5
-A1: I want to congratulate Haseloff for his strong performance. It shows that the citizens still trust the CDU to be the best governing party, and we want to emulate his strategy on a national scale.
-F1: While his performance was impressive, his strategy was partially built on his incumbency as a “Landesvater”. Your emulation of his tactic proves middling returns, as your own image has faltered over the course of this campaign.
-[-0.015, -0.01 in NRW]
-
-Q14A1 wenn Statesman <10
-A1: I want to congratulate Haseloff for his strong performance. It shows that the citizens still trust the CDU to be the best governing party, and we want to emulate his strategy on a national scale.
-F1: While his performance was impressive, his strategy was partially built on his incumbency as a “Landesvater”. Still, emulating him is a possible with your record, if you manage to spin it correctly. “For a Germany, in which we live well and gladly”, as Merkel advertised 4 years ago.
-[-0.005, -0.002 in NRW]
-
-Q14A1 wenn Statesman >15
-A1: I want to congratulate Haseloff for his strong performance. It shows that the citizens still trust the CDU to be the best governing party, and we want to emulate his strategy on a national scale.
-F1: Haseloff’s strategy was partially built on his incumbency as a “Landesvater”. Emulating him here could prove valuable, as many observers have bestowed you with just the same title. “For a Germany, in which we live well and gladly”, as Merkel advertised 4 years ago - this could lead you to success.
-[+0.012, +0.01 in NRW]
-
-EQ4A1 wenn Statesman >10
-A1: We should definitely hit her on these topics. This is unprofessional behavior that should not happen in the chancellery. These concerns about her integrity have to be addressed.
-F1: The plethora of scandals she encounters certainly works to her disadvantage. Baerbock’s numbers keep falling, as yours experience a small rise - only stymied by the fact you aren’t entirely clean on plagiarism either, as it turns out. Olaf Scholz’ “smurfy grin” pops up quite often these days…
-[+0.005, Grüne -0.002, SPD +0.003]
-
-EQ4A1 wenn Statesman >15
-A1: We should definitely hit her on these topics. This is unprofessional behavior that should not happen in the chancellery. These concerns about her integrity have to be addressed.
-F1: The plethora of scandals she encounters certainly works to her disadvantage. Although you aren’t entirely clean yourself on plagiarism, the right wing boulevard press rips her to shreds, significantly impacting her likeability numbers. To gain are both you and Olaf Scholz, already preparing for another SPD-CDU duel, evident by his “smurfy grin”...
-[+0.01, Grüne -0.008, SPD +0.01]
-
-
-EQ4A4 wenn Statesman >15
-A4: People aren’t clamoring for my comments here, they will be judged on their own. I want to stay positive and talk about the successes I will bring to Germany.
-F4: People appreciate your restraint - you shed any danger of being accused of sexism while Baerbocks favorability slips on its own. You stand as a good and integrous example, in contrast to your opponents misgivings. Not a bad turn of events…
-[+0.015, Grüne -0.005, SPD -0.003]
-
-(BAERBOCK SEXISMUS NIMMT PRIORITÄT, außer Q14A4(baerbock attackieren))
-
-Q16 wenn Statesman <5
-A1: The most important thing we can do right now is help the affected regions with their crisis management. They need help now, quickly and unbureaucratically. I’m promising swift support.
-F1: A succinct response, though some say that this is the least you can do. Help does get out quickly, and arrives at where it’s needed most, but overall, in light of the worst flood in Germany since 1962, you seem helpless and overly careful.
-[-0.005, NRW -0.005, FDP -0.003, FDP in NRW -0.003]
-A2: I want to especially praise local teams and local reactions. Some areas already had crisis teams ready when the sun was still shining and no one knew what would happen. We will follow up and provide better crisis responses in the future.
-F2: Your praises for local teams are duly noted, but many wonder why your own state government had no such crisis team ready despite weather warnings. The failures of your administration seem to pile up, and people are noticing…
-[-0.015, -0.01 in NRW]
-
-Q16 wenn Statesman <10
-A2: I want to especially praise local teams and local reactions. Some areas already had crisis teams ready when the sun was still shining and no one knew what would happen. We will follow up and provide better crisis responses in the future.
-F2: Your praises for local teams are duly noted, but many wonder why your own state government had no such crisis team ready despite weather warnings. At least you take responsibility, but people can’t help but notice an increasing number of low points in your track record…
-[-0.01, -0.005 in NRW]
-
-Q16 wenn Statesman >15
-A1: The most important thing we can do right now is help the affected regions with their crisis management. They need help now, quickly and unbureaucratically. I’m promising swift support.
-F1: A succinct response, though some say that this is the least you can do. Fortunately, help gets out quickly, and arrives at where it’s needed most. The devastation is unimaginable, but cynically, if you handle this crisis in line with your positive image, you could pull some political capital from it…
-[+0.01]
-A2: I want to especially praise local teams and local reactions. Some areas already had crisis teams ready when the sun was still shining and no one knew what would happen. We will follow up and provide better crisis responses in the future.
-F2: Your praises for local teams are duly noted, and seen as appropriate, as they begin the crisis response of the worst floods in Germany since 1962. It’s a bit risky to admit mistakes, but perhaps your perception as a competent statesman counteracts this.
-[+0.012, +0.006 in NRW]
-
-Q17A1 wenn Statesman <5
-A1: Actually, I don’t want to be seen as performative. The cleanup operations can be left to professionals, I will keep coordinating the crisis efforts from the state chancellery so that everything goes smoothly - that’s the best I can do for the victims.
-F1: As other Minister-Presidents like Söder go out and show engagement, the papers start to ask: <i>Where is Armin Laschet</i>? Your invisibility starts to get criticized even by your colleague, and when Olaf Scholz of all people goes on a highly regarded trip to NRW in his role as Vice Chancellor, it’s clear: this was a massive blunder.
-[-0.03, SPD +0.02 in NRW]
-
-Q17A1 wenn Statesman <10
-A1: Actually, I don’t want to be seen as performative. The cleanup operations can be left to professionals, I will keep coordinating the crisis efforts from the state chancellery so that everything goes smoothly - that’s the best I can do for the victims.
-F1: Some accuse you of missing in action and your advisors fear you might have missed an opportunity to convince the public of your leadership. Instead, the media focuses on politicians like Söder, with a much more proactive crisis response. Among them stands Olaf Scholz, who, of all people, visits your home state, leaving you no choice but to show yourself.
-[-0.015, SPD +0.005 in NRW, CDU +0.01 in Bayern]
-
-Q17A1 wenn Statesman >15
-A1: Actually, I don’t want to be seen as performative. The cleanup operations can be left to professionals, I will keep coordinating the crisis efforts from the state chancellery so that everything goes smoothly - that’s the best I can do for the victims.
-F1: Some accuse you of missing in action and your advisors fear you might have missed an opportunity to convince the public of your leadership. That said, your Merkel-esque attitude, combined with pictures showing you hard at work in the background do catch a positive reception.  Meanwhile, Olaf Scholz also reaps the benefits from his own trip to NRW…
-[+0.02, SPD -0.01]
-A4: What a great idea! We should get out there and visit some affected towns - our President Frank-Walter Steinmeier will be here in a few days, so let’s try to get some shared pictures with our head of state. Catch some of his gravitas.
-F4: Although nominally neutral, President Steinmeier is traditionally a member of the SPD. That said, you get some nice pictures at his side, and the media cautiously praises your response. Still - Olaf Scholz, in his role as Minister of Finances has turned many heads on his own, and people are debating who’s the better crisis manager. That alone is a good start for him…
-[+0.03, SPD -0.02]
-
-Q18A2 wennStatesmanship <5
-A2: Climate change is coming, whether we want it or not. The most important thing we can do is mitigate its worst effects to prevent catastrophes like this from doing too much damage - we need better crisis responses. Climate action is necessary, as long as it doesn't stifle our economy and freedom of living.
-F2: Your base is happy about this response, but like it or not, the discourse around the floods benefits mostly the Greens. You just can’t keep up as the race refocuses on climate policies, and the CDU experiences a noticeable drop in the polls - this race has just been shaken up once again.
-[-0.02, Greens +0.03, SPD -0.01]
-
-Q18A2 wenn Statesmanship >15
-A2: Climate change is coming, whether we want it or not. The most important thing we can do is mitigate its worst effects to prevent catastrophes like this from doing too much damage - we need better crisis responses. Climate action is necessary, as long as it doesn't stifle our economy and freedom of living.
-F2: You won’t win over Green voters with nuances and reactionism, but your traditional base, who doesn’t want to see their way of life upended, is happy. You strike a sensible contrast to SPD and Greens with your moderate tone - a voice of reason.
-[+0.015, SPD -0.01, FDP -0.005]
-
-Q20A1 wenn Statesman >16
-A1: We have to modernize my image. Let’s incorporate some biographical elements, like that my father was a miner, and show pictures of how I closed the last mine in North Rhine-Westphalia. Then talk about tackling climate change together and how we need to promote tolerance.
-F1: The ad is received decently, as you hit all the major talking points while coming across as moderate, stately and sympathetic. Only a few right-wingers are unhappy at you using pictures of pride rallies. Nonetheless, the momentum is on Olaf Scholz’s side - maybe this can halt him in his tracks.
-[+0.04, SPD -0.04, AfD +0.02]
-
-Q20A3 wenn Statesman <5
-A3: It’s best to play it safe. My motto is “Making Germany Together” - I want a spot about how I’m bringing different people together and how our country needs solidarity in this crisis. Let’s show the diversity in our supporters and promise that we will bounce back stronger than before.
-F3: The ad is uncontroversial in content, but people can’t really gain anything from this spot, except empty platitudes. Additionally, you are accused of exploiting people of different ethnicities for your political gain. Meanwhile, most voters have given the SPD another look.
-[-0.02, +0.005 für SPD]
-
-Q24A4 wenn Statesman 20
-A4: Actually, I’ve changed my mind. The mudslinging isn’t worth it - after giving my usual critiques I’ll just wing it and rely on my instincts as a statesman to rise above the pack.
-F4: Surprisingly, your performance is received quite positively. People found you sympathetic and down to earth - although you seemed a bit unsubstantial. Polls show a tie between you and a similarly subdued Scholz.
-
-Q25A4 wenn Statesman 20
-A4: Actually, I’ve changed my mind. The mudslinging isn’t worth it - I’ll just broadly criticize Baerbock for her incompetence and then just wing it, relying on my instincts as a statesman to rise above the pack.
-F4: Surprisingly, your performance is received quite positively. People found you sympathetic and down to earth - although you seemed a bit unsubstantial. Polls show a tie between you and a similarly subdued Scholz.
-
-Q25A1 wenn Statesman <5
-A1: She’s had problems with plagiarism in her book, and she inflated her CV. These might seem like minor things, but in light of her lack of experience: can she really be trusted to govern this country, if she fails at these minor tasks?
-F1: This is an expected attack - but as you reiterate past criticisms, Baerbock retorts offensively, calling them unfair. Not only that - Scholz concurs with her, as both criticize your mudslinging tactics. The leftists have laid a trap for you! Unfortunately, it works, as you’re completely out of it during the policy debates. Scholz manages to perform best in the end.
-
-Q25A1 wenn Statesman <10
-A1: She’s had problems with plagiarism in her book, and she inflated her CV. These might seem like minor things, but in light of her lack of experience: can she really be trusted to govern this country, if she fails at these minor tasks?
-F1: This is an expected attack, she did struggle to handle it - Baerbock calls the criticism unfair, but ultimately, you wrestle the spotlight on her misgivings. The post-Triell discourse turns toward experience and statesmanship. Overall, Scholz slightly edges ahead of you - the duopoly asserts itself, at least in the wake of the Triell.
-
-Q25A1 wenn Statesman >15
-A1: She’s had problems with plagiarism in her book, and she inflated her CV. These might seem like minor things, but in light of her lack of experience: can she really be trusted to govern this country, if she fails at these minor tasks?
-F1: This is an expected attack, she did struggle to handle it - Baerbock calls the criticism unfair, but ultimately, you focus the spotlight on her misgivings. The post-Triell discourse turns toward experience and statesmanship. It paid off - polls show you as the winner of the debate, before Scholz. The duopoly asserts itself, as does the dominance of the CDU.
-
-Q26A3 wenn Statesman <5
-A3: You know me. I’m a known quantity from North Rhine-Westphalia, where I’ve governed with prudence and caution - just like Chancellor Merkel. I’m the candidate who stands for a continuation of the Merkel era - with me, Germany will stay on its successful path.
-F3: Yes, Merkel is popular, but with your record and middling popularity, the line doesn’t hit. Instead, Scholz and Baerbock pounce on your scandals and gaffes, leaving you in the dust, unprepared for such an aggressive shoot-out. This might have sealed the deal, as Scholz takes away an overwhelming win in post-debate polling.
-
-Q26A3 wenn Statesman <10
-A3: You know me. I’m a known quantity from North Rhine-Westphalia, where I’ve governed with prudence and caution - just like Chancellor Merkel. I’m the candidate who stands for a continuation of the Merkel era - with me, Germany will stay on its successful path.
-F3: Yes, Merkel is popular, but after 16 years of conservative governance, the country seems ready for some change and fresh air. Not just that, your own scandals and gaffes loom in the background of your grandstanding, while Scholz gives off his best Merkel-impression himself. While Baerbock holds her own alongside you, the Vice Chancellor wins the Triell.
-
-Q26A3 wenn Statesman >15
-A3: You know me. I’m a known quantity from North Rhine-Westphalia, where I’ve governed with prudence and caution - just like Chancellor Merkel. I’m the candidate who stands for a continuation of the Merkel era - with me, Germany will stay on its successful path.
-F3: People thought this country was ready for change, but as your unwavering patriotism, steadfast moderation and fatherly gravitas dominates the debate stage, it seems the pundits were wrong. Your performance is stately, engaging and sympathetic - journalists call it “Merkel-esque”. With Scholz bombarded by criticism about the Wirecard-Affair, you stand tall as a worthy successor to the chancellor. Good job, Mr. Laschet.
+Q5 wenn Opportunism über 10:
+A4: We have to deflect from this as much as possible. I will make it clear that I have zero tolerance for corruption, but I will refrain from any incendiary statements. I don’t want to get associated with this personally.
+F4: At first, you keep out of the headlines, but the scandal becomes too big to downplay. The Union as a whole suffers a serious crisis in confidence, and even your own numbers suffer slightly, as your wife needs to testify. The hype around you seems to settle down for now.
+
+Q5 wenn Opportunism über 15:
+A1: I’m as shocked and outraged as everyone else when this came to light. There will be new rules for members of my party that they have to make all earnings public, to prevent something like this from happening again.
+F1: The Union as a whole suffers a major crisis. It turns out the CSU is deeply affected, and even your wife has to testify. With these steps, people aren’t sure if they trust you to be earnest in your mitigative measures…
+A2: Let’s wait and see how this develops. I’ll issue a brief statement that we want to wait until it’s clear what actually happened. Luckily, it seems like the CDU is in more trouble than the CSU, so maybe I can use this to paint me as a more competent party leader.
+F2: Journalists keep heckling you for more of a comment - this comes off as very suspicious, especially as more and more of these corrupt dealings come to light. The CSU ends up in an especially bad light - your own wife has to testify. This deeply damages your credibility, and even Laschet does not hesitate to criticize you. That slimy bastard.
+A4: We have to deflect from this as much as possible. I will make it clear that I have zero tolerance for corruption, but I will refrain from any incendiary statements. I don’t want to get associated with this personally.
+F4: At first, you keep out of the headlines, but the scandal becomes too big to downplay. The Union as a whole suffers a serious crisis in confidence. The questions pile up, and people are getting more and more suspicious around you. When even you own wife has to testify, the scandals impacts your personal numbers as well.
+
+Q6 wenn Opportunism 5-10
+A3: Doing this the wrong way could backfire - my appeal lies in my popularity, so let’s work through that. I’ll have my supporters in the CDU and CSU demand that I save the party from Laschet's bad polling numbers, and then - “reluctantly” - declare my candidacy.
+F3: A devious plot. Framing the whole thing around your poll numbers seems reasonable to most people, but those who pay attention seem to recognize a few patterns. Nonetheless, the hype around your candidacy keeps going, although Laschet will surely put up a fight.
+
+Q6 wenn Opportunism 11-15
+A3: Doing this the wrong way could backfire - my appeal lies in my popularity, so let’s work through that. I’ll have my supporters in the CDU and CSU demand that I save the party from Laschet's bad polling numbers, and then - “reluctantly” - declare my candidacy.
+F3: A devious plot. Framing the whole thing around your poll numbers seems a bit suspicious to many, and the line doesn’t land perfectly, but it does the job in providing you with <i>some</i> legitimacy. You’ve put yourself out there, but Laschet will surely put up a fight.
+
+Q6 wenn Opportunism >15
+A3: Doing this the wrong way could backfire - my appeal lies in my popularity, so let’s work through that. I’ll have my supporters in the CDU and CSU demand that I save the party from Laschet's bad polling numbers, and then - “reluctantly” - declare my candidacy.
+F3: A devious plot - but few people buy it. While it’s true that you’re quite popular, you seem a bit cowardly for starting your campaign under pretenses when your ambition is nakedly clear to everyone. You’re in the game, but Laschet has a leg up on you - don’t overdo it with the opportunism!
+
+Q8A4 wenn Opportunism <5
+A4: Merkel has been a respected leader for these last 16 years, and I will do my best to follow in her path and continue her successful stewardship of our beloved country. On the foundation of her tenure, Germany will enter a new age.
+F4: Tying yourself to Merkel might be a good idea to unite the party, and the chancellor gives you her full endorsement. While this attitude is broadly acceptable to many voters, your older, more ambitious stances were also popular - perhaps you can combine these appeals?
+
+Q8A4 wenn Opportunism >15
+A4: Merkel has been a respected leader for these last 16 years, and I will do my best to follow in her path and continue her successful stewardship of our beloved country. On the foundation of her tenure, Germany will enter a new age.
+F4: In theory this doesn’t sound bad, but people liked your more modern policies and are clamoring for change after 16 years. After everything that’s happened, the slimy way in which you try to tie yourself to a popular incumbent who you’ve criticized in the past doesn’t land perfectly. Be sure to capitalize on your own, quite popular, identity!
+
+EQ1A1 wenn Opportunism <5
+A1: In hindsight, Merkel’s decision seems right to me, we needed to take those people in to prevent a humanitarian catastrophe at the Austrian-Hungarian border. Today though, we need to be more mindful of European border security. To that end, we want to strengthen the EU border enforcement agency Frontex.
+F1: Sensible - although you have criticized her in 2015, so this is another changed position on your part. Still, your comments satisfy Merkel-loyalists and conservatives alike, and no one’s too suspicious. Maybe this is exactly the stance you need to forge a large coalition.
+
+EQ1A1 wenn Opportunism >10
+A1: In hindsight, Merkel’s decision seems right to me, we needed to take those people in to prevent a humanitarian catastrophe at the Austrian-Hungarian border. Today though, we need to be more mindful of European border security. To that end, we want to strengthen the EU border enforcement agency Frontex.
+F1: This is a sensible answer to many - but you have criticized her sharply in 2015, so this is another changed position on your part. Your comments do satisfy Merkel-loyalists and your conservative base alike, but some journalists do point out your pivot. The political extremes might be offended, but perhaps a pivot into the center is still worthwhile for you.
+
+EQ1A1 wenn Opportunism >15
+A1: In hindsight, Merkel’s decision seems right to me, we needed to take those people in to prevent a humanitarian catastrophe at the Austrian-Hungarian border. Today though, we need to be more mindful of European border security. To that end, we want to strengthen the EU border enforcement agency Frontex.
+F1: This is a sensible answer to many - but you have criticized her sharply in 2015, so this is another changed position on your part. The media does not hesitate to point to these discrepancies. A cautious pivot towards the center on refugees could at least unite the party, regardless of the naysayers.
+
+EQ1A3 wenn Opportunism <5
+A3: Merkel was absolutely right to take in these people. We’re saying: Refugees Welcome! As a western country partially responsible for colonialism, we have a responsibility for humanitarian aid, including initiatives to rescue capsized refugee boats in the mediterranean.
+F3: While you might make new friends among suburban <i>Gutmenschen</i>, this is a road too far for most of your original supporters. You’ve openly criticized Merkel back then, and your base sees this as an unwanted pivot to the left on this issue. Horst Seehofer gives you a call - warning you of the AfD flanking you from the right.
+
+EQ1A3 wenn Opportunism >15
+A3: Merkel was absolutely right to take in these people. We’re saying: Refugees Welcome! As a western country partially responsible for colonialism, we have a responsibility for humanitarian aid, including initiatives to rescue capsized refugee boats in the mediterranean.
+F3: From a CSU man and a longtime Seehofer-ally like you, no one buys this. You’re on record criticizing Merkel in 2015 - this statement makes you lose credibility on all sides of the debate. Your numbers tank in the wake of this gaffe, while the AfD silently cheers.
+
+EQ2A3 wenn >10
+A3: I wanted to begin this campaign by bringing us all together - now we can try to tilt the discourse rightwards, taking Merkel supporters with us while framing our conservative positions as more reasonable.
+F3: Shrewd, but clever. A certain pivot rightwards is noted by pundits, but you have vacillated heavily between the poles in the past - just beware that the public doesn’t catch on. Some centrists are a bit dubious, but the broader Union base is enthused that you’re a true Christian Democrat at heart!
+
+EQ2A3 wenn >15
+A3: I wanted to begin this campaign by bringing us all together - now we can try to tilt the discourse rightwards, taking Merkel supporters with us while framing our conservative positions as more reasonable.
+F3: A clever tactic in and of itself - but after your repeated pivots, such an extreme tilt to the Right does not sit well with centrists and Merkel-supporters. Your move has middling successes, and the numbers show that this new course does leave some people behind. Either way, the right flank is enthused that you’re a true Christian Democrat at heart!
+
+EQ8A1 wenn opportunism <5
+A1: I stand by my moderate credentials, I am a proud Christian Democrat. However, we are competing with two left-wing alternatives: in order to win a strong mandate, we need to return to some of my leftwing pivots from the past - they are what brought me success.
+F1: A classic electoral tactic. You sell it well too: after uniting the party behind you in the wake of the nomination contest, the broader electorate does perceive you as more moderate and sensible than Habeck or Scholz. Just be sure that your pivots don’t overstay their welcome.
+
+EQ8A1 wenn opportunism <10
+A1: I stand by my moderate credentials, I am a proud Christian Democrat. However, we are competing with two left-wing alternatives: in order to win a strong mandate, we need to return to some of my leftwing pivots from the past - they are what brought me success.
+F1: A classic electoral tactic. Your pivot comes at the cost of an unenthused party base - but if you keep them from voting for the AfD, there’s not much competition for you. It is a bit of a gamble to pivot so egregiously, but for now, people seem satisfied…
+
+EQ8A1 wenn opportunism >15
+A1: I stand by my moderate credentials, I am a proud Christian Democrat. However, we are competing with two left-wing alternatives: in order to win a strong mandate, we need to return to some of my leftwing pivots from the past - they are what brought me success.
+F1: A classic electoral tactic. Your pivot back to the left is noted, but stunted in effectiveness - your cunning seems to overstay its welcome. Centrists are starting to doubt your trustworthiness, and Habecks and Scholz don’t hesitate to call you out on your power games. You’re gonna have to combat this image, going forward.
+
+EQ9A1 wenn opportunism <5
+A1: I stand for what I think is right, but it’s become clear to me we need to defuse ourselves. Let’s reconcile with the CDU and Merkel - so that their supporters won’t defect to the Liberals, or even our opponents.
+F1: You’re not bad at selling this course: centrists are still enamored with your stances on climate change, while you’ve reassured cultural conservatives with your small detour to the right. Keep it up, and you might just unite enough of the country behind you for a strong mandate - as long as no one catches onto your vacillations…
+
+EQ9A1 wenn opportunism <10
+A1: I stand for what I think is right, but it’s become clear to me we need to defuse ourselves. Let’s reconcile with the CDU and Merkel - so that their supporters won’t defect to the Liberals, or even our opponents.
+F1: It’s true that your efforts have radically changed popular opinion around you for the worse, and adjusting your course could prevent some defections. Mending fences with Merkel should take priority now, you’re still trying to follow in her footsteps. Just be sure your opportunism doesn’t get the better of you…
+
+
+
+EQ9A1 wenn opportunism >15
+A1: I stand for what I think is right, but it’s become clear to me we need to defuse ourselves. Let’s reconcile with the CDU and Merkel - so that their supporters won’t defect to the Liberals, or even our opponents.
+F1: You’re coming off like a political chameleon without principles. While some might appreciate the outreach, and the chancellor stands by your candidacy, she does not seem to be particularly amused about your tactics or your policy stances. The public notices some disagreements within the Union.
+
+EQ4A3 wenn opportunism <5
+A3: While Habeck himself seems to be a relatively scandal-free guy, his co-party leader Annalena Baerbock not only fumbled in her CV and plagiarized in her book, she also reported her extraparliamentary earnings far too late. A party that is led by such careless personalities should not lead Germany!
+F3: Despite Habeck being the candidate, not Baerbock, the scandals do sting his campaign, as she is still his co-party chair. This could be an opening to defuse Green momentum - as long as no one calls you out for disingenuous politicking…
+
+
+EQ4A3 wenn opportunism <10
+A3: While Habeck himself seems to be a relatively scandal-free guy, his co-party leader Annalena Baerbock not only fumbled in her CV and plagiarized in her book, she also reported her extraparliamentary earnings far too late. A party that is led by such careless personalities should not lead Germany!
+F3: Your attacks stick, but Habeck isn’t slow to defend his co-party chair. His criticisms of your political style seem to be perceived just as valid, and your spat ends in a tie, damaging both parties.
+
+
+EQ4A3 wenn opportunism >15
+A3: While Habeck himself seems to be a relatively scandal-free guy, his co-party leader Annalena Baerbock not only fumbled in her CV and plagiarized in her book, she also reported her extraparliamentary earnings far too late. A party that is led by such careless personalities should not lead Germany!
+F3: If Baerbock was the Green candidate, these attacks could go a long way to prove her incompetence. However, now that Habeck is the face of The Greens, people are suspicious of your focus on the female co-party chair - you’re accused of sexism and missing grace, while the media slowly pivots to defending her.
+
+Q15A2 wenn opportunism <5
+A2: Actually, we don’t have much to gain by talking about this topic - many voters see us as responsible for the current situation. Let’s downplay it as much as we can and focus on issues where we are seen as more competent, like matters of security or debt.
+F2: A fatalistic approach, but a reasonable one. Young voters are disappointed by your lack of a proper position, but better not to fan the flames lest you burn yourself, right? Your CSU Ministers are a bit peeved that you aren’t talking about their purported successes, but even they can read the numbers.
+
+
+
+Q15A2 wenn opportunism >10
+A2: Actually, we don’t have much to gain by talking about this topic - many voters see us as responsible for the current situation. Let’s downplay it as much as we can and focus on issues where we are seen as more competent, like matters of security or debt.
+F2: A fatalistic approach. Young voters are disappointed by your lack of a proper position, and your CSU Ministers are a bit peeved that you aren’t talking about their purported successes - but you do avoid taking a side on Merkel’s record.
+
+Q15A2 wenn opportunism >15
+A2: Actually, we don’t have much to gain by talking about this topic - many voters see us as responsible for the current situation. Let’s downplay it as much as we can and focus on issues where we are seen as more competent, like matters of security or debt.
+F2: This simply won’t cut it, the people want answers. The papers start to ask - does Markus Söder even have a plan on digitalization? Your CSU Ministers offer you their track record, but the polls on it are middling - you seem to be stuck between a lack of ideas and societal discontent.
+
+Q16A3 wenn opportunism <5
+A3: First, we need to quickly and diligently help the affected regions with the cleanup operations. After that, we have to guarantee financial emergency aid for affected people, unequivocally.
+F3: Your own state government restricted emergency aid for such situations two years ago. Finding out about this makes it a bit awkward, but fortunately, the press doesn’t focus on that in the wake of this destructive episode. Just be careful - the way you manage this crisis has the potential to reshape this race.
+
+Q16A3 wenn opportunism >15
+A3: First, we need to quickly and diligently help the affected regions with the cleanup operations. After that, we have to guarantee financial emergency aid for affected people, unequivocally.
+F3: At first this quick statement of action is praised by the media, but shortly after, it comes out that your own state government restricted emergency aid for such situations two years ago. The press is relentless in their attacks on your flip-flops, especially since Laschet in NRW has a similar problem. Manage this crisis well, and they might lay off.
+
+Q17A2 wenn opportunism <5
+A2: Of course, I want to get out there! I have to go in there with the rescue teams; I want to be seen as a man of action, with rubber boots, and shovels and all. Get me some cameras, and some impactful photos with the local fire departments.
+F2: No one can tell me otherwise: you simply look good in rubber boots. Your Bavarian base loves the enthusiasm, and your media savvy supplies you with the flair of a folk hero. Your crisis management is widely praised, providing you with a decent polling bump.
+
+Q17A2 wenn opportunism >11
+A2: Of course, I want to get out there! I have to go in there with the rescue teams; I want to be seen as a man of action, with rubber boots, and shovels and all. Get me some cameras, and some impactful photos with the local fire departments.
+F2: While the SPD immediately decries you as copying Gerhard Schröder, there’s no doubt about it: you simply look good in rubber boots. Your Bavarian base loves the enthusiasm, and your media savvy serves you well. Habeck accuses you of treating the disaster as a photo shooting, but the attack remains a partisan one.
+
+Q17A2 wenn opportunism >16
+A2: Of course, I want to get out there! I have to go in there with the rescue teams; I want to be seen as a man of action, with rubber boots, and shovels and all. Get me some cameras, and some impactful photos with the local fire departments.
+F2: <i>Ja, Kruzifix no amoi!</i> The idea was good, but not only are you accused of copying Gerhard Schröder, the press thinks you’re instrumentalizing the suffering of people for your own political gain! Well, maybe you are, but they definitely caught on… Habeck gets a good polling bump as a result. We can bounce back from this Markus, I know we can…
+
+Q18A3 wenn opportunism <5
+A3: Why get head over heels with a statement? Let’s wait until Habeck says something, then respond to him in co-opting the more popular parts of his program, while criticizing bans and other incursions into people’s personal lives. We know what polls well and what doesn’t, let’s use that to our advantage!
+F3: Your plan works flawlessly. Habeck immediately starts pivoting to climate policies, and as you criticize him for politicizing the topic whilst backing yourself up with some of your own initiatives, voters seem to be on your side. <i>Ja mei,</i> you know how the game works!
+
+Q18A3 wenn opportunism >10
+A3: Why get head over heels with a statement? Let’s wait until Habeck says something, then respond to him in co-opting the more popular parts of his program, while criticizing bans and other incursions into people’s personal lives. We know what polls well and what doesn’t, let’s use that to our advantage!
+F3: Not a bad plan. You and Habeck battle it out, and you get to ingratiate yourself to conservatives and centrists. But, <i>Obacht</i>, Markus! With the convenient timing of your statement, your cunning political tactics are noticed by a few journalists. They’re not always praising it…
+
+
+Q18A3 wenn opportunism >15
+A3: Why get head over heels with a statement? Let’s wait until Habeck says something, then respond to him in co-opting the more popular parts of his program, while criticizing bans and other incursions into people’s personal lives. We know what polls well and what doesn’t, let’s use that to our advantage!
+F3: <i>Saxendi!</i> As Habeck stays uncontroversial and regal, many people question your silence on climate policies over the next few days, when you’ve been known to be pretty engaged with the topic normally. Are you trying to avoid giving the Greens a bump? Well, your strategy doesn’t pay off, as voters wanted something more proactive from you…
+
+Q20A1 wenn opportunism <5
+A1: I mean, in the end, the whole thing with the Maut just went horribly wrong, and was a real problem. That’s just a pity. It wasn’t a sole CSU or Scheuer-project though!
+F1: <i>Tja, da fragt man sich, woran hat es jelegen.</i>. <br>Your apology seems evasive, but the topic disappears into the background, mostly. There are enough other things going on that giving a pat mention and moving on seems to be a prudent course of action.
+
+Q20A1 wenn opportunism >15
+A1: I mean, in the end, the whole thing with the Maut just went horribly wrong, and was a real problem. That’s just a pity. It wasn’t a sole CSU or Scheuer-project though!
+F1: <i>Tja, da fragt man sich, woran hat es jelegen.</i>. <br>Your apology seems childish to almost everyone. In fact, when pressed further, you have nothing to give except platitudes - and your nonchalant attitude about a matter which cost the state millions of Euros sticks as a talking point, unfortunately.
+
+Q22A2, nicht EQ1A3, opportunism <5
+A2: It’s a disgrace how so many good people would now have to live under civil strife and a possible Taliban takeover. We at least have to take in those who cooperated with our troops - we owe it to them for their service. We should also further support the UN refugee agency financially.
+F2: You’ve been critical of refugees in the past - this is a change in directions, similar to the one Merkel had in 2015. Nonetheless, people sympathize with the gruesome situation in Afghanistan, so no one blames you for changing your opinion. In fact, a few cultural progressives might have less resistance towards you now.
+
+Q24A3 wenn Opportunism <5, nicht Q8A4
+A3: Scholz likes to pretend he’s a moderate, but the program of his party is ideological and leftwing, with unrealistic promises regarding pensions and the minimum wage. It shows that the SPD as a whole is unfit to govern, and a symbol of past days.
+F3: Not a bad idea. While Scholz is still Merkel’s Vice Chancellor, riffing on the usual Union talking points gets you far enough, as your natural charisma carries them to the centrists you want to win. Habeck doesn’t really latch onto the critique, seeing him as not much of a threat. You seem to narrowly win the debate ahead of him, with Scholz discredited for a final time.
+
+Q24A3 wenn Opportunism >15
+A3: Scholz likes to pretend he’s a moderate, but the program of his party is ideological and leftwing, with unrealistic promises regarding pensions and the minimum wage. It shows that the SPD as a whole is unfit to govern, and a symbol of past days.
+F3: You might have had an opening there, but Scholz has a simple retort: <i>At least he has an ideology</i>. With your opportunism on display for everyone throughout this campaign, you’re shut down pretty quickly. Habeck senses a weakness, pledging a renewed political climate - and as much as you loathe it, the Red-Green flirting carries away a common victory against you.
+
+Q24A4 wenn Opportunism >15
+A4:  Actually, I’ve changed my mind. The mudslinging isn’t worth it - after giving my usual critiques I’ll just wing it and rely on my instincts as a populist to rise above the pack.
+F4: Confidence is everything. <i>Scheiß da nix, dann feid da nix!</i> You’ve perfected the charismatic populism, despite the critics - and even though you haven’t prepared any talking points, as you rattle away your best hits, regardless of any attacks against you or pivots you’re making, somehow… the German people are into it. Congratulations, Markus, you’ve strongmanned yourself to victory in the Triell, somehow. <i>Do legst die nieda.</i>
+
+Q25A4 wenn Opportunism >15
+A4:  Actually, I’ve changed my mind. The mudslinging isn’t worth it - after giving my usual critiques I’ll just wing it and rely on my instincts as a populist to rise above the pack.
+F4: Confidence is everything. <i>Scheiß da nix, dann feid da nix!</i> You’ve perfected the charismatic populism, despite the critics - and even though you haven’t prepared any talking points, as you rattle away your best hits, regardless of any attacks against you or pivots you’re making, somehow… the German people are into it. Congratulations, Markus, you’ve strongmanned yourself to victory in the Triell, somehow. <i>Do legst die nieda.</i>
+
+Q26A2 wenn Opportunism <5
+A2: With two left-leaning politicians debating with me, I will present myself as the voice of reason. We’re not in an ideological bubble - politics need to take care of the political center. We need a strong state when talking about security, and a liberal and worldly state when talking about the people’s quality of life. This is the compass to the future.
+F2: <i>Wea ko, dea ko.</i> You are the centrist in this debate - playing on this is a good strategy. You seem regal, stately, trustworthy, and provide for a good alternative in between two “change”-candidates. While you might not crack open voter bases to the left or right, swing voters are convinced that you had a decent night, although Habeck ain’t far behind.
+
+Q26A2 wenn Opportunism <10
+A2: With two left-leaning politicians debating with me, I will present myself as the voice of reason. We’re not in an ideological bubble - politics need to take care of the political center. We need a strong state when talking about security, and a liberal and worldly state when talking about the people’s quality of life. This is the compass to the future.
+F2: You are the centrist in this debate, after all. Their arguments about the CSU’s costly proposals of the past, like the Maut, are hard for you to refute, but overall, giving a generic, predictable policy outlook polls well with certain voters. Scholz tries a similar strategy - Habeck takes away a win by plurality, but both of you are not far behind.
+
+Q26A2 wenn Opportunism >15
+A2: With two left-leaning politicians debating with me, I will present myself as the voice of reason. We’re not in an ideological bubble - politics need to take care of the political center. We need a strong state when talking about security, and a liberal and worldly state when talking about the people’s quality of life. This is the compass to the future.
+F2: <i>Des wead nix gscheids ned.</i> Their arguments about the CSU’s costly proposals of the past, like the Maut, completely undermines your record. Not only that, with this generic pitch, your trustworthy is called into question: do you actually believe in anything? In any case, Scholz convinces most viewers at home, while you’re far off in Third place.
+
