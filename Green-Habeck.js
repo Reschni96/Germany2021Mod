@@ -2691,7 +2691,7 @@ function openHeadquarter() {
     hqDiv.style.border = '5px solid black';
     hqDiv.style.borderRadius = '10px';
     hqDiv.style.boxShadow = '0 0 15px rgba(0,0,0,0.5)';
-    hqDiv.style.height = '650px';
+    hqDiv.style.height = '680px';
 
 
     // Create inner divs for columns
