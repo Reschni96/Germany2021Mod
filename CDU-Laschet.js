@@ -1719,21 +1719,21 @@ cyoAdventure = function(a) {
     }
     if(ans===4008){
         answerSwapper(4043,4608, false)
-        changeGlobalEffect(77,4083, 0.004)
-        changeGlobalEffect(79,4083, 0.004)
-        changeGlobalEffect(303,4083, -0.008)
+        changeGlobalEffect(77,4043, 0.004)
+        changeGlobalEffect(79,4043, 0.004)
+        changeGlobalEffect(303,4043, -0.008)
     }
     if(ans===4012){
         answerSwapper(4510,4609, false)
-        changeGlobalEffect(77,4083, -0.005)
+        changeGlobalEffect(77,4510, -0.005)
         answerSwapper(4517,4611, false)
         changeGlobalEffect(77,4517, -0.005)
     }
     if(ans===4013){
         answerSwapper(4510,4610, false)
-        changeGlobalEffect(77,4083, -0.005)
-        changeGlobalEffect(78,4083, -0.01)
-        changeGlobalEffect(303,4083, 0.02)
+        changeGlobalEffect(77,4510, -0.005)
+        changeGlobalEffect(78,4510, -0.01)
+        changeGlobalEffect(303,4510, 0.02)
         answerSwapper(4517,4612, false)
         changeGlobalEffect(77,4517, -0.005)
         changeGlobalEffect(78,4517, -0.005)

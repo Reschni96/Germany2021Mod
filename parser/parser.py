@@ -6,12 +6,12 @@ feedback_regex = re.compile(r'F(\d+): (.*)')  # Regular expression to match feed
 
 candidate = 77
 pk_questions = 820  # Starting value for pk for questions
-pk_answers = 4600  # Starting value for pk for answers
-pk_feedback = 5600  # Starting value for pk for feedback
+pk_answers = 4090  # Starting value for pk for answers
+pk_feedback = 5090  # Starting value for pk for feedback
 
 pk_eq_questions = 850  # Starting value for pk for EQ type questions
-pk_eq_answers = 4500  # Starting value for pk for EQ type answers
-pk_eq_feedback = 5500  # Starting value for pk for EQ type feedback
+pk_eq_answers = 4527  # Starting value for pk for EQ type answers
+pk_eq_feedback = 5528  # Starting value for pk for EQ type feedback
 
 processing_answers = False
 processing_feedback = False
