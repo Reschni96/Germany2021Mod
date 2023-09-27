@@ -4253,10 +4253,10 @@ let advisorBrinkhaus = new Advisor(
     1,
     'Ralf Brinkhaus',
     "https://i.ibb.co/R9JSVcN/brinkhaus-cropped.jpg",
-    "The leader of the CDU/CSU parliamentary group can pull some strings to support you if needed. He also has advice for coalition talks.",
+    "The leader of the CDU/CSU parliamentary group can pull some strings to support you if needed. He also an asset in coalition talks.",
     '',
-     noop,
-     noop,
+    () => {coalitions.forEach(coalition => { if ([1, 2, 3, 5, 8].includes(coalition.id)) {coalition.weight *= 1.2;}})},
+     () =>{coalitions.forEach(coalition => { if (1, 2, 3, 5, 8].includes(coalition.id)) {coalition.weight *= 1/1.2;}})},
     "available"
 );
 
@@ -4332,8 +4332,8 @@ let advisorSüssmuth = new Advisor(
     "https://i.ibb.co/WnX63VY/s-ssmuth-cropped.jpg",
     "During her long and storied career, Süssmuth made connections across the political spectrum. SHe'D be an asset in coalition talks with more leftwing parties.",
     "This CDU politician has advocated for a more liberal abortion law for a long time - agree with her to recruit her.",
-    () => {coalitions.forEach(coalition => { if ([12, 13].includes(coalition.id)) {coalition.weight *= 1.3;}})},
-     () =>{coalitions.forEach(coalition => { if ([12, 13].includes(coalition.id)) {coalition.weight *= 1/1.3;}})},
+    () => {coalitions.forEach(coalition => { if ([1, 2, 3, 5].includes(coalition.id)) {coalition.weight *= 1.5;}})},
+     () =>{coalitions.forEach(coalition => { if (1, 2, 3, 5].includes(coalition.id)) {coalition.weight *= 1/1.5;}})},
     "locked"
 );
 
@@ -4365,8 +4365,8 @@ let advisorGünther = new Advisor(
     "https://i.ibb.co/SrknHR7/g-nther-cropped.jpg",
     "As he leads a Jamaica Coalition himself, Günther can help when talking to the Greens and FDP - as well as campaign in Schleswig-Holstein",
     'This CDU Minister-President from Schleswig-Holstein wants you to push the party in a more modern direction.',
-    noop,
-    noop,
+    () => {coalitions.forEach(coalition => { if ([1, 3, 5, 8].includes(coalition.id)) {coalition.weight *= 1.4;}})},
+     () =>{coalitions.forEach(coalition => { if (1, 3, 5, 8].includes(coalition.id)) {coalition.weight *= 1/1.4;}})},
     "locked"
 );
 
@@ -4409,8 +4409,8 @@ let advisorMaaßen = new Advisor(
     "https://i.ibb.co/F5KkDMt/maa-en-cropped.jpg",
     "Hiring Maaßen would show the AfD you're serious about working with them, but be controversial with almost everyone else.",
     'This very controversial former head of the Federal Office for the Protection of the Constitution advocates for cooperation between the CDU and AfD.',
-    () => {},
-    () => {},
+    () => {coalitions.forEach(coalition => { if ([7, 9].includes(coalition.id)) {coalition.weight *= 2;}})},
+     () =>{coalitions.forEach(coalition => { if (7, 9].includes(coalition.id)) {coalition.weight *= 1/2;}})},
     "locked"
 );
 
@@ -4431,8 +4431,8 @@ let advisorSchäuble = new Advisor(
     "https://i.ibb.co/mymCS4V/sch-uble-cropped.webp",
     "In his decade-long political career, Schäuble learned how to appear stately - he'll surely has some advice fo you.",
     "The current president of the Bundestag and former Finance Minister wants you to defend his concept of the 'Black Zero'",
-    () => {},
-    () => {},
+    () => {statesman+=3},
+    () => {statesman=Math.max(0, statesman-3)},
     "locked"
 );
 
@@ -4442,8 +4442,8 @@ let advisorMerkel = new Advisor(
     "https://i.ibb.co/Rh1RdGg/merkel-cropped.jpg",
     "While Merkel doesn't have a lot of time to campaign, her popularity will still help you nationwide. She also has some advice on foreign policy.",
     "To get the current chancellor herself to help you, you should show that you'll defend her legacy.",
-    () => {},
-    () => {},
+    () => {statesman+=1},
+    () => {statesman=Math.max(0, statesman-1)},
     "locked"
 );
 
