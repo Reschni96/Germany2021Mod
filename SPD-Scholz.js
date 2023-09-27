@@ -1802,10 +1802,9 @@ cyoAdventure = function(a) {
     if (competenceMap.hasOwnProperty(ans)) {
         competence += competenceMap[ans];
         competence = Math.max(0, competence);
-        merkelism += (competenceMap[ans])*0.25;
+        merkelism += ((competenceMap[ans])*0.25);
         merkelism = Math.max(0, merkelism);
     }
-    console.log(merkelism)
     if (FisConMap.hasOwnProperty(ans)) {
         FisCon += FisConMap[ans];
         FisCon = Math.max(0, FisCon);
@@ -1818,7 +1817,6 @@ cyoAdventure = function(a) {
 
     if (unityMap.hasOwnProperty(ans)) {
         unity += unityMap[ans];
-        unity = Math.max(0, unity);
     }
 
     if (SocConMap.hasOwnProperty(ans)) {
@@ -1829,9 +1827,7 @@ cyoAdventure = function(a) {
 if (campaignTrail_temp.question_number === 27) {
 
         let selectedQuestion = extraQuestions[8];
-            console.log(merkelism)
             merkelism=Math.floor(merkelism);
-            console.log(merkelism)
             if (merkelism > 14) {
                   campaignTrail_temp.answers_json.find(item => item.pk === 4537).fields.question = '';
                 campaignTrail_temp.answers_json.find(item => item.pk === 4538).fields.question = '';
