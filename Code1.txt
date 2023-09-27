@@ -8,7 +8,16 @@ campaignTrail_temp.candidate_dropout_json = JSON.parse("[{\"model\": \"campaign_
 campaignTrail_temp.temp_election_list = [{"id": 9, "year": 2021, "is_premium": 0, "display_year": "2021DE"}];
 campaignTrail_temp.show_premium = true;
 campaignTrail_temp.premier_ab_test_version = -1;
-campaignTrail_temp.credits = 'u/Vilvilea';
+campaignTrail_temp.credits = "<button onclick='credits()'>Nina&Jaeckex</button>";
+
+  credits = function() {
+    credits = ["Lead Writer, Graphics, Music:", "Jaeckex", "", "Coding, Additional Writing:",  "Nina", "", "Banner by Calgar and Jaeckex", "", "Playtesting:", "Rickroll999, rnmgaming5068, TPLeo, Tomahawk2k, Jackalopemaster, EUIV ETS2", "", "Music Player adapted from 2000N", "Advisor Mode inspired by Sea to Shining Sea", ""]
+    text = "CREDITS:\n\n"
+    for (i in credits) {
+        text += credits[i] + "\n"
+    }
+    alert(text)
+  }
 campaignTrail_temp.coalitionDifficulty = 1;
 campaignTrail_temp.difficulty_level_json = JSON.parse("[{\"model\": \"campaign_trail.difficulty_level\", \"pk\": 1, \"fields\": {\"name\": \"Cakewalk\", \"multiplier\": 1.4}}, {\"model\": \"campaign_trail.difficulty_level\", \"pk\": 2, \"fields\": {\"name\": \"Very Easy\", \"multiplier\": 1.25}}, {\"model\": \"campaign_trail.difficulty_level\", \"pk\": 3, \"fields\": {\"name\": \"Easy\", \"multiplier\": 1.1}}, {\"model\": \"campaign_trail.difficulty_level\", \"pk\": 4, \"fields\": {\"name\": \"Normal\", \"multiplier\": 0.97}}, {\"model\": \"campaign_trail.difficulty_level\", \"pk\": 5, \"fields\": {\"name\": \"Hard\", \"multiplier\": 0.92}}, {\"model\": \"campaign_trail.difficulty_level\", \"pk\": 6, \"fields\": {\"name\": \"Impossible\", \"multiplier\": 0.86}}, {\"model\": \"campaign_trail.difficulty_level\", \"pk\": 7, \"fields\": {\"name\": \"Unthinkable\", \"multiplier\": 0.8}}, {\"model\": \"campaign_trail.difficulty_level\", \"pk\": 8, \"fields\": {\"name\": \"Blowout\", \"multiplier\": 0.72}}, {\"model\": \"campaign_trail.difficulty_level\", \"pk\": 9, \"fields\": {\"name\": \"Disaster\", \"multiplier\": 0.64}}]");
 e=campaignTrail_temp;
@@ -1059,7 +1068,7 @@ function paginateContent() {
 
     // Ensure we don't re-enter applyColorStyles
     function applyColorStyles() {
-        let wordsToFind = ['Advisor Mode?','Change Election Night?', 'Select coalition difficulty:', 'Please select the election you will run in:', 'This scenario was made by u/Vilvilea.', 'Please select your party:', 'Please select your candidate:', 'How would you like the seats to be allocated?', 'Select campaign difficulty:', 'Enable tooltips?'];
+        let wordsToFind = ['Advisor Mode?','Change Election Night?', 'Select coalition difficulty:', 'Please select the election you will run in:', 'This scenario was made by', 'Please select your party:', 'Please select your candidate:', 'How would you like the seats to be allocated?', 'Select campaign difficulty:', 'Enable tooltips?'];
 
         walkAndReplace(document.body, wordsToFind);
     }
