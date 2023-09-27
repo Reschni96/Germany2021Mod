@@ -22,7 +22,7 @@ def csv_to_js_object(key_column, value_column):
 
 if __name__ == '__main__':
     key_column = "PK"
-    value_column = "merkelPoints"
+    value_column = "MerzMap"
 
     js_object_str = csv_to_js_object(key_column, value_column)
 
@@ -30,6 +30,6 @@ if __name__ == '__main__':
     output_file_path = os.path.join(script_dir, 'dict.txt')
 
     with open(output_file_path, 'w', encoding='utf-8') as f:
-        f.write("const merkelPointsMap = " + js_object_str + ";")
+        f.write("const MerzMap = " + js_object_str + ";")
 
     print(f"The JavaScript object has been saved to {output_file_path}")
