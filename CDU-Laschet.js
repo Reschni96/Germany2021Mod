@@ -79,7 +79,7 @@ campaignTrail_temp.game_start_logging_id = '3662498';
     var resigned = false;
     var ideologyCenter = 0;
     var ideologyRight = 0;
-    var mood = "confident";
+    var mood = "Confident";
     var statesman = 5;
     var totalSeats = 0;
     var contestedElection = false;
@@ -188,6 +188,10 @@ const merkelPointsMap = {
         4503: 1,
         4505: 2,
         4506: 1,
+        4532: 1,
+        4533: 1,
+        4041: 1,
+        4505: -2
     };
 // constructs endings based on header and pages
 
@@ -1466,6 +1470,9 @@ cyoAdventure = function(a) {
     } else {
         mood = "Excited"
     }
+    if (merkelPointsMap.hasOwnProperty(ans)) {
+        merkelPoints += merkelPointsMap[ans];
+    }
 
     //advisors
       if(campaignTrail_temp.staff_mode){
@@ -1510,15 +1517,76 @@ cyoAdventure = function(a) {
             advisorHaseloff.unlock()
 
         }
-         if ([4009, 4111].includes(ans) &&campaignTrail_temp.player_answers.includes(4000)){
+         if ([4009, 4011].includes(ans) &&campaignTrail_temp.player_answers.includes(4000)){
             advisorWüst.unlock();
          }
         if(ans===4080){
             advisorMaaßen.unlock()
 
         }
+        //quitting
+        if([4534, 4536, 4537].includes(ans)){
+            advisorMerkel.quit();
 
+        }
+        if([4505, 4506, 4532, 4503].includes(ans)){
+            advisorMerz.quit();
+            advisorSeehofer.quit();
+        }
+        if(ans===4080){
+            advisorMerkel.quit();
+            advisorGünther.quit();
+            advisorChialo.quit();
+            advisorSchäuble.quit();
+            advisorWüst.quit();
+            advisorSüssmuth.quit();
 
+        }
+         if([4046, 4072].includes(ans)){
+            advisorSpahn.quit();
+        }
+        if(ans===4517){
+            advisorSchäuble.quit();
+
+        }
+
+        //drift
+         let result = applyDrift(79, -0.0008 + (dismissalsLeft >= 4 ? 0.0002 : (dismissalsLeft > 1 ? 0 : -0.0002)));
+
+        if(advisorZiemiak.status === 'active'){
+            applyDrift(77, 0.0006);
+        }
+        if(advisorSöder.status === 'active'){
+            applyDrift(77, 0.0025, 3001);
+            applyDrift(77, 0.0003);
+        }
+        if(advisorDobrindt.status === 'active'){
+            applyDrift(77, 0.001, 3001);
+        }
+        if(advisorSeehofer.status === 'active'){
+            applyDrift(77, 0.001, 3001);
+        }
+        if(advisorGünther.status === 'active'){
+            applyDrift(77, 0.002, 3014);
+        }
+        if(advisorHaseloff.status === 'active'){
+            applyDrift(77, 0.001, 3013);
+            applyDrift(77, 0.0012, [3003, 3007, 3012, 3013, 3015]);
+        }
+        if(advisorMaaßen.status === 'active'){
+            applyDrift(77, -0.001);
+            applyDrift(77, 0.0015, [3003, 3007, 3012, 3013, 3015]);
+        }
+        if(advisorWüst.status === 'active'){
+            applyDrift(77, 0.001, 3009);
+        }
+        if(advisorMerkel.status === 'active'){
+            applyDrift(77, 0.0008);
+        }
+         if(advisorChialo.status === 'active'){
+            applyDrift(77, 0.001, 3002)
+            applyDrift(77, 0.002, [3002, 3004, 3005]);
+        }
       }
     //statemanship
 
@@ -1532,9 +1600,7 @@ cyoAdventure = function(a) {
     if (pivotRightMap.hasOwnProperty(ans)) {
         pivotRight += pivotRightMap[ans];
     }
-    if (merkelPointsMap.hasOwnProperty(ans)) {
-        merkelPoints += merkelPointsMap[ans];
-    }
+
     if(campaignTrail_temp.question_number===28){
                 let selectedQuestion = extraQuestions[5];
 
@@ -4297,7 +4363,7 @@ let advisorGünther = new Advisor(
     11,
     'Daniel Günther',
     "https://i.ibb.co/SrknHR7/g-nther-cropped.jpg",
-    "As he leads a Jamaica Coalition himself, Günther can help when talking to the Greens and FDP - as well as advise you on education",
+    "As he leads a Jamaica Coalition himself, Günther can help when talking to the Greens and FDP - as well as campaign in Schleswig-Holstein",
     'This CDU Minister-President from Schleswig-Holstein wants you to push the party in a more modern direction.',
     noop,
     noop,
@@ -4404,8 +4470,8 @@ let advisorsList = [
 ];
 
 if (!campaignTrail_temp.staff_mode){
-    advisorSchmidt.status = "active";
-    advisorKlingbeil.status= "acvtive"
+    advisorZiemiak.status = "active";
+    advisorSpahn.status= "acvtive"
 }
 
 campaignTrail_temp.answers_json.forEach(answer => {

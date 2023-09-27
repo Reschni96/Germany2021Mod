@@ -2340,7 +2340,7 @@ cyoAdventure = function(a) {
 
 
         //global and state advisor effect
-let result = applyDrift(79, -0.0008 + (dismissalsLeft >= 4 ? 0.0002 : (dismissalsLeft > 1 ? 0 : -0.0002)));
+        let result = applyDrift(79, -0.0008 + (dismissalsLeft >= 4 ? 0.0002 : (dismissalsLeft > 1 ? 0 : -0.0002)));
 
         if(advisorHabeck.status === 'active'){
             applyDrift(79, 0.002, 3014);
