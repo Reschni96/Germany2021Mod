@@ -4730,7 +4730,7 @@ advisorsList.forEach(advisor => {
                     explanationBox.style.left = (rect.left - hqRect.left - (18 * 14)) + 'px';
                     explanationBox.style.top = (rect2.top - hqRect.top - (28 * 14)) + 'px';
                 }
-                explanationBox.querySelector('p').innerText = "In this area, a specific characteristic that is unique to your character is described - both with the coloured circles and in text. The more circles you have and they closer they are to green, the better. The value can be influenced by choices during the campaign and advisors and will have an influence on your campaign.";
+                explanationBox.querySelector('p').innerText = "In this area, a specific characteristic that is unique to your character is described - both with the coloured circles and in text. The more circles you have and they closer they are to green, the better. The value can be influenced by choices during the campaign and advisors. It can change some answer effects and will determine a specific impactful question late in the campaign. Hover your name to learn more about your specific characteristic!";
                 break;
             case 2:
                 let rect3 = advisorHeaderDiv.getBoundingClientRect();
@@ -4775,7 +4775,7 @@ advisorsList.forEach(advisor => {
                     explanationBox.style.top = (rect4.top - hqRect.top + (17 * 14)) + 'px';
                 }
                 if(campaignTrail_temp.staff_mode){
-                              explanationBox.querySelector('p').innerText = "This box contains information on the unity of your campaign. Campaign unity is mainly affected by your advisor management - dismissing advisors and having them quit will negatively impact your unity. Unity only has a very minor effect on polling, so don't be afraid to shuffle your advisors every now and then! You can have around five different advisors each campaign before things become to chaotic and you can't dismiss or hire any more advisors.";
+                              explanationBox.querySelector('p').innerText = "This box contains information on the unity of your campaign. Campaign unity is mainly affected by your advisor management - dismissing advisors and having them quit will negatively impact your unity. Unity only has a very minor effect on polling, so don't be afraid to shuffle your advisors every now and then! You can see if you currently get a bonus, nothing or a malus for your polling and how often you can exchange advisors before things become too chaotic.";
                 }
                 else {
                 explanationBox.querySelector('p').innerText = "Campaign unity is a mechanic that's used when playing with active advisor management. In this campaign, it is purely cosmetic and will have no gameplay effect."
