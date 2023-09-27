@@ -154,6 +154,7 @@ const statesmanMap = {
     };
 var pivotLeft = 0;
 var pivotRight = 0;
+var merkelPoints = 0;
 const pivotLeftMap = {
         4032: 1,
         4505: 10,
@@ -178,7 +179,16 @@ const pivotRightMap = {
         4536: 10,
         4537: 10,
     };
-
+const merkelPointsMap = {
+        4004: 2,
+        4006: -1,
+        4007: 1,
+        4028: 1,
+        4030: -1,
+        4503: 1,
+        4505: 2,
+        4506: 1,
+    };
 // constructs endings based on header and pages
 
 const construct = (a = 0) => {
@@ -1456,6 +1466,60 @@ cyoAdventure = function(a) {
     } else {
         mood = "Excited"
     }
+
+    //advisors
+      if(campaignTrail_temp.staff_mode){
+        //advisor stuff
+       if(ans===4027 && !campaignTrail_temp.player_answers.includes(4021)){
+            advisorSöder.unlock();
+            advisorDobrindt.unlock();
+        }
+
+        if (ans===4504){
+            advisorSeehofer.unlock();
+        }
+        if([4006, 4534, 4536, 4537].includes(ans)){
+            advisorMerz.unlock();
+            advisorSeehofer.unlock();
+
+        }
+        if (4012===ans){
+            advisorSchäuble.unlock()
+        }
+        if (merkelPoints>1){
+            advisorMerkel.unlock()
+
+        }
+         if([4505, 4506, 4533].includes(ans)){
+            advisorGünther.unlock();
+
+        }
+          if([4505, 4506, 4532].includes(ans)){
+            advisorGünther.unlock();
+            advisorChialo.unlock()
+        }
+        if([4507, 4533].includes(ans)){
+            advisorChialo.unlock()
+
+        }
+        if([4524, 4525].includes(ans)){
+            advisorSüssmuth.unlock()
+
+        }
+        if(ans===4053){
+            advisorHaseloff.unlock()
+
+        }
+         if ([4009, 4111].includes(ans) &&campaignTrail_temp.player_answers.includes(4000)){
+            advisorWüst.unlock();
+         }
+        if(ans===4080){
+            advisorMaaßen.unlock()
+
+        }
+
+
+      }
     //statemanship
 
     if (statesmanMap.hasOwnProperty(ans)) {
@@ -1468,8 +1532,9 @@ cyoAdventure = function(a) {
     if (pivotRightMap.hasOwnProperty(ans)) {
         pivotRight += pivotRightMap[ans];
     }
-
-    console.log(statesman)
+    if (merkelPointsMap.hasOwnProperty(ans)) {
+        merkelPoints += merkelPointsMap[ans];
+    }
     if(campaignTrail_temp.question_number===28){
                 let selectedQuestion = extraQuestions[5];
 
@@ -4122,7 +4187,7 @@ let advisorBrinkhaus = new Advisor(
     1,
     'Ralf Brinkhaus',
     "https://i.ibb.co/R9JSVcN/brinkhaus-cropped.jpg",
-    "The leader of the CDU/CSU parliamentary group can pull some strings to support you if needed.",
+    "The leader of the CDU/CSU parliamentary group can pull some strings to support you if needed. He also has advice for coalition talks.",
     '',
      noop,
      noop,
@@ -4214,7 +4279,7 @@ let advisorSpahn = new Advisor(
     "All that's needed to convince the current Health Minister to help is not being premature with lifting the COVID lockdowns.",
     noop,
     noop,
-    "locked"
+    "available"
 );
 
 let advisorSeehofer = new Advisor(
@@ -4222,7 +4287,7 @@ let advisorSeehofer = new Advisor(
     'Horst Seehofer',
     "https://i.ibb.co/6JgW67r/seehofer-cropped.jpg",
      'Seehofer is popular in Bavaria and has some advice on how to deal with social topics.',
-    'The current minister of the Interior and former CSU leader is known for his hardline stance on refugees.',
+    'The current minister of the Interior and former CSU leader is known for his hardline stance on refugees and generally conservative outlook.',
     noop,
     noop,
     "locked"
@@ -4323,10 +4388,10 @@ let advisorsList = [
     advisorLammert,
     advisorJung,
     advisorLinnemann,
+    advisorSpahn,
     advisorSöder,
     advisorDobrindt,
     advisorSüssmuth,
-    advisorSpahn,
     advisorSeehofer,
     advisorGünther,
     advisorHaseloff,
