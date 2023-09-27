@@ -6355,7 +6355,7 @@ function getTooltips(str) {
 
     tooltipList.forEach((tooltip, index) => {
         // Adjust the regex to match searchString potentially surrounded by “ and followed by optional punctuation
-        let regex = new RegExp(`\\b(?:“)?(${tooltip.searchString})(?:”)?([.,;!?]?)\\b`, 'g');
+        let regex = new RegExp(`(?:“|"|\\b)(${tooltip.searchString})(?:\\b|”-|"-|"|”|)`, 'g');
         let match;
         while ((match = regex.exec(str)) !== null) {
             matches.push({
@@ -6363,6 +6363,9 @@ function getTooltips(str) {
                 end: match.index + match[0].length - (match[0].endsWith('”') ? 1 : 0) - (match[2] ? 1 : 0), // Adjust for potential ending ” and punctuation
                 tooltipIndex: index
             });
+              if (tooltip.searchString === "Netzwerker") {
+                console.log("Match found:", match[0], "at position:", match.index);
+            }
         }
     });
 
@@ -6407,6 +6410,7 @@ function applyTooltipsToObject(obj) {
 }
 
 applyTooltipsToObject(campaignTrail_temp);
+applyTooltipsToObject(extraQuestions);
 
 }
 

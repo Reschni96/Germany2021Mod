@@ -3515,5 +3515,5 @@ function applyTooltipsToObject(obj) {
 }
 
 applyTooltipsToObject(campaignTrail_temp);
-
+applyTooltipsToObject(extraQuestions);
 }

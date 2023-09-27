@@ -3941,7 +3941,7 @@ function applyTooltipsToObject(obj) {
 }
 
 applyTooltipsToObject(campaignTrail_temp);
-
+applyTooltipsToObject(extraQuestions);
 }
 
 $("#game_window")[0].style.backgroundImage = "url(https://media.discordapp.net/attachments/1131296206908301423/1154740369246924810/CSUMixUnten.png)";

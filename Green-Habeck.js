@@ -5603,7 +5603,7 @@ function applyTooltipsToObject(obj) {
 }
 
 applyTooltipsToObject(campaignTrail_temp);
-
+applyTooltipsToObject(extraQuestions);
 }
 
 campaignTrail_temp.global_parameter_json[0].fields.question_count = 35;
