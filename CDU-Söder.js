@@ -88,7 +88,31 @@ campaignTrail_temp.game_start_logging_id = '3662498';
     var resetPage = false;
     const firedKeys = {};
     var bavariaPoints = 0;
+    var merkelPoints = 0;
 
+const merkelPointsMap = {
+        4030: 2,
+        4501: 1,
+        4503: 1,
+        4505: 1,
+        4506: 2,
+        4533: 1,
+        4535: 1,
+    };
+const bavariaPointsMap = {
+        4007: 1,
+        4009: 1,
+        4010: 1,
+        4017: 1,
+        4022: 1,
+        4028: 2,
+        4029: 1,
+        4505: 1,
+        4044: 1,
+        4054: 1,
+        4065: 1,
+        4100: 1,
+    };
 const opportunismMap = {
         4000: -1,
         4001: 2,
@@ -1375,6 +1399,14 @@ cyoAdventure = function(a) {
         laschetMean += laschetMean[ans];
 
     }
+    if (merkelPointsMap.hasOwnProperty(ans)) {
+        merkelPoints += merkelPoints[ans];
+
+    }
+    if (bavariaPointsMap.hasOwnProperty(ans)) {
+        bavariaPoints += bavariaPoints[ans];
+
+    }
     if (campaignTrail_temp.question_number === 28) {
 
         let selectedQuestion = extraQuestions[6];
@@ -1414,7 +1446,7 @@ cyoAdventure = function(a) {
         if ([4502, 4503].includes(ans)){
             advisorMüller.unlock()
         }
-        if (merkelPoints>1 && (campaignTrail_temp.player_answers.includes[4106]||ans===4106){
+        if (merkelPoints>1 && (campaignTrail_temp.player_answers.includes[4106])){
             advisorMerkel.unlock()
         }
         if (bavariaPoints>2){
@@ -4343,8 +4375,8 @@ let advisorStoiber = new Advisor(
     "https://i.ibb.co/rphTQ89/stoiber-cropped.jpg",
     "Bavarians will love to see you campaign with Stoiber, and he has some tips about avoiding to be seen as opportunistic as well.",
     "This legendary CSU politician and former chancellor candidate wnats you to keep the CSU strong despite running a national campaign.",
-    () => {opportunism=Math.max(0, opportunism-2},
-    () => {opportunism+=2)},
+    () => {opportunism=Math.max(0, opportunism-2)},
+    () => {opportunism+=2},
     "locked"
 );
 
@@ -4411,8 +4443,8 @@ let advisorMüller = new Advisor(
     "https://i.ibb.co/kHch13g/m-ller-cropped.jpg",
     "The current Minister for for Economic Cooperation and Development is a principled man - hiring him could help with your image.",
     "To recruit the current Minister for for Economic Cooperation and Development, soften your position on refugees.",
-    () => {opportunism=Math.max(0, opportunism-3},
-    () => {opportunism+=3)},
+    () => {opportunism=Math.max(0, opportunism-3)},
+    () => {opportunism+=3},
     "locked"
 );
 
