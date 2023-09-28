@@ -1096,7 +1096,7 @@ function paginateContent() {
         {searchString: "nefarious revenge", explanationText: "<img src=https://cdn.discordapp.com/attachments/1131296206908301423/1150427920221868092/scholzrevenge.webp>"},
         {searchString: "such a gesture", explanationText: "<img src=https://cdn.discordapp.com/attachments/1131296206908301423/1149749756587950260/1200x675.jpg> Great. Just great."},
         {searchString: "Peer Steinbrück’s", explanationText: "Centrist SPD politician, also former Minister of Finances (2005-2009). Was SPD chancellor candidate in 2013, handily defeated by Angela Merkel."},
-        {searchString: "Jetzt. Wie wir unser Land erneuern.", explanationText: "“Now. How we renew our country”"},
+        {searchString: "Jetzt. Wie wir unser Land erneuern", explanationText: "“Now. How we renew our country”"},
         {searchString: "The Campaign Trail", explanationText: "good game"},
         {searchString: "Taliban", explanationText: "Islamistic terror organization, ruling over Afghanistan. Founded from mujahedeen, during the war against the soviet union. Responsible for the 9/11 attacks, and probably the single most well known terror group."},
         {searchString: "Hans-Georg Maaßen", explanationText: "Former president of the Federal Office for the Protection of the Constitution. Retired in 2018, after laying an absurd focus on left-wing radicalism, showing suspiciously less attention to the right wing. Afterwards, he made several antisemitic, far-right and even conspiratory statements. Currently chair of the Werte-Union, a right-wing CDU suborganization."},

@@ -6375,12 +6375,14 @@ preloadImages(pictureDict);
 
 
 if(e.displayTooltips){
-function getTooltips(str) {
+    function getTooltips(str) {
     let matches = [];
 
     tooltipList.forEach((tooltip, index) => {
         // Adjust the regex to match searchString potentially surrounded by “ and followed by optional punctuation
-        let regex = new RegExp(`\\b(?:“)?(${tooltip.searchString})(?:”)?([.,;!?]?)\\b`, 'g');
+       let regex = new RegExp(`(?<=\\b|\\s|^|“)${tooltip.searchString}(?=[.,;!?]?\\b|\\s|”|$)`, 'g');
+
+
         let match;
         while ((match = regex.exec(str)) !== null) {
             matches.push({
@@ -6431,8 +6433,11 @@ function applyTooltipsToObject(obj) {
     }
 }
 
-applyTooltipsToObject(campaignTrail_temp);
+applyTooltipsToObject(campaignTrail_temp.questions_json);
+applyTooltipsToObject(campaignTrail_temp.answers_json);
+applyTooltipsToObject(campaignTrail_temp.answer_feedback_json);
 applyTooltipsToObject(extraQuestions);
+
 }
 
 campaignTrail_temp.global_parameter_json[0].fields.question_count = 35;
