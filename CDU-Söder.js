@@ -87,6 +87,7 @@ campaignTrail_temp.game_start_logging_id = '3662498';
     var weightsUpdated = false;
     var resetPage = false;
     const firedKeys = {};
+    var bavariaPoints = 0;
 
 const opportunismMap = {
         4000: -1,
@@ -1394,6 +1395,109 @@ cyoAdventure = function(a) {
         e.questions_json.splice(29, 0, selectedQuestion);
 
     }
+     //advisors
+      if(campaignTrail_temp.staff_mode){
+        //advisor stuff
+       if(ans===4027 && laschetMean<0){
+            advisorLaschet.unlock();
+            advisorZiemiak.unlock();
+        }
+
+        if (ans===4504){
+            advisorSeehofer.unlock();
+        }
+        if([4534, 4536, 4537].includes(ans)){
+            advisorMerz.unlock();
+            advisorSeehofer.unlock();
+
+        }
+        if ([4502, 4503].includes(ans)){
+            advisorMüller.unlock()
+        }
+        if (merkelPoints>1 && (campaignTrail_temp.player_answers.includes[4106]||ans===4106){
+            advisorMerkel.unlock()
+        }
+        if (bavariaPoints>2){
+            advisorStoiber.unlock();
+
+        }
+
+          if([4505, 4506, 4532].includes(ans)){
+            advisorGünther.unlock();
+        }
+
+        if([4524, 4525].includes(ans)){
+            advisorSüssmuth.unlock()
+
+        }
+        if(ans===4053){
+            advisorHaseloff.unlock()
+
+        }
+         if (ans===4005){
+            advisorKuban.unlock();
+         }
+        if(ans===4080){
+            advisorMaaßen.unlock()
+
+        }
+        //quitting
+        if([4534, 4536, 4537, 4037].includes(ans)){
+            advisorMerkel.quit();
+
+        }
+        if([4505, 4506, 4532, 4503].includes(ans)){
+            advisorMerz.quit();
+            advisorSeehofer.quit();
+        }
+        if(ans===4080){
+            advisorMerkel.quit();
+            advisorGünther.quit();
+            advisorGöppel.quit();
+            advisorSüssmuth.quit();
+
+        }
+         if([4046, 4072].includes(ans)){
+            advisorHuml.quit();
+        }
+        if([4522, 4525, 4083].includes(ans)){
+            advisorSeehofer.quit();
+        }
+
+
+        //drift
+         let result = applyDrift(79, -0.0008 + (dismissalsLeft >= 4 ? 0.0002 : (dismissalsLeft > 1 ? 0 : -0.0002)));
+
+        if(advisorZiemiak.status === 'active'){
+            applyDrift(77, 0.0003);
+        }
+        if(advisorLaschet.status === 'active'){
+            applyDrift(77, 0.002, 3009);
+            applyDrift(77, 0.0002);
+        }
+
+        if(advisorSeehofer.status === 'active'){
+            applyDrift(77, 0.001, 3001);
+        }
+        if(advisorGünther.status === 'active'){
+            applyDrift(77, 0.002, 3014);
+        }
+        if(advisorHaseloff.status === 'active'){
+            applyDrift(77, 0.001, 3013);
+            applyDrift(77, 0.0012, [3003, 3007, 3012, 3013, 3015]);
+        }
+        if(advisorMaaßen.status === 'active'){
+            applyDrift(77, -0.001);
+            applyDrift(77, 0.0015, [3003, 3007, 3012, 3013, 3015]);
+        }
+
+        if(advisorMerkel.status === 'active'){
+            applyDrift(77, 0.0008);
+        }
+        if(advisorStoiber.status === 'active'){
+            applyDrift(77, 0.001, 3001);
+        }
+      }
     //mini-cyoa
         if(ans===4503){
         answerSwapper(4083,4611, false)
@@ -1459,7 +1563,7 @@ cyoAdventure = function(a) {
         changeGlobalEffect(77,4105, -0.008)
         changeStateEffect(77, 4105, 3009, -0.01);
     }
-    if (campaignTrail_temp.question_number===6&&laschetMean<-1){
+    if (campaignTrail_temp.question_number===6&&laschetMean<0){
         answerSwapper(4027,4624, false)
         changeGlobalEffect(77,4027, 0.005)
         changeStateEffect(77, 4027, 3009, 0.015);
@@ -4093,8 +4197,8 @@ let advisorWegner = new Advisor(
     "https://i.ibb.co/MBsTGH4/wegner-cropped.jpg",
     "The leader of the CDU in Berlin is a supporter of yours and offered help with getting you nominated as chancellor candidate",
     '',
-    () => {{coalitions.forEach(coalition => { if ([1, 2, 3, 5, 8].includes(coalition.id)) {coalition.weight *= 1.2;}})};addAdvisorTooltips([4023, 4024, 4025, 4026, 4078, 4079, 4080, 4081], ["Mr. Laschet - I know Mr. Söder would surely be a popular candidate, but I think the CDU should enforce its traditional prerogative to provide the Union’s chancellor candidate.", "This won’t be popular with the public or Söder himself, but the Union’s backrooms were always a place of immense power…", "Don’t pick this one, please use my help - I could whip up some votes, so that you don’t lose this contest.", "There’s a surprising amount of Söder sympathizers, but I know you have the votes. Go ahead.", "That’s right, hit them where it hurts. The Left party is still a dangerous element in our political sphere, and the German people agree.", "I think our cooperation with the Social Democrats was fruitful, but the polls show something different. I’ll start to call some colleagues from the Pizza-connection…", "Mr. Laschet, the AfD is dangerous, radical and constitutionally dubious. There will be no cooperation with them, as long as I am in government, and the rest of the country expects as much from us!", "Black-Yellow would be a dream, but I doubt it’s much more than that, considering the political environment…"], "https://i.ibb.co/R9JSVcN/brinkhaus-cropped.jpg");updateBrinkhausHighlight()},
-     () =>{{coalitions.forEach(coalition => { if ([1, 2, 3, 5, 8].includes(coalition.id)) {coalition.weight *= 1/1.2;}})};removeAdvisorTooltips([4023, 4024, 4025, 4026, 4078, 4079, 4080, 4081], "https://i.ibb.co/R9JSVcN/brinkhaus-cropped.jpg");updateBrinkhausHighlight()},
+    ()=>söderSchmeme += 2,
+    ()=>söderSchmeme += -2,
     "available"
 );
 
@@ -4104,8 +4208,16 @@ let advisorBlume = new Advisor(
     "https://i.ibb.co/x7RjH9M/blume-cropped.jpg",
     "As general secretary of the CSU, he's helping drive CSU turnout in Bavaria.",
     '',
-     noop,
-     noop,
+     ()=>{campaignTrail_temp.answer_score_state_json.forEach((item) => {
+          if (item.fields.affected_candidate === 3001 && item.fields.state === 77) {
+            item.fields.state_multiplier *= 1.15;
+          }
+        });},
+     ()=>{campaignTrail_temp.answer_score_state_json.forEach((item) => {
+          if (item.fields.affected_candidate === 3001 && item.fields.state === 77) {
+            item.fields.state_multiplier *= 1/1.15;
+          }
+        });},
     "available"
 );
 
@@ -4231,8 +4343,8 @@ let advisorStoiber = new Advisor(
     "https://i.ibb.co/rphTQ89/stoiber-cropped.jpg",
     "Bavarians will love to see you campaign with Stoiber, and he has some tips about avoiding to be seen as opportunistic as well.",
     "This legendary CSU politician and former chancellor candidate wnats you to keep the CSU strong despite running a national campaign.",
-    () => {},
-    () => {},
+    () => {opportunism=Math.max(0, opportunism-2},
+    () => {opportunism+=2)},
     "locked"
 );
 
@@ -4258,7 +4370,6 @@ let advisorMerz = new Advisor(
 );
 const MerzMap = {
         4014: 1,
-        4015: 1,
         4030: 1,
         4504: 1,
         4039: 1,
@@ -4300,8 +4411,8 @@ let advisorMüller = new Advisor(
     "https://i.ibb.co/kHch13g/m-ller-cropped.jpg",
     "The current Minister for for Economic Cooperation and Development is a principled man - hiring him could help with your image.",
     "To recruit the current Minister for for Economic Cooperation and Development, soften your position on refugees.",
-    () => {statesman+=3;addAdvisorTooltips([4024], ["Mr. Laschet, I believe you are the right man to lead this country. Let me make a few calls."],"https://i.ibb.co/mymCS4V/sch-uble-cropped.webp")},
-     () => {statesman=Math.max(0, statesman-3);removeAdvisorTooltips([4024], "https://i.ibb.co/mymCS4V/sch-uble-cropped.webp")},
+    () => {opportunism=Math.max(0, opportunism-3},
+    () => {opportunism+=3)},
     "locked"
 );
 

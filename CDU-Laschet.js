@@ -1497,10 +1497,6 @@ cyoAdventure = function(a) {
             advisorMerkel.unlock()
 
         }
-         if([4505, 4506, 4533].includes(ans)){
-            advisorGünther.unlock();
-
-        }
           if([4505, 4506, 4532].includes(ans)){
             advisorGünther.unlock();
             advisorChialo.unlock()
