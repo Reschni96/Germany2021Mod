@@ -166,6 +166,12 @@ e.multiple_endings = true;
     //all coalitions with the winning party have their weight multiplied by this value
     addCoalitions();
 
+    for (let x in e.final_state_results) {
+    if (e.final_state_results[x].result[0].candidate === 303) {
+        ctsAchievment("Liberal Ländle")
+        break;
+    }
+}
   }
 
   if(!negotiationsDone){
@@ -3516,4 +3522,10 @@ function applyTooltipsToObject(obj) {
 
 applyTooltipsToObject(campaignTrail_temp);
 applyTooltipsToObject(extraQuestions);
+}
+
+function ctsAchievment(achievement){
+    if(campaignTrail_temp.CTS){
+        unlockAchievement(achievement);
+    }
 }

@@ -281,6 +281,12 @@ loadScript('https://code.highcharts.com/highcharts.js', function() {
     //all coalitions with the winning party have their weight multiplied by this value
     addCoalitions();
 
+    for (let x in e.final_state_results) {
+    if (e.final_state_results[x].result[0].candidate === 303) {
+        ctsAchievment("Liberal Ländle")
+        break;
+    }
+}
   }
 
 
@@ -5665,3 +5671,9 @@ $("#trackSel")[0].style.backgroundImage = "url(https://cdn.discordapp.com/attach
 $("#trackSel")[0].style.backgroundSize = "cover";
 $("#timeTracker")[0].style.backgroundImage = "url(https://cdn.discordapp.com/attachments/1131296206908301423/1154740751083782254/CDUMixUnten.png)";
 $("#timeTracker")[0].style.backgroundSize = "cover";
+
+function ctsAchievment(achievement){
+    if(campaignTrail_temp.CTS){
+        unlockAchievement(achievement);
+    }
+}

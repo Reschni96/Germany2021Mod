@@ -305,7 +305,15 @@ e.multiple_endings = true;
 
     possibleCoalitions = coalitionTalks(e.final_overall_results);
 
+    //all coalitions with the winning party have their weight multiplied by this value
     addCoalitions();
+
+    for (let x in e.final_state_results) {
+    if (e.final_state_results[x].result[0].candidate === 303) {
+        ctsAchievment("Liberal Ländle")
+        break;
+    }
+}
   }
 
   if(LaschetTime){
@@ -5595,3 +5603,9 @@ $("#trackSel")[0].style.backgroundImage = "url(https://media.discordapp.net/atta
 $("#trackSel")[0].style.backgroundSize = "cover";
 $("#timeTracker")[0].style.backgroundImage = "url(https://media.discordapp.net/attachments/1131296206908301423/1154740369246924810/CSUMixUnten.png)";
 $("#timeTracker")[0].style.backgroundSize = "cover";
+
+function ctsAchievment(achievement){
+    if(campaignTrail_temp.CTS){
+        unlockAchievement(achievement);
+    }
+}

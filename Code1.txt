@@ -1621,4 +1621,11 @@ function paginateContent() {
     invisibleElement.style.display = 'none';
     invisibleElement.id = 'my-invisible-element';
     document.body.appendChild(invisibleElement);
+
+    campaignTrail_temp.achievements = {
+    "Liberal Ländle" : {
+        "image" : "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Stray_kitten_Rambo002.jpg/1200px-Stray_kitten_Rambo002.jpg",
+        "description" : "Have the FDP win a state"
+    }
+    }
 }

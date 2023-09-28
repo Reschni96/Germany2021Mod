@@ -894,15 +894,21 @@ endingPicker = () => {
         var musicPlayer = document.getElementById('music_player');
         musicPlayer.remove();
 
-        //adjustment magic to guarantee the correct ranking
-        adjustSeatAllocation(campaignTrail_temp, missedCandidates);
+    //adjustment magic to guarantee the correct ranking
+    adjustSeatAllocation(campaignTrail_temp, missedCandidates);
 
-        possibleCoalitions = coalitionTalks(e.final_overall_results);
+    possibleCoalitions = coalitionTalks(e.final_overall_results);
 
-        //all coalitions with the winning party have their weight multiplied by this value
-        addCoalitions();
+    //all coalitions with the winning party have their weight multiplied by this value
+    addCoalitions();
 
+    for (let x in e.final_state_results) {
+    if (e.final_state_results[x].result[0].candidate === 303) {
+        ctsAchievment("Liberal Ländle")
+        break;
     }
+}
+  }
     if(HabeckTime){
   if (e.final_overall_results[0].candidate === 79){
           e.header="<h2>“Habeck saves flailing Green campaign”</h2>"
@@ -6021,3 +6027,9 @@ $("#trackSel")[0].style.backgroundImage = "url(https://cdn.discordapp.com/attach
 $("#trackSel")[0].style.backgroundSize = "cover";
 $("#timeTracker")[0].style.backgroundImage = "url(https://cdn.discordapp.com/attachments/1131296206908301423/1154740026542927922/GruneMixUnten.png)";
 $("#timeTracker")[0].style.backgroundSize = "cover";
+
+function ctsAchievment(achievement){
+    if(campaignTrail_temp.CTS){
+        unlockAchievement(achievement);
+    }
+}
