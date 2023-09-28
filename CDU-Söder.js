@@ -310,7 +310,7 @@ e.multiple_endings = true;
 
     for (let x in e.final_state_results) {
     if (e.final_state_results[x].result[0].candidate === 303) {
-        ctsAchievment("Liberal Ländle")
+        ctsAchievement("Liberal Ländle")
         break;
     }
 }
@@ -1131,6 +1131,7 @@ function endingTwoBuilder(){
 
       switch(selectedCoalition.id){
       case 1:
+      ctsAchievement("An even grander coalition");
       header = "<h2>“Kenya - An Even Grander Coalition.”</h2>"
 
           if(coalitionLeader === playerLeader){
@@ -1144,7 +1145,7 @@ function endingTwoBuilder(){
           break;
 
       case 2:
-
+         ctsAchievement("No escape from the inevitable")
          header = "<h2>“GroKo - There's No Escape From The Inevitable.”</h2>"
          if(coalitionLeader === playerLeader){
             coalitionText = "It's a bit of a paradox really. The population as a whole doesn't like it. The parties involved certainly don't like it. The media is tired of it. But yet again, for the fourth time in five elections, a Grand coalition between the CDU/CSU and the SPD has formed a governing majority, and with it, a centrist administration under a Christian Democrat. Immediately, you’re facing harsh demands from the left of the SPD, who are not alone in suspecting something to be broken with this political system. Between all the compromises, the absence of sweeping reforms or any real enthusiasm, both the Greens, who were counting on you, and the populist fringes of this country already stir the pot of discontent… tread lightly: <i>Söder I</i> might soon be sitting on a powder keg."
@@ -1158,6 +1159,7 @@ function endingTwoBuilder(){
       break;
 
       case 3:
+      ctsAchievement("Modern coalition for modern times");
       header = "<h2>“Black Green - A Modern Coalition For Modern Times?”</h2>"
       if(coalitionLeader === playerLeader){
             coalitionText = "Many suspected it to be in the air for some time now, especially as you and Habeck became chancellor candidates. When the Jamaica talks of 2017 failed due to the <i>FDP</i> feeling shunned, the love affair of CDU and Greens was sure to be blossoming into this arrangement. The coalition talks have gone surprisingly smoothly, with both parties agreeing on the importance of more climate action. In the end, you've forged a solid coalition agreement that both parties are mostly happy with. People are hopeful that the dream team of you as Chancellor and Robert Habeck as Minister of Finances and Vice Chancellor will combine sensibility and moderation with a path to sorely needed reforms - although you can be sure that the SPD as a strong opposition won’t make it easy for you . For now, popular opinion on <i>Söder I</i> is on your side, so try not to squander your momentum!"
@@ -1177,6 +1179,7 @@ function endingTwoBuilder(){
 
       case 5:
         header = "<h2>“Jamaica - Lessons Learned Four Years Later”</h2>"
+        ctsAchievement("Lessons Learned");
         if(coalitionLeader === playerLeader){
             coalitionText = "In 2017, a Jamaica coalition under Merkel was in the air, but negotiations fell through when FDP leader Christian Lindner famously proclaimed 'It's better not to govern than to govern wrongly.' This time, the three parties seemed to have learned from the fiasco: these negotiations were much more productive, ending in success. There were some compromises, as the FDP drew a hard bargain on economically interventionist climate policies, but in the end, all parties are hopeful to have started a new age in German politics - under your stewardship. People are hopeful that <i>Söder I</i>, with Habeck as Minister of the Interior and Lindner as Minister of Finances can lead the country in a more modern, yet moderate direction after eight years of the Grand Coalition."
             playerFate = chancellorFateHappy;
@@ -1199,6 +1202,7 @@ function endingTwoBuilder(){
             var majority = selectedCoalition.parties.reduce((sum, partyId) => sum + e.final_overall_results.find(p => p.candidate === partyId).electoral_votes, 0);
 
             if(majority-totalSeats/2 < 30){
+                ctsAchievement("Total chaos")
                 header =  "<h2>“Total Chaos - No Majority On The Sixth Ballot”</h2>"
                 coalitionText = "When you expressed your interest in forming a novelty Bahamas coalition during the campaign, there was outrage. You expected it, but that’s the way the country was headed, you told yourself. When you started the negotiations, the outrage only grew and grew, with several prominent Christian Democrats denouncing you, even leaving the party. The FDP immediately slumped in polls. With a lot of grit and determination, you’ve managed to forge a coalition agreement nonetheless. In theory, this should be it, but there’s one small problem - as ballot after ballot fails to produce a majority for you as chancellor, it’s clear: this won’t do. <i>You</i> won’t do. Since the ballots are secret, there’s no certainty if it’s the Union and FDP’s moderates, or extremists of the AfD, who are sabotaging you. The Bundestag becomes the scene of shouting matches not seen since the 1970s, as the streets of Berlin and other major cities are engulfed in demonstrations, sparingly turning violent, as scathing editorials eviscerate you in the press. And with all this, you don’t even get vindication."
                 secondPage = true;
@@ -1206,6 +1210,7 @@ function endingTwoBuilder(){
                     secondPageText = "Eventually, after it becomes clear that you won't be able to get a majority, an alliance of SPD, Greens and moderates from the Union and FDP, elect CDU Minister-President Daniel Günther of Schleswig-Holstein as somewhat of an interim chancellor. He is seen as a more moderate figure, but his new role for now consists of nothing more than stabilizing the country, until the inevitable new elections. The <i>Bahamas-Trio</i> is at a breaking point, and there's chatter of a new centrist party getting formed by the members who voted for Günther, while the Free Voters surge in polling just as much. After this disaster, you've lost the trust of all wings of the party. It’s only a few days until you resign CSU leadership, disgraced. Enjoy your retirement - history will not look kindly on you, Mr. Söder. “Da Deife häifd seine Leit - aba hoin duad a's aa.”"
                     }
                 else{
+                ctsAchievement("Firewall burned down")
                 secondPageText = "You attempt to sway every MP of the moderate wings, while SPD and Greens try to form a minority government. Eventually, after a week of balloting, you manage to get elected chancellor with a majority of just two votes. You had to make so many, sometimes conflicting concessions, that it's unclear how you want to actually govern. The CDU/CSU and FDP also have bled MPs, some becoming independents, others joining the Free Voters or even the Center-Left opposition. Your own state parties have either denounced this coalition or have seen their governing partnerships with SPD and Greens collapse. The demonstrations in the streets show no sign of stopping, in fact, the violence starts to continue, as AfD-radicals already demand a crack-down on ‘Antifa-terrorists’. Well, Mr. Söder, you have fulfilled your ambition and have been elected chancellor - but was it really worth it? <br>To hell with it. You’re chancellor. Yes, it was."
                 }
 
@@ -1213,11 +1218,13 @@ function endingTwoBuilder(){
 
             else{
             header =  "<h2>“Bahamas - The Firewall Burned Down”</h2>"
+            ctsAchievement("Firewall burned down")
             coalitionText = "When you expressed your interest in forming a novelty Bahamas coalition during the campaign, there was outrage. You expected it, but that’s the way the country was headed, you told yourself.. When you started the negotiations, the outrage only grew and grew, with several prominent Christian Democrats denouncing you, even leaving the party. The FDP immediately slumped in polls. With a lot of grit and determination, you’ve managed to forge a coalition agreement nonetheless. That will surely show those out-of-touch leftists! There are just a few small problems: This arrangement is far from stable. The CDU/CSU and FDP have bled MPs, with some becoming independents, others joining the Free Voters or even the Center-Left opposition. Your own state parties have either denounced this coalition or have seen their governing partnerships with SPD and Greens collapse. The demonstrations in the streets aren't stopping. Well, <i>Söder I</i> is a reality - but was it really worth it? <br>To hell with it. You’re chancellor. Yes, it was."
             }
             break;
         case 8:
             header =  "<h2>“Black-Yellow - The Classic Dream-Team Returns”</h2>"
+            ctsAchievement("Dream-Team")
             coalitionText = "It seemed mathematically impossible for the last few months, but with grit and determination, you managed to wrestle your way ahead. It paid off, as without a hitch, within a few weeks, you managed to form the preferred coalition of you, your party, and the broad center-right in this country. The CDU/CSU and FDP are natural governing partners, forging a coalition agreement to give Germany’s economy the jolt it needs. <i>Söder I</i> will be a combination of modernizing what needs to be modernized and conserving what needs to be conserved. Congratulation, Mr. Söder - you really don’t settle for anything lesser. “Wanns koane Gnedl gibt, is ned gesn.”"
             playerFate = chancellorFateHappy;
             break;
@@ -1225,11 +1232,13 @@ function endingTwoBuilder(){
             contestedText="";
             negotiations="";
             header =  "<h2>“Black-Blue - Unite The Right”</h2>"
+            ctsAchievement("Novelty", false)
             coalitionText = "When you expressed your interest in forming a novelty Bahamas coalition during the campaign, there was outrage. You expected it, but that’s the way the country was headed, you told yourself. When it turned out you didn't actually need the FDP and started negotiating with the AfD alone, the outrage only grew - this was going to be a coalition of conservatives only. You pulled through, and while the most extreme of AfD MP’s have caused problems, you’ve been elected chancellor. That will surely show those out-of-touch leftists! There is just a small problem: This coalition you formed is far from stable. The CDU/CSU has bled MPs, with some becoming independents, many joining the surging FDP, others flirting with the Center-Left opposition. Your own state parties have either denounced this coalition or have seen their governing partnerships with SPD and Greens collapse. The demonstrations in the streets aren't stopping. Well, <i>Söder I</i> is a reality - but was it really worth it? <br>To hell with it. You’re chancellor. Yes it was."
             break;
 
         case 10:
         header = "<h2>“Germany - Land Of Compromises”</h2>"
+        ctsAchievement("Land of Compromises")
 
           if(coalitionLeader === playerLeader){
 
@@ -3462,8 +3471,8 @@ advisorsList.forEach(advisor => {
         let dismissBtn = document.createElement('button');
         dismissBtn.innerText = 'Dismiss';
         dismissBtn.style.margin = '1em';
-        dismissBtn.style.backgroundColor = 'grey';
-        dismissBtn.style.color = "white";
+        dismissBtn.style.backgroundColor = 'lightblue';
+        dismissBtn.style.color = "black";
         dismissBtn.style.boxShadow = '0 0 20px 4px rgba(173, 216, 230, 0.9)';
 
         if (dismissalsLeft > 0 && campaignTrail_temp.staff_mode) {
@@ -4248,8 +4257,8 @@ let advisorWegner = new Advisor(
     "https://i.ibb.co/MBsTGH4/wegner-cropped.jpg",
     "The leader of the CDU in Berlin is a supporter of yours and offered help with getting you nominated as chancellor candidate",
     '',
-    ()=>söderSchmeme += 2,
-    ()=>söderSchmeme += -2,
+    ()=>SöderScheme += 2,
+    ()=>SöderScheme += -2,
     "available"
 );
 
@@ -5604,8 +5613,9 @@ $("#trackSel")[0].style.backgroundSize = "cover";
 $("#timeTracker")[0].style.backgroundImage = "url(https://media.discordapp.net/attachments/1131296206908301423/1154740369246924810/CSUMixUnten.png)";
 $("#timeTracker")[0].style.backgroundSize = "cover";
 
-function ctsAchievment(achievement){
-    if(campaignTrail_temp.CTS){
-        unlockAchievement(achievement);
+function ctsAchievement(achievement, difficultyChecker = true){
+    if ((difficultyChecker && campaignTrail_temp.difficulty_level_multiplier<=1)||!difficultyChecker)
+        if(campaignTrail_temp.CTS){
+            unlockAchievement(achievement);
+        }
     }
-}

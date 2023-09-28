@@ -168,7 +168,7 @@ e.multiple_endings = true;
 
     for (let x in e.final_state_results) {
     if (e.final_state_results[x].result[0].candidate === 303) {
-        ctsAchievment("Liberal Ländle")
+        ctsAchievement("Liberal Ländle")
         break;
     }
 }
@@ -3524,8 +3524,9 @@ applyTooltipsToObject(campaignTrail_temp);
 applyTooltipsToObject(extraQuestions);
 }
 
-function ctsAchievment(achievement){
-    if(campaignTrail_temp.CTS){
-        unlockAchievement(achievement);
+function ctsAchievement(achievement, difficultyChecker = true){
+    if ((difficultyChecker && campaignTrail_temp.difficulty_level_multiplier<=1)||!difficultyChecker)
+        if(campaignTrail_temp.CTS){
+            unlockAchievement(achievement);
+        }
     }
-}

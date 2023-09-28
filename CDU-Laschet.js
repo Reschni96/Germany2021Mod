@@ -283,7 +283,7 @@ loadScript('https://code.highcharts.com/highcharts.js', function() {
 
     for (let x in e.final_state_results) {
     if (e.final_state_results[x].result[0].candidate === 303) {
-        ctsAchievment("Liberal Ländle")
+        ctsAchievement("Liberal Ländle")
         break;
     }
 }
@@ -1135,6 +1135,7 @@ function endingTwoBuilder(){  var header = null;
 
   	switch(selectedCoalition.id){
   	case 1:
+  	ctsAchievement("An even grander coalition");
   	header = "<h2>“Kenya - An Even Grander Coalition.”</h2>"
 
       	if(coalitionLeader === playerLeader){
@@ -1148,7 +1149,7 @@ function endingTwoBuilder(){  var header = null;
       	break;
 
   	case 2:
-
+        ctsAchievement("No escape from the inevitable")
      	header = "<h2>“GroKo - There's No Escape FromThe Inevitable.”</h2>"
      	if(coalitionLeader === playerLeader){
         	coalitionText = "It's a bit of a paradox really. The population as a whole doesn't like it. The parties involved certainly don't like it. The media is tired of it. But yet again, for the fourth time in five elections, a Grand coalition between the CDU/CSU and the SPD has formed a governing majority, and with it, a centrist administration under a Christian Democrat. Immediately, you’re facing harsh demands from the left of the SPD, who are not alone in suspecting something to be broken with this political system. Between all the compromises, the absence of sweeping reforms or any real enthusiasm, the populist fringes of this country already stir the pot of discontent… tread lightly: <i>Laschet I</i> might soon be sitting on a powder keg."
@@ -1163,6 +1164,7 @@ function endingTwoBuilder(){  var header = null;
 
   	case 3:
   	header = "<h2>“Black Green - A Modern Coalition For Modern Times?”</h2>"
+  	ctsAchievement("Modern coalition for modern times");
   	if(coalitionLeader === playerLeader){
         	coalitionText = "Many suspected it to be in the air for some time now. When the Jamaica talks of 2017 failed due to the <i>FDP</i> feeling shunned, the love affair of CDU and Greens was sure to be blossoming into this arrangement. While the negotiations were tough, especially on traffic, the economy and coal, in the end, you've forged a coalition agreement that both parties seem to be happy with. People are hopeful that you've combined sensibility and moderation with a path to sorely needed reforms - although you can be sure that the SPD won’t make it easy for you as a strong opposition. For now, popular opinion on <i>Laschet I</i> is on your side, so try not to squander your momentum!"
         	playerFate = chancellorFateHappy;
@@ -1181,6 +1183,7 @@ function endingTwoBuilder(){  var header = null;
 
   	case 5:
     	header = "<h2>“Jamaica - Lessons Learned Four Years Later”</h2>"
+    	ctsAchievement("Lessons Learned");
     	if(coalitionLeader === playerLeader){
         	coalitionText = "In 2017, a Jamaica coalition under Merkel was in the air, but negotiations fell through when FDP leader Christian Lindner famously proclaimed 'It's better not to govern than to govern wrongly.' This time, the three parties seemed to have learned from the fiasco: these negotiations were much more productive, ending in success. The coalition agreement is supported by all three parties, although there are plenty of compromises contained within Germany’s first three-party-coalition. Still, people are hopeful that <i>Laschet I</i>, with Baerbock as Foreign Minister and Lindner as Minister of Finances can lead the country in a more modern, yet moderate direction after eight years of the Grand Coalition."
         	playerFate = chancellorFateHappy;
@@ -1200,16 +1203,19 @@ function endingTwoBuilder(){  var header = null;
       	case 7:
         	contestedText="";
         	negotiations="";
+
         	var majority = selectedCoalition.parties.reduce((sum, partyId) => sum + e.final_overall_results.find(p => p.candidate === partyId).electoral_votes, 0);
 
         	if(majority-totalSeats/2 < 35){
             	header =  "<h2>“Total Chaos - No Majority On The Sixth Ballot”</h2>"
+            	ctsAchievement("Total chaos")
             	coalitionText = "When you expressed your interest in forming a novelty Bahamas coalition during the campaign, there was outrage. You expected it, but that’s the way the country was headed, you told yourself. When you started the negotiations, the outrage only grew and grew, with several prominent Christian Democrats denouncing you, even leaving the party. The FDP immediately slumped in polls. With a lot of grit and determination, you’ve managed to forge a coalition agreement nonetheless. In theory, this should be it, but there’s one small problem - as ballot after ballot fails to produce a majority for you as chancellor, it’s clear: this won’t do. <i>You</i> won’t do. Since the ballots are secret, there’s no certainty if it’s the Union and FDP’s moderates, or extremists of the AfD, who are sabotaging you. The Bundestag becomes the scene of shouting matches not seen since the 1970s, as the streets of Berlin and other major cities are engulfed in demonstrations, sparingly turning violent, as scathing editorials eviscerate you in the press. And with all this, you don’t even get vindication."
             	secondPage = true;
             	if(majority-totalSeats/2 < 20){
                 	secondPageText = "Eventually, after it becomes clear that you won't be able to get a majority, an alliance of SPD, Greens and moderates from the Union and FDP, elect CDU Minister-President Daniel Günther of Schleswig-Holstein as interim chancellor. He is seen as a more moderate figure, but his new role for now consists of nothing more than stabilizing the country, until the inevitable new elections. The <i>Bahamas-Trio</i> is at a breaking point, and there's chatter of a new centrist party getting formed by the members who voted for Günther, while the Free Voters surge in polling just as much. After this disaster, you've lost the trust of all wings of the party. It’s only a few days until you resign the leadership, disgraced. Enjoy your retirement - history will not look kindly on you, Mr. Laschet."
                 	}
             	else{
+            	 ctsAchievement("Firewall burned down")
             	secondPageText = "You attempt to sway every MP of the moderate wings, while SPD and Greens try to form a minority government. Eventually, after a week of balloting, you manage to get elected chancellor with a majority of just two votes. You had to make so many, sometimes conflicting concessions, that it's unclear how you want to actually govern. The CDU/CSU and FDP also have bled MPs, some becoming independents, others joining the Free Voters or even the Center-Left opposition. Your own state parties have either denounced this coalition or have seen their governing partnerships with SPD and Greens collapse. The demonstrations in the streets show no sign of stopping, in fact, the violence starts to continue, as AfD-radicals already demand a crack-down on ‘Antifa-terrorists’. Well, Mr. Laschet, you have fulfilled your ambition and have been elected chancellor - but was it really worth it? The catholic deep inside you feels the need to confess."
             	}
 
@@ -1217,11 +1223,13 @@ function endingTwoBuilder(){  var header = null;
 
         	else{
         	header =  "<h2>“Bahamas - The Firewall Burned Down”</h2>"
+        	ctsAchievement("Firewall burned down")
         	coalitionText = "When you expressed your interest in forming a novelty Bahamas coalition during the campaign, there was outrage. You expected it, but that’s the way the country was headed, you told yourself.. When you started the negotiations, the outrage only grew and grew, with several prominent Christian Democrats denouncing you, even leaving the party. The FDP immediately slumped in polls. With a lot of grit and determination, you’ve managed to forge a coalition agreement nonetheless. That will surely show those out-of-touch leftists! There are just a few small problems: This arrangement is far from stable. The CDU/CSU and FDP have bled MPs, with some becoming independents, others joining the Free Voters or even the Center-Left opposition. Your own state parties have either denounced this coalition or have seen their governing partnerships with SPD and Greens collapse. The demonstrations in the streets aren't stopping. Well, <i>Laschet I</i> is a reality - but was it really worth it? The catholic deep inside you feels the need to confess."
         	}
         	break;
     	case 8:
         	header =  "<h2>“Black-Yellow - Laschet And Lindner, The Dream-Team”</h2>"
+        	ctsAchievement("Dream-Team")
         	coalitionText = "It seemed mathematically impossible for the last few months, but with grit and determination, you managed to wrestle your way ahead. It paid off, as without a hitch, within a few weeks, you got the privilege of forming the same coalition you've successfully led in North Rhine-Westphalia for the last four years. The CDU/CSU and FDP are natural governing partners, forging a coalition agreement to give Germany’s economy the jolt it needs. <i>Laschet I</i> will be a combination of modernizing what needs to be modernized and conserving what needs to be conserved. Congratulations Mr. Laschet - you’ve become the <i>Landesvater</i> of all of Germany, it seems."
         	playerFate = chancellorFateHappy;
         	break;
@@ -1229,10 +1237,12 @@ function endingTwoBuilder(){  var header = null;
         	contestedText="";
         	negotiations="";
         	header =  "<h2>“Black-Blue - Unite The Right”</h2>"
+        	ctsAchievement("Novelty", false)
         	coalitionText = "When you expressed your interest in forming a novelty Bahamas coalition during the campaign, there was outrage. You expected it, but that’s the way the country was headed, you told yourself. When it turned out you didn't actually need the FDP and started negotiating with the AfD alone, the outrage only grew - this was going to be a coalition of conservatives only. You pulled through, and while the most extreme of AfD MP’s have caused problems, you’ve been elected chancellor. That will surely show those out-of-touch leftists! There is just a small problem: This coalition you formed is far from stable. The CDU/CSU has bled MPs, with some becoming independents, many joining the surging FDP, others flirting with the Center-Left opposition. Your own state parties have either denounced this coalition or have seen their governing partnerships with SPD and Greens collapse. The demonstrations in the streets aren't stopping. Well, <i>Laschet I</i> is a reality - but was it really worth it? The catholic deep inside you feels the need to confess."
         	break;
 
     	case 10:
+    	ctsAchievement("Land of Compromises")
     	header = "<h2>“Germany - Land Of Compromises”</h2>"
 
       	if(coalitionLeader === playerLeader){
@@ -5672,8 +5682,9 @@ $("#trackSel")[0].style.backgroundSize = "cover";
 $("#timeTracker")[0].style.backgroundImage = "url(https://cdn.discordapp.com/attachments/1131296206908301423/1154740751083782254/CDUMixUnten.png)";
 $("#timeTracker")[0].style.backgroundSize = "cover";
 
-function ctsAchievment(achievement){
-    if(campaignTrail_temp.CTS){
-        unlockAchievement(achievement);
+function ctsAchievement(achievement, difficultyChecker = true){
+    if ((difficultyChecker && campaignTrail_temp.difficulty_level_multiplier<=1)||!difficultyChecker)
+        if(campaignTrail_temp.CTS){
+            unlockAchievement(achievement);
+        }
     }
-}

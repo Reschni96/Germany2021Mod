@@ -1622,10 +1622,75 @@ function paginateContent() {
     invisibleElement.id = 'my-invisible-element';
     document.body.appendChild(invisibleElement);
 
-    campaignTrail_temp.achievements = {
-    "Liberal Ländle" : {
-        "image" : "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Stray_kitten_Rambo002.jpg/1200px-Stray_kitten_Rambo002.jpg",
-        "description" : "Have the FDP win a state"
+campaignTrail_temp.achievements = {
+
+    "An even grander coalition": {
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Stray_kitten_Rambo002.jpg/1200px-Stray_kitten_Rambo002.jpg",
+        "description": "Form the Kenya-coalition.",
+        "cannotBeCheated": true
+    },
+    "Progressive Compromise": {
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Stray_kitten_Rambo002.jpg/1200px-Stray_kitten_Rambo002.jpg",
+        "description": "Form the Traffic Light-coalition.",
+        "cannotBeCheated": true
+    },
+    "Land of Compromises": {
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Stray_kitten_Rambo002.jpg/1200px-Stray_kitten_Rambo002.jpg",
+        "description": "Form the Germany-coalition.",
+        "cannotBeCheated": true
+    },
+    "Lessons Learned": {
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Stray_kitten_Rambo002.jpg/1200px-Stray_kitten_Rambo002.jpg",
+        "description": "Form the Jamaica-coalition.",
+        "cannotBeCheated": true
+    },
+
+    "Leftist Unity": {
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Stray_kitten_Rambo002.jpg/1200px-Stray_kitten_Rambo002.jpg",
+        "description": "Form the Red-Red-Green-coalition.",
+        "cannotBeCheated": true
+    },
+    "No escape from the inevitable": {
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Stray_kitten_Rambo002.jpg/1200px-Stray_kitten_Rambo002.jpg",
+        "description": "Form another Grand Coalition.",
+        "cannotBeCheated": true
+    },
+    "Modern coalition for modern times": {
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Stray_kitten_Rambo002.jpg/1200px-Stray_kitten_Rambo002.jpg",
+        "description": "Form the Black-Green-coalition.",
+        "cannotBeCheated": true
+    },
+    "Unforeseen comeback": {
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Stray_kitten_Rambo002.jpg/1200px-Stray_kitten_Rambo002.jpg",
+        "description": "Form the Red-Green-coalition.",
+        "cannotBeCheated": true
+    },
+    "Dream-Team": {
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Stray_kitten_Rambo002.jpg/1200px-Stray_kitten_Rambo002.jpg",
+        "description": "Form the Black-Yellow-coalition.",
+        "cannotBeCheated": true
+    },
+    "Firewall burned down": {
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Stray_kitten_Rambo002.jpg/1200px-Stray_kitten_Rambo002.jpg",
+        "description": "Form the Bahamas-coalition.",
+        "cannotBeCheated": true
+    },
+    "Total chaos": {
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Stray_kitten_Rambo002.jpg/1200px-Stray_kitten_Rambo002.jpg",
+        "description": "Have the parliament erupt in chaos over your coalition.",
+        "cannotBeCheated": true
+    },
+    "Novelty": {
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Stray_kitten_Rambo002.jpg/1200px-Stray_kitten_Rambo002.jpg",
+        "description": "On any difficulty, form a rare coalition (Black-Blue, Social-Liberal, Red-Red, Green-Left, Green-Yellow)",
+        "cannotBeCheated": true
+    },
+    "Liberal Ländle": {
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Stray_kitten_Rambo002.jpg/1200px-Stray_kitten_Rambo002.jpg",
+        "description": "Have the FDP win a state",
+        "cannotBeCheated": true
     }
-    }
+}
+
+
 }

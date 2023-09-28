@@ -904,7 +904,7 @@ endingPicker = () => {
 
     for (let x in e.final_state_results) {
     if (e.final_state_results[x].result[0].candidate === 303) {
-        ctsAchievment("Liberal Ländle")
+        ctsAchievement("Liberal Ländle")
         break;
     }
 }
@@ -1770,6 +1770,7 @@ function endingTwoBuilder() {
 
 	switch (selectedCoalition.id) {
     	case 1:
+    	    ctsAchievement("An even grander coalition");
         	header = "<h2>“Kenya - An Even Grander Coalition”</h2>"
 
         	if (coalitionLeader.party === 77) {
@@ -1802,6 +1803,7 @@ function endingTwoBuilder() {
         	break;
 
     	case 3:
+    	    ctsAchievement("Modern coalition for modern times");
         	header = "<h2>“Black Green - A Modern Coalition For Modern Times?”</h2>"
         	if (coalitionLeader === playerLeader) {
             	coalitionText = "Many suspected it to be in the air for some time now. When the Jamaica talks of 2017 failed due to the <i>FDP</i> feeling shunned, the love affair of CDU and Greens was sure to be blossoming into this arrangement. In a bit of a twist, you seem to have taken a liking to the Union’s newfound conservationism, as the 2020’s begin with a Baden-Württemberg variation-Black-Green coalition. The negotiations were tough, particularly on social and economical issues, but in the end, you've forged a coalition agreement that both parties seem to be happy with. People are hopeful that you've combined the desire for sorely needed reforms with moderation and sensibility - although you can be sure that the SPD as a strong opposition won’t make it easy for you, picking at you from the left. For now, popular opinion on <i>Baerbock I</i> is on your side, so try not to squander your momentum!"
@@ -1816,6 +1818,7 @@ function endingTwoBuilder() {
         	}
         	break;
     	case 4:
+    	    ctsAchievement("Unforeseen comeback");
         	header = "<h2>“Green-Red - An Unforeseen Comeback After 16 Years”</h2>"
 
         	if (coalitionLeader === playerLeader) {
@@ -1832,6 +1835,7 @@ function endingTwoBuilder() {
         	break;
 
     	case 5:
+    	    ctsAchievement("Lessons Learned");
         	header = "<h2>“Jamaica - Lessons Learned Four Years Later”</h2>"
         	if (coalitionLeader === playerLeader) {
             	coalitionText = "In 2017, a Jamaica coalition under Merkel was in the air, but negotiations fell through when FDP leader Christian Lindner famously proclaimed 'It's better not to govern than to govern wrongly.' This time, the three parties seemed to have learned from the fiasco: the negotiations, headed by you, were much more successful, resulting in an idiosyncratic, centrist-reformist coalition agreement all three parties can agree with. Your base isn't happy with all provisions, particularly on economic matters, though as chancellor, you can hopefully tame the fiscal conservatism of your two partners to make room for your agenda. With the SPD as a vocal opposition, picking at your left wing, you’ll have a lot of expectations to meet - still, people are hopeful that <i>Baerbock I</i> can lead the country into a moderate, yet modern direction."
@@ -1851,6 +1855,7 @@ function endingTwoBuilder() {
         	break;
     	case 6:
         	header = "<h2>“Traffic Light - The Progressive Compromise”</h2>"
+        	ctsAchievement("Progressive Compromise");
 
         	if (coalitionLeader === playerLeader) {
             	coalitionText = "”Conceptually and mathematically difficult to imagine” - these were the words that Christian Lindner, leader of the FDP, used when asked about the traffic light coalition before the election. Apparently, you had enough imagination to form it anyway. The SPD found natural common ground with you, but even the FDP has committed to modernize this country, although as a fiscally conservative counterweight, with Lindner as Minister of Finances. With reforms on socio-cultural issues, a higher minimum wage and most importantly, a new climate policy, your ambition is no less than to redefine the political discourse in this country. The Lights are Green for progress. Will <i>Baerbock I</i> win out, or will the non-progressives prevail? Only time will tell…"
@@ -1905,18 +1910,21 @@ function endingTwoBuilder() {
 
         	if (playerLeader === coalitionLeader) {
             	if (majority - totalSeats / 2 < 10) {
+            	    ctsAchievement("Total chaos")
                 	header = "<h2>“Onset Of Chaos - No Majority On The Second Ballot”</h2>"
                 	coalitionText = "It has almost become a tradition for the CDU/CSU and FDP to warn about the “danger” of a Red-Red-Green coalition on the federal level. You knew they were just fearmongering, but you’ve seemingly underestimated the reservations towards this arrangement. After tough negotiations, you’ve whittled the Left down to accept “the current status of Germany as a NATO-member”, writing an unabashedly leftist coalition agreement. Of course, you’re within constitutional constraints - you wouldn’t want it any other way, you’re not a socialist after all. No danger there. No, the danger was in the politics: as the results for the first ballot were announced, you didn’t have the votes. Surely a fluke, you thought - but after the second ballot also failed to elect you, you get nervous. Since the ballots are secret, you don't know who voted against you - either the communists inside the Left can’t abandon their dogma, or those moderates in SPD and Greens weren't bluffing after all."
                 	secondPage = true;
                 	if (majority - totalSeats / 2 < 5) {
                     	secondPageText = "After days of balloting and many more attempts, it becomes clear to everyone: it’s not going to happen. There just isn't going to be a majority for you. In another ballot, the parliamentary group of your party votes against you as their leader, sidelining you for a new round of coalition talks, this time, including the FDP. It's unclear what happens now - a coalition under a new Green leadership, another party winning the chancellorship or a snap election all seem like possibilities. No matter what, your political career has taken a serious hit. Sorry Annalena, it seems you will make history as the woman who just couldn't become chancellor. No matter - you’ve done your best."
                 	} else {
+                    	ctsAchievement("Leftist Unity")
                     	secondPageText = "You went back to the drawing board - you had to commit to a broader reappropriations-law, while the Left would allow you to seek votes for Foreign Policy elsewhere. On the third ballot, you finally get elected by just one vote. You've become chancellor - but this arrangement seems very unstable. With an ambitious climate policy, a higher minimum wage, a federal rent moratorium, the reintroduction of the wealth tax, a unitary health insurance system and a complete rethinking of the economic consensus, you’ll have your work cut out, all the while making sure that you don’t lose your ability to act on Foreign Policy. With rumors of dissent from the ranks of Realos and Seeheimer on one side, and communists on the other, while the rightists are prepared to obstruct you at every corner, the coming months of <i>Baerbock I</i> will be a trial like no other. Good luck on leading this country into the first <b>Leftist Decade</b>."
                     	playerFate = chancellorFate;
                 	}
 
             	} else {
                 	header = "<h2>“Red-Red-Green - Leftist Unity”</h2>"
+                	ctsAchievement("Leftist Unity")
                 	coalitionText = "It was clear to you, this country needs serious reforms. With the neoliberal course of the FDP, the antiquated policies of the Union and the fascist menace reentering parliament, there was only one option for a new beginning: a coalition with the Left. You’d think they didn’t have a lot of leverage due to their middling performance, but with their steadfast non-interventionist Foreign Policy, the coalition talks were quite tough. Most days of the several months you’ve taken to negotiate were spent on that topic, while the others forged an unabashedly leftist policy regime, consisting of the abolition of Hartz IV, the reintroduction of the wealth tax, a federal rent moratorium, a minimum wage of 12.50€, a unitary health insurance system and a complete rethinking of the economic consensus. In the end, you did it - you got the Left to acknowledge the “current status of NATO membership”, shelving most discussions about Foreign Policy until it’s relevant. The CDU/CSU and FDP already have put up the redbaiting barricades, preparing to obstruct and sue wherever possible - and with your own moderate wings unnerved, you have a lot of work to do. <i>Baerbock I</i> will be a difficult test of your political ability."
                 	playerFate = chancellorFate;
             	}
@@ -1924,16 +1932,19 @@ function endingTwoBuilder() {
 
             	if (majority - totalSeats / 2 < 10) {
                 	header = "<h2>“Onset Of Chaos - No Majority On The Second Ballot”</h2>"
+                	ctsAchievement("Total chaos")
                 	coalitionText = "It has almost become a tradition for the CDU/CSU and FDP to warn about the “danger” of a Red-Red-Green coalition on the federal level. You knew they were just fearmongering, but you’ve seemingly underestimated the reservations towards this arrangement. After tough negotiations, you and Scholz whittled the Left down to accept “the current status of Germany as a NATO-member”, writing an unabashedly leftist coalition agreement. Of course, you’re within constitutional constraints - Scholz was still Merkel’s Minister of Finances after all. No danger there. No, the danger was in the politics: Scholz didn’t have the votes on the first ballot. And it wasn’t a fluke - the second ballot was just as inconclusive. Since the ballots are secret, you don't know who voted against him - either the communists inside the Left have too much reservations with Scholz as a personality, or those moderates in SPD and Greens weren't bluffing after all."
                 	secondPage = true;
                 	if (majority - totalSeats / 2 < 5) {
                     	secondPageText = "After days of balloting and many more attempts, it becomes clear to everyone: it’s not going to happen. There just isn't going to be a majority for Scholz. Finally, he goes back to the drawing board, reinviting the bourgeois. It's unclear what happens now - will the center be able to agree after such a debacle, will someone else win the chancellorship or will a snap election be called? One thing’s for certain - the personality Scholz is damaged goods - as are you, having taken part in the disaster. Prepare yourself for a leadership challenge - this time, from your right."
                 	} else {
+                    	ctsAchievement("Leftist Unity")
                     	secondPageText = "You went back to the drawing board - you and Scholz had to commit to a broader reappropriations-law, while the Left would allow you to seek votes for Foreign Policy elsewhere. On the third ballot, he finally gets elected by just one vote. You’ve made Olaf Scholz become chancellor - but this arrangement seems very unstable. With your ambitious climate policy, a higher minimum wage, a federal rent moratorium, the reintroduction of the wealth tax, a unitary health insurance system and a complete rethinking of the economic consensus, he’ll have his work cut out for him. All the while you might have the <i>worst job</i> of this arrangement, making sure that the coalition doesn’t lose its ability to act on Foreign Policy. With rumors of dissent from the ranks of Realos and Seeheimer on one side, and communists on the other, while the rightists are prepared to obstruct you at every corner, the coming months of <i>Scholz I</i> will be a trial like no other."
                     	playerFate = viceFate
                 	}
 
             	} else {
+                	ctsAchievement("Leftist Unity")
                 	header = "<h2>“Red-Red-Green - Leftist Unity”</h2>"
                 	coalitionText = "It came as somewhat of a surprise - Olaf Scholz was known as a moderate inside his party - and yet, he had refused to rule out a government participation of the Left party. Even more surprising was that he entertained it after his electoral comeback. And now, the negotiations are through - Germany will get a Red-Red-Green government. With their steadfast non-interventionist Foreign Policy, the talks were quite tough. You’ve taken the main role of negotiating on that front, while the others forged an unabashedly leftist policy regime, consisting of the abolition of Hartz IV, the reintroduction of the wealth tax, a federal rent moratorium, a minimum wage of 12€, a unitary health insurance system and a complete rethinking of the economic consensus. In the end, you did it - you got the Left to acknowledge the “current status of NATO membership”. You have the worst job in this arrangement, making sure that the coalition doesn’t lose its ability to act on Foreign Policy, even in the face of crisis. The CDU/CSU and FDP already have put up the redbaiting barricades, preparing to obstruct and sue wherever possible - and with your own moderate wings unnerved, the first leftist government of Germany will have a lot of work to do. <i>Scholz I</i> will be a difficult test of everyone’s political abilities."
                 	playerFate = viceFate;
@@ -1949,12 +1960,14 @@ function endingTwoBuilder() {
 
     	case 14:
         	header = "<h2>“Green-Left - Ecosocialism Achieved”</h2>"
+        	ctsAchievement("Novelty", false)
         	coalitionText = "A Green-Left coalition is historic in several ways: The first coalition on a federal level to not include the SPD or CDU, the first to include the Left Party and the most leftwing coalition ever formed in general. You were able to get a lot of your key promises into the coalition agreement, though foreign policy remained a contentious topic and some are concerned about the stability of this new government. Now it's time to govern though, no matter how much the fascist snowflakes may complain.<br><b>Alerta, Alerta, Antifascista!</b>"
         	playerFate = chancellorFate;
         	break;
 
     	case 15:
         	header = "<h2>“Green-Yellow - Dawn Of A New Age”</h2>"
+        	ctsAchievement("Novelty", false)
         	coalitionText = "The shock already began on election night - the results were already a wake-up call for the old parties of the Grand Coalition. You’ve gotten a strong mandate for a political restart, and you took it to heart, engaging in talks with the FDP, promising the same. A Green-Yellow coalition is historic: The first coalition on a federal level to not include the SPD or CDU, a stunning rebuke of the old party system. The centrist opposition of Green Party and the FDP have banded together, to take over the reigns of government in an absolute novelty of a coalition. You become the chancellor of the “modernization alliance”, with Lindner as Minister of Finances and Vice Chancellor, even though your parties still have their own differences over economical and ecological matters. Nonetheless, you’ve committed to several reforms, as especially small businesses seem to rejoice. Only <i>Baerbock I</i> can give Germany the reforms it needs to stay relevant."
         	playerFate = chancellorFate;
         	break;
@@ -6031,8 +6044,9 @@ $("#trackSel")[0].style.backgroundSize = "cover";
 $("#timeTracker")[0].style.backgroundImage = "url(https://cdn.discordapp.com/attachments/1131296206908301423/1154740026542927922/GruneMixUnten.png)";
 $("#timeTracker")[0].style.backgroundSize = "cover";
 
-function ctsAchievment(achievement){
-    if(campaignTrail_temp.CTS){
-        unlockAchievement(achievement);
+function ctsAchievement(achievement, difficultyChecker = true){
+    if ((difficultyChecker && campaignTrail_temp.difficulty_level_multiplier<=1)||!difficultyChecker)
+        if(campaignTrail_temp.CTS){
+            unlockAchievement(achievement);
+        }
     }
-}
