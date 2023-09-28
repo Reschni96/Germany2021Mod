@@ -5,9 +5,9 @@ answer_regex = re.compile(r'.*A(\d+): (.*)')  # Regular expression to match answ
 feedback_regex = re.compile(r'F(\d+): (.*)')  # Regular expression to match feedback lines
 
 candidate = 77
-pk_questions = 840  # Starting value for pk for questions
-pk_answers = 4550  # Starting value for pk for answers
-pk_feedback = 5550  # Starting value for pk for feedback
+pk_questions = 830  # Starting value for pk for questions
+pk_answers = 4300  # Starting value for pk for answers
+pk_feedback = 5300  # Starting value for pk for feedback
 
 pk_eq_questions = 850  # Starting value for pk for EQ type questions
 pk_eq_answers = 4527  # Starting value for pk for EQ type answers
