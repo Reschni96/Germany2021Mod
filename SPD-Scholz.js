@@ -77,6 +77,7 @@ campaignTrail_temp.game_start_logging_id = '3662498';
     var moderate = 0;
     var merkelism = 8;
     var mood = "Pessimistic"
+    var resigned = false;
     var muetzenich = false;
     var wirecardMails = false;
     var totalSeats = 0;
@@ -497,20 +498,38 @@ e.multiple_endings = true;
 
   if(!negotiationsDone){
   if(muetzenich){
-      if (e.final_overall_results[0].candidate === 78){
-          e.header="<h2>“The SPD and Rolf Mützenich are the winners of this night”</h2>"
-          e.pages=[`<p>To the surprise of most pundits, Rolf Mützenich has actually won the election for the SPD and now appears to be on track to be elected chancellor. Considering the polling last year, his performance is widely celebrated, and more than a few party members express relief that he was selected over you. Privately, you think that this was just a winnable election, with how much Baerbock and Laschet screwed up, but oh well - you are happy that the SPD won, too!</p><p> Maybe there will be a spot in Mützenich's cabinet for you, or maybe you will return to the state politics of Hamburg. Either way, it's unlikely you'll reach a role as important as Vice Chancellor again, but wh knows - maybe at some point, the SPD will decide to nominate you after all.</p>` ]
-          e.image=["https://www.bundestag.de/resource/image/225552/3x4/594/792/41c47f0a63894c714cff2ac9fc890afb/2AC076E6C48DE98561C2E0BA18823C1A/kuppel.jpg",]
+  	if (e.final_overall_results[0].candidate === 78){
 
-          return construct(0);
-      }
-      else{
-          e.header="<h2>“As expected, SPD under Mützenich struggles”</h2>"
-          e.pages=[`<p>As was predicted by most pundits, the SPD and Mützenich have lost the election. With the CDU winning yet again, there is little appetite for another Grand coalition, but who knows - four years ago, one was eventually formed from a similar position. Your private feelings are mixed - you are glad that you aren't the face of this defeat, but can't help but wonder if you hadn't been able to win this.</p><p>In any case, the SPD will probably land in the opposition, so your days as Vice Chancellor and Minister are numbered. Perhaps you'll return to Hamburg, perhaps you'll in Berlin as backbencher and financial expert. When the party is looking for candidates again in 2025, your name might be on the list.</p>`]
-          e.image="https://www.bundestag.de/resource/image/225552/3x4/594/792/41c47f0a63894c714cff2ac9fc890afb/2AC076E6C48DE98561C2E0BA18823C1A/kuppel.jpg"
-            return construct(0);
-      }
+  	     if(resigned){
+  	        var fate = "<p> Though to be perfectly honest, you have other priorities right now. Through your wife, you're still staying up to date with what happens inside the SPD and politics in general, but your focus is on a lot of hiking, jogging, cycling and rowing. Maybe it's for the best that others are leading this country now.</p>"
+
+  	    }
+  	    else{
+  	        var fate = "<p> Maybe there will be a spot in Mützenich's cabinet for you, or maybe you will return to the state politics of Hamburg. Either way, it's unlikely you'll reach a role as important as Vice Chancellor again, but who knows - maybe at some point, the SPD will decide to nominate you after all.</p>"
+
+  	    }
+      	e.header="<h2>“The SPD and Rolf Mützenich are the winners of this night”</h2>"
+      	e.pages=[`<p>To the surprise of most pundits, Rolf Mützenich has actually won the election for the SPD and now appears to be on track to be elected chancellor. Considering the polling last year, his performance is widely celebrated, and more than a few party members express relief that he was selected over you. Privately, you think that this was just a winnable election, with how much Baerbock and Laschet screwed up, but oh well - you are happy that the SPD won, too!</p>${fate}` ]
+      	e.image=["https://www.bundestag.de/resource/image/225552/3x4/594/792/41c47f0a63894c714cff2ac9fc890afb/2AC076E6C48DE98561C2E0BA18823C1A/kuppel.jpg",]
+
+      	return construct(0);
+  	}
+  	else{
+      	  if(resigned){
+  	        var fate = "<p> Though to be perfectly honest, you have other priorities right now. Through your wife, you're still staying up to date with what happens inside the SPD and politics in general, but your focus is on a lot of hiking, jogging, cycling and rowing. Maybe it's for the best that others are leading this country now.</p>"
+
+  	    }
+  	    else{
+  	        var fate = "<p>In any case, the SPD will probably land in the opposition, so your days as Vice Chancellor and Minister are numbered. Perhaps you'll return to Hamburg, perhaps you'll be in Berlin as a backbencher and financial expert. When the party is looking for candidates again in 2025, your name might be on the list.</p>"
+
+  	    }
+      	e.header="<h2>“As expected, SPD under Mützenich struggles”</h2>"
+      	e.pages=[`<p>As was predicted by most pundits, the SPD and Mützenich have lost the election. Still, this is not a bad result for him - he clawed his way back to the top, although it’s clear that the party is bleeding heavily, and something needs to happen to stop it. With the CDU winning yet again, there is little appetite for another Grand coalition, but who knows, these days. Your private feelings are mixed - you are glad that you aren't the face of this defeat, but can't help but wonder if you hadn't been able to win this, to lead your party to a better result.</p>${fate}`]
+      	e.image="https://www.bundestag.de/resource/image/225552/3x4/594/792/41c47f0a63894c714cff2ac9fc890afb/2AC076E6C48DE98561C2E0BA18823C1A/kuppel.jpg"
+        	return construct(0);
+  	}
   }
+
   ending = endingOneBuilder();
   e.header=ending[0];
   e.pages=ending[1];
@@ -1126,528 +1145,534 @@ function endingOneBuilder(){
     var LeftPerformance = "";
     var disaster = false;
 
-    if (playerParty.electoral_votes>totalSeats/2){
-        header = "<h2>“Baerbock stuns the political establishment”</h2>"
-        text = [`<p>Many people were already shocked by the first poll that showed the Green Party in the lead, but what transpired this election night was seemed unbelievable to basically every political pundit. Not only did you lead the Green Party to victory, you won an outright majority of seats. Never before has a left-wing party achieved a victory like this in the history of the Federal Republic.</p><p> Some people doubt that your victory was legitimate, but don't worry about them: It's time to enact your agenda. Switch off all coal and nuclear power stations, electricity grid stability be damned. A tempo limit of 80 km/h on every German Autobahn. Mandatory Veggie-Days, at least twice a week!</p><p>It's doubtful that all Germans will be happy with your agenda. But don't worry, even if you loose in four years - Germany will be a truly Green country by then!</p>`]
+     if (playerParty.electoral_votes>totalSeats/2){
+    	header = "<h2>“Dear viewers, the unbelievable has happened - the SPD under Olaf Scholz has won an absolute majority of seats.”</h2>"
+    	text = [`<p>Olaf, what did you do? You have done what even Brandt couldn’t accomplish - you’ve won an absolute majority of seats! After the dire state the party was in just a year ago, this is the most astonishing political development Germany has seen since reunification.</p><p> You’re not a stranger to absolute majorities, winning one yourself in Hamburg in 2011 - so I guess you already know how this is gonna go. Time to pump up the minimum wage to 20€, empower unions to take over the economy, renationalize healthcare, bleed the Bundeswehr dry, oh; and of course, no exit from coal. These workers have to be protected after all. Alternatively, you could of course do nothing like that; instead; you could just contradict your entire program as some might be used to it. With such a mandate, I’m sure no one would mind. </p><p>Some are suspicious at the size of your victory - has the Social Democratic machine flunked the results? Have you used your corrupt contacts inside the financial world to weave the strands of democracy to your liking? Well, should the opposition seek to investigate you, just say you don’t remember anything. Everything else will sort itself out on its own. Just like it did on election night.</p>`]
 
-    }
+	}
 
-    else{
-        if(playerParty===e.final_overall_results[0]){
+	else{
+    	if(playerParty===e.final_overall_results[0]){
 
-        if (playerParty.electoral_votes == e.final_overall_results[1].electoral_votes){
+    	if (playerParty.electoral_votes == e.final_overall_results[1].electoral_votes){
 
-             header = "<h2>“At 10:37pm, this is still too close to call...”</h2>"
-            playerPerformance = "When the first results come in, it's clear that the election is going to be a nail-biter. That alone is quite a good development, considering your standing in the polls a few months ago. The final results, however, are a bit of a problem: Both you and the " + secondParty.fields.last_name + " have won the exact same amount of seats, and unprecedented situation. Now, " + secondPartyLeader.leaderName + " and you both assert your right to form a government and begin coalition negotiations. It's going to be a tough fight, but you might still rise from Vice Chancellor to Chancellor."
-            if(!contestedElection){
+         	header = "<h2>“Dear viewers, it is now 22:37, and this is still too close to call...”</h2>"
+        	playerPerformance = "When the first results come in, it's clear that the election is going to be a nail-biter - a fitting ending to this tense and eventful campaign. Just months ago, your party was seemingly left in the dirt; but using your political instincts, your experience of almost three decades in politics, you managed to claw your way back on top. As the public prepares itself for you to become the fourth SPD chancellor, your momentum is stopped in its track: As the final results show both you and the " + secondParty.fields.last_name + " have won the exact same amount of seats, an unprecedented situation in the history of the Republic. Now, " + secondPartyLeader.leaderName + " and you both declare victory, asserting your right to form a government and begin coalition negotiations. It's going to be a tough fight - but you wouldn’t have made it to be Vice Chancellor if you didn’t know your way around the game..."
+        	if(!contestedElection){
 
-                    possibleCoalitions.forEach((coalition) => {
-                      if (coalition.parties.includes(playerParty.candidate) && coalition.parties.includes(secondParty.pk)) {
-                        coalition.weight = 0.001;
-                      }
-                    });
-                    contestedElection = true;
+                	possibleCoalitions.forEach((coalition) => {
+                  	if (coalition.parties.includes(playerParty.candidate) && coalition.parties.includes(secondParty.pk)) {
+                    	coalition.weight = 0.001;
+                  	}
+                	});
+                	contestedElection = true;
 
-                 }
-            }
+             	}
+        	}
 
-          else if(playerParty.electoral_votes - e.final_overall_results[1].electoral_votes < 10){
+      	else if(playerParty.electoral_votes - e.final_overall_results[1].electoral_votes < 10){
 
-            header = "<h2>“At 8:51pm, we can't project yet who will win this election...”</h2>"
-            playerPerformance = "When the first results of the night are released, it looks closer than most observers had anticipated. Given your polling in the spring, your party members are already happy with how many votes you won after all. It takes a few hours, but finally, the SPD inches ahead in every forecast and is declared winner of the night, to much celebration by the party. However, in response to the tight result, " + secondPartyLeader.leaderName + " has declared that the " + secondParty.fields.last_name + " is also open to leading a government. Nonetheless, you are likely to have an advantage during the coalition talks."
-            adjustWeights(3.5);
-            closeElection = true;
-            }
+        	header = "<h2>“Dear viewers, it is now 20:51, and while we aren’t certain yet, we seem to have a winner…”</h2>"
+        	playerPerformance = "When the first results come in, it's clear that the election is going to be a nail-biter - a fitting ending to this tense and eventful campaign. Just months ago, your party was seemingly left in the dirt; but using your political instincts, your experience of almost three decades in politics, you managed to claw your way back on top. The party already rejoices about a victory. You might not have won many more votes than in 2017, but considering the changing political landscape, that’s already a mighty victory. Not just that - it takes a few hours, but finally, the SPD inches ahead in every forecast, and to rousing applause from the Willy-Brandt-House, <i>you</i> are declared the winner of the night. They laughed at your candidacy, they disparaged the name of the good old SPD, but it’s clear now that the German people want a responsible, center-left government to lead them into the next decade. In response to the tight result, " + secondPartyLeader.leaderName + " has declared that the " + secondParty.fields.last_name + " is also open to leading a government. The last hurdle stands before you - organize a majority around your chancellorship - don’t blow this historic chance at a Social Democratic revival."
+        	adjustWeights(3.5);
+        	closeElection = true;
+        	}
 
-            else if (playerParty.popular_votes/totalPV>0.257){
-             header = "<h2>“Under Scholz, the SPD truly returns to form”</h2>"
-            playerPerformance = "In the last few days, when your surge in the polls seemed unstoppable, the party had developed high hopes. Now, after the first results came in, it's clear you've not disappointed them. Under your leadership, the SPD has won the election and reached its highest voteshare since 2005. This is an especially impressive feat considering your polling just a few months ago. The whole party is glad that, despite some misgivings, you were made the candidate. Now, you just have to jump one last hurdle, the coalition talks, to ascend from Vice Chancellor to Chancellor - but that should be little more than a formality."
-             adjustWeights(20);
-            }
-            else{
-            header = "<h2>“Under Scholz, the SPD returns to form”</h2>"
-            playerPerformance = "In the last few days, when your surge in the polls seemed unstoppable, the party had developed high hopes. Now, after the first results came in, it's clear you've not disappointed them. Under your leadership, the SPD has won the election, though with the lowest voteshare for an election winner since the founding of this country. This is still an impressive feat considering your polling just a few months ago. Many are glad that, despite some misgivings, you were made the candidate - though some naysayers claim that another candidate could have performed even better. Now, you just have to jump one last hurdle, the coalition talks, to ascend from Vice Chancellor to Chancellor - but as the winner, you have the clear initiative to form a government"
-             adjustWeights(6);
-             }
+        	else if (playerParty.popular_votes/totalPV>0.257){
+         	header = "<h2>“Dear viewers, few would have seen this coming, just months ago. Under Scholz, the SPD truly returns to old strength, handily winning this election.”</h2>"
+        	playerPerformance = "<p>You started out at 15%. <i>15%!</i> The last time the SPD stooped so low was over a hundred years ago, in the time of the German Empire! The last few days have shown your unlikely surge to be unstoppable, as you clearly showed the world that Germany <i>needs</i> the Social Democrats. It needs a force to fight for the little man, to fight poverty and provide an affordable, fair and just life to every citizen of this great country. <br>The party is in ecstasy, and as the first results come in, it's clear, you haven’t disappointed them. Under your leadership, the SPD has reached its highest vote share since 2005, a massive feat considering the changing political landscape. The whole party is glad that, despite some misgivings, you were made the candidate. Who else, if not Olaf? Now, you just have to jump one last hurdle, the coalition talks, to form a modernizing majority and bring society back together. Only then, you can ascend from Vice Chancellor to Chancellor - but that should be little more than a formality.<br>As you look up to the night sky, seeking a small moment of calm refuge from the celebrations, you notice a small melody whistling through the wind. It’s Willy Brandt, peeking down from the heavens, playing the Internationale on a mandoline."
+         	adjustWeights(20);
+        	}
+        	else{
+        	header = "<h2>“Dear viewers, just months ago this seemed improbable, but now we have confirmation - the SPD under Olaf Scholz achieves a solid victory.”</h2>"
+        	playerPerformance = "The surge didn’t stop. Everyone underestimated you, Baerbock and Laschet left you for dead as they duked it out amongst themselves. Then, during the floods, an opening - and with your grand political instinct, you used it. The numbers started rising and rising, as you reminded Germany why it needed the Social Democrats - responsible and reasonable progress, competent leadership. A force to fight for the little man, to make sure the state lived up to their just expectations.<br>And now, at the end of this comeback, you stand victorious. Under your leadership, the SPD has won the election, though with the lowest vote share for an election winner since the founding of this country. That’s not surprising, considering the changing political landscape, but you’ve proven yourself a master at navigating it. Some might be disappointed that the SPD didn’t reach its old results, but that’s really just peanuts compared to this victory. You now have the chance to reform the country, move on from CDU governance to the era of a new Social Democrat. You just have to jump one last hurdle, the coalition talks, to ascend from Vice Chancellor to Chancellor - but now, you’re favored for once."
+         	adjustWeights(6);
+         	}
 
-        }
-        else if(playerParty===e.final_overall_results[1]){
+    	}
+    	else if(playerParty===e.final_overall_results[1]){
 
-            if(playerParty.popular_votes > e.final_overall_results[0].popular_votes){
+        	if(playerParty.popular_votes > e.final_overall_results[0].popular_votes){
 
-            header = "<h2>“At 10:37pm, this is still too close to call...”</h2>"
-            playerPerformance = "When the first results come in, it's clear that the election is going to be a nail-biter. That alone is quite a good development, considering your standing in the polls a few months ago. The final results, however, are a bit of a problem: While you won the popular vote, the " + firstParty.fields.last_name + " has won the most seats - probably due to overhanging mandates in Bavaria. Both you and " + firstPartyLeader.leaderName + " assert your right to form a government and begin coalition negotiations. It's going to be a tough fight, but you might still rise from Vice Chancellor to Chancellor."
-            if(!contestedElection){
+        	header = "<h2>“Dear viewers, it is now 22:37, and this is still too close to call...”</h2>"
+        	playerPerformance = "When the first results come in, it's clear that the election is going to be a nail-biter - a fitting ending to this tense and eventful campaign. Just months ago, your party was seemingly left in the dirt; but using your political instincts, your experience of almost three decades in politics, you managed to claw your way back on top. As the public prepares itself for you to become the fourth SPD chancellor, your momentum is stopped in its tracks: despite you winning the popular vote, the " + firstParty.fields.last_name + " has won the most seats - probably due to overhang mandates from Bavaria. You declare victory regardless, as does the Union, as you and " + firstPartyLeader.leaderName + " assert your right to form a government. The discussions about Germany’s electoral system get heated, as it becomes clear: this race is to be won in the smoky backrooms of the coalition negotiations. It's going to be a tough fight, but you might still rise from Vice Chancellor to Chancellor - if your political instinct doesn’t fail you."
+        	if(!contestedElection){
 
-                    possibleCoalitions.forEach((coalition) => {
-                      if (coalition.parties.includes(playerParty.candidate) && coalition.parties.includes(firstParty.pk)) {
-                        coalition.weight = 0.001;
-                      }
-                    });
-                    contestedElection = true;
+                	possibleCoalitions.forEach((coalition) => {
+                  	if (coalition.parties.includes(playerParty.candidate) && coalition.parties.includes(firstParty.pk)) {
+                    	coalition.weight = 0.001;
+                  	}
+                	});
+                	contestedElection = true;
 
-                 }
-            }
-
-
-            else if(e.final_overall_results[0].electoral_votes - playerParty.electoral_votes < 10){
-
-            header = "<h2>“At 8:51pm, we can't project yet who will win this election...”</h2>"
-            playerPerformance = "When the first results of the night are released, it looks closer than most observers had anticipated. Given your polling in the spring, your party members are already happy with how many votes you won after all. It takes a few hours, but finally, it becomes clear that unfortunately, you came in second - still a good result, but a little disappointing nonetheless. The " + firstParty.fields.last_name + " has the initiative to form the government, but don't give up hope just yet - depending on how the coalition talks go, there's still a chance for you to rise from Vice Chancellor to Chancellor."
-            adjustWeights(3);
-            closeElection = true;
-            }
-
-            else if (playerParty.popular_votes/totalPV<0.205 && playerParty.popular_votes/totalPV>0.18){
-            header = "<h2>“Scholz can't stop the decline of German Social Democracy”</h2>"
-            playerPerformance = "When you were nominated as chancellor candidate, it looked like a hopeless campaign, with the SPD clearly in third place. You didn't perform as badly as the pessimists predicted, but you didn't achieve much either - despite your best efforts, the SPD lost votes compared to the last election. The only solace is that you didn't lose second place to the Greens, but this is still disappointing - enough so that there are calls for you to step back from politics.  The " + firstParty.fields.last_name + " will try to form a government now - you could try to become their junior partner once again or gamble on the miniscule chance that coalition talks fall through for them."
-            adjustWeights(10);
-            midResult = true;
-            }
-
-            else if (playerParty.popular_votes/totalPV<0.18){
-            header = "<h2>“Scholz can't stop the decline of German Social Democracy”</h2>"
-            playerPerformance = "When you were nominated as chancellor candidate, it looked like a hopeless campaign, with the SPD clearly in third place. You didn't perform as quite badly as the pessimists predicted, but you still lost quite a few more votes compared to the already disastrous result for years ago. The only solace is that you didn't lose second place to the Greens, but this is still very disappointing - enough so that there are loud calls for you to step back from politics.  The " + firstParty.fields.last_name + " will try to form a government now. For the SPD, one thing is clear: Another coalition with the CDU/CSU can't be an option."
-            adjustWeights(10);
-            badResult = true;
-
-            possibleCoalitions = possibleCoalitions.filter((coalition) => {
-              return !(coalition.parties.includes(playerParty.candidate) && coalition.parties.includes(77));
-            });
-
-            }
-
-            else {
-            header = "<h2>“Scholz leads SPD to mixed result”</h2>"
-            playerPerformance = "Once the results come in, neither pundits nor your party quite know what to make of them. On the one hand, you gained votes compared to the last election and performed much better than expected in the spring. On the other, once again, you've been relegated to second place. Some praise you for this results, while others grumble about a wasted opportunity considering your rivals. Regardless, the " + firstParty.fields.last_name + " will try to form a government now - you can try to become a junior coalition partner or maybe try to form your own government if coalition talks fall through. Just don't get your hopes up."
-            adjustWeights(5);
-            }
-
-        }
-        else if(playerParty===e.final_overall_results[2]){
-            thirdPlace = true;
-
-            if(playerParty.popular_votes/totalPV>0.18){
-             header = "<h2>“SPD declines to third place under Scholz”</h2>"
-            playerPerformance = "The first reaction to the election results at the party headquarters is shock. Despite predictions pointing towards this, there was still hope that the SPD didn't slide into third place. You didn't perform as quite badly as the pessimists predicted, but you still lost quite a few more votes compared to the already disastrous result for years ago. Despite not loosing that many votes compared to last election, the party is still disappointed - enough so that there are loud calls for you to step back from politics.  The " + firstParty.fields.last_name + " will try to form a government now. Maybe they'll need you as a junior partner, though there are growing calls for the SPD to become part of the opposition."
-            midResult = true;
-            }
-            else if(playerParty.popular_votes/totalPV<=0.18){
-             header = "<h2>“SPD tumbles down to third place under Scholz”</h2>"
-            playerPerformance = "The first reaction to the election results at the party headquarters is shock. Despite predictions pointing towards this, there was still hope that the SPD didn't slide into third place. But just as it was feared, the party kept loosing votes under your leadership. During the election night, there are loud calls for your resignation, not just from the left wing of your party, and you barely hold on.  The " + firstParty.fields.last_name + " will try to form a government now. For the SPD, one thing is clear: Another coalition with the CDU/CSU can't be an option."
-            badResult = true;
-            possibleCoalitions = possibleCoalitions.filter((coalition) => {
-              return !(coalition.parties.includes(playerParty.candidate) && coalition.parties.includes(77));
-            });
-            }
-            if (e.final_overall_results[0].electoral_votes == e.final_overall_results[1].electoral_votes){
-            playerPerformance += " First place is actually tied, so the coalition talks are going to be interesting. The coalition talks will certainly be interesting"
-            if(!contestedElection){
-
-                    possibleCoalitions.forEach((coalition) => {
-                      if (coalition.parties.includes(secondParty.pk) && coalition.parties.includes(firstParty.pk)) {
-                        coalition.weight = 0.001;
-                      }
-                    });
-                    contestedElection = true;
-
-                 }
-            }
-            else if (e.final_overall_results[0].popular_votes < e.final_overall_results[1].popular_votes){
-            playerPerformance += " It's actually unclear who is the winner of this election, with the " + firstParty.fields.last_name + " having won the most seats and the " + secondParty.fields.last_name + " having won the most votes. The coalition talks will certainly be interesting."
-            if(!contestedElection){
-
-                    possibleCoalitions.forEach((coalition) => {
-                      if (coalition.parties.includes(secondParty.pk) && coalition.parties.includes(firstParty.pk)) {
-                        coalition.weight = 0.001;
-                      }
-                    });
-                    contestedElection = true;
-
-                 }
-            }
-
-            else if (e.final_overall_results[0].electoral_votes - e.final_overall_results[1].electoral_votes < 10){
-            playerPerformance += " The race for the winner of this election was close, but in the end, the " + firstParty.fields.last_name + " prevailed. They will now try to form a government, though with how close the result was, the " + secondParty.fields.last_name + " also announced their intention to start coalition talks."
-
-            closeElection = true;
-
-            adjustWeights(2);
-            }
-            else{
-            playerPerformance += " The clear winner of this election is the " + firstParty.fields.last_name + ". They are now searching for coalition partners, let's see if they'll manage to form a government."
-            adjustWeights(5);
-            }
-
-        }
-        else{
-            header = "<h2>“A disastrous nights for the SPD”</h2>"
-            playerPerformance = "When the results come in, the first reaction is shock - but it's soon replaced by resignation. The party is used to bad result, to disastrous election nights, and while not even getting into the top three is a catastrophy new low, it doesn't come as a complete surprise after your horrible campaign. Under mounting pressure, you feel compelled to resign the same night and announce your withdrawal from politics overall. Perhaps the SPD will recover, perhaps you'll always be known as the man who squandered the last chance to reverse its decline."
-            disaster = true;
-        }
-        var SSW = "In other news, the SSW, the party of the Danish minority, has won a seat for the first time since 1949. As party of a national minority, they are exempt from the 5% threshold."
-
-        if(LeftParty.popular_votes/totalPV<0.0495 && LeftParty.electoral_votes >2){
-            LeftPerformance = " Despite missing the 5% threshold, the Left party managed to secure three direct mandates, two in Berlin and one in Saxony. Taking at least three direct mandates means that the party will receive seats in proportion to their percentage of the total popular vote."
-        }
-
-        else if(LeftParty.popular_votes/totalPV<0.05 && LeftParty.electoral_votes >2){
-            LeftPerformance = " Despite missing the 5% threshold by an extremely close margin - rounded up, they got 5.0%, but the actual count was a little below that - the Left party managed to secure three direct mandates, two in Berlin and one in Saxony. Taking at least three direct mandates means that the party will receive seats in proportion to their percentage of the total popular vote."
-        }
-
-        else if(LeftParty.electoral_votes <= 2){
-            LeftPerformance = " The Left party also failed to meet the 5% threshold for the first time since 2002. This leaves them with only two MPs who won direct mandates in Berlin to represent them in parliament."
-        }
-
-        if (!disaster){
-            text = [`<p>${playerPerformance}</p><p>${SSW}${LeftPerformance}</p>`,`<div id="coalitionList"> Now is the time for coalition talks. Select all the coalitions you want to try to form and hope for the best!</div>` ]
-        }
-        else{
-             text = [`<p>${playerPerformance}</p><p>${SSW}${LeftPerformance}</p>`]
-        }
-    }
+             	}
+        	}
 
 
-    return[header, text, image];
+        	else if(e.final_overall_results[0].electoral_votes - playerParty.electoral_votes < 10){
+
+        	header = "<h2>“Dear viewers, it is now 20:51, and while we aren’t certain yet, we seem to have a winner…”</h2>"
+        	playerPerformance = "When the first results come in, it's clear that the election is going to be a nail-biter - a fitting ending to this tense and eventful campaign. Just months ago, your party was seemingly left in the dirt; but using your political instincts, your experience of almost three decades in politics, you managed to claw your way back on top. Your party rejoices about the reinvigoration it sorely needed. After a few hours, it becomes clear that the country isn’t quite convinced yet - you fall behind in second place. Still a good result, but a little disappointing nonetheless. The " + firstParty.fields.last_name + " has the initiative to form the government, but don't give up hope just yet - the SPD knows a thing or two about forming a government from behind. And you are somewhat of a comeback-kid aswell…"
+        	adjustWeights(3);
+        	closeElection = true;
+        	}
+
+        	else if (playerParty.popular_votes/totalPV<0.205 && playerParty.popular_votes/totalPV>0.18){
+        	header = "<h2>“Dear viewers, concerning the SPD, the decline continues. The Vice Chancellor ultimately wasn’t able to turn this around.”</h2>"
+        	playerPerformance = "You have fought bravely, Mr. Vice Chancellor. You’ve even clawed your way back to second place, something many thought unthinkable at the start of the campaign - nonetheless, the bleeding continues. Slowly, the traditional SPD voter base starts dripping, into a puddle of decline. While the Greens haven’t superseded you yet - you did well to prevent that - the next chancellor will, again, be from the Union. <br>Something has to happen to save the party from further decline. One thing seems clear, even to you - it probably won’t involve Olaf Scholz. You epitomize the old elites, the old, grey, smoky-backroom politics that led the SPD unable to contest the " + firstParty.fields.last_name + ". They’re going to try to form a government - for you, most party members would prefer opposition. At least you hold your ground - come 2025, the SPD will be able to run another chancellor candidate."
+        	adjustWeights(10);
+        	midResult = true;
+        	}
+
+        	else if (playerParty.popular_votes/totalPV<0.18){
+        	header = "<h2>“Dear viewers, concerning the SPD, the decline continues. The Vice Chancellor ultimately wasn’t able to turn this around.”</h2>"
+        	playerPerformance = "You have fought bravely, Mr. Vice Chancellor. You’ve even clawed your way back to second place, something many thought unthinkable at the start of the campaign - nonetheless, the bleeding continues, and the wounds start to look fatal. Slowly, the traditional SPD voter base starts dripping, into a puddle of disappointment and decline. While the Greens haven’t superseded you yet - you did well to prevent that - Social Democracy seems to experience an identity crisis all across Europe.<br>Something has to happen to save the party from further decline. One thing seems clear, even to you - it probably won’t involve Olaf Scholz. You epitomize the old elites, the old, grey, smoky-backroom politics that led the SPD to such a disappointing finish, falling below 20% for the first time in a century. The " + firstParty.fields.last_name + " will try to form a government now. For you, one thing is clear: Another coalition with the CDU/CSU can't be an option, lest you retread the path of the Parti Socialiste in France."
+        	adjustWeights(10);
+        	badResult = true;
+
+        	possibleCoalitions = possibleCoalitions.filter((coalition) => {
+          	return !(coalition.parties.includes(playerParty.candidate) && coalition.parties.includes(77));
+        	});
+
+        	}
+
+        	else {
+        	header = "<h2>“Dear viewers, Olaf Scholz has stopped the bleeding for the SPD; but not quite enough for a victory.”</h2>"
+        	playerPerformance = "Once the results come in, neither pundits nor your party quite know what to make of them. The party itself is jubilant - you managed to claw your way back to the top, leaving the Greens behind you, reestablishing yourself as the major center-left party of Germany. This feat alone is worthy of praise, as you get a respectable round of applause in the Willy-Brandt-House. On the one hand, you gained votes compared to the last election and performed much better than expected in the spring. On the other, once again, you've been relegated to second place. Still, this is a defeat - landing in second place, your chances at becoming chancellor seem grim, and a few overzealous colleagues see a wasted opportunity for a major comeback. It is the " + firstParty.fields.last_name + " who has the public mandate to form a government - with your respectable result, you have managed to save face and are able to stand by in case their talks fall through. Nonetheless, maybe reimagining itself as a strong opposition is the final jolt the party needs to come back to life."
+        	adjustWeights(5);
+        	}
+
+    	}
+    	else if(playerParty===e.final_overall_results[2]){
+        	thirdPlace = true;
+
+        	if(playerParty.popular_votes/totalPV>0.18){
+         	header = "<h2>“Dear viewers, the SPD can not save itself from crisis. The oldest party of Germany seems to be ailing.”</h2>"
+        	playerPerformance = "The first reaction to the election results at the party headquarters is shock. The Grand Old Dame, the SPD, is weakening. It seemed already hopeless when you were announced as chancellor candidate - the party was ground up between the compromises of the unpopular Grand Coalition and an eroded identity, with age-long Social Democrats defecting to the Greens. Since then, you’ve managed to improve your standing somewhat - but in the end, it wasn’t enough to save the party from third place. This is still not an improvement over your middling performance in 2017. Something has to change, or the oldest party of Germany may soon experience its final days - and they’re almost certain to not involve you. The " + firstParty.fields.last_name + " has won the election, and will try to form a government now. Maybe they'll need you as a junior partner, but the growing calls for the SPD to focus on itself first seem hard to ignore."
+        	midResult = true;
+        	}
+        	else if(playerParty.popular_votes/totalPV<=0.18){
+         	header = "<h2>“Dear viewers, the SPD can not save itself from crisis. The oldest party of Germany seems to be slowly dying.”</h2>"
+        	playerPerformance = "The first reaction to the election results at the party headquarters is - not even shock. It’s despondence. The projections at the start of the race were grim - they thought, with you, maybe the party’s identity, between reason and progress, could proliferate. But it didn’t. The doubters were right. The critics had won out. The Grand Old Dame, the SPD, is weakening. You have tumbled into third place, with a result en part with those during the German Empire’s sham elections. During the election night, there are loud calls for your resignation, not just from the left wing of your party - although with the support of the party elite, you manage to salvage whatever influence you have left.<br> The " + firstParty.fields.last_name + " will try to form a government now. For the SPD, one thing is clear: Another coalition with the CDU/CSU can't be an option, but for you, that’s not of much relevance. You would do best to regenerate yourself in the opposition - or else, the fate of the party looks eerily similar to that of France’s Parti Socialiste. Social Democracy remains in crisis, for now."
+        	badResult = true;
+        	possibleCoalitions = possibleCoalitions.filter((coalition) => {
+          	return !(coalition.parties.includes(playerParty.candidate) && coalition.parties.includes(77));
+        	});
+        	}
+        	if (e.final_overall_results[0].electoral_votes == e.final_overall_results[1].electoral_votes){
+        	playerPerformance += "Apart from that, the race for first place has not been decided yet, given the close result. You could try to play kingmaker, if you think the SPD is well served to enter another government as junior partner."
+        	if(!contestedElection){
+
+                	possibleCoalitions.forEach((coalition) => {
+                  	if (coalition.parties.includes(secondParty.pk) && coalition.parties.includes(firstParty.pk)) {
+                    	coalition.weight = 0.001;
+                  	}
+                	});
+                	contestedElection = true;
+
+             	}
+        	}
+        	else if (e.final_overall_results[0].popular_votes < e.final_overall_results[1].popular_votes){
+        	playerPerformance += " Apart from that, the race for first place has not been decided yet, given the close result., since " + firstParty.fields.last_name + " has won the most seats with the " + secondParty.fields.last_name + " winning the most votes. You could try to play kingmaker, if you think the SPD is well served to enter another government as junior partner."
+        	if(!contestedElection){
+
+                	possibleCoalitions.forEach((coalition) => {
+                  	if (coalition.parties.includes(secondParty.pk) && coalition.parties.includes(firstParty.pk)) {
+                    	coalition.weight = 0.001;
+                  	}
+                	});
+                	contestedElection = true;
+
+             	}
+        	}
+
+        	else if (e.final_overall_results[0].electoral_votes - e.final_overall_results[1].electoral_votes < 10){
+        	playerPerformance += " Looking at the top, the race was close, but in the end, the " + firstParty.fields.last_name + " pulled through. They enjoy the people’s mandate, with a prerogative to form a government - although with how close the election was, the " + secondParty.fields.last_name + " have also announced their availability for coalition talks with you . You might enjoy a good amount of leverage in this situation, but several prominent party members are calling for the SPD to go into opposition."
+
+        	closeElection = true;
+
+        	adjustWeights(2);
+        	}
+        	else{
+        	playerPerformance += "Meanwhile, the " + firstParty.fields.last_name + " is starting to feel out potential partners for a coalition agreement. They have clearly won this election, and already they have announced their intention to lead the next government."
+        	adjustWeights(5);
+        	}
+
+
+    	}
+    	else{
+        	header = "<h2>“Dear viewers, this result is nothing if not a disaster for the SPD. Olaf Scholz has failed. The SPD stands on its last legs.”</h2>"
+        	playerPerformance = "<p>When the results come in, the first reaction is shock - soon to be replaced by resignation. The party is used to bad results, to disastrous election nights, and while not even making the top three is a catastrophic new low, it doesn't come as a complete surprise after your horrible campaign. Under mounting pressure, you feel compelled to resign the same night and announce your complete withdrawal from politics. Party leadership does the same - the rats are leaving the sinking ship. The remaining MP’s might still take their seats, but it won’t be the same again. The SPD isn’t a “people’s party” anymore. It’s a minor third wheel.<br>As the journalists leave, as the party headquarters turn empty and the lights turn off, you remain for a while, taking it all in. The bronze statue of Willy Brandt casts its ominous shadow upon you. He looks old, you think. Like a museum piece, like an archaeological finding. <br>It seems, the SPD is entering a state of finality - the age of Social Democracy is over. It will join the PS of France as a minor party, a rump of what was once a triumphant ideology. One that ended the First World War, that brought about the Weimar Republic and defended it into the age of darkness, that resisted Hitler, and rebuilt it after his demise. One that always stood for peace, that improved worker’s conditions, that improved people’s lives, that ‘Dared More Democracy’. An ideology that stood for “Freedom <i>and</i> Socialism”, one that always sought the way of gradual reform and compromise instead of destructive revolution, one that found its strengths in political nuances. One that adapted with the times, that enacted hard decisions, politically unpopular actions, but that never declined to take responsibility for the betterment of the country. Maybe it was this idealism, this realism, this unwaveringness that ultimately devolved into naiveté. Perhaps it were these nuances that ultimately crushed the party below their weight. Perhaps the SPD now gave its ultimate sacrifice - not just living, resisting, governing, but dying for the sake of the country.<br><p>“Nichts kommt von selbst. Und nur wenig ist von Dauer. Darum – besinnt Euch auf Eure Kraft und darauf, dass jede Zeit eigene Antworten will und man auf ihrer Höhe zu sein hat, wenn Gutes bewirkt werden soll.” -Willy Brandt, three weeks before his death."
+        	disaster = true;
+    	}
+    	var SSW = "In other news, the SSW, the party of the Danish minority, has won a seat for the first time since 1949. As party of a national minority, they are exempt from the 5% threshold."
+
+    	if(LeftParty.popular_votes/totalPV<0.0495 && LeftParty.electoral_votes >2){
+        	LeftPerformance = " Despite missing the 5% threshold, the Left Party managed to secure three direct mandates, two in Berlin and one in Leipzig. With these three direct mandates, the party will receive seats in proportion to their percentage of the total popular vote."
+    	}
+
+    	else if(LeftParty.popular_votes/totalPV<0.05 && LeftParty.electoral_votes >2){
+        	LeftPerformance = " Despite very narrowly missing the 5% threshold by an extremely close margin - the Left Party managed to secure three direct mandates, two in Berlin and one in Leipzig. With these three direct mandates, the party will receive seats in proportion to their percentage of the total popular vote."
+    	}
+
+    	else if(LeftParty.electoral_votes <= 2){
+        	LeftPerformance = " The Left Party also failed to meet the 5% threshold for the first time since 2002. This leaves them with only two MPs who won direct mandates in Berlin to represent them in parliament."
+    	}
+
+    	if (!disaster){
+        	text = [`<p>${playerPerformance}</p><p>${SSW}${LeftPerformance}</p>`,`<div id="coalitionList"> In the Federal Republic of Germany, the parliamentary multi-party system demands coalition agreements between parties to conjure up workable majority. It’s time to negotiate!</div>` ]
+    	}
+    	else{
+         	text = [`<p>${playerPerformance}</p><p>${SSW}${LeftPerformance}</p>`]
+    	}
+	}
+
+
+	return[header, text, image];
 }
 
 function endingTwoBuilder(){
-    var header = null;
-    var text = null;
-    var image = [];
-    var coalitionLeader = findLeader(selectedCoalition);
-    var coalitionVice = findSecondPlace(selectedCoalition);
-    var playerLeader = (partyLeaders.find((p) => p.party === e.candidate_id));
-    var strongestLeader = (partyLeaders.find((p) => p.party === e.final_overall_results[0].candidate))
-    var topTwo = [e.final_overall_results[0].candidate, e.final_overall_results[1].candidate].includes(79);
-    var coalitionText = "";
-    var playerFate = "";
-    var negotiations = "";
-    var contestedText = "";
-    var secondPage = false;
-    var SecondPageText = "";
+	var header = null;
+	var text = null;
+	var image = null;
+	var coalitionLeader = findLeader(selectedCoalition);
+	var coalitionVice = findSecondPlace(selectedCoalition);
+	var playerLeader = (partyLeaders.find((p) => p.party === e.candidate_id));
+	var strongestLeader = (partyLeaders.find((p) => p.party === e.final_overall_results[0].candidate))
+	var topTwo = [e.final_overall_results[0].candidate, e.final_overall_results[1].candidate].includes(79);
+	var coalitionText = "";
+	var playerFate = "";
+	var negotiations = "";
+	var contestedText = "";
+	var secondPage = false;
+	var SecondPageText = "";
 
-    var chancellorFateHappy =  "Congratulations, you haven ascended from Vice Chancellor to Chancellor. With how badly the SPD was polling, few believed in you, and you still did it - you've become the successor of Merkel. While your political style will be similar to hers, you'll have different priorities. There are many challenges ahead - the remainder of the Covid pandemic, the climate crisis, foreign policy and inequality. Hopefully, your social democratic solutions will be a success and you'll be reelected in 2025 as a popular incumbent."
-    var chancellorFateDown =  "Congratulations, you haven ascended from Vice Chancellor to Chancellor. With how badly the SPD was polling, few believed in you, and you still did it - you've become the successor of Merkel, even if you still needed the help of the CDU/CSU to get elected. While your political style will be similar to hers, you'll have different priorities. There are many challenges ahead - the remainder of the Covid pandemic, the climate crisis, foreign policy and inequality. Hopefully, you can get your social democratic policies through in this coalition an be reelected as a popular incumbent in 2025."
-    var ViceFate = "In this new coalition, you have become Vice Chancellor and Finance Minister once again. This was not your dream, but overall, you are satisfied. Your position in the party is still solid after your electoral performance and successful negotiations - maybe you'll even have another shot to win the chancellorship in 2025. Until then, let's hope you'll get something done in this coalition!"
-    var LabourViceFate = "In this new coalition, you have become Vice Chancellor once again, though you've swapped Finance Minister for Labour Minister. This was not your dream, but overall, you are satisfied. Your position in the party is still solid after your electoral performance and successful negotiations - maybe you'll even have another shot to win the chancellorship in 2025. Until then, let's hope you'll get something done in this coalition!"
-    var LabourMinisterFate = "In this new coalition, you've swapped Finance Minister for Labour Minister. This was not your dream, especially since your loss of the vice chancellorship makes this feel like a demotion. Your position in the party is still somewhat solid after your electoral performance and successful negotiations - there's even an outside chance for you to win the chancellorship in 2025. Until then, let's hope you'll get something done in this coalition!"
-    var emptyCoalitionFate = "Personally, you've not become part of this new coalition, since the party wanted some fresh faces. You're a simple member of parliament now, and while you're still a somewhat important voice in the party, you're not especially popular. The left wing made it clear that they won't support you at all in the future, so perhaps retirement is your best option."
-    var oppositionFateStrong = "For you personally, there are a few options: For now, you are a member of parliament, and while you have no formal role, you could become one of the leading voices of the opposition. Others speculate that you might return to the state politics of Hamburg. Either way, once the party starts looking for a 2025 candidate, your name will probably be on the list."
-    var oppositionFateMid= "For you personally, it's a bit unclear where the path leads from here. It's unlikely that the party wants you to play a big role in Berlin, but you might return to state politics in Hamburg. Or you could become a simple member of parliament and finance expert in the media. Either way, it's unlikely your political career will fully recover from this."
-    var oppositionFateWeak= "For you personally, this feels like the end of your political career. For now, you are a simple member of parliament, and it's unlikely that you'll become something more than that, with your party looking for fresh faces. Let's hope you'll mainly be remembered as mayor of Hamburg and Vice Chancellor and not as the man who couldn't win the 2021 election."
+	var chancellorFateHappy =  "But for now, congratulations, Olaf! Little did the little boy from Osnabrück know that his dream of becoming Chancellor was to become a reality. With your ascension from Vice Chancellor to Chancellor, you step right into the footsteps of Willy Brandt - and with his advice, you’re to govern this country. Merkel has left you a country with a strong foundation, but many challenges to overcome. She was onto something, solving a crisis with patience and prudence - but you also know, you have to take different priorities. After dealing with the remainder of the Covid pandemic, you need to set your sights to quickly turn the ship around on the climate crisis and the rifts dividing society, like wealth inequality, not to mention any foreign policy challenge that might arise. You’ve reinvigorated your party, you have risen from the ashes, you have become Germany’s 9th head of government - use this momentum, reform the country and lead it on a good path, and despite all odds, you have the chance to forge a <b>Social Democratic Decade</b>."
+	var chancellorFateDown =  "Cut for now, congratulations, Olaf! Little did the little boy from Osnabrück know that his dream of becoming Chancellor was to become a reality. With your ascension from Vice Chancellor to Chancellor, you step right into the footsteps of Willy Brandt - and with his advice, you’re to govern this country. Merkel has left you a country with a strong foundation, but many challenges to overcome. Despite your efforts to the contrary, her party remains in government, so it is up to you to forge some strongly-worded and reformist-minded compromises, using the same style of leadership that brought success to her.  After dealing with the remainder of the Covid pandemic, you need to set your sights to quickly turn the ship around on the climate crisis and the rifts dividing society, like wealth inequality, not to mention any foreign policy challenge that might arise. You’ve reinvigorated your party, you have risen from the ashes, you have become Germany’s 9th head of government - use this momentum, reform the country and lead it on a good path, and despite all odds, you have the chance to forge a <b>Social Democratic Decade</b>."
+	var ViceFate = "In this new constellation, there was little debate about who was to become Vice Chancellor- you hold the line with your current job as Vice and Minister of Finances. You have dreamt of more, but using your expertise in governance and the outsized importance of your Ministry, you are able to serve your country well. Your position in the party also remains solid with this positive outcome - maybe you'll even have another shot to usurp the throne in 2025. Until then, time to get something done - <i>Scholz will tackle it</i>!"
+	var LabourViceFate = "In this new coalition, you are to once again take on the mantle of Vice Chancellor, although you’re to give up the Ministry of Finances to an even older job of yours, the Ministry of Labour and Social Affairs. That wasn’t part of the plan, but nonetheless, in this role you might have the chance to make Social Democratic governance more visible, even though you’re a junior partner once again. Your position in the party is still solid after your electoral performance and successful negotiations - if you do well, you could have another shot to win the chancellorship in 2025. Until then, time to get something done - <i>Scholz will tackle it</i>!"
+	var LabourMinisterFate = "In this new coalition, you’re to give up the Ministry of Finances to an even older job of yours, the Ministry of Labour and Social Affairs. That wasn’t part of the plan, especially since the loss of the vice chancellorship to the other partner makes this feel like a demotion. The SPD isn’t keen on such a loss of influence, especially since many want a further renewal in the wake of this defeat - hopefully, your solid politics can convince them otherwise. You need to make Social Democracy visible in this constellation, be what may - or the days of your political career could be numbered. Time to get something done - “<i>social politics for you<i>”!"
+	var emptyCoalitionFate = "You personally aren’t part of this new government. Similar to Martin Schulz’s loss 4 years ago, the party simply wanted fresh faces to brush up their image in this tumultuous time. You're a simple member of parliament now, and while you're still somewhat of an important voice in the party, you're not especially popular. Have fun with your days as a backbencher, fight for a fair future for your constituents, and enjoy the time you have left in politics. Maybe you could start writing a biography."
+	var oppositionFateStrong = "For you personally, there are a few options: For now, you are a simple member of parliament, and while you have no formal role, you could become one of the leading voices of the opposition, drawing on your experience on Financial- and Labour issues. Others speculate that you might plan a return to the state politics of Hamburg, or switch to Brandenburg. Either way, once the party starts looking for a 2025 candidate, your name could be on the list - if you make the best of it. Good luck, Genosse!"
+	var oppositionFateMid= "For you personally, it's a bit unclear where the path leads from here. It's unlikely that the party wants you to play a big role in Berlin, but you could try to return to the state politics of Hamburg, or enter into state politics in Brandenburg, aside your wife. Or you could become a simple member of parliament and draw on your expertise concerning Financial and Labour issues - the media is bound to pay attention towards you. Either way, your dream to become chancellor is probably over. Still, you did your best - your efforts in serving Germany are and will be admirable."
+	var oppositionFateWeak= "For you personally, this feels like the end of your political career. For now, you are a simple member of parliament, and it's unlikely that you'll become something more than that, with the party looking for fresh faces to salvage what’s to salvage. Your resumé up to this point led you over many up’s and downs, from your time as General Secretary, Minister of Labour, Mayor of Hamburg, Vice Chancellor - although now, it’s bound to end on a low. In your attempts to save the party, you might have sacrificed your legacy. Many are bound to remember you as nothing but the man who never stood a chance in the 2021 election."
 
-      if(contestedElection){
-        contestedText = "Many people are unhappy with this outcome, but that was to be expected with the contested declarations of victory. "
-      }
+  	if(contestedElection){
+    	contestedText = "The new government does not have a clear mandate, and in the wake of such a contested result, its first task will be to prove its legitimacy in the short term."
+  	}
 
-      if(strongestLeader===coalitionLeader){
-        negotiations = "Months have passed, and the coalition talks have finally led to results - as expected, a coalition lead by the strongest party in parliament has formed."
-      }
-      else{
-        if(playerLeader===coalitionLeader){
-            negotiations = "Months have passed, and the coalition talks have finally led to results - though unexpectedly, you managed to outsmart the election winner and form a coalition from second place. Not everyone is happy with this outcome, but that's no problem for you - you did it."
-        }
-        else{
-            if (!thirdPlace){
-                negotiations = "Months have passed, and the coalition talks have finally led to results - though unexpectedly, despite being the party with the most seats, your rightful place as chancellor was stolen from you. Outrageous!"
-                var oppositionFateStrong = "This outcome is a setback for you personally. However, your party is as furious as you are that the chancellorship was stolen from! You've swiftly been elected leader of the parliamentary group, so now you're leader of the opposition. In 2025 - or earlier, if the government collapses - you can try getting your payback!"
-            }
-            else{
-                negotiations = "Months have passed, and the coalition talks have finally led to results - though unexpectedly, it's not the strongest party that managed to form the government."
-            }
-        }
+  	if(strongestLeader===coalitionLeader){
+    	negotiations = "A few months have passed. As expected, the winner of this election has formed a government to succeed Merkel IV."
+  	}
+  	else{
+    	if(playerLeader===coalitionLeader){
+        	negotiations = "A few months have passed. These were some of the most tense months in recent German political history - through subterfuge, political tactitioning and cunning, you’ve done the unbelievable - you managed to outsmart the election winner! This is nothing new for the SPD, who formed several governments from second place during the Social-Liberal coalition, but these days, it’s pretty remarkable. You have truly proven your political cunning and experience, as you stand triumphant after all. Respect, Olaf. Respect."
+    	}
+    	else{
+        	if (!thirdPlace){
+            	negotiations = "Months have passed, and the coalition talks have finally led to results - but somehow, you just couldn’t assert yourself. The talks collapsed, and now, they stole the chancellor’s job from right under your feet! You almost did it, but it seems the SPD has been ridiculed for a final time. Maybe the party just isn’t ready?"
+            	var oppositionFateStrong = "This outcome is but a small setback, you’re convinced. After such a miraculous victory, <i>you</i> were the one destined to lead Germany into this age, and your party wholeheartedly agrees. Now, the SPD finds itself once more reinvigorated, this time, to make a strong opposition. Rolf Mützench steps aside to make you leader of the parliamentary group and leader of the opposition - as somewhat of a shadow chancellor. In 2025 - or earlier, if the government collapses - you can try getting your payback!"
+        	}
+        	else{
+            	negotiations = "A few months have passed. Unexpectedly, the chancellor of the government to succeed Merkel IV has been recruited from the runner-up, outmaneuvering the election winner."
+        	}
+    	}
 
-      }
+  	}
 
-      switch(selectedCoalition.id){
-      case 1:
-      header = "<h2>“An even grander coalition”</h2>"
+  	switch(selectedCoalition.id){
+  	case 1:
+  	header = "<h2>“Kenya - An Even Grander Coalition”</h2>"
 
-          if(coalitionLeader.party === 77){
-            coalitionText = "After eight years of Grand Coalition, the German people were sick and tired of it. And now, what do they get? An even grander coalition, featuring the Green Party on top of the CDU/CSU and the SPD, called Kenya-Coalition due to the colours of the involved parties. The CDU/CSU kept the chancellorship, the SPD stayed a junior partner and the Green Party has entered the government as well. The left wing of your party groans at the thought of governing another four years with the CDU/CSU, and even lots of moderates agree. At least, quite a few left-of-center provisions have made it into the coalition agreement, though major reforms won't happen. Hopefully, this government will at least bring stability."
-             if (midResult){
+      	if(coalitionLeader.party === 77){
+        	coalitionText = "After eight years of Grand Coalitions, the German people were sick and tired of it. And now, what do they get? An even grander coalition, featuring the Green Party on top of the CDU/CSU and the SPD, called the “Kenya-Coalition”, previously only known from East Germany. The ascendance of minor parties like the AfD have certainly taken their toll on this country, as the three major parties of this election banded together to form a government. The Union kept the chancellorship, you stayed on as junior partner while the Greens have joined, including parts of their climate programs. Just like last time, compromises had to be made, and people on all sides of this agreement are mildly enthused at best. Even though this is somewhat of a novelty, for many left-wingers in your party, it seems like a green-ified version of the unloved GroKo - not a great look for you. Alas, that’s the inevitable price of holding power… just make sure the necessary reforms pass, or <i>Laschet I</i> might be doomed from the start…"
+         	if (midResult){
 
-                    playerFate = emptyCoalitionFate;
-             }
-             else{
-                playerFate = ViceFate;
-             }
-          }
-          else if(coalitionLeader.party === 78){
-            coalitionText = "After eight years of Grand Coalition, the German people were sick and tired of it. And now, what do they get? An even grander coalition, featuring the Green Party on top of the CDU/CSU and the SPD, called Kenya-Coalition due to the colours of the involved parties. This time, the CDU/CSU has been relegated to junior partner though and the SPD is leading the coalition. While you got the chancellorship and some social democratic policies in the coalition agreement, overall, there were lots and lots of compromises and no one is all that happy with this. Hopefully, this government will at least bring stability."
-              playerFate = chancellorFateDown;
-                 }
+                	playerFate = emptyCoalitionFate;
+         	}
+         	else{
+            	playerFate = ViceFate;
+         	}
+      	}
+      	else if(coalitionLeader.party === 78){
+        	coalitionText = "After eight years of Grand Coalitions, the German people were sick and tired of it. And now, what do they get? An even grander coalition, featuring the Green Party on top of the CDU/CSU and the SPD, called the “Kenya-Coalition”, previously only known from East Germany. The ascendance of minor parties like the AfD have certainly taken their toll on this country, as the three major parties of this election banded together to form a government. This time, you took over the government, giving it a distinctive Social-Democratic tone. Nonetheless, just like last time, compromises with the Union had to be made, and people on all sides of this agreement are mildly enthused at best. Especially the CDU is wary of being perceived as the majority whip for Red-Green. You need to be careful not to alienate them - and on the other hand, keep your left wing and the Greens satisfied - all the while resisting attacks from the political extremes. Make sure the necessary reforms pass, or <i>Scholz I</i> might be doomed from the start…"
+          	playerFate = chancellorFateDown;
+             	}
 
-          else{
-            coalitionText = "After eight years of Grand Coalition, the German people were sick and tired of it. And now, what do they get? An even grander coalition, featuring the Green Party on top of the CDU/CSU and the SPD, called Kenya-Coalition due to the colours of the involved parties. The exact constellation is somewhat fresh though - for the first time, a Green chancellor has been elected, " +coalitionLeader.leaderName +". The left wing of your party groans at the thought of governing another four years with the CDU/CSU, and even lots of moderates agree. At least, quite a few left-of-center provisions have made it into the coalition agreement, though major reforms won't happen. Hopefully, this government will at least bring stability."
-             if (midResult){
-                if(thirdPlace){
-                    playerFate = LabourMinisterFate;
-                    }
-                else{
-                    playerFate=LabourViceFate
-                }
-             }
-             else{
-                playerFate = ViceFate;
-             }
-             }
-          break;
+      	else{
+        	coalitionText = "After eight years of Grand Coalitions, the German people were sick and tired of it. And now, what do they get? An even grander coalition, featuring the Green Party on top of the CDU/CSU and the SPD, called the “Kenya-Coalition”, previously only known from East Germany. The ascendance of minor parties like the AfD have certainly taken their toll on this country, as the three major parties of this election banded together to form a government. This time, the Greens are heading the constellation, bringing a modern coat of paint to the Grand Coalition of old. Just like last time, compromises had to be made, and people on all sides of this agreement are mildly enthused at best. Your own left wing wanted to forgo another government aside the CDU, while the Union itself seeks to make a conservative tinge noticeable. As extremes from both sides tear at the coalition, the agreement seems fragile… <i>Baerbock I</i> has a rocky time ahead, and if you can’t find enough common denominators, it might be doomed from the start…"
+         	if (midResult){
+            	if(thirdPlace){
+                	playerFate = LabourMinisterFate;
+                	}
+            	else{
+                	playerFate=LabourViceFate
+            	}
+         	}
+         	else{
+            	playerFate = ViceFate;
+         	}
+         	}
+      	break;
 
-      case 2:
+  	case 2:
 
-         header = "<h2>“There's no escape from the inevitable”</h2>"
-            if(coalitionLeader.party === 77){
-            coalitionText = "It's a bit of a paradox really. The population as a whole doesn't like it. The parties involved certainly don't like it. The media is tired of it. But yet again, for the fourth time in five elections, a Grand coalition between the CDU/CSU and the SPD has formed and "+ coalitionLeader.leaderName + " has become chancellor. It seems that there is just no viable alternative, something is just broken with this political system! As usual, there a lots of compromises in the coalition agreement, no promises of sweeping reforms and no one is really happy with it. The left wing of your party is close to revolt over yet another Grand coalition, and even many moderates agree. Hopefully it will survive the whole legislative session."
-            if (midResult){
-                playerFate=emptyCoalitionFate;
-            }
-            else{
-                playerFate=ViceFate;
-            }
-            }
-            else{
-            coalitionText = "It's a bit of a paradox really. The population as a whole doesn't like it. The parties involved certainly don't like it. The media is tired of it. But yet again, for the fourth time in five elections, a Grand coalition between the CDU/CSU and the SPD has formed. At least, there's a bit of a twist this time, with the SPD winning the chancellorship. It seems that there is just no viable alternative, something is just broken with this political system! As usual, there a lots of compromises in the coalition agreement, no promises of sweeping reforms and no one is really happy with it. The left wing of your party is close to revolt over yet another Grand coalition, despite the fact that you 'won'. Hopefully, you can keep the coalition together for the next for years."
+     	header = "<h2>“Another GroKo - There's No Escape From The Inevitable”</h2>"
+        	if(coalitionLeader.party === 77){
+        	coalitionText = "It's a bit of a paradox really. The population as a whole doesn't like it. The parties involved certainly don't like it. The media is tired of it. But yet again, for the fourth time in five elections, a Grand coalition between the CDU/CSU and the SPD has formed a governing majority, and with it, Armin Laschet has become chancellor over what’s almost the same cabinet that Merkel IV left him. The thoroughly offended Greens are certainly not alone in thinking this system to be broken. You’ve done your best to make Social Democratic governance noticeable, and Laschet left you a lot of leeway on certain topics, but nonetheless, your left wing is close to open rebellion - already, some have been seen in conspiratorial discussions with the Greens. Can the fourth Grand Coalition within twenty years really satisfy the country? As the polls look questionable right now, <i>Laschet I</i>, or as some have dubbed it; <i>Merkel V</i>, has a difficult time ahead…"
+        	if (midResult){
+            	playerFate=emptyCoalitionFate;
+        	}
+        	else{
+            	playerFate=ViceFate;
+        	}
+        	}
+        	else{
+        	coalitionText = "It's a bit of a paradox really. The population as a whole doesn't like it. The parties involved certainly don't like it. The media is tired of it. But yet again, for the fourth time in five elections, a Grand coalition between the CDU/CSU and the SPD has formed a governing majority. This time, you are heading the arrangement - a first in the history of the country. Nonetheless, for many, this is a small improvement, if any. The thoroughly offended Greens are certainly not alone in thinking this system to be broken. Laschet, who is to take over your position as Vice Chancellor and Minister of Finances, has given you certain leeway, but not without insisting on the Black Zero. In light of this, your left wing is skeptical - some have been sighted in dubious talks with the Green opposition. Can the fourth Grand Coalition within twenty years really satisfy the country? As the polls look questionable right now, <i>Scholz I</i>, or as some have dubbed it; <i>Merkel V</i>, has a difficult time ahead…"
 
-            playerFate = chancellorFateDown
-            }
+        	playerFate = chancellorFateDown
+        	}
 
-      break;
+  	break;
 
-      case 3:
-      header = "<h2>“A modern coalition for modern times?”</h2>"
-      if(coalitionLeader.party === 79){
-            coalitionText = "Black-Green has been the up-and-coming coalition for a long time in the states, so no one is surprised when it finally happened on a federal level. In a bit of a twist, it's the Baden-Württemberg variation, with the Green Party being stronger than the CDU/CSU. After some tough, but surprisingly smooth negotiations, the two parties forged a coalition agreement. People are hopeful that they've combined the best of both worlds and can get more done than the last eight years of the Grand Coalition - it's the job of the SPD to show them why social democrats are still needed in government."
-            if (badResult){
+  	case 3:
+  	header = "<h2>“Black Green - A Modern Coalition For Modern Times?”</h2>"
+  	if(coalitionLeader.party === 79){
+        	coalitionText = "Many suspected it to be in the air for some time now. When the Jamaica talks of 2017 failed due to the <i>FDP</i> feeling shunned, the love affair of CDU and Greens was sure to be blossoming into this arrangement. In a bit of a twist, the Greens seem to have taken a liking to the Union’s newfound conservationism, as the 2020’s begin with a Baden-Württemberg variation-Black-Green coalition. Their talks seemed surprisingly smooth from the outside - and their regime of conservationism combined with centrist economics seems to poll well as of now. But, of course - without the SPD in government, the social fabric of this nation will erode, as the wealth gap will only continue to increase, as workers will lose their jobs for the energy transition, as children will continue to go hungry. Being in the Opposition for the first time since 2013, the SPD has to redefine their identity, to prove that it needs the SPD to make Germany just. <i>Baerbock I</i> is their opportunity to do just that."
+        	if (badResult){
 
-            playerFate= oppositionFateWeak;
-            }
-            else if(midResult){
+        	playerFate= oppositionFateWeak;
+        	}
+        	else if(midResult){
 
-            playerFate=oppositionFateMid;
-            }
-            else{
-            playerFate=oppositionFateStrong;
-            }
-          }
-        else{
-            coalitionText = "Black-Green has been the up-and-coming coalition for a long time in the states, so no one is surprised when it finally happened on a federal level. After some tough, but surprisingly smooth negotiations, the two parties forged a coalition agreement. People are hopeful that they've combined the best of both worlds and can get more done than the last eight years of the Grand Coalition - it's the job of the SPD to show them why social democrats are still needed in government."
-            if (badResult){
+        	playerFate=oppositionFateMid;
+        	}
+        	else{
+        	playerFate=oppositionFateStrong;
+        	}
+      	}
+    	else{
+        	coalitionText = "Many suspected it to be in the air for some time now. When the Jamaica talks of 2017 failed due to the <i>FDP</i> feeling shunned, the love affair of CDU and Greens was sure to be blossoming into this arrangement. The Greens have leveraged their electoral position to merge a Söderistic regime of moderate environmentalism to Laschet’s centrist conservatism - that mixture seems to poll well as of now. But, of course - without the SPD in government, the social fabric of this nation will erode, as the wealth gap will only continue to increase, as workers will lose their jobs for the energy transition, as children will continue to go hungry. Being in the Opposition for the first time since 2013, the SPD has to redefine their identity, to prove that it needs the SPD to make Germany just. <i>Laschet I</i> is their opportunity to do just that."
+        	if (badResult){
 
-            playerFate= oppositionFateWeak;
-            }
-            else if(midResult){
+        	playerFate= oppositionFateWeak;
+        	}
+        	else if(midResult){
 
-            playerFate=oppositionFateMid;
-            }
-            else{
-            playerFate=oppositionFateStrong;
-            }
-        }
-      break;
-      case 4:
-          header = "<h2>“After 16 years, Red-Green makes a comeback”</h2>"
+        	playerFate=oppositionFateMid;
+        	}
+        	else{
+        	playerFate=oppositionFateStrong;
+        	}
+    	}
+  	break;
+  	case 4:
+      	header = "<h2>“Green-Red - An Unforeseen Comeback After 16 Years”</h2>"
+      	ctsAchievement("Unforeseen comeback");
 
-        if(coalitionLeader.party === 79){
-        coalitionText = "Perhaps it is no big surprise that this coalition formed, with the amount of things you and the SPD have in common. However, Red-Green having a majority on the federal level is something that just seemed mathematically impossible a few years ago, a relic of a simpler party systems. This is a major triumph for the center-left part of the party spectrum, even though it's a bit bittersweet with the Green Party leading the coalition instead of you. The coalition talks have been a breeze, with you and the Greens in agreement about most things. Let's hope governing will be just as easy!"
-             if (badResult){
-                playerFate = emptyCoalitionFate;
-             }
-             else{
-                playerFate = ViceFate;
-             }
-          }
-        else{
-            coalitionText = "Perhaps it is no big surprise that this coalition formed, with the amount of things you and the SPD have in common. However, Red-Green having a majority on the federal level is something that just seemed mathematically impossible a few years ago, a relic of a simpler party systems. This is a major triumph for the center-left part of the party spectrum, and the SPD winning the chancellorship is the icing on the cake. The coalition talks have been a breeze, with you and the SPD in agreement about most things. Let's hope governing will be just as easy!"
-            playerFate = chancellorFateHappy;
-           }
-          break;
+    	if(coalitionLeader.party === 79){
+    	coalitionText = "Although it may seem oxymoronic, this arrangement is as surprising as it is unsurprising. Just a few months ago, Red-Green seemed like a relic of a past party system, but with everything that has happened, the Germans decisively chose a Center-Left course for their country. While some members of your party, particularly moderates, were a bit weary about the Greens heading this arrangement, the opportunity to pass good chunks of your program was too good to pass on. The coalition talks have been a breeze, with you and the Greens in agreement about the fundamentals. Green-Red has major plans to overhaul the economy of this country, to transition it to be eco-friendly and socially just, to fight discrimination, to empower workers, to promote closer cooperation in Europe and to bring Germany once and for all to the 21st century. The center-right will surely keep you on your toes, while the people have high expectations - as the “older sibling” of this arrangement, make sure <i>Baerbock I</i> acts on its promises."
+         	if (badResult){
+            	playerFate = emptyCoalitionFate;
+         	}
+         	else{
+            	playerFate = ViceFate;
+         	}
+      	}
+    	else{
+        	coalitionText = "Although it may seem oxymoronic, this arrangement is as surprising as it is unsurprising. Just a few months ago, Red-Green seemed like a relic of a past party system, but with everything that has happened, the Germans decisively chose a Center-Left course for their country. This is a major triumph for the Social Democrats, as with the Greens at your side, you are able to enact the majority of your policies. The coalition talks only took a few weeks to clarify the details - with Robert Habeck taking over your old job as Vice Chancellor and Finance Minister, you have big plans to overhaul Germany’s economy, to improve workplace conditions, implement a 12€-Minimum wage, transitioning it to zero-emissions by 2040, maybe even test out the 4-work days-week, in close association with the Unions. Annalena Baerbock as your Foreign Minister is to promote European cooperation even more, asserting Germany’s rule as leader of the EU. You’ve done it, Olaf, everything is going to plan! The center-right will surely keep you on your toes, while the people have high expectations - make sure <i>Scholz I</i> acts on its high promises."
+        	playerFate = chancellorFateHappy;
+       	}
+      	break;
 
-      case 5:
-        header = "<h2>“Lessons learned - Jamaica coalition successfully formed”</h2>"
+  	case 5:
+    	header = "<h2>“Jamaica - Lessons Learned Four Years Later”</h2>"
 
-            coalitionText = "In 2017, a Jamaica coalition consisting of the CDU/CSU, Greens and FDP almost formed, but negotiations fell through when FDP leader Christian Lindner famously said: 'It's better not to govern than to govern wrongly.' This time, negotiations were more successful and  "+ coalitionLeader.leaderName + " has become chancellor. There's a criticism that the Green Party has given up in almost every policy field not related to climate to get this coalition to work, so you have your work as opposition cut out for you. As the only centrist opposition party, it's your job to hold this government accountable."
-             if (badResult){
+        	coalitionText = "In 2017, a Jamaica coalition under Merkel was in the air, but negotiations fell through when FDP leader Christian Lindner famously proclaimed 'It's better not to govern than to govern wrongly.' This time, the three parties seemed to have learned from the fiasco, as with a finalized agreement, "+ coalitionLeader.leaderName + " has become chancellor. While the Jamaica-partners are eager to get to work, there’s enough tension to go around - a common criticism going around is that the Green Party has made concessions on almost every policy field not related to climate. As the main opposition party, it’s now the Social Democrat’s job to show the shortcomings of this compromise, to prove that Germany needs the SPD to keep its economy just and society united. <i>"+ coalitionLeader.leaderName + " I</i> is their chance to do just that."
+         	if (badResult){
 
-            playerFate= oppositionFateWeak;
-            }
-            else if(midResult){
+        	playerFate= oppositionFateWeak;
+        	}
+        	else if(midResult){
 
-            playerFate=oppositionFateMid;
-            }
-            else{
-            playerFate=oppositionFateStrong;
-            }
+        	playerFate=oppositionFateMid;
+        	}
+        	else{
+        	playerFate=oppositionFateStrong;
+        	}
 
-          break;
-          case 6:
-          header = "<h2>“Conceptually and mathematically difficult to imagine”</h2>"
+      	break;
+      	case 6:
+      	header = "<h2>“Traffic Light - The Progressive Compromise”</h2>"
+      	ctsAchievement("Progressive Compromise");
 
-          if(coalitionLeader.party === 79){
-            coalitionText = "Conceptually and mathematically difficult to imagine - these were the words Christian Lindner, leader of the FDP used when asked about the traffic light coalition consisting of the SPD, Greens and FDP before the election. With enough imagination - and after tough negotiations - you managed to form it anyway. The SPD is a bit dissatisfied about losing the chancellorship to "+ coalitionLeader.leaderName + ", but is otherwhise happy to govern without the CDU/CSU. The coalition agreement has the imprint of all three parties, though your base isn't happy with all the concessions you had to get the FDP on board. Hopefully, you can combine the best parts of all parties to lead the country in a more modern direction."
-            if (badResult){
-                playerFate = emptyCoalitionFate;
-             }
-             else{
-                playerFate = LabourViceFate;
-             }
-          }
-           else{
-            coalitionText = "Conceptually and mathematically difficult to imagine - these were the words Christian Lindner, leader of the FDP used when asked about the traffic light coalition consisting of the SPD, Greens and FDP before the election. With enough imagination - and after tough negotiations - you managed to form it anyway and win the chancellorship back to the SPD. The coalition agreement has the imprint of all three parties, though your base isn't happy with all the concessions you had to get the FDP on board. Hopefully, you can combine the best parts of all parties to lead the country in a more modern direction."
-             playerFate =chancellorFateHappy;
-          }
-          break;
+      	if(coalitionLeader.party === 79){
+        	coalitionText = "”Conceptually and mathematically difficult to imagine” - these were the words that Christian Lindner, leader of the FDP, used when asked about the traffic light coalition before the election. Apparently, you had enough imagination to form it anyway. You decided to talk with the FDP first, evoking the Social-Liberal coalition of Brandt and Scheel, of Schmidt and Genscher. Although they have since become much more fiscally conservative, you managed to channel their spirit to approach "+ coalitionLeader.leaderName + ", creating a coalition agreement that is to modernize Germany with socio-cultural reforms, a higher minimum wage and new means to transition towards zero-emissions, buoyed by Christian Lindner as a fiscal hawk taking over the Ministry of Finances. The ambition of this new constellation is nothing less but to redefine the political discourse - the Lights are Green for progress. Will <i>Baerbock I</i> win out, or will the non-progressives prevail? Only time will tell…"
+        	if (badResult){
+            	playerFate = emptyCoalitionFate;
+         	}
+         	else{
+            	playerFate = LabourViceFate;
+         	}
+      	}
+       	else{
+        	coalitionText = "”Conceptually and mathematically difficult to imagine” - these were the words that Christian Lindner, leader of the FDP, used when asked about the traffic light coalition before the election. Apparently, you had enough imagination to form it anyway. While the Greens and FDP approached you with some tough negotiations, you managed to full through and win the chancellorship back to the SPD. With a plethora of modernization policies, socio-cultural reforms, a minimum wage increase and a new climate policy, buoyed by Christian Lindner as Minister of Finances, Robert Habeck as Vice Chancellor and MInister of the Economy and Annalena Baerbock as Foreign Minister, the ambition of the “Traffic Light” is nothing less but to redefine the political discourse of the country, with many innovative proposals to be enacted if no major crisis ties up the budget for 2022. Be careful though, the light shows “Red” for caution - your left wing is certainly suspicious towards the Liberals, while the right-wing opposition is ready to go scorched earth on your administration. Will <i> Scholz I</i> win out, or will the non-progressives prevail? Only time will tell…"
+         	playerFate =chancellorFateHappy;
+      	}
+      	break;
 
-          case 7:
-                header =  "<h2>“Wait, what?”</h2>"
-                coalitionText = "This isn't supposed to be possible. If you want to see a Bahamas coalition, form one yourself with one of the CDU/CSU candidates. In the meantime, please report this bug."
-            break;
+      	case 7:
+            	header =  "<h2>“Wait, what?”</h2>"
+            	coalitionText = "This isn't supposed to be possible. If you want to see a Bahamas coalition, form one yourself with one of the CDU/CSU candidates. In the meantime, please report this bug."
+        	break;
 
-        case 8:
-            header =  "<h2>“Dreams come true for Laschet and Lindner”</h2>"
-            coalitionText = "Despite it seeming mathematically impossible at the beginning of the election campaign, Laschet and Lindner managed to form the same coalition they had formed on a state level in North Rhine-Westphalia four years ago. This is a major blow to the left - both you and the SPD have been shut out off power, leaving you with little power to stop whatever right-wing agenda the CDU/CSU and FDP want to accomplish. Maybe the FDP will at least suffer as much electorally as they did after the last such coalition."
-            if (badResult){
+    	case 8:
+        	header =  "<h2>“Black-Yellow - Laschet And Lindner, The Dream-Team”</h2>"
+        	coalitionText = "It seemed mathematically impossible for the last few months, but the mandate of the German people was clear - they chose a Center-Right path. Laschet and Lindner already negotiated together in North Rhine-Westphalia, and within weeks, they’ve drawn up a coalition agreement built on neoliberal economics, trickle-down philosophies, infrastructure-modernization and an unambitious climate policy, lacking significant market intervention. This is a major blow to the left - both you and the Greens have been shut out of power, leaving you to oppose the liberal-conservative agenda from the opposition only. You’ve done so successfully at other points, most recently 2009-2013 - maybe the FDP will at least electorally suffer as much as they did after that arrangement. You’ll make sure, <i>Laschet I</i> won’t get away with their antiquated policies."
+        	if (badResult){
 
-            playerFate= oppositionFateWeak;
-            }
-            else if(midResult){
+        	playerFate= oppositionFateWeak;
+        	}
+        	else if(midResult){
 
-            playerFate=oppositionFateMid;
-            }
-            else{
-            playerFate=oppositionFateStrong;
-            }
-            break;
+        	playerFate=oppositionFateMid;
+        	}
+        	else{
+        	playerFate=oppositionFateStrong;
+        	}
+        	break;
 
-        case 9:
-            header =  "<h2>“Wait, what?”</h2>"
-            coalitionText = "This isn't supposed to be possible. If you want to see a Black-Blue coalition, form one yourself with one of the CDU/CSU candidates. In the meantime, please report this bug."
-            break;
+    	case 9:
+        	header =  "<h2>“Wait, what?”</h2>"
+        	coalitionText = "This isn't supposed to be possible. If you want to see a Black-Blue coalition, form one yourself with one of the CDU/CSU candidates. In the meantime, please report this bug."
+        	break;
 
-        case 10:
-        header = "<h2>“An even grander coalition”</h2>"
+    	case 10:
+    	header = "<h2>“Germany - Land Of Compromises”</h2>"
 
-        if(coalitionLeader.party === 78){
+    	if(coalitionLeader.party === 78){
 
-            coalitionText = "After eight years of Grand Coalition, the German people were sick and tired of it. And now, what do they get? An even grander coalition, featuring the FDP on top of the CDU/CSU and the SPD, called Germany-Coalition due to the colours of the involved parties. This time, the CDU/CSU has been relegated to junior partner though and the SPD is leading the coalition. While you got the chancellorship and some social democratic policies in the coalition agreement, overall, there were lots and lots of compromises and no one is all that happy with this. Hopefully, this government will at least bring stability."
-              playerFate = chancellorFateDown;
-            }
-            else{
+        	coalitionText = "It seems there is just no escape from the compromises. After 8 years of Grand Coalition, the people were tired of it. And now, what do they get? The FDP as a dollop of cream on top, in a so-called “Germany”-coalition.  As the colors of the German flag waive outside, some might take the mood for patriotic determination, others for technocratic disappointment. This time, you have usurped the chancellery, driving a hard bargain against your center-right coalition partners, but nonetheless, this is poised to be a neoliberal arrangement, with the Greens and the Left posing a dangerous foe for your own electoral prospects. Between the compromises, your left wing is already close to open rebellion, Fridays For Future’s demonstrations might ignite another “climate summer”, and the populist fringes of this country claw at the right-wing of your partners as well. <i>Scholz I</i> has its work cut out - <i>Germany</i> has a long road ahead."
+          	playerFate = chancellorFateDown;
+        	}
+        	else{
 
-            coalitionText = "After eight years of Grand Coalition, the German people were sick and tired of it. And now, what do they get? An even grander coalition, featuring the FDP on top of the CDU/CSU and the SPD, called Germany-Coalition due to the colours of the involved parties. The CDU/CSU kept the chancellorship, the SPD stayed a junior partner and the Green Party has entered the government as well. The left wing of your party groans at the thought of governing another four years with the CDU/CSU, and even lots of moderates agree. At least, quite a few left-of-center provisions have made it into the coalition agreement, though major reforms won't happen. Hopefully, this government will at least bring stability."
+        	coalitionText = "It seems there is just no escape from the compromises. After 8 years of Grand Coalition, the people were tired of it. And now, what do they get? The FDP as a dollop of cream on top, in a so-called “Germany”-coalition.  As the colors of the German flag waive outside, some might take the mood for patriotic determination, others for technocratic disappointment. You have joined the government once again as a junior partner, driving a hard bargain against the FDP’s economics, that almost blew up the negotiations. Nonetheless, you pulled through, as the coalition agreement got a narrow majority by the party. This is poised to be a neoliberal arrangement, with the Greens and the Left posing a dangerous foe for your own electoral prospects - you might just need to reforge the identity of your party once and for all. Between the compromises, your left wing is already close to open rebellion, Fridays For Future’s demonstrations might ignite another “climate summer”, and the populist fringes of this country claw at the right-wing of your partners as well. <i>Laschet I</i> has its work cut out - <i>Germany</i> has a long road ahead."
 
-             if (midResult){
-                    playerFate = emptyCoalitionFate;
-             }
-             else{
-                playerFate = ViceFate;
-             }
+         	if (midResult){
+                	playerFate = emptyCoalitionFate;
+         	}
+         	else{
+            	playerFate = ViceFate;
+         	}
 
 
-            }
-          break;
+        	}
+      	break;
 
-        case 11:
-            header = "<h2>“A blast from the past”</h2>"
-            coalitionText = "In a development absolutely no one has predicted, the SPD and FDP have formed the first red-yellow government on a federal level since the early 1980s. Both you and them had to make quite a lot of concessions, but with just two parties in government, there are many social democratic and many liberal policies in the coalition agreement. Your party is mostly just glad to govern without the CDU/CSU. The last such coalition ended with a betrayal by the FDP, let's see if this one is more stable and can govern Germany successfully the next four years."
-              playerFate=chancellorFateHappy;
-              break;
+    	case 11:
+        	header = "<h2>“Social-Liberal Coalition - A Blast From The Past”</h2>"
+        	ctsAchievement("Novelty", false)
+        	coalitionText = "How did this happen? In a development absolutely no one has predicted, the SPD and FDP have formed the first social-liberal government on a federal level since the early 1982. Evoking the spirits of Brandt and Scheel, of Schmidt and Genscher, you’ve managed to forge a surprisingly progressive coalition agreement, although with quite a lot of concessions on economic matters. The first two German chancellors loom above you - the last such coalition ended with a betrayal by the FDP, after all. The Greens are sure to grill your left wing on its environmental plans, while the CDU is ready to take on the Liberals. If you can draw the FDP leftwards, perhaps this time, <i>Scholz I</i> can <i>Dare More Democracy</i>."
+          	playerFate=chancellorFateHappy;
+          	break;
 
-        case 12:
-           contestedText="";
-            negotiations="";
-            var majority = selectedCoalition.parties.reduce((sum, partyId) => sum + e.final_overall_results.find(p => p.candidate === partyId).electoral_votes, 0);
+    	case 12:
+       	contestedText="";
+        	negotiations="";
+        	var majority = selectedCoalition.parties.reduce((sum, partyId) => sum + e.final_overall_results.find(p => p.candidate === partyId).electoral_votes, 0);
 
-            if (playerLeader === coalitionLeader){
-            if(majority-totalSeats/2 < 10){
-                header =  "<h2>“On the second ballot, there is still no new chancellor.”</h2>"
-                coalitionText = "It has almost become a tradition for the CDU/CSU and FDP to warn about a danger of a Red-Red-Green coalition on the federal level. All this time, most people thought that they were just fearmongering, but now it actually happened: You not only started coalition negotiations, but actually formed a - very leftist - coalition agreement. There's just one small problem: It's the second ballot for chancellor now, and in an unprecedented development you still haven't gotten a majority. Since the ballots are secret, you don't know who voted against you, but it seems likely that those moderates who voiced their serious concerns weren't bluffing."
-                secondPage = true;
-                if(majority-totalSeats/2 < 5){
-                    secondPageText = "After days of balloting and many more attempts, it becomes clear that there just isn't going to be a majority for you. The party leaders Esken and Walther-Borjans intervene and, with the backing of the parliamentary group, declares that the SPD will move forward with someone different than you. It's unclear what happens now - a coalition led by another SPD politician, another party winning the chancellorship and new elections all seem like possibilities. You will make history as the man who just couldn't become chancellor"
-                    }
-                else{
-                secondPageText = "After days of balloting and many more attempt and negotiations in between, you finally get elected by just one vote. You've become chancellor, but this arrangement seems very unstable, so it's unclear if the government will last for the whole legislative session. Also, there are rumours about some more centrist members of the SPD and Greens leaving their respective parties for the FDP and CDU/CSU. The coming months and years are going to be a tumultuous time."
-                playerFate = chancellorFateHappy;
-                }
+        	if (playerLeader === coalitionLeader){
+        	if(majority-totalSeats/2 < 10){
+            	header =  "<h2>“Onset Of Chaos - No Majority On The Second Ballot”</h2>"
+            	coalitionText = "It has almost become a tradition for the CDU/CSU and FDP to warn about the “danger” of a Red-Red-Green coalition on the federal level. You knew they were just fearmongering, but you’ve seemingly underestimated the reservations towards this arrangement. After tough negotiations, you’ve whittled the Left down to accept “the current status of Germany as a NATO-member”, writing an unabashedly leftist coalition agreement. Of course, you’re within constitutional constraints - you wouldn’t want it any other way, you still served under Angela Merkel, after all. No danger there. No, the danger was in the politics: as the results for the first ballot were announced, you didn’t have the votes. Surely a fluke, you thought - but after the second ballot also failed to elect you, you get nervous. Since the ballots are secret, you don't know who voted against you - either the communists inside the Left can’t abandon their dogma, or those moderates in Greens and SPD weren't bluffing after all."
+            	secondPage = true;
+            	if(majority-totalSeats/2 < 5){
+                	secondPageText = "After days of balloting and many more attempts, it becomes clear to everyone: it’s not going to happen. There just isn't going to be a majority for you. The party leaders Esken and Walther-Borjans intervene and, with the backing of the parliamentary group, declares that the SPD will move forward without you - you are damaged goods. It's unclear what happens now - It's unclear what happens now - a coalition under a new SPD leadership, another party winning the chancellorship or a snap election all seem like possibilities. No matter what, your political career has taken a serious hit. It seems you will make history as the man who flew too close to the sun, crashing down after an unexpected high. Sorry, Olaf."
+                	}
+            	else{
+            	secondPageText = "You went back to the drawing board - you and Baerbock had to commit to a broader reappropriations-law, while the Left would allow you to seek votes for Foreign Policy elsewhere. On the third ballot, he finally gets elected by just one vote. You’ve become chancellor - but this arrangement seems very unstable. With your ambitious climate policy, a higher minimum wage, a federal rent moratorium, the reintroduction of the wealth tax, a unitary health insurance system and a complete rethinking of the economic consensus, you’ll have your work cut out for you, while Baerbock has to make sure the coalition doesn’t lose its ability to act on Foreign Policy.<br>Finally, the influence of the <i>Parliamentarian Left</i> in your party has reached it’s peak, with a lot of Jusos entering the parliament, determined to make the most of this coalition. With rumors of dissent from the ranks of Realos and Seeheimer on one side, and communists on the other, while the rightists are prepared to obstruct you at every corner, the coming months of <i>Scholz I</i> will be a trial like no other. Good luck on leading this country into the first <b>Leftist Decade</b>."
+            	playerFate = chancellorFateHappy;
+            	}
 
-            }
+        	}
 
-            else{
-            header =  "<h2>“Protests overshadow chancellor election”</h2>"
-            coalitionText = "It has almost become a tradition for the CDU/CSU and FDP to warn about a danger of a Red-Red-Green coalition on the federal level. All this time, most people thought that they were just fearmongering, but now it actually happened: You not only started coalition negotiations, but actually formed a - very leftist - coalition agreement. There were some rumblings about you not getting a majority in the vote for chancellor, but even though you haven't received as many votes as the coalition has seats, you have still been elected chancellor. This coalition might not be the most stable and there are rumours about some more centrist members of the SPD and Greens leaving their respective parties for the FDP and CDU/CSU. Let's hope you can govern through the whole legislative session."
-            playerFate = chancellorFateHappy;
-            }
-            }
-            else{
+        	else{
+        	header =  "<h2>“Red-Red-Green - Leftist Unity”</h2>"
+        	coalitionText = "It was clear to you, this country needs serious reforms. With the neoliberal course of the FDP, the antiquated policies of the Union and the fascist menace reentering parliament, there was only one option for a new beginning: a coalition with the Left. You’d think they didn’t have a lot of leverage due to their middling performance, but with their steadfast non-interventionist Foreign Policy, the coalition talks were quite tough. Most days of the several months you’ve taken to negotiate were spent on that topic, while the others forged an unabashedly leftist policy regime, consisting of the abolition of Hartz IV, the reintroduction of the wealth tax, a federal rent moratorium, a minimum wage of 12.50€, a unitary health insurance system and a complete rethinking of the economic consensus, particularly ecologically. In the end, you did it - you got the Left to acknowledge the “current status of NATO membership”, shelving most discussions about Foreign Policy until it’s relevant. <br>Finally, the influence of the <i>Parliamentarian Left</i> in your party has reached it’s peak, with a lot of Jusos entering the parliament, determined to make the most of this coalition. The CDU/CSU and FDP already have put up the redbaiting barricades, preparing to obstruct and sue wherever possible - and with your own moderate wings unnerved, you have a lot of work to do. <i>Scholz I</i> will be a difficult test of your political ability. ."
+        	playerFate = chancellorFateHappy;
+        	}
+        	}
+        	else{
 
-                if(majority-totalSeats/2 < 10){
-                header =  "<h2>“On the second ballot, there is still no new chancellor.”</h2>"
-                coalitionText = "It has almost become a tradition for the CDU/CSU and FDP to warn about a danger of a Red-Red-Green coalition on the federal level. All this time, most people thought that they were just fearmongering, but now it actually happened: You not only started coalition negotiations, but actually formed a - very leftist - coalition agreement. There's just one small problem: It's the second ballot for chancellor now, and in an unprecedented development Baerbock of the Green Party still hasn't gotten a majority. Since the ballots are secret, you don't know who voted against her, but it seems likely that those moderates who voiced their serious concerns weren't bluffing."
-                secondPage = true;
-                if(majority-totalSeats/2 < 5){
-                    secondPageText = "After days of balloting and many more attempts, it becomes clear that there just isn't going to be a majority for Baerbock. At this point, the party leaders Esken and Walther-Borjans intervene and, with the backing of the parliamentary group, declares that the SPD will move forward with someone different than you. It's unclear what happens now -the Greens forming a different coalition, another party winning the chancellorship and new elections all seem like possibilities. With your involvement in this episode, you've probably ended your political career, though ironically the left wing want you to stay on."
-                    }
-                else{
-                secondPageText = "After days of balloting and many more attempt and negotiations in between, Baerbock finally gets elected by just one vote. She's become chancellor, but this arrangement seems very unstable, so it's unclear if the government will last for the whole legislative session. Also, there are rumours about some more centrist members of the SPD and Greens leaving their respective parties for the FDP and CDU/CSU. The coming months and years are going to be a tumultuous time."
-                playerFate = ViceFate;
-                }
+            	if(majority-totalSeats/2 < 10){
+            	header =  "<h2>“Onset Of Chaos - No Majority On The Second Ballot”</h2>"
+            	coalitionText = "It has almost become a tradition for the CDU/CSU and FDP to warn about the “danger” of a Red-Red-Green coalition on the federal level. You knew they were just fearmongering, but you’ve seemingly underestimated the reservations towards this arrangement. After tough negotiations, you and Baerbock whittled the Left down to accept “the current status of Germany as a NATO-member”, writing an unabashedly leftist coalition agreement. Of course, you’re within constitutional constraints - Baerbock isn’t an actual socialist, after all. No danger there. No, the danger was in the politics: Baerbock didn’t have the votes on the first ballot. And it wasn’t a fluke - the second ballot was just as inconclusive. Since the ballots are secret, you don't know who voted against her - either the communists inside the Left have too much reservations with her as a “Realo”, or those moderates in SPD and Greens weren't bluffing after all."
+            	secondPage = true;
+            	if(majority-totalSeats/2 < 5){
+                	secondPageText = "After days of balloting and many more attempts, it becomes clear to everyone: it’s not going to happen. There just isn't going to be a majority for Baerbock. Finally, she attempts to go back to the drawing board - only to be voted out by her very own party. It's unclear what happens now - will Robert Habeck be able to agree after such a debacle, will someone else win the chancellorship or will a snap election be called? One thing’s for certain - the party isn’t convinced of your own abilities. You might have to fight tooth and nail to be involved in the next talks - if there will be any."
+                	}
+            	else{
+            	secondPageText = "You went back to the drawing board - you and Baerbock had to commit to a broader reappropriations-law, while the Left would allow you to seek votes for Foreign Policy elsewhere. On the third ballot, she finally gets elected by just one vote. You’ve made Annalena Baerbock become chancellor - but this arrangement seems very unstable. With your ambitious climate policy, a higher minimum wage, a federal rent moratorium, the reintroduction of the wealth tax, a unitary health insurance system and a complete rethinking of the economic consensus, she’ll have her work cut out for her - all the while making sure that the coalition doesn’t lose it’s ability to act on foreign policy. With rumors of dissent from the ranks of Realos and Seeheimer on one side, and communists on the other, while the rightists are prepared to obstruct you at every corner, the coming months of <i>Baerbock I</i> will be a trial like no other."
+            	playerFate = ViceFate;
+            	}
 
-            }
+        	}
 
-            else{
-            header =  "<h2>“Protests overshadow chancellor election”</h2>"
-            coalitionText = "It has almost become a tradition for the CDU/CSU and FDP to warn about a danger of a Red-Red-Green coalition on the federal level. All this time, most people thought that they were just fearmongering, but now it actually happened: You not only started coalition negotiations, but actually formed a - very leftist - coalition agreement. There were some rumblings about Baerbock of the Green Party not getting a majority in the vote for chancellor, but even though she hasn't received as many votes as the coalition has seats, she has still been elected chancellor. This coalition might not be the most stable and there are rumours about some more centrist members of the SPD and Greens leaving their respective parties for the FDP and CDU/CSU. Let's hope you can govern through the whole legislative session."
-            playerFate = ViceFate;
-            }
-            }
-            break;
+        	else{
+        	header =  "<h2>“Red-Red-Green - Leftist Unity””</h2>"
+        	coalitionText = "Some were surprised, others weren’t - Annalena Baerbock was known as a moderate inside her party, even driving harsher attacks at the Left than you - and yet, she decided to go ahead to forge a leftist majority. And now, the negotiations are through - Germany will get a Red-Red-Green government. With their steadfast non-interventionist Foreign Policy, the talks were quite tough. She has given on the tone to redefine the economic strategy of the government around ecological stability and redistribution, rather than growth - including an unabashedly leftist policy regime, consisting of the abolition of Hartz IV, the reintroduction of the wealth tax, a federal rent moratorium, a minimum wage of 12€, a unitary health insurance system.  In the end, you did it - you got the Left to acknowledge the “current status of NATO membership”. Your party has to make sure the government doesn’t lose its ability to act on Foreign Policy, even in the face of crisis. The CDU/CSU and FDP already have put up the redbaiting barricades, preparing to obstruct and sue wherever possible - and with your own moderate wings unnerved, the first leftist government of Germany will have a lot of work to do. <i>Baerbock I</i> will be a difficult test of everyone’s political abilities."
+        	playerFate = ViceFate;
+        	}
+        	}
+        	break;
 
-        case 13:
-            header = "<h2>“Socialists in a German government for the first time since 1990”</h2>"
-            coalitionText = "The Left party and the SPD has had a contentious relationship in the past. However, in a big surprise, they not only achieved a majority together, but also formed a coalition! The SPD has won back the chancellorship in probably the most leftwing German government ever - if you don't count the Democratic Republic - through the backing of the two parties. There are rumours of disgruntled moderate SPD members leaving the party for the Greens or CDU though. Now it's time to govern though, no matter how much the right parties rally against this dangerous, socialist government!"
-              playerFate= chancellorFateHappy;
-              break;
+    	case 13:
+        	header = "<h2>“Red-Red - A Reunion Of Old Friends”</h2>"
+        	ctsAchievement("Novelty", false)
+        	coalitionText = "The Left party and the SPD has had a contentious relationship in the past - but apparently you rediscovered your leftist roots after this strong electoral mandate. Who needs those Green post-materialists anyways? While the talks were a bit touch and go here and there, particularly on Foreign Policy, you pulled through with a regime of significant economic interventionism, even reappropriations, as well as further empowerment of unions and co-ops. There are rumors of some Seeheimer MP’s already souring on your party’s leftwards drift, so this might not be the most stable arrangement. You certainly have to improve the German’s view on socialism, lest the Greens absorb them into their own ranks. Time to make sure your promises are kept, or <i>Scholz I</i> will incur the same fate as the German Democratic Republic…"
+          	playerFate= chancellorFateHappy;
+          	break;
 
-        case 14:
-            header = "<h2>“Socialists in a German government for the first time since 1990”</h2>"
-            coalitionText = "A Green-Left coalition is historic in several ways: The first coalition on a federal level to not include the SPD or CDU, the first to include the Left Party and the most leftwing coalition ever formed in general. There are some concerns about the stability of this arrangement and the level of experience, so maybe, Germany needs another leftist alternative soon. While the policies of the new government are not far from what you wanted to achieve, it still stings to be part of the opposition yet again."
-               if (badResult){
+    	case 14:
+        	header = "<h2>“Green-Left - Ecosocialism Achieved”</h2>"
+        	coalitionText = "A Green-Left coalition is historic in several ways: The first coalition on a federal level to not include the SPD or CDU, the first to include the Left Party and the most leftwing coalition ever formed in general. Even though Foreign Policy was contentious, they have forged an incredibly leftist coalition agreement, even raising eyebrows within your party. With their naive inexperience on how the economy actually works, this is sure to crash and burn. As several Realos from the Greens might defect into your ranks, it’s time to be a moderating force for leftism in Germany - to show what’s possible. To stand for reform, instead of revolution, aside the CDU as a partner in the center. <i>Baerbock I</i> must be moderated, or even stopped. "
+           	if (badResult){
 
-            playerFate= oppositionFateWeak;
-            }
-            else if(midResult){
+        	playerFate= oppositionFateWeak;
+        	}
+        	else if(midResult){
 
-            playerFate=oppositionFateMid;
-            }
-            else{
-            playerFate=oppositionFateStrong;
-            }
-            break;
+        	playerFate=oppositionFateMid;
+        	}
+        	else{
+        	playerFate=oppositionFateStrong;
+        	}
+        	break;
 
-        case 15:
-            header = "<h2>“The dawn of a new age in German politics”</h2>"
-            coalitionText = "A Green-Yellow coalition is historic: The first coalition on a federal level to not include the SPD or CDU, a stunning rebuke of the old party system. Some people are glad that neither of the Grand coalition partners stayed in power, though a lot are concerned about this untested government.There's a chance that they will crash and burn, and the CDU/CSU both line up to profit if that happens. Time will tell if this coalition was a fluke or if this is truly the beginning of a new age in German politics."
-             if (badResult){
+    	case 15:
+        	header = "<h2>“Green-Yellow - Dawn Of A New Age”</h2>"
+        	coalitionText = "The shock already began on election night - the results were already a wake-up call for both you and the SPD. You've lost your once-dominant status in the German party system, and now, on top of that, neither of you is part of the government for the first time in German history. Instead, the centrist opposition of Green Party and the FDP have banded together, to take over the reigns of government in an absolute novelty of a coalition. Annalena Baerbock becomes the chancellor of the “modernization alliance”, with Lindner as Minister of Finances and Vice Chancellor, even though the two parties have their own differences over economical and ecological matters. They claim only <i>Baerbock I</i> can give Germany the reforms it needs to stay relevant  - your job as opposition party now is to defend the identity of Social Democracy, and prove that your experience at effective and fair socio-economics is still needed!"
+         	if (badResult){
 
-            playerFate= oppositionFateWeak;
-            }
-            else if(midResult){
+        	playerFate= oppositionFateWeak;
+        	}
+        	else if(midResult){
 
-            playerFate=oppositionFateMid;
-            }
-            else{
-            playerFate=oppositionFateStrong;
-            }
-            break;
-        }
+        	playerFate=oppositionFateMid;
+        	}
+        	else{
+        	playerFate=oppositionFateStrong;
+        	}
+        	break;
+    	}
+
 
          if (secondPage){
-            text = [`<p>${contestedText}${negotiations}</p><p>${coalitionText}</p><p>${playerFate}</p>`,`<p>${secondPageText}</p>` ]
+            text = [`<p>${negotiations}${contestedText}</p><p>${coalitionText}</p><p>${playerFate}</p>`,`<p>${secondPageText}</p>` ]
         }
         else{
-             text = [`<p>${contestedText}${negotiations}</p><p>${coalitionText}</p><p>${playerFate}</p>`,]
+             text = [`<p>${negotiations}${contestedText}</p><p>${coalitionText}</p><p>${playerFate}</p>`,]
         }
         return[header, text, image];
 }
@@ -2928,6 +2953,9 @@ let result = applyDrift(78, -0.0008 + (dismissalsLeft >= 4 ? 0.0002 : (dismissal
     if([4300, 4301, 4302, 4303].includes(ans)){
 
         campaignTrail_temp.question_number=34;
+    }
+    if(ans===4300){
+        resigned=true;
     }
 
     //coalitions
