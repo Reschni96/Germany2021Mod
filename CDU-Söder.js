@@ -1450,6 +1450,25 @@ cyoAdventure = function(a) {
     });
     currentCoalitions = coalitionTalks(temp.final_overall_results, optionalMode = true);
 
+        //mood
+        if (playerPolling < 0.15) {
+            mood = "Panicked"
+        } else if (campaignTrail_temp.question_number < 5) {
+            mood = "Confident"
+        } else if (playerPolling < 0.18) {
+            mood = "Alarmed"
+        } else if (playerPolling < 0.21) {
+            mood = "Uneasy"
+        } else if (playerPolling < 0.24) {
+            mood = "Nervous"
+        } else if (playerPolling < 0.27) {
+            mood = "Calm"
+        else if (playerPolling < 0.3) {
+            mood = "Excited"
+        } else {
+            mood = "Ecstatic"
+        }
+
     //opportunism
 
     if (opportunismMap.hasOwnProperty(ans)) {
