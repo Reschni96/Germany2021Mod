@@ -422,12 +422,7 @@ e.multiple_endings = true;
  endingPicker = () => {
 
   if (!e.initDC) {
-    e.initDC = true
-
-
-    var audio = document.getElementById('campaigntrailmusic');
-    audio.pause();
-    audio.src = ""; // Clear source
+ e.initDC = true
 
     var musicPlayer = document.getElementById('music_player');
     musicPlayer.remove();
@@ -4264,9 +4259,16 @@ function seatCalculator() {
     const buttonsDiv = document.getElementById("election_night_buttons");
     if (buttonsDiv) {
       const okButton = buttonsDiv.querySelector("#ok_button");
-      if (okButton) {
+           if (okButton) {
         okButton.addEventListener("click", function() {
+            //end music
+                var audio = document.getElementById('campaigntrailmusic');
+                audio.pause();
+                audio.src = ""; // Clear source
 
+                var musicPlayer = document.getElementById('music_player');
+                musicPlayer.remove();
+                addOrReplaceMusic("https://cdn.discordapp.com/attachments/1131296206908301423/1131296495463833741/Hans_Carste__Henning_Lohner_-_ARD_Tagesschau_Theme.mp3")
             //give states their seats
             for (var i = 0; i < 16; i++) {
                 e.states_json[i].fields.electoral_votes = seats[i];

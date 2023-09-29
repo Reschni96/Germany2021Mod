@@ -266,13 +266,6 @@ loadScript('https://code.highcharts.com/highcharts.js', function() {
   if (!e.initDC) {
     e.initDC = true
 
-    var audio = document.getElementById('campaigntrailmusic');
-    audio.pause();
-    audio.src = ""; // Clear source
-
-    var musicPlayer = document.getElementById('music_player');
-    musicPlayer.remove();
-
     //adjustment magic to guarantee the correct ranking
     adjustSeatAllocation(campaignTrail_temp, missedCandidates);
 
@@ -2882,7 +2875,14 @@ function seatCalculator() {
       const okButton = buttonsDiv.querySelector("#ok_button");
       if (okButton) {
         okButton.addEventListener("click", function() {
+            //end music
+                var audio = document.getElementById('campaigntrailmusic');
+                audio.pause();
+                audio.src = ""; // Clear source
 
+                var musicPlayer = document.getElementById('music_player');
+                musicPlayer.remove();
+                addOrReplaceMusic("https://cdn.discordapp.com/attachments/1131296206908301423/1131296495463833741/Hans_Carste__Henning_Lohner_-_ARD_Tagesschau_Theme.mp3")
             //give states their seats
             for (var i = 0; i < 16; i++) {
                 e.states_json[i].fields.electoral_votes = seats[i];
@@ -5693,3 +5693,22 @@ function ctsAchievement(achievement, difficultyChecker = true){
             unlockAchievement(achievement);
         }
     }
+
+function addOrReplaceMusic(link) {
+    const existingAudio = document.getElementById('campaignTrailMusic');
+
+    // Remove the existing audio element if it's present
+    if (existingAudio) {
+        existingAudio.parentNode.removeChild(existingAudio);
+    }
+
+    // Create a new audio element
+    const audio = document.createElement('audio');
+    audio.id = 'campaignTrailMusic';
+    audio.src = link;
+    audio.volume = campaignTrail_temp.music.Volume;
+    audio.autoplay = true;
+
+    // Append it to the body (or to any specific container you prefer)
+    document.body.appendChild(audio);
+}
