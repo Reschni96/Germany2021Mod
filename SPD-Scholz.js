@@ -2894,7 +2894,7 @@ let result = applyDrift(78, -0.0008 + (dismissalsLeft >= 4 ? 0.0002 : (dismissal
         answerSwapper(4001, 4253, false);
         answerSwapper(4002, 4254, false);
         answerSwapper(4003, 4255, false);
-        changeGlobalEffect(78, 4003, -0.006)
+        changeGlobalEffect(78, 4003, -0.012)
         changeGlobalEffect(79, 4003, 0.004)
         changeGlobalEffect(304, 4003, 0.021)
     }
