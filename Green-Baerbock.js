@@ -906,14 +906,14 @@ endingPicker = () => {
   if (e.final_overall_results[0].candidate === 79){
       	e.header="<h2>“Dear viewers, we now have confirmation - Robert Habeck saved the formerly flailing Green campaign!”</h2>"
       	e.pages=[`<p>You don’t know if you should laugh or cry. <br> You’re at the Green headquarters, in Berlin Mitte. As the first results come in, you stand within a jubilant Green party. One direct mandate after the other goes to Green MP’s, and in time it becomes clear - the CDU lost. Alliance 90/The Greens have won. Champagne is popping, music plays, people are dancing - but you excuse yourself to the bathroom. <br> Silence. You gaze into the mirror's reflection - why aren’t you smiling? The Greens have won a historic victory, more than doubling their vote share, landing in first place, improving from fifth place in 2017. And yet, while somewhere inside there you’re glad and happy - your eyes tremble. In a swift motion, you splash cool water onto your face, ruining your makeup. No, you’re not sad he won. You’re not mad he won. You’re <i>envious</i>.</p> <p>You feel disgusted that they were right. He could do it. You couldn’t. You were the <i>wrong</i> choice. You were a <i>loser</i>, he was a <i>winner</i>. As men always are. As women always are. Petra Kelly, Waltraud Schoppe, Andrea Fischer, Andrea Nahles, Hillary Clinton. </p><p>You grab your purse, preparing to fix your makeup. You’re sure, he’s gonna offer you a job: Foreign Affairs, Environment, something like that. You pause. The mirror fogs from your breath, huffing against the mirror’s surface. Finally, you put away the eyeliner, without redrawing the smushed lines.<br>You’re not sure you’re gonna take the job.</p>` ]
-      	e.image="https://www.bundestag.de/resource/image/225552/3x4/594/792/41c47f0a63894c714cff2ac9fc890afb/2AC076E6C48DE98561C2E0BA18823C1A/kuppel.jpg"
+      	e.image="https://i.ibb.co/dbM8671/image17-cropped.jpg"
 
       	return construct(0);
   	}
   	else{
       	e.header="<h2>“Dear viewers, one thing is clear - Robert Habeck was not enough to save the ailing Green campaign.”</h2>"
       	e.pages=[`<p>Well, he improved it.<br> You stand within a despondent crowd. So much seemed possible at the onset of this campaign - for the first time, a Green chancellery seemed within your grasp. Real climate action could’ve been achievable. <br>But then came the defamations. The “scandals”. The “affairs”. The “gaffes”. And then, finally, your withdrawal.</p><p> It proved too much for the “Great Explainer” to bear. He did tick up the polling by a few points, but to be honest, that just seemed to confirm the underlying sexism behind it all. It wasn’t enough. Habeck bombed the debate, unable to explain his heating policies, as Scholz ascended from nowhere, taking the Green campaign out for good.</p><p>Now, everything seems to return to normal. The same, insufficient, broken Normal. You won’t be the last woman to withdraw from a race. You’ll do your best to work with the situation, maybe you can even land a cabinet job. But the chancellor will be an old man, from the same establishment as usual. And it all began when the defamations came.<br>Explain that, Robert Habeck. Explain that. </p>` ]
-      	e.image="https://www.bundestag.de/resource/image/225552/3x4/594/792/41c47f0a63894c714cff2ac9fc890afb/2AC076E6C48DE98561C2E0BA18823C1A/kuppel.jpg"
+      	e.image="https://i.ibb.co/9n1PLyq/image12-cropped.jpg"
         	return construct(0);
   	}
   }
@@ -923,7 +923,7 @@ endingPicker = () => {
         ending = endingOneBuilder();
         e.header = ending[0];
         e.pages = ending[1];
-        e.image = "https://www.bundestag.de/resource/image/225552/3x4/594/792/41c47f0a63894c714cff2ac9fc890afb/2AC076E6C48DE98561C2E0BA18823C1A/kuppel.jpg"
+        e.image = ending[2];
 
         return construct(0);
     }
@@ -931,7 +931,7 @@ endingPicker = () => {
         ending = endingTwoBuilder();
         e.header = ending[0];
         e.pages = ending[1];
-        e.image = "https://www.bundestag.de/resource/image/225552/3x4/594/792/41c47f0a63894c714cff2ac9fc890afb/2AC076E6C48DE98561C2E0BA18823C1A/kuppel.jpg"
+        e.image = ending[2];
 
         return construct(0);
     }
@@ -1559,6 +1559,7 @@ function endingOneBuilder() {
        if (playerParty.electoral_votes > totalSeats / 2) {
     	header = "<h2>“Dear viewers, Annalena Baerbock stuns the political establishment - she has won an absolute majority of seats.”</h2>"
     	text = [`<p> In 2018, people were already shocked by the first poll showing the Greens leading over the two major parties. Some thought it was just a fluke, just like the post-Fukushima-surge in 2011, while others believed a narrow election win was actually possible, bringing change to Germany. Tonight, you proved <i>all</i> of them wrong. <p> What transpired this night seemed unbelievable to basically every political pundit - some call it a revolution, others a transformation, and certain people, “fraud”. You won an absolute majority, the first since 1957. Never before has a left-wing party achieved a victory like this in the history of the Federal Republic.</p><p> The naysayers might put into question the validity of your victory, but don't worry about them: It's time to enact your agenda. Switch off all coal and nuclear power stations, electricity grid stability be damned! A tempo limit of 80 km/h on every German Autobahn! Mandatory Veggie-Days, at least twice a week! The future is Green!</p>`];
+    	image.push("https://i.ibb.co/vvsvfnN/image18-cropped.jpg")
 
 	} else {
     	if (playerParty === e.final_overall_results[0]) {
@@ -1566,6 +1567,7 @@ function endingOneBuilder() {
         	if (playerParty.electoral_votes == e.final_overall_results[1].electoral_votes) {
 
             	header = "<h2>“Dear viewers, it is now 22:37, and this is still too close to call...”</h2>"
+            	image.push("https://i.ibb.co/kxYSNmm/image61-cropped.jpg")
             	playerPerformance = "A wind of change blows through Germany, that much is clear. When the first results come in, it's already clear that this will be a historic night for the Green Party. Cheered on by the disillusioned youth, the hippies of old, the eco-entrepreneurs and the urban culture workers, you have managed to more than double your vote share compared to 2017. Not even that - from the get-go, you might even be on track to become the strongest party in the Bundestag! A true mandate for ambitious climate policies. Nonetheless, is it a mandate for you, Annalena Baerbock? After a few celebratory, but tense hours, the situation turns out to be historic in a different way as well: You and the " + secondParty.fields.last_name + " have won the exact same amount of seats, an unprecedented situation in the history of the Republic. Both you and " + secondPartyLeader.leaderName + " assert your right to form a government, as no clear mandate seems to have been given by the German people. This race is going to be decided in the smoky backrooms of coalition negotiations. It's going to be a tough fight - you might have to make some unexpected friends…"
             	if (!contestedElection) {
 
@@ -1582,11 +1584,13 @@ function endingOneBuilder() {
         	else if (playerParty.electoral_votes - e.final_overall_results[1].electoral_votes < 10) {
 
             	header = "<h2>“Dear viewers, it is now 20:51, and while we aren’t certain yet, we seem to have a winner…”</h2>"
+            	image.push("https://i.ibb.co/w7CdJPb/image13-cropped.jpg")
             	playerPerformance = "A wind of change blows through Germany, that much is clear. When the first results come in, it's already clear that this will be a historic night for the Green Party. Cheered on by the disillusioned youth, the hippies of old, the eco-entrepreneurs and the urban culture workers, you have not just managed to more than double your vote share compared to 2017, from the get-go, you are on track to become the strongest party in the Bundestag! A true mandate for ambitious climate policies, and one for Annalena Baerbock as chancellor. However, there are still plenty of people doubting your abilities, as in response to the tight election result, " + secondPartyLeader.leaderName + " has declared that the " + secondParty.fields.last_name + " is also open to leading a government. You’ve proved yourself an avid campaigner - now it’s time to show the politician within you, to forge a strong coalition."
             	adjustWeights(3.5);
             	closeElection = true;
         	} else {
             	header = "<h2>“Dear viewers, this is a historic night for Germany and the Greens! They’ve won a clear mandate against the Grand Coalition.”</h2>"
+            	image.push("https://i.ibb.co/PxwTNzn/image56-cropped.jpg")
             	playerPerformance = "In 2018, people were already shocked by the first poll showing the Greens leading over the two major parties. Some thought it was just a fluke, just like the post-Fukushima-surge in 2011. As you held onto a lead in the polls, some suspected a polling error, just like in America one year ago. At 18:00, when the first results come in, you've proven these doubters wrong: cheered on by the disillusioned youth, the hippies of old, the eco-entrepreneurs and the urban culture workers, and apparently, the center of the country, you have not just managed to more than double your vote share compared to 2017 - you have won a solid mandate for the first Green chancellorship. It’s not just you who won, Annalena - the planet won, the Paris agreement won, <i>change won</i>. As the antiquated parties of the Grand Coalition sulk, you and your party celebrate through the whole night. Don’t get wasted though, you still have to form a coalition: but with such a strong mandate, your odds of becoming the second female, the youngest, and the first Green chancellor are solid."
             	adjustWeights(8);
         	}
@@ -1595,6 +1599,7 @@ function endingOneBuilder() {
         	if (playerParty.popular_votes > e.final_overall_results[0].popular_votes) {
 
             	header = "<h2>“Dear viewers, it is now 22:37, and this is still too close to call...”</h2>"
+            	image.push("https://i.ibb.co/T4SRszF/image20-cropped.jpg")
             	playerPerformance = "A wind of change blows through Germany, that much is clear. When the first results come in, it's already clear that this will be a historic night for the Green Party. Cheered on by the disillusioned youth, the hippies of old, the eco-entrepreneurs and the urban culture workers, you have managed to more than double your vote share compared to 2017. Not even that - from the get-go, you might even be on track to become the strongest party in the Bundestag! A true mandate for ambitious climate policies. Nonetheless, is it a mandate for you, Annalena Baerbock? As the night progresses, your demeanor darkens -  while you have won a plurality of the popular vote, the " + firstParty.fields.last_name + " has won the most seats - probably due to overhanging mandates. Already, heated discussions about Germany’s electoral system have begun. Intense discussions provide contradictory claims of victory. Even now, the old establishment is determined to screw you over! Immediately, both you and " + firstPartyLeader.leaderName + " assert your right to form a government, as no clear mandate can be interpreted. It seems that this race will be resolved in the smoky backrooms of the highly contested coalition talks. Time to make some new friends…"
             	if (!contestedElection) {
 
@@ -1609,6 +1614,7 @@ function endingOneBuilder() {
         	} else if (playerParty.electoral_votes == e.final_overall_results[0].electoral_votes) {
 
             	header = "<h2>“Dear viewers, it is now 22:37, and this is still too close to call...”</h2>"
+            	image.push("https://i.ibb.co/kxYSNmm/image61-cropped.jpg")
             	playerPerformance = "A wind of change blows through Germany, that much is clear. When the first results come in, it's already clear that this will be a historic night for the Green Party. Cheered on by the disillusioned youth, the hippies of old, the eco-entrepreneurs and the urban culture workers, you have managed to more than double your vote share compared to 2017. Not even that - from the get-go, you might even be on track to become the strongest party in the Bundestag! A true mandate for ambitious climate policies. Nonetheless, is it a mandate for you, Annalena Baerbock? After a few celebratory, but tense hours, the situation turns out to be historic in a different way as well: You and the " + secondParty.fields.last_name + " have won the exact same amount of seats, an unprecedented situation in the history of the Republic. Both you and " + secondPartyLeader.leaderName + " assert your right to form a government, as no clear mandate seems to have been given by the German people. This race is going to be decided in the smoky backrooms of coalition negotiations. It's going to be a tough fight - you might have to make some unexpected friends…"
             	if (!contestedElection) {
 
@@ -1623,15 +1629,18 @@ function endingOneBuilder() {
         	} else if (e.final_overall_results[0].electoral_votes - playerParty.electoral_votes < 10) {
 
             	header = "<h2>“Dear viewers, it is now 20:51, and while we aren’t certain yet, we seem to have a winner…”</h2>"
+            	image.push("https://i.ibb.co/T4SRszF/image20-cropped.jpg")
             	playerPerformance = "When the first results come in, it's already clear that this will be a historic night for the Green Party. Cheered on by the disillusioned youth, the hippies of old, the eco-entrepreneurs and the urban culture workers, you have managed to more than double your vote share compared to 2017. Will Annalena Baerbock actually lead this new, diverse coalition to victory? A few tense hours later, it becomes clear that the rest of Germany isn’t quite ready yet, it seems. You come in a narrow second - still a very impressive result, but a little disappointing nonetheless. The " + firstParty.fields.last_name + " have gotten somewhat of a mandate from the people. Don't give up hope just yet - the results still show a desire for more climate action, and you could leverage this as a junior partner in a coalition as well. Or maybe you have other plans…?"
             	adjustWeights(3);
             	closeElection = true;
         	} else if (playerParty.popular_votes / totalPV < 0.2) {
             	header = "<h2>“Dear viewers - Annalena Baerbock might not have won the night, but still provided a strong showing for the Greens.”</h2>"
+            	image.push("https://i.ibb.co/vv8fPPR/image19-cropped.jpg")
             	playerPerformance = "Your headquarters are celebrating. On the back of young voters and their parents, on environmentalists and progressives, you’ve achieved an enormous gain in votes for the Greens. It’s easy to spin as a victory - nonetheless, you might’ve hoped for more. The wind of change blowing through Germany wasn’t a storm, but rather a gust. It has swept you into second place, eclipsing one of Germany’s oldest parties, transporting you into major party status, the first time something like this has happened. Still, the Germans have decided that the mandate to lead the next government does not lie with Annalena Baerbock. It lies with someone else. The " + firstParty.fields.last_name + " has declared victory, opening themselves to coalition negotiations. Any personal disappointment aside, your result proves a desire for more climate action, something you could leverage if you wanted to become their junior partner, if you wanted to land a cabinet job, to solidify the Green’s standing with the public. Or perhaps you have other ideas to do that?"
             	adjustWeights(10);
         	} else {
             	header = "<h2>“Dear viewers - Annalena Baerbock might not have won the night, but still provided a quite decent showing for the Greens.”</h2>"
+            	image.push("https://i.ibb.co/vv8fPPR/image19-cropped.jpg")
             	playerPerformance = "Your headquarters are celebrating. On the back of young voters and their parents, on environmentalists and progressives, you’ve achieved a decent gain in votes for the Greens. It’s not hard to spin as a victory - nonetheless, you definitely hoped for more. The wind of change blowing through Germany wasn’t a storm, but rather a breeze. It did sweep you into second place, eclipsing one of Germany’s oldest parties, transporting you into major party status - still, the Germans have given the " + firstParty.fields.last_name + " their mandate to lead the next government. The next chancellor, in all likelihood, will not be called Annalena Baerbock. It’s a bitter feeling - was it the repeated attacks on your progressivism, was it your inexperience, was it your gender? Any personal disappointment aside, the result proves a certain desire for more climate action, something you could leverage if you wanted to become junior partner. You have built up a lot of momentum - if you want to keep it going for 2025, you’ll have to do something to solidify it. Perhaps the Foreign Ministry doesn’t sound bad."
             	adjustWeights(5);
         	}
@@ -1641,9 +1650,11 @@ function endingOneBuilder() {
 
         	if (playerParty.popular_votes / totalPV > 0.178) {
             	header = "<h2>“Dear viewers, this night will surely spark mixed feelings within the Greens.”</h2>"
+            	image.push("https://i.ibb.co/txBmsjw/image43-cropped.jpg")
             	playerPerformance = "Doubling your vote share compared to the last election shouldn’t feel like this. With your campaign, you’ve inspired millions of students, women, people of color, queer people, progressive soccer moms and urban culture workers. You’ve brought the issue of climate change into the forefront like no other electoral campaign since the beginning of the republic. And yet, despite doing so good, you’ve faltered. Expectations were high when polls showed you neck on neck with the CDU in 2018 and 2019, but in the end, you’ve fallen in third place, once more behind the agents of the old party system. You’ve squandered it. It’s bitter, even more so since certain elements proclaim Habeck would’ve been the better chancellor candidate. Well, whatever it was, c’est la vie. "
         	} else if (playerParty.popular_votes / totalPV <= 0.178) {
-            	header = "<h2>“A very mixed night for the Green Party”</h2>"
+            	image.push("https://i.ibb.co/txBmsjw/image43-cropped.jpg")
+            	header = "<h2>“Dear viewers, this is a very mixed night for the Green Party”</h2>"
             	playerPerformance = "Having such gains compared to the last election shouldn’t feel like this. With your campaign, you’ve inspired hundreds of thousands of students, women, people of color, queer people, progressive soccer moms and urban culture workers. You’ve brought the issue of climate change into the forefront like no other electoral campaign since the beginning of the republic. And yet, despite doing so good, you’ve faltered. Expectations were high when polls showed you neck on neck with the CDU in 2018 and 2019, but in the end, you’ve fallen far into third place, decisively behind the agents of the old party system, once more. You’ve squandered it. It’s bitter, even more so since certain elements proclaim Habeck would’ve been the better chancellor candidate. Well, whatever it was, c’est la vie. "
         	}
         	if (e.final_overall_results[0].electoral_votes == e.final_overall_results[1].electoral_votes) {
@@ -1687,6 +1698,7 @@ function endingOneBuilder() {
         	}
     	} else {
         	header = "<h2>“Dear viewers, this is bound to be a disappointing night for the Greens. Their surge seemed to have proven a fluke.”</h2>"
+        	image.push("https://i.ibb.co/q7zj8TV/image47-cropped.jpg")
         	playerPerformance = "Annalena, there’s no way around it - you’ve squandered it. In the spring, the polls indicated that so much was possible for the Greens - you could’ve become the first Green chancellor! But the race proved to be more difficult than you thought. Was it your campaign’s organization, was it your pivots, your likeability, the sexist attacks against your character, or simply bad luck? Whatever it was, the political winds of Germany have changed course. You’ve not even made it into third place, echoing the disappointing performance of your party four years ago. In light of this catastrophe, this humiliation, you’ve been compelled to resign as party leader a few days after the election. While the Greens still have the option to enter into the government as a lowly junior partner, people like Robert will have to decide that now. You’ve been relegated to the backbench. Perhaps Martin Schulz has a few tips for you on how to deal with such a derailment."
         	disaster = true;
     	}
@@ -1706,6 +1718,7 @@ function endingOneBuilder() {
 
     	if (!disaster) {
         	text = [`<p>${playerPerformance}</p><p>${SSW}${LeftPerformance}${BerlinWin}</p>`,`<div id="coalitionList"> In the Federal Republic of Germany, the parliamentary multi-party system demands coalition agreements between parties to conjure up workable majority. It’s time to negotiate!<br></div>`]
+        	image.push("https://www.bundestag.de/resource/image/225552/3x4/594/792/41c47f0a63894c714cff2ac9fc890afb/2AC076E6C48DE98561C2E0BA18823C1A/kuppel.jpg")
     	} else {
         	text = [`<p>${playerPerformance}</p><p>${SSW}${LeftPerformance}${BerlinWin}</p>`]
     	}
@@ -1716,6 +1729,8 @@ function endingOneBuilder() {
 }
 
 function endingTwoBuilder() {
+	$("#main_content_area")[0].style.color = "black";
+    nct_stuff.themes[nct_stuff.selectedTheme].text_col = "black"
 	var header = null;
 	var text = null;
 	var image = [];
@@ -1766,6 +1781,9 @@ function endingTwoBuilder() {
     	case 1:
     	    ctsAchievement("An even grander coalition");
         	header = "<h2>“Kenya - An Even Grander Coalition”</h2>"
+        	image.push("https://i.ibb.co/KjyFYsc/image57-cropped.jpg")
+  	$("#game_window")[0].style.backgroundImage = "url(https://i.ibb.co/zxsNG2L/Kenyaback.png)";
+
 
         	if (coalitionLeader.party === 77) {
             	coalitionText = "After eight years of Grand Coalitions, the German people were sick and tired of it. And now, what do they get? An even grander coalition, featuring the Green Party on top of the CDU/CSU and the SPD, called the “Kenya-Coalition”, previously only known from East Germany. The ascendance of minor parties like the AfD have certainly taken their toll on this country, as the three major parties of this election banded together to form a government. The Union kept the chancellorship, the SPD stayed on as junior partner while you took to their side to safeguard a stronger environmental policy. Nonetheless, compromises had to be made, and people on all sides of this agreement are mildly enthused at best. For some it’s a moderated Red-Green, for others, a GroKo in Green coating - either way, a perfect boon for the Right. Alas, that’s the inevitable price of holding power… just make sure the necessary reforms pass, or <i>Laschet I</i> might be doomed…"
@@ -1790,6 +1808,8 @@ function endingTwoBuilder() {
     	case 2:
 
         	header = "<h2>“GroKo - There's No Escape From The Inevitable”</h2>"
+        	 image.push("https://i.ibb.co/XS3ZQ5K/image35-cropped.jpg")
+        $("#game_window")[0].style.backgroundImage = "url(https://i.ibb.co/zbtLNtm/Gro-Koback.png)";
 
         	coalitionText = "It's a bit of a paradox really. The population as a whole doesn't like it. The parties involved certainly don't like it. The media is tired of it. But yet again, for the fourth time in five elections, a Grand coalition between the CDU/CSU and the SPD has formed a governing majority, and with it, " + coalitionLeader.leaderName + " has become chancellor. You’re certainly not alone in thinking that something is broken with this political system. Ignoring the cries of the people for reform, another arrangement of compromises is to govern this country for the next four years. Will it be four years? The left wing of the SPD has already founded several discussion groups with your MP’s, preparing for an intra-government opposition. While this is disheartening for the country, it’s a chance for you - to prove that there truly is no way around the Greens, if Germany wants modern governance. This will be interesting."
         	playerFate = emptyFate;
@@ -1799,6 +1819,8 @@ function endingTwoBuilder() {
     	case 3:
     	    ctsAchievement("Modern coalition for modern times");
         	header = "<h2>“Black Green - A Modern Coalition For Modern Times?”</h2>"
+        	image.push("https://i.ibb.co/m0v5SD2/image3-cropped.jpg")
+  	$("#game_window")[0].style.backgroundImage = "url(https://i.ibb.co/KrPSCWk/Schwarzgr-nback.png)";
         	if (coalitionLeader === playerLeader) {
             	coalitionText = "Many suspected it to be in the air for some time now. When the Jamaica talks of 2017 failed due to the <i>FDP</i> feeling shunned, the love affair of CDU and Greens was sure to be blossoming into this arrangement. In a bit of a twist, you seem to have taken a liking to the Union’s newfound conservationism, as the 2020’s begin with a Baden-Württemberg variation-Black-Green coalition. The negotiations were tough, particularly on social and economical issues, but in the end, you've forged a coalition agreement that both parties seem to be happy with. People are hopeful that you've combined the desire for sorely needed reforms with moderation and sensibility - although you can be sure that the SPD as a strong opposition won’t make it easy for you, picking at you from the left. For now, popular opinion on <i>Baerbock I</i> is on your side, so try not to squander your momentum!"
             	playerFate = chancellorFate;
@@ -1814,6 +1836,8 @@ function endingTwoBuilder() {
     	case 4:
     	    ctsAchievement("Unforeseen comeback");
         	header = "<h2>“Green-Red - An Unforeseen Comeback After 16 Years”</h2>"
+        	image.push("https://i.ibb.co/6PWTgnd/image51-cropped.jpg")
+      	$("#game_window")[0].style.backgroundImage = "url(https://i.ibb.co/PrxLLNx/Rotgr-nback.png)";
 
         	if (coalitionLeader === playerLeader) {
             	coalitionText = "Although it may seem oxymoronic, this arrangement is as surprising as it is unsurprising. Just a few months ago, Red-Green seemed like a relic of a past party system, but with everything that has happened, the Germans decisively chose a Center-Left course for their country. As expected, the negotiations lasted only weeks, as you and the SPD agree on many topics. You did have minor differences, particularly on the date to exit coal, but ultimately, the new Green-Red coalition is poised to enact an ambitious agenda. With Scholz as an experienced Vice Chancellor at your side and Robert Habeck leading a Climate-Super-Ministry, you have free rein to modernize Germany; to save the planet, fight poverty, fight discrimination of all kinds, improve the infrastructure of this country, reform the economic consensus and redraw the political debate. The center-right will surely keep you on your toes though, and the people have high expectations of you - make sure <i>Baerbock I</i> isn’t crushed below its utopianisms."
@@ -1831,6 +1855,8 @@ function endingTwoBuilder() {
     	case 5:
     	    ctsAchievement("Lessons Learned");
         	header = "<h2>“Jamaica - Lessons Learned Four Years Later”</h2>"
+        	$("#game_window")[0].style.backgroundImage = "url(https://i.ibb.co/B26VrBd/Jamaicaback.png)";
+    	image.push("https://i.ibb.co/rQQknPH/image39-cropped.jpg")
         	if (coalitionLeader === playerLeader) {
             	coalitionText = "In 2017, a Jamaica coalition under Merkel was in the air, but negotiations fell through when FDP leader Christian Lindner famously proclaimed 'It's better not to govern than to govern wrongly.' This time, the three parties seemed to have learned from the fiasco: the negotiations, headed by you, were much more successful, resulting in an idiosyncratic, centrist-reformist coalition agreement all three parties can agree with. Your base isn't happy with all provisions, particularly on economic matters, though as chancellor, you can hopefully tame the fiscal conservatism of your two partners to make room for your agenda. With the SPD as a vocal opposition, picking at your left wing, you’ll have a lot of expectations to meet - still, people are hopeful that <i>Baerbock I</i> can lead the country into a moderate, yet modern direction."
             	playerFate = chancellorFate;
@@ -1850,6 +1876,8 @@ function endingTwoBuilder() {
     	case 6:
         	header = "<h2>“Traffic Light - The Progressive Compromise”</h2>"
         	ctsAchievement("Progressive Compromise");
+        	$("#game_window")[0].style.backgroundImage = "url(https://i.ibb.co/gzDZ6FY/Ampelback.png)";
+      	image.push("https://i.ibb.co/G0K9j4r/image42-cropped.jpg")
 
         	if (coalitionLeader === playerLeader) {
             	coalitionText = "”Conceptually and mathematically difficult to imagine” - these were the words that Christian Lindner, leader of the FDP, used when asked about the traffic light coalition before the election. Apparently, you had enough imagination to form it anyway. The SPD found natural common ground with you, but even the FDP has committed to modernize this country, although as a fiscally conservative counterweight, with Lindner as Minister of Finances. With reforms on socio-cultural issues, a higher minimum wage and most importantly, a new climate policy, your ambition is no less than to redefine the political discourse in this country. The Lights are Green for progress. Will <i>Baerbock I</i> win out, or will the non-progressives prevail? Only time will tell…"
@@ -1870,22 +1898,30 @@ function endingTwoBuilder() {
 
     	case 7:
         	header = "<h2>“Wait, what?”</h2>"
+        	$("#game_window")[0].style.backgroundImage = "url(https://i.ibb.co/FVPKfrj/Chaosback.png)";
+            	image.push("https://i.ibb.co/q9Rg163/image60-cropped.jpg")
         	coalitionText = "This isn't supposed to be possible. If you want to see a Bahamas coalition, form one yourself with one of the CDU/CSU candidates. In the meantime, please report this bug."
         	break;
 
     	case 8:
         	header = "<h2>“Black-Yellow - Laschet And Lindner, The Dream-Team”</h2>"
+        	$("#game_window")[0].style.backgroundImage = "url(https://i.ibb.co/vwc41j2/Schwarzgelbback.png)";
+        	image.push("https://i.ibb.co/n3rzz9V/image2-cropped.jpg")
         	coalitionText = "It seemed mathematically impossible for the last few months, but the mandate of the German people was clear - they chose a Center-Right path. Laschet and Lindner already governed together in North Rhine-Westphalia, and within weeks, they’ve drawn up a coalition agreement built on neoliberal economics, trickle-down philosophies, infrastructure-modernization and - of course - an unambitious climate policy, lacking significant market intervention. This is a major blow to the left - both you and the SPD have been shut out of power, leaving you to oppose the liberal-conservative agenda from the opposition only. You’ve done so successfully at other points, most recently 2009-2013 - maybe the FDP will at least electorally suffer as much as they did after that arrangement. You’ll make sure, <i>Laschet I</i> won’t get away with their antiquated policies."
         	playerFate = emptyFate;
         	break;
 
     	case 9:
         	header = "<h2>“Wait, what?”</h2>"
+        	$("#game_window")[0].style.backgroundImage = "url(https://i.ibb.co/3Bbqqs2/Schwarzblauback.png)";
+        	image.push("https://i.ibb.co/d0ksQKD/image48-cropped.jpg")
         	coalitionText = "This isn't supposed to be possible. If you want to see a Black-Blue coalition, form one yourself with one of the CDU/CSU candidates. In the meantime, please report this bug."
         	break;
 
     	case 10:
         	header = "<h2>“Germany - Land Of Compromises”</h2>"
+        	$("#game_window")[0].style.backgroundImage = "url(https://i.ibb.co/xfZrHgq/Deutschlandback.png)";
+    	image.push("https://i.ibb.co/gRNwGMt/image38-cropped.jpg")
 
         	coalitionText = "It seems there is just no escape from the compromises. After 8 years of Grand Coalition, the people were tired of it. And now, what do they get? The FDP as a dollop of cream on top, in a so-called “Germany”-coalition. As the colors of the German flag waive outside, some might take the mood for patriotic determination, others for technocratic disappointment. Overall, their coalition agreement is full of compromises, the SPD driving a hard bargain against the two more center-right parties. Their neoliberal agenda is sure to fire up your base - already, Fridays For Future is having a major resurgence, as the left wing of the SPD is close to rebellion itself. You’re the only opposition party positioned in the center - if <i>" + coalitionLeader.leaderName + " I</i> falters from the revolutionary spirit, the Greens have all the chances to come back even stronger, even more ambitious."
         	playerFate = emptyFate;
@@ -1893,6 +1929,8 @@ function endingTwoBuilder() {
 
     	case 11:
         	header = "<h2>“Social-Liberal Coalition - A Blast From The Past”</h2>"
+        	image.push("https://i.ibb.co/y4zp8fr/image14-cropped.jpg")
+        	$("#game_window")[0].style.backgroundImage = "url(https://i.ibb.co/Dr7BqZm/Rot-Gelbback.png)";
         	coalitionText = "How did this happen? In a development absolutely no one has predicted, the SPD and FDP have formed the first social-liberal government on a federal level since the early 1982. Even on a state level, such a cooperation hasn’t been possible since Rheinland-Pfalz in 2006. Both partners had to make quite a lot of concessions, but with just two parties in government, they did agree on a few pet policies, in what many consider a comeback of neoliberalism. Now, Olaf Scholz has become chancellor, standing in the shadow of Willy Brandt. The last such coalition ended with a betrayal by the FDP - while the CDU is sure to take the FDP to task on economic matters, make yourself ready to grill the SPD’s left wing on climate policy. Perhaps you can goad the Social Democrats to take you in after all… either way, <i>Scholz I</i> has to modernize the country as promised, or it’s certainly doomed to fail."
         	playerFate = emptyFate;
         	break;
@@ -1905,13 +1943,17 @@ function endingTwoBuilder() {
         	if (playerLeader === coalitionLeader) {
             	if (majority - totalSeats / 2 < 10) {
             	    ctsAchievement("Total chaos")
+            	    image.push("https://i.ibb.co/q9Rg163/image60-cropped.jpg")
+                $("#game_window")[0].style.backgroundImage = "url(https://i.ibb.co/FVPKfrj/Chaosback.png)";
                 	header = "<h2>“Onset Of Chaos - No Majority On The Second Ballot”</h2>"
                 	coalitionText = "It has almost become a tradition for the CDU/CSU and FDP to warn about the “danger” of a Red-Red-Green coalition on the federal level. You knew they were just fearmongering, but you’ve seemingly underestimated the reservations towards this arrangement. After tough negotiations, you’ve whittled the Left down to accept “the current status of Germany as a NATO-member”, writing an unabashedly leftist coalition agreement. Of course, you’re within constitutional constraints - you wouldn’t want it any other way, you’re not a socialist after all. No danger there. No, the danger was in the politics: as the results for the first ballot were announced, you didn’t have the votes. Surely a fluke, you thought - but after the second ballot also failed to elect you, you get nervous. Since the ballots are secret, you don't know who voted against you - either the communists inside the Left can’t abandon their dogma, or those moderates in SPD and Greens weren't bluffing after all."
                 	secondPage = true;
                 	if (majority - totalSeats / 2 < 5) {
+                    	image.push("https://i.ibb.co/Ytz2w9F/image16-cropped.jpg")
                     	secondPageText = "After days of balloting and many more attempts, it becomes clear to everyone: it’s not going to happen. There just isn't going to be a majority for you. In another ballot, the parliamentary group of your party votes against you as their leader, sidelining you for a new round of coalition talks, this time, including the FDP. It's unclear what happens now - a coalition under a new Green leadership, another party winning the chancellorship or a snap election all seem like possibilities. No matter what, your political career has taken a serious hit. Sorry Annalena, it seems you will make history as the woman who just couldn't become chancellor. No matter - you’ve done your best."
                 	} else {
                     	ctsAchievement("Leftist Unity")
+                    	image.push("https://i.ibb.co/bdSRczL/image9-cropped.jpg")
                     	secondPageText = "You went back to the drawing board - you had to commit to a broader reappropriations-law, while the Left would allow you to seek votes for Foreign Policy elsewhere. On the third ballot, you finally get elected by just one vote. You've become chancellor - but this arrangement seems very unstable. With an ambitious climate policy, a higher minimum wage, a federal rent moratorium, the reintroduction of the wealth tax, a unitary health insurance system and a complete rethinking of the economic consensus, you’ll have your work cut out, all the while making sure that you don’t lose your ability to act on Foreign Policy. With rumors of dissent from the ranks of Realos and Seeheimer on one side, and communists on the other, while the rightists are prepared to obstruct you at every corner, the coming months of <i>Baerbock I</i> will be a trial like no other. Good luck on leading this country into the first <b>Leftist Decade</b>."
                     	playerFate = chancellorFate;
                 	}
@@ -1919,6 +1961,8 @@ function endingTwoBuilder() {
             	} else {
                 	header = "<h2>“Red-Red-Green - Leftist Unity”</h2>"
                 	ctsAchievement("Leftist Unity")
+                	image.push("https://i.ibb.co/cc5MFfX/image40-cropped.jpg")
+        	$("#game_window")[0].style.backgroundImage = "url(https://i.ibb.co/Rc1CkFS/Rot-Rot-Gr-nback.png)";
                 	coalitionText = "It was clear to you, this country needs serious reforms. With the neoliberal course of the FDP, the antiquated policies of the Union and the fascist menace reentering parliament, there was only one option for a new beginning: a coalition with the Left. You’d think they didn’t have a lot of leverage due to their middling performance, but with their steadfast non-interventionist Foreign Policy, the coalition talks were quite tough. Most days of the several months you’ve taken to negotiate were spent on that topic, while the others forged an unabashedly leftist policy regime, consisting of the abolition of Hartz IV, the reintroduction of the wealth tax, a federal rent moratorium, a minimum wage of 12.50€, a unitary health insurance system and a complete rethinking of the economic consensus. In the end, you did it - you got the Left to acknowledge the “current status of NATO membership”, shelving most discussions about Foreign Policy until it’s relevant. The CDU/CSU and FDP already have put up the redbaiting barricades, preparing to obstruct and sue wherever possible - and with your own moderate wings unnerved, you have a lot of work to do. <i>Baerbock I</i> will be a difficult test of your political ability."
                 	playerFate = chancellorFate;
             	}
@@ -1927,12 +1971,16 @@ function endingTwoBuilder() {
             	if (majority - totalSeats / 2 < 10) {
                 	header = "<h2>“Onset Of Chaos - No Majority On The Second Ballot”</h2>"
                 	ctsAchievement("Total chaos")
+                	image.push("https://i.ibb.co/q9Rg163/image60-cropped.jpg")
+                $("#game_window")[0].style.backgroundImage = "url(https://i.ibb.co/FVPKfrj/Chaosback.png)";
                 	coalitionText = "It has almost become a tradition for the CDU/CSU and FDP to warn about the “danger” of a Red-Red-Green coalition on the federal level. You knew they were just fearmongering, but you’ve seemingly underestimated the reservations towards this arrangement. After tough negotiations, you and Scholz whittled the Left down to accept “the current status of Germany as a NATO-member”, writing an unabashedly leftist coalition agreement. Of course, you’re within constitutional constraints - Scholz was still Merkel’s Minister of Finances after all. No danger there. No, the danger was in the politics: Scholz didn’t have the votes on the first ballot. And it wasn’t a fluke - the second ballot was just as inconclusive. Since the ballots are secret, you don't know who voted against him - either the communists inside the Left have too much reservations with Scholz as a personality, or those moderates in SPD and Greens weren't bluffing after all."
                 	secondPage = true;
                 	if (majority - totalSeats / 2 < 5) {
+                    	image.push("https://i.ibb.co/zbH4qMN/image22-cropped.jpg")
                     	secondPageText = "After days of balloting and many more attempts, it becomes clear to everyone: it’s not going to happen. There just isn't going to be a majority for Scholz. Finally, he goes back to the drawing board, reinviting the bourgeois. It's unclear what happens now - will the center be able to agree after such a debacle, will someone else win the chancellorship or will a snap election be called? One thing’s for certain - the personality Scholz is damaged goods - as are you, having taken part in the disaster. Prepare yourself for a leadership challenge - this time, from your right."
                 	} else {
                     	ctsAchievement("Leftist Unity")
+                    	image.push("https://i.ibb.co/bdSRczL/image9-cropped.jpg")
                     	secondPageText = "You went back to the drawing board - you and Scholz had to commit to a broader reappropriations-law, while the Left would allow you to seek votes for Foreign Policy elsewhere. On the third ballot, he finally gets elected by just one vote. You’ve made Olaf Scholz become chancellor - but this arrangement seems very unstable. With your ambitious climate policy, a higher minimum wage, a federal rent moratorium, the reintroduction of the wealth tax, a unitary health insurance system and a complete rethinking of the economic consensus, he’ll have his work cut out for him. All the while you might have the <i>worst job</i> of this arrangement, making sure that the coalition doesn’t lose its ability to act on Foreign Policy. With rumors of dissent from the ranks of Realos and Seeheimer on one side, and communists on the other, while the rightists are prepared to obstruct you at every corner, the coming months of <i>Scholz I</i> will be a trial like no other."
                     	playerFate = viceFate
                 	}
@@ -1940,6 +1988,8 @@ function endingTwoBuilder() {
             	} else {
                 	ctsAchievement("Leftist Unity")
                 	header = "<h2>“Red-Red-Green - Leftist Unity”</h2>"
+                	image.push("https://i.ibb.co/cc5MFfX/image40-cropped.jpg")
+        	$("#game_window")[0].style.backgroundImage = "url(https://i.ibb.co/Rc1CkFS/Rot-Rot-Gr-nback.png)";
                 	coalitionText = "It came as somewhat of a surprise - Olaf Scholz was known as a moderate inside his party - and yet, he had refused to rule out a government participation of the Left party. Even more surprising was that he entertained it after his electoral comeback. And now, the negotiations are through - Germany will get a Red-Red-Green government. With their steadfast non-interventionist Foreign Policy, the talks were quite tough. You’ve taken the main role of negotiating on that front, while the others forged an unabashedly leftist policy regime, consisting of the abolition of Hartz IV, the reintroduction of the wealth tax, a federal rent moratorium, a minimum wage of 12€, a unitary health insurance system and a complete rethinking of the economic consensus. In the end, you did it - you got the Left to acknowledge the “current status of NATO membership”. You have the worst job in this arrangement, making sure that the coalition doesn’t lose its ability to act on Foreign Policy, even in the face of crisis. The CDU/CSU and FDP already have put up the redbaiting barricades, preparing to obstruct and sue wherever possible - and with your own moderate wings unnerved, the first leftist government of Germany will have a lot of work to do. <i>Scholz I</i> will be a difficult test of everyone’s political abilities."
                 	playerFate = viceFate;
             	}
@@ -1948,6 +1998,8 @@ function endingTwoBuilder() {
 
     	case 13:
         	header = "<h2>“Red-Red - A Reunion Of Old Friends”</h2>"
+        	image.push("https://i.ibb.co/YWS1YMB/image11-cropped.jpg")
+        	$("#game_window")[0].style.backgroundImage = "url(https://i.ibb.co/f9Jc2r5/Rot-Rotback.png)";
         	coalitionText = "The Left party and the SPD has had a contentious relationship in the past - but Scholz apparently rediscovered his leftist roots after his strong electoral mandate - forgoing negotiations with you. While the talks were a bit touch and go here and there, particularly on foreign policy, they pulled through with a regime of significant economic interventionism, even reappropriations, as well as further empowerment of unions and co-ops. There are rumors of some Seeheimer MP’s already souring on their party’s leftwards drift, so this might not be the most stable arrangement. Perhaps, you can be a moderating force for leftism in Germany, absorbing them right into your Realo-ranks. A lot of their policies seem attractive to you as well, but being part of the opposition stings nonetheless. Time to make sure their promises are kept, or <i>Scholz I</i> will be exchanged with a Red-Green <i>Scholz II</i> after all."
         	playerFate = emptyFate;
         	break;
@@ -1955,6 +2007,8 @@ function endingTwoBuilder() {
     	case 14:
         	header = "<h2>“Green-Left - Ecosocialism Achieved”</h2>"
         	ctsAchievement("Novelty", false)
+        	image.push("https://i.ibb.co/hRcQvqm/image28-cropped.png")
+        	$("#game_window")[0].style.backgroundImage = "url(https://i.ibb.co/M9TQM1K/Gr-n-Linksback.png)";
         	coalitionText = "A Green-Left coalition is historic in several ways: The first coalition on a federal level to not include the SPD or CDU, the first to include the Left Party and the most leftwing coalition ever formed in general. You were able to get a lot of your key promises into the coalition agreement, though foreign policy remained a contentious topic and some are concerned about the stability of this new government. Now it's time to govern though, no matter how much the fascist snowflakes may complain.<br><b>Alerta, Alerta, Antifascista!</b>"
         	playerFate = chancellorFate;
         	break;
@@ -1962,6 +2016,8 @@ function endingTwoBuilder() {
     	case 15:
         	header = "<h2>“Green-Yellow - Dawn Of A New Age”</h2>"
         	ctsAchievement("Novelty", false)
+        	image.push("https://i.ibb.co/w7f7fXq/image36-cropped.jpg")
+        	$("#game_window")[0].style.backgroundImage = "url(https://i.ibb.co/71qxzX5/Gr-n-Gelbback.png)";
         	coalitionText = "The shock already began on election night - the results were already a wake-up call for the old parties of the Grand Coalition. You’ve gotten a strong mandate for a political restart, and you took it to heart, engaging in talks with the FDP, promising the same. A Green-Yellow coalition is historic: The first coalition on a federal level to not include the SPD or CDU, a stunning rebuke of the old party system. The centrist opposition of Green Party and the FDP have banded together, to take over the reigns of government in an absolute novelty of a coalition. You become the chancellor of the “modernization alliance”, with Lindner as Minister of Finances and Vice Chancellor, even though your parties still have their own differences over economical and ecological matters. Nonetheless, you’ve committed to several reforms, as especially small businesses seem to rejoice. Only <i>Baerbock I</i> can give Germany the reforms it needs to stay relevant."
         	playerFate = chancellorFate;
         	break;
@@ -3495,8 +3551,11 @@ function seatCalculator() {
                         }
                     });
 
-                    //always exclude "other"
-                    missedCandidates.push(306);
+                    //almost always exclude "other"
+                    let othersPV =allVotes.find(item => item.candidate === 306).popular_votes;
+                    if(othersPV/totalPopularVote < 0.15){
+                        missedCandidates.push(306);
+                    }
 
                     // Loop through the statePKs and call the changeState function for each statePK
                     statePKs.forEach(statePK => {

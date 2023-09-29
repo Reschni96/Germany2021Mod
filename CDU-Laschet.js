@@ -553,7 +553,7 @@ function addCoalitions() {
                   });
                   weightsUpdated = true;  // Set the flag to true after updating weights
                 }
-            console.log(possibleCoalitions)
+
               // Calculate total weight of possible coalitions
               let totalWeight = 0;
               possibleCoalitions.forEach(coalition => {
@@ -724,7 +724,7 @@ calculateSeats = (statePK, candidateIdsToIgnore=[]) => {
 }
 
 function calculateNationalSeats(e, candidateIdsToIgnore) {
-    console.log(JSON.parse(JSON.stringify(e.final_overall_results)))
+
     let totalPopularVotes = e.final_overall_results.reduce((total, party) => {
         if (!candidateIdsToIgnore.includes(party.candidate)) {
             return total + party.popular_votes;
@@ -792,8 +792,6 @@ function getBonusSeats(party, candidateIdsToIgnore) {
 function adjustSeatAllocation(e, candidateIdsToIgnore=[]) {
     // Compute the national-level allocation first
     let nationalSeats = calculateNationalSeats(e, candidateIdsToIgnore);
-    console.log(JSON.parse(JSON.stringify(nationalSeats)))
-    console.log(JSON.parse(JSON.stringify(e.final_overall_results)))
     // For each party, check if they got fewer seats than they should have
     e.final_overall_results.forEach(party => {
         if (!candidateIdsToIgnore.includes(party.candidate)) {
@@ -824,8 +822,6 @@ function adjustSeatAllocation(e, candidateIdsToIgnore=[]) {
         .filter(party => !candidateIdsToIgnore.includes(party.candidate))
         .sort((a, b) => b.electoral_votes - a.electoral_votes);
 
-    console.log(JSON.parse(JSON.stringify(voteRanking)))
-    console.log(JSON.parse(JSON.stringify(seatRanking)))
     for (let i = 0; i < voteRanking.length; i++) {
         if (voteRanking[i].candidate !== seatRanking[i].candidate) {
             let voteRankParty = voteRanking[i];
@@ -2969,7 +2965,6 @@ function seatCalculator() {
              allVotes.forEach((result, i)   => {
                 totalPopularVote += allVotes[i].popular_votes;
                });
-            console.log(totalPopularVote)
             allVotes.forEach((result, i)   => {
             if (allVotes[i].popular_votes/totalPopularVote < threshold) {
 
@@ -2990,9 +2985,11 @@ function seatCalculator() {
                 }
                });
 
-            //always exclude "other"
-            missedCandidates.push(306);
-
+            //almost always exclude "other"
+            let othersPV =allVotes.find(item => item.candidate === 306).popular_votes;
+            if(othersPV/totalPopularVote < 0.15){
+                missedCandidates.push(306);
+            }
             // Loop through the statePKs and call the changeState function for each statePK
             statePKs.forEach(statePK => {
             calculateSeats(statePK, missedCandidates);
@@ -5089,7 +5086,6 @@ else if (type==="bar"){
     ];
 
         categoriesWithData.sort((a, b) => b.data - a.data);
-        console.log(categoriesWithData)
 
     // Extract "Others" category details
     let others = {

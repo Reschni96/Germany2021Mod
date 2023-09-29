@@ -1995,8 +1995,11 @@ function seatCalculator() {
                 }
                });
 
-            //always exclude "other"
-            missedCandidates.push(306);
+            //almost always exclude "other"
+            let othersPV =allVotes.find(item => item.candidate === 306).popular_votes;
+            if(othersPV/totalPopularVote < 0.15){
+                missedCandidates.push(306);
+            }
 
             // Loop through the statePKs and call the changeState function for each statePK
             statePKs.forEach(statePK => {
