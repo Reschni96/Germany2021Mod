@@ -1625,68 +1625,68 @@ function paginateContent() {
 campaignTrail_temp.achievements = {
 
     "An even grander coalition": {
-        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Stray_kitten_Rambo002.jpg/1200px-Stray_kitten_Rambo002.jpg",
+        "image": "https://i.ibb.co/yQ1vFys/kenya-cropped.png",
         "description": "Form the Kenya-coalition.",
         "cannotBeCheated": true
     },
     "Progressive Compromise": {
-        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Stray_kitten_Rambo002.jpg/1200px-Stray_kitten_Rambo002.jpg",
+        "image": "https://i.ibb.co/RQC87YP/traffic-cropped.jpg",
         "description": "Form the Traffic Light-coalition.",
         "cannotBeCheated": true
     },
     "Land of Compromises": {
-        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Stray_kitten_Rambo002.jpg/1200px-Stray_kitten_Rambo002.jpg",
+        "image": "https://i.ibb.co/pWkJksV/germany-cropped.png",
         "description": "Form the Germany-coalition.",
         "cannotBeCheated": true
     },
     "Lessons Learned": {
-        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Stray_kitten_Rambo002.jpg/1200px-Stray_kitten_Rambo002.jpg",
+        "image": "https://i.ibb.co/4fsqbYw/jamaica-cropped.jpg",
         "description": "Form the Jamaica-coalition.",
         "cannotBeCheated": true
     },
 
     "Leftist Unity": {
-        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Stray_kitten_Rambo002.jpg/1200px-Stray_kitten_Rambo002.jpg",
+        "image": "https://i.ibb.co/RgQxPnR/RRG-cropped.png",
         "description": "Form the Red-Red-Green-coalition.",
         "cannotBeCheated": true
     },
     "No escape from the inevitable": {
-        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Stray_kitten_Rambo002.jpg/1200px-Stray_kitten_Rambo002.jpg",
+        "image": "https://i.ibb.co/3SMjs36/Gro-Ko-cropped.png",
         "description": "Form another Grand Coalition.",
         "cannotBeCheated": true
     },
     "Modern coalition for modern times": {
-        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Stray_kitten_Rambo002.jpg/1200px-Stray_kitten_Rambo002.jpg",
+        "image": "https://i.ibb.co/jwh6qRk/Black-Green-cropped.png",
         "description": "Form the Black-Green-coalition.",
         "cannotBeCheated": true
     },
     "Unforeseen comeback": {
-        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Stray_kitten_Rambo002.jpg/1200px-Stray_kitten_Rambo002.jpg",
+        "image": "https://i.ibb.co/0nfKBGM/Red-Green-cropped.png",
         "description": "Form the Red-Green-coalition.",
         "cannotBeCheated": true
     },
     "Dream-Team": {
-        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Stray_kitten_Rambo002.jpg/1200px-Stray_kitten_Rambo002.jpg",
+        "image": "https://i.ibb.co/mTstLV5/Black-Yellow-cropped.png",
         "description": "Form the Black-Yellow-coalition.",
         "cannotBeCheated": true
     },
     "Firewall burned down": {
-        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Stray_kitten_Rambo002.jpg/1200px-Stray_kitten_Rambo002.jpg",
+        "image": "https://i.ibb.co/nPfC27b/bahamas-cropped.png",
         "description": "Form the Bahamas-coalition.",
         "cannotBeCheated": true
     },
     "Total chaos": {
-        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Stray_kitten_Rambo002.jpg/1200px-Stray_kitten_Rambo002.jpg",
+        "image": "https://i.ibb.co/ZK43cyT/chaos-cropped.png",
         "description": "Have the parliament erupt in chaos over your coalition.",
         "cannotBeCheated": true
     },
     "Novelty": {
-        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Stray_kitten_Rambo002.jpg/1200px-Stray_kitten_Rambo002.jpg",
+        "image": "https://i.ibb.co/YNG447m/novelty-cropped.png",
         "description": "On any difficulty, form a rare coalition (Black-Blue, Social-Liberal, Red-Red, Green-Left, Green-Yellow)",
         "cannotBeCheated": true
     },
     "Liberal Ländle": {
-        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Stray_kitten_Rambo002.jpg/1200px-Stray_kitten_Rambo002.jpg",
+        "image": "https://i.ibb.co/fG13SZt/fdp-cropped.png",
         "description": "Have the FDP win a state",
         "cannotBeCheated": true
     }
