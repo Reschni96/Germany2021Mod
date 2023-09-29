@@ -23,8 +23,8 @@ campaignTrail_temp.difficulty_level_json = JSON.parse("[{\"model\": \"campaign_t
 e=campaignTrail_temp;
 HistName=["Replace Me"];
 e.collect_results = true;
-$("#game_window")[0].style.backgroundImage = "url(https://i.imgur.com/9nFY6eE.jpg)";
-backgroundGameWindow =  "url(https://i.imgur.com/9nFY6eE.jpg)"
+$("#game_window")[0].style.backgroundImage = "url(https://i.ibb.co/3p8pgGF/tagesschau.jpg)";
+backgroundGameWindow =  "url(https://i.ibb.co/3p8pgGF/tagesschau.jpg)"
 nct_stuff.themes[nct_stuff.selectedTheme].coloring_title = "#070785"
 nct_stuff.themes[nct_stuff.selectedTheme].coloring_window = "#031299"
 document.getElementsByClassName("game_header")[0].style.backgroundColor = nct_stuff.themes[nct_stuff.selectedTheme].coloring_title
@@ -245,9 +245,9 @@ if (!element) {
             volumeSlider.addEventListener("input", updateVolume)
         }
 
-        function newMusicPlayer() {
+    function newMusicPlayer(previousBgImage = null) {
             trackSel = document.createElement("div");
-            trackSel.id = "trackSelParent"
+            trackSel.id = "trackSelParent";
             let z = `<br><br><br><br><br><br><br><br><br><br><br><br><div id='trackSel' style="text-align:left;border-style:solid;border-width:3px;overflow-y: scroll;overflow-x: hidden;height:200px; width:400px;background-color:#6699CC;float:right;">`
             z += `<b><select id='selectSoundtrack'><option value='` + soundtracks[e.selectedSoundtrack].name + `'>` + soundtracks[e.selectedSoundtrack].name + "</option>"
             for (i in soundtracks) {
@@ -270,18 +270,20 @@ if (!element) {
             }).map(f => f.children[0])[0].checked = true
             soundtrackSelector = document.getElementById("selectSoundtrack")
             soundtrackSelector.onchange = function() {
+                let currentBgImage = document.getElementById("trackSel").style.backgroundImage;
+
                 for (i in soundtracks) {
                     if (soundtracks[i].name == soundtrackSelector.value) {
-                        e.selectedSoundtrack = i
-                        break
+                        e.selectedSoundtrack = i;
+                        break;
                     }
                 }
                 e.music.shuffleEnabled = false;
                 shuffledIndices = null;
 
-                document.getElementById("trackSelParent").remove()
-                newMusicPlayer()
-            }
+                document.getElementById("trackSelParent").remove();
+                newMusicPlayer(currentBgImage);  // Pass the current background image to the next function invocation.
+            };
             var matches = document.querySelectorAll('.trackSelector');
             for (match in matches) {
                 matches[match].onchange = function() {
@@ -321,6 +323,10 @@ if (!element) {
               document.getElementById("trackSelParent").appendChild(document.createElement("br"))
             }
             generateTime();
+           if (previousBgImage) {
+                document.getElementById("trackSel").style.backgroundImage = previousBgImage;
+                 document.getElementById("timeTracker").style.backgroundImage = previousBgImage;
+            }
         }
         clamp = function(a, max, min, overflow = true) {
             if (overflow) {

@@ -2998,7 +2998,7 @@ function seatCalculator() {
             calculateSeats(statePK, missedCandidates);
             });
 
- $("#game_window")[0].style.backgroundImage = "url(https://i.imgur.com/9nFY6eE.jpg)";
+ $("#game_window")[0].style.backgroundImage = "url(https://i.ibb.co/3p8pgGF/tagesschau.jpg)";
        if(campaignTrail_temp.electionNight){
 
 
