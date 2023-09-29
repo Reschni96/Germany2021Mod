@@ -5287,7 +5287,7 @@ let advisorSchwan = new Advisor(
     "During her long years, Schwan forged many connections in the party and knows how to navigate intra-party questions.",
     'Whoever you chose as partner for leadership could be involved in your campaign if you do well in your run for leadership',
        () => {addAdvisorTooltips([4008, 4009, 4010, 4011, 4105, 4106, 4107] ,["I think this is a wise stance, and Saskia and Norbert will like it, just be wary that short-term, it might cause some upheaval..","While I don’t like the centrist tone you’re putting up, it seems like this is still acceptable to Saskia and Norbert.","That’s very much true - who else, if not you? Maybe pragmatism instead of ideology is a good hedge.","Olaf, we lost the leadership race. You don’t have the political capital to be able to afford such grandstanding.","You’ve already changed your image once, Olaf. Going back now would just emulate the failures we’ve experienced in the past.","Tone it down a bit. Some of us are socialists, but not everyone. Don’t give the CDU any opening for redbaiting!","Projecting strength and confidence is the key for people to take the SPD seriously again!"], "https://i.ibb.co/bP9H5wv/Schwan-cropped.jpg"); unity+=2},
-    () => {removeAdvisorTooltips([4516, 4517, 4518, 4519], "https://i.ibb.co/bP9H5wv/Schwan-cropped.jpg"); unity += -2},
+    () => {removeAdvisorTooltips([4008, 4009, 4010, 4011, 4105, 4106, 4107], "https://i.ibb.co/bP9H5wv/Schwan-cropped.jpg"); unity += -2},
     "locked"
 );
 
