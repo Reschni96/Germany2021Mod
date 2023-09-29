@@ -149,9 +149,6 @@ e.multiple_endings = true;
   if (!e.initDC) {
  e.initDC = true
 
-    var musicPlayer = document.getElementById('music_player');
-    musicPlayer.remove();
-
 
     //adjustment magic to guarantee the correct ranking
     adjustSeatAllocation(campaignTrail_temp, missedCandidates);
@@ -787,7 +784,7 @@ function endingOneBuilder(){
 
     var header = null;
     var text = null;
-    var image = null;
+    var image = [];
     var totalPV = e.final_overall_results.reduce((sum, party) => sum + party.popular_votes, 0);
     var playerParty = (e.final_overall_results.find((r) => r.candidate === e.candidate_id));
     var firstParty = e.candidate_json.find(p => p.pk === e.final_overall_results[0].candidate);
@@ -1003,7 +1000,7 @@ function endingOneBuilder(){
 function endingTwoBuilder(){
     var header = null;
     var text = null;
-    var image = null;
+    var image = [];
     var coalitionLeader = findLeader(selectedCoalition);
     var coalitionVice = findSecondPlace(selectedCoalition);
     var playerLeader = (partyLeaders.find((p) => p.party === e.candidate_id));

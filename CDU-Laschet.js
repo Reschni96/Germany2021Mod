@@ -1243,7 +1243,7 @@ function endingTwoBuilder(){
       	case 7:
         	contestedText="";
         	negotiations="";
-             addOrReplaceMusic("https://cdn.discordapp.com/attachments/1131296206908301423/1131296585335185520/Marius_Muller-Westernhagen_-_Freiheit.mp3?ex=6517c4cc&is=6516734c&hm=d0cdb7b76cbdf46e4efc7881a7eefe161468ba7d5af684a810a08c5c17a36916&")
+             addOrReplaceMusic("https://cdn.discordapp.com/attachments/1131296206908301423/1131296585335185520/Marius_Muller-Westernhagen_-_Freiheit.mp3?ex=6517c4cc&is=6516734c&hm=d0cdb7b76cbdf46e4efc7881a7eefe161468ba7d5af684a810a08c5c17a36916&", true)
         	var majority = selectedCoalition.parties.reduce((sum, partyId) => sum + e.final_overall_results.find(p => p.candidate === partyId).electoral_votes, 0);
 
         	if(majority-totalSeats/2 < 35){
@@ -1335,7 +1335,7 @@ function endingTwoBuilder(){
           	break;
 
     	case 14:
-        	header = "<h2>“Green-Left - ”</h2>"
+        	header = "<h2>“Green-Left - Ecosocialism Achieved”</h2>"
         	image.push("https://i.ibb.co/hRcQvqm/image28-cropped.png")
         	$("#game_window")[0].style.backgroundImage = "url(https://i.ibb.co/M9TQM1K/Gr-n-Linksback.png)";
         	coalitionText = "Those damn lefties have actually done it! For the whole election campaign, Baerbock has hedged on cooperating with the communists, and now this: with votes by the Left party, the successor of the SED, she has become chancellor. While the negotiations were a bit touch and go here and there, particularly on foreign policy, they pulled through with a regime of significant economic interventionism, even reappropriations, as well as the most utopian climate policies ever seen in this country. This is also a sign of the decline of the old German party system - for the first time, neither the SPD nor the CDU/CSU are part of a government. The former Grand Coalition now has a very important job to do: to be a strong opposition against the radical Left, to defend German businesses, industry, policemen and workers. <i>Baerbock I</i> must be moderated, or even stopped."
