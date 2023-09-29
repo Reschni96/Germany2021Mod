@@ -1515,9 +1515,13 @@ cyoAdventure = function(a) {
         if(advisorZiemiak.status === 'active'){
             applyDrift(77, 0.0003);
         }
+        if(advisorKuban.status === 'active'){
+            applyDrift(77, 0.0007);
+        }
+
         if(advisorLaschet.status === 'active'){
             applyDrift(77, 0.002, 3009);
-            applyDrift(77, 0.0002);
+            applyDrift(77, 0.0003);
         }
 
         if(advisorSeehofer.status === 'active'){
@@ -2070,7 +2074,7 @@ cyoAdventure = function(a) {
     if (ans === 4089) {
        campaignTrail_temp.question_number=32;
     }
-    if ([4001, 4002, 4005, 4016, 4022].includes(ans)) {
+    if ([4001, 4002, 4005, 4012, 4016, 4022].includes(ans)) {
         SöderScheme += 1;
 
     }
@@ -2460,6 +2464,10 @@ async function handleRadioButtons(processedNodes) {
                 wrapperDiv.className = 'radio-option';
                 // Set the value of the div to be the same as the radio button
                 wrapperDiv.value = input.value;
+
+                if (input.value === "4530" && advisorZiemiak.status === 'active') {
+                    wrapperDiv.style.backgroundColor = "lightgreen";
+                }
 
                 // Check for tooltip div
                 let prevSibling = input.previousElementSibling;
@@ -4259,8 +4267,9 @@ let advisorWegner = new Advisor(
     "https://i.ibb.co/MBsTGH4/wegner-cropped.jpg",
     "The leader of the CDU in Berlin is a supporter of yours and offered help with getting you nominated as chancellor candidate",
     '',
-    ()=>SöderScheme += 2,
-    ()=>SöderScheme += -2,
+    ()=>{SöderScheme += 2};addAdvisorTooltips([4005, 4012, 4020], ["This will take you away from the scene in the short term, but it’ll certainly forge connections with the political elite. The fight is on…", "This could make the influential Wolfgang Schäuble warm up to you a bit…", "This will be the most prudent and dignified option."], "https://i.ibb.co/MBsTGH4/wegner-cropped.jpg")},
+     () => {SöderScheme += -2;removeAdvisorTooltips([4005, 4012, 4020], "https://i.ibb.co/MBsTGH4/wegner-cropped.jpg")},
+     () => {SöderScheme += -2;removeAdvisorTooltips([4005, 4012, 4020], "https://i.ibb.co/MBsTGH4/wegner-cropped.jpg")},
     "available"
 );
 
@@ -4311,8 +4320,8 @@ let advisorBrehm = new Advisor(
     "https://i.ibb.co/KmNM7gs/brehm-cropped.jpg",
     "Brehm is the CSU's expert on fiscal policy in the Bundestag and eager to advise you on all things concerning the economy.",
     '',
-    () => addAdvisorTooltips([4012, 4013, 4014, 4015, 4508, 4509, 4510, 4511, 4516, 4517, 4518, 4519], ["This won’t move the needle much - if anything, richer regions will profit slightly more from phasing out the Soli.", "‘He won’t tell you, I just did?’ Don’t promise to raise taxes in the middle of an election!", "This will surely improve our economic growth - the Union’s voter base will very much appreciate this.", "This sounded good up until the flat tax. You’d be opening yourself up to damning attacks by the left, Mr. Laschet!", "This would fall in line with conservative doctrines, but the Greens are going to try and profit off of this.", "Taking such a stance as a Christian Democrat at the current juncture will probably legitimize the AfD further.", "While the poorer states might appreciate more market intervention, this does not seem fiscally sustainable to me.", "This seems like an agreeable, financeable and workable solution to the problem at hand, drawing a contrast to the economic left.", "Good. These policies are particularly popular in rural spaces, and will surely alleviate the situation.", "If your goal is to appease urban areas and take the wind out of the sails of the SPD, maybe this isn’t such a bad idea.", "Mr. Laschet, this would be blatantly unconstitutional! The Red-Red-Green government of Berlin just tried the same thing, and they have fortunately been thwarted.", "This rhetoric does seem a bit too extreme, and will probably only rile up our opponents."], "https://i.ibb.co/m09LhBP/linnemann-cropped.jpg"),
-     () => removeAdvisorTooltips([4012, 4013, 4014, 4015, 4508, 4509, 4510, 4511, 4516, 4517, 4518, 4519], "https://i.ibb.co/m09LhBP/linnemann-cropped.jpg"),
+    () => addAdvisorTooltips([4012, 4013, 4014, 4015, 4508, 4509, 4510, 4511, 4516, 4517, 4518, 4519, 4060], ["Wolfgang Schäuble will like this, but to the rest of the country, this seems too unambitious", "No, no! Promising to raise taxes in an election year? You know better than that.", "This is a good answer to rally the base, and it’ll give the economy a kick it needs.", "Hm, this is a gamble… but if anyone can pull this off, it’s you, and if you do, it pays off. I’ll make sure your economic management later on is a bit more definitive.", "This seems reasonable, but it’s a bit timid.", "Well, this could seem innovative, if you pivoted on your traditional refugee stance - I know it doesn’t directly contradict itself, but those are the rules of politics.", "No, Mr. Minister-President, the times call for something different.", "That’s a good assortment of usable policies to safeguard our seniors.", "That’s exactly it. Increase the supply to meet the demands, and prices will fall.", "Hm, not bad, if you want to win some Social Democrats. We do have a social responsibility, after all.", "Mr. Minister-President, I strongly advise against taking this stance, if you don’t want to suddenly switch parties.", "I can see where you’re coming from, but all this tone would accomplish is to rile up our opponents without laying out a concrete plan.", "Uh, Mr. Minister-President? Remember when we made it more difficult to hand out these payouts? Yeah, that’s not going to be good press…"], "https://i.ibb.co/KmNM7gs/brehm-cropped.jpg"),
+     () => removeAdvisorTooltips([4012, 4013, 4014, 4015, 4508, 4509, 4510, 4511, 4516, 4517, 4518, 4519, 4060], "https://i.ibb.co/KmNM7gs/brehm-cropped.jpg"),
     "available"
 );
 
@@ -4322,19 +4331,19 @@ let advisorLaschet = new Advisor(
     "https://i.ibb.co/z4HQGwg/laschet2.jpg",
     "Laschet will turn out the CDU in his homestate of North Rhine-Westphalia and campaign with you all over Germany.",
     "The Minister-President and party leader of the CDU also has ambitions to become chancellor - don't fight too dirty if you want him onboard.",
-    noop,
-     noop,
+    () => addAdvisorTooltips([4081 ,4105], ["Yeah…", "Let us bury the hatchet, Mr. Söder. I want to see a successful Union and a successful Germany. I’m sure you’re capable of achieving both…. I hope."], "https://i.ibb.co/z4HQGwg/laschet2.jpg"),
+     () => removeAdvisorTooltips([4081 ,4105], "https://i.ibb.co/z4HQGwg/laschet2.jpg"),
     "locked"
 );
 
 let advisorZiemiak = new Advisor(
     7,
     'Paul Ziemiak',
-    "https://i.ibb.co/4Syrm64/dobrindt-cropped.jpg",
+    "https://i.ibb.co/Y3GNpF9/ziemiak-cropped.jpg",
     "Coordinating closer with Ziemiak will help benefit you nationwide and be helpful if he's campaigning for you somewhere.",
     'The general secretary of the CDU wants to see a fair nomination process.',
-    () => {updateDobrindtHighlight();addAdvisorTooltips([4530], ["I will do my best, Mr. Söder. The CDU is going to win this debate."], "https://i.ibb.co/4Syrm64/dobrindt-cropped.jpg")},
-     () =>  {updateDobrindtHighlight();removeAdvisorTooltips([4530], "https://i.ibb.co/4Syrm64/dobrindt-cropped.jpg")},
+    () => {updateZiemiakHighlight();addAdvisorTooltips([4530], ["The CDU will prove that it needs the Union’s competency to bring this country forward.], "https://i.ibb.co/Y3GNpF9/ziemiak-cropped.jpg")},
+     () =>  {updateZiemiakHighlight();removeAdvisorTooltips([4530], "https://i.ibb.co/Y3GNpF9/ziemiak-cropped.jpg")},
     "locked"
 );
 function updateZiemiakHighlight() {
@@ -4360,8 +4369,8 @@ let advisorHuml = new Advisor(
     "https://i.ibb.co/NKLzJ0j/huml-cropped.jpg",
     "As the incumbent Minister of Health in Bavaria, she can advice you on all questions surrounding that topic and COVID.",
     "",
-    () => addAdvisorTooltips([4008, 4009, 4010, 4011, 4043, 4044, 4045, 4046, 4070, 4071, 4072, 4072, 4075], ["I think this could be a bit risky, as the virus generally likes higher temperatures…", "It’s a hard decision, but I think this is the right call.", "Frankly, Mr. Laschet, no one understands this ‘bridge lockdown’ you’re proposing.", "I appreciate that you’re deferring to the Federal government, but it doesn’t hurt to show off your own ideas.", "If we want to appease the people critical of the lockdowns, this is a palatable way to do it.", "Handling Covid in a good way is the key for us to win this race. Aa much as some might hate it, this is the reasonable path forward.", "I don’t think rattling on the prioritization system is a wise choice, considering the vaccine supply right now.", "Mr. Laschet, if you’re turning out to be some Querdenker, you can kiss our arrangement Goodbye.", "I agree, we’re on a good way. But for electoral purposes, you should be a bit more outspoken, perhaps.", "We’ll see if this is doable legally, but it’s certainly bound to be a popular statement.", "Mr. Laschet, if you’re turning out to be some Querdenker, you can kiss our arrangement Goodbye.", "You’re a bit ahead of the curb here, besides, a vaccine mandate might be illegal. Best not say anything this brash.", "That… that lab coat just… doesn’t look good on you, Mr. Laschet. Sorry."], "https://i.ibb.co/5v3nYJS/spahn-cropped.jpg"),
-     () => removeAdvisorTooltips([4008, 4009, 4010, 4011, 4043, 4044, 4045, 4046, 4070, 4071, 4072, 4072, 4075], "https://i.ibb.co/5v3nYJS/spahn-cropped.jpg"),
+    () => addAdvisorTooltips([4008, 4009, 4010, 4011, 4043, 4044, 4045, 4046, 4070, 4071, 4072, 4072], ["This is certain to give Covid a comeback in Bavaria that you surely won’t need.", "A strict line is certainly good to contain Covid, even if it comes at a small cost of a polling dip.", "As long as we don’t open up too quickly, sure go ahead… electorally, this is the best option.", "Mr Laschet’s proposal is pretty confusing, but maybe supporting him can defuse some of the tensions in the party.", "This strikes a good compromise, but we need to be aware of the societal impacts this will have on Bavaria.", "That’s right - we need to keep the course if we want to eradicate Covid from the Free State. The headlines will surely reflect that.", "Our supply of vaccines is not sufficient to support such a strategy.", "Mr. Minister-President, surely you don’t… I have to strongly and decisively disagree. This will be a catastrophe.", "This is a very good proposal, Mr. Minister-President.", "That’s quite a good statement, but maybe something a bit more radical is needed to put you into the spotlight.", "Mr. Minister-President, all due respect, if you want to lose, I am going to resign beforehand.", "I fear this is a bit much. This will still help us in some progressive corners, but we don’t need to agitate the right more than we already did."], "https://i.ibb.co/NKLzJ0j/huml-cropped.jpg"),
+     () => removeAdvisorTooltips([4008, 4009, 4010, 4011, 4043, 4044, 4045, 4046, 4070, 4071, 4072, 4072], "https://i.ibb.co/NKLzJ0j/huml-cropped.jpg"),
     "available"
 );
 
@@ -4394,8 +4403,8 @@ let advisorHaseloff  = new Advisor(
        "https://i.ibb.co/CKfTPcs/haseloff-cropped.jpg",
     "Haseloff's popularity will not only help you in Saxony-Anhalt, his home state, but all of East Germany.",
     'A very popular East German Minister-President - maybe you can convince him to work for you when you visit him?',
- () => addAdvisorTooltips([4077, 4104, 4600, 4601, 4602, 4603], ["From one Landesvater to another: this is not a bad idea.", "We will prevail against these vengeful populists!", "This may seem counter-intuitive, but for many of these voters, it’s not about ideology per se. They feel cut-off - all that this would accomplish is to give credence to the AfD’s program.", "Well, if you can accomplish these things after the election, it could surely make a dent. For now though? They’ve heard enough empty promises..", "Yes, that’s exactly right. There’s a reason the map looks like it does. The aftereffects of reunification still reverberate in the East, and the AfD profits off of that.","I don’t think we should stoop to the level of the left-wing parties. We need to do something against this party, not antagonize their voters or take them as stupid."],"https://i.ibb.co/CKfTPcs/haseloff-cropped.jpg"),
-     () => removeAdvisorTooltips([4501, 4502, 4503, 4504, 4520, 4521, 4522, 4523, 4524, 4525, 4526, 4527, 4083, 4085, 4105], "https://i.ibb.co/CKfTPcs/haseloff-cropped.jpg"),
+ () => addAdvisorTooltips([4104, 4600, 4601, 4602, 4603], [ "We will prevail against these vengeful populists!", "This may seem counter-intuitive, but for many of these voters, it’s not about ideology per se. They feel cut-off - all that this would accomplish is to give credence to the AfD’s program.", "Well, if you can accomplish these things after the election, it could surely make a dent. For now though? They’ve heard enough empty promises..", "Yes, that’s exactly right. There’s a reason the map looks like it does. The aftereffects of reunification still reverberate in the East, and the AfD profits off of that.","I don’t think we should stoop to the level of the left-wing parties. We need to do something against this party, not antagonize their voters or take them as stupid."],"https://i.ibb.co/CKfTPcs/haseloff-cropped.jpg"),
+     () => removeAdvisorTooltips([4104, 4600, 4601, 4602, 4603], "https://i.ibb.co/CKfTPcs/haseloff-cropped.jpg"),
     "locked"
 );
 
@@ -4460,7 +4469,7 @@ let advisorKuban = new Advisor(
     16,
     'Tilman Kuban',
     "https://i.ibb.co/HqnG041/kuban-cropped.jpg",
-    "Kuban wants to advise you on digitalization and could help turn out the youth vote for you.",
+    "Kuban wants to advise you on digitalization and mobilise the JU to help you nationwide.",
     "The chairman of the CDU/CSU youth organization JU would like you to involve the JU in your campaign.",
  () => {updateWüstHighlight();addAdvisorTooltips([4058, 4059, 4060, 4061, 4062, 4063, 4064, 4065], ["Fast action is the key to alleviating the situation in the affected areas.", "Admitting mistakes is politically inadvisable, most of the time.", "Um, Mr. Laschet… do you remember how we worked to restrict disaster aid just a short time ago? Yeah, that’s coming back to bite us in the arse now.", "Hm, could be a wildcard, but most likely, this will just reorient the debate toward the strength of the Greens.", "Maybe the people want a workaholic as chancellor, but most likely, this is going to hurt. Olaf Scholz is coming either way, seeking to gain.", "The locals in the Ahrtal will appreciate this, but you might seem invisible to the rest of the country.", "Mr. Laschet, let me help you here. You need to pay attention to your demeanor while the President talks, alright? Take the other option.", "This is a splendid idea. Appearing with our head of state could minimize the political damage of this catastrophe."],"https://i.ibb.co/DVXFbXG/w-st-cropped.jpg")},
      () => {updateWüstHighlight();removeAdvisorTooltips([4058, 4059, 4060, 4061, 4062, 4063, 4064, 4065], "https://i.ibb.co/DVXFbXG/w-st-cropped.jpg")},

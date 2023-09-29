@@ -4507,7 +4507,7 @@ let advisorHaseloff  = new Advisor(
     "Haseloff's popularity will not only help you in Saxony-Anhalt, his home state, but all of East Germany.",
     'A very popular East German Minister-President - maybe you can convince him to work for you when you visit him?',
  () => addAdvisorTooltips([4077, 4104, 4600, 4601, 4602, 4603], ["From one Landesvater to another: this is not a bad idea.", "We will prevail against these vengeful populists!", "This may seem counter-intuitive, but for many of these voters, it’s not about ideology per se. They feel cut-off - all that this would accomplish is to give credence to the AfD’s program.", "Well, if you can accomplish these things after the election, it could surely make a dent. For now though? They’ve heard enough empty promises..", "Yes, that’s exactly right. There’s a reason the map looks like it does. The aftereffects of reunification still reverberate in the East, and the AfD profits off of that.","I don’t think we should stoop to the level of the left-wing parties. We need to do something against this party, not antagonize their voters or take them as stupid."],"https://i.ibb.co/CKfTPcs/haseloff-cropped.jpg"),
-     () => removeAdvisorTooltips([4501, 4502, 4503, 4504, 4520, 4521, 4522, 4523, 4524, 4525, 4526, 4527, 4083, 4085, 4105], "https://i.ibb.co/CKfTPcs/haseloff-cropped.jpg"),
+     () => removeAdvisorTooltips([4077, 4104, 4600, 4601, 4602, 4603], "https://i.ibb.co/CKfTPcs/haseloff-cropped.jpg"),
     "locked"
 );
 
