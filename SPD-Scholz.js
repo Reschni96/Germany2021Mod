@@ -510,7 +510,7 @@ e.multiple_endings = true;
   	    }
       	e.header="<h2>“The SPD and Rolf Mützenich are the winners of this night”</h2>"
       	e.pages=[`<p>To the surprise of most pundits, Rolf Mützenich has actually won the election for the SPD and now appears to be on track to be elected chancellor. Considering the polling last year, his performance is widely celebrated, and more than a few party members express relief that he was selected over you. Privately, you think that this was just a winnable election, with how much Baerbock and Laschet screwed up, but oh well - you are happy that the SPD won, too!</p>${fate}` ]
-      	e.image=["https://www.bundestag.de/resource/image/225552/3x4/594/792/41c47f0a63894c714cff2ac9fc890afb/2AC076E6C48DE98561C2E0BA18823C1A/kuppel.jpg",]
+      	e.image=["https://i.ibb.co/gSnNqXk/image23-cropped.jpg",]
 
       	return construct(0);
   	}
@@ -525,7 +525,7 @@ e.multiple_endings = true;
   	    }
       	e.header="<h2>“As expected, SPD under Mützenich struggles”</h2>"
       	e.pages=[`<p>As was predicted by most pundits, the SPD and Mützenich have lost the election. Still, this is not a bad result for him - he clawed his way back to the top, although it’s clear that the party is bleeding heavily, and something needs to happen to stop it. With the CDU winning yet again, there is little appetite for another Grand coalition, but who knows, these days. Your private feelings are mixed - you are glad that you aren't the face of this defeat, but can't help but wonder if you hadn't been able to win this, to lead your party to a better result.</p>${fate}`]
-      	e.image="https://www.bundestag.de/resource/image/225552/3x4/594/792/41c47f0a63894c714cff2ac9fc890afb/2AC076E6C48DE98561C2E0BA18823C1A/kuppel.jpg"
+      	e.image="https://i.ibb.co/LQXKNYr/image12-cropped.jpg"
         	return construct(0);
   	}
   }
@@ -1387,7 +1387,7 @@ function endingTwoBuilder(){
     	else{
         	if (!thirdPlace){
             	negotiations = "Months have passed, and the coalition talks have finally led to results - but somehow, you just couldn’t assert yourself. The talks collapsed, and now, they stole the chancellor’s job from right under your feet! You almost did it, but it seems the SPD has been ridiculed for a final time. Maybe the party just isn’t ready?"
-            	var oppositionFateStrong = "This outcome is but a small setback, you’re convinced. After such a miraculous victory, <i>you</i> were the one destined to lead Germany into this age, and your party wholeheartedly agrees. Now, the SPD finds itself once more reinvigorated, this time, to make a strong opposition. Rolf Mützench steps aside to make you leader of the parliamentary group and leader of the opposition - as somewhat of a shadow chancellor. In 2025 - or earlier, if the government collapses - you can try getting your payback!"
+            	var oppositionFateStrong = "This outcome is but a small setback, you’re convinced. After such a miraculous victory, <i>you</i> were the one destined to lead Germany into this age, and your party wholeheartedly agrees. Now, the SPD finds itself once more reinvigorated, this time, to make a strong opposition. Rolf Mützenich steps aside to make you leader of the parliamentary group and leader of the opposition - as somewhat of a shadow chancellor. In 2025 - or earlier, if the government collapses - you can try getting your payback!"
         	}
         	else{
             	negotiations = "A few months have passed. Unexpectedly, the chancellor of the government to succeed Merkel IV has been recruited from the runner-up, outmaneuvering the election winner."
@@ -1460,7 +1460,8 @@ function endingTwoBuilder(){
   	case 3:
   	header = "<h2>“Black Green - A Modern Coalition For Modern Times?”</h2>"
   	image.push("https://i.ibb.co/m0v5SD2/image3-cropped.jpg")
-  	$("#game_window")[0].style.backgroundImage = "url(https://i.ibb.co/KrPSCWk/Schwarzgr-nback.png)";  	if(coalitionLeader.party === 79){
+  	$("#game_window")[0].style.backgroundImage = "url(https://i.ibb.co/KrPSCWk/Schwarzgr-nback.png)";
+  	if(coalitionLeader.party === 79){
         	coalitionText = "Many suspected it to be in the air for some time now. When the Jamaica talks of 2017 failed due to the <i>FDP</i> feeling shunned, the love affair of CDU and Greens was sure to be blossoming into this arrangement. In a bit of a twist, the Greens seem to have taken a liking to the Union’s newfound conservationism, as the 2020’s begin with a Baden-Württemberg variation-Black-Green coalition. Their talks seemed surprisingly smooth from the outside - and their regime of conservationism combined with centrist economics seems to poll well as of now. But, of course - without the SPD in government, the social fabric of this nation will erode, as the wealth gap will only continue to increase, as workers will lose their jobs for the energy transition, as children will continue to go hungry. Being in the Opposition for the first time since 2013, the SPD has to redefine their identity, to prove that it needs the SPD to make Germany just. <i>Baerbock I</i> is their opportunity to do just that."
         	if (badResult){
 
@@ -1647,7 +1648,6 @@ function endingTwoBuilder(){
         	else{
         	header =  "<h2>“Red-Red-Green - Leftist Unity”</h2>"
         	ctsAchievement("Leftist Unity")
-        	image.push("https://i.ibb.co/bdSRczL/image9-cropped.jpg")
         	image.push("https://i.ibb.co/cc5MFfX/image40-cropped.jpg")
         	$("#game_window")[0].style.backgroundImage = "url(https://i.ibb.co/Rc1CkFS/Rot-Rot-Gr-nback.png)";
         	coalitionText = "It was clear to you, this country needs serious reforms. With the neoliberal course of the FDP, the antiquated policies of the Union and the fascist menace reentering parliament, there was only one option for a new beginning: a coalition with the Left. You’d think they didn’t have a lot of leverage due to their middling performance, but with their steadfast non-interventionist Foreign Policy, the coalition talks were quite tough. Most days of the several months you’ve taken to negotiate were spent on that topic, while the others forged an unabashedly leftist policy regime, consisting of the abolition of Hartz IV, the reintroduction of the wealth tax, a federal rent moratorium, a minimum wage of 12.50€, a unitary health insurance system and a complete rethinking of the economic consensus, particularly ecologically. In the end, you did it - you got the Left to acknowledge the “current status of NATO membership”, shelving most discussions about Foreign Policy until it’s relevant. <br>Finally, the influence of the <i>Parliamentarian Left</i> in your party has reached it’s peak, with a lot of Jusos entering the parliament, determined to make the most of this coalition. The CDU/CSU and FDP already have put up the redbaiting barricades, preparing to obstruct and sue wherever possible - and with your own moderate wings unnerved, you have a lot of work to do. <i>Scholz I</i> will be a difficult test of your political ability. ."
@@ -1678,7 +1678,7 @@ function endingTwoBuilder(){
 
         	else{
         	ctsAchievement("Leftist Unity")
-        	header =  "<h2>“Red-Red-Green - Leftist Unity””</h2>"
+        	header =  "<h2>“Red-Red-Green - Leftist Unity”</h2>"
         	image.push("https://i.ibb.co/cc5MFfX/image40-cropped.jpg")
         	$("#game_window")[0].style.backgroundImage = "url(https://i.ibb.co/Rc1CkFS/Rot-Rot-Gr-nback.png)";
         	coalitionText = "Some were surprised, others weren’t - Annalena Baerbock was known as a moderate inside her party, even driving harsher attacks at the Left than you - and yet, she decided to go ahead to forge a leftist majority. And now, the negotiations are through - Germany will get a Red-Red-Green government. With their steadfast non-interventionist Foreign Policy, the talks were quite tough. She has given on the tone to redefine the economic strategy of the government around ecological stability and redistribution, rather than growth - including an unabashedly leftist policy regime, consisting of the abolition of Hartz IV, the reintroduction of the wealth tax, a federal rent moratorium, a minimum wage of 12€, a unitary health insurance system.  In the end, you did it - you got the Left to acknowledge the “current status of NATO membership”. Your party has to make sure the government doesn’t lose its ability to act on Foreign Policy, even in the face of crisis. The CDU/CSU and FDP already have put up the redbaiting barricades, preparing to obstruct and sue wherever possible - and with your own moderate wings unnerved, the first leftist government of Germany will have a lot of work to do. <i>Baerbock I</i> will be a difficult test of everyone’s political abilities."
@@ -3786,8 +3786,11 @@ function seatCalculator() {
                 }
                });
 
-            //always exclude "other"
-            missedCandidates.push(306);
+            //almost always exclude "other"
+            let othersPV =allVotes.find(item => item.candidate === 306).popular_votes;
+            if(othersPV/totalPopularVote < 0.15){
+                missedCandidates.push(306);
+            }
 
             // Loop through the statePKs and call the changeState function for each statePK
             statePKs.forEach(statePK => {
