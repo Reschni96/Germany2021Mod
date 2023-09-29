@@ -3537,3 +3537,33 @@ function ctsAchievement(achievement, difficultyChecker = true){
             unlockAchievement(achievement);
         }
     }
+
+let finalTrackSet = false;
+
+function addOrReplaceMusic(link, final = false) {
+    const existingAudio = document.getElementById('campaignTrailMusic');
+
+    // If a final track has been set, and the new track is not final, return without any action
+    if (finalTrackSet && !final) {
+        return;
+    }
+
+    // Remove the existing audio element if it's present
+    if (existingAudio) {
+        existingAudio.parentNode.removeChild(existingAudio);
+    }
+
+    // Create a new audio element
+    const audio = document.createElement('audio');
+    audio.id = 'campaignTrailMusic';
+    audio.src = link;
+    audio.volume = campaignTrail_temp.music.Volume;
+    audio.autoplay = true;
+
+    // Append it to the body (or to any specific container you prefer)
+    document.body.appendChild(audio);
+
+    if (final) {
+        finalTrackSet = true;
+    }
+}

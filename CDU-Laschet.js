@@ -1102,6 +1102,26 @@ function endingTwoBuilder(){  var header = null;
 	var secondPage = false;
 	var SecondPageText = "";
 
+    if(playerLeader===coalitionLeader){
+        if(statesman>14){
+            addOrReplaceMusic("https://cdn.discordapp.com/attachments/1131296206908301423/1131296524379373681/Hildegard_Knef_-_Berlin_Dein_Gesicht_hat_Sommersprossen.mp3?ex=6517c4bd&is=6516733d&hm=df76afdb1675a96ce988700e5b8f2715e4c623d55db11998b0478b37792115f3&")
+        }
+        else{
+            addOrReplaceMusic("https://cdn.discordapp.com/attachments/1131296206908301423/1131296524379373681/Hildegard_Knef_-_Berlin_Dein_Gesicht_hat_Sommersprossen.mp3?ex=6517c4bd&is=6516733d&hm=df76afdb1675a96ce988700e5b8f2715e4c623d55db11998b0478b37792115f3&")
+
+        }
+    }
+    else {
+        if(statesman<5){
+            addOrReplaceMusic("https://cdn.discordapp.com/attachments/1131296206908301423/1131296524379373681/Hildegard_Knef_-_Berlin_Dein_Gesicht_hat_Sommersprossen.mp3?ex=6517c4bd&is=6516733d&hm=df76afdb1675a96ce988700e5b8f2715e4c623d55db11998b0478b37792115f3&")
+
+        }
+        else{
+            addOrReplaceMusic("https://cdn.discordapp.com/attachments/1131296206908301423/1131296585335185520/Marius_Muller-Westernhagen_-_Freiheit.mp3?ex=6517c4cc&is=6516734c&hm=d0cdb7b76cbdf46e4efc7881a7eefe161468ba7d5af684a810a08c5c17a36916&")
+
+        }
+
+    }
 
 	var chancellorFateHappy =  "Mr. Laschet, let me be the first to give you my congratulations. You have fulfilled your ambition to become chancellor, as the successor of Angela Merkel, a grand Christian Democrat! Your task ahead is to guide the country through the remainder of the Covid pandemic, accelerate the energy transition, and handle any foreign policy challenges that arise. Considering your political beliefs, your chancellorship is thought to step into the footsteps of Merkel, continuing her style of regal and patient governance. If you’re successful with your initiatives, you'll hopefully be reelected as a popular incumbent in 2025 - setting the scene for another <b>Christian Democratic Decade</b> in Germany."
 	var chancellorFateDown =  "Mr. Laschet, I believe congratulations are in order! While you might have preferred other coalition agreements, in the end, you have fulfilled your ambition to become the next chancellor of Germany, as the successor of Angela Merkel, a grand Christian Democrat. Your task ahead is to try guiding the country through the remainder of the Covid pandemic, accelerating the energy transition, and handling any foreign policy challenges that arise. Considering your political beliefs, your chancellorship is thought to step into the footsteps of Merkel, continuing her style of regal and patient governance. If you’re successful with your initiatives, you'll hopefully be reelected as a popular incumbent in 2025 - setting the scene for another <b>Christian Democratic Decade</b> in Germany."
@@ -1196,7 +1216,7 @@ function endingTwoBuilder(){  var header = null;
       	case 7:
         	contestedText="";
         	negotiations="";
-
+             addOrReplaceMusic("https://cdn.discordapp.com/attachments/1131296206908301423/1131296585335185520/Marius_Muller-Westernhagen_-_Freiheit.mp3?ex=6517c4cc&is=6516734c&hm=d0cdb7b76cbdf46e4efc7881a7eefe161468ba7d5af684a810a08c5c17a36916&")
         	var majority = selectedCoalition.parties.reduce((sum, partyId) => sum + e.final_overall_results.find(p => p.candidate === partyId).electoral_votes, 0);
 
         	if(majority-totalSeats/2 < 35){
@@ -1283,10 +1303,10 @@ function endingTwoBuilder(){  var header = null;
     	}
 
          if (secondPage){
-            text = [`<p>${contestedText}${negotiations}</p><p>${coalitionText}</p><p>${playerFate}</p>`,`<p>${secondPageText}</p>` ]
+            text = [`<p>${negotiations}${contestedText}</p><p>${coalitionText}</p><p>${playerFate}</p>`,`<p>${secondPageText}</p>` ]
         }
         else{
-             text = [`<p>${contestedText}${negotiations}</p><p>${coalitionText}</p><p>${playerFate}</p>`,]
+             text = [`<p>${negotiations}${contestedText}</p><p>${coalitionText}</p><p>${playerFate}</p>`,]
         }
         return[header, text, image];
 }
@@ -5694,8 +5714,15 @@ function ctsAchievement(achievement, difficultyChecker = true){
         }
     }
 
-function addOrReplaceMusic(link) {
+let finalTrackSet = false;
+
+function addOrReplaceMusic(link, final = false) {
     const existingAudio = document.getElementById('campaignTrailMusic');
+
+    // If a final track has been set, and the new track is not final, return without any action
+    if (finalTrackSet && !final) {
+        return;
+    }
 
     // Remove the existing audio element if it's present
     if (existingAudio) {
@@ -5711,4 +5738,8 @@ function addOrReplaceMusic(link) {
 
     // Append it to the body (or to any specific container you prefer)
     document.body.appendChild(audio);
+
+    if (final) {
+        finalTrackSet = true;
+    }
 }
