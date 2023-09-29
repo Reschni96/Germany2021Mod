@@ -477,6 +477,8 @@ function addCoalitions() {
         const coalitionTable = document.createElement("table");
         coalitionTable.style.backgroundColor = "white";
         coalitionTable.style.margin = "0 auto";
+        coalitionTable.style.marginTop = "5px";
+        coalitionTable.style.marginBottom = "5px";
         coalitionTable.style.width = "70%";
         coalitionTable.style.border = "1px solid black";
 
