@@ -4491,8 +4491,8 @@ let advisorStoiber = new Advisor(
     "https://i.ibb.co/rphTQ89/stoiber-cropped.jpg",
     "Bavarians will love to see you campaign with Stoiber, and he has some tips about avoiding to be seen as opportunistic as well.",
     "This legendary CSU politician and former chancellor candidate wnats you to keep the CSU strong despite running a national campaign.",
-    () => {opportunism=Math.max(0, opportunism-2)},
-    () => {opportunism+=2},
+    () => {opportunism=Math.max(0, opportunism-3)},
+    () => {opportunism+=3},
     "locked"
 );
 
@@ -4559,8 +4559,8 @@ let advisorMüller = new Advisor(
     "https://i.ibb.co/kHch13g/m-ller-cropped.jpg",
     "The current Minister for for Economic Cooperation and Development is a principled man - hiring him could help with your image.",
     "To recruit the current Minister for for Economic Cooperation and Development, soften your position on refugees.",
-    () => {opportunism=Math.max(0, opportunism-3)},
-    () => {opportunism+=3},
+    () => {opportunism=Math.max(0, opportunism-4)},
+    () => {opportunism+=4},
     "locked"
 );
 
