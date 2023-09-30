@@ -1670,7 +1670,7 @@ campaignTrail_temp.achievements = {
         "description": "Form another Grand Coalition.",
         "cannotBeCheated": true
     },
-    "Modern coalition for modern times": {
+    "Modern Times": {
         "image": "https://i.ibb.co/jwh6qRk/Black-Green-cropped.png",
         "description": "Form the Black-Green-coalition.",
         "cannotBeCheated": true
@@ -1682,7 +1682,7 @@ campaignTrail_temp.achievements = {
     },
     "Dream-Team": {
         "image": "https://i.ibb.co/mTstLV5/Black-Yellow-cropped.png",
-        "description": "Form the Black-Yellow-coalition.",
+        "description": "Form the Black-Yellow-coalition. (Any difficulty)",
         "cannotBeCheated": true
     },
     "Firewall burned down": {
@@ -1705,7 +1705,7 @@ campaignTrail_temp.achievements = {
     "description": "As Baerbock, win with maximal Likeability.",
     "cannotBeCheated": true
     },
-    "Unfairness": {
+    "The Mirror": {
         "image": "https://i.ibb.co/tM8q6yg/image2-cropped.jpg",
         "description": "As Baerbock, witness a Habeck win",
         "cannotBeCheated": true

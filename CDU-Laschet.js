@@ -1195,7 +1195,7 @@ function endingTwoBuilder(){
   	header = "<h2>“Black Green - A Modern Coalition For Modern Times?”</h2>"
   	image.push("https://i.ibb.co/m0v5SD2/image3-cropped.jpg")
   	$("#game_window")[0].style.backgroundImage = "url(https://i.ibb.co/KrPSCWk/Schwarzgr-nback.png)";
-  	ctsAchievement("Modern coalition for modern times");
+  	ctsAchievement("Modern Times");
   	if(coalitionLeader === playerLeader){
         	coalitionText = "Many suspected it to be in the air for some time now. When the Jamaica talks of 2017 failed due to the <i>FDP</i> feeling shunned, the love affair of CDU and Greens was sure to be blossoming into this arrangement. While the negotiations were tough, especially on traffic, the economy and coal, in the end, you've forged a coalition agreement that both parties seem to be happy with. People are hopeful that you've combined sensibility and moderation with a path to sorely needed reforms - although you can be sure that the SPD won’t make it easy for you as a strong opposition. For now, popular opinion on <i>Laschet I</i> is on your side, so try not to squander your momentum!"
         	playerFate = chancellorFateHappy;
@@ -1272,7 +1272,7 @@ function endingTwoBuilder(){
         	break;
     	case 8:
         	header =  "<h2>“Black-Yellow - Laschet And Lindner, The Dream-Team”</h2>"
-        	ctsAchievement("Dream-Team")
+        	ctsAchievement("Dream-Team", false)
         	$("#game_window")[0].style.backgroundImage = "url(https://i.ibb.co/vwc41j2/Schwarzgelbback.png)";
         	image.push("https://i.ibb.co/n3rzz9V/image2-cropped.jpg")
         	coalitionText = "It seemed mathematically impossible for the last few months, but with grit and determination, you managed to wrestle your way ahead. It paid off, as without a hitch, within a few weeks, you got the privilege of forming the same coalition you've successfully led in North Rhine-Westphalia for the last four years. The CDU/CSU and FDP are natural governing partners, forging a coalition agreement to give Germany’s economy the jolt it needs. <i>Laschet I</i> will be a combination of modernizing what needs to be modernized and conserving what needs to be conserved. Congratulations Mr. Laschet - you’ve become the <i>Landesvater</i> of all of Germany, it seems."
