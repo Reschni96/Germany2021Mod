@@ -1565,6 +1565,13 @@ function endingOneBuilder() {
 	} else {
     	if (playerParty === e.final_overall_results[0]) {
 
+            if(likeability>14){
+                ctsAchievement("Frischer Wind")
+            }
+            if (campaignTrail_temp.player_answers.includes(4002)||campaignTrail_temp.player_answers.includes(4002)){
+                ctsAchievement("I'm Still Standing")
+
+            }
         	if (playerParty.electoral_votes == e.final_overall_results[1].electoral_votes) {
 
             	header = "<h2>“Dear viewers, it is now 22:37, and this is still too close to call...”</h2>"
@@ -1715,6 +1722,10 @@ function endingOneBuilder() {
 
     	if (e.final_state_results[2].result[0].candidate === 79 && e.final_state_results[2].result[0].percent - e.final_state_results[2].result[1].percent > 0.02) {
         	BerlinWin = " Also, the Green Party placed first in the Berlin state elections, making it likely that Bettina Jarasch will become the second Green leader of a state government. That’s certainly something."
+        	if (!(playerParty === e.final_overall_results[0])) {
+        	    ctsAchievement("Consolation Price")
+        	}
+
     	}
 
     	if (!disaster) {

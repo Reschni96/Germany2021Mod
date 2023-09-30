@@ -1464,6 +1464,7 @@ cyoAdventure = function(a) {
             mood = "Nervous"
         } else if (playerPolling < 0.27) {
             mood = "Calm"
+         }
         else if (playerPolling < 0.3) {
             mood = "Excited"
         } else {
