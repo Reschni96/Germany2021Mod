@@ -1282,7 +1282,7 @@ function endingTwoBuilder(){
     nct_stuff.themes[nct_stuff.selectedTheme].text_col = "black"
 	var header = null;
 	var text = null;
-	var image = null;
+	var image = [];
 	var coalitionLeader = findLeader(selectedCoalition);
 	var coalitionVice = findSecondPlace(selectedCoalition);
 	var playerLeader = (partyLeaders.find((p) => p.party === e.candidate_id));
@@ -1599,10 +1599,10 @@ function endingTwoBuilder(){
 
 
          if (secondPage){
-            text = [`<p>${contestedText}${negotiations}${sneakyText}</p><p>${coalitionText}</p><p>${playerFate}</p>`,`<p>${secondPageText}</p>` ]
+            text = [`<p>${negotiations}${sneakyText${contestedText}}</p><p>${coalitionText}</p><p>${playerFate}</p>`,`<p>${secondPageText}</p>` ]
         }
         else{
-             text = [`<p>${contestedText}${negotiations}${sneakyText}</p><p>${coalitionText}</p><p>${playerFate}</p>`,]
+             text = [`<p>${negotiations}${sneakyText}${contestedText}</p><p>${coalitionText}</p><p>${playerFate}</p>`,]
         }
         return[header, text, image];
 }
