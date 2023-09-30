@@ -2683,6 +2683,9 @@ cyoAdventure = function(a) {
         changeGlobalEffect(78,4094, -0.01)
     }
 
+    if(ans===4094&&firedKeys[15]){
+        ctsAchievement("We want Climate Justice!");
+    }
 
     if(anticlimate>0 && !firedKeys[16]&&!campaignTrail_temp.player_answers.includes(4034)){
         firedKeys[16] = true;
