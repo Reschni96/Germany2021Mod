@@ -1700,11 +1700,6 @@ campaignTrail_temp.achievements = {
         "description": "On any difficulty, form a rare coalition (Black-Blue, Social-Liberal, Red-Red, Green-Left, Green-Yellow)",
         "cannotBeCheated": true
     },
-    "Liberal Ländle": {
-        "image": "https://i.ibb.co/fG13SZt/fdp-cropped.png",
-        "description": "Have the FDP win a state",
-        "cannotBeCheated": true
-    },
     "Frischer Wind": {
     "image": "https://i.ibb.co/cLmnHwp/image1-cropped.jpg",
     "description": "As Baerbock, win with maximal Likeability.",
@@ -1753,6 +1748,11 @@ campaignTrail_temp.achievements = {
     "Landesvater": {
         "image": "https://i.ibb.co/t4LP4Nf/image9-cropped.jpg",
         "description": "As Laschet, surpass your vote share in the NRW state elections (>33%).",
+        "cannotBeCheated": true
+    },
+    "Having the last laugh": {
+        "image": "https://i.ibb.co/DfMmdbp/lacher-cropped.jpg",
+        "description": "As Laschet, win after laughing at the floods.",
         "cannotBeCheated": true
     },
     "Gradaus Kanzler": {
@@ -1808,6 +1808,11 @@ campaignTrail_temp.achievements = {
     "Out of a job": {
         "image": "https://i.ibb.co/ZKmZL5W/image21-cropped.jpg",
         "description": "As Scholz, get fired by Merkel.",
+        "cannotBeCheated": true
+    },
+    "Liberal Ländle": {
+        "image": "https://i.ibb.co/fG13SZt/fdp-cropped.png",
+        "description": "Have the FDP win a state",
         "cannotBeCheated": true
     },
     "Was it something I said?": {
