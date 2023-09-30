@@ -1704,7 +1704,128 @@ campaignTrail_temp.achievements = {
         "image": "https://i.ibb.co/fG13SZt/fdp-cropped.png",
         "description": "Have the FDP win a state",
         "cannotBeCheated": true
+    },
+    "Frischer Wind": {
+    "image": "https://i.ibb.co/cLmnHwp/image1-cropped.jpg",
+    "description": "As Baerbock, win with maximal Likeability.",
+    "cannotBeCheated": true
+    },
+    "Unfairness": {
+        "image": "https://i.ibb.co/tM8q6yg/image2-cropped.jpg",
+        "description": "As Baerbock, witness a Habeck win",
+        "cannotBeCheated": true
+    },
+    "I'm Still Standing": {
+        "image": "https://i.ibb.co/h9n8Wbs/image3-cropped.jpg",
+        "description": "As Baerbock, win despite suffering three scandals.",
+        "cannotBeCheated": true
+    },
+    "Der Zuhörer": {
+        "image": "https://i.ibb.co/TmWrfTq/image4-cropped.jpg",
+        "description": "As Habeck, win with maximal Patience.",
+        "cannotBeCheated": true
+    },
+    "Bringer of Democracy": {
+        "image": "https://i.ibb.co/4dM5Ts6/image5-cropped.png",
+        "description": "As Habeck, win Thuringia.",
+        "cannotBeCheated": true
+    },
+    "Ahead of time": {
+        "image": "https://i.ibb.co/mqQBPyb/image6-cropped.jpg",
+        "description": "As Habeck, take two prophetic stances.",
+        "cannotBeCheated": true
+    },
+    "We want Climate Justice!": {
+        "image": "https://i.ibb.co/PTqXvSW/image7-cropped.jpg",
+        "description": "Have Luisa Neubauer appear with you.",
+        "cannotBeCheated": true
+    },
+    "Consolation Price": {
+        "image": "https://i.ibb.co/ZWD0nRf/image26-cropped.png",
+        "description": "As Greens, lose the election but win the Berlin mayoral race.",
+        "cannotBeCheated": true
+    },
+    "Der Staatsmann": {
+        "image": "https://i.ibb.co/4dXtZSN/image8-cropped.jpg",
+        "description": "As Laschet, win with maximal Statesmanship.",
+        "cannotBeCheated": true
+    },
+    "Landesvater": {
+        "image": "https://i.ibb.co/t4LP4Nf/image9-cropped.jpg",
+        "description": "As Laschet, surpass your vote share in the NRW state elections (>33%).",
+        "cannotBeCheated": true
+    },
+    "Gradaus Kanzler": {
+        "image": "https://i.ibb.co/85bhwFT/image11-cropped.jpg",
+        "description": "As Söder, win with minimal Opportunism.",
+        "cannotBeCheated": true
+    },
+    "Bavarian Strongman": {
+        "image": "https://i.ibb.co/5YwcxKR/image12-cropped.jpg",
+        "description": "As Söder, opportunistically strongman yourself to victory in the debate.",
+        "cannotBeCheated": true
+    },
+    "O'zapft is!": {
+        "image": "https://i.ibb.co/q0fDHH2/image13-cropped.jpg",
+        "description": "As Söder, win over 30% of the popular vote.",
+        "cannotBeCheated": true
+    },
+    "Please don't fight": {
+        "image": "https://i.ibb.co/KVM3kbP/merkel-Merz-cropped.jpg",
+        "description": "Have Merkel and Merz on as advisors at the same time.",
+        "cannotBeCheated": true
+    },
+    "Merkel V": {
+        "image": "https://i.ibb.co/F7R9g74/image15-cropped.jpg",
+        "description": "As Scholz, win with maximal Merkelism.",
+        "cannotBeCheated": true
+    },
+    "Making History": {
+        "image": "https://i.ibb.co/KhZvttS/image16-cropped.jpg",
+        "description": "As Scholz, win the election and form a Traffic Light coalition.",
+        "cannotBeCheated": true
+    },
+    "Goodbye Mutti": {
+        "image": "https://i.ibb.co/Y0jNHf8/peer-cropped.jpg",
+        "description": "As Scholz, flip Merkel off and take over her job.",
+        "cannotBeCheated": true
+    },
+    "Dark Scholz rising": {
+        "image": "https://i.ibb.co/31XKwY3/image18-cropped.jpg",
+        "description": "As Scholz, give in to dark impulses.",
+        "cannotBeCheated": true
+    },
+    "Sorry, we didn't code this path": {
+        "image": "https://i.ibb.co/G2HLc0q/esken-cropped.jpg",
+        "description": "As Scholz, come closest to winning the leadership race.",
+        "cannotBeCheated": true
+    },
+    "Elbhoch- wasser all over again": {
+        "image": "https://i.ibb.co/jktTF7c/image20-cropped.jpg",
+        "description": "As Scholz, get help from a former chancellor in your crisis response.",
+        "cannotBeCheated": true
+    },
+    "Out of a job": {
+        "image": "https://i.ibb.co/ZKmZL5W/image21-cropped.jpg",
+        "description": "As Scholz, get fired by Merkel.",
+        "cannotBeCheated": true
+    },
+    "Was it something I said?": {
+        "image": "https://i.ibb.co/5YLmSPy/image23-cropped.png",
+        "description": "Have three advisors quit during a campaign.",
+        "cannotBeCheated": true
+    },
+    "The Old Dame has passed away": {
+        "image": "https://i.ibb.co/LJRpDgD/image24-cropped.jpg",
+        "description": "As Greens or CDU, have the SPD land below 12%.",
+        "cannotBeCheated": true
+    },
+    "Parliamentary Subterfuge": {
+        "image": "https://i.ibb.co/stZDc7c/image27-cropped.jpg",
+        "description": "Form a coalition from second place.",
+        "cannotBeCheated": true
     }
+
 }
 
 

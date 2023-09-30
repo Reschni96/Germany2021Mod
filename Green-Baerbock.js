@@ -519,6 +519,7 @@ var coalitionNames = true;
 var negotiationsDone = false;
 var selectedCoalition = null;
 var adjusted = false;
+var quitCounter = 0;
 var leader = null;
 //variable below here only relevant for this specific mod
 var HabeckTime = false;
@@ -4906,6 +4907,10 @@ class Advisor {
     quit() {
         if (this.status === 'active') {
             this.dismiss();
+            quitCounter +=1;
+            if(quitCounter>2){
+                ctsAchievement("Was it something I said?");
+            }
             advisor_news = true;
             if (dismissalsLeft > 0) {
                 dismissalsLeft--;

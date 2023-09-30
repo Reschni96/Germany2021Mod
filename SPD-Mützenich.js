@@ -61,6 +61,7 @@ campaignTrail_temp.game_start_logging_id = '3662498';
     var negotiationsDone = false;
     var selectedCoalition = null;
     var adjusted = false;
+    var quitCounter = 0;
     var leader = null;
     //variable below here only relevant for this specific mod
     var leadership = 0;
