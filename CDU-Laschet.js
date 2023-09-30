@@ -4051,7 +4051,7 @@ advisorsList.forEach(advisor => {
                     explanationBox.style.left = (rect.left - hqRect.left - (18 * 14)) + 'px';
                     explanationBox.style.top = (rect2.top - hqRect.top - (28 * 14)) + 'px';
                 }
-                explanationBox.querySelector('p').innerText = "In this area, a specific characteristic that is unique to your character is described - both with the coloured circles and in text. The more circles you have and they closer they are to green, the better. The value can be influenced by choices during the campaign and advisors. It can change some answer effects and will determine a specific impactful question late in the campaign. Hover your name to learn more about your specific characteristic!";
+                explanationBox.querySelector('p').innerText = "In this area, a specific characteristic that is unique to your character is described - both with the coloured circles and in text. The more circles you have and the closer they are to green, the better. The value can be influenced by choices during the campaign and advisors. It can change some answer effects and will determine a specific impactful question late in the campaign. Hover your name to learn more about your specific characteristic!";
                 break;
             case 2:
                 let rect3 = advisorHeaderDiv.getBoundingClientRect();

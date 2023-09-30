@@ -17,9 +17,9 @@ campaignTrail_temp.modBoxTheme = {
      "ui_text_color": "#000651"
 }
 campaignTrail_temp.premier_ab_test_version = -1;
-campaignTrail_temp.credits = "<button onclick='credits()'>Nina&Jaeckex</button>";
+campaignTrail_temp.credits = "<button onclick='funcredits()'>Nina&Jaeckex</button>";
 
-  credits = function() {
+  funcredits = function() {
     credits = ["Lead Writer, Graphics, Music:", "Jaeckex", "", "Coding, Additional Writing:",  "Nina", "", "Banner by Calgar and Jaeckex", "", "Playtesting:", "Rickroll999, rnmgaming5068, TPLeo, Tomahawk2k, Leon Trotsky, Pompf, Ivorycore, Anne H, Jackalopemaster, EUIV ETS2", "", "Music Player adapted from 2000N", "Advisor Mode inspired by Sea to Shining Sea", ""]
     text = "CREDITS:\n\n"
     for (i in credits) {
