@@ -953,6 +953,11 @@ function endingOneBuilder(){
     var partyPerformance = "";
     var LeftPerformance = "";
     var disaster = false;
+    var spdresult = e.candidate_json.find(p => p.pk === 78);
+
+    if(spdresult.pvp<0.12){
+        ctsAchievement("The Old Dame has passed away")
+    }
 
 
  if (playerParty.electoral_votes>totalSeats/2){
@@ -962,8 +967,17 @@ function endingOneBuilder(){
 	}
 
 	else{
+    	if(e.final_state_results[9].result[0].candidate===77&&e.final_state_results[9].result[0].percent>0.33){
+                ctsAchievement("Landesvater")
+            }
     	if(playerParty===e.final_overall_results[0]){
 
+            if(statesman>14){
+                ctsAchievement("Der Staatsmann")
+            }
+            if(campaignTrail_temp.player_answers.includes(4064)){
+                ctsAchievement("Having the last laugh")
+            }
         	if (playerParty.popular_votes/totalPV>0.27){
             image.push("https://i.ibb.co/sWTwSnX/image41-cropped.jpg")
         	header = "<h2>“Dear viewers, we can project that the Union under Armin Laschet is ahead by comfortable margins - it seems, the Era Merkel continues.”</h2>"
@@ -1150,6 +1164,7 @@ function endingTwoBuilder(){
   	else{
     	if(playerLeader===coalitionLeader){
         	negotiations = "A few months have passed. These were some of the most tense months in recent German political history - through subterfuge, political tactitioning and cunning, you’ve done the unbelievable - you managed to outsmart the election winner! No one expected this, but you managed to sneak up from behind and forge a parliamentary majority around you as a chancellor! Not everyone is happy with this outcome, but that's their problem - you did it, Mr. Laschet! Despite everything, for now, the chancellery is yours!"
+        	ctsAchievement("Parliamentary Subterfuge")
     	}
     	else{
         	negotiations = "A few months have passed. These were some of the most tense months in recent German political history - through subterfuge, political tactitioning and cunning, they’ve done the unbelievable - they stole your prerogative as winner of the election and formed a government without you! Many are going to analyze these proceedings going forward, but through whatever dynamics behind the curtain, your rightful place as chancellor was stolen from you. Outrageous!"
@@ -4354,6 +4369,9 @@ class Advisor {
     hire() {
         this.hireCode();
         this.status = "active";
+        if (advisorMerkel.status === "active" && advisorMerz.status==="active"){
+            ctsAchievement("Please don't fight")
+        }
     }
 
     dismiss() {

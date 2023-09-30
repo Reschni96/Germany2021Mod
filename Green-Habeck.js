@@ -1102,6 +1102,11 @@ function endingOneBuilder(){
     var LeftPerformance = "";
     var BerlinWin = "";
     var disaster = false;
+    var spdresult = e.candidate_json.find(p => p.pk === 78);
+
+    if(spdresult.pvp<0.12){
+        ctsAchievement("The Old Dame has passed away")
+    }
 
 
       if (playerParty.electoral_votes>totalSeats/2){
@@ -1348,6 +1353,7 @@ function endingTwoBuilder(){
   	else{
     	if(playerLeader===coalitionLeader){
         	negotiations = "A few months have passed. These were some of the most tense months in recent German political history - through subterfuge, political tactitioning and cunning, you’ve done the unbelievable - you managed to outsmart the election winner! They knew you had experience, but this was a feat of political cunning few though possible of you. You’ve managed to turn a defeat into an unprecedented victory over the old system. There is a lot of discontent, particularly among the right, but they will see the light soon enough. You did it, Robert!"
+        	ctsAchievement("Parliamentary Subterfuge")
     	}
     	else{
         	if (!thirdPlace){
@@ -2195,7 +2201,7 @@ let result = applyDrift(79, -0.0008 + (dismissalsLeft >= 4 ? 0.0002 : (dismissal
         firedKeys[20] = true;
         answerSwapper(4061, 4627, false);
         changeGlobalEffect(79, 4061, 0.015)
-        updateFeedback(5095, "After you've proven time and time again during the campaign that you're willing to implement the demands of the FFF movement when in government, she accepts. Your joint rally is a sight to behold and will certainly help mobilize the youth vote Now, time to join your family in Flensburg and hope for “Germany. Everything is possible”.")
+        updateFeedback(5094, "After you've proven time and time again during the campaign that you're willing to implement the demands of the FFF movement when in government, she accepts. Your joint rally is a sight to behold and will certainly help mobilize the youth vote Now, time to join your family in Flensburg and hope for “Germany. Everything is possible”.")
         changeGlobalEffect(79,4095, 0.02)
         changeGlobalEffect(78,4095, -0.01)
     }
@@ -2647,6 +2653,13 @@ function changeGlobalEffect(affectedCandidate, answer, changeAmount) {
 
     campaignTrail_temp.answer_score_global_json.push(newEntry);
   }
+}
+
+function updateFeedback(pkValue, newFeedback) {
+    let entry = campaignTrail_temp.answer_feedback_json.find(entry => entry.pk === pkValue);
+    if (entry) {
+        entry.fields.answer_feedback = newFeedback;
+    }
 }
 
 function changeStateEffect(affectedCandidate, answer, state, changeAmount) {

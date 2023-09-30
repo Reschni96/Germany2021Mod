@@ -944,6 +944,11 @@ function endingOneBuilder(){
     var bavaria = e.final_state_results.map(f=>f.state).indexOf(3001);
     var bavarianWinner = e.final_state_results[bavaria].result[0].candidate;
     var disasterBavaria = "";
+    var spdresult = e.candidate_json.find(p => p.pk === 78);
+
+    if(spdresult.pvp<0.12){
+        ctsAchievement("The Old Dame has passed away")
+    }
 
 
       if (playerParty.electoral_votes>totalSeats/2){
@@ -956,7 +961,11 @@ function endingOneBuilder(){
     else{
         if(playerParty===e.final_overall_results[0]){
 
+            if(opportunism<5){
+                ctsAchievement("Gradaus Kanzler")
+            }
             if (playerParty.popular_votes/totalPV>0.3){
+            ctsAchievement("O'zapft is!")
             image.push("https://i.ibb.co/5WJ3dw0/image34-cropped.jpg")
             header = "<h2>“Dear viewers, we can project that the Union under Markus Söder is ahead by comfortable margins - it seems, we’re on the onset of an Era Söder.”</h2>"
             playerPerformance = "By 18:00, the early projections already indicate that you are in a comfortable lead. As the night progresses, it becomes increasingly clear that you have emerged as the winner of the election, quite uncontroversially. The Union’s polling surge after Covid never really went away it seems. Given that Merkel has been in power for 16 years, many had anticipated a greater desire for change among the electorate - and many doubted that a CSU-politician could get such a good result outside Bavaria. This victory not only reinforces your status as the leader of your party, but also gives you a clear mandate to lead them into a good position in the coalition talks. After all, it is evident that the German people favor you as their chancellor. You always knew you were capable of this - but nonetheless, feeling the power you have accrued come to fruition so flawlessly is an exorbitant feeling."
@@ -1132,6 +1141,7 @@ function endingTwoBuilder(){
       else{
         if(playerLeader===coalitionLeader){
             negotiations = "A few months have passed. These were some of the most tense months in recent German political history - through subterfuge, political tactitioning and cunning, you’ve done the unbelievable - “In da Mittn keman de Leiz zamm” - you managed to outsmart the election winner! You did it again! You managed to sneak up from behind and forge a parliamentary majority around you as a chancellor! Not everyone is happy with this outcome, but that's their problem - you did it, Mr. Söder!"
+            ctsAchievement("Parliamentary Subterfuge")
         }
         else{
             negotiations = "A few months have passed. These were some of the most tense months in recent German political history - through subterfuge, political tactitioning and cunning, they’ve done the unbelievable - they stole your prerogative as winner of the election and formed a government without you! Many are going to analyze these proceedings going forward, but through whatever dynamics behind the curtain, your rightful place as chancellor was stolen from you. Kreizkruzefix!"
@@ -2075,6 +2085,9 @@ cyoAdventure = function(a) {
         changeGlobalEffect(77,4097, 0.06)
         changeGlobalEffect(78,4097, -0.03)
         changeGlobalEffect(79,4097, -0.03)
+    }
+    if(opportunism>14 && [4093, 4097].includes(ans)){
+        ctsAchievement("Bavarian Strongman")
     }
     else if(campaignTrail_temp.question_number===31&&opportunism>9){
         answerSwapper(4099,4709, false)
@@ -4300,6 +4313,9 @@ class Advisor {
     hire() {
         this.hireCode();
         this.status = "active";
+        if (advisorMerkel.status === "active" && advisorMerz.status==="active"){
+            ctsAchievement("Please don't fight")
+        }
     }
 
     dismiss() {

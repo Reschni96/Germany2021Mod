@@ -1155,6 +1155,9 @@ function endingOneBuilder(){
 	else{
     	if(playerParty===e.final_overall_results[0]){
 
+        if(merkelism>14){
+                ctsAchievement("Merkel V")
+            }
     	if (playerParty.electoral_votes == e.final_overall_results[1].electoral_votes){
 
          	header = "<h2>“Dear viewers, it is now 22:37, and this is still too close to call...”</h2>"
@@ -1362,6 +1365,9 @@ function endingTwoBuilder(){
 	var contestedText = "";
 	var secondPage = false;
 	var SecondPageText = "";
+	if(coalitionLeader.party === 78&&campaignTrail_temp.player_answers.includes(4540)){
+	    ctsAchievement("Goodbye Mutti")
+	}
 
 	var chancellorFateHappy =  "But for now, congratulations, Olaf! Little did the little boy from Osnabrück know that his dream of becoming Chancellor was to become a reality. With your ascension from Vice Chancellor to Chancellor, you step right into the footsteps of Willy Brandt - and with his advice, you’re to govern this country. Merkel has left you a country with a strong foundation, but many challenges to overcome. She was onto something, solving a crisis with patience and prudence - but you also know, you have to take different priorities. After dealing with the remainder of the Covid pandemic, you need to set your sights to quickly turn the ship around on the climate crisis and the rifts dividing society, like wealth inequality, not to mention any foreign policy challenge that might arise. You’ve reinvigorated your party, you have risen from the ashes, you have become Germany’s 9th head of government - use this momentum, reform the country and lead it on a good path, and despite all odds, you have the chance to forge a <b>Social Democratic Decade</b>."
 	var chancellorFateDown =  "Cut for now, congratulations, Olaf! Little did the little boy from Osnabrück know that his dream of becoming Chancellor was to become a reality. With your ascension from Vice Chancellor to Chancellor, you step right into the footsteps of Willy Brandt - and with his advice, you’re to govern this country. Merkel has left you a country with a strong foundation, but many challenges to overcome. Despite your efforts to the contrary, her party remains in government, so it is up to you to forge some strongly-worded and reformist-minded compromises, using the same style of leadership that brought success to her.  After dealing with the remainder of the Covid pandemic, you need to set your sights to quickly turn the ship around on the climate crisis and the rifts dividing society, like wealth inequality, not to mention any foreign policy challenge that might arise. You’ve reinvigorated your party, you have risen from the ashes, you have become Germany’s 9th head of government - use this momentum, reform the country and lead it on a good path, and despite all odds, you have the chance to forge a <b>Social Democratic Decade</b>."
@@ -1383,6 +1389,7 @@ function endingTwoBuilder(){
   	else{
     	if(playerLeader===coalitionLeader){
         	negotiations = "A few months have passed. These were some of the most tense months in recent German political history - through subterfuge, political tactitioning and cunning, you’ve done the unbelievable - you managed to outsmart the election winner! This is nothing new for the SPD, who formed several governments from second place during the Social-Liberal coalition, but these days, it’s pretty remarkable. You have truly proven your political cunning and experience, as you stand triumphant after all. Respect, Olaf. Respect."
+        	ctsAchievement("Parliamentary Subterfuge")
     	}
     	else{
         	if (!thirdPlace){
@@ -1547,6 +1554,7 @@ function endingTwoBuilder(){
          	}
       	}
        	else{
+        	ctsAchievement("Making History")
         	coalitionText = "”Conceptually and mathematically difficult to imagine” - these were the words that Christian Lindner, leader of the FDP, used when asked about the traffic light coalition before the election. Apparently, you had enough imagination to form it anyway. While the Greens and FDP approached you with some tough negotiations, you managed to full through and win the chancellorship back to the SPD. With a plethora of modernization policies, socio-cultural reforms, a minimum wage increase and a new climate policy, buoyed by Christian Lindner as Minister of Finances, Robert Habeck as Vice Chancellor and MInister of the Economy and Annalena Baerbock as Foreign Minister, the ambition of the “Traffic Light” is nothing less but to redefine the political discourse of the country, with many innovative proposals to be enacted if no major crisis ties up the budget for 2022. Be careful though, the light shows “Red” for caution - your left wing is certainly suspicious towards the Liberals, while the right-wing opposition is ready to go scorched earth on your administration. Will <i> Scholz I</i> win out, or will the non-progressives prevail? Only time will tell…"
          	playerFate =chancellorFateHappy;
       	}
@@ -2227,6 +2235,7 @@ let result = applyDrift(78, -0.0008 + (dismissalsLeft >= 4 ? 0.0002 : (dismissal
         campaignTrail_temp.answers_json.find(item => item.pk === 4301).fields.question = '';
         campaignTrail_temp.answers_json.find(item => item.pk === 4302).fields.question = '';
         campaignTrail_temp.answers_json.find(item => item.pk === 4303).fields.question = '';
+        ctsAchievement("Out of a job")
 
     }
 
@@ -2347,6 +2356,10 @@ let result = applyDrift(78, -0.0008 + (dismissalsLeft >= 4 ? 0.0002 : (dismissal
         answerSwapper(4122, 4150, false);
         changeGlobalEffect(78,4122,-5)
     }
+    if(firedKeys[14]&&ans===4122){
+        ctsAchievement("Dark Scholz rising")
+    }
+
     if(!firedKeys[15]&&campaignTrail_temp.player_answers.includes(4033)&&(campaignTrail_temp.player_answers.includes(4070) || campaignTrail_temp.player_answers.includes(4111) || campaignTrail_temp.player_answers.includes(4114))){
         firedKeys[15] = true;
         firedKeys[26] = true;
@@ -2794,14 +2807,17 @@ let result = applyDrift(78, -0.0008 + (dismissalsLeft >= 4 ? 0.0002 : (dismissal
     }
 
     if(campaignTrail_temp.question_number === 18){
-        console.log(advisorSchröder)
+
        if(advisorSchröder.status==='active'){
         answerSwapper(4061, 4140, false);
         changeGlobalEffect(78,4061,0.06)
         changeGlobalEffect(77,4061,-0.03)
         changeGlobalEffect(79,4061,-0.03)
     }
+    if(ans===4061&&advisorSchröder.status==='active'){
+        ctsAchievement("Elbhoch- wasser all over again")
 
+    }
     else if (merkelism<5 && !firedKeys[66]){
             firedKeys[66] = true;
             answerSwapper(4061, 4224, false);
@@ -2995,6 +3011,7 @@ let result = applyDrift(78, -0.0008 + (dismissalsLeft >= 4 ? 0.0002 : (dismissal
         campaignTrail_temp.answers_json.find(item => item.pk === 4301).fields.question = '';
         campaignTrail_temp.answers_json.find(item => item.pk === 4302).fields.question = '';
         campaignTrail_temp.answers_json.find(item => item.pk === 4303).fields.question = '';
+        ctsAchievement("Out of a job")
     }
     if(ans===4502){
         campaignTrail_temp.questions_json[1].fields.description="The race takes shape, as Kevin Kühnert orchestrates a leftist top candidacy, consisting of Saskia Esken and Norbert Walter-Borjans. With eight notable duos running, there will be a run-off deciding between the final two. You and Claudia Moll become the centrist’s favorite ticket, as an unlikely duo. What approach do you take to convince the party members to vote for you?"
@@ -3014,7 +3031,9 @@ let result = applyDrift(78, -0.0008 + (dismissalsLeft >= 4 ? 0.0002 : (dismissal
         answerSwapper(4002, 4262, false);
         answerSwapper(4003, 4263, false);
     }
-
+    if(ans===4000&&campaignTrail_temp.players_answers.includes(4503)){
+        ctsAchievement("Sorry, we didn't code this path")
+    }
     if(muetzenich){
         campaignTrail_temp.questions_json[campaignTrail_temp.question_number+1]=extraQuestions[13]
         pictureDict[campaignTrail_temp.question_number+1]="https://i.ibb.co/KDM32bQ/m-tzenich-cropped.webp"
