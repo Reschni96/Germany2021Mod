@@ -2233,7 +2233,7 @@ cyoAdventure = function(a) {
 
     //coalition weight adjustments here
 
-     if (ans === 4537) {
+     if (ans === 4536) {
        coalitions.forEach(coalition => {
           if ([1, 2, 3, 5, 10].includes(coalition.id)) {
             coalition.weight *= 0.8;
