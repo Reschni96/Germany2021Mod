@@ -1383,7 +1383,7 @@ else if ( e.final_overall_results[0].electoral_votes>totalSeats/2){
         	adjustWeights(2);
         	}
         	else{
-        	playerPerformance += "Meanwhile, the " + firstParty.fields.last_name + " is starting to feel out potential partners for a coalition agreement. They have clearly won this election, and already they have announced their intention to lead the next government."
+        	playerPerformance += " Meanwhile, the " + firstParty.fields.last_name + " is starting to feel out potential partners for a coalition agreement. They have clearly won this election, and already they have announced their intention to lead the next government."
         	adjustWeights(5);
         	}
 
@@ -2108,12 +2108,17 @@ if (campaignTrail_temp.question_number === 27) {
         if(campaignTrail_temp.staff_mode){
         //advisor stuff
         if ([4006, 4100].includes(ans) &&!campaignTrail_temp.player_answers.includes(4002)&&!campaignTrail_temp.player_answers.includes(4003)) {
-            advisorKühnert.status = "available";
+            advisorKühnert.unlock();
             advisor_news = true;
         }
 
-        if (ans===4507) {
-            advisorLauterbach.status = "available";
+        if (ans===4000) {
+            advisorLauterbach.unlock();
+            advisor_news = true;
+        }
+
+        if (ans===4001 && (campaignTrail_temp.player_answers.includes(4501)||campaignTrail_temp.player_answers.includes(4503))) {
+            advisorLauterbach.unlock();
             advisor_news = true;
         }
 
@@ -5295,8 +5300,8 @@ let advisorSchmidt = new Advisor(
     "https://i.ibb.co/hXhZxnS/Schmidt-cropped.jpg",
     "A political ally and close friend since your time in Hamburg, he can help with all kinds of tasks around the campaign, be it your image, organization or coalition talks.",
     'Description for Wolfgang Schmidt',
-     () =>{coalitions.forEach(coalition => { if ([1, 2, 4, 6, 10, 11, 12, 13].includes(coalition.id)) {coalition.weight *= 1.2;}});merkelism+=1;},
-     () =>{coalitions.forEach(coalition => { if ([1, 2, 4, 6, 10, 11, 12, 13].includes(coalition.id)) {coalition.weight *= 1/1.2;}});merkelism=Math.max(0, merkelism-1)},
+     () =>{coalitions.forEach(coalition => { if ([1, 2, 4, 6, 10, 11, 12, 13].includes(coalition.id)) {coalition.weight *= 1.2;}});merkelism+=1;addAdvisorTooltips([4082, 4083, 4084, 4085],["This is a real story, Olaf - no reason to be this timid. We could go all out!","Olaf, we can’t just sit this out - they’re trying to instrumentalize our judicial system here, heaven’s sake!","This is a real story, Olaf - give them hell. Our numbers might sag, but we could take the conservatives with us! On the net, they’ll be harmed more than we will.","Hm, maybe you’re right, prudence could be well served, if you don’t want to inflame the matter any further. Still, do you just want to ignore this opportunity to counter-attack?"],"https://i.ibb.co/hXhZxnS/Schmidt-cropped.jpg")},
+     () =>{coalitions.forEach(coalition => { if ([1, 2, 4, 6, 10, 11, 12, 13].includes(coalition.id)) {coalition.weight *= 1/1.2;}});merkelism=Math.max(0, merkelism-1);removeAdvisorTooltips([4082, 4083, 4084, 4085],"https://i.ibb.co/hXhZxnS/Schmidt-cropped.jpg")},
     "available"
 );
 
@@ -5339,8 +5344,8 @@ let advisorKlingbeil = new Advisor(
     "https://i.ibb.co/N6V8MmL/klingbeil-cropped.jpg",
     "As General Secretary of the SPD, Klingbeil can use his organisational ressources and skills to help you win the nomination, and afterwards, this election.",
     'Description for Lars Klingbeil',
-       () => {addAdvisorTooltips([4008, 4009, 4010, 4011, 4123, 4124, 4125, 4126] ,[ "Very much in tune with what leadership thinks, but be wary of our moderate wing.", "Seems that like this is acceptable to Saskia and Norbert, and you get some centrist leeway out of it.", "That’s very much true - who else, if not you? Maybe pragmatism instead of ideology is a good hedge.", "Olaf, you lost the leadership race. You don’t have the political capital to be able to afford such grandstanding.","Very much in tune with what leadership thinks, but be wary of our moderate wing.","After your outspoken support of the GroKo, this just might not cut it, Olaf.", "That’s very much true - who else, if not you? Maybe pragmatism instead of ideology is a good hedge.", "Olaf, you lost the leadership race. You don’t have the political capital to be able to afford such grandstanding."], "https://i.ibb.co/N6V8MmL/klingbeil-cropped.jpg")},
-    () => removeAdvisorTooltips([4008, 4009, 4010, 4011, 4123, 4124, 4125, 4126], "https://i.ibb.co/N6V8MmL/klingbeil-cropped.jpg"),
+       () => {addAdvisorTooltips([4500, 4501, 4502, 4503, 4008, 4009, 4010, 4011, 4123, 4124, 4125, 4126] ,[ "I want to stay nominally neutral in this contest… but Klara Geywitz seems like a very capable woman.", "I want to stay nominally neutral in this contest… but Gesine Schwan seems like a relic of the past, not in a good way.", "I want to stay nominally neutral in this contest… but I think Claudia Moll does not accentuate you very well.", "I want to stay nominally neutral in this contest… but Bärbel Bas seems like a woman with a promising future, and reaching out to your left could give you additional appeal.", "Very much in tune with what leadership thinks, but be wary of our moderate wing.", "Seems that like this is acceptable to Saskia and Norbert, and you get some centrist leeway out of it.", "That’s very much true - who else, if not you? Maybe pragmatism instead of ideology is a good hedge.", "Olaf, you lost the leadership race. You don’t have the political capital to be able to afford such grandstanding.","Very much in tune with what leadership thinks, but be wary of our moderate wing.","After your outspoken support of the GroKo, this just might not cut it, Olaf.", "That’s very much true - who else, if not you? Maybe pragmatism instead of ideology is a good hedge.", "Olaf, you lost the leadership race. You don’t have the political capital to be able to afford such grandstanding."], "https://i.ibb.co/N6V8MmL/klingbeil-cropped.jpg")},
+    () => removeAdvisorTooltips([4500, 4501, 4502, 4503, 4008, 4009, 4010, 4011, 4123, 4124, 4125, 4126], "https://i.ibb.co/N6V8MmL/klingbeil-cropped.jpg"),
     "available"
 );
 
@@ -5382,9 +5387,9 @@ let advisorLauterbach = new Advisor(
     'Karl Lauterbach',
     "https://i.ibb.co/SsLv7fL/lauterbach-cropped.jpg",
     "Right now, he's one of the most media-present health experts, willing to help you navigate Covid. He's also got credibility with Green politicians.",
-    'A popular health expert in your party - if you want him by your side, take Covid seriously and focus on getting a vaccine out.',
-    () => {coalitions.forEach(coalition => { if ([1, 4, 6].includes(coalition.id)) {coalition.weight *= 1.4;}}); addAdvisorTooltips([4020, 4021, 4022, 4023, 4047, 4066, 4067, 4068, 4069] ,["We should be more careful, the experts agree that opening up now could jeopardize our entire progress so far!" ,"The bridge lockdown is a bad idea. Who is going to believe us if we promise that it’ll ‘only take two weeks’? Laschet has the wrong idea, and we don’t have to be afraid to call him out.","Good idea - the cultural sector and gig economy is really suffering under these unfortunately necessary measures. Makes you seem competent.","Cutting off relief now will only make you seem stingy. Absolutely the wrong move for everyone who’s struggling.","The government’s school policies during Corona weren’t that popular, it might be better to go another avenue.","No offense, but the wording here is absolutely unfortunate. Calling people ‘guinea pigs’ isn’t…","We’re on a good path, but science supports these worthwhile reforms.","The data does not support the proportionality of a vaccine mandate yet. Maybe we can still do this without one.","Olaf, this is absolutely counter productive to the vaccination campaign! Don’t tell me that you’re one of those anti-science-guys!"], "https://i.ibb.co/SsLv7fL/lauterbach-cropped.jpg")},
-     () =>{coalitions.forEach(coalition => { if ([1, 4, 6].includes(coalition.id)) {coalition.weight *= 1/1.4;}});removeAdvisorTooltips([4020, 4021, 4022, 4023, 4047, 4066, 4067, 4068, 4069], "https://i.ibb.co/SsLv7fL/lauterbach-cropped.jpg")},
+    'A popular health expert in your party who also wants to run for party leadership - he might support you if you run a leftist leadership campaign.',
+    () => {coalitions.forEach(coalition => { if ([1, 4, 6].includes(coalition.id)) {coalition.weight *= 1.4;}}); addAdvisorTooltips([4504, 4505, 4506, 4507, 4020, 4021, 4022, 4023, 4047, 4066, 4067, 4068, 4069] ,["With this financial support, you could prevent a socio-economic catastrophe.","This is an exceptional situation Olaf, this attitude here is exactly what the Grand Coalition did wrong this entire time!", "The situation for our caretakers is truly bad, but I believe Hubertus Heil, our Minister of Labor, should handle this. Concentrate on other policy areas.","A fast vaccine development guarantees a faster end to this pandemic! Science always appreciates more money.","We should be more careful, the experts agree that opening up now could jeopardize our entire progress so far!" ,"The bridge lockdown is a bad idea. Who is going to believe us if we promise that it’ll ‘only take two weeks’? Laschet has the wrong idea, and we don’t have to be afraid to call him out.","Good idea - the cultural sector and gig economy is really suffering under these unfortunately necessary measures. Makes you seem competent.","Cutting off relief now will only make you seem stingy. Absolutely the wrong move for everyone who’s struggling.","The government’s school policies during Corona weren’t that popular, it might be better to go another avenue.","No offense, but the wording here is absolutely unfortunate. Calling people ‘guinea pigs’ isn’t…","We’re on a good path, but science supports these worthwhile reforms.","The data does not support the proportionality of a vaccine mandate yet. Maybe we can still do this without one.","Olaf, this is absolutely counter productive to the vaccination campaign! Don’t tell me that you’re one of those anti-science-guys!"], "https://i.ibb.co/SsLv7fL/lauterbach-cropped.jpg")},
+     () =>{coalitions.forEach(coalition => { if ([1, 4, 6].includes(coalition.id)) {coalition.weight *= 1/1.4;}});removeAdvisorTooltips([4504, 4505, 4506, 4507,4020, 4021, 4022, 4023, 4047, 4066, 4067, 4068, 4069], "https://i.ibb.co/SsLv7fL/lauterbach-cropped.jpg")},
     "locked"
 );
 
