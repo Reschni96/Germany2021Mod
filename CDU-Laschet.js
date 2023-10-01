@@ -1459,6 +1459,9 @@ var errorDegree = 1;
 var factorPolls=1;
 var factorSeats=1;
 cyoAdventure = function(a) {
+    if(cheatsActive){
+        ctsAchievement("Würfelarmin")
+    }
     ans = campaignTrail_temp.player_answers[campaignTrail_temp.player_answers.length - 1]
     let pop_vote = e.current_results[0];
     let playerPolling = (pop_vote.find(p => p.pk === e.candidate_id)).pvp;

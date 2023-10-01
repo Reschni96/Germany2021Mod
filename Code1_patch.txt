@@ -1755,6 +1755,11 @@ campaignTrail_temp.achievements = {
         "description": "As Laschet, win after laughing at the floods.",
         "cannotBeCheated": true
     },
+    "Würfelarmin": {
+        "image": "https://i.ibb.co/P1ptCM1/image10.jpg",
+        "description": "As Laschet, cheat.",
+        "cannotBeCheated": false
+    },
     "Gradaus Kanzler": {
         "image": "https://i.ibb.co/85bhwFT/image11-cropped.jpg",
         "description": "As Söder, win with minimal Opportunism.",
