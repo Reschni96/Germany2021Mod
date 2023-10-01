@@ -247,7 +247,11 @@ if (!element) {
             timeTracker.appendChild(shuffleButton);
             var buttonContainer = document.createElement("div");
             buttonContainer.style.display = "flex"; // Makes children inline
-            buttonContainer.style.justifyContent = "space-between"; // Spreads the children out to fill the container
+            buttonContainer.style.justifyContent = "space-between";
+            skipButton.style.flex = "1"; // Makes it take up equal space
+            skipButton.style.marginRight = "5px"; // Adds some space between the buttons
+
+            loopButton.style.marginRight = "0px";
 
             buttonContainer.appendChild(skipButton);
             buttonContainer.appendChild(loopButton);

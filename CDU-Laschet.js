@@ -4450,7 +4450,7 @@ let advisorBrinkhaus = new Advisor(
     1,
     'Ralf Brinkhaus',
     "https://i.ibb.co/R9JSVcN/brinkhaus-cropped.jpg",
-    "The leader of the CDU/CSU parliamentary group can pull some strings to support you if needed. He also an asset in coalition talks.",
+    "The leader of the CDU/CSU parliamentary group can pull some strings to support you if needed. He's also an asset in coalition talks.",
     '',
     () => {{coalitions.forEach(coalition => { if ([1, 2, 3, 5, 8].includes(coalition.id)) {coalition.weight *= 1.2;}})};addAdvisorTooltips([4023, 4024, 4025, 4026, 4078, 4079, 4080, 4081], ["Mr. Laschet - I know Mr. Söder would surely be a popular candidate, but I think the CDU should enforce its traditional prerogative to provide the Union’s chancellor candidate.", "This won’t be popular with the public or Söder himself, but the Union’s backrooms were always a place of immense power…", "Don’t pick this one, please use my help - I could whip up some votes, so that you don’t lose this contest.", "There’s a surprising amount of Söder sympathizers, but I know you have the votes. Go ahead.", "That’s right, hit them where it hurts. The Left party is still a dangerous element in our political sphere, and the German people agree.", "I think our cooperation with the Social Democrats was fruitful, but the polls show something different. I’ll start to call some colleagues from the Pizza-connection…", "Mr. Laschet, the AfD is dangerous, radical and constitutionally dubious. There will be no cooperation with them, as long as I am in government, and the rest of the country expects as much from us!", "Black-Yellow would be a dream, but I doubt it’s much more than that, considering the political environment…"], "https://i.ibb.co/R9JSVcN/brinkhaus-cropped.jpg");updateBrinkhausHighlight()},
      () =>{{coalitions.forEach(coalition => { if ([1, 2, 3, 5, 8].includes(coalition.id)) {coalition.weight *= 1/1.2;}})};removeAdvisorTooltips([4023, 4024, 4025, 4026, 4078, 4079, 4080, 4081], "https://i.ibb.co/R9JSVcN/brinkhaus-cropped.jpg");updateBrinkhausHighlight()},
@@ -4466,7 +4466,7 @@ let advisorZiemiak = new Advisor(
     2,
     'Paul Ziemiak',
     "https://i.ibb.co/Y3GNpF9/ziemiak-cropped.jpg",
-    "As general secretary of the CDU and former JU leader, he can help you organize your nationwide campaign.",
+    "As general secretary of the CDU and former JU leader, he'll manage your nationwide campaign organization.",
     '',
      noop,
      noop,
@@ -4477,7 +4477,7 @@ let advisorLammert = new Advisor(
     3,
     'Norbert Lammert',
     "https://i.ibb.co/kgyMGNZ/lammert-cropped.jpg",
-    "The former president of the Bundestag is well connected and offered to help you get acccess to top-notch polling",
+    "The former president of the Bundestag is now the head of the Konrad-Adenauer Foundation and able to help you get access to top-notch polling.",
     null,
     ()=> {factorPolls=5; factorSeats=5; errorDegree=0.3;},
     ()=> {factorPolls=1; factorSeats=1; errorDegree=1;},
@@ -4488,7 +4488,7 @@ let advisorJung = new Advisor(
     4,
     'Andreas Jung',
     "https://i.ibb.co/JRjdzj0/jung-cropped.jpg",
-    "If you need advice on environmental question, hire this well connected member of the Bundestag",
+    "Part of your shadow cabinet on environmental questions, this well connected MP would advise you on climate policy.",
     null,
     () => addAdvisorTooltips([4032, 4039, 4040, 4041, 4042, 4061, 4066, 4067, 4068, 4069], ["Improving our own environmental policy regime will be sure to defuse the current situation.", "We really should respect the rule of law, lest we give the Greens even more ground for criticism.", "This seems like a reasonable mix of popular policies, especially for poorer regions.", "This seems a bit passive - especially in contrast to the SPD driving the push for the new law.", "Pivoting leftwards here could be considered a peace offer to the Greens, but also leaves significant parts of our base behind.", "This will be a strong pitch for environmentalists, but the Greens are likely to beat you there no matter what.", "This pivot might be too much for our coal regions to bear. If you wanted to exchange blue collar voters for moderate environmentalists, go ahead, but will it pay off?", "Moderate, uncontroversial, succinct. Just how the Germans like it.", "This is the perfect sound bite for attacks from your left. Don’t give them that.", "While I wholeheartedly agree, I think the exit from nuclear power is a done deal. Rattling on it won’t help us."], "https://i.ibb.co/JRjdzj0/jung-cropped.jpg"),
      () => removeAdvisorTooltips([4032, 4039, 4040, 4041, 4042, 4061, 4066, 4067, 4068, 4069], "https://i.ibb.co/JRjdzj0/jung-cropped.jpg"),
@@ -4499,7 +4499,7 @@ let advisorLinnemann = new Advisor(
     5,
     'Carsten Linnemann',
     "https://i.ibb.co/m09LhBP/linnemann-cropped.jpg",
-    "Linnemann is the chairman of an influential organization for entrepreneur in the CDU and could advice you on economic topics",
+    "Linnemann is the chairman of the influential entrepreneurial wing of the CDU/CSU, and is very knowledgable on fiscal and economic topics.",
     '',
     () => addAdvisorTooltips([4012, 4013, 4014, 4015, 4508, 4509, 4510, 4511, 4516, 4517, 4518, 4519], ["This won’t move the needle much - if anything, richer regions will profit slightly more from phasing out the Soli.", "‘He won’t tell you, I just did?’ Don’t promise to raise taxes in the middle of an election!", "This will surely improve our economic growth - the Union’s voter base will very much appreciate this.", "This sounded good up until the flat tax. You’d be opening yourself up to damning attacks by the left, Mr. Laschet!", "This would fall in line with conservative doctrines, but the Greens are going to try and profit off of this.", "Taking such a stance as a Christian Democrat at the current juncture will probably legitimize the AfD further.", "While the poorer states might appreciate more market intervention, this does not seem fiscally sustainable to me.", "This seems like an agreeable, financeable and workable solution to the problem at hand, drawing a contrast to the economic left.", "Good. These policies are particularly popular in rural spaces, and will surely alleviate the situation.", "If your goal is to appease urban areas and take the wind out of the sails of the SPD, maybe this isn’t such a bad idea.", "Mr. Laschet, this would be blatantly unconstitutional! The Red-Red-Green government of Berlin just tried the same thing, and they have fortunately been thwarted.", "This rhetoric does seem a bit too extreme, and will probably only rile up our opponents."], "https://i.ibb.co/m09LhBP/linnemann-cropped.jpg"),
      () => removeAdvisorTooltips([4012, 4013, 4014, 4015, 4508, 4509, 4510, 4511, 4516, 4517, 4518, 4519], "https://i.ibb.co/m09LhBP/linnemann-cropped.jpg"),
@@ -4510,8 +4510,8 @@ let advisorSöder = new Advisor(
     6,
     'Markus Söder',
     "https://i.ibb.co/NZ4NSY9/Markus-S-der.jpg",
-    "Söder will help mobilize the CSU in Bavaria and campaign with you all over Germany.",
-    "As Minister-President of Bavaria and leader of the CSU he's very influential - be nice to him to get him onboard with your campaign",
+    "Söder is a popular man in all of Germany, of course, especially in his homestate of Bavaria.",
+    "As Minister-President of Bavaria and leader of the CSU he's very influential - don't make him sour on you during your disagreements.",
     noop,
      noop,
     "locked"
@@ -4521,7 +4521,7 @@ let advisorDobrindt = new Advisor(
     7,
     'Alexander Dobrindt',
     "https://i.ibb.co/4Syrm64/dobrindt-cropped.jpg",
-    "Coordinating closer with Dobrindt will help you with the CSU in Bavaria and might be beneficial if he campaigns for you.",
+    "Coordinating closer with Dobrindt will help you with the CSU in Bavaria and might be beneficial in the minor parties' debate.",
     'The leader of the CSU group in Berlin wants you to be nice to his boss.',
     () => {updateDobrindtHighlight();addAdvisorTooltips([4530], ["I will do my best, Mr. Laschet. The CSU is going to win this debate."], "https://i.ibb.co/4Syrm64/dobrindt-cropped.jpg")},
      () =>  {updateDobrindtHighlight();removeAdvisorTooltips([4530], "https://i.ibb.co/4Syrm64/dobrindt-cropped.jpg")},
@@ -4537,8 +4537,8 @@ let advisorSüssmuth = new Advisor(
     8,
     'Rita Süssmuth',
     "https://i.ibb.co/WnX63VY/s-ssmuth-cropped.jpg",
-    "During her long and storied career, Süssmuth made connections across the political spectrum. SHe'D be an asset in coalition talks with more leftwing parties.",
-    "This CDU politician has advocated for a more liberal abortion law for a long time - agree with her to recruit her.",
+    "During her long and storied career, Süssmuth made connections across the political spectrum. She'd be an asset in coalition talks with the leftwing parties.",
+    "This CDU politician is a luminary on women's issues, going back to the Kohl era - agree with her progressive stance on abortion to recruit her.",
     () => {coalitions.forEach(coalition => { if ([1, 2, 3, 5].includes(coalition.id)) {coalition.weight *= 1.5;}})},
      () =>{coalitions.forEach(coalition => { if ([1, 2, 3, 5].includes(coalition.id)) {coalition.weight *= 1/1.5;}})},
     "locked"
@@ -4548,7 +4548,7 @@ let advisorSpahn = new Advisor(
     9,
     'Jens Spahn',
     "https://i.ibb.co/5v3nYJS/spahn-cropped.jpg",
-    "As the incumbent Minister of Health, he can advice you on all questions surrounding that topic and COVID.",
+    "The incumbent Minister of Health is a big supporter of yours. Who else to advice you on all questions COVID than the man in charge?",
     "",
     () => addAdvisorTooltips([4008, 4009, 4010, 4011, 4043, 4044, 4045, 4046, 4070, 4071, 4072, 4072, 4075], ["I think this could be a bit risky, as the virus generally likes higher temperatures…", "It’s a hard decision, but I think this is the right call.", "Frankly, Mr. Laschet, no one understands this ‘bridge lockdown’ you’re proposing.", "I appreciate that you’re deferring to the Federal government, but it doesn’t hurt to show off your own ideas.", "If we want to appease the people critical of the lockdowns, this is a palatable way to do it.", "Handling Covid in a good way is the key for us to win this race. Aa much as some might hate it, this is the reasonable path forward.", "I don’t think rattling on the prioritization system is a wise choice, considering the vaccine supply right now.", "Mr. Laschet, if you’re turning out to be some Querdenker, you can kiss our arrangement Goodbye.", "I agree, we’re on a good way. But for electoral purposes, you should be a bit more outspoken, perhaps.", "We’ll see if this is doable legally, but it’s certainly bound to be a popular statement.", "Mr. Laschet, if you’re turning out to be some Querdenker, you can kiss our arrangement Goodbye.", "You’re a bit ahead of the curb here, besides, a vaccine mandate might be illegal. Best not say anything this brash.", "That… that lab coat just… doesn’t look good on you, Mr. Laschet. Sorry."], "https://i.ibb.co/5v3nYJS/spahn-cropped.jpg"),
      () => removeAdvisorTooltips([4008, 4009, 4010, 4011, 4043, 4044, 4045, 4046, 4070, 4071, 4072, 4072, 4075], "https://i.ibb.co/5v3nYJS/spahn-cropped.jpg"),
@@ -4559,8 +4559,8 @@ let advisorSeehofer = new Advisor(
     10,
     'Horst Seehofer',
     "https://i.ibb.co/6JgW67r/seehofer-cropped.jpg",
-     'Seehofer is popular in Bavaria and has some advice on how to deal with social topics.',
-    'The current minister of the Interior and former CSU leader is known for his hardline stance on refugees and generally conservative outlook.',
+     'Seehofer still carries weight in Bavaria - and he has some ideas on how to deal with socio-cultural topics.',
+    'The current minister of the Interior and former CSU leader is known for his hardline stance on refugees and and a generally conservative outlook.',
   () => addAdvisorTooltips([4501, 4502, 4503, 4504, 4520, 4521, 4522, 4523, 4524, 4525, 4526, 4527, 4083, 4085, 4105], ["This seems like a good and sensible answer. The entire party can get behind this.", "Hrm, we should be careful about more immigration, but as long as it’s qualified immigrants, I’m not opposed. This will surely dent some resistance from the progressives.", "Mr. Laschet, let me warn you: if we abandon the principle of reason, the AfD will only get stronger. We need to return to our old ways.", "Darn right, that’s what I’m saying! This is how we win back the moderate elements of the AfD. The leftists will recoil, maybe even profit in the polls, but we have to stand by our principles!", "Well, maybe paying lip service to these urban elements pays off there, but if you ask me, this is highly immoral!", "Right on! This is what the CSU has fought for, and will always fight for! A healthy populace.", "Are you mad? Don’t appease those unruly punks!", "This is the right stance to take. That said, maybe we shouldn’t drag this issue to the forefront too much, considering the polls.", "This is too progressive for my liking. We need to protect the rights of the unborn - the CSU will certainly drive a different lane here.", "Excuse me? Has the CDU gone woke? Adenauer, Kohl, Merkel, they’ve all stood for women’s rights without compromising the right to live - I recommend you do the same.", "Good answer. Let’s move on.", "Well spoken, but this might be too controversial, even in your party.", "Mr. Laschet, I keep telling you, we can’t take anymore! I can not accept such a course, and I recommend you listen to my advice.", "This is the truth of the matter. The left will protest, but we have to be realistic.", "It would be a delight for me to have you here in the Free State of Bavaria, Armin!"],"https://i.ibb.co/6JgW67r/seehofer-cropped.jpg"),
      () => removeAdvisorTooltips([4501, 4502, 4503, 4504, 4520, 4521, 4522, 4523, 4524, 4525, 4526, 4527, 4083, 4085, 4105], "https://i.ibb.co/6JgW67r/seehofer-cropped.jpg"),
     "locked"
@@ -4570,8 +4570,8 @@ let advisorGünther = new Advisor(
     11,
     'Daniel Günther',
     "https://i.ibb.co/SrknHR7/g-nther-cropped.jpg",
-    "As he leads a Jamaica Coalition himself, Günther can help when talking to the Greens and FDP - as well as campaign in Schleswig-Holstein",
-    'This CDU Minister-President from Schleswig-Holstein wants you to push the party in a more modern direction.',
+    "As he leads a Jamaica Coalition himself, Günther can help when talking to the Greens and FDP - as well as campaign in the far north.",
+    'This CDU Minister-President from Schleswig-Holstein wants you to push the party in a more modern direction, further towards the center.',
     () => {coalitions.forEach(coalition => { if ([1, 3, 5, 8].includes(coalition.id)) {coalition.weight *= 1.4;}})},
      () =>{coalitions.forEach(coalition => { if ([1, 3, 5, 8].includes(coalition.id)) {coalition.weight *= 1/1.4;}})},
     "locked"
@@ -4581,8 +4581,8 @@ let advisorHaseloff  = new Advisor(
     12,
     'Reiner Haseloff',
        "https://i.ibb.co/CKfTPcs/haseloff-cropped.jpg",
-    "Haseloff's popularity will not only help you in Saxony-Anhalt, his home state, but all of East Germany.",
-    'A very popular East German Minister-President - maybe you can convince him to work for you when you visit him?',
+    "Haseloff's popularity will not only help you in Saxony-Anhalt, his home state, but in all of East Germany.",
+    'A very popular East German Minister-President - maybe paying him a visit can convince him to work directly for you?',
  () => addAdvisorTooltips([4077, 4104, 4600, 4601, 4602, 4603], ["From one Landesvater to another: this is not a bad idea.", "We will prevail against these vengeful populists!", "This may seem counter-intuitive, but for many of these voters, it’s not about ideology per se. They feel cut-off - all that this would accomplish is to give credence to the AfD’s program.", "Well, if you can accomplish these things after the election, it could surely make a dent. For now though? They’ve heard enough empty promises..", "Yes, that’s exactly right. There’s a reason the map looks like it does. The aftereffects of reunification still reverberate in the East, and the AfD profits off of that.","I don’t think we should stoop to the level of the left-wing parties. We need to do something against this party, not antagonize their voters or take them as stupid."],"https://i.ibb.co/CKfTPcs/haseloff-cropped.jpg"),
      () => removeAdvisorTooltips([4077, 4104, 4600, 4601, 4602, 4603], "https://i.ibb.co/CKfTPcs/haseloff-cropped.jpg"),
     "locked"
@@ -4592,8 +4592,8 @@ let advisorChialo = new Advisor(
     13,
     'Joe Chialo',
     "https://i.ibb.co/rvy3PzJ/chialo-cropped.webp",
-    "The CDU is used to bad results in the city states - Chialo wants to help you change that.",
-    "Don't tilt too much to the right with your stances if you want to recruit this CDU politician and music producer.",
+    "The CDU is used to bad results in the city states - as a member of your shadow cabinet and a real 'Berliner', Chialo wants to help you change that.",
+    "Don't tilt too much to the right with your stances if you want to recruit this music producer and CDU politician.",
     () => {},
     () => {},
     "locked"
@@ -4603,8 +4603,8 @@ let advisorMerz = new Advisor(
     14,
     'Friedrich Merz',
     "https://i.ibb.co/P4hnWXb/Merz.jpg",
-    "Whether you need economic advice or help targetting FDP and AfD voters, Merz is your man.",
-    "One of the leading voices of the conservative wing - to get him, show that you share his outlook.",
+    "Whether you need economic advice or help targetting FDP and AfD voters, your former opponent in the leadership race is happy to help you out.",
+    "The leading voice of the conservative wing, and a shadow from the past - show that you are determined not to veer too far left, and he'll help you out.",
     (affectedCandidate1=77, changeAmount1=0.005, affectedCandidate2=303, changeAmount2=-0.003, affectedCandidate3=305, changeAmount3=-0.002) => {{  Object.keys(MerzMap).forEach(key => {
          changeGlobalEffect(affectedCandidate1, parseInt(key), changeAmount1);
          changeGlobalEffect(affectedCandidate2, parseInt(key), changeAmount2);
@@ -4639,7 +4639,7 @@ let advisorMaaßen = new Advisor(
     15,
     'Hans-Georg Maaßen',
     "https://i.ibb.co/F5KkDMt/maa-en-cropped.jpg",
-    "Hiring Maaßen would show the AfD you're serious about working with them, but be controversial with almost everyone else.",
+    "Hiring Maaßen would show the AfD you're serious about working with them, but be careful - this will attract negative headlines.",
     'This very controversial former head of the Federal Office for the Protection of the Constitution advocates for cooperation between the CDU and AfD.',
     () => {coalitions.forEach(coalition => { if ([7, 9].includes(coalition.id)) {coalition.weight *= 2;}})},
      () =>{coalitions.forEach(coalition => { if ([7, 9].includes(coalition.id)) {coalition.weight *= 1/2;}})},
@@ -4650,8 +4650,8 @@ let advisorWüst = new Advisor(
     16,
     'Hendrik Wüst',
     "https://i.ibb.co/DVXFbXG/w-st-cropped.jpg",
-    "Wüst wants to campaign for you in North Rhine-Westphalia and help you with local matters in the state.",
-    "Your protege in North Rhine-Westphalia wants you to not forget the state, despite the national campaign you're running.",
+    "Wüst wants to campaign for you in NRW, whilst helping you with local matters in the state. Perhaps this way you can avoid gaffes in your role as Minister-President.",
+    "Your protegé in North Rhine-Westphalia wants you to not forget about your home state, despite the national campaign you're running.",
  () => {updateWüstHighlight();addAdvisorTooltips([4058, 4059, 4060, 4061, 4062, 4063, 4064, 4065], ["Fast action is the key to alleviating the situation in the affected areas.", "Admitting mistakes is politically inadvisable, most of the time.", "Um, Mr. Laschet… do you remember how we worked to restrict disaster aid just a short time ago? Yeah, that’s coming back to bite us in the arse now.", "Hm, could be a wildcard, but most likely, this will just reorient the debate toward the strength of the Greens.", "Maybe the people want a workaholic as chancellor, but most likely, this is going to hurt. Olaf Scholz is coming either way, seeking to gain.", "The locals in the Ahrtal will appreciate this, but you might seem invisible to the rest of the country.", "Mr. Laschet, let me help you here. You need to pay attention to your demeanor while the President talks, alright? Take the other option.", "This is a splendid idea. Appearing with our head of state could minimize the political damage of this catastrophe."],"https://i.ibb.co/DVXFbXG/w-st-cropped.jpg")},
      () => {updateWüstHighlight();removeAdvisorTooltips([4058, 4059, 4060, 4061, 4062, 4063, 4064, 4065], "https://i.ibb.co/DVXFbXG/w-st-cropped.jpg")},
     "locked"
@@ -4666,8 +4666,8 @@ let advisorSchäuble = new Advisor(
     17,
     'Wolfgang Schäuble',
     "https://i.ibb.co/mymCS4V/sch-uble-cropped.webp",
-    "In his decade-long political career, Schäuble learned how to appear stately - he'll surely has some advice fo you.",
-    "The current president of the Bundestag and former Finance Minister wants you to defend his concept of the 'Black Zero'",
+    "In his decade-long political career, Schäuble has seen, and advised, many a statesman - he'll surely has some advice for you to do the same.",
+    "The current president of the Bundestag and former Finance Minister wants you to defend his concept of the 'Black Zero'.",
     () => {statesman+=3;addAdvisorTooltips([4024], ["Mr. Laschet, I believe you are the right man to lead this country. Let me make a few calls."],"https://i.ibb.co/mymCS4V/sch-uble-cropped.webp")},
      () => {statesman=Math.max(0, statesman-3);removeAdvisorTooltips([4024], "https://i.ibb.co/mymCS4V/sch-uble-cropped.webp")},
     "locked"
@@ -4678,7 +4678,7 @@ let advisorMerkel = new Advisor(
     'Angela Merkel',
     "https://i.ibb.co/Rh1RdGg/merkel-cropped.jpg",
     "While Merkel doesn't have a lot of time to campaign, her popularity will still help you nationwide. She also has some advice on foreign policy.",
-    "To get the current chancellor herself to help you, you should show that you'll defend her legacy.",
+    "To get the current chancellor herself to help you, you prove that you'll defend her legacy.",
     () => {statesman+=1;addAdvisorTooltips([4024, 4035, 4036, 4037, 4038, 4504, 4047, 4048, 4049, 4050, 4082, 4083, 4084, 4085, 4672, 4680, 4688], ["I won’t involve myself, please understand. I’m sure the party presidium is sympathetic to you, though.","I think that this is the right move. This is the only way we can avoid another cold war.", "Eastern Europe will surely concur, except for East Germany, where you’d risk losing support.", "Diplomatic ties are important, but a strong transatlantic alliance just as much so. This wouldn’t be acceptable to me.", "This could shorten the affair, but surely the press would be suspicious of your hedge.", "My policy in 2015 had no alternative. And I believe, most of the country would agree.", "Well, the 2%-goal has been agreed upon by the alliance, but Germany has a special relationship towards its military.", "The Greens have always been questionable about their commitment to our allies. Hitting here seems prudent to me.", "I am thankful for the compliments, but I believe you should chart your own course - at least partially.", "NATO and our relationship with the west are one of the biggest achievements of Konrad Adenauer. Questioning this does not seem like the Christian-Democratic way.", "Well, I have to admit, this certainly isn’t the bright spot of my tenure… but the Biden administration has its part to play here as well, I agree.", "I might sympathize with you privately, but you have to look out for your right flank!", "This mudslinging right now won’t help anyone. Maas stays in office, period.", "Hm, it’s always Seehofer… the center of Germany doesn’t like these dogmatic statements, even though he might not understand that.", "Mr. Laschet, I trust in your abilities… mostly.", "Mr. Laschet, I trust in your abilities… mostly.", "I'm afraid I can't do that, Mr. Laschet."],"https://i.ibb.co/Rh1RdGg/merkel-cropped.jpg")},
     () => {statesman=Math.max(0, statesman-1);removeAdvisorTooltips([4024, 4035, 4036, 4037, 4038, 4504, 4047, 4048, 4049, 4050, 4082, 4083, 4084, 4085, 4672, 4680, 4688], "https://i.ibb.co/Rh1RdGg/merkel-cropped.jpg")},
     "locked"
@@ -4708,7 +4708,7 @@ let advisorsList = [
 
 if (!campaignTrail_temp.staff_mode){
     advisorZiemiak.status = "active";
-    advisorSchäuble.status= "acvtive"
+    advisorSpahn.status= "acvtive"
 }
 
 campaignTrail_temp.answers_json.forEach(answer => {
