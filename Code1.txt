@@ -46,6 +46,7 @@ nct_stuff.themes[nct_stuff.selectedTheme].text_col = "white"
 e.music = {};
 e.music.shuffleEnabled = false;
 e.music.Volume=0.3;
+e.music.loopEnabled = false;
 e.displayTooltips = true;
 e.realisticPolls = true;
 e.staff_mode = true;
@@ -212,6 +213,19 @@ if (!element) {
                     }).map(f => f.children[0])
                 buttons[newSel].click()
             });
+            skipButton.style.width = "50%";
+            var loopButton = document.createElement("button");
+            loopButton.id = "loop-button";
+            loopButton.innerHTML = e.music.loopEnabled ? "<b>Unloop</b>" : "<b>Loop Song</b>";  // Check the initial loop state
+            loopButton.style.width = "50%";  // Match the width with skipButton
+            loopButton.style.margin = "2px";
+            loopButton.addEventListener("click", event => {
+                event.preventDefault();
+                e.music.loopEnabled = !e.music.loopEnabled;
+                let audio = document.getElementById("campaigntrailmusic");
+                audio.loop = e.music.loopEnabled;  // Set the audio's loop property
+                event.target.innerHTML = e.music.loopEnabled ? "<b>Unloop</b>" : "<b>Loop Song</b>";  // Toggle the button text
+            });
             var volumeLabel = document.createElement("gg");
             volumeLabel.id = "volume-label";
             volumeLabel.innerHTML = "<br><b>Volume: </b>"
@@ -231,7 +245,14 @@ if (!element) {
                 pausePlay.innerHTML = "<b>Play</b>";  // Update the pause button text to "Play"
             }
             timeTracker.appendChild(shuffleButton);
-            timeTracker.appendChild(skipButton);
+            var buttonContainer = document.createElement("div");
+            buttonContainer.style.display = "flex"; // Makes children inline
+            buttonContainer.style.justifyContent = "space-between"; // Spreads the children out to fill the container
+
+            buttonContainer.appendChild(skipButton);
+            buttonContainer.appendChild(loopButton);
+
+            timeTracker.appendChild(buttonContainer); // Add the container to timeTracker instead of individual buttons
             timeTracker.appendChild(positionDisplay);
             timeTracker.appendChild(timeSlider);
             timeTracker.appendChild(volumeLabel);
@@ -307,6 +328,9 @@ if (!element) {
             trackIndices = Array.from({length: soundtracks[e.selectedSoundtrack].tracklist.length}, (_, i) => i);
 
             musicBox.children[2].onended = function() {
+                if (e.music.loopEnabled) {
+                    this.play();  // If loop is enabled, simply play the same track again
+                } else {
                 let selected = Number(document.querySelector('input[name="trackSelector"]:checked').value);
                 let newSel;
                 if (e.music.shuffleEnabled) {
@@ -326,6 +350,7 @@ if (!element) {
                         return f.tagName == "LABEL"
                     }).map(f => f.children[0])
                 buttons[newSel].click()
+                }
             }
 
             for (w = 0; w < 7; w++) {
