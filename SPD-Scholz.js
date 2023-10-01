@@ -1151,7 +1151,38 @@ function endingOneBuilder(){
     	image.push("https://i.ibb.co/q5p57xC/image10-cropped.jpg")
 
 	}
-
+else if ( e.final_overall_results[0].electoral_votes>totalSeats/2){
+        if(firstParty.pk===79){
+    	header = "<h2>“Dear viewers, Annalena Baerbock stuns the political establishment - she has won an absolute majority of seats.”</h2>"
+    	text = [`<p> In 2018, people were already shocked by the first poll showing the Greens leading over the two major parties. Some thought it was just a fluke, just like the post-Fukushima-surge in 2011, while others believed a narrow election win was actually possible, bringing change to Germany. Tonight, Baerbock proved <i>all</i> of them wrong. <p> What transpired this night seemed unbelievable to basically every political pundit - some call it a revolution, others a transformation, and certain people, “fraud”. She won an absolute majority, the first since 1957. Never before has a left-wing party achieved a victory like this in the history of the Federal Republic.</p><p> The naysayers might put into question the validity of the victory, but she doesn't' worry about them: It's time to enact her agenda. Switch off all coal and nuclear power stations, electricity grid stability be damned! A tempo limit of 80 km/h on every German Autobahn! Mandatory Veggie-Days, at least twice a week! The future is Green!</p>`];
+    	image.push("https://i.ibb.co/vvsvfnN/image18-cropped.jpg")
+        }
+        if(firstParty.pk===77){
+    	header = "<h2>“Dear viewers, it is true, Armin Laschet has delivered an unprecedented landslide victory, with an absolute majority.”</h2>"
+    	text = [`<p>As the election results pour in, a sense of shock sets in. Not only have you exceeded Merkel's performance, but you have become the first person since Adenauer in the 1950s to win an absolute majority! <i>Armin Laschet wird Kanzler!</i> What a triumph! The question is, has Germany truly embraced Laschetmania, or has <i>Würfelarmin</i> flunked the dice?</p><p> Throughout his career, he has always been underestimated. Merkel never believed he had the potential to succeed her, Söder challenged him in the spring, and half of the party favored him. They gave him disparaging nicknames, they thought of him as a clown, they ridiculed his father's profession as a miner. But now, he has proved them all wrong.</p>`]
+        image.push("https://i.ibb.co/6D2mT5P/image32-cropped.jpg")
+        }
+       if(firstParty.pk===303){
+    	header = "<h2>“FDP ascendant - the Liberals win a majority!”</h2>"
+    	text = [`<p>This is certainly a first. The <i>FDP</i> of all things somehow managed to capture the hearts of all of Germany, cascading a yellow wave across the country. As Christian Lindner took over the reins of government, every single area of Germany was privatized, including this mod. So unfortunately, that’ll be 5.99€ for each playthrough.<br>Sign here to complete your purchase: ___________</p>`];
+    	image.push("https://i.ibb.co/p6Hkn7W/image3.jpg")
+        }
+       if(firstParty.pk===304){
+    	header = "<h2>“Die Linke ascendant - Socialists win a majority!”</h2>"
+    	text = [`<p>The upper class around the country shudders. The leftist party <i>Die Linke</i>, a 2009 merger from the PDS, the successor of the SED; and the WASG, an SPD-splinter, has somehow managed to capture the hearts of the German people, cascading in a revolutionary wave across the country. <br>“Nobody has the intention of building a wall” - this is what Janine Wissler, newly elected chancellor of Germany, proclaimed. Shortly after, every area of the economy was nationalized, as the wealthy got expropriated, their wealth redistributed. Afterwards, a barrier was built around America, to keep them out of sniffing out other countries' affairs, called the “antifascist protection wall”. With the fervor of an internationalist revolution, dozens of communist enclaves around the world rose up, proclaiming the 6th Socialist Internationale.</p>`];
+    	image.push("https://i.ibb.co/kcrcqh5/image2.jpg")
+        }
+        if(firstParty.pk===305){
+    	header = "<h2>“The AfD ascendant - a dark day for Germany.”</h2>"
+    	text = [`<p>„A dictated peace is followed by few blessings, least of all at home. A real national community cannot be based on it. Its first prerequisite is equal law. The government may protect itself against raw excesses of polemics; it may rigorously prevent incitements to acts of violence and acts of violence in and of themselves. This may happen, if it is done toward all sides evenly and impartially, and if one foregoes treating defeated opponents as though they were proscribed. <br>Freedom and life can be taken from us, but not our honor.</p><p>After the persecutions that the Social Democratic Party has suffered recently, no one will reasonably demand or expect that it vote for the Enabling Act proposed here. The elections of March 5 have given the governing parties the majority and thus the possibility of governing in strict adherence to the words and meaning of the constitution. Where such a possibility exists, there is also an obligation to take it. [...]</p><p>Our accomplishments for the reconstruction of the state and the economy, for the liberation of occupied territories, will stand the test of history. We have established equal justice for all and a social labor law. We have helped to create a Germany in which the path to leadership of the state is open not only to princes and barons, but also to men from the working class. You cannot back away from that without relinquishing your own leader. The attempt to turn back the wheel of history will be futile. We Social Democrats know that one cannot undo the facts of power politics with mere legal protests. We see the power-political fact of your present rule. But the people’s sense of justice is also a political power, and we shall not cease to appeal to this sense of justice. </p><p>The Weimar Constitution is not a socialist constitution. But we stand by the principles enshrined in, the principles of a state based on the rule of law, of equal rights, of social justice. In this historic hour, we German Social Democrats solemnly pledge ourselves to the principles of humanity and justice, of freedom and socialism. [...]</p><p>We greet the persecuted and the oppressed. We greet our friends in the Reich. Your steadfastness and loyalty deserve admiration. The courage of your convictions and your unbroken optimism guarantee a brighter future.</p>”Otto Wels “Speech against the Passage of the ‘Enabling Act’” , March 23, 1933`];
+    	image.push("https://i.ibb.co/xf22sXC/image1.jpg")
+        }
+        if(firstParty.pk===306){
+    	header = "<h2>“What the fuck is going on here - Alliance of minor parties win a majority”</h2>"
+    	text = [`<p>Somehow, the political system has received such an upheaval, that an alliance of colourful parties - the liberal-conservative and decentralist Free Voters, the eccentrically progressive Animal Protection Party, the antivax-activist Die Basis, the satire-party Die PARTEI, the isolationist-libertarian Team Todenhöfer, the left-liberal Pirate Party, the pro-european Volt Germany and other small offshoots has won the election. It’s being headed by Stefan Seidler, a candidate by the SSW, the South-Schleswig-Voter’s Association, the party of the danish minority in Germany. </br>No one knows what the future may bring now. Probably an outlaw of the Spacebar, but that’s just my guess.</p>`];
+    	image.push("https://i.ibb.co/5TKY9c6/image4.jpg")
+        }
+	}
 	else{
     	if(playerParty===e.final_overall_results[0]){
 
