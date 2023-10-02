@@ -553,7 +553,7 @@ e.multiple_endings = true;
   	    }
       	e.header="<h2>“The SPD and Rolf Mützenich are the winners of this night”</h2>"
       	e.pages=[`<p>To the surprise of most pundits, Rolf Mützenich has actually won the election for the SPD and now appears to be on track to be elected chancellor. Considering the polling last year, his performance is widely celebrated, and more than a few party members express relief that he was selected over you. Privately, you think that this was just a winnable election, with how much Baerbock and Laschet screwed up, but oh well - you are happy that the SPD won, too!</p>${fate}` ]
-      	addOrReplaceMusic("https://cdn.discordapp.com/attachments/1131296206908301423/1131296696001908776/Sportfreunde_Stiller_-_Auf_der_Guten_Seite.mp3?ex=651bb966&is=651a67e6&hm=05e4311bbc23bbcb4103f6d9c2963c6fbcb4b1d177a5151431908f34945f05c4&")
+      	addOrReplaceMusic("https://cdn.discordapp.com/attachments/1131296206908301423/1158462672094908539/Bruttosozialprodukt.mp3?ex=651c55f0&is=651b0470&hm=ce97f21a1cd999fc80f374e0e81860fd04cc0c6335176183c5e01fecb6dd69d8&")
       	e.image=["https://i.ibb.co/gSnNqXk/image23-cropped.jpg",]
 
       	return construct(0);
@@ -1435,7 +1435,7 @@ else if ( e.final_overall_results[0].electoral_votes>totalSeats/2){
         	image.push("https://i.ibb.co/1Rn3Sb0/kuppel.jpg")
     	}
     	else{
-         	text = [`<p>${playerPerformance}</p><p>${SSW}${LeftPerformance}</p>`]
+         	text = [`<p>${playerPerformance}</p>`]
          	addOrReplaceMusic("https://cdn.discordapp.com/attachments/1131296206908301423/1157989510353797150/Hannes_Wader_Bella_ciao.mp3?ex=651a9d45&is=65194bc5&hm=e15b27e8184766159ef3c2faf95e43457a05840a7858529ea212a7c419c212c9&")
     	}
 	}

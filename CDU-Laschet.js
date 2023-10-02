@@ -343,7 +343,7 @@ loadScript('https://code.highcharts.com/highcharts.js', function() {
       	e.pages=[`<p>Following his victory in the CDU leadership challenge and subsequent triumph over Söder in the vote for the CDU/CSU's chancellor candidate, Merz has once again emerged victorious. He has won the federal election and is expected to form a government. When you see him celebrate on election night, you briefly dream of what could have been, but then again, there's no way to tell if you had won the election. During his nine-month leadership tenure, Merz has steered the CDU in a more conservative direction, and this trend is likely to continue during his chancellorship.</p> ${fate}` ]
 
         e.image="https://i.ibb.co/m9VQ6Lj/image27-cropped.jpg"
-        addOrReplaceMusic("https://cdn.discordapp.com/attachments/1131296206908301423/1157989567073366086/Max_Raabe_Palast_Orchester_-_Ein_Tag_wie_Gold.mp3")
+        addOrReplaceMusic("https://cdn.discordapp.com/attachments/1131296206908301423/1158462721122115625/Sauerland_Original-Version.mp3?ex=651c55fb&is=651b047b&hm=f4da15bea3eb41e8b28c296d1d67aebabe548250e0081b7f5f4674d692753328&")
 
 
 
