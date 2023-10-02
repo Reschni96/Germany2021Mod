@@ -343,7 +343,7 @@ loadScript('https://code.highcharts.com/highcharts.js', function() {
       	e.pages=[`<p>Following his victory in the CDU leadership challenge and subsequent triumph over Söder in the vote for the CDU/CSU's chancellor candidate, Merz has once again emerged victorious. He has won the federal election and is expected to form a government. When you see him celebrate on election night, you briefly dream of what could have been, but then again, there's no way to tell if you had won the election. During his nine-month leadership tenure, Merz has steered the CDU in a more conservative direction, and this trend is likely to continue during his chancellorship.</p> ${fate}` ]
 
         e.image="https://i.ibb.co/m9VQ6Lj/image27-cropped.jpg"
-
+        addOrReplaceMusic("https://cdn.discordapp.com/attachments/1131296206908301423/1157989567073366086/Max_Raabe_Palast_Orchester_-_Ein_Tag_wie_Gold.mp3")
 
 
 
@@ -361,6 +361,7 @@ loadScript('https://code.highcharts.com/highcharts.js', function() {
       	e.header="<h2>“A bitter night for Merz and the CDU/CSU”</h2>"
       	e.pages=[`<p>Following his victory in the CDU leadership challenge and subsequent triumph over Söder in the vote for the CDU/CSU, this is a heavy blow for Friedrich Merz. His campaign had some troubled moments and now his political future is unclear after this defeat. While he may try to form a government, Scholz of the SPD definitely has the initiative.</p>${fate}` ]
       	e.image="https://i.ibb.co/r0yTyjY/image33-cropped.jpg"
+      	addOrReplaceMusic("https://cdn.discordapp.com/attachments/1131296206908301423/1131296585335185520/Marius_Muller-Westernhagen_-_Freiheit.mp3?ex=651bb94c&is=651a67cc&hm=b0ec286d824a4f51b76552fdcdf3c2a249f126f660fa9aa16683ac4299a7856a&")
         	return construct(0);
   	}
   }
@@ -380,6 +381,7 @@ loadScript('https://code.highcharts.com/highcharts.js', function() {
       	e.header="<h2>“The CDU/CSU and Markus Söder are the winners of this night”</h2>"
       	e.pages=[`<p>After he successfully captured the chancellor candidacy, Markus Söder made history by being the first CSU politican to win a federal election. When you see him celebrate on election night, you briefly dream of what could have been, but then again, there's no way to tell if you had won the election. Söder will now try to form a coalition government and become chancellor.</p>${fate}` ]
       	e.image="https://i.ibb.co/5jbR9HT/image21-cropped.jpg"
+      	addOrReplaceMusic("https://cdn.discordapp.com/attachments/1131296206908301423/1157989583569563720/Der_Papa_Wirds_Schon_Richten_-_Peter_Alexander.mp3?ex=651a9d57&is=65194bd7&hm=0c4ad941f3918932a3c89cbdd518cd01f3944451b818fcc702c39ca03ab4752a&")
 
       	return construct(0);
   	}
@@ -396,6 +398,7 @@ loadScript('https://code.highcharts.com/highcharts.js', function() {
       	e.header="<h2>“A bitter night for Söder and the CDU/CSU”</h2>"
       	e.pages=[`<p>After he had become chancellor candidate, Söder had been so certain that he would win this election, and now this! Despite his best efforts, he lost the election, and Olaf Scholz of the SPD is expected to form a government. Söder can always return to Bavaria, where he remains popular, but his federal ambitions seem over.</p>${fate}` ]
       	e.image="https://i.ibb.co/BgtSF3G/image52-cropped.jpg"
+      	addOrReplaceMusic("https://cdn.discordapp.com/attachments/1131296206908301423/1131296585335185520/Marius_Muller-Westernhagen_-_Freiheit.mp3?ex=651bb94c&is=651a67cc&hm=b0ec286d824a4f51b76552fdcdf3c2a249f126f660fa9aa16683ac4299a7856a&")
         	return construct(0);
 
 
@@ -1151,12 +1154,26 @@ function endingOneBuilder(){
         	else if (playerParty.popular_votes/totalPV<0.2){
         	header = "<h2>“Dear viewers, you're seeing this correctly, the CDU/CSU is below 20%. This is by far their worst result in German history.”</h2>"
         	image.push("https://i.ibb.co/zfc7mXJ/image6-cropped.jpg")
+        	         	if(statesman<5){
+            addOrReplaceMusic("https://cdn.discordapp.com/attachments/1131296206908301423/1157989575722025031/Ich_bin_nur_gut_wenn_keiner_guckt.mp3?ex=651a9d55&is=65194bd5&hm=6a1d0d52a503ca3bb3698e8d8e6f80f122205f4593351686fb4c39f05f328ccb&")
+
+        }
+        else{
+            addOrReplaceMusic("https://cdn.discordapp.com/attachments/1131296206908301423/1131296585335185520/Marius_Muller-Westernhagen_-_Freiheit.mp3?ex=651bb94c&is=651a67cc&hm=b0ec286d824a4f51b76552fdcdf3c2a249f126f660fa9aa16683ac4299a7856a&")        }
         	playerPerformance = "Politics is a tough business. Some of the best men may end up in unsalvageable situations, losing their honor just by virtue of being in the wrong place, at the wrong time. And you’re one of them.<br>Already, at 18:00, results show significant losses for your party already. Despite the polls predicting a similar outcome, it's still a blow to the once-proud CDU/CSU. With more than half of the voters lost compared to two elections ago, it’s clear that Armin Laschet does not catch the same sympathy, or exude the same competency, as Angela Merkel. The pressure to resign as party leader is mounting, and you might not have another choice than to acquiesce. The " + firstParty.fields.last_name + " has a clear initiative to form the government, and while you could try to pull them towards the center by participating in a coalition, you don’t really have a lot of bargaining power. On the other hand, maybe some opposition time serves your party well. Markus Söder already calls for a reorientation of the Union, as does Friedrich Merz. Where might this path lead to?"
         	adjustWeights(10);
         	}
         	else {
         	header = "<h2>“Dear viewers, it’s clear now, that this is a bitter night for Armin Laschet, who wanted to achieve a lot more than this.”</h2>"
         	image.push("https://i.ibb.co/5Y12SMX/image24-cropped.jpg")
+        	 if(statesman<5){
+            addOrReplaceMusic("https://cdn.discordapp.com/attachments/1131296206908301423/1157989575722025031/Ich_bin_nur_gut_wenn_keiner_guckt.mp3?ex=651a9d55&is=65194bd5&hm=6a1d0d52a503ca3bb3698e8d8e6f80f122205f4593351686fb4c39f05f328ccb&")
+
+        }
+        else{
+            addOrReplaceMusic("https://cdn.discordapp.com/attachments/1131296206908301423/1131296585335185520/Marius_Muller-Westernhagen_-_Freiheit.mp3?ex=651bb94c&is=651a67cc&hm=b0ec286d824a4f51b76552fdcdf3c2a249f126f660fa9aa16683ac4299a7856a&")
+
+        }
         	playerPerformance = "As the first projections came in at 18:00, you still held onto hope for a better result. What else are you supposed to do? It seems, throughout the campaign, the outside pressure was insurmountable for you. As the election night progressed, it became increasingly clear that your party had suffered a significant defeat, despite your best efforts. The CDU/CSU has lost a considerable amount of votes compared to 2017, and while many MP’s grieve the loss of their seats, the murmurs about a leadership challenge grow louder. The " + firstParty.fields.last_name + " is now in a solid position to form a new government. While it's possible that the coalition talks could fall through, the chances of the CDU/CSU inheriting Merkel’s post after all seem vanishingly thin. You could try to negotiate yourself into the government as a junior partner, or maybe some opposition time serves your party well.  Markus Söder already calls for a renewal of the Union, as does Friedrich Merz. Where might this path lead to?"
         	adjustWeights(5);
         	}
