@@ -172,22 +172,21 @@ e.multiple_endings = true;
       if (e.final_overall_results[0].candidate === 78){
           e.header="<h2>“The SPD and Rolf Mützenich are the winners of this night”</h2>"
           e.pages=[`<p>To the surprise of most pundits, Rolf Mützenich has actually won the election for the SPD and now appears to be on track to be elected chancellor. Considering the polling last year, his performance is widely celebrated, and more than a few party members express relief that he was selected over you. Privately, you think that this was just a winnable election, with how much Baerbock and Laschet screwed up, but oh well - you are happy that the SPD won, too!</p><p> Maybe there will be a spot in Mützenich's cabinet for you, or maybe you will return to the state politics of Hamburg. Either way, it's unlikely you'll reach a role as important as Vice Chancellor again, but wh knows - maybe at some point, the SPD will decide to nominate you after all.</p>` ]
-          e.image=["https://www.bundestag.de/resource/image/225552/3x4/594/792/41c47f0a63894c714cff2ac9fc890afb/2AC076E6C48DE98561C2E0BA18823C1A/kuppel.jpg",]
+          e.image=["https://i.ibb.co/1Rn3Sb0/kuppel.jpg",]
 
           return construct(0);
       }
       else{
           e.header="<h2>“As expected, SPD under Mützenich struggles”</h2>"
           e.pages=[`<p>As was predicted by most pundits, the SPD and Mützenich have lost the election. With the CDU winning yet again, there is little appetite for another Grand coalition, but who knows - four years ago, one was eventually formed from a similar position. Your private feelings are mixed - you are glad that you aren't the face of this defeat, but can't help but wonder if you hadn't been able to win this.</p><p>In any case, the SPD will probably land in the opposition, so your days as Vice Chancellor and Minister are numbered. Perhaps you'll return to Hamburg, perhaps you'll in Berlin as backbencher and financial expert. When the party is looking for candidates again in 2025, your name might be on the list.</p>` ]
-          e.image="https://www.bundestag.de/resource/image/225552/3x4/594/792/41c47f0a63894c714cff2ac9fc890afb/2AC076E6C48DE98561C2E0BA18823C1A/kuppel.jpg"
+          e.image="https://i.ibb.co/1Rn3Sb0/kuppel.jpg"
             return construct(0);
       }
   }
   ending = endingOneBuilder();
   e.header=ending[0];
   e.pages=ending[1];
-  e.image="https://www.bundestag.de/resource/image/225552/3x4/594/792/41c47f0a63894c714cff2ac9fc890afb/2AC076E6C48DE98561C2E0BA18823C1A/kuppel.jpg"
-  console.log(possibleCoalitions)
+  e.image="https://i.ibb.co/1Rn3Sb0/kuppel.jpg"
 
   return construct(0);
   }
@@ -195,7 +194,7 @@ e.multiple_endings = true;
       ending = endingTwoBuilder();
       e.header=ending[0];
       e.pages=ending[1];
-      e.image="https://www.bundestag.de/resource/image/225552/3x4/594/792/41c47f0a63894c714cff2ac9fc890afb/2AC076E6C48DE98561C2E0BA18823C1A/kuppel.jpg"
+      e.image="https://i.ibb.co/1Rn3Sb0/kuppel.jpg"
 
       return construct(0);
   }
@@ -387,7 +386,6 @@ function addCoalitions() {
                   totalWeight += coalition.weight;
                 }
               });
-              console.log(possibleCoalitions)
 
               // Choose a random number between 0 and total weight
               const randomWeight = Math.random() * totalWeight;
@@ -2200,7 +2198,6 @@ function seatCalculator() {
              allVotes.forEach((result, i)   => {
                 totalPopularVote += allVotes[i].popular_votes;
                });
-            console.log(totalPopularVote)
             allVotes.forEach((result, i)   => {
             if (allVotes[i].popular_votes/totalPopularVote < threshold) {
 
@@ -3005,7 +3002,6 @@ function executeWithRetry(fn, ...args) {
       fn(...args);
       return;
     } catch (err) {
-      console.log(err);
       if (retry < maxRetries - 1) {
         setTimeout(() => {}, delayMs);
       }

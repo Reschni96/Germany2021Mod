@@ -168,14 +168,14 @@ e.multiple_endings = true;
       if (e.final_overall_results[0].candidate === 77){
           e.header="<h2>“The CDU/CSU and Armin Laschet are the winners of this night”</h2>"
           e.pages=[`<p>Following his victory in the CDU leadership challenge and subsequent triumph over Söder in the vote for the CDU/CSU's chancellor candidate, Laschet has once again emerged victorious. He has won the federal election and is expected to form a government. When you see him celebrate on election night, you briefly dream of what could have been, but then again, there's no way to tell if you had won the election. During his nine-month leadership tenure, Laschet has steered the CDU in a more moderate direction, and his chancellorship will probably be broadly similar to Merkel's.</p><p>Meanwhile, you entered the Bundestag as a simple MP. Maybe Laschet will want you in his cabinet, but don't get your hopes up. Either way, your chances of ever becoming chancellor appear to be slim.</p>` ]
-          e.image="https://www.bundestag.de/resource/image/225552/3x4/594/792/41c47f0a63894c714cff2ac9fc890afb/2AC076E6C48DE98561C2E0BA18823C1A/kuppel.jpg"
+          e.image="https://i.ibb.co/1Rn3Sb0/kuppel.jpg"
 
           return construct(0);
       }
       else{
           e.header="<h2>“A bitter night for Laschet and the CDU/CSU”</h2>"
           e.pages=[`<p>Following his victory in the CDU leadership challenge and subsequent triumph over Söder in the vote for the CDU/CSU, this is a heavy blow for Armin Laschet. His campaign had some troubled moments and now his political future is unclear after this defeat. While he may try to form a government, Scholz of the SPD definitely has the initiative.</p><p>Meanwhile, you entered the Bundestag as a simple MP. You can bide your time and try to get a role as opposition leader or, if Laschet resigns as party leader, run for leadership again. Maybe you can even become chancellor in 2025.</p>` ]
-          e.image="https://www.bundestag.de/resource/image/225552/3x4/594/792/41c47f0a63894c714cff2ac9fc890afb/2AC076E6C48DE98561C2E0BA18823C1A/kuppel.jpg"
+          e.image="https://i.ibb.co/1Rn3Sb0/kuppel.jpg"
             return construct(0);
       }
   }
@@ -184,14 +184,14 @@ e.multiple_endings = true;
   if (e.final_overall_results[0].candidate === 77){
           e.header="<h2>“The CDU/CSU and Markus Söder are the winners of this night”</h2>"
           e.pages=[`<p>After he successfully captured the chancellor candidacy, Markus Söder made history by being the first CSU politican to win a federal election. When you see him celebrate on election night, you briefly dream of what could have been, but then again, there's no way to tell if you had won the election. Söder will now try to form a coalition government and become chancellor.</p><p>Meanwhile, you entered the Bundestag as a simple MP. Maybe Söder will want you in his cabinet, but don't get your hopes up. Either way, your chances of ever becoming chancellor appear to be slim.</p>` ]
-          e.image="https://www.bundestag.de/resource/image/225552/3x4/594/792/41c47f0a63894c714cff2ac9fc890afb/2AC076E6C48DE98561C2E0BA18823C1A/kuppel.jpg"
+          e.image="https://i.ibb.co/1Rn3Sb0/kuppel.jpg"
 
           return construct(0);
       }
       else{
           e.header="<h2>“A bitter night for Söder and the CDU/CSU”</h2>"
           e.pages=[`<p>After he had become chancellor candidate, Söder had been so certain that he would win this election, and now this! Despite his best efforts, he lost the election, and Olaf Scholz of the SPD is expected to form a government. Söder can always return to Bavaria, where he remains popular, but his federal ambitions seem over.</p><p>You still stayed leader of the CDU through all this, and since Söder is blamed for the defeat, you still have options: For now, you can try to become leader of the opposition or maybe became vice chancellor as a junior partner in a coalition. Perhaps you can become chancellor in 2025, after all.</p>` ]
-          e.image="https://www.bundestag.de/resource/image/225552/3x4/594/792/41c47f0a63894c714cff2ac9fc890afb/2AC076E6C48DE98561C2E0BA18823C1A/kuppel.jpg"
+          e.image="https://i.ibb.co/1Rn3Sb0/kuppel.jpg"
             return construct(0);
       }
   }
@@ -200,7 +200,7 @@ e.multiple_endings = true;
   ending = endingOneBuilder();
   e.header=ending[0];
   e.pages=ending[1];
-  e.image="https://www.bundestag.de/resource/image/225552/3x4/594/792/41c47f0a63894c714cff2ac9fc890afb/2AC076E6C48DE98561C2E0BA18823C1A/kuppel.jpg"
+  e.image="https://i.ibb.co/1Rn3Sb0/kuppel.jpg"
 
   return construct(0);
   }
@@ -208,7 +208,7 @@ e.multiple_endings = true;
       ending = endingTwoBuilder();
       e.header=ending[0];
       e.pages=ending[1];
-      e.image="https://www.bundestag.de/resource/image/225552/3x4/594/792/41c47f0a63894c714cff2ac9fc890afb/2AC076E6C48DE98561C2E0BA18823C1A/kuppel.jpg"
+      e.image="https://i.ibb.co/1Rn3Sb0/kuppel.jpg"
 
       return construct(0);
   }
@@ -1975,7 +1975,7 @@ function seatCalculator() {
              allVotes.forEach((result, i)   => {
                 totalPopularVote += allVotes[i].popular_votes;
                });
-            console.log(totalPopularVote)
+
             allVotes.forEach((result, i)   => {
             if (allVotes[i].popular_votes/totalPopularVote < threshold) {
 
@@ -2361,7 +2361,7 @@ let observerRunning = false;
 
 var element = document.getElementById('controlElement');
 if (!element) {
-	console.log("created");
+
 	let singleObserver = new MutationObserver(handleMutations);
 	singleObserver.observe(document.documentElement, { childList: true, subtree: true });
 	var controlElement = document.createElement('div');
@@ -2652,7 +2652,6 @@ else if (type==="bar"){
     ];
 
         categoriesWithData.sort((a, b) => b.data - a.data);
-        console.log(categoriesWithData)
 
     // Extract "Others" category details
     let others = {
@@ -3145,7 +3144,6 @@ function campaignCharting() {
     chartContainer.style.width = "80%";
     chartContainer.style.float = "left";
 
-    console.log(temp.final_overall_results)
     // Show the seat estimate container and populate it
     seatEstimateContainer.style.display = "inline-block";
     populateSeatEstimate(temp.final_overall_results, campaignTrail_temp.candidate_json);

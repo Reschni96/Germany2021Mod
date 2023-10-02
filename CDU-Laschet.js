@@ -1003,7 +1003,6 @@ function endingOneBuilder(){
     if(spdresult.pvp<0.12){
         ctsAchievement("The Old Dame has passed away")
     }
-    console.log(firstParty)
 
  if (playerParty.electoral_votes>totalSeats/2){
     	header = "<h2>“Dear viewers, it is true, Armin Laschet has delivered an unprecedented landslide victory, with an absolute majority.”</h2>"
@@ -1177,7 +1176,7 @@ function endingOneBuilder(){
 
     	if (!disaster){
         	text = [`<p>${playerPerformance}</p><p>${SSW}${LeftPerformance}</p>`,`<div id="coalitionList"> In the Federal Republic of Germany, the parliamentary multi-party system demands coalition agreements between parties to conjure up workable majority. It’s time to negotiate!<br></div>` ]
-        	image.push("https://www.bundestag.de/resource/image/225552/3x4/594/792/41c47f0a63894c714cff2ac9fc890afb/2AC076E6C48DE98561C2E0BA18823C1A/kuppel.jpg")
+        	image.push("https://i.ibb.co/1Rn3Sb0/kuppel.jpg")
     	}
     	else{
          	text = [`<p>${playerPerformance}</p><p>${SSW}${LeftPerformance}</p>`]

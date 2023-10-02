@@ -1174,7 +1174,7 @@ else if ( e.final_overall_results[0].electoral_votes>totalSeats/2){
 
         if (!disaster){
             text = [`<p>${playerPerformance}${disasterBavaria}</p><p>${SSW}${LeftPerformance}</p>`,`<div id="coalitionList"> In the Federal Republic of Germany, the parliamentary multi-party system demands coalition agreements between parties to conjure up workable majority. It’s time to negotiate!</div>` ]
-            image.push("https://www.bundestag.de/resource/image/225552/3x4/594/792/41c47f0a63894c714cff2ac9fc890afb/2AC076E6C48DE98561C2E0BA18823C1A/kuppel.jpg")
+            image.push("https://i.ibb.co/1Rn3Sb0/kuppel.jpg")
         }
         else{
              text = [`<p>${playerPerformance}${disasterBavaria}</p><p>${SSW}${LeftPerformance}</p>`]
@@ -1613,7 +1613,7 @@ cyoAdventure = function(a) {
         if ([4502, 4503].includes(ans)){
             advisorMüller.unlock()
         }
-        console.log(merkelPoints)
+
         if (merkelPoints>1 && (campaignTrail_temp.player_answers.includes(4106))){
             advisorMerkel.unlock()
         }
@@ -3011,7 +3011,7 @@ function seatCalculator() {
              allVotes.forEach((result, i)   => {
                 totalPopularVote += allVotes[i].popular_votes;
                });
-            console.log(totalPopularVote)
+
             allVotes.forEach((result, i)   => {
             if (allVotes[i].popular_votes/totalPopularVote < threshold) {
 
@@ -5139,7 +5139,6 @@ else if (type==="bar"){
     ];
 
         categoriesWithData.sort((a, b) => b.data - a.data);
-        console.log(categoriesWithData)
 
     // Extract "Others" category details
     let others = {
@@ -5633,7 +5632,6 @@ function campaignCharting() {
     chartContainer.style.width = "80%";
     chartContainer.style.float = "left";
 
-    console.log(temp.final_overall_results)
     // Show the seat estimate container and populate it
     seatEstimateContainer.style.display = "inline-block";
     populateSeatEstimate(temp.final_overall_results, campaignTrail_temp.candidate_json);

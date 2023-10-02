@@ -460,7 +460,7 @@ const construct = (a = 1) => {
   }
 
   let html = headerContent;
-  console.log(e.page)
+
   html += e.pages[e.page] + "<br>";
   if (e.page > 0) {
     html += `<button onclick='endingConstructor(a = -1)'>Back</button>`
@@ -1411,7 +1411,7 @@ else if ( e.final_overall_results[0].electoral_votes>totalSeats/2){
 
     	if (!disaster){
         	text = [`<p>${playerPerformance}</p><p>${SSW}${LeftPerformance}</p>`,`<div id="coalitionList"> In the Federal Republic of Germany, the parliamentary multi-party system demands coalition agreements between parties to conjure up workable majority. It’s time to negotiate!</div>` ]
-        	image.push("https://www.bundestag.de/resource/image/225552/3x4/594/792/41c47f0a63894c714cff2ac9fc890afb/2AC076E6C48DE98561C2E0BA18823C1A/kuppel.jpg")
+        	image.push("https://i.ibb.co/1Rn3Sb0/kuppel.jpg")
     	}
     	else{
          	text = [`<p>${playerPerformance}</p><p>${SSW}${LeftPerformance}</p>`]
@@ -2048,7 +2048,7 @@ if (campaignTrail_temp.question_number === 27) {
 	    }
 	}
 	if(campaignTrail_temp.question_number===2){
-	    console.log(moderate)
+
 	    if (moderate>2){
 	        campaignTrail_temp.questions_json[4]=extraQuestions[7];
 	    }
@@ -3110,7 +3110,7 @@ let result = applyDrift(78, -0.0008 + (dismissalsLeft >= 4 ? 0.0002 : (dismissal
         answerSwapper(4002, 4262, false);
         answerSwapper(4003, 4263, false);
     }
-    if(ans===4000&&campaignTrail_temp.players_answers.includes(4503)){
+    if(ans===4000&&campaignTrail_temp.player_answers.includes(4503)){
         ctsAchievement("Sorry, we didn't code this path")
     }
     if(muetzenich){
@@ -3866,7 +3866,7 @@ function seatCalculator() {
              allVotes.forEach((result, i)   => {
                 totalPopularVote += allVotes[i].popular_votes;
                });
-            console.log(totalPopularVote)
+
             allVotes.forEach((result, i)   => {
             if (allVotes[i].popular_votes/totalPopularVote < threshold) {
 
@@ -5989,7 +5989,6 @@ function Chartbuilder(type) {
     ];
 
         categoriesWithData.sort((a, b) => b.data - a.data);
-        console.log(categoriesWithData)
 
     // Extract "Others" category details
     let others = {
@@ -6481,7 +6480,6 @@ function campaignCharting() {
     chartContainer.style.width = "80%";
     chartContainer.style.float = "left";
 
-    console.log(temp.final_overall_results)
     // Show the seat estimate container and populate it
     seatEstimateContainer.style.display = "inline-block";
     populateSeatEstimate(temp.final_overall_results, campaignTrail_temp.candidate_json);
