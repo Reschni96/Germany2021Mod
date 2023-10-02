@@ -1008,37 +1008,43 @@ function endingOneBuilder(){
     	header = "<h2>“Dear viewers, it is true, Armin Laschet has delivered an unprecedented landslide victory, with an absolute majority.”</h2>"
     	text = [`<p>As the election results pour in, a sense of shock sets in. Not only have you exceeded Merkel's performance, but you have become the first person since Adenauer in the 1950s to win an absolute majority! <i>Armin Laschet wird Kanzler!</i> What a triumph! The question is, has Germany truly embraced Laschetmania, or has <i>Würfelarmin</i> flunked the dice?</p><p> Throughout your career, you have always been underestimated. Merkel never believed you had the potential to succeed her, Söder challenged you in the spring, and half of your party favored him over you. They gave you disparaging nicknames, they thought you as a clown, they ridiculed your father's profession as a miner. But now, you have proved them all wrong.</p><p>Your historic victory may have been achieved by unconventional means, but nobody will ever find out. With one last button press, one last press of the spacebar, all the evidence is gone.</p>`]
         image.push("https://i.ibb.co/6D2mT5P/image32-cropped.jpg")
+        addOrReplaceMusic("https://cdn.discordapp.com/attachments/1131296206908301423/1131296438463254548/Fabian_Merks_-_Armin_Laschet_wird_Kanzler_-_Party-Remix.mp3?ex=651bb929&is=651a67a9&hm=707d5d6a2e7e7dcaca689f6d856eb16e45461d92c28dfd035d2f9c70c2afa456&", true)
 	}
 	 else if ( e.final_overall_results[0].electoral_votes>totalSeats/2){
     	if(firstParty.pk===78){
     	header = "<h2>“Dear viewers, the unbelievable has happened - the SPD under Olaf Scholz has won an absolute majority of seats.”</h2>"
     	text = [`<p>What the hell did Olaf do? He has done what even Brandt couldn’t accomplish - he's' won an absolute majority of seats! After the dire state the party was in just a year ago, this is the most astonishing political development Germany has seen since reunification.</p><p> He's' not a stranger to absolute majorities, winning one yourself in Hamburg in 2011 - so I guess you already know how this is gonna go. Time for him to pump up the minimum wage to 20€, empower unions to take over the economy, renationalize healthcare, bleed the Bundeswehr dry, oh; and of course, no exit from coal. These workers have to be protected after all. Alternatively, he could of course do nothing like that; instead; he could just contradict his entire program as some might be used to it. With such a mandate, I’m sure no one would mind. </p><p>Some are suspicious at the size of his victory - has the Social Democratic machine flunked the results? Has he used his corrupt contacts inside the financial world to weave the strands of democracy to his liking? Well, should the opposition seek to investigate him, he'll just say he doesn't remember anything. Everything else will sort itself out on its own. Just like it did on election night.</p>`]
-    	image.push("https://i.ibb.co/q5p57xC/image10-cropped.jpg")
+    	addOrReplaceMusic("https://cdn.discordapp.com/attachments/1131296206908301423/1131296719661961257/Terry_Gilkyson__Edgar_Ott_-_Probiers_mal_mit_Gemutlichkeit.mp3?ex=651bb96c&is=651a67ec&hm=8a69262a399dff7988d926cb0052905e1230795d0f335bc3dc10c885d33efbed&")
         }
         if(firstParty.pk===79){
     	header = "<h2>“Dear viewers, Annalena Baerbock stuns the political establishment - she has won an absolute majority of seats.”</h2>"
     	text = [`<p> In 2018, people were already shocked by the first poll showing the Greens leading over the two major parties. Some thought it was just a fluke, just like the post-Fukushima-surge in 2011, while others believed a narrow election win was actually possible, bringing change to Germany. Tonight, Baerbock proved <i>all</i> of them wrong. <p> What transpired this night seemed unbelievable to basically every political pundit - some call it a revolution, others a transformation, and certain people, “fraud”. She won an absolute majority, the first since 1957. Never before has a left-wing party achieved a victory like this in the history of the Federal Republic.</p><p> The naysayers might put into question the validity of the victory, but she doesn't' worry about them: It's time to enact her agenda. Switch off all coal and nuclear power stations, electricity grid stability be damned! A tempo limit of 80 km/h on every German Autobahn! Mandatory Veggie-Days, at least twice a week! The future is Green!</p>`];
+    	addOrReplaceMusic("https://cdn.discordapp.com/attachments/1131296206908301423/1131296537377521754/Karel_Gott_-_Die_Biene_Maja.mp3?ex=651bb940&is=651a67c0&hm=b9034e26b051266bdaa97aa09a0d98b591ff6b8b98d6cc4447da17921fe5cc5c&")
     	image.push("https://i.ibb.co/vvsvfnN/image18-cropped.jpg")
         }
        if(firstParty.pk===303){
     	header = "<h2>“FDP ascendant - the Liberals win a majority!”</h2>"
     	text = [`<p>This is certainly a first. The <i>FDP</i> of all things somehow managed to capture the hearts of all of Germany, cascading a yellow wave across the country. As Christian Lindner took over the reins of government, every single area of Germany was privatized, including this mod. So unfortunately, that’ll be 5.99€ for each playthrough.<br>Sign here to complete your purchase: ___________</p>`];
+    	addOrReplaceMusic("https://cdn.discordapp.com/attachments/1131296206908301423/1131296600258531328/MBSounds_-_EVE_OF_RISE.mp3?ex=651bb94f&is=651a67cf&hm=228c9807b26c9fc73ab1fe950695fdf5ef9d5d6239845d58916c26886bfe0072&")
     	image.push("https://i.ibb.co/p6Hkn7W/image3.jpg")
         }
        if(firstParty.pk===304){
     	header = "<h2>“Die Linke ascendant - Socialists win a majority!”</h2>"
     	text = [`<p>The upper class around the country shudders. The leftist party <i>Die Linke</i>, a 2009 merger from the PDS, the successor of the SED; and the WASG, an SPD-splinter, has somehow managed to capture the hearts of the German people, cascading in a revolutionary wave across the country. <br>“Nobody has the intention of building a wall” - this is what Janine Wissler, newly elected chancellor of Germany, proclaimed. Shortly after, every area of the economy was nationalized, as the wealthy got expropriated, their wealth redistributed. Afterwards, a barrier was built around America, to keep them out of sniffing out other countries' affairs, called the “antifascist protection wall”. With the fervor of an internationalist revolution, dozens of communist enclaves around the world rose up, proclaiming the 6th Socialist Internationale.</p>`];
     	image.push("https://i.ibb.co/kcrcqh5/image2.jpg")
+    	addOrReplaceMusic("https://cdn.discordapp.com/attachments/1131296206908301423/1131296360575016980/Auferstanden_Aus_Ruinen_-_Ayden_George_Remix.mp3?ex=651bb916&is=651a6796&hm=086536fba018ee40f50848050c7cd88faf3085eea6ece0b2aaf15eca4940b72e&")
         }
         if(firstParty.pk===305){
     	header = "<h2>“The AfD ascendant - a dark day for Germany.”</h2>"
     	text = [`<p>„A dictated peace is followed by few blessings, least of all at home. A real national community cannot be based on it. Its first prerequisite is equal law. The government may protect itself against raw excesses of polemics; it may rigorously prevent incitements to acts of violence and acts of violence in and of themselves. This may happen, if it is done toward all sides evenly and impartially, and if one foregoes treating defeated opponents as though they were proscribed. <br>Freedom and life can be taken from us, but not our honor.</p><p>After the persecutions that the Social Democratic Party has suffered recently, no one will reasonably demand or expect that it vote for the Enabling Act proposed here. The elections of March 5 have given the governing parties the majority and thus the possibility of governing in strict adherence to the words and meaning of the constitution. Where such a possibility exists, there is also an obligation to take it. [...]</p><p>Our accomplishments for the reconstruction of the state and the economy, for the liberation of occupied territories, will stand the test of history. We have established equal justice for all and a social labor law. We have helped to create a Germany in which the path to leadership of the state is open not only to princes and barons, but also to men from the working class. You cannot back away from that without relinquishing your own leader. The attempt to turn back the wheel of history will be futile. We Social Democrats know that one cannot undo the facts of power politics with mere legal protests. We see the power-political fact of your present rule. But the people’s sense of justice is also a political power, and we shall not cease to appeal to this sense of justice. </p><p>The Weimar Constitution is not a socialist constitution. But we stand by the principles enshrined in, the principles of a state based on the rule of law, of equal rights, of social justice. In this historic hour, we German Social Democrats solemnly pledge ourselves to the principles of humanity and justice, of freedom and socialism. [...]</p><p>We greet the persecuted and the oppressed. We greet our friends in the Reich. Your steadfastness and loyalty deserve admiration. The courage of your convictions and your unbroken optimism guarantee a brighter future.</p>”Otto Wels “Speech against the Passage of the ‘Enabling Act’” , March 23, 1933`];
     	image.push("https://i.ibb.co/xf22sXC/image1.jpg")
+    	addOrReplaceMusic("https://cdn.discordapp.com/attachments/1131296206908301423/1131296642721652917/Otto_Wels_SPD_-_Speech_to_justify_voting_against_the_Ermachtigunsgesetz.mp3?ex=651bb95a&is=651a67da&hm=0c2e4d40a6035916056f3dc69c4459ea829aaf103165dc07c7736cbd8c35f1e1&")
         }
         if(firstParty.pk===306){
     	header = "<h2>“What the fuck is going on here - Alliance of minor parties win a majority”</h2>"
     	text = [`<p>Somehow, the political system has received such an upheaval, that an alliance of colourful parties - the liberal-conservative and decentralist Free Voters, the eccentrically progressive Animal Protection Party, the antivax-activist Die Basis, the satire-party Die PARTEI, the isolationist-libertarian Team Todenhöfer, the left-liberal Pirate Party, the pro-european Volt Germany and other small offshoots has won the election. It’s being headed by Stefan Seidler, a candidate by the SSW, the South-Schleswig-Voter’s Association, the party of the danish minority in Germany. </br>No one knows what the future may bring now. Probably an outlaw of the Spacebar, but that’s just my guess.</p>`];
     	image.push("https://i.ibb.co/5TKY9c6/image4.jpg")
+    	addOrReplaceMusic("https://cdn.discordapp.com/attachments/1131296206908301423/1157989645829808178/Alles_neu.mp3?ex=651a9d65&is=65194be5&hm=98e57979797b327076d9a62b078ab70bad6f1ddd5c4ab2f1df127f066a2ea744&")
         }
 	}
 	else{
@@ -1058,6 +1064,7 @@ function endingOneBuilder(){
         	header = "<h2>“Dear viewers, we can project that the Union under Armin Laschet is ahead by comfortable margins - it seems, the Era Merkel continues.”</h2>"
         	playerPerformance = "By 6:00 pm, the early projections already indicate that you are in a comfortable lead. As the night progresses, it becomes increasingly clear that you have emerged as the winner of the election, quite uncontroversially. The Union’s polling surge after Covid never really went away it seems. Given that Merkel has been in power for 16 years, many had anticipated a greater desire for change among the electorate - but her approval rating has turned into votes for Germany’s governing party, it seems. This victory not only reinforces your status as the leader of your party, but also gives you a clear mandate to lead them into a good position in the coalition talks. After all, it is evident that the German people favor you as their chancellor. Surely, your father, a lowly miner from Aachen, would be insanely proud to see his son become leader of the biggest national economy in Europe. Glückauf!"
          	adjustWeights(20);
+         	addOrReplaceMusic("https://cdn.discordapp.com/attachments/1131296206908301423/1131296438463254548/Fabian_Merks_-_Armin_Laschet_wird_Kanzler_-_Party-Remix.mp3?ex=651bb929&is=651a67a9&hm=707d5d6a2e7e7dcaca689f6d856eb16e45461d92c28dfd035d2f9c70c2afa456&", true)
         	}
         	else if (playerParty.electoral_votes == e.final_overall_results[1].electoral_votes){
             image.push("https://i.ibb.co/X21MLRn/image44-cropped.jpg")
@@ -1104,6 +1111,13 @@ function endingOneBuilder(){
          	image.push("https://i.ibb.co/b650wS7/image53-cropped.jpg")
         	playerPerformance = "People always hope. It’s what they do. Your hope has not been misplaced - despite some difficulties, you maintained a solid lead throughout the election night and ultimately emerged as the winner. There is some discontent over the number of votes you've lost compared to the previous election, but nonetheless, your party is fired up about yet another victory: you’re in a good position to inherit Angela Merkel’s position as chancellor of Germany! Let’s not be too hasty though - you have the people’s mandate on your side, but you do still need to form a government. It’s time to form a coalition - hopefully one with a workable majority."
          	adjustWeights(6);
+        if(statesman>14){
+            addOrReplaceMusic("https://cdn.discordapp.com/attachments/1131296206908301423/1157989567073366086/Max_Raabe_Palast_Orchester_-_Ein_Tag_wie_Gold.mp3")
+        }
+        else{
+            addOrReplaceMusic("https://cdn.discordapp.com/attachments/1131296206908301423/1131296524379373681/Hildegard_Knef_-_Berlin_Dein_Gesicht_hat_Sommersprossen.mp3?ex=6517c4bd&is=6516733d&hm=df76afdb1675a96ce988700e5b8f2715e4c623d55db11998b0478b37792115f3&")
+
+        }
         	}
     	}
     	else if(playerParty===e.final_overall_results[1]){
@@ -1180,6 +1194,14 @@ function endingOneBuilder(){
     	}
     	else{
          	text = [`<p>${playerPerformance}</p><p>${SSW}${LeftPerformance}</p>`]
+         	if(statesman<5){
+            addOrReplaceMusic("https://cdn.discordapp.com/attachments/1131296206908301423/1157989575722025031/Ich_bin_nur_gut_wenn_keiner_guckt.mp3?ex=651a9d55&is=65194bd5&hm=6a1d0d52a503ca3bb3698e8d8e6f80f122205f4593351686fb4c39f05f328ccb&")
+
+        }
+        else{
+            addOrReplaceMusic("https://cdn.discordapp.com/attachments/1131296206908301423/1131296585335185520/Marius_Muller-Westernhagen_-_Freiheit.mp3?ex=651bb94c&is=651a67cc&hm=b0ec286d824a4f51b76552fdcdf3c2a249f126f660fa9aa16683ac4299a7856a&")
+
+        }
     	}
 	}
 
@@ -1205,7 +1227,7 @@ function endingTwoBuilder(){
 
     if(playerLeader===coalitionLeader){
         if(statesman>14){
-            addOrReplaceMusic("https://cdn.discordapp.com/attachments/1131296206908301423/1131296524379373681/Hildegard_Knef_-_Berlin_Dein_Gesicht_hat_Sommersprossen.mp3?ex=6517c4bd&is=6516733d&hm=df76afdb1675a96ce988700e5b8f2715e4c623d55db11998b0478b37792115f3&")
+            addOrReplaceMusic("https://cdn.discordapp.com/attachments/1131296206908301423/1157989567073366086/Max_Raabe_Palast_Orchester_-_Ein_Tag_wie_Gold.mp3")
         }
         else{
             addOrReplaceMusic("https://cdn.discordapp.com/attachments/1131296206908301423/1131296524379373681/Hildegard_Knef_-_Berlin_Dein_Gesicht_hat_Sommersprossen.mp3?ex=6517c4bd&is=6516733d&hm=df76afdb1675a96ce988700e5b8f2715e4c623d55db11998b0478b37792115f3&")
@@ -1214,11 +1236,11 @@ function endingTwoBuilder(){
     }
     else {
         if(statesman<5){
-            addOrReplaceMusic("https://cdn.discordapp.com/attachments/1131296206908301423/1131296524379373681/Hildegard_Knef_-_Berlin_Dein_Gesicht_hat_Sommersprossen.mp3?ex=6517c4bd&is=6516733d&hm=df76afdb1675a96ce988700e5b8f2715e4c623d55db11998b0478b37792115f3&")
+            addOrReplaceMusic("https://cdn.discordapp.com/attachments/1131296206908301423/1157989575722025031/Ich_bin_nur_gut_wenn_keiner_guckt.mp3?ex=651a9d55&is=65194bd5&hm=6a1d0d52a503ca3bb3698e8d8e6f80f122205f4593351686fb4c39f05f328ccb&", true)
 
         }
         else{
-            addOrReplaceMusic("https://cdn.discordapp.com/attachments/1131296206908301423/1131296585335185520/Marius_Muller-Westernhagen_-_Freiheit.mp3?ex=6517c4cc&is=6516734c&hm=d0cdb7b76cbdf46e4efc7881a7eefe161468ba7d5af684a810a08c5c17a36916&")
+            addOrReplaceMusic("https://cdn.discordapp.com/attachments/1131296206908301423/1131296585335185520/Marius_Muller-Westernhagen_-_Freiheit.mp3?ex=651bb94c&is=651a67cc&hm=b0ec286d824a4f51b76552fdcdf3c2a249f126f660fa9aa16683ac4299a7856a&", true)
 
         }
 
@@ -1330,7 +1352,7 @@ function endingTwoBuilder(){
       	case 7:
         	contestedText="";
         	negotiations="";
-             addOrReplaceMusic("https://cdn.discordapp.com/attachments/1131296206908301423/1131296585335185520/Marius_Muller-Westernhagen_-_Freiheit.mp3?ex=6517c4cc&is=6516734c&hm=d0cdb7b76cbdf46e4efc7881a7eefe161468ba7d5af684a810a08c5c17a36916&", true)
+             addOrReplaceMusic("https://cdn.discordapp.com/attachments/1131296206908301423/1157989608219488276/Danger_Dan_-_Das_ist_alles_von_der_Kunstfreiheit_gedeckt_Antilopen_Gang.mp3?ex=651a9d5d&is=65194bdd&hm=7016a2ad7d178e1a473489adf627e748ae02559e892347f98c8b6908becde213&", true)
         	var majority = selectedCoalition.parties.reduce((sum, partyId) => sum + e.final_overall_results.find(p => p.candidate === partyId).electoral_votes, 0);
 
         	if(majority-totalSeats/2 < 35){
@@ -5861,13 +5883,18 @@ function ctsAchievement(achievement, difficultyChecker = true){
         }
     }
 
-let finalTrackSet = false;
+let finalTrackSet = false; // This seems to be missing from your provided code, so I'm assuming it's defined somewhere in your global scope.
 
 function addOrReplaceMusic(link, final = false) {
     const existingAudio = document.getElementById('campaignTrailMusic');
 
     // If a final track has been set, and the new track is not final, return without any action
     if (finalTrackSet && !final) {
+        return;
+    }
+
+    // If the song that would be added is identical to the one currently playing, return without any action
+    if (existingAudio && existingAudio.src === link) {
         return;
     }
 
@@ -5882,6 +5909,7 @@ function addOrReplaceMusic(link, final = false) {
     audio.src = link;
     audio.volume = campaignTrail_temp.music.Volume;
     audio.autoplay = true;
+    audio.loop = true; // Make the song loop
 
     // Append it to the body (or to any specific container you prefer)
     document.body.appendChild(audio);

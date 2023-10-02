@@ -6666,13 +6666,18 @@ function ctsAchievement(achievement, difficultyChecker = true){
         }
     }
 
-let finalTrackSet = false;
+let finalTrackSet = false; // This seems to be missing from your provided code, so I'm assuming it's defined somewhere in your global scope.
 
 function addOrReplaceMusic(link, final = false) {
     const existingAudio = document.getElementById('campaignTrailMusic');
 
     // If a final track has been set, and the new track is not final, return without any action
     if (finalTrackSet && !final) {
+        return;
+    }
+
+    // If the song that would be added is identical to the one currently playing, return without any action
+    if (existingAudio && existingAudio.src === link) {
         return;
     }
 
@@ -6687,6 +6692,7 @@ function addOrReplaceMusic(link, final = false) {
     audio.src = link;
     audio.volume = campaignTrail_temp.music.Volume;
     audio.autoplay = true;
+    audio.loop = true; // Make the song loop
 
     // Append it to the body (or to any specific container you prefer)
     document.body.appendChild(audio);
@@ -6695,3 +6701,4 @@ function addOrReplaceMusic(link, final = false) {
         finalTrackSet = true;
     }
 }
+
