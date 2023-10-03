@@ -219,7 +219,7 @@ const opportunismMap = {
         4063: 4,
         4064: 3,
         4065: 2,
-        4066: 1,
+        4066: -1,
         4067: -1,
         4068: 2,
         4072: 1,
@@ -1106,7 +1106,7 @@ else if ( e.final_overall_results[0].electoral_votes>totalSeats/2){
             else{
              header = "<h2>“Dear viewers,we can now project that the CDU/CSU under Markus Söder has seemingly won this election.”</h2>"
              image.push("https://i.ibb.co/Lz1wPgM/image5-cropped.jpg")
-            playerPerformance = "Despite the polls tightening at several points, you’ve fought with grid and determination. It was a bit touch and go - but despite these difficulties, you maintained a solid lead throughout the election night and ultimately emerged as the winner. There is some discontent over the number of votes you've lost compared to the previous election, but, as they say: “des is ghupft wia gsprunga”! Finally, the CSU is ready to take over the reigns of power. Be careful though: you have the people’s mandate on your side, but you do still need to form a government. It’s time to form a coalition - hopefully one with a workable majority"
+            playerPerformance = "Despite the polls tightening at several points, you’ve fought with grit and determination. It was a bit touch and go - but despite these difficulties, you maintained a solid lead throughout the election night and ultimately emerged as the winner. There is some discontent over the number of votes you've lost compared to the previous election, but, as they say: “des is ghupft wia gsprunga”! Finally, the CSU is ready to take over the reigns of power. Be careful though: you have the people’s mandate on your side, but you do still need to form a government. It’s time to form a coalition - hopefully one with a workable majority"
             addOrReplaceMusic("https://cdn.discordapp.com/attachments/1131296206908301423/1157989583569563720/Der_Papa_Wirds_Schon_Richten_-_Peter_Alexander.mp3?ex=651a9d57&is=65194bd7&hm=0c4ad941f3918932a3c89cbdd518cd01f3944451b818fcc702c39ca03ab4752a&")
              adjustWeights(6);
             }
@@ -1522,7 +1522,7 @@ var polling = [];
 var prepolling = [];
 for (let i = 0; i < 7; i++) {
   polling.push([]);
-  prepolling.push(simulateMA(33,5));
+  prepolling.push(simulateMA(35,5));
 }
 var errorDegree = 1;
 var factorPolls=1;
@@ -1872,7 +1872,7 @@ cyoAdventure = function(a) {
         changeGlobalEffect(303,4066, 0.01)
     }
     if (ans===4066 && campaignTrail_temp.player_answers.includes(4505)&& campaignTrail_temp.player_answers.includes(4042)){
-        opportunism-=4;
+        opportunism += -3;
     }
 
 
