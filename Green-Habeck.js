@@ -3863,7 +3863,7 @@ function showAdvisors() {
             descriptionContainer.style.height = '8em'
             if (window.innerWidth <= 768) {
                 descriptionContainer.style.padding = '0.2em'
-                descriptionContainer.style.height = '12em'
+                descriptionContainer.style.height = '15em'
             }
             descriptionContainer.style.width = '170px'
             descriptionContainer.appendChild(description);
