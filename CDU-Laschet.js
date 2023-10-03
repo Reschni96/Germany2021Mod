@@ -314,6 +314,11 @@ loadScript('https://code.highcharts.com/highcharts.js', function() {
   if (!e.initDC) {
     e.initDC = true
 
+    if(typeof cheatsActive !== 'undefined'){
+        if(cheatsActive){
+            ctsAchievement("Würfelarmin")
+        }
+    }
     //adjustment magic to guarantee the correct ranking
     adjustSeatAllocation(campaignTrail_temp, missedCandidates);
 
