@@ -1748,7 +1748,7 @@ function endingTwoBuilder(){
         	ctsAchievement("Novelty", false)
         	image.push("https://i.ibb.co/y4zp8fr/image14-cropped.jpg")
         	$("#game_window")[0].style.backgroundImage = "url(https://i.ibb.co/Dr7BqZm/Rot-Gelbback.png)";
-        	coalitionText = "How did this happen? In a development absolutely no one has predicted, the SPD and FDP have formed the first social-liberal government on a federal level since the early 1982. Evoking the spirits of Brandt and Scheel, of Schmidt and Genscher, you’ve managed to forge a surprisingly progressive coalition agreement, although with quite a lot of concessions on economic matters. The first two German chancellors loom above you - the last such coalition ended with a betrayal by the FDP, after all. The Greens are sure to grill your left wing on its environmental plans, while the CDU is ready to take on the Liberals. If you can draw the FDP leftwards, perhaps this time, <i>Scholz I</i> can <i>Dare More Democracy</i>."
+        	coalitionText = "How did this happen? In a development absolutely no one has predicted, the SPD and FDP have formed the first social-liberal government on a federal level since the early 1982. Evoking the spirits of Brandt and Scheel, of Schmidt and Genscher, you’ve managed to forge a surprisingly progressive coalition agreement, although with quite a lot of concessions on economic matters. The first two German SPD chancellors loom above you - the last such coalition ended with a betrayal by the FDP, after all. The Greens are sure to grill your left wing on its environmental plans, while the CDU is ready to take on the Liberals. If you can draw the FDP leftwards, perhaps this time, <i>Scholz I</i> can <i>Dare More Democracy</i>."
           	playerFate=chancellorFateHappy;
           	break;
 
@@ -1767,7 +1767,7 @@ function endingTwoBuilder(){
             	secondPage = true;
             	if(majority-totalSeats/2 < 5){
                 	image.push("https://i.ibb.co/zbH4qMN/image22-cropped.jpg")
-                	secondPageText = "After days of balloting and many more attempts, it becomes clear to everyone: it’s not going to happen. There just isn't going to be a majority for you. The party leaders Esken and Walther-Borjans intervene and, with the backing of the parliamentary group, declares that the SPD will move forward without you - you are damaged goods. It's unclear what happens now - It's unclear what happens now - a coalition under a new SPD leadership, another party winning the chancellorship or a snap election all seem like possibilities. No matter what, your political career has taken a serious hit. It seems you will make history as the man who flew too close to the sun, crashing down after an unexpected high. Sorry, Olaf."
+                	secondPageText = "After days of balloting and many more attempts, it becomes clear to everyone: it’s not going to happen. There just isn't going to be a majority for you. The party leaders Esken and Walther-Borjans intervene and, with the backing of the parliamentary group, declares that the SPD will move forward without you - you are damaged goods. It's unclear what happens now - a coalition under a new SPD leadership, another party winning the chancellorship or a snap election all seem like possibilities. No matter what, your political career has taken a serious hit. It seems you will make history as the man who flew too close to the sun, crashing down after an unexpected high. Sorry, Olaf."
                 	}
             	else{
             	ctsAchievement("Leftist Unity")
@@ -4356,7 +4356,7 @@ function openHeadquarter() {
     rightCol.style.width = '30%';
     hqDiv.appendChild(rightCol);
 
-    if (window.innerWidth <= 768) {
+    if (window.screen.width <= 768) {
         hqDiv.style.flexDirection = 'column';
         hqDiv.style.height = 'auto';
         leftCol.style.width = '100%';
@@ -4558,7 +4558,7 @@ advisorsList.forEach(advisor => {
         name.style.maxWidth = '115px';
         name.style.height = '32px';
 
-        if (window.innerWidth <= 768) {
+        if (window.screen.width <= 768) {
             name.style.height = '64px';
         }
         imgContainer.appendChild(name);
@@ -4615,7 +4615,7 @@ advisorsList.forEach(advisor => {
         name.style.overflowWrap = 'break-word'; // Breaks the word if necessary
         name.style.maxWidth = '115px';
         name.style.height = '32px';
-        if (window.innerWidth <= 768) {
+        if (window.screen.width <= 768) {
 
                 name.style.height = '64px';
             }
@@ -4883,7 +4883,7 @@ advisorsList.forEach(advisor => {
         overlay.remove();
         questions.style.display = '';
     };
-    if (window.innerWidth <= 768) {
+    if (window.screen.width <= 768) {
     rightCol.appendChild(backButton); // Attach to right column for small screens
     } else {
         middleCol.appendChild(backButton); // Attach to middle column for larger screens
@@ -4925,7 +4925,7 @@ advisorsList.forEach(advisor => {
             hqRect = hqDiv.getBoundingClientRect();
             explanationBox.style.left = (rect.left - hqRect.left - (12.5 * 14)) + 'px';
             explanationBox.style.top = (rect.top - hqRect.top - (7 * 14) - rect.height) + 'px';
-            if (window.innerWidth <= 768) {
+            if (window.screen.width <= 768) {
                 explanationBox.style.left = (rect.left - hqRect.left - (18 * 14)) + 'px';
                 explanationBox.style.top = (rect.top - hqRect.top - (13 * 14) - rect.height) + 'px';
             }
@@ -4953,7 +4953,7 @@ advisorsList.forEach(advisor => {
         }
     };
 
-    if (window.innerWidth <= 768) {
+    if (window.screen.width <= 768) {
     rightCol.appendChild(tutorialButton); // Attach to right column for small screens
     } else {
         middleCol.appendChild(tutorialButton); // Attach to middle column for larger screens
@@ -4991,7 +4991,7 @@ advisorsList.forEach(advisor => {
                 pollingDiv.style.zIndex = 1001;
                 explanationBox.style.left = (rect1.right - hqRect.left + (2 * 14)) + 'px';
                 explanationBox.style.top = (rect1.top - hqRect.top + (4 * 14)) + 'px';
-                if (window.innerWidth <= 768) {
+                if (window.screen.width <= 768) {
                     explanationBox.style.left = (rect.left - hqRect.left - (18 * 14)) + 'px';
                     explanationBox.style.top = (rect1.top - hqRect.top + (36 * 14)) + 'px';
                 }
@@ -5007,7 +5007,7 @@ advisorsList.forEach(advisor => {
                 likeabilityDescDiv.style.zIndex = 1001;
                 explanationBox.style.left = (rect2.left - hqRect.left - (33 * 14)) + 'px';
                 explanationBox.style.top = (rect2.top - hqRect.top - (2 * 14)) + 'px';
-                if (window.innerWidth <= 768) {
+                if (window.screen.width <= 768) {
                     explanationBox.style.left = (rect.left - hqRect.left - (18 * 14)) + 'px';
                     explanationBox.style.top = (rect2.top - hqRect.top - (28 * 14)) + 'px';
                 }
@@ -5028,7 +5028,7 @@ advisorsList.forEach(advisor => {
                 likeabilityDescDiv.style.zIndex = '';
                 explanationBox.style.left = (rect3.right - hqRect.left + (2 * 14)) + 'px';
                 explanationBox.style.top = (rect3.top - hqRect.top + (4 * 14)) + 'px';
-                if (window.innerWidth <= 768) {
+                if (window.screen.width <= 768) {
                     explanationBox.style.left = (rect.left - hqRect.left - (18 * 14)) + 'px';
                     explanationBox.style.top = (rect3.top - hqRect.top + (46 * 14)) + 'px';
                 }
@@ -5051,7 +5051,7 @@ advisorsList.forEach(advisor => {
                 dismissInfoDiv.style.zIndex = '1001';
                 explanationBox.style.left = (rect4.left - hqRect.left - (4.5 * 14)) + 'px';
                 explanationBox.style.top = (rect4.top - hqRect.top - (12 * 14)) + 'px';
-                if (window.innerWidth <= 768) {
+                if (window.screen.width <= 768) {
                     explanationBox.style.left = (rect.left - hqRect.left - (18 * 14)) + 'px';
                     explanationBox.style.top = (rect4.top - hqRect.top + (17 * 14)) + 'px';
                 }
@@ -5070,7 +5070,7 @@ advisorsList.forEach(advisor => {
                 moodDiv.style.zIndex = 1001;
                 explanationBox.style.left = (rect5.left - hqRect.left - (4.5 * 14)) + 'px';
                 explanationBox.style.top = (rect5.top - hqRect.top + (12 * 14)) + 'px';
-                if (window.innerWidth <= 768) {
+                if (window.screen.width <= 768) {
                     explanationBox.style.left = (rect.left - hqRect.left - (18 * 14)) + 'px';
                     explanationBox.style.top = (rect5.top - hqRect.top + (18 * 14)) + 'px';
                 }
@@ -5085,7 +5085,7 @@ advisorsList.forEach(advisor => {
                 moodDiv.style.zIndex = '';
                 explanationBox.style.left = (rect6.right - hqRect.left + (2 * 14)) + 'px';
                 explanationBox.style.top = (rect6.top - hqRect.top + (4 * 14)) + 'px';
-                if (window.innerWidth <= 768) {
+                if (window.screen.width <= 768) {
                     explanationBox.style.left = (rect.left - hqRect.left - (18 * 14)) + 'px';
                     explanationBox.style.top = (rect6.top - hqRect.top + (34 * 14)) + 'px';
                 }
@@ -5100,7 +5100,7 @@ advisorsList.forEach(advisor => {
                 coalitionDiv.style.zIndex = '';
                 explanationBox.style.left = (rect7.left - hqRect.left - (12.5 * 14)) + 'px';
                 explanationBox.style.top = (rect7.top - hqRect.top - (7 * 14) - rect7.height) + 'px';
-                if (window.innerWidth <= 768) {
+                if (window.screen.width <= 768) {
                 explanationBox.style.left = (rect.left - hqRect.left - (18 * 14)) + 'px';
                 explanationBox.style.top = (rect7.top - hqRect.top - (13 * 14) - rect.height) + 'px';
             }
@@ -5240,7 +5240,7 @@ function showAdvisors() {
             let descriptionContainer = document.createElement('div');
             descriptionContainer.style.padding = '0.5em'
             descriptionContainer.style.height = '8em'
-            if (window.innerWidth <= 768) {
+            if (window.screen.width <= 768) {
                 descriptionContainer.style.padding = '0.2em'
                 descriptionContainer.style.height = '15em'
             }
@@ -5608,7 +5608,7 @@ let advisorsList = [
 
 if (!campaignTrail_temp.staff_mode){
     advisorSchmidt.status = "active";
-    advisorKlingbeil.status= "acvtive"
+    advisorKlingbeil.status= "active"
 }
 
 campaignTrail_temp.answers_json.forEach(answer => {
