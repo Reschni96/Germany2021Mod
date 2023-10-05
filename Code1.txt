@@ -1592,6 +1592,10 @@ function paginateContent() {
 
     height:auto;
 }
+#recommended_reading_box{
+    height: 80%;
+    overflow: auto;
+}
 .person_button{
     margin-top:0.2em
 }

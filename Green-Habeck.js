@@ -128,7 +128,7 @@ campaignTrail_temp.game_start_logging_id = '3662498';
     var ideologyCenter = 1;
     var ideologyLeft = 0;
     var mood = "Optimistic"
-    var likeability = 17;
+    var likeability = 18;
     var annaLenaHappy = false;
     var annaLenaNetwork = false;
     var resigned = false;
@@ -3503,6 +3503,8 @@ function openHeadquarter() {
     backButton.innerText = 'Back';
     backButton.style.marginTop = '2em';
     backButton.style.marginBottom = '1em';
+    backButton.style.zIndex = 998;
+    backButton.style.position = 'relative';
     backButton.style.backgroundColor = 'lightgreen';
     backButton.style.boxShadow = '0 0 20px 4px rgba(144, 238, 144, 0.9)'; // Stronger light green glow
     backButton.onclick = function() {
@@ -3862,7 +3864,7 @@ function showAdvisors() {
             // Wrap the description in another div
             let descriptionContainer = document.createElement('div');
             descriptionContainer.style.padding = '0.5em'
-            descriptionContainer.style.height = '8em'
+            descriptionContainer.style.height = '9em'
             if (window.screen.width <= 768) {
                 descriptionContainer.style.padding = '0.2em'
                 descriptionContainer.style.height = '15em'

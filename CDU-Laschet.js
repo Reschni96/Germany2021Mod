@@ -4059,6 +4059,8 @@ advisorsList.forEach(advisor => {
     backButton.style.marginBottom = '1em';
     backButton.style.backgroundColor = 'grey';
     backButton.style.color = "white"
+    backButton.style.zIndex = 998;
+    backButton.style.position = 'relative';
     backButton.style.boxShadow = '0 0 20px 4px rgba(128, 128, 128, 0.9)'; // Stronger light green glow
     backButton.onclick = function() {
         // Hide headquarters and show the original content
@@ -4422,7 +4424,7 @@ function showAdvisors() {
             // Wrap the description in another div
             let descriptionContainer = document.createElement('div');
             descriptionContainer.style.padding = '0.5em'
-            descriptionContainer.style.height = '8em'
+            descriptionContainer.style.height = '9em'
             if (window.screen.width <= 768) {
                 descriptionContainer.style.padding = '0.2em'
                 descriptionContainer.style.height = '15em'
