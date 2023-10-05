@@ -1104,7 +1104,7 @@ function coalitionTalks(results, optionalMode = false){
   }
 
   function getMajorityCoalitions() {
-    return getCoalitionsBySeatsRange(1, Infinity);
+    return getCoalitionsBySeatsRange(0.1, Infinity);
   }
 
   function removeImpossibleCoalitions(coalitionList) {
@@ -1868,7 +1868,7 @@ function endingTwoBuilder(){
 
 
          if (secondPage){
-            text = [`<p>${negotiations}${contestedText}</p><p>${coalitionText}</p><p>${playerFate}</p>`,`<p>${secondPageText}</p>` ]
+            text = [`<p>${negotiations}${contestedText}</p><p>${coalitionText}</p>`,`<p>${secondPageText}</p><p>${playerFate}</p>` ]
         }
         else{
              text = [`<p>${negotiations}${contestedText}</p><p>${coalitionText}</p><p>${playerFate}</p>`,]

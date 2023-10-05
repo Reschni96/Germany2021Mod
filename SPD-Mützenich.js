@@ -709,7 +709,7 @@ function coalitionTalks(results, optionalMode = false){
   }
 
   function getMajorityCoalitions() {
-    return getCoalitionsBySeatsRange(1, Infinity);
+    return getCoalitionsBySeatsRange(0.1, Infinity);
   }
 
   function removeImpossibleCoalitions(coalitionList) {

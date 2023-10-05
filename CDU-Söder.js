@@ -915,7 +915,7 @@ function coalitionTalks(results, optionalMode = false){
   }
 
   function getMajorityCoalitions() {
-    return getCoalitionsBySeatsRange(1, Infinity);
+    return getCoalitionsBySeatsRange(0.1, Infinity);
   }
 
   function removeImpossibleCoalitions(coalitionList) {
@@ -993,7 +993,7 @@ function endingOneBuilder(){
     var disasterBavaria = "";
     var spdresult = e.candidate_json.find(p => p.pk === 78);
 
-    if(spdresult.pvp<0.12){
+    if(spdresult.pvp<0.125){
         ctsAchievement("The Old Dame has passed away")
     }
 

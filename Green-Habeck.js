@@ -128,7 +128,7 @@ campaignTrail_temp.game_start_logging_id = '3662498';
     var ideologyCenter = 1;
     var ideologyLeft = 0;
     var mood = "Optimistic"
-    var likeability = 18;
+    var likeability = 17;
     var annaLenaHappy = false;
     var annaLenaNetwork = false;
     var resigned = false;
@@ -157,7 +157,7 @@ campaignTrail_temp.game_start_logging_id = '3662498';
         4016: -1,
         4017: 1,
         4018: -2,
-        4019: 3,
+        4019: 2,
         4505: 1,
         4506: 1,
         4507: -1,
@@ -1061,7 +1061,7 @@ function coalitionTalks(results, optionalMode = false){
   }
 
   function getMajorityCoalitions() {
-    return getCoalitionsBySeatsRange(1, Infinity);
+    return getCoalitionsBySeatsRange(0.1, Infinity);
   }
 
   function removeImpossibleCoalitions(coalitionList) {
@@ -1151,7 +1151,7 @@ function endingOneBuilder(){
     var disaster = false;
     var spdresult = e.candidate_json.find(p => p.pk === 78);
 
-    if(spdresult.pvp<0.12){
+    if(spdresult.pvp<0.125){
         ctsAchievement("The Old Dame has passed away")
     }
 
@@ -1782,7 +1782,7 @@ function endingTwoBuilder(){
 
 
          if (secondPage){
-            text = [`<p>${negotiations}${sneakyText}${contestedText}</p><p>${coalitionText}</p><p>${playerFate}</p>`,`<p>${secondPageText}</p>` ]
+            text = [`<p>${negotiations}${sneakyText}${contestedText}</p><p>${coalitionText}</p>`,`<p>${secondPageText}</p><p>${playerFate}</p>` ]
         }
         else{
              text = [`<p>${negotiations}${sneakyText}${contestedText}</p><p>${coalitionText}</p><p>${playerFate}</p>`,]
@@ -3994,7 +3994,7 @@ const advisorOezdemir = new Advisor(13, "Cem Özdemir", 'https://i.ibb.co/7g9nqq
 const advisorvonNotz = new Advisor(14, "Konstantin von Notz", 'https://i.ibb.co/jyyxfTj/von-Notz-cropped.jpg', "An old friend from your time in Schleswig-Holstein - if you stay yourself during the campaign, he can advise you on digital topics.", null, () => {addAdvisorTooltips([4043, 4044, 4045, 4046], ["Great answer. We’re the only ones with a credible record here, in my opinion.", "You’re into AI, huh? Interesting, but it’s not exactly a politically relevant topic in 2021.", "That’s definitely something we want to change, but I think we could hit harder on the GroKo’s record.","Hm, dragging the whole NSA thing into this might not seem relevant for some people, truth be told."],'https://i.ibb.co/jyyxfTj/von-Notz-cropped.jpg');likeability+=1;multiplyEffect(1.2, [4043]);}, () => {removeAdvisorTooltips([4043, 4044, 4045, 4046], 'https://i.ibb.co/jyyxfTj/von-Notz-cropped.jpg');likeability-=1;multiplyEffect(1/1.2, [4043]);}, 'available');
 const advisorBayaz = new Advisor(15, "Danyal Bayaz", "https://i.ibb.co/tPpQ65h/bayaz-cropped.jpg", "Baden-Württemberg's Minister of Finances could campaign for you there, but he also has valuable contacts within the FDP.", "This state minister is an advocate for closer cooperation with the FDP and hopes you feel the same.", () =>{coalitions.forEach(coalition => { if ([5, 6, 15].includes(coalition.id)) {coalition.weight *= 1.5;}});addAdvisorTooltips([4082], ["My friends from the ‘Pasta-connection’ already have some ideas on how to do that…"], 'https://i.ibb.co/tPpQ65h/bayaz-cropped.jpg')},  () =>{coalitions.forEach(coalition => { if ([5, 6, 15].includes(coalition.id)) {coalition.weight *= 1/1.5;}});removeAdvisorTooltips([4082], 'https://i.ibb.co/tPpQ65h/bayaz-cropped.jpg');}, 'locked');
 const advisorPeters = new Advisor(16,"Anna Peters", 'https://i.ibb.co/4TmSChy/peters-cropped.jpg',  "If you want to turn out the youth vote, who could be better suited than the co-leader of the Green Youth?", "The co-leader of the youth wing of your party wants you to show that you're taking the FFF movement seriously.", (affectedCandidate1=79, changeAmount1=0.005, affectedCandidate2=303, changeAmount2=-0.002) => { Object.keys(YouthMap).forEach(key => {      changeGlobalEffect(affectedCandidate1, parseInt(key), changeAmount1); changeGlobalEffect(affectedCandidate2, parseInt(key), changeAmount2);}); addAdvisorTooltips([4095], ["Luisa isn’t really active right now, and FFF is party-neutral. She’ll only accept if you’ve proven your steadfast allegiance with Fridays For Future."], 'https://i.ibb.co/4TmSChy/peters-cropped.jpg')}, (affectedCandidate1=79, changeAmount1=-0.005, affectedCandidate2=303, changeAmount2=0.002) => { Object.keys(YouthMap).forEach(key => {      changeGlobalEffect(affectedCandidate1, parseInt(key), changeAmount1); changeGlobalEffect(affectedCandidate2, parseInt(key), changeAmount2);}); removeAdvisorTooltips([4095], 'https://i.ibb.co/4TmSChy/peters-cropped.jpg')},'locked');
-const advisorBuntenbach = new Advisor(17, "Annelie Buntenbach", 'https://i.ibb.co/zFP3zfP/buntebach-cropped.jpg', "The Greens want to replace the SPD as leaders of the center-left this election - and as a former union functionary, Buntenbach has some ideas how.", "Perhaps targeting the SPD is a good call, for this union functionary to provide some ideas how...",(affectedCandidate1=79, changeAmount1=0.004, affectedCandidate2=78, changeAmount2=-0.003) => { Object.keys(SPDTarget).forEach(key => {changeGlobalEffect(affectedCandidate1, parseInt(key), changeAmount1); changeGlobalEffect(affectedCandidate2, parseInt(key), changeAmount2);}); }, (affectedCandidate1=79, changeAmount1=-0.004, affectedCandidate2=78, changeAmount2=0.003) => { Object.keys(SPDTarget).forEach(key => { changeGlobalEffect(affectedCandidate1, parseInt(key), changeAmount1); changeGlobalEffect(affectedCandidate2, parseInt(key), changeAmount2);}); }, 'locked');
+const advisorBuntenbach = new Advisor(17, "Annelie Buntenbach", 'https://i.ibb.co/zFP3zfP/buntebach-cropped.jpg', "The Greens want to replace the SPD as leaders of the center-left this election - and as a former union functionary, Buntenbach has some ideas how.", "Perhaps targeting the SPD is a good call, for this union functionary to provide some ideas how...",(affectedCandidate1=79, changeAmount1=0.005, affectedCandidate2=78, changeAmount2=-0.005) => { Object.keys(SPDTarget).forEach(key => {changeGlobalEffect(affectedCandidate1, parseInt(key), changeAmount1); changeGlobalEffect(affectedCandidate2, parseInt(key), changeAmount2);}); }, (affectedCandidate1=79, changeAmount1=-0.005, affectedCandidate2=78, changeAmount2=0.005) => { Object.keys(SPDTarget).forEach(key => { changeGlobalEffect(affectedCandidate1, parseInt(key), changeAmount1); changeGlobalEffect(affectedCandidate2, parseInt(key), changeAmount2);}); }, 'locked');
 const advisorGuenther = new Advisor(18, "Wolfram Günther", 'https://i.ibb.co/XWc0f73/g-nther-cropped.jpg', "The Greens are used to struggles in East Germany, but Saxon Minister of the Environment Günther wants to do his part for your campaign to change this.", "This Saxon Minister wants you to show that you're serious about appealing to East Germany.",() =>{addAdvisorTooltips([4065,4074], ["I know our potential here is limited, but if not for the election, I believe coming here is important for our national unity.", "Look, I appreciate the effort, but if anyone can talk to the AfD, it’s certainly not us."], 'https://i.ibb.co/XWc0f73/g-nther-cropped.jpg');multiplyEffect(1.2, [4065, 4074]);}, () =>{removeAdvisorTooltips([4065,4074], 'https://i.ibb.co/XWc0f73/g-nther-cropped.jpg');multiplyEffect(1/1.2, [4065, 4074]);}, 'locked');
 
 const advisorsList = [
