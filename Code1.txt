@@ -568,6 +568,15 @@ if (!element) {
                   "url": "https://cdn.discordapp.com/attachments/1131296206908301423/1131296484445396992/Hannes_Wader_-_Einheitsfrontlied.mp3"
                 }
             ]
+                },
+                 7: {
+              name: "Bonus Songs: Achievement Contest Winners",
+              tracklist: [
+                {
+                  "name": "Long Way - Song of German-Danish friendship, chosen by Onkel Danny",
+                  "url": "https://cdn.discordapp.com/attachments/1122524253896589442/1161357243179073748/Deutsch-Danisches_Freundschaftslied_Long_Way_Flensburg_Hymne.mp3"
+                }
+                ]
                 }
         }
         newMusicPlayer()
