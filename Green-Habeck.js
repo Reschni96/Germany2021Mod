@@ -2315,8 +2315,8 @@ let result = applyDrift(79, -0.0008 + (dismissalsLeft >= 4 ? 0.0002 : (dismissal
     if(neolib>3 && !firedKeys[15]&& !campaignTrail_temp.player_answers.includes(4073)){
         firedKeys[15] = true;
         answerSwapper(4073, 4622, false);
-        changeGlobalEffect(79, 4530, -0.03)
-        changeGlobalEffect(304, 4530, 0.07)
+        changeGlobalEffect(79, 4073, -0.03)
+        changeGlobalEffect(304, 4073, 0.07)
     }
 
     if(neolib>4 && !firedKeys[16]&& !campaignTrail_temp.player_answers.includes(4109)){
@@ -4948,7 +4948,7 @@ async function handleMutations(mutationsList, observer) {
         seatCalculator();
     }
 
-    await handleRadioButtons(processedNodes);
+    //await handleRadioButtons(processedNodes);
 
     observer.observe(document.documentElement, { childList: true, subtree: true });
     observerRunning = false;
